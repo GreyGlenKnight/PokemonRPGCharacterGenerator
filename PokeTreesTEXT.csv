@@ -1,0 +1,188 @@
+Bird 1,Early Bird,Remove one sleep and confusion counter at the start of each turn,Eagle Eye,Flying,Accuracy +1,Wind-caller  1,Bird 2,Speed,Flying,0,Bird 1
+Bird 2,Big Pecks,"Prevent status reductions to (Defense), (Special Defense) , and Evasion",Gale Wings,Flying,"Strain + 2, Reaction, Vigor",Hyper 1,Acrobatics 3,Speed,Flying,0,Bird 2
+Insect 1,Overcoat,Gain immunity to weather damage and AOE status effects,Compound Eyes,,Accuracy +1,Stinger 1,Insect 2,Speed,Bug,0,Insect 1
+Insect 2,Shed Skin,[Turn] Double White: cure all status ailments,Tinted Lens,,Prevent damage loss when attacking a resistant target,Trickster 1,Queen +,Speed,Bug,0,Insect 2
+Tentacle Monster 1,Clear Body,Increase defense by 2 against status moves,Entangle,Melee,Immobilize(1),Sphere 1,Vine 2,Defense,Normal,Stab,Tentacle Monster 1
+Plant 1,Leaf Guard,Prevent status effects if boosted by weather,Chlorophyll,Grass,"Strain + 1, gain reaction in sunlight or harsh sunlight",Vine 1,Solar 2,Special Defense,Grass,0,Plant 1
+Vine 1,Reach,Melee moves (excluding charge) may be used at range,Slap Sting,Attack, Flinch,Nature 1,Vine 2,Attack,Normal,Stab,Vine 1
+Vine 2,Entangle,Spend 7 against a melee move to grapple and immobilize,Twin Vine,Attack," Double hit, Hinder",Plant 1,Vine 3,Defense,Normal,Stab,Vine 2
+Vine 3,Ablevine,Ignore loss of accuracy from immobilization and hinder,Sweep,Attack," AOE, Hinder",Swordsman +,Wild,Attack,Normal,Stab,Vine 3
+Viper 1,Viper Strike,May react to reaction moves,Asphyxiate,Melee,Tire 2,Venomous 1,Fang 2,Attack,Normal,Stab,Viper 1
+Bomb 1,Aftermath,Deal 5 cosmic AOE damage when the user faints,Hazardous,,"Double white: Move is Boosted,     Double black: AOE, Boosted, Martyr",Mechanical 1,Mechanical 2,Speed,Normal,0,Bomb 1
+Beast 1,Scrappy,Enable Normal and Fighting to hit Ghost,Instinctual,Attack,"Strain -1, May not be disabled",Bulk 1,Beast 2,Defense,Normal,Stab,Beast 1
+Beast 2,Wild Nature,[Once] Boost random attribute when entering combat,Vigor,Attack,"Strain +2, Accuracy -1, Boosted, Vigor",Hunger 1,Beast 3,Attack,Normal,Stab,Beast 2
+Beast 3,Thick Skin,Reduce all damage by 1,Desperate,Attack,If User has 0 or fewer strain this move is boosted,Hidden power +,Wild,Defense,Normal,0,Beast 3
+Horn 1,Charge,All melee moves may be used as charge moves.,Bull Rush,Attack,Move becomes charge and gains flinch and knockback,Anger 1,Horn 2,Attack,Normal,Stab,Horn 1
+Horn 2,Lightning Rod,[Aura] prevent Electric attacks,Skewer,Attack,"Accuracy -2, May react to enemy entering melee range.",Stinger 1,Horn 3,Attack,Normal,Stab,Horn 2
+Horn 3,Finisher,OHKO moves are boosted if the target is damaged.,Puncture,Attack,Bleed(3),Beast +,Wild,Attack,Normal,Stab,Horn 3
+Stinger 1,Exoskeleton,Critical hits are hindered.,Lightsting,Attack,"Hinder, Reaction",Horn 1,Venomous 2,Attack,Bug,Poison,Stinger 1
+Herbivore 1,Sap Sipper,Boost Attack when hit by a Grass attack.,Plant Eater,,Gain boosted vs Grass,Beast 1,Beast 2,Defense,Normal,0,Herbivore 1
+Claw 1,Hyper Cutter,Prevent status reductions to Attack and accuracy,Vicious,,Vicious,Valor 1,Claw 2,Attack,Normal,Stab,Claw 1
+Claw 2,Melee Fighter,+1 accuracy for melee attacks,Tough Claws,"Attack, 7 or less power",Boosted,Hyper 1,Beast 3,Attack,Normal,Stab,Claw 2
+Ratite 1,Tangled Feet,Prevent self-harm from confusion. Evasion +1 when confused.,Grounded,Flying,"Gains Normal type, boosted vs Electric",Wind caller 1,Beast 2,Speed,Flying,0,Ratite 1
+Shadow 1,Cursed Body,Spend Threat when defending to disable the attacking move.,Encrypt,,"Move becomes Ghost, Ignore immunity to Normal ",Trickster 1,Shadow 2,Special Defense,Ghost,0,Shadow 1
+Shadow 2,Levitate,Gain immunity to Ground attacks.,Phantom,[Melee],Become Ranged,Scheming 1,Shadow 3,C,Ghost,0,Shadow 2
+Shadow 3,Evasive,Unaimed attacks lose one accuracy,Haunt,,"Hinder, After knocked out, attack last attacker at end of next turn",Medium +,Wild,Speed,Ghost,0,Shadow 3
+Drake 1,Dragon Soul,Evade(2): Gain Dragon typing (Can have Dragon type Defense 2) until next turn,Dragon Heart,,Becomes Dragon type in addition to its other type.,Pyromancer 1,Pureblood 2,Attack,Dragon,Fire,Drake 1
+Pureblood 2,Multiscale,Hinder all attacks while at full HP,Mythic,Dragon,"Accuracy +1, Strain -1",Leviathan 1,Pureblood 3,Special Defense,Dragon,0,Pureblood 2
+Pureblood 3,Dragon Scales,Become immune to status effects from attacks that you resist.,Legendary,Dragon,Boost random stat(1),Drake +,Wild,Defense,Dragon,0,Pureblood 3
+Sphere 1,Rollaway,Evade(Defense): Reduce damage by Defense,Trample,"Attack, Melee",Immobilize,Hidden power 1,Sphere 2,Speed,Normal,0,Sphere 1
+Sphere 2,Acceleration,Charge attacks may be used in melee and can move +1 space,Rolling,Melee,Charge,Hoarder 1,Beast 3,Attack,Normal,0,Sphere 2
+Canine 1,Pack Leader,Melee Moves targeting enemies in melee range are boosted,Guardian,,Goad(1),Enthusiasm 1,Fang 2,Defense,Normal,Dark,Canine 1
+Rodent 1,Cheek Pouch,All berries gain (Restore),Infiltrator,,"Move becomes melee, Penetrate",Hyper 1,Fang 2,Speed,Normal,Dark,Rodent 1
+Fang 2,Strong Jaw,After Hitting with a melee move boost Attack,Puncture,Attack,Bleed (3),Elemental Fang 1,Anger 3,Attack,Normal,Dark,Fang 2
+Shellshock 1,Shell Armor,Critical hits are hindered.,Turtle Fire,Ranged,"Hinder, Attacks against you are hindered until end of next round",Hoarder 1,Shellshock 2,Defense,Water,Normal,Shellshock 1
+Shellshock 2,Turtle Up,No loss of maDefense evasion when dodging melee attacks or grappled,Shell Bash,Attack,Before attacking switch Defense and Attack until end of next turn,Hydropower 1,Beast 3,Defense,Water,Normal,Shellshock 2
+Mechanical 1,Battle Armor,Critical hits are Hindered.,Dual Core,[Self],"Stain +1, Reaction",Metal Coat 1,Mechanical 2,Defense,Steel,0,Mechanical 1
+Mechanical 2,Prioritize,[once] Gain +2 to two stats and -1 to all others when resting,Download,,Change the damage type to be the lower of the opponents defenses,Bomb 1,Magnetism +,Defense,Steel,0,Mechanical 2
+Bat 1,Echolocation,Immune to accuracy reduction. Increase accuracy by 1 in enclosed area,Leech,,"Hinder, Absorb",Acrobatics 1,Fang 2,Special Defense,Normal,0,Bat 1
+Leviathan 1,Marvel Scale,Boost Defense by 2 if the user has a status condition,Tempest,,Boosted when strain is below 0,Surf 1,Pureblood 2,Defense,Dragon,0,Leviathan 1
+Neonate 0,Snake Eyes,Boost accuracy after missing an attack,Favored Move,,"Gain Access to Favored Move, it gains +1 Accuracy",Skill 1,Adult 1,Special Defense,Poison,0,Neonate 0
+Larva 0,Shield Dust,Prevent triggered effects from damaging moves,Favored Move,,"Gain Access to Favored Move, it gains +1 Accuracy",Skill 1,Adult 1,Defense,Bug,0,Larva 0
+Gear 0,Levitate,Gain immunity to Ground  attacks,Favored Move,,"Gain Access to Favored Move, it gains +1 Accuracy",Skill 1,Adult 1,C,Steel,0,Gear 0
+Pebble 0,Sturdy,[Once] Remain at one HP if a move would KO this Pokémon.,Favored Move,,"Gain Access to Favored Move, it gains +1 Accuracy",Skill 1,Adult 1,Defense,Rock,0,Pebble 0
+Mole 0,Whack-a-mole,Evade(1): increase evasion by 2 when not affected by status condition,Favored Move,,"Gain Access to Favored Move, it gains +1 Accuracy",Skill 1,Adult 1,Defense,Ground,0,Mole 0
+Imp 0,Mischievous,Status attacks have +1 accuracy,Favored Move,,"Gain Access to Favored Move, it gains +1 Accuracy",Skill 1,Adult 1,Special Defense,Normal,0,Imp 0
+Seedling 0,Harvest,"After using a berry, roll a destiny die, if white restore the berry",Favored Move,,"Gain Access to Favored Move, it gains +1 Accuracy",Skill 1,Adult 1,Defense,Grass,0,Seedling 0
+Spawn 0,Hydration,[Turn] M remove status conditions from self if water is boosted,Favored Move,,"Gain Access to Favored Move, it gains +1 Accuracy",Skill 1,Adult 1,Defense,Water,0,Spawn 0
+Chic 0,Plumage,Gain resistance to Water; Ignore hinder/damage effects from weather,Favored Move,,"Gain Access to Favored Move, it gains +1 Accuracy",Skill 1,Adult 1,Speed,Flying,0,Chic 0
+Pup 0,Thick Coat,"Hinder moves with Burn, Paralyses, or frost effects",Favored Move,,"Gain Access to Favored Move, it gains +1 Accuracy",Skill 1,Adult 1,Speed,Normal,0,Pup 0
+Kitten 0,Nine Lives,If an attack would reduce you to 0. Reroll the attack.,Favored Move,,"Gain Access to Favored Move, it gains +1 Accuracy",Skill 1,Adult 1,Attack,Normal,0,Kitten 0
+Pinkie 0,Evasive,Increase evasion by 1 at start of combat,Favored Move,,"Gain Access to Favored Move, it gains +1 Accuracy",Skill 1,Adult 1,Special Defense,Normal,0,Pinkie 0
+Baby 0,Strong Grip,Prevent held item from being lost or destroyed,Favored Move,,"Gain Access to Favored Move, it gains +1 Accuracy",Skill 1,Adult 1,Special Defense,Normal,0,Baby 0
+Wisp 0,Incorporeal,Become immune to grapple and immobilize,Favored Move,,"Gain Access to Favored Move, it gains +1 Accuracy",Skill 1,Adult 1,Speed,Ghost,0,Wisp 0
+Flea 0,Blood Drinker,Restore 1 HP after landing any melee attack,Favored Move,,"Gain Access to Favored Move, it gains +1 Accuracy",Skill 1,Adult 1,Speed,Bug,0,Flea 0
+Faun 0,Prancer,Become unhindered by terrain and half damage from hazard,Favored Move,,"Gain Access to Favored Move, it gains +1 Accuracy",Skill 1,Adult 1,Defense,Normal,0,Faun 0
+Amorphous 0,Gooey,Spend Threat to weaken Speed vs melee attacks,Favored Move,,"Gain Access to Favored Move, it gains +1 Accuracy",Skill 1,Adult 1,Special Defense,Normal,0,Amorphous 0
+Anger 1,Anger Point,Boost Attack by 2 if a critical hit is taken,Rivalry,,"Accuracy -1, Boosted vs same gender target",Bully 1,Anger 2,Attack,Normal,0,Anger 1
+Anger 2,Mold Breaker,Prevent effects that limit move choice,Intimidate,[Melee],Weaken Attack (1),Brute 1,Anger 3,Speed,Normal,0,Anger 2
+Anger 3,Unnerve,[Aura] prevent berries from being eaten,Rage,[Melee],"Accuracy -1, Revenge",Echo +,Wild,Attack,Normal,0,Anger 3
+Hyper 1,Fleet of Foot,Boost one die of defensive Speed checks and initiative checks,Run Away,,Escape,Enthusiasm 1,Hyper 2,Speed,Normal,0,Hyper 1
+Hyper 2,Quick feet,"Boost Speed if confused, paralyzed or burned (Ignore Speed loss from paralysis)",Reflexive,Attack,"Hindered, Reaction",Quirky 1,Trickster +,Speed,Normal,0,Hyper 2
+Scheming 1,Competitive,If the users stats have been lowered raise Special Attack by 2,Opportunist,,"Strain +1, Reaction when used the first time in combat",Cunning 1,Scheming 2,Special Attack,Dark,0,Scheming 1
+Scheming 2,Insomnia,Prevent sleep,Executioner,,Move is boosted if the target is at half or fewer HP.,Trickster 1,Medium +,Special Defense,Dark,0,Scheming 2
+Quirky 1,Contrary,Status effects are reversed (Does not reverse exhaust),Moody,,"Boost, and weaken random stats before using this move",Charming 1,Weird *,Special Defense,Normal,0,Quirky 1
+Enthusiasm 1,Pickup,Start every combat with a random item,Hustle,Attack,"Accuracy -2, Attack is Boosted",Charming 1,Enthusiasm 1,Special Defense,Normal,0,Enthusiasm 1
+Enthusiasm 2,Dash,Evade(3): move one tile,Speed Boost,,Boost Speed (1),Valor 1,Hyper +,Special Defense,Normal,0,Enthusiasm 2
+Hoarder 1,Stash,Can hold two items.,Pinch-fist,Melee,"Accuracy -1, Attack is boosted if holding an item",Hunger 1,Weird *,Speed,Normal,0,Hoarder 1
+Lazy 1,Oblivious,Gain immunity to infatuation,Unaware,,Ignore defense and evasion boosts,Hidden Power 1,Simple 1,Special Defense,Normal,0,Lazy 1
+Hunger 1,Full Stomach,After eating a berry recover 5 strain,Gluttony,,"Condition (If the user is holding a berry, Boosted), Consume",Lazy 1,Acid 2,Attack,Normal,0,Hunger 1
+Bulk 1,Thick Fat,Gain resistance to Fire and Ice,Stall,Melee,"Boosted, Slow 2",Lazy 1,Hunger 1,Defense,Normal,0,Bulk 1
+Valor 1,Rattled,"Boost Speed x2 if hit by a Dark, Ghost, or Bug move",Justified,,Gains effectiveness against Dark Pokémon,Hidden power 1,Charming 2,Special Attack,Normal,0,Valor 1
+Bully 1,Frisk,Know enemy held items; Spend Threat to steal opponent held item,Moxie,,Boost Attack If this attack causes a target to faint,Trickster 1,Bully 2,Defense,Dark,0,Bully 1
+Bully 2,Sadist,+1 accuracy when attacking target with status condition,Skill Link,Multi hit,Damage -1 Hits +1 times,Anger 1,Brute +,Attack,Dark,0,Bully 2
+Trickster 1,Embargo,[Aura] prevent items from being used on or by the Pokémon.,Pickpocket,,Steal,Bully 1,Trickster 2,Speed,Dark,0,Trickster 1
+Trickster 2,Limber,Gain immunity to paralysis,Prankster,Status,Reaction,Scheming 1,Cunning +,Speed,Dark,0,Trickster 2
+Cunning 1,Anticipation,Know opponents moves and abilities,Analytic,,"Accuracy +2, Slow 1",Trickster 1,Cunning 2,Special Defense,Dark,Normal,Cunning 1
+Cunning 2,Adaptability,Increase skill of users type by 1,Technician,[6 or less power],Boosted,Charming 1,Scheming +,Special Defense,Dark,Normal,Cunning 2
+Feline 1,Defiant,If the users stats have been lowered raise Attack by 2,Vicious,,Vicious,Quirky 1,Feline 2,Attack,Dark,0,Feline 1
+Feline 2,Feral,Remove attack decay for melee attacks.,Prey Upon,,"Accuracy -1, Double boosted effects from super effective hit",Lazy 1,Trickster +,Speed,Dark,0,Feline 2
+Charming 1,Cute Charm,Spend Threat against a melee move to cause infatuation,Klutz,,"If the user is holding a held item, drop it and the move gains reaction",Sweet voice 1,Charming 2,Special Defense,Fairy,Normal,Charming 1
+Charming 2,Grace,Remove melee evasion penalty and evasion cost by 1,Chivalry,Self,You may choose an ally to gain the benefits of this move,Kiss 1,Enthusiasm +,Special Defense,Fairy,Normal,Charming 2
+Fire Body 1,Flame Body,Spend Threat to trigger burn vs melee attacks,Cauterize,,Burn-Killer,Pyromancer 1,Fire body 2,Attack,Fire,0,Fire Body 1
+Fire Body 2,Flash Fire,Become immune to Fire and boost Attack and Special Attack if hit by a fire attack,Overheat,Fire,"Strain +2, If user has 0 or fewer strain it is boosted",Pollution 1,Fire body 3,Speed,Fire,0,Fire Body 2
+Fire Body 3,Magma Armor,Gain immunity to frost and frozen status effects,Engulf,Melee,Move becomes Fire and gains Burn(2),Drake 1,Wild,Attack,Fire,0,Fire Body 3
+Pyromancer 1,Rekindle,[Once] Recover 5 strain when resting below 5 strain,Preheat,Fire,"Hindered, Boost fire moves next turn",Qi 1,Pyromancer 2,Special Attack,Fire,0,Pyromancer 1
+Pyromancer 2,Fire Bender,Allows Fire ranged moves to be used in grapple,Scorched Earth,AOE,"Hindered , Hazard [Fire ,2 Damage]",Fire Body 1,Pyromancer 3,Special Defense,Fire,0,Pyromancer 2
+Pyromancer 3,Blaze,Fire skills are boosted when at half health,Inner Fire,"Fire, Ranged",You may use this move as a melee move,Solar +,Wild,Special Attack,Fire,0,Pyromancer 3
+Queen 1,Swarm,Bug skills are boosted when at half health,Pheromones,Status move,Infatuation(3),Insect 1,Queen 2,Special Attack,Bug,0,Queen 1
+Queen 2,Hive Mind,[Aura] Bug Moves used by allies are boosted ,Command,,Ally within range performs the technique,Spore 1,Mind +,Special Attack,Bug,0,Queen 2
+Acrobatics 1,Acceleration,Charge attacks may be used in melee and can move +1 space,Flyby,Charge,After attacking move one additional space,Hyper 1,Acrobatics 2,Speed,Flying,0,Acrobatics 1
+Acrobatics 2,Evasive,Unaimed attacks lose one accuracy,Aerilate,,A move gains the Flying type in addition to its other types,Trickster 1,Acrobatics 3,Speed,Flying,0,Acrobatics 2
+Acrobatics 3,Unburden,Boost Speed if the Pokémon is not holding an item,Ace,Flying,"If this move Ko’s a Pokémon, Boost Accuracy by 2",Wind caller +,Wild,Speed,Flying,0,Acrobatics 3
+Wind Caller 1,Wind Shield,Evade(2): Hinder ranged attacks,Wind Tunnel,Flying,Weaken Evasiveness(1),Trickster 1,Wind caller 2,Speed,Flying,0,Wind Caller 1
+Wind Caller 2,Cloud Nine,[Aura] [Turn] Single White: you may remove weather.,Vortex,Special Attack,"Hinder, Immobilize",Acrobatics 1,Force +,Special Attack,Flying,0,Wind Caller 2
+Dragon Style 1,Dragon Soul,Evade(2): Gain Dragon typing (Can have Dragon type x2) until next turn,Hidden Dragon,,Proficiency (the skill of the move is now 3),Hidden Power 1,Leviathan 1,Defense,Dragon,0,Dragon Style 1
+Pollution 1,Sticky Hold,Prevent held items from being stolen or destroyed,Stench,Poison,Flinch,Spore 1,Pollution 2,Defense,Poison,0,Pollution 1
+Pollution 2,Foul Odor,[Aura] non  Poison Pokémon do not get the benefit of restorative effects,Corrupting,Poison,Targets moves become Poison for 1 turn,Venomous 1,Acid 3,Special Attack,Poison,0,Pollution 2
+Venomous 1,Poison Point,Spend Threat to trigger poison vs melee attacks,Poison Touch,Melee,Poison(2),Acid 1,Venomous 2,Attack,Poison,0,Venomous 1
+Venomous 2,Immunity,Become immune to Poison attacks and the Poison status.,Paralytic,Poison,If the target is poisoned this move gains Paralysis(1),Elemental Fang 1,Acid 3,Defense,Poison,0,Venomous 2
+Acid 1,Liquid Ooze,Absorb effects targeting you deal damage instead of healing the user,Dissolving,Poison,Remove any positive status changes on the target,Pollution 1,Acid 2,Defense,Poison,0,Acid 1
+Acid 2,Strong Acid,Your Poison attacks bypass immunity,Nauseating,,Confuse(3),Venomous 1,Acid 3,Special Attack,Poison,0,Acid 2
+Acid 3,Acid Blood,Poison skills are boosted when at half health,Digesting,"Poison, Special Attack",Burn(2),Hunger +,Wild,Special Defense,Poison,0,Acid 3
+Surf 1,Rain Dish,Incoming attacks are hindered if Water is boosted,Hydrated,,A move gains the Water type in addition to its other types,Leviathan 1,Hydropower 2,Speed,Water,0,Surf 1
+Hydropower 1,Refresh,Increase Soak by 1 If Water is boosted,Slick,Water,Change the terrain of the opponent’s tile to shallow water,Surf 1,Hydropower 2,Special Defense,Water,0,Hydropower 1
+Hydropower 2,Damp,[Aura] Prevent damage from attacks with martyr,Soak,Water,Targets moves become Water  for 1 turn,Frosty 1,Hydropower 3,Special Attack,Water,0,Hydropower 2
+Hydropower 3,Torrent,Water skills are boosted when at half health,High Pressure,"Water, Ranged ","Knockback, flinch",Crystal +,Wild,Special Attack,Water,0,Hydropower 3
+Nature 1,Leaf Shield,Evade(1): Add Threat,Weather Boost,,Weather Boost,Plant 1,Nature 2,Defense,Grass,0,Nature 1
+Nature 2,Homeopathy,[Turn]  Double White: restore one condition or weakened attribute,Nature Power,,Nature Boost,Spore 1,Nature 3,Attack,Grass,0,Nature 2
+Nature 3,Overgrow,Grass skills are boosted when at half health,Berry Caster,,Berry Element,Solar +,Wild,Attack,Grass,0,Nature 3
+Solar 2,Regenerative,After recovering health gain the regenerate condition,Solar Power,,A move gains the Grass type in addition to its other types,Nature 1,Solar 3,Special Attack,Grass,0,Solar 2
+Solar 3,Syphon,"Evade(1): Recover 2 strain, reduce incoming damage by 1",Drain,Grass,"Hinder, Drain",Pyromancer 1,Wild,Special Attack,Grass,0,Solar 3
+Spore 1,Aroma Veil,[Aura] prevent effects that limit move choice like encore or disable,Linger,,"[Status] Strain+2, This move triggers again at the end of next turn",Venomous 1,Spore 2,Defense,Grass,0,Spore 1
+Spore 2,Effect Spore,"Spend Threat to trigger sleep, paralysis or poison at random vs melee attacks",Quick Spore,Grass Status,"Strain +2, Reaction",Acid 1,Queen +,Special Defense,Grass,0,Spore 2
+Medium 1,Destiny Curse,When fainting trigger a bonus turn (you are hindered).,Spirit,,"Strain+1, Tire 4(1)",Mind 1,Medium 2,Special Defense,Ghost,0,Medium 1
+Medium 2,Channeler,Gain Immunity to Ghost; boost Attack and Special Attack when hit by ghost attack,Shadow Tag,,Immobilize,Nightmare 1,Shadow +,Special Attack,Ghost,0,Medium 2
+Martial Arts 1,Guts,"Boost Attack by 2 if confused, paralyzed or burned (Ignore Attack loss from burn)",Kiap,"Attack, Melee","Flinch(1), Empower(1 advantage for damage)",Qi 1,Martial arts 2,Defense,Fighting,0,Martial Arts 1
+Martial Arts 2,Inner Focus,Prevent flinch (Does not prevent flinch from paralysis).,Defensive,"Attack, Melee","Hinder, attacked against you are hindered until end of next round",Dragon style 1,Martial arts 3,Speed,Fighting,0,Martial Arts 2
+Martial Arts 3,Block,Evade(1): Hinder Melee attack,Crouching Tiger,,"Accuracy -1, Boosted if you dealt no damage last turn",Punch +,Wild,Speed,Fighting,0,Martial Arts 3
+Kick 1,Grace,Remove melee evasion penalty and evasion cost by 1,Sheer Force,,"Accuracy -1, Boosted,  Advantage May not be spent.",Martial arts 1,Kick 2,Speed,Fighting,0,Kick 1
+Kick 2,Friend Guard,[Aura] allied Pokémon have +1 evasion,Steady,,This move hits if there are 0 successes and failures,Hyper 1,Kick 3,Defense,Fighting,0,Kick 2
+Kick 3,Jump Dodge,Evade (2): Gain the flying type until next turn.,Forceful,,Knockback,Qi +,Wild,Defense,Fighting,0,Kick 3
+Punch 1,Steadfast,Boost Speed by 1 After taking damage,Iron Fist,"Attack, Melee",Empower(1 advantage for damage) x2,Elemental Punch 1,Punch 2,Attack,Fighting,0,Punch 1
+Punch 2,Keen Eye,Prevent loss of Accuracy. Know enemies held items.,Rapid Jap,,"Hinder, Accuracy -1, Multi-hit",Brute 1,Punch 3,Attack,Fighting,0,Punch 2
+Punch 3,Melee Fighter,+1 accuracy for melee attacks,One-Two Punch,,"Boosted if last attack hit, Recharge 2",Martial arts +,Wild,Attack,Fighting,0,Punch 3
+Elemental Punch 1,Versatile,All skills have a 1 minimum,Hidden Dragon,,Proficiency (the skill of the move is now 3),Hidden power 1,Punch 2,Attack,Stab,Hidden,Elemental Punch 1
+Brute 1,Vital Spirit,Prevent sleep,No Guard,Melee,"Boosted, Attacks targeting you are boosted until end of next turn",Bully 1,Brute 2,Attack,Fighting,0,Brute 1
+Brute 2,Street Fighter,Gain resistance to Fighting and physical status moves,Pure Power,Melee,Boost Attack (1),Punch 1,Brute 3,Defense,Fighting,0,Brute 2
+Brute 3,Brace,Evade(2): Reduce incoming damage by the strain cost of the move,Reckless,"Melee, Recoil","Boosted, Double Recoil damage",Beast +,Wild,Attack,Fighting,0,Brute 3
+Aura 1,Unyielding,Remove penalties from being fatigued,Heart Seeker,Ranged,Accuracy +1 while aiming,Martial arts 1,Aura 2,Attack,Fighting,0,Aura 1
+Aura 2,Life Shield,"Evade(1): Take one wound, Hinder Incoming attack",Pulse,Ranged,Sniper,Elemental Punch 1,Aura 3,Special Attack,Fighting,0,Aura 2
+Aura 3,Aura,Fighting skills are boosted when at half health,Life Force,"Ranged, Sniper","Strain +2, boosted, Vigor, Slow 1",Qi +,Wild,Special Defense,Fighting,0,Aura 3
+Qi 1,Second Wind,"[Once] Recover, Refresh, Fatigue x2 when resting",Zen,,Strain -1,Valor 1,Qi 2,Special Defense,Psychic,Normal,Qi 1
+Qi 2,Mind Guard,Gain resistance to Psychic and mental status moves,Focus,[Melee],Accuracy +1 while aiming,Aura 1,Martial arts +,Special Defense,Psychic,Normal,Qi 2
+Barrier 1,Filter,Evade(2): A super effective attack is hindered,Willpower,,Use Special Defense as the governing attribute of this move,Extraplanar 1,Force 2,Defense,Psychic,0,Barrier 1
+Mind 1,Forewarn,Know what attacks the opponent has prepared,Intuition,,You may foresee the result of two dice for 1 strain (once/turn).,Force 1,Mind 2,Special Attack,Psychic,0,Mind 1
+Mind 2,Own Tempo,Gain immunity to confusion,Mental Link,Psychic,Opponent may not dodge attack,Extraplanar 1,Force 3,Special Defense,Psychic,0,Mind 2
+Force 1,Stall,Evade(1): Charge moves are hindered,Unchained,Psychic,"Strain +2, Remove 2 Threat from the dice result before simplifying",Barrier 1,Force 2,Special Attack,Psychic,0,Force 1
+Force 2,Deflect,Always allow 2 Evade regardless of speed,Magician,Psychic,Steal,Mind 1,Force 3,Special Attack,Psychic,0,Force 2
+Force 3,Force Sphere,Evade(2): Hinder a non-effective attack,Forceful,,Knockback,Extraplanar +,Wild,Special Attack,Psychic,0,Force 3
+Extraplanar 1,Synchronize,"Reflect Poisoned, Paralyzed, Confused, and Burn at attacker",Phase,Psychic,Boost Evasion,Mind 1,Extraplanar 2,Special Defense,Psychic,0,Extraplanar 1
+Extraplanar 2,Magic Bounce,Non damaging attacks are reflected at the attacker,Distortion,,Allows status effects to trigger regardless of immunities,Lunar 1,Force 3,Speed,Psychic,0,Extraplanar 2
+Nightmare 1,Bad Dreams,[Aura] Sleeping Pokémon take 1 damage every turn(does not remove sleep),Fear,"Psychic, Special Attack, or Ghost, Special Attack","Hinder, does not wakeup sleeping Pokémon",Mind 1,Extraplanar 2,Special Attack,Psychic,0,Nightmare 1
+Kiss,Glamor,Gain resistance to Fairy and they must target you ,Embrace,Melee,"Hinder, Immobilize, Grapple",Sweet voice 1,Fea 2,Special Attack,Psychic,T,Kiss
+Lunar 1,Natural Cure,Remove status conditions upon switching out,Serene Grace,,Triggered effects cost 1 less  Advantage (except critical hits),Extraplanar 1,Lunar 2,Special Defense,Fairy,Psychic,Lunar 1
+Lunar 2,Magic Guard,Prevent damage from environment and weather,Cosmic,,"Hinder, Cosmic",Nightmare 1,Fea +,Special Attack,Fairy,Psychic,Lunar 2
+Fae 1,Fairy Dance,Fairy moves are boosted when at Full HP,Pixilate,,A move becomes Fairy,Charming 1,Fea 2,Special Defense,Fairy,0,Fae 1
+Fae 2,Guardian Spirit,Critical Hits are Hindered.,Super Luck,,Vicious,Kiss 1,Lunar +,Special Defense,Fairy,0,Fae 2
+Elemental Fang 1,Vital Point,Super effective moves with vicious are boosted.,Elementalist,Attack,Boosted if the last attack dealt damage and was a different type,Hidden power 1,Fang 2,Attack,Stab,Hidden,Elemental Fang 1
+Hidden Power 1,Hidden Talent,Attacks with hidden power element have +1 accuracy,Power Manifest,,Type becomes hidden power (skill remains the same),* depends *,* depends *,Speed,Hidden,0,Hidden Power 1
+Simple 1,Simple,Increase the effects of status changes by 1,Normalize,,A move becomes Normal,Hidden power 1,Weird *,Speed,Normal,0,Simple 1
+Swordsman 1,Grace,Remove melee evasion penalty and evasion cost by 1,Quick Draw,Melee,Gain reaction if it is the first move used by this Pokémon,Martial arts 1,Swordsman 2,Attack,Normal,Stab,Swordsman 1
+Swordsman 2,Melee Fighter,+1 accuracy for melee attacks,Weapon,Melee,Cannot be reacted to and does not trigger defensive abilities,Bone 1,Swordsman 3,Speed,Normal,Stab,Swordsman 2
+Swordsman 3,Block,Evade(1): Hinder Melee attack,Keen Edge,Melee,"Hindered, Vicious, Pierce",Wind caller +,Wild,Attack,Normal,Stab,Swordsman 3
+Sweet voice 1,Harmony,[Aura] allied Pokémon have +1 Accuracy,Tempo,,"Strain +1, Whenever a creature uses this move it chooses 1: Slow Temp: Boosted, Slow 1 Fast Tempo: Hindered, Reaction",Fea 1,Sweet voice 2,Special Defense,Normal,0,Sweet voice 1
+Sweet voice 2,Melody,Status attacks have +1 accuracy,Melody,[non damaging move],Strain -2,Simple 1,Echo +,Special Defense,Normal,0,Sweet voice 2
+Echo 1,Soundproof,Ignore added effects from Normal moves,Tune Up,,If this move misses it may be used again without move decay,Anger 1,Echo 2,Special Defense,Normal,0,Echo 1
+Echo 2,Annoying,[Aura] opponents have weakened Special Attack ,Echo,,EchoDefense1,Sweet voice 1,Echo 3,Special Attack,Normal,0,Echo 2
+Echo 3,Shout,Evade(2): Flinch,Finally,,"EchoDefense1, Boosted, recharge 5",Force +,Wild,Special Defense,Normal,0,Echo 3
+Cannon 1,Ranged Fighter,+1 accuracy for ranged attacks,Targeting,,Accuracy +1 while aiming,Thunder 1,Cannon 2,Attack,Normal,Stab,Cannon 1
+Cannon 2,Versatile,All skills have a 1 minimum,Heatseeking,,"Hinder, Homing",Hidden power 1,Cannon 3,Special Attack,Normal,Stab,Cannon 2
+Cannon 3,Scope,Increase range for ranged and sniper moves by 1,Mega Launcher,Ranged,Sniper,Gravel 1,Wild,Special Attack,Normal,Stab,Cannon 3
+Magnetism 1,Polarity,[Aura] Boost Attack and Special Attack of other Pokémon with Polarity,Magnet Pull,,"Condition (Target is Steel , Boosted And immobilize)",Echo 1,Magnetism 2,Special Attack,Electric,0,Magnetism 1
+Magnetism 2,Magnet Grip,Prevent held item from being lost or destroyed,Tractor Beam,Ranged,"Hinder, Steal or immobilize",Force 1,Thunder 3,Special Attack,Electric,0,Magnetism 2
+Surge 1,Static,Spend Threat to trigger paralysis vs melee attacks,Shocking,,Paralysis(3),Magnetism 1,Surge 2,Speed,Electric,0,Surge 1
+Surge 2,Power Surge,Electric skills are boosted when at half health,Electrify,,Move gains Electric in addition to its other types,Thunder 1,Thunder 3,Special Attack,Electric,0,Surge 2
+Thunder 1,Recharge,[Once] Recover 5 strain when resting below 5 strain,Stunning,Electric,Flinch,Surge 1,Thunder 2,Special Defense,Electric,0,Thunder 1
+Thunder 2,Motor Drive,Gain immunity to Electric and boost Speed  if hit by a Electric attack,Arching,,"Hinder, double hit",Hyper 1,Thunder 3,Special Attack,Electric,0,Thunder 2
+Thunder 3,Lightning Shield,Evade(2): Flinch,Lightning,"Electric, Special Attack","Hinder, Reaction",Magnetism +,Wild,Speed,Electric,0,Thunder 3
+Metal Coat 1,Bullet Proof,Gain resistance to any ranged moves that deals physical damage,Weapon,Melee,Cannot be reacted to and does not trigger defensive abilities,Magnetism 1,Metal Coat 2,Defense,Steel,0,Metal Coat 1
+Metal Coat 2,Heavy Metal,"Hinder Speed, boost Defense and Special Defense at start of combat",Mechanized,,Move gains Steel in addition to its other types,Mechanical 1,Cannon +,Defense,Steel,0,Metal Coat 2
+Bone 1,Battle Armor,Critical hits are Hindered.,Weapon,Melee,Cannot be reacted to and does not trigger defensive abilities,Swordsman 1,Gravel 2,Attack,Ground,Rock,Bone 1
+Terra 1,Earthbound,Gain immunity to moves with knockback,Arena Trap,Ground,Immobilize,Bone 1,Terra 2,Speed,Ground,0,Terra 1
+Terra 2,Tremor Sense,"Prevent loss of accuracy, know opponents defensive stats(HP Defense and Special Defense Evasion)",Quicksand,Ground,Weaken evasion x2 (2),Sandstorm 1,Terra 3,Attack,Ground,0,Terra 2
+Terra 3,Sand Veil,Evade(2): weaken Opponent accuracy by 1,Aftershock,Ground,"Hinder, move triggers again at the end of the next turn",Gravel +,Wild,Special Attack,Ground,0,Terra 3
+Sandstorm 1,Sand Rush,Boost speed by 2 during sandstorm,Sand Force,,"Accuracy -1, If boosted by a sandstorm gain twice the boost effect",Terra 1,Gravel 2,Defense,Ground,Rock,Sandstorm 1
+Gravel 1,Rock-Head,Reduce recoil damage by 4; Threat to trigger 2 recoil on opponent,Choice Rock,Rock,"Whenever a creature uses this move it chooses 1: This move gains Boosted and Accuracy -3, This move gains Hindered and Accuracy +3",Sandstorm 1,Gravel 2,Defense,Rock,0,Gravel 1
+Gravel 2,Solid,Evade(2): A super effective attack is hindered,Sharpened,Attack,"Hinder, Pierce",Bone 1,Gravel 3,Attack,Rock,0,Gravel 2
+Gravel 3,Battle Armor,Critical hits are Hindered.,Long Arm,"Rock , Ranged",Sniper,Metal Coat +,Wild,Defense,Rock,0,Gravel 3
+Frosty 1,Snow Cloak,Evade(2): Increase evasion by 1,Snow Drift,Ice,Terrain becomes Snowy,Crystal 1,Frosty 2,Special Attack,Ice,0,Frosty 1
+Frosty 2,Chilled Out,Ice moves used on Full HP are boosted,Cold Snap,,Frost-Killer,Wind caller 1,Frosty 3,Special Defense,Ice,0,Frosty 2
+Frosty 3,Sub-Zero,Spend Threat to trigger Frost vs melee attacks,Frosted,Ice,Frost(2),Hydropower +,Wild,Special Attack,Ice,0,Frosty 3
+Crystal 1,Ice Body,Increase Soak by 1 If Ice is boosted,Refrigerate,,A move becomes Ice,Barrier 1,Crystal 2,Attack,Ice,0,Crystal 1
+Crystal 2,Mirror,Evade(2): Reflect special attack at attacker with hindered and homing,Crystal Armor,Self,Boost Special Defense,Frosty 1,Frosty 3,Special Attack,Ice,0,Crystal 2
+,Color Change,Change the user’s type to be that of the last move that hit it.,,,,,,,Flying,,
+,Suction Cups,Prevent knockback effects,,,,,,,Flying,,
+,Artificial,Can’t eat berries. Allow artificial items.,,,,,,,Bug,,
+,Swift Swim,Boost Speed in water.,,,,,,,Bug,,
+,Healer,[Turn] Double white destiny remove one status condition from an ally in melee range,,,,,,,Normal,,
