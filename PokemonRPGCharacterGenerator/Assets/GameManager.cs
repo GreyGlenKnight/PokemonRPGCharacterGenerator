@@ -4,66 +4,53 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using System;
 
-public class GameManager : MonoBehaviour
+public static class ListExtensions
+
+
+{	private static System.Random rng = new System.Random();  
+
+	public static void Shuffle<T>(this IList<T> list)  
+	{  
+		int n = list.Count;  
+		while (n > 1) {  
+			n--;  
+			int k = rng.Next(n + 1);  
+			T value = list[k];  
+			list[k] = list[n];  
+			list[n] = value;  
+		}  
+	}}
+
+public class GameManager : MonoBehaviour 
+	
+
 {
-    public static GameManager instance = null;
-    public Text myTextBox;
 
-    public Toggle[] options = new Toggle[12];
+	public TreeManager[] AllTrees;
 
-    string testFileName = "Assets/TestOutput.txt";
-    TextWriter testFile;
+	public static GameManager instance = null;
 
-    void Awake()
-    {
+	TextWriter testfile; 
+	public void CallTreeRoll()
+	{for (int i = 0; i < AllTrees.Length; i++) 
+		{AllTrees [i].RollOnTree ();
+		}
+	}
+	void Awake()
 
+	//Awake is always called before any Start functions
+	//Function doesn't return anything
 
-        //Check if instance already exists
-        if (instance == null)
-        {
-            //if not, set instance to this
-            instance = this;
-        }
+	{
+		if (instance == null)
+		{instance = this;}
 
-        //If instance already exists and it's not this:
-        else if (instance != this)
-        {
-            //Then destroy this. This enforces our singleton pattern, meaning there can only ever be one instance of a GameManager.
-            Destroy(gameObject);
-        }
+		//I think this means if a file is newly created, it will automatically name or define it as THIS.  
 
-        //Sets this to not be destroyed when reloading scene
-        DontDestroyOnLoad(gameObject);
+		else  if (instance != this)
+		{Destroy (gameObject);}
+		DontDestroyOnLoad(gameObject);
 
-
-        testFile = new TextWriter();
-
-    }
-
-    public void GetNumber()
-    {
-
-        int intRandNumber = UnityEngine.Random.Range(1, 13);
-        string randomNumber = intRandNumber.ToString();
-
-        options[intRandNumber - 1].isOn = true;
-
-        //testFile.Append(randomNumber);
-        //testFile.Append(randomNumber);
-
-
-
-
-
-        myTextBox.text = randomNumber;
-    }
-
-    private void Update()
-    {
-        // DO game stuff!!!
-
-
-    }
+	}
 
 }
-
