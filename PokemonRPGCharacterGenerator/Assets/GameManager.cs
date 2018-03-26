@@ -6,18 +6,55 @@ using System;
 
 public static class ListExtensions
 
+//This shuffle function can be applied to lists, as in an extension of existing functions?
+//Treemanager refers to bonuses.shuffle, with bonuses being a list of ints.
 
 {	private static System.Random rng = new System.Random();  
 
+	//This makes it a little easier to use rng.next to keep making new numbers.
+
 	public static void Shuffle<T>(this IList<T> list)  
+
+	//We use T as a generic, single type. We can call Shuffle now, as a function defined here.
+	//When we call shuffle on a list, we declare the list such as bonuses.shuffle, and 'this' refers to that instance.
+	//Using IList<T> rather than List<T> allows the code to be more flexible. 
+	//It can replace the implementation with any collection that implements IList<T> without breaking any calling code.
 	{  
 		int n = list.Count;  
-		while (n > 1) {  
+
+		//We assign an integer N with the value of the length of the list. This is dynamic so we select from a smaller range as we go.
+		//Shuffle works this way rather than keeping the starting range.
+
+		while (n > 1) 
+			
+			//Process of elimination leaves only one value for the last item.
+			//the following scope only applies to the list when it has multiple items.
+			//int n will be 1 when it's last, thus negating the rest of the function.
+			//While should mean that this function automatically repeats until N == 1.
+		{  
 			n--;  
+			//The -- operator decrements N by 1. Because it comes after N, it refers to the value after N is decremented.
+			//This doesn't happen if N is <= 1. After the semicolon, N is reduced in value for the rest of the function.
+
 			int k = rng.Next(n + 1);  
-			T value = list[k];  
+
+			//Assigns int K as a new random integer, with a max of N+1. Upper bound is exclusive, so the max is N after --.
+			T value = list[k]; 
+
+			//Assigns T value to a list K. Since there's only one type, just T works. 
+			//T is the thing we shuffle. List of K is our random ints.
+			//A generic type parameter allows you to specify an arbitrary type T to a method at compile-time, 
+			//without specifying a concrete type in the method or class declaration.
+
 			list[k] = list[n];  
+
+			//The total count of the list is assigned the latest number, which is being decremented every time.
+			//We assign the highest number ie the list.count so we can decrement and reduce random range.
+
 			list[n] = value;  
+
+			//This assigns the new shuffled list N to a T type called value that things can use.
+			//All these assignments are necessary because the while parameter makes this repeat?
 		}  
 	}}
 
@@ -35,11 +72,12 @@ public class GameManager : MonoBehaviour
 	{for (int i = 0; i < AllTrees.Length; i++) 
 		{AllTrees [i].RollOnTree ();
 		}
+
 	}
 	void Awake()
 
 	//Awake is always called before any Start functions
-	//Function doesn't return anything
+	//Void Function doesn't return anything
 
 	{
 		if (instance == null)
