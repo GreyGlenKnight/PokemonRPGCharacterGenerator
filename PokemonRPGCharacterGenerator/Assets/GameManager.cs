@@ -41,20 +41,17 @@ public static class ListExtensions
 			//Assigns int K as a new random integer, with a max of N+1. Upper bound is exclusive, so the max is N after --.
 			T value = list[k]; 
 
-			//Assigns T value to a list K. Since there's only one type, just T works. 
-			//T is the thing we shuffle. List of K is our random ints.
-			//A generic type parameter allows you to specify an arbitrary type T to a method at compile-time, 
-			//without specifying a concrete type in the method or class declaration.
+			//T value is the index of the list, it's the thing that's in K position on the list. This is assigned Value.
 
 			list[k] = list[n];  
 
-			//The total count of the list is assigned the latest number, which is being decremented every time.
-			//We assign the highest number ie the list.count so we can decrement and reduce random range.
+			//N is the list.count so it takes the K position on the list, swaps it with the higher list count,
+			//since list count is always highest and outside the range of the rng.
 
 			list[n] = value;  
 
-			//This assigns the new shuffled list N to a T type called value that things can use.
-			//All these assignments are necessary because the while parameter makes this repeat?
+			//
+			//All these assignments are necessary because the while parameter makes this repeat.
 		}  
 	}}
 
