@@ -59,7 +59,6 @@ public class GameManager : MonoBehaviour
 	
 
 {
-
 	public TreeManager[] AllTrees;
 
 	public static GameManager instance = null;
