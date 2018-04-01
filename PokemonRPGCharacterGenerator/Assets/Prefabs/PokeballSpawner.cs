@@ -13,7 +13,7 @@ public class PokeballSpawner : MonoBehaviour
 	public Canvas BGCanvas;
 	public Vector3 MousePosition;
 	public Vector3 NewPos;
-	GameObject[] Population = new GameObject[64];
+	GameObject[] Population = new GameObject[151];
 	//	BoxCollider2D Background;
 
 	public void Spawn ()
@@ -21,12 +21,12 @@ public class PokeballSpawner : MonoBehaviour
 		//PortraitObject = this;
 		Vector3 NewPos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 		NewPos.z = 1;
-		if (Population [NumberSpawned % 64] != null) 
+		if (Population [NumberSpawned % 151] != null) 
 		{
-			Destroy (Population [NumberSpawned % 64]);
+			Destroy (Population [NumberSpawned % 151]);
 		}
 
-		Population [NumberSpawned % 64] = Instantiate (Pokedoll, NewPos, Quaternion.identity);
+		Population [NumberSpawned % 151] = Instantiate (Pokedoll, NewPos, Quaternion.identity);
 		NumberSpawned++;
 	}
 
