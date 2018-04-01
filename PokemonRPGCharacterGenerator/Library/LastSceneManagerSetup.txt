@@ -1,4 +1,10 @@
 sceneSetups:
-- path: Collision BG/Assets/Collision BG Scene.unity
+- path: Assets/Main.unity
   isLoaded: 1
   isActive: 1
+- path: Assets/Prefabs/Collision BG Scene.unity
+  isLoaded: 1
+  isActive: 0
+- path: Assets/Prefabs/Collision BG.unity
+  isLoaded: 1
+  isActive: 0
