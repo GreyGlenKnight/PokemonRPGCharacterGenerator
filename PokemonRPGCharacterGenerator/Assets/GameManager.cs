@@ -64,8 +64,12 @@ public class GameManager : MonoBehaviour
 	public static GameManager instance = null;
 
 	TextWriter testfile; 
+
 	public void CallTreeRoll()
-	{for (int i = 0; i < AllTrees.Length; i++) 
+	{
+
+			
+		for (int i = 0; i < AllTrees.Length; i++) 
 		{AllTrees [i].RollOnTree ();
 		}
 
