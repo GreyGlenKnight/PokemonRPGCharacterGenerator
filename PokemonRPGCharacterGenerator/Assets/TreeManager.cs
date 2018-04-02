@@ -8,29 +8,52 @@ using System;
 
 public class TreeManager : MonoBehaviour 
 {
+	
 	List<int> Bonuses = new List<int> ();
 	//I think we use new since bonuses will belong to treemanager.
 	public Toggle[] options = new Toggle[12];
 	//options are the selected bonuses for each tree per roll. Array of toggles.
 	//We use an array for the toggles, but a list for the bonuses.
 	public Text Tree_text;
-	//
 	public bool CanSelect = false;
-
+	//public bool CanChoose;
 	public void RollOnTree()
+
 
 	{
 		RollTheList (Bonuses, options, Tree_text);
 	}
 	public void SelectMe()
 
-	{	if (CanSelect == false)
-		{return;
+	{
+		Debug.Log ("SelectMe");
+
+		//CanChoose =	GetComponent<GameManager>().CanChoose;
+
+
+		//CanChoose =	gameObject.GetComponent<GameManager>().CanChoose;
+//		Debug.Log ("Got CanChoose");
+		if (!gameObject.GetComponent<GameManager>().CanChoose)		
+		{
+			Debug.Log ("False");
+
+			return;
 		}
-		int intrandnumber1 = Bonuses [0];
-		Bonuses.RemoveAt (0);
-		options [intrandnumber1].isOn = true;
-		CanSelect = false;
+		//GameManager.GetComponent(bool CanChoose);
+		//GameManager.CanChoose == false
+
+
+			if (CanSelect == false) 
+			{
+				return;
+			}
+		Debug.Log ("Got CanSelect");
+
+			int intrandnumber1 = Bonuses [0];
+			Bonuses.RemoveAt (0);
+			options [intrandnumber1].isOn = true;
+			CanSelect = false;
+
 
 	}
 
@@ -42,7 +65,6 @@ public class TreeManager : MonoBehaviour
 			Bonuses.Add (i);
 		}
 		Bonuses.Shuffle ();
-		Debug.Log ("Shuffling the list.");
 
 	}
 
@@ -54,11 +76,11 @@ public class TreeManager : MonoBehaviour
 
 		}
 
-		Debug.Log ("Test1");
+
 
 		Bonuses.Shuffle ();
 		CanSelect = true;
-
+		//Debug.Log ("Canselect");
 		int intrandnumber1 = LBonus [0] +1;
 
 		String randomnumber1 = intrandnumber1.ToString ();
@@ -68,6 +90,8 @@ public class TreeManager : MonoBehaviour
 
 	}
 	public void Awake()
-	{ResetBonuses ();
+	{
+		CanSelect = false;
+		ResetBonuses ();
 	}
 }

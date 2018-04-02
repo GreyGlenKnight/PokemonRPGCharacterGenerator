@@ -5,7 +5,6 @@ using UnityEngine.UI;
 using System;
 
 public static class ListExtensions
-
 //This shuffle function can be applied to lists, as in an extension of existing functions?
 //Treemanager refers to bonuses.shuffle, with bonuses being a list of ints.
 
@@ -56,23 +55,65 @@ public static class ListExtensions
 	}}
 
 public class GameManager : MonoBehaviour 
-	
 
 {
+
 	public TreeManager[] AllTrees;
 
 	public static GameManager instance = null;
 
 	TextWriter testfile; 
+	public int XP;
+	public Text XPText;
+	public bool CanRoll = true;
+	public bool CanChoose = false;
+	public void AddXP()
+		
+	{
+		if (XP < 50) 
+		{
+			XP++;
+		}
+	//	string XPText = XP.ToString ();
+	}
+	public void SpendXP()
+	{
+		if (XP < 1) 
+		{
+			return;
+		}
+		if (CanRoll == false) 
+		{
+			XP--;
+			CanRoll = true;
+			CanChoose = false;
+
+		}
+
+	}
+
+
 
 	public void CallTreeRoll()
 	{
-
-			
-		for (int i = 0; i < AllTrees.Length; i++) 
-		{AllTrees [i].RollOnTree ();
+		if (CanRoll == false) 
+		{
+			return;
 		}
+		if (XP < 1) 
+		{
+			return;
+		} 
 
+			for (int i = 0; i < AllTrees.Length; i++) 
+			{
+				AllTrees [i].RollOnTree ();
+
+			}
+		CanChoose = true;
+
+		CanRoll = false;
+		
 	}
 	void Awake()
 
@@ -80,6 +121,7 @@ public class GameManager : MonoBehaviour
 	//Void Function doesn't return anything
 
 	{
+		CanRoll = true;
 		if (instance == null)
 		{instance = this;}
 
@@ -88,6 +130,8 @@ public class GameManager : MonoBehaviour
 		else  if (instance != this)
 		{Destroy (gameObject);}
 		DontDestroyOnLoad(gameObject);
+
+
 
 	}
 
