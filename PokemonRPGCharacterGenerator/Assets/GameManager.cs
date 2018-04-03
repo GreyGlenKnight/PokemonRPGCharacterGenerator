@@ -65,8 +65,10 @@ public class GameManager : MonoBehaviour
 	TextWriter testfile; 
 	public int XP;
 	public Text XPText;
+	public string CurrentXP;
 	public bool CanRoll = true;
 	public bool CanChoose = false;
+
 	public void AddXP()
 		
 	{
@@ -86,7 +88,7 @@ public class GameManager : MonoBehaviour
 		{
 			XP--;
 			CanRoll = true;
-			CanChoose = false;
+			//CanChoose = false;
 
 		}
 
@@ -122,6 +124,8 @@ public class GameManager : MonoBehaviour
 
 	{
 		CanRoll = true;
+	
+
 		if (instance == null)
 		{instance = this;}
 
@@ -133,6 +137,11 @@ public class GameManager : MonoBehaviour
 
 
 
+	}
+	void Update ()
+	{
+		CurrentXP = XP.ToString ();
+		XPText.text = CurrentXP;
 	}
 
 }

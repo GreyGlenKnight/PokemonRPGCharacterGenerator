@@ -33,7 +33,7 @@ public class TreeManager : MonoBehaviour
 
 		//CanChoose =	gameObject.GetComponent<GameManager>().CanChoose;
 //		Debug.Log ("Got CanChoose");
-		if (!gameObject.GetComponent<GameManager>().CanChoose)		
+		if (! GameManager.instance.CanChoose)		
 		{
 			Debug.Log ("False");
 
@@ -53,6 +53,9 @@ public class TreeManager : MonoBehaviour
 			Bonuses.RemoveAt (0);
 			options [intrandnumber1].isOn = true;
 			CanSelect = false;
+//		gameObject.GetComponent<GameManager> ().CanChoose = false;	
+			
+			//CanChoose = false;
 
 
 	}

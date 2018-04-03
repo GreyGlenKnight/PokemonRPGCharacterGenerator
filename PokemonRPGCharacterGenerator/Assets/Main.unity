@@ -630,23 +630,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114251654261644692, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1644167618}
     - target: {fileID: 114251654261644692, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectMe
+      objectReference: {fileID: 0}
+    - target: {fileID: 114251654261644692, guid: 0592928addf394041b709b869cbdd6dc,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 2026240830}
     - target: {fileID: 114251654261644692, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SpendXP
-      objectReference: {fileID: 0}
-    - target: {fileID: 114251654261644692, guid: 0592928addf394041b709b869cbdd6dc,
-        type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: SelectMe
+      value: SpendXP
       objectReference: {fileID: 0}
     - target: {fileID: 114251654261644692, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
@@ -1140,7 +1140,7 @@ Prefab:
     - target: {fileID: 114352961441403634, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
       propertyPath: m_Color.a
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114475749208374876, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
@@ -1166,21 +1166,21 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1207548818}
+      objectReference: {fileID: 2026240830}
     - target: {fileID: 114251654261644692, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: SelectMe
+      value: SpendXP
       objectReference: {fileID: 0}
     - target: {fileID: 114251654261644692, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2026240830}
+      objectReference: {fileID: 1207548818}
     - target: {fileID: 114251654261644692, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SpendXP
+      value: SelectMe
       objectReference: {fileID: 0}
     - target: {fileID: 114251654261644692, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
@@ -1204,6 +1204,11 @@ Prefab:
     - target: {fileID: 1280660239062202, guid: 0592928addf394041b709b869cbdd6dc, type: 2}
       propertyPath: m_Name
       value: Toggle list 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114002111764308338, guid: 0592928addf394041b709b869cbdd6dc,
+        type: 2}
+      propertyPath: m_Text
+      value: '-'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0592928addf394041b709b869cbdd6dc, type: 2}
@@ -3342,7 +3347,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -8124,7 +8129,7 @@ Prefab:
     - target: {fileID: 114352961441403634, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
       propertyPath: m_Color.a
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114475749208374876, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
@@ -8150,21 +8155,21 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 754484088}
+      objectReference: {fileID: 2026240830}
     - target: {fileID: 114251654261644692, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: SelectMe
+      value: SpendXP
       objectReference: {fileID: 0}
     - target: {fileID: 114251654261644692, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2026240830}
+      objectReference: {fileID: 754484088}
     - target: {fileID: 114251654261644692, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SpendXP
+      value: SelectMe
       objectReference: {fileID: 0}
     - target: {fileID: 114251654261644692, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
@@ -8189,9 +8194,19 @@ Prefab:
       propertyPath: m_Name
       value: Toggle list 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114002111764308338, guid: 0592928addf394041b709b869cbdd6dc,
+        type: 2}
+      propertyPath: m_Text
+      value: '-'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0592928addf394041b709b869cbdd6dc, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &798411535 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1013685802593310, guid: 91497fea4f9244dd3b6a413f244f5969,
+    type: 2}
+  m_PrefabInternal: {fileID: 886426103}
 --- !u!1 &806365870
 GameObject:
   m_ObjectHideFlags: 0
@@ -10728,6 +10743,10 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1018594923127582, guid: f560c5e2e4cad46d989cbd4fabd803e5, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114162319014730840, guid: f560c5e2e4cad46d989cbd4fabd803e5, type: 2}
@@ -15474,6 +15493,11 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114208646641268766, guid: 0592928addf394041b709b869cbdd6dc,
+        type: 2}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 224983437923936178, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -15726,7 +15750,7 @@ Prefab:
     - target: {fileID: 114352961441403634, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
       propertyPath: m_Color.a
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114475749208374876, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
@@ -15752,21 +15776,21 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 148371688}
+      objectReference: {fileID: 2026240830}
     - target: {fileID: 114251654261644692, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: SelectMe
+      value: SpendXP
       objectReference: {fileID: 0}
     - target: {fileID: 114251654261644692, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2026240830}
+      objectReference: {fileID: 148371688}
     - target: {fileID: 114251654261644692, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SpendXP
+      value: SelectMe
       objectReference: {fileID: 0}
     - target: {fileID: 114251654261644692, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
@@ -15790,6 +15814,31 @@ Prefab:
     - target: {fileID: 1280660239062202, guid: 0592928addf394041b709b869cbdd6dc, type: 2}
       propertyPath: m_Name
       value: Toggle list 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114208646641268766, guid: 0592928addf394041b709b869cbdd6dc,
+        type: 2}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114208646641268766, guid: 0592928addf394041b709b869cbdd6dc,
+        type: 2}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114208646641268766, guid: 0592928addf394041b709b869cbdd6dc,
+        type: 2}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114208646641268766, guid: 0592928addf394041b709b869cbdd6dc,
+        type: 2}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114002111764308338, guid: 0592928addf394041b709b869cbdd6dc,
+        type: 2}
+      propertyPath: m_Text
+      value: '-'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0592928addf394041b709b869cbdd6dc, type: 2}
@@ -18022,6 +18071,7 @@ GameObject:
   - component: {fileID: 1908813802}
   - component: {fileID: 1908813801}
   - component: {fileID: 1908813805}
+  - component: {fileID: 1908813807}
   m_Layer: 5
   m_Name: CharGenCanvas
   m_TagString: Untagged
@@ -18118,6 +18168,24 @@ SortingGroup:
   m_SortingLayerID: 1852783423
   m_SortingLayer: -1
   m_SortingOrder: 0
+--- !u!114 &1908813807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1908813800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 810b2c0c456f34cdd8581d8fc1ee7a00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PortraitObject: {fileID: 798411535}
+  Pokedoll: {fileID: 798411535}
+  Charmander: {fileID: 0}
+  CharCol: {fileID: 0}
+  BGCanvas: {fileID: 0}
+  MousePosition: {x: 0, y: 0, z: 0}
+  NewPos: {x: 0, y: 0, z: 0}
 --- !u!1 &1912329874
 GameObject:
   m_ObjectHideFlags: 0
@@ -19434,6 +19502,7 @@ MonoBehaviour:
   - {fileID: 148371688}
   XP: 0
   XPText: {fileID: 1561839133}
+  CurrentXP: 
   CanRoll: 0
   CanChoose: 0
 --- !u!4 &2026240831
