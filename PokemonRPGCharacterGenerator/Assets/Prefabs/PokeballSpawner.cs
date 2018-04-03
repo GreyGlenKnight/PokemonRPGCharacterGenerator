@@ -13,6 +13,7 @@ public class PokeballSpawner : MonoBehaviour
 	public Canvas BGCanvas;
 	public Vector3 MousePosition;
 	public Vector3 NewPos;
+
 	GameObject[] Population = new GameObject[151];
 	//	BoxCollider2D Background;
 
@@ -38,6 +39,7 @@ public class PokeballSpawner : MonoBehaviour
 			MousePosition = new Vector3 (Input.mousePosition.x, Input.mousePosition.y, 0f);
 		
 			//audioSource.pitch = rng;
+
 			Spawn ();
 		
 				//DestroyObject (Pokedoll);

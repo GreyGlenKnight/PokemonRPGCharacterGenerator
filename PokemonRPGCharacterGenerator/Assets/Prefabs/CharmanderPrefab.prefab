@@ -24,8 +24,9 @@ GameObject:
   - component: {fileID: 50830892048690436}
   - component: {fileID: 82653454167372460}
   - component: {fileID: 210107377731487774}
+  - component: {fileID: 114235232512839724}
   m_Layer: 0
-  m_Name: New Sprite
+  m_Name: CharmanderPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -169,6 +170,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114235232512839724
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1013685802593310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bbd56bb249c44bf09c740c27c46392d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LowRange: 0.66
+  HighRange: 1.5
+  randomindex: 0
+  Cry: {fileID: 82653454167372460}
+  CryClip: {fileID: 8300000, guid: 4d63341efd50540efaaf89a7b5ecfe75, type: 3}
 --- !u!210 &210107377731487774
 SortingGroup:
   m_ObjectHideFlags: 1

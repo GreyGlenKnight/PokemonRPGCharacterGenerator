@@ -21,7 +21,8 @@ GameObject:
   - component: {fileID: 224950279006130910}
   - component: {fileID: 222231497532055502}
   - component: {fileID: 114364320187236160}
-  - component: {fileID: 114162319014730840}
+  - component: {fileID: 210306251084232282}
+  - component: {fileID: 114657429665167066}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -29,24 +30,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!114 &114162319014730840
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1018594923127582}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 810b2c0c456f34cdd8581d8fc1ee7a00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PortraitObject: {fileID: 0}
-  Pokedoll: {fileID: 0}
-  Charmander: {fileID: 21300000, guid: f256fd63cacb54f44bd7cc9c095376d3, type: 3}
-  CharCol: {fileID: 0}
-  BGCanvas: {fileID: 0}
-  MousePosition: {x: 0, y: 0, z: 0}
-  NewPos: {x: 0, y: 0, z: 0}
 --- !u!114 &114364320187236160
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -74,6 +57,35 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114657429665167066
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1018594923127582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 810b2c0c456f34cdd8581d8fc1ee7a00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PortraitObject: {fileID: 1013685802593310, guid: 91497fea4f9244dd3b6a413f244f5969,
+    type: 2}
+  Pokedoll: {fileID: 1013685802593310, guid: 91497fea4f9244dd3b6a413f244f5969, type: 2}
+  Charmander: {fileID: 0}
+  CharCol: {fileID: 50830892048690436, guid: 91497fea4f9244dd3b6a413f244f5969, type: 2}
+  BGCanvas: {fileID: 0}
+  MousePosition: {x: 0, y: 0, z: 0}
+  NewPos: {x: 0, y: 0, z: 0}
+--- !u!210 &210306251084232282
+SortingGroup:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1018594923127582}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!222 &222231497532055502
 CanvasRenderer:
   m_ObjectHideFlags: 1
