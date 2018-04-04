@@ -11,7 +11,11 @@ public class TreeManager : MonoBehaviour
 	List<int> Bonuses = new List<int> ();
 	public Toggle[] options = new Toggle[12];
 	public Text Tree_text;
-	public static bool CanSelect = false;
+	public bool CanSelect = false;
+	//public bool AutoSelectOn = false;
+	public int intrandnumber1;
+
+
 	public void RollOnTree()
 
 
@@ -21,11 +25,11 @@ public class TreeManager : MonoBehaviour
 	public void SelectMe()
 
 	{
-		Debug.Log ("SelectMe");
+	//	Debug.Log ("SelectMe");
 
 		if (! GameManager.instance.CanChoose)		
 		{
-			Debug.Log ("False");
+		//	Debug.Log ("False");
 
 			return;
 		}
@@ -39,7 +43,7 @@ public class TreeManager : MonoBehaviour
 			Bonuses.RemoveAt (0);
 			options [intrandnumber1].isOn = true;
 			CanSelect = false;
-		Debug.Log ("Got CanSelect");
+	//	Debug.Log ("Got CanSelect");
 
 	}
 
@@ -57,12 +61,10 @@ public class TreeManager : MonoBehaviour
 	public void RollTheList (List <int> LBonus, Toggle[] Loptions, Text LText)
 
 	{
-		if (LBonus.Count == 0) {
+		if (LBonus.Count == 0) 
+		{
 			ResetBonuses (); 
-
 		}
-
-
 
 		Bonuses.Shuffle ();
 		CanSelect = true;
@@ -73,6 +75,42 @@ public class TreeManager : MonoBehaviour
 		LText.text = randomnumber1;
 
 	}
+
+	public void AutoSelect () 
+	{
+		//TreeRolls [TreeSlot];
+		//This
+		Debug.Log(intrandnumber1);
+		Debug.Log ("AutoSelect");
+		//TreeManager.intrandnumber1 = TreeSlot;
+
+		//if (CanSelect == false)
+		//{return;}
+
+		if (intrandnumber1 == 11 || intrandnumber1 == 12)
+		{return;}
+
+		if (intrandnumber1 == 7)
+		{SelectMe();}
+
+		if (intrandnumber1 == 1||intrandnumber1 == 2||intrandnumber1 == 3||intrandnumber1 == 4|| intrandnumber1 ==5)
+		{SelectMe();}
+
+		if (intrandnumber1 == 8)
+		{SelectMe();}
+
+		if (intrandnumber1 == 6)
+		{SelectMe();}
+
+		if (intrandnumber1 == 9)
+		{SelectMe();}
+
+		if (intrandnumber1 == 10)
+		{SelectMe();}
+		return;
+	}
+
+
 	public void Awake()
 	{
 		CanSelect = false;

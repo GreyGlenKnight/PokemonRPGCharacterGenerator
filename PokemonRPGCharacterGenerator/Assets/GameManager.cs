@@ -45,9 +45,20 @@ public class GameManager : MonoBehaviour
 	public string CurrentXP;
 	public bool CanRoll = true;
 	public bool CanChoose = false;
+	//public AutoSelectManager _AutoSelectManager;
 	public PokeSheetSceneManager _PokeSheetSceneManager;
 	public PokeSheetTreeManager _PokeSheetTreeManager;
+	public bool AutoSelectOn = false;
+	public Toggle AutoSelectToggle;
 	//public GameObject PokeSheetTreeManager;
+
+	public void TurnAutoSelectOn()
+	{
+		AutoSelectOn = !AutoSelectOn;
+
+			Debug.Log ("AutoSelect toggle");
+
+	}
 
 	public void AddXP()
 		
@@ -99,11 +110,19 @@ public class GameManager : MonoBehaviour
 			return;
 		} 
 
+	
 			for (int i = 0; i < AllTrees.Length; i++) 
 			{
 				AllTrees [i].RollOnTree ();
 
 			}
+
+		if (AutoSelectOn == true) 
+		{
+			Debug.Log ("AutoSelecting...");
+			//AutoSelect()
+		}
+
 		CanChoose = true;
 
 		CanRoll = false;
@@ -113,7 +132,6 @@ public class GameManager : MonoBehaviour
 
 	{
 		CanRoll = true;
-	
 
 		if (instance == null)
 		{instance = this;}
@@ -127,6 +145,7 @@ public class GameManager : MonoBehaviour
 	}
 	void Update ()
 	{
+		//AutoSelectOn = AutoSelectToggle;
 		CurrentXP = XP.ToString ();
 		XPText.text = CurrentXP;
 	}
