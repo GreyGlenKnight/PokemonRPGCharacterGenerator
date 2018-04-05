@@ -13,6 +13,7 @@ public class PokeballSpawner : MonoBehaviour
 	public Canvas BGCanvas;
 	public Vector3 MousePosition;
 	public Vector3 NewPos;
+	public float RandomSize;
 
 	GameObject[] Population = new GameObject[151];
 	//	BoxCollider2D Background;
@@ -26,8 +27,9 @@ public class PokeballSpawner : MonoBehaviour
 		{
 			Destroy (Population [NumberSpawned % 151]);
 		}
-
+		RandomSize = UnityEngine.Random.Range(.2f, .4f);
 		Population [NumberSpawned % 151] = Instantiate (Pokedoll, NewPos, Quaternion.identity);
+		Pokedoll.transform.localScale = new Vector3(RandomSize, RandomSize, RandomSize);
 		NumberSpawned++;
 	}
 
