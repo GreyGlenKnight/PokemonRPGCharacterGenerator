@@ -55,7 +55,11 @@ public class GameManager : MonoBehaviour
 	public void TurnAutoSelectOn()
 	{
 		AutoSelectOn = !AutoSelectOn;
-
+//		if (AutoSelectOn == true) 
+//		{
+//			AutoSelectOn =	AutoSelectToggle.isOn;
+//		}
+//	
 			Debug.Log ("AutoSelect toggle");
 
 	}
@@ -117,11 +121,11 @@ public class GameManager : MonoBehaviour
 
 			}
 
-		if (AutoSelectOn == true) 
-		{
-			Debug.Log ("AutoSelecting...");
-			//AutoSelect()
-		}
+//		if (AutoSelectOn == true) 
+//		{
+//			Debug.Log ("AutoSelecting...");
+//			//TreeManager.AutoSelect ();
+//		}
 
 		CanChoose = true;
 

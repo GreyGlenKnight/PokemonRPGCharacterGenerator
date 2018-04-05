@@ -7,6 +7,8 @@ public class TypeColors : MonoBehaviour
 {
 	public string PokemonType1;
 	public string PokemonType2;
+//	public GameObject PanelType1;
+//	public GameObject PanelType2;
 	public Color NormalColor = new Color (0.647f , 0.647f , 0.459f );
 	public Color FireColor = new Color  (0.929f , 0.486f , 0.169f );
 	public Color WaterColor = new Color  (0.380f , 0.545f , 0.937f );
@@ -45,22 +47,22 @@ public class TypeColors : MonoBehaviour
 	public string Steel;
 	public string Fairy;
 
-
-	Color RGBColor(float r, float g, float b)
-	{
-		if (r > 255)
-			r = 255f;
-		if (g > 255)
-			g = 255f;
-		if (b > 255)
-			b = 255f;
-		r /= 255f;
-		g /= 255f;
-		b /= 255f;
-		return new Color(r, g, b);
-	}
+//	Color RGBColor(float r, float g, float b)
+//	{
+//		if (r > 255)
+//			r = 255f;
+//		if (g > 255)
+//			g = 255f;
+//		if (b > 255)
+//			b = 255f;
+//		r /= 255f;
+//		g /= 255f;
+//		b /= 255f;
+//		return new Color(r, g, b);
+//	}
 
 	void Awake () 
+
 	{
 
 List <Color> TypeColorList = new List <Color> ();

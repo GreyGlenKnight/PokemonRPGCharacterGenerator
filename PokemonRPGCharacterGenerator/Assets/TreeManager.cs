@@ -11,7 +11,7 @@ public class TreeManager : MonoBehaviour
 	List<int> Bonuses = new List<int> ();
 	public Toggle[] options = new Toggle[12];
 	public Text Tree_text;
-	public bool CanSelect = false;
+	public static bool CanSelect = false;
 	//public bool AutoSelectOn = false;
 	public int intrandnumber1;
 
@@ -22,6 +22,8 @@ public class TreeManager : MonoBehaviour
 	{
 		RollTheList (Bonuses, options, Tree_text);
 	}
+
+
 	public void SelectMe()
 
 	{
@@ -42,7 +44,7 @@ public class TreeManager : MonoBehaviour
 			int intrandnumber1 = Bonuses [0];
 			Bonuses.RemoveAt (0);
 			options [intrandnumber1].isOn = true;
-			CanSelect = false;
+	CanSelect = false;
 	//	Debug.Log ("Got CanSelect");
 
 	}

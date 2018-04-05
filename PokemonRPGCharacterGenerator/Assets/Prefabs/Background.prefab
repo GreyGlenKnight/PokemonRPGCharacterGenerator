@@ -22,7 +22,8 @@ GameObject:
   - component: {fileID: 222231497532055502}
   - component: {fileID: 114364320187236160}
   - component: {fileID: 210306251084232282}
-  - component: {fileID: 114657429665167066}
+  - component: {fileID: 114277450607179392}
+  - component: {fileID: 114434519081954186}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -30,6 +31,55 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
+--- !u!114 &114277450607179392
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1018594923127582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46ecb80dd942e403ea1f3aade431085d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PokemonType1: Fire
+  PokemonType2: Flying
+  NormalColor: {r: 0, g: 0, b: 0, a: 0}
+  FireColor: {r: 0, g: 0, b: 0, a: 0}
+  WaterColor: {r: 0, g: 0, b: 0, a: 0}
+  ElectricColor: {r: 0, g: 0, b: 0, a: 0}
+  GrassColor: {r: 0, g: 0, b: 0, a: 0}
+  IceColor: {r: 0, g: 0, b: 0, a: 0}
+  FightingColor: {r: 0, g: 0, b: 0, a: 0}
+  PoisonColor: {r: 0, g: 0, b: 0, a: 0}
+  GroundColor: {r: 0, g: 0, b: 0, a: 0}
+  FlyingColor: {r: 0, g: 0, b: 0, a: 0}
+  PsychicColor: {r: 0, g: 0, b: 0, a: 0}
+  BugColor: {r: 0, g: 0, b: 0, a: 0}
+  RockColor: {r: 0, g: 0, b: 0, a: 0}
+  GhostColor: {r: 0, g: 0, b: 0, a: 0}
+  DragonColor: {r: 0, g: 0, b: 0, a: 0}
+  DarkColor: {r: 0, g: 0, b: 0, a: 0}
+  SteelColor: {r: 0, g: 0, b: 0, a: 0}
+  FairyColor: {r: 0, g: 0, b: 0, a: 0}
+  Normal: 
+  Fire: 
+  Water: 
+  Electric: 
+  Grass: 
+  Ice: 
+  Fighting: 
+  Poison: 
+  Ground: 
+  Flying: 
+  Psychic: 
+  Bug: 
+  Rock: 
+  Ghost: 
+  Dragon: 
+  Dark: 
+  Steel: 
+  Fairy: 
 --- !u!114 &114364320187236160
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -42,7 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.96470594, g: 0.5647059, b: 0.2392157, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -57,7 +107,7 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114657429665167066
+--- !u!114 &114434519081954186
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -65,17 +115,47 @@ MonoBehaviour:
   m_GameObject: {fileID: 1018594923127582}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 810b2c0c456f34cdd8581d8fc1ee7a00, type: 3}
+  m_Script: {fileID: 11500000, guid: 46ecb80dd942e403ea1f3aade431085d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PortraitObject: {fileID: 1013685802593310, guid: 91497fea4f9244dd3b6a413f244f5969,
-    type: 2}
-  Pokedoll: {fileID: 1013685802593310, guid: 91497fea4f9244dd3b6a413f244f5969, type: 2}
-  Charmander: {fileID: 0}
-  CharCol: {fileID: 50830892048690436, guid: 91497fea4f9244dd3b6a413f244f5969, type: 2}
-  BGCanvas: {fileID: 0}
-  MousePosition: {x: 0, y: 0, z: 0}
-  NewPos: {x: 0, y: 0, z: 0}
+  PokemonType1: Fire
+  PokemonType2: Flying
+  NormalColor: {r: 0, g: 0, b: 0, a: 0}
+  FireColor: {r: 0, g: 0, b: 0, a: 0}
+  WaterColor: {r: 0, g: 0, b: 0, a: 0}
+  ElectricColor: {r: 0, g: 0, b: 0, a: 0}
+  GrassColor: {r: 0, g: 0, b: 0, a: 0}
+  IceColor: {r: 0, g: 0, b: 0, a: 0}
+  FightingColor: {r: 0, g: 0, b: 0, a: 0}
+  PoisonColor: {r: 0, g: 0, b: 0, a: 0}
+  GroundColor: {r: 0, g: 0, b: 0, a: 0}
+  FlyingColor: {r: 0, g: 0, b: 0, a: 0}
+  PsychicColor: {r: 0, g: 0, b: 0, a: 0}
+  BugColor: {r: 0, g: 0, b: 0, a: 0}
+  RockColor: {r: 0, g: 0, b: 0, a: 0}
+  GhostColor: {r: 0, g: 0, b: 0, a: 0}
+  DragonColor: {r: 0, g: 0, b: 0, a: 0}
+  DarkColor: {r: 0, g: 0, b: 0, a: 0}
+  SteelColor: {r: 0, g: 0, b: 0, a: 0}
+  FairyColor: {r: 0, g: 0, b: 0, a: 0}
+  Normal: 
+  Fire: 
+  Water: 
+  Electric: 
+  Grass: 
+  Ice: 
+  Fighting: 
+  Poison: 
+  Ground: 
+  Flying: 
+  Psychic: 
+  Bug: 
+  Rock: 
+  Ghost: 
+  Dragon: 
+  Dark: 
+  Steel: 
+  Fairy: 
 --- !u!210 &210306251084232282
 SortingGroup:
   m_ObjectHideFlags: 1
