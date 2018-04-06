@@ -6,7 +6,8 @@ using System;
 
 public static class ListExtensions
 
-{	private static System.Random rng = new System.Random();  
+{	
+	private static System.Random rng = new System.Random();  
 
 	public static void Shuffle<T>(this IList<T> list)  
 
@@ -31,6 +32,12 @@ public static class ListExtensions
 	}
 }
 
+public enum SelectionState
+{
+	Roll,
+	Select
+}
+
 public class GameManager : MonoBehaviour 
 
 {
@@ -43,8 +50,6 @@ public class GameManager : MonoBehaviour
 	public int XP;
 	public Text XPText;
 	public string CurrentXP;
-	public bool CanRoll = true;
-	public bool CanChoose = false;
 	//public AutoSelectManager _AutoSelectManager;
 	public PokeSheetSceneManager _PokeSheetSceneManager;
 	public PokeSheetTreeManager _PokeSheetTreeManager;
@@ -55,12 +60,7 @@ public class GameManager : MonoBehaviour
 	public void TurnAutoSelectOn()
 	{
 		AutoSelectOn = !AutoSelectOn;
-//		if (AutoSelectOn == true) 
-//		{
-//			AutoSelectOn =	AutoSelectToggle.isOn;
-//		}
-//	
-			Debug.Log ("AutoSelect toggle");
+		AutoSelectToggle.isOn = AutoSelectOn;
 
 	}
 
@@ -72,19 +72,22 @@ public class GameManager : MonoBehaviour
 			XP++;
 		}
 	}
-	public void SpendXP()
+
+	public bool SpendXP()
 	{
+		
 		if (XP < 1) 
 		{
-			return;
+			return false;
 		}
-		if (CanRoll == false) 
+		if (_SelectionState == SelectionState.Roll) 
 		{
 			XP--;
-			CanRoll = true;
-
+			_SelectionState = SelectionState.Select;
+//			Debug.Log ("Change to Select");
+			return true;
 		}
-
+		return false;
 	}
 
 	public void SwitchToTree()
@@ -105,48 +108,52 @@ public class GameManager : MonoBehaviour
 
 	public void CallTreeRoll()
 	{
-		if (CanRoll == false) 
+		if (_SelectionState == SelectionState.Select) 
+		{
+			if (AutoSelectOn == true) 
+			{
+//				for (int i = 0; i < AllTrees.Length; i++) 
+//				{
+//					AllTrees [i].RollOnTree ();
+//				}
+//				for (int i = 0; i < AllTrees.Length; i++) 
+//				{
+//					AllTrees [i].RollOnTree ();
+//				}
+				gameObject.GetComponent<AutoSelectManager>().AutoSelect();
+			}
+			return;
+		}
+
+		if (SpendXP () == false) 
 		{
 			return;
 		}
-		if (XP < 1) 
-		{
-			return;
-		} 
 
-	
-			for (int i = 0; i < AllTrees.Length; i++) 
+		for (int i = 0; i < AllTrees.Length; i++) 
 			{
 				AllTrees [i].RollOnTree ();
-
 			}
-
-//		if (AutoSelectOn == true) 
-//		{
-//			Debug.Log ("AutoSelecting...");
-//			//TreeManager.AutoSelect ();
-//		}
-
-		CanChoose = true;
-
-		CanRoll = false;
-		
+		if (AutoSelectOn == true) 
+		{
+			gameObject.GetComponent<AutoSelectManager> ().AutoSelect ();
+		}
 	}
+
+
+	public SelectionState _SelectionState = SelectionState.Roll;
+
 	void Awake()
 
 	{
-		CanRoll = true;
-
 		if (instance == null)
 		{instance = this;}
 			
 		else  if (instance != this)
 		{Destroy (gameObject);}
 		DontDestroyOnLoad(gameObject);
-
-
-
 	}
+
 	void Update ()
 	{
 		//AutoSelectOn = AutoSelectToggle;

@@ -1,54 +1,159 @@
-﻿//using System.Collections;
-//using System.Collections.Generic;
-//using UnityEngine;
-//
-//public class AutoSelectManager : MonoBehaviour 
-//{
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class AutoSelectManager : MonoBehaviour 
+{
 //	public int TreeSlot;
-//	public static bool CanSelect = false;
-//	//TreeSlot = TreeManager.options;
-//	public bool AutoSelectOn;
-//	//public int [] TreeRolls = new int[4];
+	//public static bool CanSelect = false;
+//	public TreeSlot = TreeManager.options;
+	public int [] TreeRolls = new int[4];
+	//options [intrandnumber1].isOn = true;
+	public TreeManager [] ActiveRolls = new TreeManager[4];
+	List <int> TempRolls = new List <int> ();
+
+
+
+	public void AutoSelect ()
+	{
+		for (int i = 0; i < 4; i++) 
+		{
+			TreeRolls [i] = ActiveRolls[i].intrandnumber1;
+			Debug.Log (TreeRolls[i]);
+		}
+
+
+//		for (int i = 0; i < 4; i++) 
+//		{
+//			if (TreeRolls [i] == 0) 
+//			{
+//				TempRolls.Add (i);
+//				Debug.Log ("Fuck");
 //
-//
-//	//options [intrandnumber1].isOn = true;
-//	//This is 
-//	//GameManager.instance.[]AllTrees;
-//
-////	public void AutoSelect () 
-////	{
-////		//TreeRolls [TreeSlot];
-////		//This
-////
-////		Debug.Log ("AutoSelect");
-////		//TreeManager.intrandnumber1 = TreeSlot;
-////
-////		if (CanSelect == false)
-////		{return;}
-////
-////		if (TreeSlot == 11 || TreeSlot == 12)
-////		{return;}
-////
-////		if (TreeSlot == 7)
-////		{TreeManager.SelectMe();}
-////
-////		if (TreeSlot == 1||TreeSlot == 2||TreeSlot == 3||TreeSlot == 4|| TreeSlot ==5)
-////		{TreeManager.SelectMe();}
-////
-////		if (TreeSlot == 8)
-////		{TreeManager.SelectMe();}
-////
-////		if (TreeSlot == 6)
-////		{TreeManager.SelectMe();}
-////
-////		if (TreeSlot == 9)
-////		{TreeManager.SelectMe();}
-////
-////		if (TreeSlot == 10)
-////		{TreeManager.SelectMe();}
-////		return;
-////	}
-//	void Awake()
-//	{
-//	}
-//}
+//			}
+//		}
+
+
+
+		for (int i = 0; i < 4; i++) 
+		{
+			if (TreeRolls [i] == 7) 
+			{
+				TempRolls.Add (i);
+				Debug.Log ("Add 7s...");
+
+			}
+		}
+		if (TempRolls.Count > 0) 
+		{
+			TempRolls.Shuffle ();
+			ActiveRolls [TempRolls [0]].SelectMe ();
+			TempRolls.Clear ();
+			{
+				return;}
+		}
+	
+
+
+		for (int i = 0; i < 4; i++) 
+		{
+			if (TreeRolls [i] <= 5) 
+			{
+				TempRolls.Add (i);
+
+			}
+		}
+		if (TempRolls.Count > 0) {
+			TempRolls.Shuffle ();
+			ActiveRolls [TempRolls [0]].SelectMe ();
+			TempRolls.Clear ();
+			{
+				return;}
+		}
+
+
+
+		for (int i = 0; i < 4; i++) {
+			if (TreeRolls [i] == 8) {
+				TempRolls.Add (i);
+				Debug.Log ("Add 8s...");
+			}
+		}
+		if (TempRolls.Count > 0) {
+			TempRolls.Shuffle ();
+			ActiveRolls [TempRolls [0]].SelectMe ();
+			TempRolls.Clear ();
+			{
+				return;}
+		}
+
+
+		for (int i = 0; i < 4; i++) {
+			if (TreeRolls [i] == 6) {
+				TempRolls.Add (i);
+				Debug.Log ("Add 6s...");
+			}
+		}
+		if (TempRolls.Count > 0) 
+		{
+			TempRolls.Shuffle ();
+			ActiveRolls [TempRolls [0]].SelectMe ();
+			TempRolls.Clear ();
+			{
+				return;}
+		}
+
+
+		for (int i = 0; i < 4; i++) {
+			if (TreeRolls [i] == 9) {
+				TempRolls.Add (i);
+				Debug.Log ("Add 9s...");
+			}
+		}
+		if (TempRolls.Count > 0) {
+			TempRolls.Shuffle ();
+			ActiveRolls [TempRolls [0]].SelectMe ();
+			TempRolls.Clear ();
+			{
+				return;}
+		}
+
+
+		for (int i = 0; i < 4; i++) 
+		{
+			if (TreeRolls [i] == 10) 
+			{
+				TempRolls.Add (i);
+				Debug.Log ("Add 10s...");
+			}
+		}
+		if (TempRolls.Count > 0) {
+			TempRolls.Shuffle ();
+			ActiveRolls [TempRolls [0]].SelectMe ();
+			TempRolls.Clear ();
+			{
+				return;}
+		}
+
+
+		for (int i = 0; i < 4; i++) 
+		{
+			if (TreeRolls [i] > 10) 
+			{
+				TempRolls.Add (i);
+				Debug.Log ("Add 10+s...");
+			}
+		}
+		if (TempRolls.Count > 0) 
+		{
+			TempRolls.Shuffle ();
+			ActiveRolls [TempRolls [0]].SelectMe ();
+			TempRolls.Clear ();
+			{
+				return;
+			}
+		}
+
+
+	}
+}

@@ -11,10 +11,10 @@ public class TreeManager : MonoBehaviour
 	List<int> Bonuses = new List<int> ();
 	public Toggle[] options = new Toggle[12];
 	public Text Tree_text;
-	public static bool CanSelect = false;
+//	public static bool CanSelect = false;
 	//public bool AutoSelectOn = false;
 	public int intrandnumber1;
-
+//	public TreeManager _Trees = new Tree [4];
 
 	public void RollOnTree()
 
@@ -27,30 +27,20 @@ public class TreeManager : MonoBehaviour
 	public void SelectMe()
 
 	{
-	//	Debug.Log ("SelectMe");
+//		Debug.Log ("SelectMe");
 
-		if (! GameManager.instance.CanChoose)		
+		if (GameManager.instance._SelectionState == SelectionState.Roll)		
 		{
-		//	Debug.Log ("False");
-
 			return;
 		}
 
-			if (CanSelect == false) 
-			{
-				return;
-			}
-
-			int intrandnumber1 = Bonuses [0];
+			intrandnumber1 = Bonuses [0];
 			Bonuses.RemoveAt (0);
 			options [intrandnumber1].isOn = true;
-	CanSelect = false;
-	//	Debug.Log ("Got CanSelect");
-
+		GameManager.instance._SelectionState = SelectionState.Roll;
 	}
 
 	public void ResetBonuses ()
-
 	{ 
 		for (int i = 0; i < 12; i++) 
 		{
@@ -69,53 +59,19 @@ public class TreeManager : MonoBehaviour
 		}
 
 		Bonuses.Shuffle ();
-		CanSelect = true;
+//		GameManager.instance._SelectionState = SelectionState.Select;
 		int intrandnumber1 = LBonus [0] +1;
-
+		Debug.Log (intrandnumber1);
 		String randomnumber1 = intrandnumber1.ToString ();
 
 		LText.text = randomnumber1;
 
 	}
 
-	public void AutoSelect () 
-	{
-		//TreeRolls [TreeSlot];
-		//This
-		Debug.Log(intrandnumber1);
-		Debug.Log ("AutoSelect");
-		//TreeManager.intrandnumber1 = TreeSlot;
-
-		//if (CanSelect == false)
-		//{return;}
-
-		if (intrandnumber1 == 11 || intrandnumber1 == 12)
-		{return;}
-
-		if (intrandnumber1 == 7)
-		{SelectMe();}
-
-		if (intrandnumber1 == 1||intrandnumber1 == 2||intrandnumber1 == 3||intrandnumber1 == 4|| intrandnumber1 ==5)
-		{SelectMe();}
-
-		if (intrandnumber1 == 8)
-		{SelectMe();}
-
-		if (intrandnumber1 == 6)
-		{SelectMe();}
-
-		if (intrandnumber1 == 9)
-		{SelectMe();}
-
-		if (intrandnumber1 == 10)
-		{SelectMe();}
-		return;
-	}
 
 
 	public void Awake()
 	{
-		CanSelect = false;
 		ResetBonuses ();
 	}
 }

@@ -125,7 +125,6 @@ GameObject:
   - component: {fileID: 1232463}
   - component: {fileID: 1232462}
   - component: {fileID: 1232461}
-  - component: {fileID: 1232465}
   m_Layer: 0
   m_Name: TypeBG1
   m_TagString: Untagged
@@ -214,61 +213,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1232459}
---- !u!114 &1232465
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1232459}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f01bf621a853c49468ad19dd019c9d43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TypeText1: {fileID: 865306797}
-  TypeText2: {fileID: 1495904785}
-  PanelType1: {fileID: 1232459}
-  PanelType2: {fileID: 971758270}
-  Background1: {fileID: 1232463}
-  Background2: {fileID: 971758274}
-  NormalColor: {r: 0.647, g: 0.647, b: 0.459, a: 1}
-  FireColor: {r: 0.929, g: 0.486, b: 0.169, a: 1}
-  WaterColor: {r: 0.38, g: 0.545, b: 0.937, a: 1}
-  ElectricColor: {r: 0.969, g: 0.812, b: 0.173, a: 1}
-  GrassColor: {r: 0.455, g: 0.765, b: 0.298, a: 1}
-  IceColor: {r: 0.569, g: 0.835, b: 0.835, a: 1}
-  FightingColor: {r: 0.741, g: 0.184, b: 0.153, a: 1}
-  PoisonColor: {r: 0.616, g: 0.247, b: 0.616, a: 1}
-  GroundColor: {r: 0.89, g: 0.733, b: 0.361, a: 1}
-  FlyingColor: {r: 0.651, g: 0.561, b: 0.925, a: 1}
-  PsychicColor: {r: 0.973, g: 0.306, b: 0.506, a: 1}
-  BugColor: {r: 0.643, g: 0.702, b: 0.122, a: 1}
-  RockColor: {r: 0.698, g: 0.608, b: 0.212, a: 1}
-  GhostColor: {r: 0.424, g: 0.333, b: 0.573, a: 1}
-  DragonColor: {r: 0.424, g: 0.2, b: 0.969, a: 1}
-  DarkColor: {r: 0.427, g: 0.337, b: 0.275, a: 1}
-  SteelColor: {r: 0.702, g: 0.702, b: 0.804, a: 1}
-  FairyColor: {r: 0.906, g: 0.58, b: 0.906, a: 1}
-  Normal: 
-  Fire: 
-  Water: 
-  Electric: 
-  Grass: 
-  Ice: 
-  Fighting: 
-  Poison: 
-  Ground: 
-  Flying: 
-  Psychic: 
-  Bug: 
-  Rock: 
-  Ghost: 
-  Dragon: 
-  Dark: 
-  Steel: 
-  Fairy: 
-  ListPos1: 1
-  ListPos2: 1
 --- !u!1 &4096713
 GameObject:
   m_ObjectHideFlags: 0
@@ -588,7 +532,6 @@ GameObject:
   - component: {fileID: 40751333}
   - component: {fileID: 40751332}
   - component: {fileID: 40751331}
-  - component: {fileID: 40751330}
   m_Layer: 0
   m_Name: Type1Button
   m_TagString: Untagged
@@ -615,61 +558,6 @@ RectTransform:
   m_AnchoredPosition: {x: -244.1867, y: -147.4586}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &40751330
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 40751328}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f01bf621a853c49468ad19dd019c9d43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TypeText1: {fileID: 865306797}
-  TypeText2: {fileID: 1495904785}
-  PanelType1: {fileID: 1232459}
-  PanelType2: {fileID: 971758270}
-  Background1: {fileID: 1232463}
-  Background2: {fileID: 971758274}
-  NormalColor: {r: 0, g: 0, b: 0, a: 0}
-  FireColor: {r: 0, g: 0, b: 0, a: 0}
-  WaterColor: {r: 0, g: 0, b: 0, a: 0}
-  ElectricColor: {r: 0, g: 0, b: 0, a: 0}
-  GrassColor: {r: 0, g: 0, b: 0, a: 0}
-  IceColor: {r: 0, g: 0, b: 0, a: 0}
-  FightingColor: {r: 0, g: 0, b: 0, a: 0}
-  PoisonColor: {r: 0, g: 0, b: 0, a: 0}
-  GroundColor: {r: 0, g: 0, b: 0, a: 0}
-  FlyingColor: {r: 0, g: 0, b: 0, a: 0}
-  PsychicColor: {r: 0, g: 0, b: 0, a: 0}
-  BugColor: {r: 0, g: 0, b: 0, a: 0}
-  RockColor: {r: 0, g: 0, b: 0, a: 0}
-  GhostColor: {r: 0, g: 0, b: 0, a: 0}
-  DragonColor: {r: 0, g: 0, b: 0, a: 0}
-  DarkColor: {r: 0, g: 0, b: 0, a: 0}
-  SteelColor: {r: 0, g: 0, b: 0, a: 0}
-  FairyColor: {r: 0, g: 0, b: 0, a: 0}
-  Normal: 
-  Fire: 
-  Water: 
-  Electric: 
-  Grass: 
-  Ice: 
-  Fighting: 
-  Poison: 
-  Ground: 
-  Flying: 
-  Psychic: 
-  Bug: 
-  Rock: 
-  Ghost: 
-  Dragon: 
-  Dark: 
-  Steel: 
-  Fairy: 
-  ListPos1: 1
-  ListPos2: 1
 --- !u!114 &40751331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -870,7 +758,7 @@ Prefab:
     - target: {fileID: 114251654261644692, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224983437923936178, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
@@ -925,7 +813,7 @@ Prefab:
     - target: {fileID: 224983437923936178, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 320
+      value: 221
       objectReference: {fileID: 0}
     - target: {fileID: 224983437923936178, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
@@ -976,11 +864,12 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 2026240830}
+      objectReference: {fileID: 11500000, guid: c9c6f11aaa69643199452ffe74b5e705,
+        type: 3}
     - target: {fileID: 114251654261644692, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: SpendXP
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 114251654261644692, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
@@ -990,7 +879,7 @@ Prefab:
     - target: {fileID: 114251654261644692, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 114251654261644692, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
@@ -1453,7 +1342,7 @@ Prefab:
     - target: {fileID: 114251654261644692, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224983437923936178, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
@@ -1498,7 +1387,7 @@ Prefab:
     - target: {fileID: 224983437923936178, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 320
+      value: 221
       objectReference: {fileID: 0}
     - target: {fileID: 224983437923936178, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
@@ -1508,7 +1397,7 @@ Prefab:
     - target: {fileID: 224983437923936178, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 320
+      value: 221
       objectReference: {fileID: 0}
     - target: {fileID: 224983437923936178, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
@@ -1733,11 +1622,12 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 2026240830}
+      objectReference: {fileID: 11500000, guid: c9c6f11aaa69643199452ffe74b5e705,
+        type: 3}
     - target: {fileID: 114251654261644692, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: SpendXP
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 114251654261644692, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
@@ -1757,7 +1647,7 @@ Prefab:
     - target: {fileID: 114251654261644692, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 114251654261644692, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
@@ -3617,7 +3507,6 @@ GameObject:
   - component: {fileID: 333277404}
   - component: {fileID: 333277403}
   - component: {fileID: 333277402}
-  - component: {fileID: 333277401}
   m_Layer: 0
   m_Name: Type2Button
   m_TagString: Untagged
@@ -3644,61 +3533,6 @@ RectTransform:
   m_AnchoredPosition: {x: -84, y: -147.4586}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &333277401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 333277399}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f01bf621a853c49468ad19dd019c9d43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TypeText1: {fileID: 865306797}
-  TypeText2: {fileID: 1495904785}
-  PanelType1: {fileID: 1232459}
-  PanelType2: {fileID: 971758270}
-  Background1: {fileID: 1232463}
-  Background2: {fileID: 971758274}
-  NormalColor: {r: 0, g: 0, b: 0, a: 0}
-  FireColor: {r: 0, g: 0, b: 0, a: 0}
-  WaterColor: {r: 0, g: 0, b: 0, a: 0}
-  ElectricColor: {r: 0, g: 0, b: 0, a: 0}
-  GrassColor: {r: 0, g: 0, b: 0, a: 0}
-  IceColor: {r: 0, g: 0, b: 0, a: 0}
-  FightingColor: {r: 0, g: 0, b: 0, a: 0}
-  PoisonColor: {r: 0, g: 0, b: 0, a: 0}
-  GroundColor: {r: 0, g: 0, b: 0, a: 0}
-  FlyingColor: {r: 0, g: 0, b: 0, a: 0}
-  PsychicColor: {r: 0, g: 0, b: 0, a: 0}
-  BugColor: {r: 0, g: 0, b: 0, a: 0}
-  RockColor: {r: 0, g: 0, b: 0, a: 0}
-  GhostColor: {r: 0, g: 0, b: 0, a: 0}
-  DragonColor: {r: 0, g: 0, b: 0, a: 0}
-  DarkColor: {r: 0, g: 0, b: 0, a: 0}
-  SteelColor: {r: 0, g: 0, b: 0, a: 0}
-  FairyColor: {r: 0, g: 0, b: 0, a: 0}
-  Normal: 
-  Fire: 
-  Water: 
-  Electric: 
-  Grass: 
-  Ice: 
-  Fighting: 
-  Poison: 
-  Ground: 
-  Flying: 
-  Psychic: 
-  Bug: 
-  Rock: 
-  Ghost: 
-  Dragon: 
-  Dark: 
-  Steel: 
-  Fairy: 
-  ListPos1: 1
-  ListPos2: 1
 --- !u!114 &333277402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8976,7 +8810,7 @@ Prefab:
     - target: {fileID: 114251654261644692, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224983437923936178, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
@@ -9021,7 +8855,7 @@ Prefab:
     - target: {fileID: 224983437923936178, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 640
+      value: 442
       objectReference: {fileID: 0}
     - target: {fileID: 224983437923936178, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
@@ -9031,7 +8865,7 @@ Prefab:
     - target: {fileID: 224983437923936178, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 320
+      value: 221
       objectReference: {fileID: 0}
     - target: {fileID: 224983437923936178, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
@@ -9256,11 +9090,12 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 2026240830}
+      objectReference: {fileID: 11500000, guid: c9c6f11aaa69643199452ffe74b5e705,
+        type: 3}
     - target: {fileID: 114251654261644692, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: SpendXP
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 114251654261644692, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
@@ -9280,7 +9115,7 @@ Prefab:
     - target: {fileID: 114251654261644692, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 114251654261644692, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
@@ -9779,7 +9614,6 @@ GameObject:
   - component: {fileID: 865306796}
   - component: {fileID: 865306798}
   - component: {fileID: 865306797}
-  - component: {fileID: 865306799}
   m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
@@ -9826,10 +9660,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 12
     m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
+    m_BestFit: 1
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -9844,61 +9678,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 865306795}
---- !u!114 &865306799
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 865306795}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f01bf621a853c49468ad19dd019c9d43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TypeText1: {fileID: 865306797}
-  TypeText2: {fileID: 1495904785}
-  PanelType1: {fileID: 1232459}
-  PanelType2: {fileID: 971758270}
-  Background1: {fileID: 1232463}
-  Background2: {fileID: 971758274}
-  NormalColor: {r: 0.647, g: 0.647, b: 0.459, a: 1}
-  FireColor: {r: 0.929, g: 0.486, b: 0.169, a: 1}
-  WaterColor: {r: 0.38, g: 0.545, b: 0.937, a: 1}
-  ElectricColor: {r: 0.969, g: 0.812, b: 0.173, a: 1}
-  GrassColor: {r: 0.455, g: 0.765, b: 0.298, a: 1}
-  IceColor: {r: 0.569, g: 0.835, b: 0.835, a: 1}
-  FightingColor: {r: 0.741, g: 0.184, b: 0.153, a: 1}
-  PoisonColor: {r: 0.616, g: 0.247, b: 0.616, a: 1}
-  GroundColor: {r: 0.89, g: 0.733, b: 0.361, a: 1}
-  FlyingColor: {r: 0.651, g: 0.561, b: 0.925, a: 1}
-  PsychicColor: {r: 0.973, g: 0.306, b: 0.506, a: 1}
-  BugColor: {r: 0.643, g: 0.702, b: 0.122, a: 1}
-  RockColor: {r: 0.698, g: 0.608, b: 0.212, a: 1}
-  GhostColor: {r: 0.424, g: 0.333, b: 0.573, a: 1}
-  DragonColor: {r: 0.424, g: 0.2, b: 0.969, a: 1}
-  DarkColor: {r: 0.427, g: 0.337, b: 0.275, a: 1}
-  SteelColor: {r: 0.702, g: 0.702, b: 0.804, a: 1}
-  FairyColor: {r: 0.906, g: 0.58, b: 0.906, a: 1}
-  Normal: 
-  Fire: 
-  Water: 
-  Electric: 
-  Grass: 
-  Ice: 
-  Fighting: 
-  Poison: 
-  Ground: 
-  Flying: 
-  Psychic: 
-  Bug: 
-  Rock: 
-  Ghost: 
-  Dragon: 
-  Dark: 
-  Steel: 
-  Fairy: 
-  ListPos1: 0
-  ListPos2: 0
 --- !u!1 &872433670
 GameObject:
   m_ObjectHideFlags: 0
@@ -10815,7 +10594,6 @@ GameObject:
   - component: {fileID: 971758275}
   - component: {fileID: 971758274}
   - component: {fileID: 971758273}
-  - component: {fileID: 971758272}
   m_Layer: 0
   m_Name: TypeBG2
   m_TagString: Untagged
@@ -10841,61 +10619,6 @@ RectTransform:
   m_AnchoredPosition: {x: -955.94006, y: -359.99994}
   m_SizeDelta: {x: 82.43, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &971758272
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 971758270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f01bf621a853c49468ad19dd019c9d43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TypeText1: {fileID: 865306797}
-  TypeText2: {fileID: 1495904785}
-  PanelType1: {fileID: 1232459}
-  PanelType2: {fileID: 971758270}
-  Background1: {fileID: 1232463}
-  Background2: {fileID: 971758274}
-  NormalColor: {r: 0.647, g: 0.647, b: 0.459, a: 1}
-  FireColor: {r: 0.929, g: 0.486, b: 0.169, a: 1}
-  WaterColor: {r: 0.38, g: 0.545, b: 0.937, a: 1}
-  ElectricColor: {r: 0.969, g: 0.812, b: 0.173, a: 1}
-  GrassColor: {r: 0.455, g: 0.765, b: 0.298, a: 1}
-  IceColor: {r: 0.569, g: 0.835, b: 0.835, a: 1}
-  FightingColor: {r: 0.741, g: 0.184, b: 0.153, a: 1}
-  PoisonColor: {r: 0.616, g: 0.247, b: 0.616, a: 1}
-  GroundColor: {r: 0.89, g: 0.733, b: 0.361, a: 1}
-  FlyingColor: {r: 0.651, g: 0.561, b: 0.925, a: 1}
-  PsychicColor: {r: 0.973, g: 0.306, b: 0.506, a: 1}
-  BugColor: {r: 0.643, g: 0.702, b: 0.122, a: 1}
-  RockColor: {r: 0.698, g: 0.608, b: 0.212, a: 1}
-  GhostColor: {r: 0.424, g: 0.333, b: 0.573, a: 1}
-  DragonColor: {r: 0.424, g: 0.2, b: 0.969, a: 1}
-  DarkColor: {r: 0.427, g: 0.337, b: 0.275, a: 1}
-  SteelColor: {r: 0.702, g: 0.702, b: 0.804, a: 1}
-  FairyColor: {r: 0.906, g: 0.58, b: 0.906, a: 1}
-  Normal: 
-  Fire: 
-  Water: 
-  Electric: 
-  Grass: 
-  Ice: 
-  Fighting: 
-  Poison: 
-  Ground: 
-  Flying: 
-  Psychic: 
-  Bug: 
-  Rock: 
-  Ghost: 
-  Dragon: 
-  Dark: 
-  Steel: 
-  Fairy: 
-  ListPos1: 1
-  ListPos2: 1
 --- !u!210 &971758273
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -11529,18 +11252,7 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2026240830}
-        m_MethodName: TurnAutoSelectOn
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
@@ -15739,7 +15451,6 @@ GameObject:
   - component: {fileID: 1495904784}
   - component: {fileID: 1495904786}
   - component: {fileID: 1495904785}
-  - component: {fileID: 1495904787}
   m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
@@ -15786,10 +15497,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 12
     m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
+    m_BestFit: 1
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -15804,61 +15515,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1495904783}
---- !u!114 &1495904787
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1495904783}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f01bf621a853c49468ad19dd019c9d43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TypeText1: {fileID: 865306797}
-  TypeText2: {fileID: 1495904785}
-  PanelType1: {fileID: 1232459}
-  PanelType2: {fileID: 971758270}
-  Background1: {fileID: 1232463}
-  Background2: {fileID: 971758274}
-  NormalColor: {r: 0.647, g: 0.647, b: 0.459, a: 1}
-  FireColor: {r: 0.929, g: 0.486, b: 0.169, a: 1}
-  WaterColor: {r: 0.38, g: 0.545, b: 0.937, a: 1}
-  ElectricColor: {r: 0.969, g: 0.812, b: 0.173, a: 1}
-  GrassColor: {r: 0.455, g: 0.765, b: 0.298, a: 1}
-  IceColor: {r: 0.569, g: 0.835, b: 0.835, a: 1}
-  FightingColor: {r: 0.741, g: 0.184, b: 0.153, a: 1}
-  PoisonColor: {r: 0.616, g: 0.247, b: 0.616, a: 1}
-  GroundColor: {r: 0.89, g: 0.733, b: 0.361, a: 1}
-  FlyingColor: {r: 0.651, g: 0.561, b: 0.925, a: 1}
-  PsychicColor: {r: 0.973, g: 0.306, b: 0.506, a: 1}
-  BugColor: {r: 0.643, g: 0.702, b: 0.122, a: 1}
-  RockColor: {r: 0.698, g: 0.608, b: 0.212, a: 1}
-  GhostColor: {r: 0.424, g: 0.333, b: 0.573, a: 1}
-  DragonColor: {r: 0.424, g: 0.2, b: 0.969, a: 1}
-  DarkColor: {r: 0.427, g: 0.337, b: 0.275, a: 1}
-  SteelColor: {r: 0.702, g: 0.702, b: 0.804, a: 1}
-  FairyColor: {r: 0.906, g: 0.58, b: 0.906, a: 1}
-  Normal: 
-  Fire: 
-  Water: 
-  Electric: 
-  Grass: 
-  Ice: 
-  Fighting: 
-  Poison: 
-  Ground: 
-  Flying: 
-  Psychic: 
-  Bug: 
-  Rock: 
-  Ghost: 
-  Dragon: 
-  Dark: 
-  Steel: 
-  Fairy: 
-  ListPos1: 0
-  ListPos2: 0
 --- !u!1 &1508575545
 GameObject:
   m_ObjectHideFlags: 0
@@ -17502,7 +17158,7 @@ Prefab:
     - target: {fileID: 114251654261644692, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114208646641268766, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
@@ -17552,7 +17208,7 @@ Prefab:
     - target: {fileID: 224983437923936178, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 960
+      value: 663
       objectReference: {fileID: 0}
     - target: {fileID: 224983437923936178, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
@@ -17562,7 +17218,7 @@ Prefab:
     - target: {fileID: 224983437923936178, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 320
+      value: 221
       objectReference: {fileID: 0}
     - target: {fileID: 224983437923936178, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
@@ -17787,11 +17443,12 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 2026240830}
+      objectReference: {fileID: 11500000, guid: c9c6f11aaa69643199452ffe74b5e705,
+        type: 3}
     - target: {fileID: 114251654261644692, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: SpendXP
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 114251654261644692, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
@@ -17811,7 +17468,7 @@ Prefab:
     - target: {fileID: 114251654261644692, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 114251654261644692, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
@@ -19804,28 +19461,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2026240829}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2026240829}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1854651116
@@ -21114,50 +20749,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1644167618}
-        m_MethodName: AutoSelect
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1207548818}
-        m_MethodName: AutoSelect
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 754484088}
-        m_MethodName: AutoSelect
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 148371688}
-        m_MethodName: AutoSelect
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1940631103
@@ -21903,6 +21494,7 @@ GameObject:
   - component: {fileID: 2026240831}
   - component: {fileID: 2026240830}
   - component: {fileID: 2026240832}
+  - component: {fileID: 2026240833}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -21929,12 +21521,11 @@ MonoBehaviour:
   XP: 0
   XPText: {fileID: 1561839133}
   CurrentXP: 
-  CanRoll: 0
-  CanChoose: 0
   _PokeSheetSceneManager: {fileID: 1032932697}
   _PokeSheetTreeManager: {fileID: 1908813806}
   AutoSelectOn: 0
   AutoSelectToggle: {fileID: 1017080486}
+  _SelectionState: 0
 --- !u!4 &2026240831
 Transform:
   m_ObjectHideFlags: 0
@@ -21983,26 +21574,43 @@ MonoBehaviour:
   DarkColor: {r: 0.427, g: 0.337, b: 0.275, a: 1}
   SteelColor: {r: 0.702, g: 0.702, b: 0.804, a: 1}
   FairyColor: {r: 0.906, g: 0.58, b: 0.906, a: 1}
-  Normal: 
-  Fire: 
-  Water: 
-  Electric: 
-  Grass: 
-  Ice: 
-  Fighting: 
-  Poison: 
-  Ground: 
-  Flying: 
-  Psychic: 
-  Bug: 
-  Rock: 
-  Ghost: 
-  Dragon: 
-  Dark: 
-  Steel: 
-  Fairy: 
-  ListPos1: 1
-  ListPos2: 1
+  Normal: Normal
+  Fire: Fire
+  Water: Water
+  Electric: Electric
+  Grass: Grass
+  Ice: Ice
+  Fighting: Fighting
+  Poison: Poison
+  Ground: Ground
+  Flying: Flying
+  Psychic: Psychic
+  Bug: Bug
+  Rock: Rock
+  Ghost: Ghost
+  Dragon: Dragon
+  Dark: Dark
+  Steel: Steel
+  Fairy: Fairy
+  ListPos1: 0
+  ListPos2: 0
+--- !u!114 &2026240833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2026240829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9c6f11aaa69643199452ffe74b5e705, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TreeRolls: 00000000000000000000000000000000
+  ActiveRolls:
+  - {fileID: 1644167618}
+  - {fileID: 1207548818}
+  - {fileID: 754484088}
+  - {fileID: 148371688}
 --- !u!1 &2037824971
 GameObject:
   m_ObjectHideFlags: 0
