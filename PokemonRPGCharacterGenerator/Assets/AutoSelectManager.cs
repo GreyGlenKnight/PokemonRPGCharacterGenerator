@@ -1,37 +1,43 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
+
 
 public class AutoSelectManager : MonoBehaviour 
 {
 //	public int TreeSlot;
 	//public static bool CanSelect = false;
 //	public TreeSlot = TreeManager.options;
+
 	public int [] TreeRolls = new int[4];
 	//options [intrandnumber1].isOn = true;
 	public TreeManager [] ActiveRolls = new TreeManager[4];
 	List <int> TempRolls = new List <int> ();
+//	static List <int> IRN1List = new List <int> ();
 
 
 
 	public void AutoSelect ()
 	{
+
 		for (int i = 0; i < 4; i++) 
 		{
-			TreeRolls [i] = ActiveRolls[i].intrandnumber1;
-			Debug.Log (TreeRolls[i]);
+////			ActiveRolls[i].RollOnTree ();
+	TreeRolls [i] = ActiveRolls[i].intrandnumber1;
+////			TreeRolls [i] = IRN1List.ElementAt (i);
+					}
+
+
+		for (int i = 0; i < 4; i++) 
+		{
+			if (TreeRolls [i] == 0) 
+			{
+				TempRolls.Add (i);
+				Debug.Log ("Fuck");
+
+			}
 		}
-
-
-//		for (int i = 0; i < 4; i++) 
-//		{
-//			if (TreeRolls [i] == 0) 
-//			{
-//				TempRolls.Add (i);
-//				Debug.Log ("Fuck");
-//
-//			}
-//		}
 
 
 
@@ -60,7 +66,6 @@ public class AutoSelectManager : MonoBehaviour
 			if (TreeRolls [i] <= 5) 
 			{
 				TempRolls.Add (i);
-
 			}
 		}
 		if (TempRolls.Count > 0) {
@@ -127,7 +132,8 @@ public class AutoSelectManager : MonoBehaviour
 				Debug.Log ("Add 10s...");
 			}
 		}
-		if (TempRolls.Count > 0) {
+		if (TempRolls.Count > 0) 
+		{
 			TempRolls.Shuffle ();
 			ActiveRolls [TempRolls [0]].SelectMe ();
 			TempRolls.Clear ();

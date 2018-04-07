@@ -108,18 +108,12 @@ public class GameManager : MonoBehaviour
 
 	public void CallTreeRoll()
 	{
+
 		if (_SelectionState == SelectionState.Select) 
 		{
 			if (AutoSelectOn == true) 
 			{
-//				for (int i = 0; i < AllTrees.Length; i++) 
-//				{
-//					AllTrees [i].RollOnTree ();
-//				}
-//				for (int i = 0; i < AllTrees.Length; i++) 
-//				{
-//					AllTrees [i].RollOnTree ();
-//				}
+//				Debug.Log (TreeManager.intrandnumber1);
 				gameObject.GetComponent<AutoSelectManager>().AutoSelect();
 			}
 			return;

@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 50830892048690436}
   - component: {fileID: 82653454167372460}
   - component: {fileID: 210107377731487774}
-  - component: {fileID: 114235232512839724}
+  - component: {fileID: 114833217426722072}
   m_Layer: 0
   m_Name: CharmanderPrefab
   m_TagString: Untagged
@@ -40,7 +40,7 @@ Transform:
   m_GameObject: {fileID: 1013685802593310}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 4.96, y: 11.7, z: 0}
-  m_LocalScale: {x: 0.3305116, y: 0.3305116, z: 0.3305116}
+  m_LocalScale: {x: 0.56120807, y: 0.56120807, z: 0.56120807}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -100,7 +100,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4d63341efd50540efaaf89a7b5ecfe75, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
@@ -170,7 +170,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &114235232512839724
+--- !u!114 &114833217426722072
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -178,14 +178,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1013685802593310}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bbd56bb249c44bf09c740c27c46392d, type: 3}
+  m_Script: {fileID: 11500000, guid: 500bc7c66d53c44baa1378c8c371959a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LowRange: 0.66
-  HighRange: 1.5
-  randomindex: 0
-  Cry: {fileID: 82653454167372460}
-  CryClip: {fileID: 8300000, guid: 4d63341efd50540efaaf89a7b5ecfe75, type: 3}
+  D: 1.3348204
+  A: 1
+  A2: 2
+  G: 1.7817454
+  FSharp: 1.6817486
+  E: 1.4982765
+  CSharp: 1.2599063
+  B: 2.2448323
+  Note: {fileID: 82653454167372460}
+  SongClip: {fileID: 8300000, guid: 4d63341efd50540efaaf89a7b5ecfe75, type: 3}
 --- !u!210 &210107377731487774
 SortingGroup:
   m_ObjectHideFlags: 1

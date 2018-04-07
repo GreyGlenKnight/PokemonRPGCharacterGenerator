@@ -1,25 +1,12 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.UI;
+using UnityEngine;
 using System.Linq;
 
 
-public class PokeballSpawner : MonoBehaviour
-{			
-	private int NumberSpawned;
-	public GameObject PortraitObject;
-	public GameObject Pokedoll;
-	public Sprite Charmander;
-	public Rigidbody2D CharCol;
-	public Canvas BGCanvas;
-	public Vector3 MousePosition;
-	public Vector3 NewPos;
-	public float RandomSize;
-	public static int SongPos = 0;
-	GameObject[] Population = new GameObject[151];
+public class SongScript : MonoBehaviour 
+{
 
-	static List <float> SongPitches = new List <float> ();
 	public float D  = 1.33482036104f;
 	public float A 	= 1f;
 	public float A2	= 2f;
@@ -28,6 +15,11 @@ public class PokeballSpawner : MonoBehaviour
 	public float E	= 1.49827644455f;
 	public float CSharp	= 1.25990633062f;
 	public float B	= 2.2448323043f;
+	public AudioSource Note;
+	public AudioClip SongClip;
+	public static int SongPos = 0;
+
+	static List <float> SongPitches = new List <float> ();
 
 	void Awake ()
 	{
@@ -103,41 +95,23 @@ public class PokeballSpawner : MonoBehaviour
 		SongPitches.Add (D);
 	}
 
-	//	BoxCollider2D Background;
-
-
-	public void Spawn ()
+	public void SongCry()
 	{
-		//PortraitObject = this;
-		Vector3 NewPos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-		NewPos.z = 1;
-		if (Population [NumberSpawned % 151] != null) 
-		{
-			Destroy (Population [NumberSpawned % 151]);
-		}
-		RandomSize = (SongPitches.ElementAt (SongPos) * .25f);
-		Population [NumberSpawned % 151] = Instantiate (Pokedoll, NewPos, Quaternion.identity);
-		Pokedoll.transform.localScale = new Vector3(RandomSize, RandomSize, RandomSize);
-		NumberSpawned++;
+		
+		Note.pitch = SongPitches.ElementAt(SongPos);
+		Note.clip = SongClip;
+		Note.Play ();
 		SongPos++;
+
 		if (SongPos == SongPitches.Count) 
 		{
 			SongPos = 0;
 		}
 	}
 
-	void Update()
+	void Start () 
 	{
+		SongCry ();	
+	}
 
-		if (Input.GetMouseButtonUp (0)) 
-		{
-			MousePosition = new Vector3 (Input.mousePosition.x, Input.mousePosition.y, 0f);
-		
-			Spawn ();
-		
-			}
-
-		}
-	
 }
-	
