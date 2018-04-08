@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System.Linq;
 
 
@@ -9,7 +10,6 @@ public class AutoSelectManager : MonoBehaviour
 //	public int TreeSlot;
 	//public static bool CanSelect = false;
 //	public TreeSlot = TreeManager.options;
-
 	public int [] TreeRolls = new int[4];
 	//options [intrandnumber1].isOn = true;
 	public TreeManager [] ActiveRolls = new TreeManager[4];
@@ -17,38 +17,29 @@ public class AutoSelectManager : MonoBehaviour
 //	List <int> ListPlz = new List <int> ();
 
 
+
 	public void AutoSelect ()
 	{
-		;	
-
 		for (int i = 0; i < 4; i++) 
 		{
 ////			ActiveRolls[i].RollOnTree ();
 //	TreeRolls [i] = ActiveRolls[i].intrandnumber1;
-			TreeRolls [i] = TreeManager.IRN1List.ElementAt (i);
-			Debug.Log (TreeRolls [i]);
-////			TreeRolls [i] = IRN1List.ElementAt (i);
-					}
-
-
-		for (int i = 0; i < 4; i++) 
-		{
-			if (TreeRolls [i] == 0) 
+//			if (TreeManager.IRN1List.Count == 0) 
+//			Debug.Log (TreeManager.IRN1List.ElementAt (i));
+//			}
+			if (TreeManager.IRN1List.ElementAt (i) > 0)
 			{
-				TempRolls.Add (i);
-				Debug.Log ("Fuck");
-
-			}
+			TreeRolls [i] = TreeManager.IRN1List.ElementAt (i);
+				////			TreeRolls [i] = IRN1List.ElementAt (i);
 		}
-
-
-
+		}
+			
 		for (int i = 0; i < 4; i++) 
 		{
 			if (TreeRolls [i] == 7) 
 			{
 				TempRolls.Add (i);
-				Debug.Log ("Add 7s...");
+//				Debug.Log ("Add 7s...");
 
 			}
 		}
@@ -83,7 +74,7 @@ public class AutoSelectManager : MonoBehaviour
 		for (int i = 0; i < 4; i++) {
 			if (TreeRolls [i] == 8) {
 				TempRolls.Add (i);
-				Debug.Log ("Add 8s...");
+//				Debug.Log ("Add 8s...");
 			}
 		}
 		if (TempRolls.Count > 0) {
@@ -98,7 +89,7 @@ public class AutoSelectManager : MonoBehaviour
 		for (int i = 0; i < 4; i++) {
 			if (TreeRolls [i] == 6) {
 				TempRolls.Add (i);
-				Debug.Log ("Add 6s...");
+//				Debug.Log ("Add 6s...");
 			}
 		}
 		if (TempRolls.Count > 0) 
@@ -114,7 +105,7 @@ public class AutoSelectManager : MonoBehaviour
 		for (int i = 0; i < 4; i++) {
 			if (TreeRolls [i] == 9) {
 				TempRolls.Add (i);
-				Debug.Log ("Add 9s...");
+//				Debug.Log ("Add 9s...");
 			}
 		}
 		if (TempRolls.Count > 0) {
@@ -131,7 +122,7 @@ public class AutoSelectManager : MonoBehaviour
 			if (TreeRolls [i] == 10) 
 			{
 				TempRolls.Add (i);
-				Debug.Log ("Add 10s...");
+//				Debug.Log ("Add 10s...");
 			}
 		}
 		if (TempRolls.Count > 0) 
@@ -149,7 +140,6 @@ public class AutoSelectManager : MonoBehaviour
 			if (TreeRolls [i] > 10) 
 			{
 				TempRolls.Add (i);
-				Debug.Log ("Add 10+s...");
 			}
 		}
 		if (TempRolls.Count > 0) 
@@ -161,6 +151,7 @@ public class AutoSelectManager : MonoBehaviour
 				return;
 			}
 		}
+			
 
 
 	}

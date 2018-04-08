@@ -47,13 +47,13 @@ public class GameManager : MonoBehaviour
 	public static GameManager instance = null;
 
 	TextWriter testfile; 
-	public int XP;
+	public static int XP;
 	public Text XPText;
 	public string CurrentXP;
 	//public AutoSelectManager _AutoSelectManager;
 	public PokeSheetSceneManager _PokeSheetSceneManager;
 	public PokeSheetTreeManager _PokeSheetTreeManager;
-	public bool AutoSelectOn = false;
+	public static bool AutoSelectOn = false;
 	public Toggle AutoSelectToggle;
 	//public GameObject PokeSheetTreeManager;
 
@@ -124,6 +124,7 @@ public class GameManager : MonoBehaviour
 			return;
 		}
 
+
 		for (int i = 0; i < AllTrees.Length; i++) 
 			{
 				AllTrees [i].RollOnTree ();
@@ -150,6 +151,8 @@ public class GameManager : MonoBehaviour
 	void Update ()
 	{
 		//AutoSelectOn = AutoSelectToggle;
+		if (XP < 0)
+		{XP = 0;}
 		CurrentXP = XP.ToString ();
 		XPText.text = CurrentXP;
 	}

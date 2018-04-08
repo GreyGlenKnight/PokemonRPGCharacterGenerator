@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using System;
+using System.Linq;
 
 
 public class TreeManager : MonoBehaviour 
@@ -15,6 +16,8 @@ public class TreeManager : MonoBehaviour
 	//public bool AutoSelectOn = false;
 	public int intrandnumber1;
 	public static List <int> IRN1List = new List <int> ();
+	public bool IsTreeFull = false;
+	public int OnCount;
 
 //	public TreeManager _Trees = new Tree [4];
 
@@ -26,22 +29,37 @@ public class TreeManager : MonoBehaviour
 
 
 	public void SelectMe()
-
 	{
 //		Debug.Log ("SelectMe");
 
-		if (GameManager.instance._SelectionState == SelectionState.Roll)		
+		if (GameManager.instance._SelectionState == SelectionState.Roll) 
 		{
 			return;
 		}
 
+//		int OnCount = options.Where(n => n.isOn == true).Count();
+//
+//		if (OnCount == options.Length)      
+//		{
+//			IsTreeFull = true;    
+//			Debug.Log ("Tree is Full");
+//		}
+//
+//
+//		if (IsTreeFull == true) 
+//		{
+//			GameManager.XP++;
+//			return;
+//		}
+//
+//		if (IsTreeFull == false) 
+//		{
 			intrandnumber1 = Bonuses [0];
 			Bonuses.RemoveAt (0);
 			options [intrandnumber1].isOn = true;
-		IRN1List.Clear();
-		GameManager.instance._SelectionState = SelectionState.Roll;
-				Debug.Log ("SelectMe");
-
+			IRN1List.Clear ();
+			GameManager.instance._SelectionState = SelectionState.Roll;
+//		}
 	}
 
 	public void ResetBonuses ()
@@ -49,22 +67,26 @@ public class TreeManager : MonoBehaviour
 		for (int i = 0; i < 12; i++) 
 		{
 			Bonuses.Add (i);
+//			options [i].isOn = false;
 		}
 		Bonuses.Shuffle ();
 
 	}
 
 	public void RollTheList (List <int> LBonus, Toggle[] Loptions, Text LText)
-
 	{
-		if (LBonus.Count == 0) 
+		if (Bonuses.Count > 0)
 		{
-			ResetBonuses (); 
-		}
+		Debug.Log (Bonuses.Count);	
 		Bonuses.Shuffle ();
-//		GameManager.instance._SelectionState = SelectionState.Select;
-		int intrandnumber1 = LBonus [0] +1;
-		IRN1List.Add (intrandnumber1);
+		}
+
+		int intrandnumber1 = LBonus [0] + 1;
+
+		if (!options [intrandnumber1 -1].isOn == true)
+		{	
+			IRN1List.Add (intrandnumber1);
+		}
 		String randomnumber1 = intrandnumber1.ToString ();
 		LText.text = randomnumber1;
 	}
