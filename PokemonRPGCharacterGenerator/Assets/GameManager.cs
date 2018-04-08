@@ -3,31 +3,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using System;
+using System.Linq;
+
 
 public static class ListExtensions
 
 {	
 	private static System.Random rng = new System.Random();  
-
 	public static void Shuffle<T>(this IList<T> list)  
 
 	{  
 		int n = list.Count;  
-
 		while (n > 1) 
-			
 		{  
 			n--;  
-
 			int k = rng.Next(n + 1);  
-
 			T value = list[k]; 
-
 			list[k] = list[n];  
-
-
 			list[n] = value;  
-
 		}  
 	}
 }
@@ -43,26 +36,19 @@ public class GameManager : MonoBehaviour
 {
 
 	public TreeManager[] AllTrees;
-
+	public List <TreeManager> TreesToRoll = new List <TreeManager> ();
 	public static GameManager instance = null;
-
-	TextWriter testfile; 
 	public static int XP;
 	public Text XPText;
 	public string CurrentXP;
-	//public AutoSelectManager _AutoSelectManager;
 	public PokeSheetSceneManager _PokeSheetSceneManager;
 	public PokeSheetTreeManager _PokeSheetTreeManager;
-	public static bool AutoSelectOn = false;
 	public Toggle AutoSelectToggle;
-	//public GameObject PokeSheetTreeManager;
+	public static List <int> GainedBonuses = new List <int> ();
+	public static List <int> DeadTrees = new List <int> ();
+	public static List <int> ActiveTrees = new List <int> ();
 
-	public void TurnAutoSelectOn()
-	{
-		AutoSelectOn = !AutoSelectOn;
-		AutoSelectToggle.isOn = AutoSelectOn;
 
-	}
 
 	public void AddXP()
 		
@@ -84,7 +70,6 @@ public class GameManager : MonoBehaviour
 		{
 			XP--;
 			_SelectionState = SelectionState.Select;
-//			Debug.Log ("Change to Select");
 			return true;
 		}
 		return false;
@@ -94,45 +79,39 @@ public class GameManager : MonoBehaviour
 	{
 		_PokeSheetSceneManager.gameObject.SetActive (false);
 		_PokeSheetTreeManager.gameObject.SetActive (true);
-		//Debug.Log ("Tree");
-
 	}
 
 	public void SwitchToSheet()
 	{
 		_PokeSheetTreeManager.gameObject.SetActive (false);
 		_PokeSheetSceneManager.gameObject.SetActive (true);
-		//Debug.Log ("Sheet");
+
 	}
-
-
+		
 	public void CallTreeRoll()
 	{
-
-		if (_SelectionState == SelectionState.Select) 
-		{
-			if (AutoSelectOn == true) 
-			{
-//				Debug.Log (TreeManager.intrandnumber1);
-				gameObject.GetComponent<AutoSelectManager>().AutoSelect();
-			}
-			return;
-		}
-
 		if (SpendXP () == false) 
 		{
 			return;
 		}
+		TreesToRoll = AllTrees.ToList();
+//		Debug.Log (TreesToRoll.Count);
+//
+//		if (DeadTrees.Count > 0) 
+//		{
+//			int i = DeadTrees [0];
+//			Debug.Log (i);
+//			TreesToRoll.RemoveAt (i);
+//			Debug.Log (TreesToRoll.Count);
+//			DeadTrees.RemoveAt (0);
+//		}
 
-
-		for (int i = 0; i < AllTrees.Length; i++) 
+		for (int i = 0; i < TreesToRoll.Count; i++) 
 			{
-				AllTrees [i].RollOnTree ();
+			
+			TreesToRoll[i].RollOnTree ();
+
 			}
-		if (AutoSelectOn == true) 
-		{
-			gameObject.GetComponent<AutoSelectManager> ().AutoSelect ();
-		}
 	}
 
 	public SelectionState _SelectionState = SelectionState.Roll;
@@ -146,11 +125,12 @@ public class GameManager : MonoBehaviour
 		else  if (instance != this)
 		{Destroy (gameObject);}
 		DontDestroyOnLoad(gameObject);
+//		ActiveTrees = AllTrees.ToList();
+//		Debug.Log (ActiveTrees.Count);
 	}
 
 	void Update ()
 	{
-		//AutoSelectOn = AutoSelectToggle;
 		if (XP < 0)
 		{XP = 0;}
 		CurrentXP = XP.ToString ();

@@ -7,33 +7,27 @@ using System.Linq;
 
 public class AutoSelectManager : MonoBehaviour 
 {
-//	public int TreeSlot;
-	//public static bool CanSelect = false;
-//	public TreeSlot = TreeManager.options;
-	public int [] TreeRolls = new int[4];
-	//options [intrandnumber1].isOn = true;
-	public TreeManager [] ActiveRolls = new TreeManager[4];
-	List <int> TempRolls = new List <int> ();
-//	List <int> ListPlz = new List <int> ();
 
+	public int [] TreeRolls = new int[4];
+	public TreeManager [] ActiveRolls = new TreeManager[4];
+	public bool TreeFull;
+	public List <int> TempRolls = new List <int> ();
+	public static List <int> DeadTrees = new List <int> ();
+	public static List <int> ActiveTrees = new List <int> ();
 
 
 	public void AutoSelect ()
 	{
-		for (int i = 0; i < 4; i++) 
+		for (int i = 0; i < TreeManager.IRN1List.Count; i++) 
 		{
-////			ActiveRolls[i].RollOnTree ();
-//	TreeRolls [i] = ActiveRolls[i].intrandnumber1;
-//			if (TreeManager.IRN1List.Count == 0) 
-//			Debug.Log (TreeManager.IRN1List.ElementAt (i));
-//			}
-			if (TreeManager.IRN1List.ElementAt (i) > 0)
+			if (TreeManager.IRN1List.Count > 0) 
 			{
-			TreeRolls [i] = TreeManager.IRN1List.ElementAt (i);
-				////			TreeRolls [i] = IRN1List.ElementAt (i);
+				if (TreeManager.IRN1List.ElementAt (i) > 0) 
+				{
+					TreeRolls [i] = TreeManager.IRN1List.ElementAt (i);
+				}
+			}
 		}
-		}
-			
 		for (int i = 0; i < 4; i++) 
 		{
 			if (TreeRolls [i] == 7) 
@@ -68,8 +62,6 @@ public class AutoSelectManager : MonoBehaviour
 			{
 				return;}
 		}
-
-
 
 		for (int i = 0; i < 4; i++) {
 			if (TreeRolls [i] == 8) {
@@ -137,8 +129,28 @@ public class AutoSelectManager : MonoBehaviour
 
 		for (int i = 0; i < 4; i++) 
 		{
-			if (TreeRolls [i] > 10) 
+			if (TreeRolls [i] == 11) 
 			{
+				TempRolls.Add (i);
+			}
+		}
+		if (TempRolls.Count > 0) 
+		{
+			TempRolls.Shuffle ();
+			ActiveRolls [TempRolls [0]].SelectMe ();
+			TempRolls.Clear ();
+			{
+				return;
+			}
+		}
+
+		for (int i = 0; i < 4; i++) 
+		{
+			if (TreeRolls [i] == 12) 
+				
+			{
+//				DeadTrees.Add (i);
+				Debug.Log ("Adding 12s");
 				TempRolls.Add (i);
 			}
 		}
@@ -154,5 +166,16 @@ public class AutoSelectManager : MonoBehaviour
 			
 
 
+		for (int i = 0; i < 4; i++) 
+		{
+			if (TreeRolls [i] == 0) 
+			{
+				Debug.Log ("Zeroes");
+				return;
+			}
+		}
+
+		}
+
 	}
-}
+

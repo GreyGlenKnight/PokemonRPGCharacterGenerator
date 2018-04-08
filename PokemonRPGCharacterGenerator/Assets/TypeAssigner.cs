@@ -6,8 +6,6 @@ using System.Linq;
 
 public class TypeAssigner : MonoBehaviour
 	{
-//		public string PokemonType1;
-//		public string PokemonType2;
 	public Text TypeText1;
 	public Text TypeText2;
 	public GameObject PanelType1;
@@ -73,7 +71,6 @@ public class TypeAssigner : MonoBehaviour
 		void Awake () 
 
 {
-
 			TypeColorList.Add(NormalColor);
 			TypeColorList.Add(FireColor);
 			TypeColorList.Add(WaterColor);
@@ -111,8 +108,6 @@ public class TypeAssigner : MonoBehaviour
 			TypeStringList.Add(Dark);
 			TypeStringList.Add(Steel);
 			TypeStringList.Add(Fairy);
-//		Background1.color = NormalColor;
-//		Background2.color = NormalColor;
 		ListPos1 = 17;
 		ListPos2 = 17;
 		CycleColors();
@@ -145,17 +140,8 @@ public void	CycleColors2()
 		Background2.color = TypeColorList.ElementAt (ListPos2);
 		TypeText2.color = TypeColorList.ElementAt (ListPos2);
 		TypeText2.text = TypeStringList.ElementAt (ListPos2);
-//		ListPos2++;
-//		Debug.Log (TypeStringList.ElementAt (ListPos2));
-
 }
-
-
-
 	public void Update ()
-
 	{
-
 	}
-
 	}

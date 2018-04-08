@@ -23,8 +23,7 @@ public void SetBadgeLevel()
 
 	public void GenerateMon()
 {
-//		if (gameObject.GetComponent<GameManager>(AutoSelectOn) == false)
-////		{return;}
+
 		if (BadgeLevel == 0)
 			
 		{
