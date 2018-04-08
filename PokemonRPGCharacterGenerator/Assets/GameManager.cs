@@ -134,7 +134,6 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
-
 	public SelectionState _SelectionState = SelectionState.Roll;
 
 	void Awake()

@@ -14,12 +14,11 @@ public class TreeManager : MonoBehaviour
 //	public static bool CanSelect = false;
 	//public bool AutoSelectOn = false;
 	public int intrandnumber1;
-//	static List <int> IRN1List = new List <int> ();
+	public static List <int> IRN1List = new List <int> ();
 
 //	public TreeManager _Trees = new Tree [4];
 
 	public void RollOnTree()
-
 
 	{
 		RollTheList (Bonuses, options, Tree_text);
@@ -39,7 +38,7 @@ public class TreeManager : MonoBehaviour
 			intrandnumber1 = Bonuses [0];
 			Bonuses.RemoveAt (0);
 			options [intrandnumber1].isOn = true;
-//		IRN1List.Clear();
+		IRN1List.Clear();
 		GameManager.instance._SelectionState = SelectionState.Roll;
 				Debug.Log ("SelectMe");
 
@@ -62,14 +61,12 @@ public class TreeManager : MonoBehaviour
 		{
 			ResetBonuses (); 
 		}
-
 		Bonuses.Shuffle ();
 //		GameManager.instance._SelectionState = SelectionState.Select;
 		int intrandnumber1 = LBonus [0] +1;
-//		IRN1List.Add (intrandnumber1);
+		IRN1List.Add (intrandnumber1);
 		String randomnumber1 = intrandnumber1.ToString ();
 		LText.text = randomnumber1;
-
 	}
 
 

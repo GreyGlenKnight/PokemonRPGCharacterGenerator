@@ -14,17 +14,19 @@ public class AutoSelectManager : MonoBehaviour
 	//options [intrandnumber1].isOn = true;
 	public TreeManager [] ActiveRolls = new TreeManager[4];
 	List <int> TempRolls = new List <int> ();
-//	static List <int> IRN1List = new List <int> ();
-
+//	List <int> ListPlz = new List <int> ();
 
 
 	public void AutoSelect ()
 	{
+		;	
 
 		for (int i = 0; i < 4; i++) 
 		{
 ////			ActiveRolls[i].RollOnTree ();
-	TreeRolls [i] = ActiveRolls[i].intrandnumber1;
+//	TreeRolls [i] = ActiveRolls[i].intrandnumber1;
+			TreeRolls [i] = TreeManager.IRN1List.ElementAt (i);
+			Debug.Log (TreeRolls [i]);
 ////			TreeRolls [i] = IRN1List.ElementAt (i);
 					}
 
