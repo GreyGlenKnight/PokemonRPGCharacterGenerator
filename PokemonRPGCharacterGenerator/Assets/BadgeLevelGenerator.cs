@@ -10,29 +10,84 @@ public int BadgeLevel;
 public Dropdown BLDropDown;
 public static bool AutoSelectOn;
 public int CurrentLevel = 0;
+public float Rate = 3.0f;
+public float CurrentMaturity;
+public float TotalBaseStats = 20.0f;
+public static int CurrentMaturityInt;
+public int MaturityBonus = 0;
 public string BadgeLevelString;
 public string CurrentLevelString;
 public Text BadgeLevelText;
 public Text CurrentLevelText;
+public bool IsShiny;
+public int ShinyRNG;
 
+	public void Evolve ()
+	{
+//		Debug.Log ("Evolving...");
+		//Get Stats Here
+
+		if (TotalBaseStats > 6.0f) 
+		{
+			Rate = 1.0f;
+		}
+		if (TotalBaseStats > 11.0f) 
+		{
+			Rate = 1.5f;
+
+		}
+		if (TotalBaseStats > 13.5f) 
+		{
+			Rate = 2.0f;
+		}
+		if (TotalBaseStats > 16.0f) 
+		{
+			Rate = 2.5f;
+		}
+		if (TotalBaseStats > 18.5f) 
+		{
+			Rate = 3.0f;
+		}
+		if (TotalBaseStats > 21.0f) 
+		{
+			Rate = 3.5f;
+		}
+		if (TotalBaseStats > 23.5f) 
+		{
+			Rate = 4.0f;
+		}
+			
+//This needs an error handler if currentmaturity == 0, maybe? Only Gets called after level 1.
+		CurrentMaturity = ((CurrentLevel / Rate) + MaturityBonus);
+		CurrentMaturityInt = Mathf.FloorToInt (CurrentMaturity);
+	}
+		
+		
 
 public void SetBadgeLevel()
 {
 	BadgeLevel = BLDropDown.value;
 }
 
+
+
+
+
 	public void GenerateMon()
 {
-
 		if (BadgeLevel == 0)
 			
 		{
+			
 			GameManager.XP = 1;
 				gameObject.GetComponent<GameManager>().CallTreeRoll();
 				gameObject.GetComponent<AutoSelectManager>().AutoSelect();
 				CurrentLevel++;
+			Evolve();
+			gameObject.GetComponent<ActiveTreeManager>().MaturityCheck();
 			CurrentLevelString = CurrentLevel.ToString();
 			CurrentLevelText.text = CurrentLevelString;
+
 
 			}
 			
@@ -45,11 +100,14 @@ public void SetBadgeLevel()
 				gameObject.GetComponent<GameManager>().CallTreeRoll();
 				gameObject.GetComponent<AutoSelectManager>().AutoSelect();
 				CurrentLevel++;
+				Evolve();
+				gameObject.GetComponent<ActiveTreeManager>().MaturityCheck();
 			}
 			BadgeLevelString = "Baby Levels";
 			BadgeLevelText.text = BadgeLevelString;
 			CurrentLevelString = CurrentLevel.ToString();
 			CurrentLevelText.text = CurrentLevelString;
+
 		}
 
 		if (BadgeLevel == 2)
@@ -60,6 +118,8 @@ public void SetBadgeLevel()
 				gameObject.GetComponent<GameManager>().CallTreeRoll();
 				gameObject.GetComponent<AutoSelectManager>().AutoSelect();
 				CurrentLevel++;
+				Evolve();
+				gameObject.GetComponent<ActiveTreeManager>().MaturityCheck();
 			}
 			BadgeLevelString = "Badge Level 1";
 			BadgeLevelText.text = BadgeLevelString;
@@ -75,6 +135,8 @@ public void SetBadgeLevel()
 				gameObject.GetComponent<GameManager>().CallTreeRoll();
 				gameObject.GetComponent<AutoSelectManager>().AutoSelect();
 				CurrentLevel++;
+				Evolve();
+				gameObject.GetComponent<ActiveTreeManager>().MaturityCheck();
 			}
 			BadgeLevelString = "Badge Level 2";
 			BadgeLevelText.text = BadgeLevelString;
@@ -90,6 +152,8 @@ public void SetBadgeLevel()
 				gameObject.GetComponent<GameManager>().CallTreeRoll();
 				gameObject.GetComponent<AutoSelectManager>().AutoSelect();
 				CurrentLevel++;
+				Evolve();
+				gameObject.GetComponent<ActiveTreeManager>().MaturityCheck();
 			}
 			BadgeLevelString = "Badge Level 3";
 			BadgeLevelText.text = BadgeLevelString;
@@ -105,6 +169,8 @@ public void SetBadgeLevel()
 				gameObject.GetComponent<GameManager>().CallTreeRoll();
 				gameObject.GetComponent<AutoSelectManager>().AutoSelect();
 				CurrentLevel++;
+				Evolve();
+				gameObject.GetComponent<ActiveTreeManager>().MaturityCheck();
 			}
 			BadgeLevelString = "Badge Level 4";
 			BadgeLevelText.text = BadgeLevelString;
@@ -120,6 +186,8 @@ public void SetBadgeLevel()
 				gameObject.GetComponent<GameManager>().CallTreeRoll();
 				gameObject.GetComponent<AutoSelectManager>().AutoSelect();
 				CurrentLevel++;
+				Evolve();
+				gameObject.GetComponent<ActiveTreeManager>().MaturityCheck();
 			}
 			BadgeLevelString = "Badge Level 5";
 			BadgeLevelText.text = BadgeLevelString;
@@ -135,6 +203,8 @@ public void SetBadgeLevel()
 				gameObject.GetComponent<GameManager>().CallTreeRoll();
 				gameObject.GetComponent<AutoSelectManager>().AutoSelect();
 				CurrentLevel++;
+				Evolve();
+				gameObject.GetComponent<ActiveTreeManager>().MaturityCheck();
 			}
 			BadgeLevelString = "Badge Level 6";
 			BadgeLevelText.text = BadgeLevelString;
@@ -150,6 +220,8 @@ public void SetBadgeLevel()
 				gameObject.GetComponent<GameManager>().CallTreeRoll();
 				gameObject.GetComponent<AutoSelectManager>().AutoSelect();
 				CurrentLevel++;
+				Evolve();
+				gameObject.GetComponent<ActiveTreeManager>().MaturityCheck();
 			}
 			BadgeLevelString = "Badge Level 7";
 			BadgeLevelText.text = BadgeLevelString;
@@ -165,6 +237,8 @@ public void SetBadgeLevel()
 				gameObject.GetComponent<GameManager>().CallTreeRoll();
 				gameObject.GetComponent<AutoSelectManager>().AutoSelect();
 				CurrentLevel++;
+				Evolve();
+				gameObject.GetComponent<ActiveTreeManager>().MaturityCheck();
 			}
 			BadgeLevelString = "Badge Level 8";
 			BadgeLevelText.text = BadgeLevelString;
@@ -172,6 +246,21 @@ public void SetBadgeLevel()
 			CurrentLevelText.text = CurrentLevelString;
 		}
 
+
 }
+	public void Start ()
+	{
+
+		ShinyRNG = Random.Range (0, 4096);
+		Debug.Log (ShinyRNG);
+
+		if (ShinyRNG == 0) 
+		{
+			IsShiny = true;
+			Debug.Log ("Holy Shit, a Shiny!");
+
+		}
+
+	}
 
 }

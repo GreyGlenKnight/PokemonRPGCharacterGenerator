@@ -18,6 +18,7 @@ public class AutoSelectManager : MonoBehaviour
 
 	public void AutoSelect ()
 	{
+		
 		for (int i = 0; i < TreeManager.IRN1List.Count; i++) 
 		{
 			if (TreeManager.IRN1List.Count > 0) 
@@ -42,6 +43,7 @@ public class AutoSelectManager : MonoBehaviour
 			TempRolls.Shuffle ();
 			ActiveRolls [TempRolls [0]].SelectMe ();
 			TempRolls.Clear ();
+
 			{
 				return;}
 		}
@@ -150,7 +152,6 @@ public class AutoSelectManager : MonoBehaviour
 				
 			{
 //				DeadTrees.Add (i);
-				Debug.Log ("Adding 12s");
 				TempRolls.Add (i);
 			}
 		}
@@ -166,14 +167,11 @@ public class AutoSelectManager : MonoBehaviour
 			
 
 
-		for (int i = 0; i < 4; i++) 
-		{
-			if (TreeRolls [i] == 0) 
-			{
-				Debug.Log ("Zeroes");
-				return;
-			}
-		}
+//		for (int i = 0; i < 4; i++) 
+//		{
+//			if (TreeRolls [i] == 0) 
+//			{
+
 
 		}
 

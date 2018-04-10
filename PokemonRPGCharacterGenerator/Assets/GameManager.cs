@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
 	public void AddXP()
 		
 	{
-		if (XP < 50) 
+		if (XP < 100) 
 		{
 			XP++;
 		}
@@ -135,6 +135,7 @@ public class GameManager : MonoBehaviour
 		{XP = 0;}
 		CurrentXP = XP.ToString ();
 		XPText.text = CurrentXP;
+
 	}
 
 }

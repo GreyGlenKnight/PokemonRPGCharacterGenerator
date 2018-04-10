@@ -20752,7 +20752,6 @@ GameObject:
   - component: {fileID: 1880573236}
   - component: {fileID: 1880573235}
   - component: {fileID: 1880573234}
-  - component: {fileID: 1880573237}
   m_Layer: 0
   m_Name: Badge Level
   m_TagString: Untagged
@@ -20894,24 +20893,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1880573232}
---- !u!114 &1880573237
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1880573232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4e47cd26874b419aa1aef58cd2980c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BadgeLevel: 0
-  BLDropDown: {fileID: 0}
-  CurrentLevel: 0
-  BadgeLevelString: 
-  CurrentLevelString: 
-  BadgeLevelText: {fileID: 0}
-  CurrentLevelText: {fileID: 0}
 --- !u!1 &1891295081
 GameObject:
   m_ObjectHideFlags: 0
@@ -22541,6 +22522,7 @@ GameObject:
   - component: {fileID: 2026240830}
   - component: {fileID: 2026240832}
   - component: {fileID: 2026240833}
+  - component: {fileID: 2026240835}
   - component: {fileID: 2026240834}
   m_Layer: 0
   m_Name: GameManager
@@ -22565,6 +22547,7 @@ MonoBehaviour:
   - {fileID: 1207548818}
   - {fileID: 754484088}
   - {fileID: 148371688}
+  TreesToRoll: []
   XPText: {fileID: 1561839133}
   CurrentXP: 
   _PokeSheetSceneManager: {fileID: 1032932697}
@@ -22656,6 +22639,8 @@ MonoBehaviour:
   - {fileID: 1207548818}
   - {fileID: 754484088}
   - {fileID: 148371688}
+  TreeFull: 0
+  TempRolls: 
 --- !u!114 &2026240834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22670,10 +22655,32 @@ MonoBehaviour:
   BadgeLevel: 0
   BLDropDown: {fileID: 1880573234}
   CurrentLevel: 0
+  Rate: 3
+  CurrentMaturity: 0
+  TotalBaseStats: 20
+  MaturityBonus: 0
   BadgeLevelString: 
   CurrentLevelString: 
   BadgeLevelText: {fileID: 1625837369}
   CurrentLevelText: {fileID: 315917830}
+  IsShiny: 0
+  ShinyRNG: 0
+--- !u!114 &2026240835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2026240829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23091c8f8d07a4d54855edeb3803674f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaturityBonusList: []
+  Maturity: 0
+  HighestMaturity: 
+  HMItem1: 0
+  ActiveTreesList: []
 --- !u!1 &2037824971
 GameObject:
   m_ObjectHideFlags: 0

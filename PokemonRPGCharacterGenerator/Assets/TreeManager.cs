@@ -40,7 +40,7 @@ public class TreeManager : MonoBehaviour
 		if (Bonuses.Count > 0) 
 		{
 			intrandnumber1 = Bonuses [0];
-			Debug.Log (Bonuses.Count);
+//			Debug.Log (Bonuses.Count);
 			Bonuses.RemoveAt (0);
 			options [intrandnumber1].isOn = true;
 			GameManager.GainedBonuses.Add (intrandnumber1);
@@ -50,7 +50,6 @@ public class TreeManager : MonoBehaviour
 //		{
 //			IsTreeFull = true;
 //		}
-
 			IRN1List.Clear ();
 			GameManager.instance._SelectionState = SelectionState.Roll;
 	}
