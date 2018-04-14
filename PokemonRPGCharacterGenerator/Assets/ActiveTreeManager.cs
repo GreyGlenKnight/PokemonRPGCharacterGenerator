@@ -13,7 +13,7 @@ public class ActiveTreeManager : MonoBehaviour
 	public List <int> HighestMaturity = new List <int> ();
 	public int HMItem1;
 	public List <TreeManager> ActiveTreesList = new List <TreeManager> ();
-	string Maturity0 = "Gain and Break Baby Skill, Birth Ability";
+	string Maturity0 ="Gain and Break Baby Skill, Birth Ability";
 	string Maturity1 ="Break Adult Tree, Nature";
 	string Maturity2 ="Bonus Level 1";
 	string Maturity3 ="Gain Adult Tree, Gain Ability Slot 2";
@@ -41,7 +41,7 @@ public class ActiveTreeManager : MonoBehaviour
 	string Maturity25 ="Special Training Slot 3";
 	string Maturity26 ="Bonus Level 9";
 	string Maturity27 ="Break Skill 3";
-	string Maturity28 = "STAB Bonus 5";
+	string Maturity28 ="STAB Bonus 5";
 	string Maturity29 ="Bonus Level 10";
 	string Maturity30 ="Trade Skill 3";
 	string Maturity31 ="Enhancer Slot 3";
@@ -129,8 +129,8 @@ public class ActiveTreeManager : MonoBehaviour
 			EliminateMaturityBonus ();
 		}
 //				Debug.Log (MaturityBonusList.Count);
-		Debug.Log (MaturityBonusList [0]);
-				Debug.Log (Maturity);
+//		Debug.Log (MaturityBonusList [0]);
+//				Debug.Log (Maturity);
 	}
 	
 
