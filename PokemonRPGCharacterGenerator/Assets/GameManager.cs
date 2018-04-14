@@ -34,85 +34,8 @@ public enum SelectionState
 public class GameManager : MonoBehaviour 
 
 {
-
-	public TreeManager[] AllTrees;
-	public List <TreeManager> TreesToRoll = new List <TreeManager> ();
 	public static GameManager instance = null;
-	public static int XP;
-	public Text XPText;
-	public string CurrentXP;
-	public PokeSheetSceneManager _PokeSheetSceneManager;
-	public PokeSheetTreeManager _PokeSheetTreeManager;
-	public Toggle AutoSelectToggle;
-	public static List <int> GainedBonuses = new List <int> ();
-	public static List <int> DeadTrees = new List <int> ();
-	public static List <int> ActiveTrees = new List <int> ();
 
-
-
-	public void AddXP()
-		
-	{
-		if (XP < 100) 
-		{
-			XP++;
-		}
-	}
-
-	public bool SpendXP()
-	{
-		
-		if (XP < 1) 
-		{
-			return false;
-		}
-		if (_SelectionState == SelectionState.Roll) 
-		{
-			XP--;
-			_SelectionState = SelectionState.Select;
-			return true;
-		}
-		return false;
-	}
-
-	public void SwitchToTree()
-	{
-		_PokeSheetSceneManager.gameObject.SetActive (false);
-		_PokeSheetTreeManager.gameObject.SetActive (true);
-	}
-
-	public void SwitchToSheet()
-	{
-		_PokeSheetTreeManager.gameObject.SetActive (false);
-		_PokeSheetSceneManager.gameObject.SetActive (true);
-
-	}
-		
-	public void CallTreeRoll()
-	{
-		if (SpendXP () == false) 
-		{
-			return;
-		}
-		TreesToRoll = AllTrees.ToList();
-//		Debug.Log (TreesToRoll.Count);
-//
-//		if (DeadTrees.Count > 0) 
-//		{
-//			int i = DeadTrees [0];
-//			Debug.Log (i);
-//			TreesToRoll.RemoveAt (i);
-//			Debug.Log (TreesToRoll.Count);
-//			DeadTrees.RemoveAt (0);
-//		}
-
-		for (int i = 0; i < TreesToRoll.Count; i++) 
-			{
-			
-			TreesToRoll[i].RollOnTree ();
-
-			}
-	}
 
 	public SelectionState _SelectionState = SelectionState.Roll;
 
@@ -125,16 +48,10 @@ public class GameManager : MonoBehaviour
 		else  if (instance != this)
 		{Destroy (gameObject);}
 		DontDestroyOnLoad(gameObject);
-//		ActiveTrees = AllTrees.ToList();
-//		Debug.Log (ActiveTrees.Count);
 	}
 
 	void Update ()
 	{
-		if (XP < 0)
-		{XP = 0;}
-		CurrentXP = XP.ToString ();
-		XPText.text = CurrentXP;
 
 	}
 

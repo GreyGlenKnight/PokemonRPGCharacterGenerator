@@ -9,7 +9,7 @@ public class AutoSelectManager : MonoBehaviour
 {
 
 	public int [] TreeRolls = new int[4];
-	public TreeManager [] ActiveRolls = new TreeManager[4];
+	public SkillTree [] ActiveRolls = new SkillTree[4];
 	public bool TreeFull;
 	public List <int> TempRolls = new List <int> ();
 	public static List <int> DeadTrees = new List <int> ();
@@ -19,13 +19,13 @@ public class AutoSelectManager : MonoBehaviour
 	public void AutoSelect ()
 	{
 		
-		for (int i = 0; i < TreeManager.IRN1List.Count; i++) 
+		for (int i = 0; i < SkillTree.IntRandNumber1List.Count; i++) 
 		{
-			if (TreeManager.IRN1List.Count > 0) 
+			if (SkillTree.IntRandNumber1List.Count > 0) 
 			{
-				if (TreeManager.IRN1List.ElementAt (i) > 0) 
+				if (SkillTree.IntRandNumber1List.ElementAt (i) > 0) 
 				{
-					TreeRolls [i] = TreeManager.IRN1List.ElementAt (i);
+					TreeRolls [i] = SkillTree.IntRandNumber1List.ElementAt (i);
 				}
 			}
 		}
