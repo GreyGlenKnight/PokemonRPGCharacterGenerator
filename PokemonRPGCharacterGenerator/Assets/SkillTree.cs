@@ -5,74 +5,114 @@ using UnityEngine.UI;
 using System;
 using System.Linq;
 
+public enum SkillTreeState
+{
+	Active, Inactive, Locked
+}
 
 public class SkillTree : MonoBehaviour 
 {
+	
+	public const int BONUSES_ON_TREE = 12;
 	public SkillTreeDisplay TreeDisplay;
-	List<int> Bonuses = new List<int> ();
-	public int intrandnumber1;
-	public static List <int> IntRandNumber1List = new List <int> ();
+	List<BonusAtIndex> RemainingBonuses = new List<BonusAtIndex> ();
+//	public int BonusIndex;
 	public bool IsTreeFull = false;
-	public int MaturityUnlock;
+	private SkillTreeState State;
 
+	public void ChangeState(SkillTreeState NewState)
+	{
+		State = NewState;
+
+		//For Display purposes, call stuff here
+
+	}
+
+	public BonusAtIndex GetCurrentSelectedBonus ()
+	{
+		if (State != SkillTreeState.Active) 
+		{
+			return BonusAtIndex.None;
+		}
+
+		if (RemainingBonuses.Count == 0) 
+		{
+			return BonusAtIndex.None;
+		}
+		return (BonusAtIndex) RemainingBonuses [0];
+	}
 
 	public void RollOnTree()
 
 	{
-		RollTheList (Bonuses);
+		RollTheList ();
 	}
 
-	public void RollTheList (List <int> LBonus)
+	public void RollTheList ()
 	{
-		if (LBonus.Count > 0)
+		if (State != SkillTreeState.Active)
 		{
-			Bonuses.Shuffle ();
-		}	
-		int intrandnumber1 = LBonus [0] + 1;
-
-		TreeDisplay.RollTheList (LBonus, intrandnumber1);
-
-		if (TreeDisplay.options [intrandnumber1 -1].isOn == false)
-		{	
-			IntRandNumber1List.Add (intrandnumber1);
+			Debug.Log ("Tree inactive!");
+			TreeDisplay.DisplayBonusString ("N/A");
+			return;
+		}
+		if (RemainingBonuses.Count > 0) 
+		{
+			RemainingBonuses.Shuffle ();
+			TreeDisplay.DisplayBonusString (((int) RemainingBonuses [0] +1).ToString());
+		} 
+		else 
+		{
+			TreeDisplay.DisplayBonusString ("~");
 		}
 	}
 
-
-	public void SelectMe()
+	public void OnSelected ()
 	{
-		TreeDisplay.SelectMe (intrandnumber1);
 		if (GameManager.instance._SelectionState == SelectionState.Roll) 
 		{
 			return;
 		}
-			
-		if (Bonuses.Count > 0) 
+
+		if (State != SkillTreeState.Active) 
 		{
-			intrandnumber1 = Bonuses [0];
-			Bonuses.RemoveAt (0);
+			Debug.Log ("Selected Tree Inactive!");
+			return;
 		}
 
-			IntRandNumber1List.Clear ();
-			GameManager.instance._SelectionState = SelectionState.Roll;
+		if (RemainingBonuses.Count == 0) 
+		{
+			return;
+		}
+
+		TreeDisplay.CheckSelectedBonus ((int) RemainingBonuses [0]);
+		RemainingBonuses.RemoveAt (0);
+		GameManager.instance._SelectionState = SelectionState.Roll;
+		GameManager.instance._MaturityManager.MaturityCheck ();
 	}
 
-
-
+	public void OnManualSelectClick ()
+	{
+		OnSelected ();
+	}
+		
 	public void ResetBonuses ()
 	{ 
-		for (int i = 0; i < 12; i++) 
+		for (int i = 0; i < BONUSES_ON_TREE; i++) 
 		{
-			Bonuses.Add (i);
+			RemainingBonuses.Add ((BonusAtIndex)i);
 		}
-		Bonuses.Shuffle ();
+//		RemainingBonuses.Shuffle ();
 	}
-
-
+	public void Start ()
+	{
+		GameManager.instance._MaturityManager.UnlockTrees ();
+	}
 		
 	public void Awake()
 	{
 		TreeDisplay = GetComponent<SkillTreeDisplay> ();
 		ResetBonuses ();
+		ChangeState (SkillTreeState.Locked);
 	}
 }

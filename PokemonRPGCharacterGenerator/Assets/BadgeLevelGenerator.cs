@@ -187,7 +187,7 @@ public void SetBadgeLevel()
 	public void RollCycle ()
 	{
 		gameObject.GetComponent<NewTreeManager>().CallTreeRoll();
-		gameObject.GetComponent<AutoSelectManager>().AutoSelect();
+		gameObject.GetComponent<AutoSelectManager>().OnAutoSelectClick();
 		CurrentLevel++;
 		Evolve();
 		gameObject.GetComponent<MaturityManager>().MaturityCheck();

@@ -7,6 +7,15 @@ using System.Linq;
 
 public class MaturityManager : MonoBehaviour 
 {
+	public int [] BreakTree = new int[] 
+	{
+		0,1,4,7
+	} ;
+		
+		public int [] ActiveTree = new int[] 
+	{
+		0,3,6,17
+	} ;
 
 	public List <MaturityRank> MaturityBonusList = new List <MaturityRank> ();
 	public int CurrentMaturity;
@@ -67,6 +76,22 @@ public class MaturityManager : MonoBehaviour
 	public void EliminateMaturityBonus ()
 	{
 		CurrentMaturity++;
+
+		for (int i = 0; i < BreakTree.Length; i++) 
+		{
+			if (CurrentMaturity == BreakTree [i])
+			{
+				GameManager.instance._NewTreeManager.TreesToRoll [i].ChangeState(SkillTreeState.Inactive);
+			}
+		}
+
+		for (int i = 0; i < ActiveTree.Length; i++) 
+		{
+			if (CurrentMaturity == ActiveTree [i]) 
+			{
+				GameManager.instance._NewTreeManager.TreesToRoll [i].ChangeState(SkillTreeState.Active);
+			}
+		}
 	}
 
 
@@ -84,4 +109,22 @@ public class MaturityManager : MonoBehaviour
 		}
 	}
 
+	public void UnlockTrees ()
+	{
+		for (int i = 0; i < BreakTree.Length; i++) 
+		{
+			if (CurrentMaturity >= BreakTree [i])
+			{
+				GameManager.instance._NewTreeManager.TreesToRoll [i].ChangeState(SkillTreeState.Inactive);
+			}
+		}
+
+		for (int i = 0; i < ActiveTree.Length; i++) 
+		{
+			if (CurrentMaturity >= ActiveTree [i]) 
+			{
+				GameManager.instance._NewTreeManager.TreesToRoll [i].ChangeState(SkillTreeState.Active);
+			}
+		}
+	}
 }

@@ -10,20 +10,19 @@ public class SkillTreeDisplay : MonoBehaviour
 	public Toggle[] options = new Toggle[12];
 	public Text Tree_text;
 
-	public void SelectMe (int intrandnumber1)
+	public void CheckSelectedBonus (int BonusIndex)
 	{
-		options [intrandnumber1].isOn = true;
+		options [BonusIndex].isOn = true;
 	}
 
-	public void RollTheList (List <int> LBonus, int intrandnumber1)
+	public void DisplayBonusString (string ToDisplay)
 	{
-		if (LBonus.Count == 0) 
-		{
-			Debug.Log ("LBONUS 0");
-			return;
-		}
-		String randomnumber1 = intrandnumber1.ToString ();
-		Tree_text.text = randomnumber1;
+//		if (LBonus.Count == 0) 
+//		{
+////			Debug.Log ("LBONUS 0");
+//			return;
+//		}
+		Tree_text.text = ToDisplay;
 	}
 
 }

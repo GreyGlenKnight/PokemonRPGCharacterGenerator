@@ -4,134 +4,133 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
 
+public enum BonusAtIndex
+{
+	Skill1, Skill2, Skill3, Skill4, MoveMod, Ability, StatUp, SkillUp, Endurance, Maturity, CrossTree, TreeUp, None
+}
 
 public class AutoSelectManager : MonoBehaviour 
 {
-
-	public int [] TreeRolls = new int[4];
-	public SkillTree [] ActiveRolls = new SkillTree[4];
+	public const int NUMBER_OF_TREES = 4;
+	public BonusAtIndex [] TreeRolls = new BonusAtIndex [NUMBER_OF_TREES];
+	public SkillTree [] ActiveRolls = new SkillTree[NUMBER_OF_TREES];
 	public bool TreeFull;
 	public List <int> TempRolls = new List <int> ();
-	public static List <int> DeadTrees = new List <int> ();
-	public static List <int> ActiveTrees = new List <int> ();
 
+	public void OnAutoSelectClick ()
 
-	public void AutoSelect ()
 	{
-		
-		for (int i = 0; i < SkillTree.IntRandNumber1List.Count; i++) 
+
+		for (int i = 0; i < NUMBER_OF_TREES; i++) 
 		{
-			if (SkillTree.IntRandNumber1List.Count > 0) 
-			{
-				if (SkillTree.IntRandNumber1List.ElementAt (i) > 0) 
-				{
-					TreeRolls [i] = SkillTree.IntRandNumber1List.ElementAt (i);
-				}
-			}
+			TreeRolls [i] = ActiveRolls [i].GetCurrentSelectedBonus ();
+			//GetCurrentSelectedBonus returns RemainingBonuses [0]
 		}
-		for (int i = 0; i < 4; i++) 
+
+		for (int i = 0; i < NUMBER_OF_TREES; i++) 
 		{
-			if (TreeRolls [i] == 7) 
+			if (TreeRolls [i] == BonusAtIndex.StatUp) 
 			{
 				TempRolls.Add (i);
-//				Debug.Log ("Add 7s...");
-
+//						Debug.Log ("Add 7s...");
 			}
 		}
 		if (TempRolls.Count > 0) 
 		{
 			TempRolls.Shuffle ();
-			ActiveRolls [TempRolls [0]].SelectMe ();
+			ActiveRolls [TempRolls [0]].OnSelected ();
 			TempRolls.Clear ();
 
 			{
 				return;}
 		}
-	
 
 
-		for (int i = 0; i < 4; i++) 
+
+		for (int i = 0; i < NUMBER_OF_TREES; i++) 
 		{
-			if (TreeRolls [i] <= 5) 
+			if (TreeRolls [i] <= BonusAtIndex.MoveMod) 
 			{
 				TempRolls.Add (i);
+			}
+		}
+		if (TempRolls.Count > 0) 
+		{
+			TempRolls.Shuffle ();
+			ActiveRolls [TempRolls [0]].OnSelected ();
+			TempRolls.Clear ();
+			{
+				return;}
+		}
+
+		for (int i = 0; i < NUMBER_OF_TREES; i++) {
+			if (TreeRolls [i] == BonusAtIndex.SkillUp) {
+				TempRolls.Add (i);
+				//				Debug.Log ("Add 8s...");
+			}
+		}
+		if (TempRolls.Count > 0) 
+		{
+			TempRolls.Shuffle ();
+			ActiveRolls [TempRolls [0]].OnSelected ();
+			TempRolls.Clear ();
+			{
+				return;}
+		}
+
+
+		for (int i = 0; i < NUMBER_OF_TREES; i++) {
+			if (TreeRolls [i] == BonusAtIndex.Ability) {
+				TempRolls.Add (i);
+				//				Debug.Log ("Add 6s...");
+			}
+		}
+		if (TempRolls.Count > 0) 
+		{
+			TempRolls.Shuffle ();
+			ActiveRolls [TempRolls [0]].OnSelected ();
+			TempRolls.Clear ();
+			{
+				return;}
+		}
+
+
+		for (int i = 0; i < NUMBER_OF_TREES; i++) {
+			if (TreeRolls [i] == BonusAtIndex.Endurance) {
+				TempRolls.Add (i);
+				//				Debug.Log ("Add 9s...");
 			}
 		}
 		if (TempRolls.Count > 0) {
 			TempRolls.Shuffle ();
-			ActiveRolls [TempRolls [0]].SelectMe ();
-			TempRolls.Clear ();
-			{
-				return;}
-		}
-
-		for (int i = 0; i < 4; i++) {
-			if (TreeRolls [i] == 8) {
-				TempRolls.Add (i);
-//				Debug.Log ("Add 8s...");
-			}
-		}
-		if (TempRolls.Count > 0) {
-			TempRolls.Shuffle ();
-			ActiveRolls [TempRolls [0]].SelectMe ();
+			ActiveRolls [TempRolls [0]].OnSelected ();
 			TempRolls.Clear ();
 			{
 				return;}
 		}
 
 
-		for (int i = 0; i < 4; i++) {
-			if (TreeRolls [i] == 6) {
+		for (int i = 0; i < NUMBER_OF_TREES; i++) 
+		{
+			if (TreeRolls [i] == BonusAtIndex.Maturity) 
+			{
 				TempRolls.Add (i);
-//				Debug.Log ("Add 6s...");
+				//				Debug.Log ("Add 10s...");
 			}
 		}
 		if (TempRolls.Count > 0) 
 		{
 			TempRolls.Shuffle ();
-			ActiveRolls [TempRolls [0]].SelectMe ();
+			ActiveRolls [TempRolls [0]].OnSelected ();
 			TempRolls.Clear ();
 			{
 				return;}
 		}
 
 
-		for (int i = 0; i < 4; i++) {
-			if (TreeRolls [i] == 9) {
-				TempRolls.Add (i);
-//				Debug.Log ("Add 9s...");
-			}
-		}
-		if (TempRolls.Count > 0) {
-			TempRolls.Shuffle ();
-			ActiveRolls [TempRolls [0]].SelectMe ();
-			TempRolls.Clear ();
-			{
-				return;}
-		}
-
-
-		for (int i = 0; i < 4; i++) 
+		for (int i = 0; i < NUMBER_OF_TREES; i++) 
 		{
-			if (TreeRolls [i] == 10) 
-			{
-				TempRolls.Add (i);
-//				Debug.Log ("Add 10s...");
-			}
-		}
-		if (TempRolls.Count > 0) 
-		{
-			TempRolls.Shuffle ();
-			ActiveRolls [TempRolls [0]].SelectMe ();
-			TempRolls.Clear ();
-			{
-				return;}
-		}
-
-
-		for (int i = 0; i < 4; i++) 
-		{
-			if (TreeRolls [i] == 11) 
+			if (TreeRolls [i] == BonusAtIndex.CrossTree) 
 			{
 				TempRolls.Add (i);
 			}
@@ -139,41 +138,42 @@ public class AutoSelectManager : MonoBehaviour
 		if (TempRolls.Count > 0) 
 		{
 			TempRolls.Shuffle ();
-			ActiveRolls [TempRolls [0]].SelectMe ();
+			ActiveRolls [TempRolls [0]].OnSelected ();
 			TempRolls.Clear ();
 			{
 				return;
 			}
 		}
 
-		for (int i = 0; i < 4; i++) 
+		for (int i = 0; i < NUMBER_OF_TREES; i++) 
 		{
-			if (TreeRolls [i] == 12) 
-				
+			if (TreeRolls [i] == BonusAtIndex.TreeUp) 
+
 			{
-//				DeadTrees.Add (i);
+				//				DeadTrees.Add (i);
 				TempRolls.Add (i);
 			}
 		}
 		if (TempRolls.Count > 0) 
 		{
 			TempRolls.Shuffle ();
-			ActiveRolls [TempRolls [0]].SelectMe ();
+			ActiveRolls [TempRolls [0]].OnSelected ();
 			TempRolls.Clear ();
 			{
 				return;
 			}
 		}
-			
 
 
-//		for (int i = 0; i < 4; i++) 
-//		{
-//			if (TreeRolls [i] == 0) 
-//			{
 
+		//		for (int i = 0; i < 4; i++) 
+		//		{
+		//			if (TreeRolls [i] == 0) 
+		//			{
 
-		}
 
 	}
+
+}
+
 

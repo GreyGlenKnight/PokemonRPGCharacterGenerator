@@ -2206,10 +2206,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 004588ed97f0b4d5b9aee58891501d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TreeDisplay: {fileID: 0}
-  intrandnumber1: 0
+  TreeDisplay: {fileID: 663143688}
   IsTreeFull: 0
-  MaturityUnlock: 0
 --- !u!1 &155216974
 GameObject:
   m_ObjectHideFlags: 0
@@ -2278,6 +2276,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 155216974}
+--- !u!114 &162347036 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114252958254947102, guid: 0592928addf394041b709b869cbdd6dc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1558566425}
+  m_Script: {fileID: 11500000, guid: 50caa3d2fcb824ac2a7fa79610cd1a82, type: 3}
 --- !u!1 &163463740
 GameObject:
   m_ObjectHideFlags: 0
@@ -7816,7 +7820,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 754484088}
-        m_MethodName: SelectMe
+        m_MethodName: OnManualSelectClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11356,7 +11360,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 148371688}
-        m_MethodName: SelectMe
+        m_MethodName: OnManualSelectClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12414,10 +12418,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 004588ed97f0b4d5b9aee58891501d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TreeDisplay: {fileID: 0}
-  intrandnumber1: 0
+  TreeDisplay: {fileID: 1467233038}
   IsTreeFull: 0
-  MaturityUnlock: 0
 --- !u!1 &757000510
 GameObject:
   m_ObjectHideFlags: 0
@@ -17184,7 +17186,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1207548818}
-        m_MethodName: SelectMe
+        m_MethodName: OnManualSelectClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19544,10 +19546,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 004588ed97f0b4d5b9aee58891501d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TreeDisplay: {fileID: 0}
-  intrandnumber1: 0
+  TreeDisplay: {fileID: 2046857611}
   IsTreeFull: 0
-  MaturityUnlock: 0
 --- !u!1 &1210779354
 GameObject:
   m_ObjectHideFlags: 0
@@ -25546,6 +25546,21 @@ Prefab:
       propertyPath: Tree_text
       value: 
       objectReference: {fileID: 546933432}
+    - target: {fileID: 114251654261644692, guid: 0592928addf394041b709b869cbdd6dc,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1644167618}
+    - target: {fileID: 114251654261644692, guid: 0592928addf394041b709b869cbdd6dc,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnManualSelectClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 114281271084385104, guid: 0592928addf394041b709b869cbdd6dc,
+        type: 2}
+      propertyPath: TreeDisplay
+      value: 
+      objectReference: {fileID: 162347036}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0592928addf394041b709b869cbdd6dc, type: 2}
   m_IsPrefabParent: 0
@@ -29424,7 +29439,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2026240830}
+      - m_Target: {fileID: 2026240838}
         m_MethodName: CallTreeRoll
         m_Mode: 1
         m_Arguments:
@@ -32351,6 +32366,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc5ef92aac733040bf20430890ac435, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _MaturityManager: {fileID: 2026240835}
+  _NewTreeManager: {fileID: 2026240838}
   _SelectionState: 0
 --- !u!4 &2026240831
 Transform:
@@ -32474,6 +32491,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9b8d9ff3028a46f1b882808d11b5e6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BreakTree: 00000000010000000400000007000000
+  ActiveTree: 00000000030000000600000011000000
   CurrentMaturity: 0
   Maturity:
   - Gain and Break Baby Skill, Birth Ability
@@ -32562,6 +32581,7 @@ MonoBehaviour:
   - {fileID: 1207548818}
   - {fileID: 754484088}
   - {fileID: 148371688}
+  Bonuses: 
 --- !u!1 &2035796161
 GameObject:
   m_ObjectHideFlags: 0
