@@ -10,6 +10,11 @@ public enum SkillTreeState
 	Active, Inactive, Locked
 }
 
+public enum SkillTreeTier
+{
+	Tier0, Tier1, Tier2, Tier3,
+}
+
 public class SkillTree : MonoBehaviour 
 {
 	
@@ -18,19 +23,22 @@ public class SkillTree : MonoBehaviour
 	List<BonusAtIndex> RemainingBonuses = new List<BonusAtIndex> ();
 //	public int BonusIndex;
 	public bool IsTreeFull = false;
-	private SkillTreeState State;
+	private SkillTreeState _State;
+	public SkillTreeTier _Tier;
+	//SkillTreeState should really be private?
 
-	public void ChangeState(SkillTreeState NewState)
+	public void ChangeState (SkillTreeState NewState)
 	{
-		State = NewState;
+		_State = NewState;
 
 		//For Display purposes, call stuff here
+		TreeDisplay.TreeColorUpdate ();
 
 	}
 
 	public BonusAtIndex GetCurrentSelectedBonus ()
 	{
-		if (State != SkillTreeState.Active) 
+		if (_State != SkillTreeState.Active) 
 		{
 			return BonusAtIndex.None;
 		}
@@ -50,7 +58,7 @@ public class SkillTree : MonoBehaviour
 
 	public void RollTheList ()
 	{
-		if (State != SkillTreeState.Active)
+		if (_State != SkillTreeState.Active)
 		{
 			Debug.Log ("Tree inactive!");
 			TreeDisplay.DisplayBonusString ("N/A");
@@ -74,7 +82,7 @@ public class SkillTree : MonoBehaviour
 			return;
 		}
 
-		if (State != SkillTreeState.Active) 
+		if (_State != SkillTreeState.Active) 
 		{
 			Debug.Log ("Selected Tree Inactive!");
 			return;

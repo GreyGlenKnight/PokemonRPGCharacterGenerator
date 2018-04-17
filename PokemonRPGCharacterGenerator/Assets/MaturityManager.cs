@@ -17,6 +17,12 @@ public class MaturityManager : MonoBehaviour
 		0,3,6,17
 	} ;
 
+	public int [] BonusLevels = new int[] 
+	{
+		2,5,8,11,14,17,20,23,26,29,32,35,38
+	} ;
+
+
 	public List <MaturityRank> MaturityBonusList = new List <MaturityRank> ();
 	public int CurrentMaturity;
 	public string [] Maturity = new string []
@@ -92,8 +98,21 @@ public class MaturityManager : MonoBehaviour
 				GameManager.instance._NewTreeManager.TreesToRoll [i].ChangeState(SkillTreeState.Active);
 			}
 		}
+
+		for (int i = 0; i < BonusLevels.Length; i++)
+		{
+			if (CurrentMaturity == BonusLevels [i]) 	
+			{
+				BonusLevelUp ();
+			}
+	}
 	}
 
+
+	public void BonusLevelUp ()
+	{
+				Debug.Log ("Bonus Level!");
+	}
 
 	public void MaturityCheck ()
 	{
@@ -116,6 +135,8 @@ public class MaturityManager : MonoBehaviour
 			if (CurrentMaturity >= BreakTree [i])
 			{
 				GameManager.instance._NewTreeManager.TreesToRoll [i].ChangeState(SkillTreeState.Inactive);
+				GameManager.instance._NewTreeManager.TreesToRoll [i].TreeDisplay.TreeColorUpdate ();
+				Debug.Log ("Should evaluate treecolorupdate at this location");
 			}
 		}
 

@@ -37,7 +37,6 @@ public class GameManager : MonoBehaviour
 	public MaturityManager _MaturityManager;
 	public static GameManager instance = null;
 	public NewTreeManager _NewTreeManager;
-
 	public SelectionState _SelectionState = SelectionState.Roll;
 
 	void Awake()
@@ -50,10 +49,4 @@ public class GameManager : MonoBehaviour
 		{Destroy (gameObject);}
 		DontDestroyOnLoad(gameObject);
 	}
-
-	void Update ()
-	{
-
-	}
-
 }

@@ -32,7 +32,6 @@ public class AutoSelectManager : MonoBehaviour
 			if (TreeRolls [i] == BonusAtIndex.StatUp) 
 			{
 				TempRolls.Add (i);
-//						Debug.Log ("Add 7s...");
 			}
 		}
 		if (TempRolls.Count > 0) 
@@ -150,7 +149,6 @@ public class AutoSelectManager : MonoBehaviour
 			if (TreeRolls [i] == BonusAtIndex.TreeUp) 
 
 			{
-				//				DeadTrees.Add (i);
 				TempRolls.Add (i);
 			}
 		}
@@ -162,18 +160,8 @@ public class AutoSelectManager : MonoBehaviour
 			{
 				return;
 			}
-		}
-
-
-
-		//		for (int i = 0; i < 4; i++) 
-		//		{
-		//			if (TreeRolls [i] == 0) 
-		//			{
-
-
-	}
-
+		}	
+}
 }
 
 

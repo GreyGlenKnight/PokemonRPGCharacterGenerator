@@ -12,7 +12,6 @@ public class NewTreeManager : MonoBehaviour
 	public List <SkillTree> TreesToRoll = new List <SkillTree> ();
 	public List <int> Bonuses = new List <int> ();
 
-
 	public void CallTreeRoll()
 	{
 		if (XPManager.SpendXP () == false) 
@@ -24,6 +23,4 @@ public class NewTreeManager : MonoBehaviour
 			TreesToRoll[i].RollOnTree ();
 		}
 	}
-
-
 }
