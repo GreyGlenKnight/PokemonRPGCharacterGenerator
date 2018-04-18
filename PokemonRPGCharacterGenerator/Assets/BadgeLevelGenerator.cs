@@ -9,7 +9,6 @@ public class BadgeLevelGenerator : MonoBehaviour
 public int BadgeLevel;
 public Dropdown BLDropDown;
 public static bool AutoSelectOn;
-public int CurrentLevel = 0;
 public float Rate = 3.0f;
 public float CurrentMaturity;
 public float TotalBaseStats = 20.0f;
@@ -24,9 +23,6 @@ public int ShinyRNG;
 
 	public void Evolve ()
 	{
-//		Debug.Log ("Evolving...");
-		//Get Stats Here
-
 		if (TotalBaseStats > 6.0f) 
 		{
 			Rate = 1.0f;
@@ -56,8 +52,7 @@ public int ShinyRNG;
 			Rate = 4.0f;
 		}
 			
-//This needs an error handler if currentmaturity == 0, maybe? Only Gets called after level 1.
-		CurrentMaturity = ((CurrentLevel / Rate) + MaturityBonus);
+		CurrentMaturity = ((GameManager.instance.CurrentPokemon.Level / Rate) + MaturityBonus);
 		CurrentMaturityInt = Mathf.FloorToInt (CurrentMaturity);
 	}
 
@@ -73,14 +68,14 @@ public void SetBadgeLevel()
 		{
 			XPManager.XP = 1;
 			RollCycle ();
-			CurrentLevelString = CurrentLevel.ToString();
+			CurrentLevelString = GameManager.instance.CurrentPokemon.Level.ToString();
 			CurrentLevelText.text = CurrentLevelString;
 		}
 
 		if (BadgeLevel == 1)
 		{
-			XPManager.XP = 6 - CurrentLevel;
-			while (CurrentLevel < 6)
+			XPManager.XP = 6 - GameManager.instance.CurrentPokemon.Level;
+			while (GameManager.instance.CurrentPokemon.Level < 6)
 			{
 				RollCycle ();
 			}
@@ -90,8 +85,8 @@ public void SetBadgeLevel()
 
 		if (BadgeLevel == 2)
 		{
-			XPManager.XP = 11 - CurrentLevel;
-			while (CurrentLevel < 11)
+			XPManager.XP = 11 - GameManager.instance.CurrentPokemon.Level;
+			while (GameManager.instance.CurrentPokemon.Level < 11)
 			{
 				RollCycle ();
 			}
@@ -101,8 +96,8 @@ public void SetBadgeLevel()
 
 		if (BadgeLevel == 3)
 		{
-			XPManager.XP = 16 - CurrentLevel;
-			while (CurrentLevel < 16)
+			XPManager.XP = 16 - GameManager.instance.CurrentPokemon.Level;
+			while (GameManager.instance.CurrentPokemon.Level < 16)
 			{
 				RollCycle ();
 			}
@@ -112,8 +107,8 @@ public void SetBadgeLevel()
 
 		if (BadgeLevel == 4)
 		{
-			XPManager.XP = 21 - CurrentLevel;
-			while (CurrentLevel < 21)
+			XPManager.XP = 21 - GameManager.instance.CurrentPokemon.Level;
+			while (GameManager.instance.CurrentPokemon.Level < 21)
 			{
 				RollCycle ();
 			}
@@ -123,8 +118,8 @@ public void SetBadgeLevel()
 
 		if (BadgeLevel == 5)
 		{
-			XPManager.XP = 26 - CurrentLevel;
-			while (CurrentLevel < 26)
+			XPManager.XP = 26 - GameManager.instance.CurrentPokemon.Level;
+			while (GameManager.instance.CurrentPokemon.Level < 26)
 			{
 				RollCycle ();
 			}
@@ -134,8 +129,8 @@ public void SetBadgeLevel()
 
 		if (BadgeLevel == 6)
 		{
-			XPManager.XP = 31 - CurrentLevel;
-			while (CurrentLevel < 31)
+			XPManager.XP = 31 - GameManager.instance.CurrentPokemon.Level;
+			while (GameManager.instance.CurrentPokemon.Level < 31)
 			{
 				RollCycle ();
 			}
@@ -145,8 +140,8 @@ public void SetBadgeLevel()
 
 		if (BadgeLevel == 7)
 		{
-			XPManager.XP = 36 - CurrentLevel;
-			while (CurrentLevel < 36)
+			XPManager.XP = 36 - GameManager.instance.CurrentPokemon.Level;
+			while (GameManager.instance.CurrentPokemon.Level < 36)
 			{
 				RollCycle ();
 			}
@@ -156,8 +151,8 @@ public void SetBadgeLevel()
 
 		if (BadgeLevel == 8)
 		{
-			XPManager.XP = 41 - CurrentLevel;
-			while (CurrentLevel < 41)
+			XPManager.XP = 41 - GameManager.instance.CurrentPokemon.Level;
+			while (GameManager.instance.CurrentPokemon.Level < 41)
 			{
 				RollCycle ();
 			}
@@ -167,8 +162,8 @@ public void SetBadgeLevel()
 
 		if (BadgeLevel == 9)
 		{
-			XPManager.XP = 46 - CurrentLevel;
-			while (CurrentLevel < 46)
+			XPManager.XP = 46 - GameManager.instance.CurrentPokemon.Level;
+			while (GameManager.instance.CurrentPokemon.Level < 46)
 			{
 				RollCycle ();
 			}
@@ -180,7 +175,7 @@ public void SetBadgeLevel()
 	public void UpdateText ()
 	{
 		BadgeLevelText.text = BadgeLevelString;
-		CurrentLevelString = CurrentLevel.ToString ();
+		CurrentLevelString = GameManager.instance.CurrentPokemon.Level.ToString ();
 		CurrentLevelText.text = CurrentLevelString;
 	}
 
@@ -188,7 +183,7 @@ public void SetBadgeLevel()
 	{
 		gameObject.GetComponent<NewTreeManager>().CallTreeRoll();
 		gameObject.GetComponent<AutoSelectManager>().OnAutoSelectClick();
-		CurrentLevel++;
+		GameManager.instance.CurrentPokemon.LevelUp();
 		Evolve();
 		gameObject.GetComponent<MaturityManager>().MaturityCheck();
 	}

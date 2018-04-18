@@ -60,7 +60,7 @@ public class SkillTree : MonoBehaviour
 	{
 		if (_State != SkillTreeState.Active)
 		{
-			Debug.Log ("Tree inactive!");
+//			Debug.Log ("Tree inactive!");
 			TreeDisplay.DisplayBonusString ("N/A");
 			return;
 		}
@@ -96,12 +96,13 @@ public class SkillTree : MonoBehaviour
 		TreeDisplay.CheckSelectedBonus ((int) RemainingBonuses [0]);
 		RemainingBonuses.RemoveAt (0);
 		GameManager.instance._SelectionState = SelectionState.Roll;
-		GameManager.instance._MaturityManager.MaturityCheck ();
 	}
 
 	public void OnManualSelectClick ()
 	{
 		OnSelected ();
+		GameManager.instance._MaturityManager.MaturityCheck ();
+
 	}
 		
 	public void ResetBonuses ()

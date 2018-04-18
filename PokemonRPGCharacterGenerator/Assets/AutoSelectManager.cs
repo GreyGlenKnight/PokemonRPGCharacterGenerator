@@ -132,6 +132,7 @@ public class AutoSelectManager : MonoBehaviour
 			if (TreeRolls [i] == BonusAtIndex.CrossTree) 
 			{
 				TempRolls.Add (i);
+				Debug.Log ("Should roll on other tree!");
 			}
 		}
 		if (TempRolls.Count > 0) 
@@ -150,6 +151,8 @@ public class AutoSelectManager : MonoBehaviour
 
 			{
 				TempRolls.Add (i);
+				Debug.Log ("Should roll on higher tree!");
+
 			}
 		}
 		if (TempRolls.Count > 0) 

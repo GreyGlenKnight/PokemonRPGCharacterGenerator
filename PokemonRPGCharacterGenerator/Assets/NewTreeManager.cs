@@ -7,7 +7,6 @@ using System.Linq;
 
 public class NewTreeManager : MonoBehaviour 
 {
-
 	public bool IsTreeFull = false;
 	public List <SkillTree> TreesToRoll = new List <SkillTree> ();
 	public List <int> Bonuses = new List <int> ();

@@ -13,13 +13,13 @@ public class MenuSceneChanger : MonoBehaviour
 //	public SkillTreeDisplay Row2;
 //	public SkillTreeDisplay Row3;
 
-	public void SwitchToTree()
+	public void SwitchToTree ()
 	{
 		_PokeSheetSceneManager.gameObject.SetActive (false);
 		_PokeSheetTreeManager.gameObject.SetActive (true);
 	}
 
-	public void SwitchToSheet()
+	public void SwitchToSheet ()
 	{
 		_PokeSheetTreeManager.gameObject.SetActive (false);
 		_PokeSheetSceneManager.gameObject.SetActive (true);
@@ -27,7 +27,6 @@ public class MenuSceneChanger : MonoBehaviour
 	}
 
 	public void ChangeVisibleTrees ()
-
 	{
 		Debug.Log ("Switch Trees");
 		//This probably doesn't go here, but this class knows all the trees for now.

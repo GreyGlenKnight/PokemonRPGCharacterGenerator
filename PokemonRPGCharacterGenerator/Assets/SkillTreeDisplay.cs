@@ -21,7 +21,7 @@ public class SkillTreeDisplay : MonoBehaviour
 
 	public void TreeColorUpdate ()
 	{
-		Debug.Log ("Color Update on Tree");
+//		Debug.Log ("Color Update on Tree");
 		TreeBG.color = LockTreeColor;
 //					TreeBG.color = Tier3Color;
 

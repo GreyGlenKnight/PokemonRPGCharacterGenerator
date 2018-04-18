@@ -22,7 +22,7 @@ public class MaturityManager : MonoBehaviour
 		2,5,8,11,14,17,20,23,26,29,32,35,38
 	} ;
 
-
+	public PokemonClass Pokemon;
 	public List <MaturityRank> MaturityBonusList = new List <MaturityRank> ();
 	public int CurrentMaturity;
 	public string [] Maturity = new string []
@@ -81,7 +81,16 @@ public class MaturityManager : MonoBehaviour
 
 	public void EliminateMaturityBonus ()
 	{
-		CurrentMaturity++;
+		
+		if (Pokemon == null)
+		{
+			Pokemon = new PokemonClass ();
+		}
+//		CurrentMaturity++;
+
+		MaturityBonus bonus = MaturityRank.GetBonusAtLevel (CurrentMaturity);
+		Pokemon.ApplyMaturityBonus (bonus, CurrentMaturity);
+
 
 		for (int i = 0; i < BreakTree.Length; i++) 
 		{
@@ -91,28 +100,14 @@ public class MaturityManager : MonoBehaviour
 			}
 		}
 
-		for (int i = 0; i < ActiveTree.Length; i++) 
-		{
-			if (CurrentMaturity == ActiveTree [i]) 
-			{
-				GameManager.instance._NewTreeManager.TreesToRoll [i].ChangeState(SkillTreeState.Active);
+		for (int i = 0; i < ActiveTree.Length; i++) {
+			if (CurrentMaturity == ActiveTree [i]) {
+				GameManager.instance._NewTreeManager.TreesToRoll [i].ChangeState (SkillTreeState.Active);
 			}
 		}
-
-		for (int i = 0; i < BonusLevels.Length; i++)
-		{
-			if (CurrentMaturity == BonusLevels [i]) 	
-			{
-				BonusLevelUp ();
-			}
-	}
 	}
 
 
-	public void BonusLevelUp ()
-	{
-				Debug.Log ("Bonus Level!");
-	}
 
 	public void MaturityCheck ()
 	{
@@ -136,7 +131,7 @@ public class MaturityManager : MonoBehaviour
 			{
 				GameManager.instance._NewTreeManager.TreesToRoll [i].ChangeState(SkillTreeState.Inactive);
 				GameManager.instance._NewTreeManager.TreesToRoll [i].TreeDisplay.TreeColorUpdate ();
-				Debug.Log ("Should evaluate treecolorupdate at this location");
+//				Debug.Log ("Should evaluate treecolorupdate at this location");
 			}
 		}
 
