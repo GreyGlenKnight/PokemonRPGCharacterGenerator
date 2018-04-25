@@ -25,7 +25,7 @@ public class PokemonClass
 		Debug.Log ("Gained STAB :"+Maturity);
 	}
 
-	public void ApplyMaturityBonus (MaturityBonus MBonus, int maturity)
+	public void ApplyMaturityBonus (IMaturityBonus MBonus, int maturity)
 	{
 		Maturity = maturity;
 		if (MBonus == null) 

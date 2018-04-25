@@ -88,7 +88,7 @@ public class MaturityManager : MonoBehaviour
 		}
 //		CurrentMaturity++;
 
-		MaturityBonus bonus = MaturityRank.GetBonusAtLevel (CurrentMaturity);
+		IMaturityBonus bonus = MaturityRank.GetBonusAtLevel (CurrentMaturity);
 		Pokemon.ApplyMaturityBonus (bonus, CurrentMaturity);
 
 
@@ -130,7 +130,7 @@ public class MaturityManager : MonoBehaviour
 			if (CurrentMaturity >= BreakTree [i])
 			{
 				GameManager.instance._NewTreeManager.TreesToRoll [i].ChangeState(SkillTreeState.Inactive);
-				GameManager.instance._NewTreeManager.TreesToRoll [i].TreeDisplay.TreeColorUpdate ();
+//				GameManager.instance._NewTreeManager.TreesToRoll [i].TreeDisplay.TreeColorUpdate ();
 //				Debug.Log ("Should evaluate treecolorupdate at this location");
 			}
 		}

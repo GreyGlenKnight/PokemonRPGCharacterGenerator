@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class MaturityBonus
+public interface IMaturityBonus
 {
 	
-	public abstract void ApplyBonus (PokemonClass Pokemon);
+ void ApplyBonus (PokemonClass Pokemon);
 
 
 }

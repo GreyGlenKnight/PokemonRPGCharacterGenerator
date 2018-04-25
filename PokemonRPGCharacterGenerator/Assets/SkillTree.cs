@@ -10,11 +10,6 @@ public enum SkillTreeState
 	Active, Inactive, Locked
 }
 
-public enum SkillTreeTier
-{
-	Tier0, Tier1, Tier2, Tier3,
-}
-
 public class SkillTree : MonoBehaviour 
 {
 	
@@ -24,15 +19,28 @@ public class SkillTree : MonoBehaviour
 //	public int BonusIndex;
 	public bool IsTreeFull = false;
 	private SkillTreeState _State;
-	public SkillTreeTier _Tier;
+	public string Name;
+	public SkillTreeData _TreeData;
 	//SkillTreeState should really be private?
+
+	public void ChangeDisplayData (SkillTreeData NewTreeData)
+	{
+		_TreeData = NewTreeData;
+		Name = NewTreeData.Name;
+		TreeDisplay.TreeColorUpdate (_State, Name, _TreeData.Tier); 
+	}
 
 	public void ChangeState (SkillTreeState NewState)
 	{
 		_State = NewState;
 
+		if (_TreeData == null) 
+		{
+			return;
+		}
+
 		//For Display purposes, call stuff here
-		TreeDisplay.TreeColorUpdate ();
+		TreeDisplay.TreeColorUpdate (_State, Name, _TreeData.Tier);
 
 	}
 

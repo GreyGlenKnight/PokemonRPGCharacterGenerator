@@ -36,7 +36,7 @@ public class MaturityRank
 	return false;
 	}
 
-public static MaturityBonus GetBonusAtLevel (int Maturity)
+public static IMaturityBonus GetBonusAtLevel (int Maturity)
 {
 	if (IsBonusLevel(Maturity) == true)
 	{return new BonusLevelMaturityBonus ();}

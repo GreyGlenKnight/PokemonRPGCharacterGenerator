@@ -2282,7 +2282,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TreeDisplay: {fileID: 663143688}
   IsTreeFull: 0
-  _Tier: 0
+  Name: 
 --- !u!1 &155216974
 GameObject:
   m_ObjectHideFlags: 0
@@ -6057,6 +6057,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 409413896}
+--- !u!114 &409685420 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114002111764308338, guid: 0592928addf394041b709b869cbdd6dc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1558566425}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &410444231
 GameObject:
   m_ObjectHideFlags: 0
@@ -10574,13 +10580,9 @@ MonoBehaviour:
   - {fileID: 2104911158}
   - {fileID: 668193462}
   - {fileID: 642970315}
-  Tree_text: {fileID: 1493937844}
+  LastRollText: {fileID: 1493937844}
   TreeBG: {fileID: 1171458925}
-  Tier0Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  Tier1Color: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  Tier2Color: {r: 0, g: 1, b: 0, a: 1}
-  Tier3Color: {r: 0, g: 0, b: 1, a: 1}
-  LockTreeColor: {r: 0, g: 0, b: 0, a: 0}
+  TreeNameText: {fileID: 2130633008}
 --- !u!1 &666846458
 GameObject:
   m_ObjectHideFlags: 0
@@ -12507,7 +12509,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TreeDisplay: {fileID: 1467233038}
   IsTreeFull: 0
-  _Tier: 0
+  Name: 
 --- !u!1 &757000510
 GameObject:
   m_ObjectHideFlags: 0
@@ -19636,7 +19638,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TreeDisplay: {fileID: 2046857611}
   IsTreeFull: 0
-  _Tier: 0
+  Name: 
 --- !u!1 &1210779354
 GameObject:
   m_ObjectHideFlags: 0
@@ -23905,13 +23907,9 @@ MonoBehaviour:
   - {fileID: 83103711}
   - {fileID: 1308925788}
   - {fileID: 1875314673}
-  Tree_text: {fileID: 1093713362}
+  LastRollText: {fileID: 1093713362}
   TreeBG: {fileID: 189252557}
-  Tier0Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  Tier1Color: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  Tier2Color: {r: 0, g: 1, b: 0, a: 1}
-  Tier3Color: {r: 0, g: 0, b: 1, a: 1}
-  LockTreeColor: {r: 0, g: 0, b: 0, a: 0}
+  TreeNameText: {fileID: 925352057}
 --- !u!1 &1468222183
 GameObject:
   m_ObjectHideFlags: 0
@@ -25710,6 +25708,16 @@ Prefab:
       propertyPath: TreeBG
       value: 
       objectReference: {fileID: 476969280}
+    - target: {fileID: 114252958254947102, guid: 0592928addf394041b709b869cbdd6dc,
+        type: 2}
+      propertyPath: TreeNameText
+      value: 
+      objectReference: {fileID: 409685420}
+    - target: {fileID: 114252958254947102, guid: 0592928addf394041b709b869cbdd6dc,
+        type: 2}
+      propertyPath: LastRollText
+      value: 
+      objectReference: {fileID: 546933432}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0592928addf394041b709b869cbdd6dc, type: 2}
   m_IsPrefabParent: 0
@@ -32741,7 +32749,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BadgeLevel: 0
   BLDropDown: {fileID: 1880573234}
-  CurrentLevel: 0
   Rate: 3
   CurrentMaturity: 0
   TotalBaseStats: 20
@@ -33242,13 +33249,9 @@ MonoBehaviour:
   - {fileID: 182776027}
   - {fileID: 1913307296}
   - {fileID: 771542752}
-  Tree_text: {fileID: 995988474}
+  LastRollText: {fileID: 995988474}
   TreeBG: {fileID: 1671224058}
-  Tier0Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  Tier1Color: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  Tier2Color: {r: 0, g: 1, b: 0, a: 1}
-  Tier3Color: {r: 0, g: 0, b: 1, a: 1}
-  LockTreeColor: {r: 0, g: 0, b: 0, a: 0}
+  TreeNameText: {fileID: 767930027}
 --- !u!1 &2048654288
 GameObject:
   m_ObjectHideFlags: 0

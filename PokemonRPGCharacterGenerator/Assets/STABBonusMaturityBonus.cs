@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class STABBonusMaturityBonus : MaturityBonus
+public class STABBonusMaturityBonus : IMaturityBonus
 
 {
 	#region implemented abstract members of MaturityBonus
-	public override void ApplyBonus (PokemonClass Pokemon)
+	public void ApplyBonus (PokemonClass Pokemon)
 	{
 		Pokemon.GainSTABBonus ();
 	}

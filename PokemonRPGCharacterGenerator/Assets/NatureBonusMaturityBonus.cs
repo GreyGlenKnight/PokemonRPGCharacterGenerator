@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NatureBonusMaturityBonus : MaturityBonus
+public class NatureBonusMaturityBonus : IMaturityBonus
 
 {
 	#region implemented abstract members of MaturityBonus
 
-	public override void ApplyBonus (PokemonClass Pokemon)
+	public void ApplyBonus (PokemonClass Pokemon)
 	{
 		Pokemon.GainNatureBonus ();	
 	}

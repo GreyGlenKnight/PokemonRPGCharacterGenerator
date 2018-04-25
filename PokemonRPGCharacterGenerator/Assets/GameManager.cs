@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
 	public NewTreeManager _NewTreeManager;
 	public SelectionState _SelectionState = SelectionState.Roll;
 	public PokemonClass CurrentPokemon;
+	List <SkillTreeData> _SkillTreeData = new List<SkillTreeData> ();
 
 	void Awake()
 
@@ -52,6 +53,14 @@ public class GameManager : MonoBehaviour
 		DontDestroyOnLoad(gameObject);
 
 		CurrentPokemon = new PokemonClass ();
+		_SkillTreeData.Add (new SkillTreeData ("Imp", SkillTreeTier.Tier0));
+		_SkillTreeData.Add (new SkillTreeData ("Drake", SkillTreeTier.Tier1));
+		_SkillTreeData.Add (new SkillTreeData ("Fire Body 1", SkillTreeTier.Tier1));
+		_SkillTreeData.Add (new SkillTreeData ("Claw 1", SkillTreeTier.Tier1));
+		_SkillTreeData.Add (new SkillTreeData ("Claw 2", SkillTreeTier.Tier2));
+		_SkillTreeData.Add (new SkillTreeData ("Beast", SkillTreeTier.Tier1));
+		_SkillTreeData.Add (new SkillTreeData ("Fire Body 2", SkillTreeTier.Tier2));
+		_SkillTreeData.Add (new SkillTreeData ("Pure Bloos 2", SkillTreeTier.Tier2));
 
 	}
 }

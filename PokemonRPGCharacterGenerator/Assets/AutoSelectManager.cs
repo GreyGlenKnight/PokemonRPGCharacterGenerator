@@ -20,7 +20,6 @@ public class AutoSelectManager : MonoBehaviour
 	public void OnAutoSelectClick ()
 
 	{
-
 		for (int i = 0; i < NUMBER_OF_TREES; i++) 
 		{
 			TreeRolls [i] = ActiveRolls [i].GetCurrentSelectedBonus ();
