@@ -11,8 +11,13 @@ public class MaturityManager : MonoBehaviour
 	{
 		0,1,4,7
 	} ;
+
+	public int [] SwitchTree = new int[]
+	{
+		9,16,	21,24,	30,36
+	} ;
 		
-		public int [] ActiveTree = new int[] 
+	public int [] ActiveTree = new int[] 
 	{
 		0,3,6,17
 	} ;
@@ -105,6 +110,7 @@ public class MaturityManager : MonoBehaviour
 				GameManager.instance._NewTreeManager.TreesToRoll [i].ChangeState (SkillTreeState.Active);
 			}
 		}
+		SwitchTrees ();
 	}
 
 
@@ -120,6 +126,20 @@ public class MaturityManager : MonoBehaviour
 		if (HMItem1 < CurrentMaturity)
 		{
 			EliminateMaturityBonus ();
+		}
+	}
+
+	public void SwitchTrees ()
+	{
+//		CurrentMaturity = BadgeLevelGenerator.CurrentMaturityInt;
+
+		for (int i = 0; i < SwitchTree.Length; i++) 
+		{
+			if (CurrentMaturity == SwitchTree [i]) 
+			{
+				Debug.Log ("Switching Trees");
+				Debug.Log ("This shouldn't necessarily appear more than once at a time")
+			}
 		}
 	}
 

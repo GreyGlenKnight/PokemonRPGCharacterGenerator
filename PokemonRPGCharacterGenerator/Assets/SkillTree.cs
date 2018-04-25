@@ -124,6 +124,8 @@ public class SkillTree : MonoBehaviour
 	public void Start ()
 	{
 		GameManager.instance._MaturityManager.UnlockTrees ();
+		GameManager.instance._MaturityManager.SwitchTrees ();
+
 	}
 		
 	public void Awake()
