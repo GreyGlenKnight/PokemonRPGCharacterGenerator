@@ -30,6 +30,7 @@ public class MaturityManager : MonoBehaviour
 	public PokemonClass Pokemon;
 	public List <MaturityRank> MaturityBonusList = new List <MaturityRank> ();
 	public int CurrentMaturity;
+	public float CurrentMaturityWithRemainder;
 	public string [] Maturity = new string []
 	{
 		"Gain and Break Baby Skill, Birth Ability",
@@ -117,7 +118,8 @@ public class MaturityManager : MonoBehaviour
 
 	public void MaturityCheck ()
 	{
-		CurrentMaturity = BadgeLevelGenerator.CurrentMaturityInt;
+		CurrentMaturityWithRemainder = GameManager.instance._BadgeLevelGenerator.CurrentMaturity;
+		CurrentMaturity = GameManager.instance._BadgeLevelGenerator.CurrentMaturityInt;
 		HMItem1 = MaturityBonusList [0].Maturity;
 
 		if (CurrentMaturity > 40) 
@@ -131,15 +133,15 @@ public class MaturityManager : MonoBehaviour
 
 	public void SwitchTrees ()
 	{
-//		CurrentMaturity = BadgeLevelGenerator.CurrentMaturityInt;
-
 		for (int i = 0; i < SwitchTree.Length; i++) 
 		{
-			if (CurrentMaturity == SwitchTree [i]) 
+			if (CurrentMaturityWithRemainder == SwitchTree [i]) 
 			{
-				Debug.Log ("Switching Trees");
-				Debug.Log ("This shouldn't necessarily appear more than once at a time")
-			}
+					GameManager.instance.TreeSwap ();
+					//We need to know which items on the list are matching, that will tell us the tier.
+					//Also we can swap different indices on the list instead of the first.
+					Debug.Log ("This should not come up like 3 times per level");
+				}
 		}
 	}
 

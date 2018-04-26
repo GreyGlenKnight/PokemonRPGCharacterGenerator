@@ -15,19 +15,56 @@ public class SkillTree : MonoBehaviour
 	
 	public const int BONUSES_ON_TREE = 12;
 	public SkillTreeDisplay TreeDisplay;
-	List<BonusAtIndex> RemainingBonuses = new List<BonusAtIndex> ();
+	private List<BonusAtIndex> RemainingBonuses = new List<BonusAtIndex> ();
 //	public int BonusIndex;
 	public bool IsTreeFull = false;
+	public bool IsInit = false;
 	private SkillTreeState _State;
 	public string Name;
 	public SkillTreeData _TreeData;
+
 	//SkillTreeState should really be private?
 
-	public void ChangeDisplayData (SkillTreeData NewTreeData)
+	public List <BonusAtIndex> GetRemainingBonuses ()
 	{
+		return RemainingBonuses;
+	}
+
+	public void ChangeDisplayData (SkillTreeData NewTreeData, 
+		List <BonusAtIndex> TempRemainingBonuses)
+	{
+		Debug.Log ("2 Parameters");
+		string TempString = "2 Param";
+		for (int i = 0; i < TempRemainingBonuses.Count; i++) 
+		{
+			TempString += ","+ TempRemainingBonuses [i];
+		}
+		Debug.Log (TempString);
+		RemainingBonuses = TempRemainingBonuses;
 		_TreeData = NewTreeData;
 		Name = NewTreeData.Name;
-		TreeDisplay.TreeColorUpdate (_State, Name, _TreeData.Tier); 
+		TreeDisplay.TreeColorUpdate (_State, Name, _TreeData.Tier, 
+			TempRemainingBonuses);
+		
+	}
+
+	public void ChangeDisplayData (SkillTreeData NewTreeData) 
+	{
+		Debug.Log ("1 Parameter");
+		string TempString = "1 Param";
+		for (int i = 0; i < RemainingBonuses.Count; i++) 
+		{
+			TempString += ","+ RemainingBonuses [i];
+		}
+		Debug.Log (TempString);
+		if (IsInit == false) 
+		{
+			ResetBonuses ();
+		}
+		_TreeData = NewTreeData;
+		Name = NewTreeData.Name;
+		TreeDisplay.TreeColorUpdate (_State, Name, _TreeData.Tier, 
+			RemainingBonuses);
 	}
 
 	public void ChangeState (SkillTreeState NewState)
@@ -39,8 +76,7 @@ public class SkillTree : MonoBehaviour
 			return;
 		}
 
-		//For Display purposes, call stuff here
-		TreeDisplay.TreeColorUpdate (_State, Name, _TreeData.Tier);
+		TreeDisplay.TreeColorUpdate (_State, Name, _TreeData.Tier, RemainingBonuses);
 
 	}
 
@@ -119,12 +155,13 @@ public class SkillTree : MonoBehaviour
 		{
 			RemainingBonuses.Add ((BonusAtIndex)i);
 		}
+		IsInit = true;
 //		RemainingBonuses.Shuffle ();
 	}
 	public void Start ()
 	{
 		GameManager.instance._MaturityManager.UnlockTrees ();
-		GameManager.instance._MaturityManager.SwitchTrees ();
+//		GameManager.instance._MaturityManager.SwitchTrees ();
 
 	}
 		

@@ -1166,6 +1166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TreeDisplay: {fileID: 23564233}
   IsTreeFull: 0
+  IsInit: 0
   Name: 
 --- !u!114 &23564233
 MonoBehaviour:
@@ -4676,6 +4677,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TreeDisplay: {fileID: 663143688}
   IsTreeFull: 0
+  IsInit: 0
   Name: 
 --- !u!1 &150305452
 GameObject:
@@ -8721,6 +8723,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TreeDisplay: {fileID: 280565749}
   IsTreeFull: 0
+  IsInit: 0
   Name: 
 --- !u!114 &280565749
 MonoBehaviour:
@@ -10544,6 +10547,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TreeDisplay: {fileID: 343190875}
   IsTreeFull: 0
+  IsInit: 0
   Name: 
 --- !u!114 &343190875
 MonoBehaviour:
@@ -12499,6 +12503,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TreeDisplay: {fileID: 409530763}
   IsTreeFull: 0
+  IsInit: 0
   Name: 
 --- !u!114 &409530763
 MonoBehaviour:
@@ -19119,6 +19124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TreeDisplay: {fileID: 601755243}
   IsTreeFull: 0
+  IsInit: 0
   Name: 
 --- !u!114 &601755243
 MonoBehaviour:
@@ -21201,7 +21207,7 @@ Prefab:
     - target: {fileID: 224983437923936178, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 960
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224983437923936178, guid: 0592928addf394041b709b869cbdd6dc,
         type: 2}
@@ -23823,6 +23829,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TreeDisplay: {fileID: 1467233038}
   IsTreeFull: 0
+  IsInit: 0
   Name: 
 --- !u!1 &757000510
 GameObject:
@@ -30940,6 +30947,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TreeDisplay: {fileID: 1022784667}
   IsTreeFull: 0
+  IsInit: 0
   Name: 
 --- !u!114 &1022784667
 MonoBehaviour:
@@ -35644,6 +35652,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TreeDisplay: {fileID: 2046857611}
   IsTreeFull: 0
+  IsInit: 0
   Name: 
 --- !u!1 &1210779354
 GameObject:
@@ -58303,6 +58312,7 @@ MonoBehaviour:
   - {fileID: 409530762}
   - {fileID: 343190874}
   - {fileID: 1022784666}
+  _BadgeLevelGenerator: {fileID: 2026240834}
 --- !u!4 &2026240831
 Transform:
   m_ObjectHideFlags: 0
@@ -58388,10 +58398,10 @@ MonoBehaviour:
   - {fileID: 1207548818}
   - {fileID: 754484088}
   - {fileID: 148371688}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 876123698}
+  - {fileID: 601755242}
+  - {fileID: 280565748}
+  - {fileID: 23564232}
   - {fileID: 1335889377}
   - {fileID: 409530762}
   - {fileID: 343190874}
@@ -58414,6 +58424,7 @@ MonoBehaviour:
   Rate: 3
   CurrentMaturity: 0
   TotalBaseStats: 20
+  CurrentMaturityInt: 0
   MaturityBonus: 0
   BadgeLevelString: 
   CurrentLevelString: 
@@ -58433,9 +58444,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BreakTree: 00000000010000000400000007000000
+  SwitchTree: 090000001000000015000000180000001e00000024000000
   ActiveTree: 00000000030000000600000011000000
   BonusLevels: 0200000005000000080000000b0000000e0000001100000014000000170000001a0000001d000000200000002300000026000000
   CurrentMaturity: 0
+  CurrentMaturityWithRemainder: 0
   Maturity:
   - Gain and Break Baby Skill, Birth Ability
   - Break Adult Tree, Nature

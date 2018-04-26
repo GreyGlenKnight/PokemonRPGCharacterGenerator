@@ -40,7 +40,11 @@ public class GameManager : MonoBehaviour
 	public SelectionState _SelectionState = SelectionState.Roll;
 	public PokemonClass CurrentPokemon;
 	List <SkillTreeData> _SkillTreeData = new List <SkillTreeData> ();
-	public SkillTree [] SkillTrees = new SkillTree [12];
+	public List <SkillTree> SkillTrees = new List <SkillTree> (12);
+	public BadgeLevelGenerator _BadgeLevelGenerator;
+//	public SkillTree TreeGoingOut;
+//	public SkillTree TreeGoingIn;
+
 
 	void Awake()
 
@@ -67,9 +71,20 @@ public class GameManager : MonoBehaviour
 		_SkillTreeData.Add (new SkillTreeData ("Fire Body 3", SkillTreeTier.Tier3));
 		_SkillTreeData.Add (new SkillTreeData ("Acrobatics 1", SkillTreeTier.Tier1));
 
-		for (int i = 0; i < SkillTrees.Length; i++) 
+		for (int i = 0; i < SkillTrees.Count; i++) 
 		{
 			SkillTrees[i].ChangeDisplayData (_SkillTreeData [i]);
 		}
+	}
+
+	public void TreeSwap ()
+	{
+		List <BonusAtIndex> TempBonuses;
+		SkillTreeData DataGoingOut = SkillTrees [0]._TreeData;
+		SkillTreeData DataGoingIn = SkillTrees [4]._TreeData;
+		TempBonuses = SkillTrees [0].GetRemainingBonuses();
+		SkillTrees [0].ChangeDisplayData (DataGoingIn, SkillTrees [4].GetRemainingBonuses());
+		SkillTrees [4].ChangeDisplayData (DataGoingOut, TempBonuses);
+		Debug.Log ("Swapping Trees");
 	}
 }

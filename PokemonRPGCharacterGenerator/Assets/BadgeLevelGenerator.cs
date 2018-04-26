@@ -12,7 +12,7 @@ public static bool AutoSelectOn;
 public float Rate = 3.0f;
 public float CurrentMaturity;
 public float TotalBaseStats = 20.0f;
-public static int CurrentMaturityInt;
+public int CurrentMaturityInt;
 public int MaturityBonus = 0;
 public string BadgeLevelString;
 public string CurrentLevelString;

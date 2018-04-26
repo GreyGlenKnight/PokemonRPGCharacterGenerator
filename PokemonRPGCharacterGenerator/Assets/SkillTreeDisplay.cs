@@ -23,32 +23,36 @@ public class SkillTreeDisplay : MonoBehaviour
 	public void TreeColorUpdate ( 
 		SkillTreeState state,
 		string name,
-		SkillTreeTier tier)
+		SkillTreeTier tier, 
+		List <BonusAtIndex> bonuses)
 	{
 		TreeBG.color = LockTreeColor;
 		TreeNameText.text = name;
+
+		for (int i = 0; i < 12; i++)
+		{
+			CheckSelectedBonus (i);
+			if (bonuses.Contains ((BonusAtIndex)i))
+			{
+				options [i].isOn = false;
+			}
+		}
+
 		if (state != SkillTreeState.Locked)
 		{
+			
+
 			if (tier == SkillTreeTier.Tier0) 
-			{
-				TreeBG.color = Tier0Color;
-			}
+			{TreeBG.color = Tier0Color;}
 
 			if (tier == SkillTreeTier.Tier1) 
-			{
-				TreeBG.color = Tier1Color;
-			}
+			{TreeBG.color = Tier1Color;}
 
 			if (tier == SkillTreeTier.Tier2) 
-			{
-				TreeBG.color = Tier2Color;
-			}
+			{TreeBG.color = Tier2Color;}
 
 			if (tier == SkillTreeTier.Tier3) 
-			{
-				TreeBG.color = Tier3Color;
-			}
-			
+			{TreeBG.color = Tier3Color;}
 		}
 	}
 
