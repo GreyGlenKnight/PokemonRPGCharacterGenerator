@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour
 		DontDestroyOnLoad(gameObject);
 
 		CurrentPokemon = new PokemonClass ();
-		_TreeRowState = TreeRowState.Baby;
+		_TreeRowState = TreeRowState.Adult;
 		ChangeVisibleTrees ();
 //		for (int i = 0; i < SkillTrees.Count; i++) 
 //		{
@@ -76,6 +76,8 @@ public class GameManager : MonoBehaviour
 
 	public void Refresh ()
 	{
+		Debug.Log(_TreeRowState);
+
 		switch (_TreeRowState)
 		{
 		case TreeRowState.Baby:
@@ -104,23 +106,29 @@ public class GameManager : MonoBehaviour
 
 	public void ChangeVisibleTrees ()
 	{
-		Refresh ();
+//		Refresh ();
 
 		switch (_TreeRowState)
 		{
 		case TreeRowState.Baby:
 
 			_TreeRowState = TreeRowState.Mid;
+			Refresh ();
+
 			break;
 
 		case TreeRowState.Mid:
 
 			_TreeRowState = TreeRowState.Adult;
+			Refresh ();
+
 			break;
 
 		case TreeRowState.Adult:
 
 			_TreeRowState = TreeRowState.Baby;
+			Refresh ();
+
 			break;
 
 		default:
@@ -140,15 +148,15 @@ public class GameManager : MonoBehaviour
 
 	}
 
-
-	public void TreeSwap ()
-	{
-//		List <BonusAtIndex> TempBonuses;
-//		SkillTreeData DataGoingOut = SkillTrees [0]._TreeData;
-//		SkillTreeData DataGoingIn = SkillTrees [4]._TreeData;
-//		TempBonuses = SkillTrees [0].GetRemainingBonuses ();
-//		SkillTrees [0].ChangeDisplayData (DataGoingIn, SkillTrees [4].GetRemainingBonuses());
-//		SkillTrees [4].ChangeDisplayData (DataGoingOut, TempBonuses);
-		Debug.Log ("This should be removed");
-	}
+//
+//	public void TreeSwap ()
+//	{
+////		List <BonusAtIndex> TempBonuses;
+////		SkillTreeData DataGoingOut = SkillTrees [0]._TreeData;
+////		SkillTreeData DataGoingIn = SkillTrees [4]._TreeData;
+////		TempBonuses = SkillTrees [0].GetRemainingBonuses ();
+////		SkillTrees [0].ChangeDisplayData (DataGoingIn, SkillTrees [4].GetRemainingBonuses());
+////		SkillTrees [4].ChangeDisplayData (DataGoingOut, TempBonuses);
+//		Debug.Log ("This should be removed");
+//	}
 }

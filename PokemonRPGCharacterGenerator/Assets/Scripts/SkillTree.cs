@@ -36,13 +36,13 @@ public class SkillTree : MonoBehaviour
 		List <BonusAtIndex> TempRemainingBonuses)
 	{
 		CurrentTreeIndex = TreeIndexToDisplay;
-		Debug.Log ("2 Parameters");
+//		Debug.Log ("2 Parameters");
 		string TempString = "2 Param";
 		for (int i = 0; i < TempRemainingBonuses.Count; i++) 
 		{
 			TempString += ","+ TempRemainingBonuses [i];
 		}
-		Debug.Log (TempString);
+//		Debug.Log (TempString);
 		RemainingBonuses = TempRemainingBonuses;
 		_TreeData = NewTreeData;
 		Name = NewTreeData.Name;
@@ -63,7 +63,7 @@ public class SkillTree : MonoBehaviour
 		{
 			TempString += ","+ RemainingBonuses [i];
 		}
-		Debug.Log (TempString);
+//		Debug.Log (TempString);
 		if (IsInit == false) 
 		{
 			ResetBonuses ();

@@ -47,18 +47,26 @@ public class PokemonClass
 
     public void LevelUp ()
 	{
-//		Debug.Log ("Gained LevelUp");
-//		GainMaturity ()
-//		{}
 		Level++;
 	}
 
 	public void PokemonTreeSwap ()
 	{
+		SkillTreeData TempData2 = _SkillTreeData [4];
 		SkillTreeData TempData = _SkillTreeData [0];
-		_SkillTreeData [4] = _SkillTreeData [0];
-		_SkillTreeData [0] = TempData;
+		SkillTreeBonusesAcquired TempBonuses = _BonusesRemaining [0];
+		SkillTreeBonusesAcquired TempBonuses2 = _BonusesRemaining [4];
 
+
+//		Debug.Log (TempData.Name);
+//		Debug.Log (TempData2.Name);
+		_SkillTreeData [0] = TempData2;
+		_SkillTreeData [4] = TempData;
+		_BonusesRemaining [0] = TempBonuses2;
+		_BonusesRemaining [4] = TempBonuses;
+
+
+//		TempData = _SkillTreeData [4];
 	}
 
 
