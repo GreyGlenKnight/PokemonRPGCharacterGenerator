@@ -20,6 +20,9 @@ public Text BadgeLevelText;
 public Text CurrentLevelText;
 public bool IsShiny;
 public int ShinyRNG;
+	public NewTreeManager _NewTreeManager;
+	public AutoSelectManager _AutoSelectManager;
+	public MaturityManager _MaturityManager;
 
 	public void Evolve ()
 	{
@@ -181,11 +184,11 @@ public void SetBadgeLevel()
 
 	public void RollCycle ()
 	{
-		gameObject.GetComponent<NewTreeManager>().CallTreeRoll();
-		gameObject.GetComponent<AutoSelectManager>().OnAutoSelectClick();
+		_NewTreeManager.CallTreeRoll();
+		_AutoSelectManager.OnAutoSelectClick();
 		GameManager.instance.CurrentPokemon.LevelUp();
 		Evolve();
-		gameObject.GetComponent<MaturityManager>().MaturityCheck();
+		_MaturityManager.MaturityCheck();
 	}
 
 	public void Start ()

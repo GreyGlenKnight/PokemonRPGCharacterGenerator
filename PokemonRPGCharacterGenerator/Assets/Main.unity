@@ -332,7 +332,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4378409046337498, guid: 886c705330f604c4ca26d0ff7591bdd9, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 58511810508119490, guid: 886c705330f604c4ca26d0ff7591bdd9,
         type: 2}
@@ -1771,7 +1771,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2026240832}
+      - m_Target: {fileID: 1954516360}
         m_MethodName: CycleColors
         m_Mode: 1
         m_Arguments:
@@ -2802,6 +2802,48 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 74658119}
+--- !u!1 &77891101
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 77891102}
+  - component: {fileID: 77891103}
+  m_Layer: 0
+  m_Name: XP Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &77891102
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 77891101}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1447979073}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &77891103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 77891101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d241d1366208e473fb9611f04a60f9cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XPText: {fileID: 1561839133}
+  CurrentXP: 
 --- !u!1 &79080288
 GameObject:
   m_ObjectHideFlags: 0
@@ -2904,6 +2946,96 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 79080288}
+--- !u!1 &81201597
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 81201598}
+  - component: {fileID: 81201599}
+  m_Layer: 0
+  m_Name: Maturity Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &81201598
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 81201597}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1447979073}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &81201599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 81201597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9b8d9ff3028a46f1b882808d11b5e6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BreakTree: 00000000010000000400000007000000
+  SwitchTree: 090000001000000015000000180000001e00000024000000
+  ActiveTree: 00000000030000000600000011000000
+  BonusLevels: 0200000005000000080000000b0000000e0000001100000014000000170000001a0000001d000000200000002300000026000000
+  CurrentMaturity: 0
+  CurrentMaturityWithRemainder: 0
+  Maturity:
+  - Gain and Break Baby Skill, Birth Ability
+  - Break Adult Tree, Nature
+  - Bonus Level 1
+  - Gain Adult Tree, Gain Ability Slot 2
+  - Break Skill 1, STAB Bonus +1
+  - Bonus Level 2
+  - Gain Skill 1, Special Training Slot 1
+  - Break Skill 1, Enhancer Slot 1
+  - Bonus Level 3
+  - Trade Skill 1, Attribute Bonus 2
+  - Break Skill 2, STAB Bonus 2
+  - Bonus Level 4
+  - Special Training Slot 2
+  - Break Skill 1, Ability Slot 3
+  - Bonus Level 5
+  - Break Skill 1, Enhancer Slot 2
+  - Trade Skill 1, STAB Bonus 3
+  - Bonus Level 6
+  - Gain Skill 1, Break Skill 3
+  - Break Skill 2
+  - Bonus Level 7
+  - Trade Skill 2, Break Skill 3
+  - STAB Bonus 4
+  - Bonus Level 8
+  - Trade Skill 2, Attribute Bonus 3
+  - Special Training Slot 3
+  - Bonus Level 9
+  - Break Skill 3
+  - STAB Bonus 5
+  - Bonus Level 10
+  - Trade Skill 3
+  - Enhancer Slot 3
+  - Bonus Level 11
+  - Break Skill 3
+  - STAB Bonus 6
+  - Bonus Level 12
+  - Trade Skill 3
+  - Attribute Bonus 4
+  - Bonus Level 13
+  - Enhancer Bonus 4
+  - STAB Bonus 7
+  HighestMaturity: 
+  HMItem1: 0
 --- !u!1 &83103709
 GameObject:
   m_ObjectHideFlags: 0
@@ -3834,7 +3966,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4497853968708324, guid: 2aec42910a6864630b9c0dc3186908c0, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1256308316483678, guid: 2aec42910a6864630b9c0dc3186908c0, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -10279,7 +10411,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2026240832}
+      - m_Target: {fileID: 1954516360}
         m_MethodName: CycleColors2
         m_Mode: 1
         m_Arguments:
@@ -11437,18 +11569,18 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 376947557}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 9.185739}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1232460}
   - {fileID: 971758271}
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 1025390735}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 640, y: 360}
+  m_AnchoredPosition: {x: 639.5, y: 376.8}
   m_SizeDelta: {x: 1280, y: 720}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &377953635
@@ -21748,7 +21880,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2026240834}
+      - m_Target: {fileID: 768386024}
         m_MethodName: GenerateMon
         m_Mode: 1
         m_Arguments:
@@ -24131,6 +24263,62 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 767930025}
+--- !u!1 &768386022
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 768386023}
+  - component: {fileID: 768386024}
+  m_Layer: 0
+  m_Name: Badge Level Generator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &768386023
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 768386022}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1447979073}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &768386024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 768386022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4e47cd26874b419aa1aef58cd2980c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BadgeLevel: 0
+  BLDropDown: {fileID: 1880573234}
+  Rate: 3
+  CurrentMaturity: 0
+  TotalBaseStats: 20
+  CurrentMaturityInt: 0
+  MaturityBonus: 0
+  BadgeLevelString: 
+  CurrentLevelString: 
+  BadgeLevelText: {fileID: 1625837369}
+  CurrentLevelText: {fileID: 1551539361}
+  IsShiny: 0
+  ShinyRNG: 0
+  _NewTreeManager: {fileID: 1945850216}
+  _AutoSelectManager: {fileID: 815238769}
+  _MaturityManager: {fileID: 81201599}
 --- !u!1 &768925764
 GameObject:
   m_ObjectHideFlags: 0
@@ -25454,6 +25642,62 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!1 &815238767
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 815238768}
+  - component: {fileID: 815238769}
+  m_Layer: 0
+  m_Name: AutoSelect Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &815238768
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 815238767}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1447979073}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &815238769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 815238767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9c6f11aaa69643199452ffe74b5e705, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TreeRolls: 00000000000000000000000000000000
+  ActiveRolls:
+  - {fileID: 1644167618}
+  - {fileID: 1207548818}
+  - {fileID: 754484088}
+  - {fileID: 148371688}
+  - {fileID: 876123698}
+  - {fileID: 601755242}
+  - {fileID: 280565748}
+  - {fileID: 23564232}
+  - {fileID: 1335889377}
+  - {fileID: 409530762}
+  - {fileID: 343190874}
+  - {fileID: 1022784666}
+  TreeFull: 0
+  TempRolls: 
 --- !u!1 &815867558
 GameObject:
   m_ObjectHideFlags: 0
@@ -30787,8 +31031,9 @@ Transform:
   m_Children:
   - {fileID: 1908813804}
   - {fileID: 1032932696}
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  - {fileID: 376947561}
+  m_Father: {fileID: 2026240831}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1026110145
 GameObject:
@@ -40041,7 +40286,7 @@ Transform:
   m_LocalScale: {x: 60, y: 20, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1345212066
 GameObject:
@@ -42212,7 +42457,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4497853968708324, guid: 2aec42910a6864630b9c0dc3186908c0, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1256308316483678, guid: 2aec42910a6864630b9c0dc3186908c0, type: 2}
       propertyPath: m_Name
@@ -42662,7 +42907,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1447979073}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Scripts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42677,9 +42922,16 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1954516359}
+  - {fileID: 815238768}
+  - {fileID: 768386023}
+  - {fileID: 1945850215}
+  - {fileID: 77891102}
+  - {fileID: 81201598}
+  - {fileID: 2029468468}
   m_Father: {fileID: 2026240831}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1454846996
 GameObject:
@@ -49638,7 +49890,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4497853968708324, guid: 2aec42910a6864630b9c0dc3186908c0, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1256308316483678, guid: 2aec42910a6864630b9c0dc3186908c0, type: 2}
       propertyPath: m_Name
@@ -53104,7 +53356,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2026240838}
+      - m_Target: {fileID: 1945850216}
         m_MethodName: CallTreeRoll
         m_Mode: 1
         m_Arguments:
@@ -53947,7 +54199,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2026240834}
+      - m_Target: {fileID: 768386024}
         m_MethodName: SetBadgeLevel
         m_Mode: 1
         m_Arguments:
@@ -55301,7 +55553,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4497853968708324, guid: 2aec42910a6864630b9c0dc3186908c0, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1256308316483678, guid: 2aec42910a6864630b9c0dc3186908c0, type: 2}
       propertyPath: m_Name
@@ -55926,6 +56178,53 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1945850214
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1945850215}
+  - component: {fileID: 1945850216}
+  m_Layer: 0
+  m_Name: New Tree Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1945850215
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1945850214}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1447979073}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1945850216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1945850214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daea77126a51848e7aff6934103373d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsTreeFull: 0
+  TreesToRoll:
+  - {fileID: 1644167618}
+  - {fileID: 1207548818}
+  - {fileID: 754484088}
+  - {fileID: 148371688}
+  Bonuses: 
 --- !u!1 &1950645623
 GameObject:
   m_ObjectHideFlags: 0
@@ -56143,6 +56442,90 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1952521053}
+--- !u!1 &1954516358
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1954516359}
+  - component: {fileID: 1954516360}
+  m_Layer: 0
+  m_Name: Type Assigner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1954516359
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1954516358}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1447979073}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1954516360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1954516358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f01bf621a853c49468ad19dd019c9d43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TypeText1: {fileID: 865306797}
+  TypeText2: {fileID: 1495904785}
+  PanelType1: {fileID: 1232459}
+  PanelType2: {fileID: 971758270}
+  Background1: {fileID: 1232463}
+  Background2: {fileID: 971758274}
+  NormalColor: {r: 0.647, g: 0.647, b: 0.459, a: 1}
+  FireColor: {r: 0.929, g: 0.486, b: 0.169, a: 1}
+  WaterColor: {r: 0.38, g: 0.545, b: 0.937, a: 1}
+  ElectricColor: {r: 0.969, g: 0.812, b: 0.173, a: 1}
+  GrassColor: {r: 0.455, g: 0.765, b: 0.298, a: 1}
+  IceColor: {r: 0.569, g: 0.835, b: 0.835, a: 1}
+  FightingColor: {r: 0.741, g: 0.184, b: 0.153, a: 1}
+  PoisonColor: {r: 0.616, g: 0.247, b: 0.616, a: 1}
+  GroundColor: {r: 0.89, g: 0.733, b: 0.361, a: 1}
+  FlyingColor: {r: 0.651, g: 0.561, b: 0.925, a: 1}
+  PsychicColor: {r: 0.973, g: 0.306, b: 0.506, a: 1}
+  BugColor: {r: 0.643, g: 0.702, b: 0.122, a: 1}
+  RockColor: {r: 0.698, g: 0.608, b: 0.212, a: 1}
+  GhostColor: {r: 0.424, g: 0.333, b: 0.573, a: 1}
+  DragonColor: {r: 0.424, g: 0.2, b: 0.969, a: 1}
+  DarkColor: {r: 0.427, g: 0.337, b: 0.275, a: 1}
+  SteelColor: {r: 0.702, g: 0.702, b: 0.804, a: 1}
+  FairyColor: {r: 0.906, g: 0.58, b: 0.906, a: 1}
+  Normal: Normal
+  Fire: Fire
+  Water: Water
+  Electric: Electric
+  Grass: Grass
+  Ice: Ice
+  Fighting: Fighting
+  Poison: Poison
+  Ground: Ground
+  Flying: Flying
+  Psychic: Psychic
+  Bug: Bug
+  Rock: Rock
+  Ghost: Ghost
+  Dragon: Dragon
+  Dark: Dark
+  Steel: Steel
+  Fairy: Fairy
+  ListPos1: 0
+  ListPos2: 0
 --- !u!1 &1955780827
 GameObject:
   m_ObjectHideFlags: 0
@@ -57187,7 +57570,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2026240836}
+      - m_Target: {fileID: 77891103}
         m_MethodName: AddXP
         m_Mode: 1
         m_Arguments:
@@ -58111,13 +58494,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2026240831}
   - component: {fileID: 2026240830}
-  - component: {fileID: 2026240832}
-  - component: {fileID: 2026240833}
-  - component: {fileID: 2026240834}
-  - component: {fileID: 2026240836}
-  - component: {fileID: 2026240837}
-  - component: {fileID: 2026240838}
-  - component: {fileID: 2026240835}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -58136,8 +58512,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc5ef92aac733040bf20430890ac435, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _MaturityManager: {fileID: 2026240835}
-  _NewTreeManager: {fileID: 2026240838}
+  _MaturityManager: {fileID: 81201599}
+  _NewTreeManager: {fileID: 1945850216}
   _SelectionState: 0
   SkillTrees:
   - {fileID: 1644167618}
@@ -58152,7 +58528,7 @@ MonoBehaviour:
   - {fileID: 409530762}
   - {fileID: 343190874}
   - {fileID: 1022784666}
-  _BadgeLevelGenerator: {fileID: 2026240834}
+  _BadgeLevelGenerator: {fileID: 768386024}
 --- !u!4 &2026240831
 Transform:
   m_ObjectHideFlags: 0
@@ -58163,219 +58539,51 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1025390735}
   - {fileID: 1447979073}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2026240832
+--- !u!1 &2029468467
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2029468468}
+  - component: {fileID: 2029468469}
+  m_Layer: 0
+  m_Name: Menu Scene Changer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2029468468
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2029468467}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.5, y: -16.8, z: -9.185739}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1447979073}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2029468469
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2026240829}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f01bf621a853c49468ad19dd019c9d43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TypeText1: {fileID: 865306797}
-  TypeText2: {fileID: 1495904785}
-  PanelType1: {fileID: 1232459}
-  PanelType2: {fileID: 971758270}
-  Background1: {fileID: 1232463}
-  Background2: {fileID: 971758274}
-  NormalColor: {r: 0.647, g: 0.647, b: 0.459, a: 1}
-  FireColor: {r: 0.929, g: 0.486, b: 0.169, a: 1}
-  WaterColor: {r: 0.38, g: 0.545, b: 0.937, a: 1}
-  ElectricColor: {r: 0.969, g: 0.812, b: 0.173, a: 1}
-  GrassColor: {r: 0.455, g: 0.765, b: 0.298, a: 1}
-  IceColor: {r: 0.569, g: 0.835, b: 0.835, a: 1}
-  FightingColor: {r: 0.741, g: 0.184, b: 0.153, a: 1}
-  PoisonColor: {r: 0.616, g: 0.247, b: 0.616, a: 1}
-  GroundColor: {r: 0.89, g: 0.733, b: 0.361, a: 1}
-  FlyingColor: {r: 0.651, g: 0.561, b: 0.925, a: 1}
-  PsychicColor: {r: 0.973, g: 0.306, b: 0.506, a: 1}
-  BugColor: {r: 0.643, g: 0.702, b: 0.122, a: 1}
-  RockColor: {r: 0.698, g: 0.608, b: 0.212, a: 1}
-  GhostColor: {r: 0.424, g: 0.333, b: 0.573, a: 1}
-  DragonColor: {r: 0.424, g: 0.2, b: 0.969, a: 1}
-  DarkColor: {r: 0.427, g: 0.337, b: 0.275, a: 1}
-  SteelColor: {r: 0.702, g: 0.702, b: 0.804, a: 1}
-  FairyColor: {r: 0.906, g: 0.58, b: 0.906, a: 1}
-  Normal: Normal
-  Fire: Fire
-  Water: Water
-  Electric: Electric
-  Grass: Grass
-  Ice: Ice
-  Fighting: Fighting
-  Poison: Poison
-  Ground: Ground
-  Flying: Flying
-  Psychic: Psychic
-  Bug: Bug
-  Rock: Rock
-  Ghost: Ghost
-  Dragon: Dragon
-  Dark: Dark
-  Steel: Steel
-  Fairy: Fairy
-  ListPos1: 0
-  ListPos2: 0
---- !u!114 &2026240833
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2026240829}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9c6f11aaa69643199452ffe74b5e705, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TreeRolls: 00000000000000000000000000000000
-  ActiveRolls:
-  - {fileID: 1644167618}
-  - {fileID: 1207548818}
-  - {fileID: 754484088}
-  - {fileID: 148371688}
-  - {fileID: 876123698}
-  - {fileID: 601755242}
-  - {fileID: 280565748}
-  - {fileID: 23564232}
-  - {fileID: 1335889377}
-  - {fileID: 409530762}
-  - {fileID: 343190874}
-  - {fileID: 1022784666}
-  TreeFull: 0
-  TempRolls: 
---- !u!114 &2026240834
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2026240829}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4e47cd26874b419aa1aef58cd2980c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BadgeLevel: 0
-  BLDropDown: {fileID: 1880573234}
-  Rate: 3
-  CurrentMaturity: 0
-  TotalBaseStats: 20
-  CurrentMaturityInt: 0
-  MaturityBonus: 0
-  BadgeLevelString: 
-  CurrentLevelString: 
-  BadgeLevelText: {fileID: 1625837369}
-  CurrentLevelText: {fileID: 315917830}
-  IsShiny: 0
-  ShinyRNG: 0
---- !u!114 &2026240835
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2026240829}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9b8d9ff3028a46f1b882808d11b5e6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BreakTree: 00000000010000000400000007000000
-  SwitchTree: 090000001000000015000000180000001e00000024000000
-  ActiveTree: 00000000030000000600000011000000
-  BonusLevels: 0200000005000000080000000b0000000e0000001100000014000000170000001a0000001d000000200000002300000026000000
-  CurrentMaturity: 0
-  CurrentMaturityWithRemainder: 0
-  Maturity:
-  - Gain and Break Baby Skill, Birth Ability
-  - Break Adult Tree, Nature
-  - Bonus Level 1
-  - Gain Adult Tree, Gain Ability Slot 2
-  - Break Skill 1, STAB Bonus +1
-  - Bonus Level 2
-  - Gain Skill 1, Special Training Slot 1
-  - Break Skill 1, Enhancer Slot 1
-  - Bonus Level 3
-  - Trade Skill 1, Attribute Bonus 2
-  - Break Skill 2, STAB Bonus 2
-  - Bonus Level 4
-  - Special Training Slot 2
-  - Break Skill 1, Ability Slot 3
-  - Bonus Level 5
-  - Break Skill 1, Enhancer Slot 2
-  - Trade Skill 1, STAB Bonus 3
-  - Bonus Level 6
-  - Gain Skill 1, Break Skill 3
-  - Break Skill 2
-  - Bonus Level 7
-  - Trade Skill 2, Break Skill 3
-  - STAB Bonus 4
-  - Bonus Level 8
-  - Trade Skill 2, Attribute Bonus 3
-  - Special Training Slot 3
-  - Bonus Level 9
-  - Break Skill 3
-  - STAB Bonus 5
-  - Bonus Level 10
-  - Trade Skill 3
-  - Enhancer Slot 3
-  - Bonus Level 11
-  - Break Skill 3
-  - STAB Bonus 6
-  - Bonus Level 12
-  - Trade Skill 3
-  - Attribute Bonus 4
-  - Bonus Level 13
-  - Enhancer Bonus 4
-  - STAB Bonus 7
-  HighestMaturity: 
-  HMItem1: 0
---- !u!114 &2026240836
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2026240829}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d241d1366208e473fb9611f04a60f9cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  XPText: {fileID: 1561839133}
-  CurrentXP: 
---- !u!114 &2026240837
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2026240829}
+  m_GameObject: {fileID: 2029468467}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c07c73b9b735f4aa6b73a7b4743cfcbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2026240838
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2026240829}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: daea77126a51848e7aff6934103373d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IsTreeFull: 0
-  TreesToRoll:
-  - {fileID: 1644167618}
-  - {fileID: 1207548818}
-  - {fileID: 754484088}
-  - {fileID: 148371688}
-  Bonuses: 
 --- !u!1 &2035796161
 GameObject:
   m_ObjectHideFlags: 0
