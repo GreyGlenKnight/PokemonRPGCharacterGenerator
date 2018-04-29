@@ -137,7 +137,8 @@ public class MaturityManager : MonoBehaviour
 		{
 			if (CurrentMaturityWithRemainder == SwitchTree [i]) 
 			{
-					GameManager.instance.TreeSwap ();
+				GameManager.instance.CurrentPokemon.PokemonTreeSwap ();
+				GameManager.instance.Refresh ();
 					//We need to know which items on the list are matching, that will tell us the tier.
 					//Also we can swap different indices on the list instead of the first.
 					Debug.Log ("This should not come up like 3 times per level");

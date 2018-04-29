@@ -21,8 +21,9 @@ public Text CurrentLevelText;
 public bool IsShiny;
 public int ShinyRNG;
 	public NewTreeManager _NewTreeManager;
-	public AutoSelectManager _AutoSelectManager;
+//	public AutoSelectManager _AutoSelectManager;
 	public MaturityManager _MaturityManager;
+	public SkillTrees _SkillTrees;
 
 	public void Evolve ()
 	{
@@ -185,7 +186,8 @@ public void SetBadgeLevel()
 	public void RollCycle ()
 	{
 		_NewTreeManager.CallTreeRoll();
-		_AutoSelectManager.OnAutoSelectClick();
+		_SkillTrees.OnAutoSelectClick ();
+//		_AutoSelectManager.OnAutoSelectClick();
 		GameManager.instance.CurrentPokemon.LevelUp();
 		Evolve();
 		_MaturityManager.MaturityCheck();

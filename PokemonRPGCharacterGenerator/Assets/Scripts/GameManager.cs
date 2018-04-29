@@ -31,6 +31,13 @@ public enum SelectionState
 	Select
 }
 
+public enum TreeRowState
+{
+	Baby,
+	Mid,
+	Adult
+}
+
 public class GameManager : MonoBehaviour 
 
 {
@@ -39,7 +46,8 @@ public class GameManager : MonoBehaviour
 	public NewTreeManager _NewTreeManager;
 	public SelectionState _SelectionState = SelectionState.Roll;
 	public PokemonClass CurrentPokemon;
-	
+	public TreeRowState _TreeRowState;
+
 	public List <SkillTree> SkillTrees = new List <SkillTree> (12);
 	public BadgeLevelGenerator _BadgeLevelGenerator;
 //	public SkillTree TreeGoingOut;
@@ -58,21 +66,89 @@ public class GameManager : MonoBehaviour
 		DontDestroyOnLoad(gameObject);
 
 		CurrentPokemon = new PokemonClass ();
+		_TreeRowState = TreeRowState.Baby;
+		ChangeVisibleTrees ();
+//		for (int i = 0; i < SkillTrees.Count; i++) 
+//		{
+//			SkillTrees[i].ChangeDisplayData (CurrentPokemon._SkillTreeData[i]);
+//		}
+	}
 
-		for (int i = 0; i < SkillTrees.Count; i++) 
+	public void Refresh ()
+	{
+		switch (_TreeRowState)
 		{
-			SkillTrees[i].ChangeDisplayData (CurrentPokemon._SkillTreeData[i]);
+		case TreeRowState.Baby:
+			TreeSwap (0,0);
+			TreeSwap (1,1);
+			TreeSwap (2,2);
+			TreeSwap (3,3);
+			break;
+		case TreeRowState.Mid:
+			TreeSwap (0,4);
+			TreeSwap (1,5);
+			TreeSwap (2,6);
+			TreeSwap (3,7);
+			break;
+		case TreeRowState.Adult:
+			TreeSwap (0,8);
+			TreeSwap (1,9);
+			TreeSwap (2,10);
+			TreeSwap (3,11);
+			break;
+		default:
+			Debug.Log("There is a new View add logic here. view name is " + _TreeRowState);
+			break;
 		}
 	}
 
+	public void ChangeVisibleTrees ()
+	{
+		Refresh ();
+
+		switch (_TreeRowState)
+		{
+		case TreeRowState.Baby:
+
+			_TreeRowState = TreeRowState.Mid;
+			break;
+
+		case TreeRowState.Mid:
+
+			_TreeRowState = TreeRowState.Adult;
+			break;
+
+		case TreeRowState.Adult:
+
+			_TreeRowState = TreeRowState.Baby;
+			break;
+
+		default:
+			Debug.Log("There is a new View add logic here. view name is " + _TreeRowState);
+			break;
+		}
+
+	}
+
+	public void TreeSwap (int TreeToChange, int TreeDataIndex)
+	{
+
+		SkillTrees [TreeToChange].ChangeDisplayData (	
+			TreeDataIndex,
+			CurrentPokemon._SkillTreeData [TreeDataIndex], 
+			CurrentPokemon._BonusesRemaining [TreeDataIndex].BonusesRemaining);
+
+	}
+
+
 	public void TreeSwap ()
 	{
-		List <BonusAtIndex> TempBonuses;
-		SkillTreeData DataGoingOut = SkillTrees [0]._TreeData;
-		SkillTreeData DataGoingIn = SkillTrees [4]._TreeData;
-		TempBonuses = SkillTrees [0].GetRemainingBonuses();
-		SkillTrees [0].ChangeDisplayData (DataGoingIn, SkillTrees [4].GetRemainingBonuses());
-		SkillTrees [4].ChangeDisplayData (DataGoingOut, TempBonuses);
-		Debug.Log ("Swapping Trees");
+//		List <BonusAtIndex> TempBonuses;
+//		SkillTreeData DataGoingOut = SkillTrees [0]._TreeData;
+//		SkillTreeData DataGoingIn = SkillTrees [4]._TreeData;
+//		TempBonuses = SkillTrees [0].GetRemainingBonuses ();
+//		SkillTrees [0].ChangeDisplayData (DataGoingIn, SkillTrees [4].GetRemainingBonuses());
+//		SkillTrees [4].ChangeDisplayData (DataGoingOut, TempBonuses);
+		Debug.Log ("This should be removed");
 	}
 }

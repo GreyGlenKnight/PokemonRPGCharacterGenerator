@@ -12,7 +12,7 @@ public enum SkillTreeState
 
 public class SkillTree : MonoBehaviour 
 {
-	
+	public int CurrentTreeIndex = 0;
 	public const int BONUSES_ON_TREE = 12;
 	public SkillTreeDisplay TreeDisplay;
 	private List<BonusAtIndex> RemainingBonuses = new List<BonusAtIndex> ();
@@ -31,9 +31,11 @@ public class SkillTree : MonoBehaviour
 	}
 
 	public void ChangeDisplayData (
+		int TreeIndexToDisplay,
         SkillTreeData NewTreeData, 
 		List <BonusAtIndex> TempRemainingBonuses)
 	{
+		CurrentTreeIndex = TreeIndexToDisplay;
 		Debug.Log ("2 Parameters");
 		string TempString = "2 Param";
 		for (int i = 0; i < TempRemainingBonuses.Count; i++) 
@@ -49,8 +51,12 @@ public class SkillTree : MonoBehaviour
 		
 	}
 
-	public void ChangeDisplayData (SkillTreeData NewTreeData) 
+	public void ChangeDisplayData (
+		int TreeIndexToDisplay,
+		SkillTreeData NewTreeData 
+		) 
 	{
+		CurrentTreeIndex = TreeIndexToDisplay;
 		Debug.Log ("1 Parameter");
 		string TempString = "1 Param";
 		for (int i = 0; i < RemainingBonuses.Count; i++) 
@@ -111,6 +117,7 @@ public class SkillTree : MonoBehaviour
 		}
 		if (RemainingBonuses.Count > 0) 
 		{
+			RemainingBonuses = GameManager.instance.CurrentPokemon._BonusesRemaining [CurrentTreeIndex].BonusesRemaining; 
 			RemainingBonuses.Shuffle ();
 			TreeDisplay.DisplayBonusString (((int) RemainingBonuses [0] +1).ToString());
 		} 
@@ -137,6 +144,7 @@ public class SkillTree : MonoBehaviour
 		{
 			return;
 		}
+//		GameManager.instance.CurrentPokemon._BonusesRemaining [CurrentTreeIndex].BonusesRemaining.RemoveAt (0);
 
 		TreeDisplay.CheckSelectedBonus ((int) RemainingBonuses [0]);
 		RemainingBonuses.RemoveAt (0);

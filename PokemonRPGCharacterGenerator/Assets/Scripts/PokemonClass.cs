@@ -6,11 +6,14 @@ public class PokemonClass
 {
 	public int Maturity;
 	public int Level;
+//	public SkillTrees _SkillTrees;
 
-    public List<SkillTreeData> _SkillTreeData = new List<SkillTreeData>();
+	public List<SkillTreeData> _SkillTreeData = new List<SkillTreeData>();
+	public List <SkillTreeBonusesAcquired> _BonusesRemaining = new List <SkillTreeBonusesAcquired>();
 
-    public PokemonClass()
+    public PokemonClass ()
     {
+		
         Level = 0;
         _SkillTreeData.Add(new SkillTreeData("Imp", SkillTreeTier.Tier0));
         _SkillTreeData.Add(new SkillTreeData("Drake", SkillTreeTier.Tier1));
@@ -25,6 +28,19 @@ public class PokemonClass
         _SkillTreeData.Add(new SkillTreeData("Fire Body 3", SkillTreeTier.Tier3));
         _SkillTreeData.Add(new SkillTreeData("Acrobatics 1", SkillTreeTier.Tier1));
 
+		_BonusesRemaining.Add (new SkillTreeBonusesAcquired ());
+		_BonusesRemaining.Add (new SkillTreeBonusesAcquired ());
+		_BonusesRemaining.Add (new SkillTreeBonusesAcquired ());
+		_BonusesRemaining.Add (new SkillTreeBonusesAcquired ());
+		_BonusesRemaining.Add (new SkillTreeBonusesAcquired ());
+		_BonusesRemaining.Add (new SkillTreeBonusesAcquired ());
+		_BonusesRemaining.Add (new SkillTreeBonusesAcquired ());
+		_BonusesRemaining.Add (new SkillTreeBonusesAcquired ());
+		_BonusesRemaining.Add (new SkillTreeBonusesAcquired ());
+		_BonusesRemaining.Add (new SkillTreeBonusesAcquired ());
+		_BonusesRemaining.Add (new SkillTreeBonusesAcquired ());
+		_BonusesRemaining.Add (new SkillTreeBonusesAcquired ());
+
 
     }
 
@@ -36,6 +52,15 @@ public class PokemonClass
 //		{}
 		Level++;
 	}
+
+	public void PokemonTreeSwap ()
+	{
+		SkillTreeData TempData = _SkillTreeData [0];
+		_SkillTreeData [4] = _SkillTreeData [0];
+		_SkillTreeData [0] = TempData;
+
+	}
+
 
 	public void GainNatureBonus ()
 	{
