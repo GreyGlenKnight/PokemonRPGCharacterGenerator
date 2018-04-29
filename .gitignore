@@ -1,17 +1,3 @@
-# =============== #
-# Unity generated #
-# =============== #
-[Ll]ibrary/
-[Tt]emp/
-[Oo]bj/
-[Bb]uild
-[Bb]uilds
-
-/.vs/
-ExportedObj/
-.consulo/
-*.csproj
-
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
@@ -60,26 +46,29 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+# =============== #
+# Unity generated #
+# =============== #
+[Tt]emp/
+[Oo]bj/
+[Bb]uild
+[Bb]uilds
+[Ll]ibrary/
+sysinfo.txt
+ 
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
 # ===================================== #
-*.unityproj
-*.sln
-*.csproj
-*.suo
-*.tmp
-*.user
 *.userprefs
+*.csproj
 *.pidb
+*.suo
+*.sln
+*.user
+*.unityproj
 *.booproj
-*.svd
-*.pdb
+*.tmp
 *.pidb.meta
-
-sysinfo.txt
-# Builds
-*.apk
-*.unitypackage
 
 # ===================================== #
 # Ignored Assets #

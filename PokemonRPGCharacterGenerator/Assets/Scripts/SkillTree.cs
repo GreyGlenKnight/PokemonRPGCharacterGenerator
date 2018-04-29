@@ -30,7 +30,8 @@ public class SkillTree : MonoBehaviour
 		return RemainingBonuses;
 	}
 
-	public void ChangeDisplayData (SkillTreeData NewTreeData, 
+	public void ChangeDisplayData (
+        SkillTreeData NewTreeData, 
 		List <BonusAtIndex> TempRemainingBonuses)
 	{
 		Debug.Log ("2 Parameters");

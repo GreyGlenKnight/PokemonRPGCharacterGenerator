@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
 	public NewTreeManager _NewTreeManager;
 	public SelectionState _SelectionState = SelectionState.Roll;
 	public PokemonClass CurrentPokemon;
-	List <SkillTreeData> _SkillTreeData = new List <SkillTreeData> ();
+	
 	public List <SkillTree> SkillTrees = new List <SkillTree> (12);
 	public BadgeLevelGenerator _BadgeLevelGenerator;
 //	public SkillTree TreeGoingOut;
@@ -58,22 +58,10 @@ public class GameManager : MonoBehaviour
 		DontDestroyOnLoad(gameObject);
 
 		CurrentPokemon = new PokemonClass ();
-		_SkillTreeData.Add (new SkillTreeData ("Imp", SkillTreeTier.Tier0));
-		_SkillTreeData.Add (new SkillTreeData ("Drake", SkillTreeTier.Tier1));
-		_SkillTreeData.Add (new SkillTreeData ("Fire Body 1", SkillTreeTier.Tier1));
-		_SkillTreeData.Add (new SkillTreeData ("Claw 1", SkillTreeTier.Tier1));
-		_SkillTreeData.Add (new SkillTreeData ("Claw 2", SkillTreeTier.Tier2));
-		_SkillTreeData.Add (new SkillTreeData ("Beast", SkillTreeTier.Tier1));
-		_SkillTreeData.Add (new SkillTreeData ("Fire Body 2", SkillTreeTier.Tier2));
-		_SkillTreeData.Add (new SkillTreeData ("Pyromancer 1", SkillTreeTier.Tier1));
-		_SkillTreeData.Add (new SkillTreeData ("Pureblood 2", SkillTreeTier.Tier2));
-		_SkillTreeData.Add (new SkillTreeData ("Pureblood 3", SkillTreeTier.Tier3));
-		_SkillTreeData.Add (new SkillTreeData ("Fire Body 3", SkillTreeTier.Tier3));
-		_SkillTreeData.Add (new SkillTreeData ("Acrobatics 1", SkillTreeTier.Tier1));
 
 		for (int i = 0; i < SkillTrees.Count; i++) 
 		{
-			SkillTrees[i].ChangeDisplayData (_SkillTreeData [i]);
+			SkillTrees[i].ChangeDisplayData (CurrentPokemon._SkillTreeData[i]);
 		}
 	}
 
