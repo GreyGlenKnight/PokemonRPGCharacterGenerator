@@ -118,8 +118,8 @@ public class MaturityManager : MonoBehaviour
 
 	public void MaturityCheck ()
 	{
-		CurrentMaturityWithRemainder = GameManager.instance._BadgeLevelGenerator.CurrentMaturity;
-		CurrentMaturity = GameManager.instance._BadgeLevelGenerator.CurrentMaturityInt;
+		CurrentMaturityWithRemainder = GameManager.instance.CurrentPokemon.CurrentMaturity;
+		CurrentMaturity = GameManager.instance.CurrentPokemon.CurrentMaturityInt;
 		HMItem1 = MaturityBonusList [0].Maturity;
 
 		if (CurrentMaturity > 40) 

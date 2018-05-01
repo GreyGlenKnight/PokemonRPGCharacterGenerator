@@ -6,13 +6,30 @@ public class PokemonClass
 {
 	public int Maturity;
 	public int Level;
-//	public SkillTrees _SkillTrees;
+	public SkillTrees _SkillTrees;
+	//	public List <SkillTree> SkillTrees = new List <SkillTree> (12);
+	public bool IsShiny;
+	public int ShinyRNG;
+
+	public float Rate = 3.0f;
+	public float CurrentMaturity;
+	public float TotalBaseStats = 20.0f;
+	public int CurrentMaturityInt;
+	public int MaturityBonus = 0;
 
 	public List<SkillTreeData> _SkillTreeData = new List<SkillTreeData>();
 	public List <SkillTreeBonusesAcquired> _BonusesRemaining = new List <SkillTreeBonusesAcquired>();
 
     public PokemonClass ()
     {
+			ShinyRNG = Random.Range (0, 4096);
+			Debug.Log (ShinyRNG);
+
+			if (ShinyRNG == 0) 
+			{
+				IsShiny = true;
+				Debug.Log ("Holy Shit, a Shiny!");
+			}
 		
         Level = 0;
         _SkillTreeData.Add(new SkillTreeData("Imp", SkillTreeTier.Tier0));
@@ -40,9 +57,43 @@ public class PokemonClass
 		_BonusesRemaining.Add (new SkillTreeBonusesAcquired ());
 		_BonusesRemaining.Add (new SkillTreeBonusesAcquired ());
 		_BonusesRemaining.Add (new SkillTreeBonusesAcquired ());
-
-
     }
+
+	public void Evolve ()
+	{
+		if (TotalBaseStats > 6.0f) 
+		{
+			Rate = 1.0f;
+		}
+		if (TotalBaseStats > 11.0f) 
+		{
+			Rate = 1.5f;
+		}
+		if (TotalBaseStats > 13.5f) 
+		{
+			Rate = 2.0f;
+		}
+		if (TotalBaseStats > 16.0f) 
+		{
+			Rate = 2.5f;
+		}
+		if (TotalBaseStats > 18.5f) 
+		{
+			Rate = 3.0f;
+		}
+		if (TotalBaseStats > 21.0f) 
+		{
+			Rate = 3.5f;
+		}
+		if (TotalBaseStats > 23.5f) 
+		{
+			Rate = 4.0f;
+		}
+
+		CurrentMaturity = ((Level / Rate) + MaturityBonus);
+		CurrentMaturityInt = Mathf.FloorToInt (CurrentMaturity);
+	}
+
 
 
     public void LevelUp ()

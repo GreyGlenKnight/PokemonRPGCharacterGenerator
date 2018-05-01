@@ -4,204 +4,107 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
 
+
+public enum BadgeLevelStrings 
+{
+	SingleLevel,
+	BabyLevels,
+	BadgeLevel1,
+	BadgeLevel2,
+	BadgeLevel3,
+	BadgeLevel4,
+	BadgeLevel5,
+	BadgeLevel6,
+	BadgeLevel7,
+	BadgeLevel8
+}
+
+public static class BadgeLevelExtensions 
+{
+	public static string GetBadgeString (this BadgeLevelStrings ThisEnum)
+	{
+		switch (ThisEnum) 
+		{
+		case BadgeLevelStrings.SingleLevel: return "Single Level";
+		case BadgeLevelStrings.BabyLevels: return "Baby Levels";
+		case BadgeLevelStrings.BadgeLevel1: return "Badge Level 1";
+		case BadgeLevelStrings.BadgeLevel2: return "Badge Level 2";
+		case BadgeLevelStrings.BadgeLevel3: return "Badge Level 3";
+		case BadgeLevelStrings.BadgeLevel4: return "Badge Level 4";
+		case BadgeLevelStrings.BadgeLevel5: return "Badge Level 5";
+		case BadgeLevelStrings.BadgeLevel6: return "Badge Level 6";
+		case BadgeLevelStrings.BadgeLevel7: return "Badge Level 7";
+		case BadgeLevelStrings.BadgeLevel8: return "Badge Level 8";
+		default:
+			Debug.Log ("Error");
+			return "Undefined String";		
+		}
+
+	}
+}
+
 public class BadgeLevelGenerator : MonoBehaviour 
 {
 public int BadgeLevel;
-public Dropdown BLDropDown;
 public static bool AutoSelectOn;
-public float Rate = 3.0f;
-public float CurrentMaturity;
-public float TotalBaseStats = 20.0f;
-public int CurrentMaturityInt;
-public int MaturityBonus = 0;
-public string BadgeLevelString;
-public string CurrentLevelString;
-public Text BadgeLevelText;
-public Text CurrentLevelText;
-public bool IsShiny;
-public int ShinyRNG;
+	public BadgeLevelDisplay _BadgeLevelDisplay;
 	public NewTreeManager _NewTreeManager;
-//	public AutoSelectManager _AutoSelectManager;
 	public MaturityManager _MaturityManager;
 	public SkillTrees _SkillTrees;
 
-	public void Evolve ()
-	{
-		if (TotalBaseStats > 6.0f) 
-		{
-			Rate = 1.0f;
-		}
-		if (TotalBaseStats > 11.0f) 
-		{
-			Rate = 1.5f;
-		}
-		if (TotalBaseStats > 13.5f) 
-		{
-			Rate = 2.0f;
-		}
-		if (TotalBaseStats > 16.0f) 
-		{
-			Rate = 2.5f;
-		}
-		if (TotalBaseStats > 18.5f) 
-		{
-			Rate = 3.0f;
-		}
-		if (TotalBaseStats > 21.0f) 
-		{
-			Rate = 3.5f;
-		}
-		if (TotalBaseStats > 23.5f) 
-		{
-			Rate = 4.0f;
-		}
-			
-		CurrentMaturity = ((GameManager.instance.CurrentPokemon.Level / Rate) + MaturityBonus);
-		CurrentMaturityInt = Mathf.FloorToInt (CurrentMaturity);
-	}
 
-public void SetBadgeLevel()
+
+public void OnBadgeLevelSelect ()
 {
-	BadgeLevel = BLDropDown.value;
+	BadgeLevel = _BadgeLevelDisplay.BLDropDown.value;
 }
 
-	public void GenerateMon()
-{
-		if (BadgeLevel == 0)
-			
+	public void OnGenerateMonClick ()
+	{
+		GenerateMon ((BadgeLevelStrings)BadgeLevel);
+	}
+
+	public void GenerateMon (BadgeLevelStrings CurrentBadgeLevelString)
+	{
+		
+		if (CurrentBadgeLevelString == BadgeLevelStrings.SingleLevel) 
 		{
 			XPManager.XP = 1;
 			RollCycle ();
-			CurrentLevelString = GameManager.instance.CurrentPokemon.Level.ToString();
-			CurrentLevelText.text = CurrentLevelString;
-		}
+			_BadgeLevelDisplay.UpdateText ();
 
-		if (BadgeLevel == 1)
+//			_BadgeLevelDisplay.UpdateDisplay (GameManager.instance.CurrentPokemon.Level, 
+//				_BadgeLevelDisplay.CurrentLevelString);
+//			_BadgeLevelDisplay.CurrentLevelString = GameManager.instance.CurrentPokemon.Level.ToString ();
+//			_BadgeLevelDisplay.CurrentLevelText.text = _BadgeLevelDisplay.CurrentLevelString;
+		}
+		else 
 		{
-			XPManager.XP = 6 - GameManager.instance.CurrentPokemon.Level;
-			while (GameManager.instance.CurrentPokemon.Level < 6)
+			XPManager.XP = (BadgeLevel * 5 + 1) - GameManager.instance.CurrentPokemon.Level;
+			while (GameManager.instance.CurrentPokemon.Level < (BadgeLevel * 5 + 1))
 			{
 				RollCycle ();
 			}
-			BadgeLevelString = "Baby Levels";
-			UpdateText ();
-		}
 
-		if (BadgeLevel == 2)
-		{
-			XPManager.XP = 11 - GameManager.instance.CurrentPokemon.Level;
-			while (GameManager.instance.CurrentPokemon.Level < 11)
-			{
-				RollCycle ();
-			}
-			BadgeLevelString = "Badge Level 1";
-			UpdateText ();
+			_BadgeLevelDisplay.BadgeLevelString = CurrentBadgeLevelString.GetBadgeString();
+			_BadgeLevelDisplay.UpdateText ();
+//			_BadgeLevelDisplay.UpdateDisplay (
+//				GameManager.instance.CurrentPokemon.Level,			
+//				_BadgeLevelDisplay.CurrentLevelString);
 		}
-
-		if (BadgeLevel == 3)
-		{
-			XPManager.XP = 16 - GameManager.instance.CurrentPokemon.Level;
-			while (GameManager.instance.CurrentPokemon.Level < 16)
-			{
-				RollCycle ();
-			}
-			BadgeLevelString = "Badge Level 2";
-			UpdateText ();
-		}
-
-		if (BadgeLevel == 4)
-		{
-			XPManager.XP = 21 - GameManager.instance.CurrentPokemon.Level;
-			while (GameManager.instance.CurrentPokemon.Level < 21)
-			{
-				RollCycle ();
-			}
-			BadgeLevelString = "Badge Level 3";
-			UpdateText ();
-		}
-
-		if (BadgeLevel == 5)
-		{
-			XPManager.XP = 26 - GameManager.instance.CurrentPokemon.Level;
-			while (GameManager.instance.CurrentPokemon.Level < 26)
-			{
-				RollCycle ();
-			}
-			BadgeLevelString = "Badge Level 4";
-			UpdateText ();
-		}
-
-		if (BadgeLevel == 6)
-		{
-			XPManager.XP = 31 - GameManager.instance.CurrentPokemon.Level;
-			while (GameManager.instance.CurrentPokemon.Level < 31)
-			{
-				RollCycle ();
-			}
-			BadgeLevelString = "Badge Level 5";
-			UpdateText ();
-		}
-
-		if (BadgeLevel == 7)
-		{
-			XPManager.XP = 36 - GameManager.instance.CurrentPokemon.Level;
-			while (GameManager.instance.CurrentPokemon.Level < 36)
-			{
-				RollCycle ();
-			}
-			BadgeLevelString = "Badge Level 6";
-			UpdateText ();
-		}
-
-		if (BadgeLevel == 8)
-		{
-			XPManager.XP = 41 - GameManager.instance.CurrentPokemon.Level;
-			while (GameManager.instance.CurrentPokemon.Level < 41)
-			{
-				RollCycle ();
-			}
-			BadgeLevelString = "Badge Level 7";
-			UpdateText ();
-		}
-
-		if (BadgeLevel == 9)
-		{
-			XPManager.XP = 46 - GameManager.instance.CurrentPokemon.Level;
-			while (GameManager.instance.CurrentPokemon.Level < 46)
-			{
-				RollCycle ();
-			}
-			BadgeLevelString = "Badge Level 8";
-			UpdateText ();
-		}
-}
-
-	public void UpdateText ()
-	{
-		BadgeLevelText.text = BadgeLevelString;
-		CurrentLevelString = GameManager.instance.CurrentPokemon.Level.ToString ();
-		CurrentLevelText.text = CurrentLevelString;
+		_BadgeLevelDisplay.UpdateDisplay (
+			GameManager.instance.CurrentPokemon.Level,			
+			_BadgeLevelDisplay.CurrentLevelString);
 	}
+
+
 
 	public void RollCycle ()
 	{
 		_NewTreeManager.CallTreeRoll();
 		_SkillTrees.OnAutoSelectClick ();
-//		_AutoSelectManager.OnAutoSelectClick();
 		GameManager.instance.CurrentPokemon.LevelUp();
-		Evolve();
+		GameManager.instance.CurrentPokemon.Evolve();
 		_MaturityManager.MaturityCheck();
-	}
-
-	public void Start ()
-	{
-		ShinyRNG = Random.Range (0, 4096);
-		Debug.Log (ShinyRNG);
-
-		if (ShinyRNG == 0) 
-		{
-			IsShiny = true;
-			Debug.Log ("Holy Shit, a Shiny!");
-		}
 	}
 }

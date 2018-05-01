@@ -41,17 +41,17 @@ public enum TreeRowState
 public class GameManager : MonoBehaviour 
 
 {
-	public MaturityManager _MaturityManager;
 	public static GameManager instance = null;
 	public NewTreeManager _NewTreeManager;
 	public SelectionState _SelectionState = SelectionState.Roll;
 	public PokemonClass CurrentPokemon;
 	public TreeRowState _TreeRowState;
 
-	public List <SkillTree> SkillTrees = new List <SkillTree> (12);
+	public MaturityManager _MaturityManager;
+
+//	public List <SkillTree> SkillTrees = new List <SkillTree> (12);
 	public BadgeLevelGenerator _BadgeLevelGenerator;
-//	public SkillTree TreeGoingOut;
-//	public SkillTree TreeGoingIn;
+
 
 
 	void Awake()
@@ -68,10 +68,7 @@ public class GameManager : MonoBehaviour
 		CurrentPokemon = new PokemonClass ();
 		_TreeRowState = TreeRowState.Adult;
 		ChangeVisibleTrees ();
-//		for (int i = 0; i < SkillTrees.Count; i++) 
-//		{
-//			SkillTrees[i].ChangeDisplayData (CurrentPokemon._SkillTreeData[i]);
-//		}
+
 	}
 
 	public void Refresh ()
@@ -141,22 +138,11 @@ public class GameManager : MonoBehaviour
 	public void TreeSwap (int TreeToChange, int TreeDataIndex)
 	{
 
-		SkillTrees [TreeToChange].ChangeDisplayData (	
+		_NewTreeManager.TreesToRoll [TreeToChange].ChangeDisplayData (	
 			TreeDataIndex,
 			CurrentPokemon._SkillTreeData [TreeDataIndex], 
 			CurrentPokemon._BonusesRemaining [TreeDataIndex].BonusesRemaining);
 
 	}
 
-//
-//	public void TreeSwap ()
-//	{
-////		List <BonusAtIndex> TempBonuses;
-////		SkillTreeData DataGoingOut = SkillTrees [0]._TreeData;
-////		SkillTreeData DataGoingIn = SkillTrees [4]._TreeData;
-////		TempBonuses = SkillTrees [0].GetRemainingBonuses ();
-////		SkillTrees [0].ChangeDisplayData (DataGoingIn, SkillTrees [4].GetRemainingBonuses());
-////		SkillTrees [4].ChangeDisplayData (DataGoingOut, TempBonuses);
-//		Debug.Log ("This should be removed");
-//	}
 }
