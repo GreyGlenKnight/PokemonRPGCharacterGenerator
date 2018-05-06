@@ -1564,96 +1564,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 79080288}
---- !u!1 &81201597
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 81201598}
-  - component: {fileID: 81201599}
-  m_Layer: 0
-  m_Name: Maturity Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &81201598
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 81201597}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1447979073}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &81201599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 81201597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9b8d9ff3028a46f1b882808d11b5e6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BreakTree: 00000000010000000400000007000000
-  SwitchTree: 090000001000000015000000180000001e00000024000000
-  ActiveTree: 00000000030000000600000011000000
-  BonusLevels: 0200000005000000080000000b0000000e0000001100000014000000170000001a0000001d000000200000002300000026000000
-  CurrentMaturity: 0
-  CurrentMaturityWithRemainder: 0
-  Maturity:
-  - Gain and Break Baby Skill, Birth Ability
-  - Break Adult Tree, Nature
-  - Bonus Level 1
-  - Gain Adult Tree, Gain Ability Slot 2
-  - Break Skill 1, STAB Bonus +1
-  - Bonus Level 2
-  - Gain Skill 1, Special Training Slot 1
-  - Break Skill 1, Enhancer Slot 1
-  - Bonus Level 3
-  - Trade Skill 1, Attribute Bonus 2
-  - Break Skill 2, STAB Bonus 2
-  - Bonus Level 4
-  - Special Training Slot 2
-  - Break Skill 1, Ability Slot 3
-  - Bonus Level 5
-  - Break Skill 1, Enhancer Slot 2
-  - Trade Skill 1, STAB Bonus 3
-  - Bonus Level 6
-  - Gain Skill 1, Break Skill 3
-  - Break Skill 2
-  - Bonus Level 7
-  - Trade Skill 2, Break Skill 3
-  - STAB Bonus 4
-  - Bonus Level 8
-  - Trade Skill 2, Attribute Bonus 3
-  - Special Training Slot 3
-  - Bonus Level 9
-  - Break Skill 3
-  - STAB Bonus 5
-  - Bonus Level 10
-  - Trade Skill 3
-  - Enhancer Slot 3
-  - Bonus Level 11
-  - Break Skill 3
-  - STAB Bonus 6
-  - Bonus Level 12
-  - Trade Skill 3
-  - Attribute Bonus 4
-  - Bonus Level 13
-  - Enhancer Bonus 4
-  - STAB Bonus 7
-  HighestMaturity: 
-  HMItem1: 0
 --- !u!1 &83103709
 GameObject:
   m_ObjectHideFlags: 0
@@ -10793,46 +10703,6 @@ MonoBehaviour:
   LastRollText: {fileID: 1493937844}
   TreeBG: {fileID: 1171458925}
   TreeNameText: {fileID: 2130633008}
---- !u!1 &664120109
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 664120110}
-  - component: {fileID: 664120111}
-  m_Layer: 0
-  m_Name: SkillTreeBonusesAcquired
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &664120110
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 664120109}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1447979073}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &664120111
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 664120109}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bb8d5d0e3b6c40f999fe5c3ec31931e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &666846458
 GameObject:
   m_ObjectHideFlags: 0
@@ -13120,7 +12990,6 @@ MonoBehaviour:
   BadgeLevel: 0
   _BadgeLevelDisplay: {fileID: 2026240832}
   _NewTreeManager: {fileID: 1945850216}
-  _MaturityManager: {fileID: 81201599}
   _SkillTrees: {fileID: 268018978}
 --- !u!1 &768925764
 GameObject:
@@ -16830,6 +16699,7 @@ GameObject:
   - component: {fileID: 1032932698}
   - component: {fileID: 1032932697}
   - component: {fileID: 1032932699}
+  - component: {fileID: 1032932700}
   m_Layer: 0
   m_Name: Char sheet canvas
   m_TagString: Untagged
@@ -16945,6 +16815,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c354bd403adc9624a8a7d72b0e67d116, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1032932700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1032932692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08ebc81bc9e1446e4b288468221425f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Level: 0
+  _HeldItem: 
+  BaseMaturity: 0
+  CurrentMaturity: 0
+  MaturityBonus: 0
+  Portrait: {fileID: 0}
+  Rate: 3
 --- !u!1 &1035054876
 GameObject:
   m_ObjectHideFlags: 0
@@ -23967,8 +23855,6 @@ Transform:
   m_Children:
   - {fileID: 768386023}
   - {fileID: 1945850215}
-  - {fileID: 81201598}
-  - {fileID: 664120110}
   m_Father: {fileID: 2026240831}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -32859,7 +32745,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.8470589, g: 0.8470589, b: 0.8470589, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -33263,7 +33149,6 @@ MonoBehaviour:
   _NewTreeManager: {fileID: 1945850216}
   _SelectionState: 0
   _TreeRowState: 0
-  _MaturityManager: {fileID: 81201599}
   _BadgeLevelGenerator: {fileID: 768386024}
 --- !u!4 &2026240831
 Transform:

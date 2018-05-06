@@ -17,6 +17,9 @@ public class PokemonClass
 	public int CurrentMaturityInt;
 	public int MaturityBonus = 0;
 
+	public PokemonSheetDisplay _PokemonSheetDisplay;
+	//_HeldItem;
+
 	public List<SkillTreeData> _SkillTreeData = new List<SkillTreeData>();
 	public List <SkillTreeBonusesAcquired> _BonusesRemaining = new List <SkillTreeBonusesAcquired>();
 
@@ -29,6 +32,9 @@ public class PokemonClass
 			{
 				IsShiny = true;
 				Debug.Log ("Holy Shit, a Shiny!");
+			//Will there be only one display class?
+			//I shouldn't have shiny bool in the display class,
+			//Use a function to set that.
 			}
 		
         Level = 0;
@@ -61,34 +67,13 @@ public class PokemonClass
 
 	public void Evolve ()
 	{
-		if (TotalBaseStats > 6.0f) 
-		{
-			Rate = 1.0f;
-		}
-		if (TotalBaseStats > 11.0f) 
-		{
-			Rate = 1.5f;
-		}
-		if (TotalBaseStats > 13.5f) 
-		{
-			Rate = 2.0f;
-		}
-		if (TotalBaseStats > 16.0f) 
-		{
-			Rate = 2.5f;
-		}
-		if (TotalBaseStats > 18.5f) 
-		{
-			Rate = 3.0f;
-		}
-		if (TotalBaseStats > 21.0f) 
-		{
-			Rate = 3.5f;
-		}
-		if (TotalBaseStats > 23.5f) 
-		{
-			Rate = 4.0f;
-		}
+		if (TotalBaseStats > 6.0f) {Rate = 1.0f;}
+		if (TotalBaseStats > 11.0f) {Rate = 1.5f;}
+		if (TotalBaseStats > 13.5f) {Rate = 2.0f;}
+		if (TotalBaseStats > 16.0f) {Rate = 2.5f;}
+		if (TotalBaseStats > 18.5f) {Rate = 3.0f;}
+		if (TotalBaseStats > 21.0f) {Rate = 3.5f;}
+		if (TotalBaseStats > 23.5f) {Rate = 4.0f;}
 
 		CurrentMaturity = ((Level / Rate) + MaturityBonus);
 		CurrentMaturityInt = Mathf.FloorToInt (CurrentMaturity);

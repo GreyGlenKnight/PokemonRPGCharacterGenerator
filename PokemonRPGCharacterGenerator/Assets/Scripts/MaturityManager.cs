@@ -5,8 +5,10 @@ using UnityEngine.UI;
 using System.Linq;
 
 
-public class MaturityManager : MonoBehaviour 
+public class MaturityManager 
+
 {
+	
 	public int [] BreakTree = new int[] 
 	{
 		0,1,4,7
@@ -28,7 +30,7 @@ public class MaturityManager : MonoBehaviour
 	} ;
 
 	public PokemonClass Pokemon;
-	public List <MaturityRank> MaturityBonusList = new List <MaturityRank> ();
+	public  List <MaturityRank> MaturityBonusList = new List <MaturityRank> ();
 	public int CurrentMaturity;
 	public float CurrentMaturityWithRemainder;
 	public string [] Maturity = new string []
@@ -77,13 +79,14 @@ public class MaturityManager : MonoBehaviour
 	public List <int> HighestMaturity = new List <int> ();
 	public int HMItem1;
 
-	void Awake ()
+	public MaturityManager ()
 	{
-		for (int i = 0; i < 41; i++) 
-		{
-			MaturityBonusList.Add (new MaturityRank (i, Maturity [i]));
+	for (int i = 0; i < 41; i++) 
+	{
+		MaturityBonusList.Add (new MaturityRank (i, Maturity [i]));
 		}
 	}
+
 
 	public void EliminateMaturityBonus ()
 	{

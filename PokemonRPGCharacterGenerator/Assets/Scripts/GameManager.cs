@@ -66,6 +66,7 @@ public class GameManager : MonoBehaviour
 		DontDestroyOnLoad(gameObject);
 
 		CurrentPokemon = new PokemonClass ();
+		_MaturityManager = new MaturityManager ();
 		_TreeRowState = TreeRowState.Adult;
 		ChangeVisibleTrees ();
 

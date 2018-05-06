@@ -105,6 +105,6 @@ public void OnBadgeLevelSelect ()
 		_SkillTrees.OnAutoSelectClick ();
 		GameManager.instance.CurrentPokemon.LevelUp();
 		GameManager.instance.CurrentPokemon.Evolve();
-		_MaturityManager.MaturityCheck();
+		GameManager.instance._MaturityManager.MaturityCheck();
 	}
 }
