@@ -105,10 +105,20 @@ public class PokemonClass
 //		TempData = _SkillTreeData [4];
 	}
 
+	public void GainActiveTreeBonus ()
+	{
+		Debug.Log ("Gained Active Tree :"+Maturity);
+	}
 
 	public void GainNatureBonus ()
 	{
 		Debug.Log ("Gained Nature :"+Maturity);
+	}
+
+	public void GainAbilitySlot ()
+	{
+		Debug.Log ("Gained Ability Slot :"+Maturity);
+
 	}
 
 	public void GainSTABBonus ()

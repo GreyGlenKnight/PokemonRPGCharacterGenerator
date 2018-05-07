@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class STABBonusMaturityBonus : IMaturityBonus
+public class TradeSkillMaturityBonus : IMaturityBonus
 
 {
 	#region implemented abstract members of MaturityBonus
 	public void ApplyBonus (PokemonClass Pokemon)
 	{
-		Pokemon.GainSTABBonus ();
+		Pokemon.PokemonTreeSwap ();
 	}
 	#endregion
 }
-
