@@ -9,22 +9,24 @@ public enum ElementTypes
 {
 	Nothing,
 	Normal,
-	Dark,
 	Fire,
 	Water,
-	Grass,
-	Bug,
-	Poison,
-	Rock,
-	Ground,
-	Dragon,
-	Steel,
-	Ice,
 	Electric,
+	Grass,
+	Ice,
+	Fighting,
+	Poison,
+	Ground,
 	Flying,
-	Fairy,
+	Psychic,
+	Bug,
+	Rock,
 	Ghost,
-	Psychic
+	Dragon,
+	Dark,
+	Steel,
+	Fairy
+
 }
 
 public class Pokemon

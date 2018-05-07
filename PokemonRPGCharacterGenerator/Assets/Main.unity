@@ -207,7 +207,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -15496,7 +15496,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -32135,42 +32135,6 @@ MonoBehaviour:
   PanelType2: {fileID: 971758270}
   Background1: {fileID: 1232463}
   Background2: {fileID: 971758274}
-  NormalColor: {r: 0.647, g: 0.647, b: 0.459, a: 1}
-  FireColor: {r: 0.929, g: 0.486, b: 0.169, a: 1}
-  WaterColor: {r: 0.38, g: 0.545, b: 0.937, a: 1}
-  ElectricColor: {r: 0.969, g: 0.812, b: 0.173, a: 1}
-  GrassColor: {r: 0.455, g: 0.765, b: 0.298, a: 1}
-  IceColor: {r: 0.569, g: 0.835, b: 0.835, a: 1}
-  FightingColor: {r: 0.741, g: 0.184, b: 0.153, a: 1}
-  PoisonColor: {r: 0.616, g: 0.247, b: 0.616, a: 1}
-  GroundColor: {r: 0.89, g: 0.733, b: 0.361, a: 1}
-  FlyingColor: {r: 0.651, g: 0.561, b: 0.925, a: 1}
-  PsychicColor: {r: 0.973, g: 0.306, b: 0.506, a: 1}
-  BugColor: {r: 0.643, g: 0.702, b: 0.122, a: 1}
-  RockColor: {r: 0.698, g: 0.608, b: 0.212, a: 1}
-  GhostColor: {r: 0.424, g: 0.333, b: 0.573, a: 1}
-  DragonColor: {r: 0.424, g: 0.2, b: 0.969, a: 1}
-  DarkColor: {r: 0.427, g: 0.337, b: 0.275, a: 1}
-  SteelColor: {r: 0.702, g: 0.702, b: 0.804, a: 1}
-  FairyColor: {r: 0.906, g: 0.58, b: 0.906, a: 1}
-  Normal: Normal
-  Fire: Fire
-  Water: Water
-  Electric: Electric
-  Grass: Grass
-  Ice: Ice
-  Fighting: Fighting
-  Poison: Poison
-  Ground: Ground
-  Flying: Flying
-  Psychic: Psychic
-  Bug: Bug
-  Rock: Rock
-  Ghost: Ghost
-  Dragon: Dragon
-  Dark: Dark
-  Steel: Steel
-  Fairy: Fairy
   ListPos1: 0
   ListPos2: 0
 --- !u!1 &1955780827

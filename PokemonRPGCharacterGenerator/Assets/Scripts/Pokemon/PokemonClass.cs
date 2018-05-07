@@ -165,7 +165,7 @@ public class PokemonClass
     //TODO Remove
     public int[] ActiveTree = new int[]
 {
-        0,3,6,17
+        0,3,6,18
 };
 
     public int[] SwitchTree = new int[]
