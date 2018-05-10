@@ -65,9 +65,8 @@ public static class MaturityStatic
 
     public static List <MaturityBonus> GetMaturityBonuses (int Maturity)
 	{
-        
         List <MaturityBonus> ToReturn = new List <MaturityBonus> (); 
-//		int BonusCounter = 0;
+
 		if (Maturity >= 41) 
 		{
 			return ToReturn;
@@ -78,49 +77,55 @@ public static class MaturityStatic
 			ToReturn.Add (new MaturityBonus.BonusLevel (
 				(Array.IndexOf (BonusLevels,Maturity)+1)));
 		}
-
 		if (STABBonuses.Contains (Maturity) == true) 
 		{
-            ToReturn.Add (new MaturityBonus.STABBonus ());
+            ToReturn.Add (new MaturityBonus.STABBonus (
+				(Array.IndexOf (STABBonuses,Maturity)+1)));
 		}
-
 		if (NatureBonuses.Contains (Maturity) == true) 
 		{
-            ToReturn.Add (new MaturityBonus.NatureBonus());
+            ToReturn.Add (new MaturityBonus.NatureBonus (
+				(Array.IndexOf (NatureBonuses,Maturity)+1)));
 		} 
-
 		if (AbilitySlotBonuses.Contains (Maturity) == true) 
 		{
-            ToReturn.Add (new MaturityBonus.AbilitySlot ());
+            ToReturn.Add (new MaturityBonus.AbilitySlot (
+				(Array.IndexOf (AbilitySlotBonuses,Maturity)+1)));
 		} 
 		if (TradeSkillBonuses.Contains (Maturity) == true) 
 		{
-            ToReturn.Add (new MaturityBonus.TradeSkill ());
+            ToReturn.Add (new MaturityBonus.TradeSkill (
+				(Array.IndexOf (TradeSkillBonuses,Maturity)+1)));
 		}
         if (BreakTreeRank1Bonuses.Contains(Maturity) == true)
         {
-            ToReturn.Add(new MaturityBonus.BreakTree(1));
+            ToReturn.Add(new MaturityBonus.BreakTree(
+				(Array.IndexOf (BreakTreeRank1Bonuses,Maturity)+1),1));
         }
         if (BreakTreeRank2Bonuses.Contains(Maturity) == true)
         {
-            ToReturn.Add(new MaturityBonus.BreakTree(2));
+            ToReturn.Add(new MaturityBonus.BreakTree(
+				(Array.IndexOf (BreakTreeRank2Bonuses,Maturity)+1),2));
         }
         if (BreakTreeRank3Bonuses.Contains(Maturity) == true)
         {
-            ToReturn.Add(new MaturityBonus.BreakTree(3));
-        }
+			ToReturn.Add(new MaturityBonus.BreakTree(
+				(Array.IndexOf (BreakTreeRank3Bonuses,Maturity)+1),3));
+		}
         if (BreakTreeSlot.Contains(Maturity) == true)
         {
-            ToReturn.Add(new MaturityBonus.ActiveSkill());
+			ToReturn.Add(new MaturityBonus.ActiveSkill (
+				(Array.IndexOf (BreakTreeSlot,Maturity)+1)));
         }
         if (SpecialTrainingBonuses.Contains(Maturity) == true)
         {
-            ToReturn.Add(new MaturityBonus.SpecialTraining());
+			ToReturn.Add(new MaturityBonus.SpecialTraining (
+				(Array.IndexOf (SpecialTrainingBonuses,Maturity)+1)));
         }
-
         if (EnhancerSlotBonuses.Contains(Maturity) == true)
         {
-            ToReturn.Add(new MaturityBonus.EnhancerSlot());
+			ToReturn.Add(new MaturityBonus.EnhancerSlot (
+				(Array.IndexOf (EnhancerSlotBonuses,Maturity)+1)));
         }
 
         return ToReturn;

@@ -115,8 +115,8 @@ public class Pokemon
 //		{			Attack++;}
 	{
 	Endurance = _Breed.BaseEndurance + NumberOfEnduranceBonuses;
-	HP = (Endurance * 2) + Defense;
-	Strain = (Endurance * 2) + SpecialDefense;
+		HP = ((Endurance + Defense) * 2);
+		Strain = ((Endurance + SpecialDefense) * 2);
 	}
 
 	public class Breed 

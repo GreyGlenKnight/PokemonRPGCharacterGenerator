@@ -11,9 +11,9 @@ public abstract class MaturityBonus
 
     public class AbilitySlot : MaturityBonus
     {
-        public AbilitySlot ()
+		public AbilitySlot (int Maturity)
         {
-				Description = this.ToString();
+			Description = this.ToString()+Maturity;
 //			Debug.Log (BonusCounter);
         }
         public override void ApplyBonus(PokemonClass Pokemon)
@@ -25,10 +25,10 @@ public abstract class MaturityBonus
     public class BreakTree : MaturityBonus
     {
         public int BreakLevel;
-        public BreakTree (int breakLevel)
+		public BreakTree (int Maturity, int breakLevel)
         {
            BreakLevel = breakLevel;
-           Description = this.ToString()+BreakLevel;
+			Description = this.ToString()+BreakLevel+Maturity;
 
         }
         public override void ApplyBonus(PokemonClass Pokemon)
@@ -40,22 +40,31 @@ public abstract class MaturityBonus
     public class TradeSkill : MaturityBonus
     {
 
-        public TradeSkill()
+		public TradeSkill (int Maturity)
         {
-            Description = this.ToString();
+//			int treeLevel;
+//			if (Maturity < 3)
+//			{treeLevel = 1;}
+//			if (Maturity == 3)
+//			{treeLevel = 2;}
+//			if (Maturity == 4)
+//			{treeLevel = 2;}
+//			if (Maturity > 4)
+//			{treeLevel = 3;}
+			Description = this.ToString()+Maturity;
         }
         public override void ApplyBonus(PokemonClass Pokemon)
         {
-            Pokemon.PokemonTreeSwap();
+			Pokemon.PokemonTreeSwap();
         }
     }
 
     public class STABBonus : MaturityBonus
     {
 
-        public STABBonus()
+		public STABBonus (int Maturity)
         {
-            Description = this.ToString();
+			Description = this.ToString()+Maturity;
         }
         public override void ApplyBonus(PokemonClass Pokemon)
         {
@@ -65,9 +74,9 @@ public abstract class MaturityBonus
 
     public class NatureBonus : MaturityBonus
     {
-        public NatureBonus()
+		public NatureBonus(int Maturity)
         {
-            Description = this.ToString();
+			Description = this.ToString() +Maturity;
         }
 
         public override void ApplyBonus(PokemonClass Pokemon)
@@ -81,7 +90,7 @@ public abstract class MaturityBonus
 
 		public BonusLevel (int Maturity)
         {
-			Description = this.ToString() + Maturity;
+			Description = this.ToString() +Maturity;
         }
 
         public override void ApplyBonus(PokemonClass Pokemon)
@@ -94,9 +103,9 @@ public abstract class MaturityBonus
     public class ActiveSkill : MaturityBonus
     {
 
-        public ActiveSkill()
+		public ActiveSkill(int Maturity)
         {
-            Description = this.ToString();
+			Description = this.ToString() +Maturity;
         }
 
         public override void ApplyBonus(PokemonClass Pokemon)
@@ -107,9 +116,9 @@ public abstract class MaturityBonus
 
     public class EnhancerSlot : MaturityBonus
     {
-        public EnhancerSlot()
+		public EnhancerSlot(int Maturity)
         {
-            Description = this.ToString();
+			Description = this.ToString() +Maturity;
         }
 
         public override void ApplyBonus(PokemonClass Pokemon)
@@ -120,9 +129,9 @@ public abstract class MaturityBonus
 
     public class SpecialTraining : MaturityBonus
     {
-        public SpecialTraining()
+		public SpecialTraining(int Maturity)
         {
-            Description = this.ToString();
+			Description = this.ToString() +Maturity;
         }
 
         public override void ApplyBonus(PokemonClass Pokemon)

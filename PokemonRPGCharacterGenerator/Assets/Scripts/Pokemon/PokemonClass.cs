@@ -99,11 +99,12 @@ public class PokemonClass
 
 	public void PokemonTreeSwap ()
 	{
+		//int TreeLevel = ;
 		SkillTreeData TempData2 = _SkillTreeData [4];
 		SkillTreeData TempData = _SkillTreeData [0];
 		SkillTreeBonusesAcquired TempBonuses = _BonusesRemaining [0];
 		SkillTreeBonusesAcquired TempBonuses2 = _BonusesRemaining [4];
-
+//		Debug.Log (treeLevel);
 
 //		Debug.Log (TempData.Name);
 //		Debug.Log (TempData2.Name);

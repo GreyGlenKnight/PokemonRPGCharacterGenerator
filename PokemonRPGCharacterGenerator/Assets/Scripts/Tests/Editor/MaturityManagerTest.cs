@@ -373,11 +373,22 @@ public class MaturityManagerTest
         maturityBonus.AddRange(MaturityStatic.GetMaturityBonuses(5));
 		Debug.Log (maturityBonus [0].Description);
 		Debug.Log (maturityBonus [1].Description);
-//		Debug.Log (maturityBonus [0]);
-//		Debug.Log (maturityBonus [1]);
-
         Debug.Assert(maturityBonus[0].Description != maturityBonus[1].Description);
     }
+
+//	[Test]
+//	public void MaturityBonusAreFormatted ()
+//	{
+//		List<MaturityBonus> maturityBonus = new List<MaturityBonus> ();
+//		for (int i = 0; i < 56; i++) 
+//		{
+//			//The Debug Log returns the position on the list, not the 
+	////maturity, so there will only be about 2/3 of the bonuses at 40.
+//			maturityBonus.AddRange (MaturityStatic.GetMaturityBonuses (i));
+//			Debug.Log (maturityBonus [i].Description);
+////			Debug.Log (i);
+//		}
+//	}
 
     //DontGetSameBonusTwice
     //ReturnStringForMaturity
