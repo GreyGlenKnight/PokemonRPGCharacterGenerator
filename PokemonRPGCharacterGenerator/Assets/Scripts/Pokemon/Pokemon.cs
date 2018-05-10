@@ -36,6 +36,29 @@ public class Pokemon
 	public int Maturity; //This represents the relevant total maturity
 	public int Rate; //Rate int is essentially doubled
 	public int XP;
+	public int HP;
+	public int Strain;
+
+	public int Endurance = 1;
+	public int NumberOfEnduranceBonuses = 1;
+
+	public int Attack = 0;
+	public int NumberOfAttackBonuses = 0;
+
+	public int Defense = 0;
+	public int NumberOfDefenseBonuses = 0;
+
+	public int SpecialAttack = 0;
+	public int NumberOfSpecialAttackBonuses = 0;
+
+	public int SpecialDefense = 0;
+	public int NumberOfSpecialDefenseBonuses = 0;
+
+	public int Speed = 0;
+	public int NumberOfSpeedBonuses = 0;
+
+	public string HeldItem = "";
+
 	private Breed _Breed;
 
 	public ElementTypes Type1
@@ -78,13 +101,35 @@ public class Pokemon
 			XP -= 2;
 			MaturityIncrease ();
 		}
+	}
 
+	public void GainEnduranceBonus ()
+	{
+		NumberOfEnduranceBonuses++;
+		RefreshStats ();
+	}
+
+	public void RefreshStats ()
+		//Attack = Breed.Attack;
+//		if (NumberOfAttackBonuses % 2 = 0)
+//		{			Attack++;}
+	{
+	Endurance = _Breed.BaseEndurance + NumberOfEnduranceBonuses;
+	HP = (Endurance * 2) + Defense;
+	Strain = (Endurance * 2) + SpecialDefense;
 	}
 
 	public class Breed 
 	{
 		public ElementTypes Type1 = ElementTypes.Nothing;
 		public ElementTypes Type2 = ElementTypes.Nothing;
+		public int BaseEndurance = 1;
+		public int BaseAttack = 0;
+		public int BaseDefense = 0;
+		public int BaseSpecialAttack = 0;
+		public int BaseSpecialDefense = 0;
+		public int BaseSpeed = 0;
+
 
 		public Breed (ElementTypes type1, ElementTypes type2)
 	

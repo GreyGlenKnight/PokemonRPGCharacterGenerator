@@ -138,6 +138,95 @@ public class PokemonDataTests
 		}
 		UnityEngine.Debug.Assert (TestMon.Maturity == 2);
 	}
-//Pokemon Has Stats
+
+
+	[Test]
+	public void PokemonHasEndurance ()
+	{
+		Pokemon TestMon = new Pokemon ();
+		UnityEngine.Debug.Assert (TestMon.Endurance == 1);
+	}
+
+	[Test]
+	public void PokemonCalculatesEndurance ()
+	{
+		Pokemon TestMon = new Pokemon ();
+		TestMon.GainEnduranceBonus ();
+		UnityEngine.Debug.Assert (TestMon.Endurance > 1);
+	}
+
+	[Test]
+	public void PokemonHasHP ()
+	{
+		Pokemon TestMon = new Pokemon ();
+		TestMon.RefreshStats ();
+		UnityEngine.Debug.Assert (TestMon.HP >= 2);
+	}
+
+	[Test]
+	public void PokemonHasStrain ()
+	{
+		Pokemon TestMon = new Pokemon ();
+		TestMon.RefreshStats ();
+		UnityEngine.Debug.Assert (TestMon.Strain >= 2);
+	}
+
+	[Test]
+	public void PokemonCalculatesHP ()
+	{
+		Pokemon TestMon = new Pokemon ();
+		TestMon.RefreshStats ();
+		UnityEngine.Debug.Assert (TestMon.HP == 4);
+	}
+
+	[Test]
+	public void PokemonCalculatesStrain ()
+	{
+		Pokemon TestMon = new Pokemon ();
+		TestMon.RefreshStats ();
+		UnityEngine.Debug.Assert (TestMon.Strain == 4);
+	}
+
+	[Test]
+	public void PokemonHasAttack ()
+	{
+		Pokemon TestMon = new Pokemon ();
+		UnityEngine.Debug.Assert (TestMon.Attack == 0);
+	}
+
+	[Test]
+	public void PokemonHasDefense ()
+	{
+		Pokemon TestMon = new Pokemon ();
+		UnityEngine.Debug.Assert (TestMon.Defense == 0);
+	}
+
+	[Test]
+	public void PokemonHasSpecialAttack ()
+	{
+		Pokemon TestMon = new Pokemon ();
+		UnityEngine.Debug.Assert (TestMon.SpecialAttack == 0);
+	}
+
+	[Test]
+	public void PokemonHasSpecialDefense ()
+	{
+		Pokemon TestMon = new Pokemon ();
+		UnityEngine.Debug.Assert (TestMon.SpecialDefense == 0);
+	}
+
+	[Test]
+	public void PokemonHasSpeed ()
+	{
+		Pokemon TestMon = new Pokemon ();
+		UnityEngine.Debug.Assert (TestMon.Speed == 0);
+	}
+
+	[Test]
+	public void PokemonHasHeldItem ()
+	{
+		Pokemon TestMon = new Pokemon ();
+		UnityEngine.Debug.Assert (TestMon.HeldItem == "");
+	}
 
 }

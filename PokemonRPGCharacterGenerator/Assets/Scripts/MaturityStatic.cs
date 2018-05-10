@@ -67,6 +67,7 @@ public static class MaturityStatic
 	{
         
         List <MaturityBonus> ToReturn = new List <MaturityBonus> (); 
+//		int BonusCounter = 0;
 		if (Maturity >= 41) 
 		{
 			return ToReturn;
@@ -74,7 +75,8 @@ public static class MaturityStatic
 
 		if (BonusLevels.Contains (Maturity) == true) 
 		{
-			 ToReturn.Add (new MaturityBonus.BonusLevel ());
+			ToReturn.Add (new MaturityBonus.BonusLevel (
+				(Array.IndexOf (BonusLevels,Maturity)+1)));
 		}
 
 		if (STABBonuses.Contains (Maturity) == true) 

@@ -129,7 +129,6 @@ public class PokemonClass
 	public void GainAbilitySlot ()
 	{
 		Debug.Log ("Gained Ability Slot :"+Maturity);
-
 	}
 
 	public void GainSTABBonus ()
@@ -207,8 +206,8 @@ public class PokemonClass
         //}
         //		CurrentMaturity++;
 
-        List<MaturityBonus> bonuss = MaturityStatic.GetMaturityBonuses(CurrentMaturityToRemove);
-        ApplyMaturityBonus(bonuss, CurrentMaturityToRemove);
+        List<MaturityBonus> bonus = MaturityStatic.GetMaturityBonuses(CurrentMaturityToRemove);
+        ApplyMaturityBonus(bonus, CurrentMaturityToRemove);
 
 
         for (int i = 0; i < BreakTreeLevels.Length; i++)

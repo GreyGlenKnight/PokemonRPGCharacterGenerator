@@ -317,14 +317,12 @@ public class MaturityManagerTest
         {
             maturityBonus.AddRange(MaturityStatic.GetMaturityBonuses(i));
         }
-
-        Predicate<MaturityBonus> predicate = (x) =>
-        {
-            MaturityBonus.BreakTree breakTree = x as MaturityBonus.BreakTree;
-
-            return breakTree.BreakLevel == 1;
-        };
-
+//        Predicate<MaturityBonus> predicate = (x) =>
+//        {
+//            MaturityBonus.BreakTree breakTree = x as MaturityBonus.BreakTree;
+//
+//            return breakTree.BreakLevel == 1;
+//        };
         Debug.Log(maturityBonus.Count);
         Debug.Assert(maturityBonus.Count == 56);
     }
@@ -373,6 +371,11 @@ public class MaturityManagerTest
         List<MaturityBonus> maturityBonus = new List<MaturityBonus> ();
         maturityBonus.AddRange(MaturityStatic.GetMaturityBonuses(2));
         maturityBonus.AddRange(MaturityStatic.GetMaturityBonuses(5));
+		Debug.Log (maturityBonus [0].Description);
+		Debug.Log (maturityBonus [1].Description);
+//		Debug.Log (maturityBonus [0]);
+//		Debug.Log (maturityBonus [1]);
+
         Debug.Assert(maturityBonus[0].Description != maturityBonus[1].Description);
     }
 

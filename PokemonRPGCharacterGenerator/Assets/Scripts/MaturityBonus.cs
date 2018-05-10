@@ -7,12 +7,14 @@ public abstract class MaturityBonus
     public abstract void ApplyBonus (PokemonClass Pokemon);
 
     public string Description;
+//	public int BonusCounter;
 
     public class AbilitySlot : MaturityBonus
     {
-        public AbilitySlot()
+        public AbilitySlot ()
         {
-           Description = this.ToString();
+				Description = this.ToString();
+//			Debug.Log (BonusCounter);
         }
         public override void ApplyBonus(PokemonClass Pokemon)
         {
@@ -77,14 +79,15 @@ public abstract class MaturityBonus
     public class BonusLevel : MaturityBonus
     {
 
-        public BonusLevel()
+		public BonusLevel (int Maturity)
         {
-            Description = this.ToString();
+			Description = this.ToString() + Maturity;
         }
 
         public override void ApplyBonus(PokemonClass Pokemon)
         {
             Pokemon.LevelUp();
+//			Description = Description+(Pokemon.Maturity);
         }
     }
 
