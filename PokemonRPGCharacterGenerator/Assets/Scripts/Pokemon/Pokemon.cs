@@ -65,7 +65,7 @@ public class Pokemon
 	{
 		get 
 		{
-			Debug.Log (_Breed.Type1); 
+//			Debug.Log (_Breed.Type1); 
 			return _Breed.Type1;
 		}
 	}
@@ -73,7 +73,7 @@ public class Pokemon
 	{
 		get 
 		{
-			Debug.Log (_Breed.Type1);
+//			Debug.Log (_Breed.Type2);
 			return _Breed.Type2;
 		}
 	}
@@ -129,6 +129,12 @@ public class Pokemon
 		public int BaseSpecialAttack = 0;
 		public int BaseSpecialDefense = 0;
 		public int BaseSpeed = 0;
+
+
+		public Breed ()
+		{
+			
+		}
 
 
 		public Breed (ElementTypes type1, ElementTypes type2)

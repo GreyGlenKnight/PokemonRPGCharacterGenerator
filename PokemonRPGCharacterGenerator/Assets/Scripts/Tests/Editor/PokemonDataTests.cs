@@ -41,7 +41,7 @@ public class PokemonDataTests
 	public void PokemonShowsType1OfBreed ()
 	{
 		Pokemon.Breed TestBreed = new Pokemon.Breed (ElementTypes.Fire, ElementTypes.Fire);
-		Pokemon TestMon = new Pokemon (TestBreed);
+		Pokemon TestMon = A.Pokemon().W(TestBreed);
 		UnityEngine.Debug.Assert (TestMon.Type1 == ElementTypes.Fire);
 	}
 
@@ -77,9 +77,8 @@ public class PokemonDataTests
 	[Test]
 	public void PokemonCanLevelUp ()
 	{
-		Pokemon TestMon = new Pokemon ();
-		TestMon.Rate = 3;
-		TestMon.XP = 2;
+		Pokemon TestMon = A.Pokemon().W_XP(2).W_Rate(5);
+
 		TestMon.LevelUp ();
 		UnityEngine.Debug.Assert (TestMon.Level == 1);
 	}
@@ -225,8 +224,28 @@ public class PokemonDataTests
 	[Test]
 	public void PokemonHasHeldItem ()
 	{
-		Pokemon TestMon = new Pokemon ();
+		Pokemon TestMon = A.Pokemon ().W_XP(4).W(new Pokemon.Breed(ElementTypes.Fire, ElementTypes.Nothing));
 		UnityEngine.Debug.Assert (TestMon.HeldItem == "");
+	}
+
+	[Test]
+	public void BreedBuildsMonotype ()
+	{
+		Pokemon.Breed TestBreed = A.Breed ().W_Type1(ElementTypes.Fire);
+//		Debug.Log (TestBreed.Type1);
+//		Debug.Log (TestBreed.Type2);
+		UnityEngine.Debug.Assert (TestBreed.Type1 == ElementTypes.Fire);
+		UnityEngine.Debug.Assert (TestBreed.Type2 == ElementTypes.Nothing);
+	}
+
+	[Test]
+	public void BreedBuildsDualtype ()
+	{
+		Pokemon.Breed TestBreed = A.Breed ().W_Types(ElementTypes.Fire, ElementTypes.Flying);
+		Debug.Log (TestBreed.Type1);
+		Debug.Log (TestBreed.Type2);
+		UnityEngine.Debug.Assert (TestBreed.Type1 == ElementTypes.Fire);
+		UnityEngine.Debug.Assert (TestBreed.Type2 == ElementTypes.Flying);
 	}
 
 }
