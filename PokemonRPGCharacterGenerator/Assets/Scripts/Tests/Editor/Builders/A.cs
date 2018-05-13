@@ -3,7 +3,6 @@
 
 	public static class A
 	{
-	
 		public static PokemonBuilder Pokemon ()
 	{
 		return new PokemonBuilder ();

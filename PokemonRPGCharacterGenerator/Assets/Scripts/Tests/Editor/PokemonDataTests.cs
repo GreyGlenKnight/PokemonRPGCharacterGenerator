@@ -142,48 +142,57 @@ public class PokemonDataTests
 	[Test]
 	public void PokemonHasEndurance ()
 	{
-		Pokemon TestMon = new Pokemon ();
-		UnityEngine.Debug.Assert (TestMon.Endurance == 1);
+
+		Pokemon.Breed TestBreed = A.Breed ().W_Endurance(1);
+//		Debug.Log (TestBreed.BaseEndurance.RawValue);
+
+		Pokemon TestMon = new Pokemon (TestBreed);
+//		Debug.Log (TestMon.Endurance.RawValue);
+
+		UnityEngine.Debug.Assert (TestMon.Endurance.RawValue > 0);
 	}
 
 	[Test]
 	public void PokemonCalculatesEndurance ()
 	{
-		Pokemon TestMon = new Pokemon ();
+		Pokemon.Breed TestBreed = A.Breed ().W_Endurance(1);
+		Pokemon TestMon = new Pokemon (TestBreed);
 		TestMon.GainEnduranceBonus ();
 		UnityEngine.Debug.Assert (TestMon.Endurance > 1);
 	}
 
 	[Test]
 	public void PokemonHasHP ()
-	{
-		Pokemon TestMon = new Pokemon ();
-		TestMon.RefreshStats ();
-		UnityEngine.Debug.Assert (TestMon.HP >= 2);
+	{		
+		Pokemon.Breed TestBreed = A.Breed ().W_Endurance(1);
+		Pokemon TestMon = new Pokemon (TestBreed);
+		UnityEngine.Debug.Assert (TestMon.MaxHP >= 2);
 	}
 
 	[Test]
 	public void PokemonHasStrain ()
 	{
-		Pokemon TestMon = new Pokemon ();
-		TestMon.RefreshStats ();
-		UnityEngine.Debug.Assert (TestMon.Strain >= 2);
+		Pokemon.Breed TestBreed = A.Breed ().W_Endurance(1);
+		Pokemon TestMon = new Pokemon (TestBreed);
+		UnityEngine.Debug.Assert (TestMon.MaxStrain >= 2);
 	}
 
 	[Test]
 	public void PokemonCalculatesHP ()
 	{
-		Pokemon TestMon = new Pokemon ();
-		TestMon.RefreshStats ();
-		UnityEngine.Debug.Assert (TestMon.HP == 4);
+		Pokemon.Breed TestBreed = A.Breed ().W_Endurance(1);
+		Pokemon TestMon = new Pokemon (TestBreed);
+		TestMon.GainEnduranceBonus ();
+		UnityEngine.Debug.Assert (TestMon.MaxHP == 4);
 	}
 
 	[Test]
 	public void PokemonCalculatesStrain ()
 	{
-		Pokemon TestMon = new Pokemon ();
-		TestMon.RefreshStats ();
-		UnityEngine.Debug.Assert (TestMon.Strain == 4);
+		Pokemon.Breed TestBreed = A.Breed ().W_Endurance(1);
+		Pokemon TestMon = new Pokemon (TestBreed);
+		TestMon.GainEnduranceBonus ();
+		UnityEngine.Debug.Assert (TestMon.MaxStrain == 4);
 	}
 
 	[Test]
@@ -244,8 +253,8 @@ public class PokemonDataTests
 		Pokemon.Breed TestBreed = A.Breed ().W_Types(ElementTypes.Fire, ElementTypes.Flying);
 		Debug.Log (TestBreed.Type1);
 		Debug.Log (TestBreed.Type2);
+//		Debug.Log (TestBreed.BaseAttack);
 		UnityEngine.Debug.Assert (TestBreed.Type1 == ElementTypes.Fire);
 		UnityEngine.Debug.Assert (TestBreed.Type2 == ElementTypes.Flying);
 	}
-
 }

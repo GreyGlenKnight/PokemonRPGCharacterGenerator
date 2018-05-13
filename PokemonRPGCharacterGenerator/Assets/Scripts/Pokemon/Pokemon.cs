@@ -26,7 +26,6 @@ public enum ElementTypes
 	Dark,
 	Steel,
 	Fairy
-
 }
 
 public class Pokemon
@@ -36,30 +35,58 @@ public class Pokemon
 	public int Maturity; //This represents the relevant total maturity
 	public int Rate; //Rate int is essentially doubled
 	public int XP;
-	public int HP;
-	public int Strain;
+	public int CurrentDamage;
+	public int CurrentStrainLost;
+	private Breed _Breed;
+	public EnduranceStat NumberOfEnduranceBonuses = new EnduranceStat (0);
+	public AttackStat NumberOfAttackBonuses = new AttackStat (0);
+	public DefenseStat NumberOfDefenseBonuses = new DefenseStat (0);
+	public SpecialAttackStat NumberOfSpecialAttackBonuses = new SpecialAttackStat (0);
+	public SpecialDefenseStat NumberOfSpecialDefenseBonuses = new SpecialDefenseStat (0);
+	public SpeedStat NumberOfSpeedBonuses = new SpeedStat (0);
 
-	public int Endurance = 1;
-	public int NumberOfEnduranceBonuses = 1;
 
-	public int Attack = 0;
-	public int NumberOfAttackBonuses = 0;
+	public EnduranceStat Endurance 
+	{		
+		get {return (EnduranceStat) NumberOfEnduranceBonuses.AddValues (_Breed.BaseEndurance);}
+	}
 
-	public int Defense = 0;
-	public int NumberOfDefenseBonuses = 0;
+	public AttackStat Attack 
+	{		
+		get {return (AttackStat) NumberOfAttackBonuses.AddValues (_Breed.BaseAttack);}
+	}
 
-	public int SpecialAttack = 0;
-	public int NumberOfSpecialAttackBonuses = 0;
+	public DefenseStat Defense 
+	{		
+		get {return (DefenseStat) NumberOfDefenseBonuses.AddValues (_Breed.BaseDefense);}
+	}
+		
+	public SpecialAttackStat SpecialAttack 
+	{		
+		get {return (SpecialAttackStat) NumberOfSpecialAttackBonuses.AddValues (_Breed.BaseSpecialAttack);}
+	}
 
-	public int SpecialDefense = 0;
-	public int NumberOfSpecialDefenseBonuses = 0;
+	public SpecialDefenseStat SpecialDefense 
+	{		
+		get {return (SpecialDefenseStat) NumberOfSpecialDefenseBonuses.AddValues (_Breed.BaseSpecialDefense);}
+	}
 
-	public int Speed = 0;
-	public int NumberOfSpeedBonuses = 0;
+	public SpeedStat Speed 
+	{		
+		get {return (SpeedStat) NumberOfSpeedBonuses.AddValues (_Breed.BaseSpeed);}
+	}
+
+	public int MaxHP 
+	{		
+		get {return ((Endurance.RawValue + Defense.RoundedValue) * 2);}
+	}
+
+	public int MaxStrain 
+	{		
+		get {return ((Endurance.RawValue + SpecialDefense.RoundedValue) * 2);}
+	}
 
 	public string HeldItem = "";
-
-	private Breed _Breed;
 
 	public ElementTypes Type1
 	{
@@ -104,31 +131,24 @@ public class Pokemon
 	}
 
 	public void GainEnduranceBonus ()
+
 	{
-		NumberOfEnduranceBonuses++;
-		RefreshStats ();
+		NumberOfEnduranceBonuses.RawValue++;
 	}
 
-	public void RefreshStats ()
-		//Attack = Breed.Attack;
-//		if (NumberOfAttackBonuses % 2 = 0)
-//		{			Attack++;}
-	{
-	Endurance = _Breed.BaseEndurance + NumberOfEnduranceBonuses;
-		HP = ((Endurance + Defense) * 2);
-		Strain = ((Endurance + SpecialDefense) * 2);
-	}
+
 
 	public class Breed 
 	{
 		public ElementTypes Type1 = ElementTypes.Nothing;
 		public ElementTypes Type2 = ElementTypes.Nothing;
-		public int BaseEndurance = 1;
-		public int BaseAttack = 0;
-		public int BaseDefense = 0;
-		public int BaseSpecialAttack = 0;
-		public int BaseSpecialDefense = 0;
-		public int BaseSpeed = 0;
+
+		public EnduranceStat BaseEndurance = new EnduranceStat (0);
+		public AttackStat BaseAttack = new AttackStat (0);
+		public DefenseStat BaseDefense = new DefenseStat (0);
+		public SpecialAttackStat BaseSpecialAttack = new SpecialAttackStat (0);
+		public SpecialDefenseStat BaseSpecialDefense = new SpecialDefenseStat (0);
+		public SpeedStat BaseSpeed = new SpeedStat (0);
 
 
 		public Breed ()

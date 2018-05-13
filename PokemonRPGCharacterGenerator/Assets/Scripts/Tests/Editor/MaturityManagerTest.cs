@@ -323,7 +323,7 @@ public class MaturityManagerTest
 //
 //            return breakTree.BreakLevel == 1;
 //        };
-        Debug.Log(maturityBonus.Count);
+//        Debug.Log(maturityBonus.Count);
         Debug.Assert(maturityBonus.Count == 56);
     }
 
@@ -345,7 +345,7 @@ public class MaturityManagerTest
         List<MaturityBonus> allEnhancerSlots = maturityBonus.FindAll(predicate);
 
 
-        Debug.Log (allEnhancerSlots.Count);
+//        Debug.Log (allEnhancerSlots.Count);
         Debug.Assert(allEnhancerSlots.Count == 4);
     }
 
