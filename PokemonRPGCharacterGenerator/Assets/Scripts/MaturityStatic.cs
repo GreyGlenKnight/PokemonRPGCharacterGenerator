@@ -33,9 +33,14 @@ public static class MaturityStatic
 		9,16,21,24,30,36
 	};
 
+	public static int[] BreakTreeRank0Bonuses = new int[]
+	{
+		0
+	};
+
     public static int[] BreakTreeRank1Bonuses = new int[]
     {
-        0,1,4,7,13
+        1,4,7,13
     };
 
     public static int[] BreakTreeRank2Bonuses = new int[]
@@ -48,7 +53,7 @@ public static class MaturityStatic
         18,21,27,33
     };
 
-    public static int[] BreakTreeSlot = new int[]
+    public static int[] ActiveTreeSlot = new int[]
     {
         0,3,6,18
     };
@@ -97,7 +102,12 @@ public static class MaturityStatic
             ToReturn.Add (new MaturityBonus.TradeSkill (
 				(Array.IndexOf (TradeSkillBonuses,Maturity)+1)));
 		}
-        if (BreakTreeRank1Bonuses.Contains(Maturity) == true)
+		if (BreakTreeRank0Bonuses.Contains(Maturity) == true)
+		{
+			ToReturn.Add(new MaturityBonus.BreakTree(
+				(Array.IndexOf (BreakTreeRank0Bonuses,Maturity)+1),0));
+		}
+		if (BreakTreeRank1Bonuses.Contains(Maturity) == true)
         {
             ToReturn.Add(new MaturityBonus.BreakTree(
 				(Array.IndexOf (BreakTreeRank1Bonuses,Maturity)+1),1));
@@ -112,10 +122,10 @@ public static class MaturityStatic
 			ToReturn.Add(new MaturityBonus.BreakTree(
 				(Array.IndexOf (BreakTreeRank3Bonuses,Maturity)+1),3));
 		}
-        if (BreakTreeSlot.Contains(Maturity) == true)
+        if (ActiveTreeSlot.Contains(Maturity) == true)
         {
 			ToReturn.Add(new MaturityBonus.ActiveSkill (
-				(Array.IndexOf (BreakTreeSlot,Maturity)+1)));
+				(Array.IndexOf (ActiveTreeSlot,Maturity)+1)));
         }
         if (SpecialTrainingBonuses.Contains(Maturity) == true)
         {

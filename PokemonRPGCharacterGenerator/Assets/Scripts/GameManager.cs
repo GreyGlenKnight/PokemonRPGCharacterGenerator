@@ -44,13 +44,13 @@ public class GameManager : MonoBehaviour
 	public static GameManager instance = null;
 	public NewTreeManager _NewTreeManager;
 	public SelectionState _SelectionState = SelectionState.Roll;
-	public PokemonClass CurrentPokemon;
+	public Pokemon CurrentPokemon;
 	public TreeRowState _TreeRowState;
-
-	public MaturityManager _MaturityManager;
-
+//	public Pokemon.Breed CharmanderBreed;
+//	public MaturityStatic _MaturityStatic;
 //	public List <SkillTree> SkillTrees = new List <SkillTree> (12);
 	public BadgeLevelGenerator _BadgeLevelGenerator;
+	public PokemonSheetDisplay _PokemonSheetDisplay;
 
 
 
@@ -65,16 +65,50 @@ public class GameManager : MonoBehaviour
 		{Destroy (gameObject);}
 		DontDestroyOnLoad(gameObject);
 
-		CurrentPokemon = new PokemonClass ();
-		_MaturityManager = new MaturityManager ();
+		Pokemon.Breed CharmanderBreed = new Pokemon.Breed (ElementTypes.Fire, ElementTypes.Nothing);
+		CharmanderBreed.BreedName = "Charmander";
+		CharmanderBreed.BaseEndurance.RawValue = 4;
+		CharmanderBreed.BaseAttack.RawValue = 5;
+		CharmanderBreed.BaseDefense.RawValue = 4;
+		CharmanderBreed.BaseSpecialAttack.RawValue = 5;
+		CharmanderBreed.BaseSpecialDefense.RawValue = 4;
+		CharmanderBreed.BaseSpeed.RawValue = 6;
+
+
+		CurrentPokemon = new Pokemon (CharmanderBreed);
+		CurrentPokemon.Maturity = 0;
+		CurrentPokemon.Level = 0;
+		CurrentPokemon.Rate = 5;
+		CurrentPokemon.NumberOfEnduranceBonuses = 3;
+		CurrentPokemon.NumberOfAttackBonuses = 1;
+		CurrentPokemon.NumberOfDefenseBonuses = 1;
+		CurrentPokemon.NumberOfSpecialAttackBonuses = 0;
+		CurrentPokemon.NumberOfSpecialDefenseBonuses = 2;
+		CurrentPokemon.NumberOfSpeedBonuses = 0;
+		CurrentPokemon.CurrentDamage = 0;
+		CurrentPokemon.CurrentStrainLost = 0;
 		_TreeRowState = TreeRowState.Adult;
 		ChangeVisibleTrees ();
+		CurrentPokemon.ApplyMaturityBonus (MaturityStatic.GetMaturityBonuses (CurrentPokemon.Maturity), CurrentPokemon.Maturity);
+		CurrentPokemon.UnlockTrees ();
+		Refresh ();
+		_PokemonSheetDisplay.SetTypes (CurrentPokemon, CharmanderBreed);
+		_PokemonSheetDisplay.SetNames (CurrentPokemon, CharmanderBreed);
+		_PokemonSheetDisplay.SetXP (CurrentPokemon);
+		_PokemonSheetDisplay.SetItem (CurrentPokemon);
+		_PokemonSheetDisplay.SetRate (CurrentPokemon);
+		_PokemonSheetDisplay.SetVitals (CurrentPokemon);
+		_PokemonSheetDisplay.SetStatBlock (CurrentPokemon, CharmanderBreed);
+		_PokemonSheetDisplay.SetPortrait  (CurrentPokemon);
 
+	_PokemonSheetDisplay.SetAbilities (CurrentPokemon);
+		//SetMoves()
+		//SetSkillRanks ()
 	}
 
 	public void Refresh ()
 	{
-		Debug.Log(_TreeRowState);
+//		Debug.Log(_TreeRowState);
 
 		switch (_TreeRowState)
 		{
@@ -138,8 +172,8 @@ public class GameManager : MonoBehaviour
 
 	public void TreeSwap (int TreeToChange, int TreeDataIndex)
 	{
-
-		_NewTreeManager.TreesToRoll [TreeToChange].ChangeDisplayData (	
+//		Debug.Log (TreeToChange+" "+TreeDataIndex);
+			_NewTreeManager.TreesToRoll [TreeToChange].ChangeDisplayData (	
 			TreeDataIndex,
 			CurrentPokemon._SkillTreeData [TreeDataIndex], 
 			CurrentPokemon._BonusesRemaining [TreeDataIndex].BonusesRemaining);

@@ -10,9 +10,9 @@ public class PokeballSpawner : MonoBehaviour
 	private int NumberSpawned;
 	public GameObject PortraitObject;
 	public GameObject Pokedoll;
-	public Sprite Charmander;
+//	public Sprite Charmander;
 	public Rigidbody2D CharCol;
-	public Canvas BGCanvas;
+//	public Canvas BGCanvas;
 	public Vector3 MousePosition;
 	public Vector3 NewPos;
 	public float RandomSize;

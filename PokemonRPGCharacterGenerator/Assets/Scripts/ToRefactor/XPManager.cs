@@ -9,7 +9,12 @@ public class XPManager : MonoBehaviour
 {
 
 	// Use this for initialization
-	public static int XP;
+	public static int XP
+	{		
+		get {return GameManager.instance.CurrentPokemon.XP;}
+	}
+
+
 	public Text XPText;
 	public string CurrentXP;
 
@@ -18,19 +23,21 @@ public class XPManager : MonoBehaviour
 		{
 			if (XP < 100) 
 			{
-				XP++;
+			GameManager.instance.CurrentPokemon.XP++;
+			GameManager.instance.CurrentPokemon.XP++;
 			}
 		}
-		public static bool SpendXP()
+		public static bool SpendXP ()
 		{
 
-			if (XP < 1) 
+			if (XP < 2) 
 			{
 				return false;
 			}
 		if (GameManager.instance._SelectionState == SelectionState.Roll) 
 			{
-				XP--;
+			GameManager.instance.CurrentPokemon.XP--;
+			GameManager.instance.CurrentPokemon.XP--;
 			GameManager.instance._SelectionState = SelectionState.Select;
 				return true;
 			}
@@ -42,10 +49,8 @@ public class XPManager : MonoBehaviour
 
 	{
 		if (XP < 0)
-		{XP = 0;}
+		{GameManager.instance.CurrentPokemon.XP = 0;}
 		CurrentXP = XP.ToString ();
 		XPText.text = CurrentXP;
-
-		
 	}
 }

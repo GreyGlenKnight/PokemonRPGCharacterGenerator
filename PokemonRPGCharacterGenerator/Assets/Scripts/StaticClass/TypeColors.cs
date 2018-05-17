@@ -4,6 +4,7 @@ using UnityEngine;
 
 public static class TypeColors 
 {
+	public static Color NothingColor = new Color (1f, 1f, 1f, .25f);
     public static Color NormalColor = new Color(0.647f, 0.647f, 0.459f);
     public static Color FireColor = new Color(0.929f, 0.486f, 0.169f);
     public static Color WaterColor = new Color(0.380f, 0.545f, 0.937f);
@@ -23,24 +24,71 @@ public static class TypeColors
     public static Color SteelColor = new Color(0.702f, 0.702f, 0.804f);
     public static Color FairyColor = new Color(0.906f, 0.580f, 0.906f);
 
-    public static string  Normal = "Normal";
-    public static string  Fire = "Fire";
-    public static string  Water = "Water";
-    public static string  Electric = "Electric";
-    public static string  Grass = "Grass";
-    public static string  Ice = "Ice";
-    public static string  Fighting = "Fighting";
-    public static string  Poison = "Poison";
-    public static string  Ground = "Ground";
-    public static string  Flying = "Flying";
-    public static string  Psychic = "Psychic";
-    public static string  Bug = "Bug";
-    public static string  Rock = "Rock";
-    public static string  Ghost = "Ghost";
-    public static string  Dragon = "Dragon";
-    public static string  Dark = "Dark";
-    public static string  Steel = "Steel";
-    public static string  Fairy = "Fairy";
+	public static string Nothing = "";
+    public static string Normal = "Normal";
+    public static string Fire = "Fire";
+    public static string Water = "Water";
+    public static string Electric = "Electric";
+    public static string Grass = "Grass";
+    public static string Ice = "Ice";
+    public static string Fighting = "Fighting";
+    public static string Poison = "Poison";
+    public static string Ground = "Ground";
+    public static string Flying = "Flying";
+    public static string Psychic = "Psychic";
+    public static string Bug = "Bug";
+    public static string Rock = "Rock";
+    public static string Ghost = "Ghost";
+    public static string Dragon = "Dragon";
+    public static string Dark = "Dark";
+    public static string Steel = "Steel";
+    public static string Fairy = "Fairy";
+
+	public static string [] TypeStringList = new string []
+	{
+		Nothing,
+		Normal,
+		Fire,
+		Water,
+		Electric,
+		Grass,
+		Ice,
+		Fighting,
+		Poison,
+		Ground,
+		Flying,
+		Psychic,
+		Bug,
+		Rock,
+		Ghost,
+		Dragon,
+		Dark,
+		Steel,
+		Fairy
+	};
+
+	public static Color [] TypeColorList = new Color []
+	{
+		NothingColor,
+		NormalColor,
+		FireColor,
+		WaterColor,
+		ElectricColor,
+		GrassColor,
+		IceColor,
+		FightingColor,
+		PoisonColor,
+		GroundColor,
+		FlyingColor,
+		PsychicColor,
+		BugColor,
+		RockColor,
+		GhostColor,
+		DragonColor,
+		DarkColor,
+		SteelColor,
+		FairyColor
+	};
 
     public static Color RGBColor(float r, float g, float b)
     {
@@ -55,5 +103,4 @@ public static class TypeColors
         b /= 255f;
         return new Color(r, g, b);
     }
-
 }

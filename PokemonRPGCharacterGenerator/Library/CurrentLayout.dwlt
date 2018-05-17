@@ -13,14 +13,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: -25
+    x: 5
     y: 44
     width: 1275
     height: 697
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -106,10 +106,10 @@ MonoBehaviour:
     y: 30
     width: 1275
     height: 647
-  m_MinSize: {x: 787, y: 492}
+  m_MinSize: {x: 783, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 92
+  controlID: 179
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -130,10 +130,10 @@ MonoBehaviour:
     y: 0
     width: 998
     height: 647
-  m_MinSize: {x: 510, y: 492}
+  m_MinSize: {x: 506, y: 492}
   m_MaxSize: {x: 14006, y: 14042}
   vertical: 1
-  controlID: 93
+  controlID: 118
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -155,10 +155,10 @@ MonoBehaviour:
     y: 0
     width: 998
     height: 376
-  m_MinSize: {x: 510, y: 221}
-  m_MaxSize: {x: 12010, y: 4021}
+  m_MinSize: {x: 506, y: 221}
+  m_MaxSize: {x: 12006, y: 4021}
   vertical: 0
-  controlID: 94
+  controlID: 119
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -203,8 +203,8 @@ MonoBehaviour:
     y: 0
     width: 323
     height: 376
-  m_MinSize: {x: 104, y: 121}
-  m_MaxSize: {x: 4004, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -258,7 +258,7 @@ MonoBehaviour:
   m_MinSize: {x: 336, y: 271}
   m_MaxSize: {x: 14006, y: 10021}
   vertical: 0
-  controlID: 165
+  controlID: 96
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -302,8 +302,8 @@ MonoBehaviour:
     y: 0
     width: 580
     height: 271
-  m_MinSize: {x: 104, y: 121}
-  m_MaxSize: {x: 4004, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -355,8 +355,8 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 93
+    x: 22
+    y: 142
     width: 360
     height: 355
   m_PersistentViewDataDictionary: {fileID: 0}
@@ -425,9 +425,9 @@ MonoBehaviour:
     - id: '[/Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll][suite]'
       name: Assembly-CSharp-Editor.dll
       fullName: /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
-      resultStatus: 1
-      duration: 1.478766
-      messages: 
+      resultStatus: 2
+      duration: 1.157257
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -438,7 +438,7 @@ MonoBehaviour:
       name: MaturityManagerTest
       fullName: MaturityManagerTest
       resultStatus: 1
-      duration: 0.618378
+      duration: 0.5447
       messages: 
       output: 
       stacktrace: 
@@ -449,8 +449,8 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][MaturityManagerTest.Break_Level_Is_1_For_BreakTree_At_Level_4]'
       name: Break_Level_Is_1_For_BreakTree_At_Level_4
       fullName: MaturityManagerTest.Break_Level_Is_1_For_BreakTree_At_Level_4
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.011435
       messages: 
       output: 
       stacktrace: 
@@ -461,8 +461,8 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][MaturityManagerTest.Break_Level_Is_2_For_BreakTree_At_Level_15]'
       name: Break_Level_Is_2_For_BreakTree_At_Level_15
       fullName: MaturityManagerTest.Break_Level_Is_2_For_BreakTree_At_Level_15
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.011104
       messages: 
       output: 
       stacktrace: 
@@ -474,7 +474,7 @@ MonoBehaviour:
       name: CanGetMaturityBonusForMaturity
       fullName: MaturityManagerTest.CanGetMaturityBonusForMaturity
       resultStatus: 1
-      duration: 0.012362
+      duration: 0.01265
       messages: 
       output: 
       stacktrace: 
@@ -486,7 +486,7 @@ MonoBehaviour:
       name: CanReturnDifferentBonusTypes
       fullName: MaturityManagerTest.CanReturnDifferentBonusTypes
       resultStatus: 1
-      duration: 0.009003
+      duration: 0.010697
       messages: 
       output: 
       stacktrace: 
@@ -497,8 +497,8 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][MaturityManagerTest.Does_Not_Return_Special_Training_At_33]'
       name: Does_Not_Return_Special_Training_At_33
       fullName: MaturityManagerTest.Does_Not_Return_Special_Training_At_33
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.009493
       messages: 
       output: 
       stacktrace: 
@@ -509,8 +509,8 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][MaturityManagerTest.Does_Not_Returns_Enhancer_Skill_At_Level_16]'
       name: Does_Not_Returns_Enhancer_Skill_At_Level_16
       fullName: MaturityManagerTest.Does_Not_Returns_Enhancer_Skill_At_Level_16
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.011065
       messages: 
       output: 
       stacktrace: 
@@ -521,8 +521,8 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][MaturityManagerTest.Dont_Return_Break_Tree_At_Level_2]'
       name: Dont_Return_Break_Tree_At_Level_2
       fullName: MaturityManagerTest.Dont_Return_Break_Tree_At_Level_2
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.009597
       messages: 
       output: 
       stacktrace: 
@@ -534,7 +534,7 @@ MonoBehaviour:
       name: DontReturnAbilitySlotBonusAtMaturity1
       fullName: MaturityManagerTest.DontReturnAbilitySlotBonusAtMaturity1
       resultStatus: 1
-      duration: 0.046059
+      duration: 0.019309
       messages: 
       output: 
       stacktrace: 
@@ -546,7 +546,7 @@ MonoBehaviour:
       name: DontReturnNatureBonusMaturityBonusAtLevel0
       fullName: MaturityManagerTest.DontReturnNatureBonusMaturityBonusAtLevel0
       resultStatus: 1
-      duration: 0.014102
+      duration: 0.010187
       messages: 
       output: 
       stacktrace: 
@@ -558,7 +558,7 @@ MonoBehaviour:
       name: DontReturnSTABBonusMaturityBonusAtLevel6
       fullName: MaturityManagerTest.DontReturnSTABBonusMaturityBonusAtLevel6
       resultStatus: 1
-      duration: 0.009037
+      duration: 0.009567
       messages: 
       output: 
       stacktrace: 
@@ -570,7 +570,7 @@ MonoBehaviour:
       name: DontReturnTradeSkillMaturityBonusAtMaturity1
       fullName: MaturityManagerTest.DontReturnTradeSkillMaturityBonusAtMaturity1
       resultStatus: 1
-      duration: 0.012567
+      duration: 0.010101
       messages: 
       output: 
       stacktrace: 
@@ -581,8 +581,8 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][MaturityManagerTest.Gain_A_Total_Of_4_Enhancers]'
       name: Gain_A_Total_Of_4_Enhancers
       fullName: MaturityManagerTest.Gain_A_Total_Of_4_Enhancers
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.010727
       messages: 
       output: 
       stacktrace: 
@@ -593,8 +593,8 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][MaturityManagerTest.Maturity_Bonus_Contains_Description]'
       name: Maturity_Bonus_Contains_Description
       fullName: MaturityManagerTest.Maturity_Bonus_Contains_Description
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.009663
       messages: 
       output: 
       stacktrace: 
@@ -605,10 +605,12 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][MaturityManagerTest.Maturity_Bonus_Have_Different_Descriptions]'
       name: Maturity_Bonus_Have_Different_Descriptions
       fullName: MaturityManagerTest.Maturity_Bonus_Have_Different_Descriptions
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.020182
       messages: 
-      output: 
+      output: 'MaturityBonus+AbilitySlot1MaturityBonus+BreakTree11
+
+'
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -617,10 +619,14 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][MaturityManagerTest.Maturity_Bonuses_Track_Their_Index]'
       name: Maturity_Bonuses_Track_Their_Index
       fullName: MaturityManagerTest.Maturity_Bonuses_Track_Their_Index
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.010667
       messages: 
-      output: 
+      output: 'MaturityBonus+BonusLevel1
+
+        MaturityBonus+BonusLevel2
+
+'
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -630,7 +636,7 @@ MonoBehaviour:
       name: NoBonusesGainedAfter41
       fullName: MaturityManagerTest.NoBonusesGainedAfter41
       resultStatus: 1
-      duration: 0.01436
+      duration: 0.0094
       messages: 
       output: 
       stacktrace: 
@@ -641,8 +647,8 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][MaturityManagerTest.Return_Active_Tree_At_Level_0]'
       name: Return_Active_Tree_At_Level_0
       fullName: MaturityManagerTest.Return_Active_Tree_At_Level_0
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.01146
       messages: 
       output: 
       stacktrace: 
@@ -653,8 +659,8 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][MaturityManagerTest.Return_Special_Training_At_Level_6]'
       name: Return_Special_Training_At_Level_6
       fullName: MaturityManagerTest.Return_Special_Training_At_Level_6
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.010243
       messages: 
       output: 
       stacktrace: 
@@ -666,7 +672,7 @@ MonoBehaviour:
       name: ReturnAbilitySlotBonusAtMaturity0
       fullName: MaturityManagerTest.ReturnAbilitySlotBonusAtMaturity0
       resultStatus: 1
-      duration: 0.008586
+      duration: 0.011677
       messages: 
       output: 
       stacktrace: 
@@ -678,7 +684,7 @@ MonoBehaviour:
       name: ReturnBonusForEveryMaturityRank
       fullName: MaturityManagerTest.ReturnBonusForEveryMaturityRank
       resultStatus: 1
-      duration: 0.014732
+      duration: 0.008618
       messages: 
       output: 
       stacktrace: 
@@ -690,7 +696,7 @@ MonoBehaviour:
       name: ReturnBonusLevelMaturityBonusAtLevel2
       fullName: MaturityManagerTest.ReturnBonusLevelMaturityBonusAtLevel2
       resultStatus: 1
-      duration: 0.015731
+      duration: 0.009027
       messages: 
       output: 
       stacktrace: 
@@ -702,7 +708,7 @@ MonoBehaviour:
       name: ReturnBonusLevelMaturityBonusAtLevel5
       fullName: MaturityManagerTest.ReturnBonusLevelMaturityBonusAtLevel5
       resultStatus: 1
-      duration: 0.00858
+      duration: 0.008792
       messages: 
       output: 
       stacktrace: 
@@ -713,8 +719,8 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][MaturityManagerTest.Returns_A_Total_Of_55_Bonuses]'
       name: Returns_A_Total_Of_55_Bonuses
       fullName: MaturityManagerTest.Returns_A_Total_Of_55_Bonuses
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.021622
       messages: 
       output: 
       stacktrace: 
@@ -725,8 +731,8 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][MaturityManagerTest.Returns_Break_Skill_At_Level_15]'
       name: Returns_Break_Skill_At_Level_15
       fullName: MaturityManagerTest.Returns_Break_Skill_At_Level_15
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.009432
       messages: 
       output: 
       stacktrace: 
@@ -737,8 +743,8 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][MaturityManagerTest.Returns_Break_Tree_On_Level_0]'
       name: Returns_Break_Tree_On_Level_0
       fullName: MaturityManagerTest.Returns_Break_Tree_On_Level_0
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.009346
       messages: 
       output: 
       stacktrace: 
@@ -750,7 +756,7 @@ MonoBehaviour:
       name: ReturnSTABBonusMaturityBonusAtLevel4
       fullName: MaturityManagerTest.ReturnSTABBonusMaturityBonusAtLevel4
       resultStatus: 1
-      duration: 0.008777
+      duration: 0.009855
       messages: 
       output: 
       stacktrace: 
@@ -762,7 +768,7 @@ MonoBehaviour:
       name: ReturnTypeAtLevel4IsNotBonusLevel
       fullName: MaturityManagerTest.ReturnTypeAtLevel4IsNotBonusLevel
       resultStatus: 1
-      duration: 0.008313
+      duration: 0.008982
       messages: 
       output: 
       stacktrace: 
@@ -773,23 +779,74 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][PokemonDataTests][suite]'
       name: PokemonDataTests
       fullName: PokemonDataTests
-      resultStatus: 1
-      duration: 0.772423
-      messages: 
+      resultStatus: 2
+      duration: 0.591926
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
       isSuite: 1
-    - id: '[Assembly-CSharp-Editor][PokemonDataTests.CanCreatePokemon]'
-      name: CanCreatePokemon
-      fullName: PokemonDataTests.CanCreatePokemon
+    - id: '[Assembly-CSharp-Editor][PokemonDataTests.BreedBuildsDualtype]'
+      name: BreedBuildsDualtype
+      fullName: PokemonDataTests.BreedBuildsDualtype
       resultStatus: 1
-      duration: 0.021108
+      duration: 0.013555
+      messages: 
+      output: 'Fire
+
+        Flying
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Assembly-CSharp-Editor][PokemonDataTests.BreedBuildsMonotype]'
+      name: BreedBuildsMonotype
+      fullName: PokemonDataTests.BreedBuildsMonotype
+      resultStatus: 1
+      duration: 0.008798
       messages: 
       output: 
       stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Assembly-CSharp-Editor][PokemonDataTests.CanCreatePokemon]'
+      name: CanCreatePokemon
+      fullName: PokemonDataTests.CanCreatePokemon
+      resultStatus: 2
+      duration: 0.015508
+      messages: 'System.NullReferenceException : Object reference not set to an instance
+        of an object'
+      output: '1642
+
+        Gained Ability Slot :0
+
+        this breaks due to having 5 trees?
+
+'
+      stacktrace: "  at GameManager.TreeSwap (Int32 TreeToChange, Int32 TreeDataIndex)
+        [0x00012] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:144
+        \n  at GameManager.Refresh () [0x00022] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:84
+        \n  at Pokemon.SwitchTrees () [0x0000c] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:258
+        \n  at Pokemon.UnlockTrees () [0x00144] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:346
+        \n  at Pokemon.BreakTree () [0x00002] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:274
+        \n  at MaturityBonus+BreakTree.ApplyBonus (.Pokemon _Pokemon) [0x00002] in
+        /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/MaturityBonus.cs:36
+        \n  at Pokemon.ApplyMaturityBonus (System.Collections.Generic.List`1 MBonus,
+        Int32 maturity) [0x0001d] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:239
+        \n  at Pokemon..ctor () [0x002b0] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:194
+        \n  at PokemonDataTests.CanCreatePokemon () [0x00001] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Tests/Editor/PokemonDataTests.cs:15
+        \n  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke
+        (object,object[],System.Exception&)\n  at System.Reflection.MonoMethod.Invoke
+        (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder,
+        System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d0]
+        in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Reflection/MonoMethod.cs:222 "
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -797,11 +854,34 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][PokemonDataTests.HasMaturity]'
       name: HasMaturity
       fullName: PokemonDataTests.HasMaturity
-      resultStatus: 1
-      duration: 0.008569
-      messages: 
-      output: 
-      stacktrace: 
+      resultStatus: 2
+      duration: 0.014302
+      messages: 'System.NullReferenceException : Object reference not set to an instance
+        of an object'
+      output: '714
+
+        Gained Ability Slot :0
+
+        this breaks due to having 5 trees?
+
+'
+      stacktrace: "  at GameManager.TreeSwap (Int32 TreeToChange, Int32 TreeDataIndex)
+        [0x00012] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:144
+        \n  at GameManager.Refresh () [0x00022] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:84
+        \n  at Pokemon.SwitchTrees () [0x0000c] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:258
+        \n  at Pokemon.UnlockTrees () [0x00144] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:346
+        \n  at Pokemon.BreakTree () [0x00002] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:274
+        \n  at MaturityBonus+BreakTree.ApplyBonus (.Pokemon _Pokemon) [0x00002] in
+        /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/MaturityBonus.cs:36
+        \n  at Pokemon.ApplyMaturityBonus (System.Collections.Generic.List`1 MBonus,
+        Int32 maturity) [0x0001d] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:239
+        \n  at Pokemon..ctor () [0x002b0] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:194
+        \n  at PokemonDataTests.HasMaturity () [0x00001] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Tests/Editor/PokemonDataTests.cs:66
+        \n  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke
+        (object,object[],System.Exception&)\n  at System.Reflection.MonoMethod.Invoke
+        (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder,
+        System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d0]
+        in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Reflection/MonoMethod.cs:222 "
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -809,11 +889,34 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][PokemonDataTests.HasRate]'
       name: HasRate
       fullName: PokemonDataTests.HasRate
-      resultStatus: 1
-      duration: 0.014857
-      messages: 
-      output: 
-      stacktrace: 
+      resultStatus: 2
+      duration: 0.016838
+      messages: 'System.NullReferenceException : Object reference not set to an instance
+        of an object'
+      output: '2999
+
+        Gained Ability Slot :0
+
+        this breaks due to having 5 trees?
+
+'
+      stacktrace: "  at GameManager.TreeSwap (Int32 TreeToChange, Int32 TreeDataIndex)
+        [0x00012] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:144
+        \n  at GameManager.Refresh () [0x00022] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:84
+        \n  at Pokemon.SwitchTrees () [0x0000c] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:258
+        \n  at Pokemon.UnlockTrees () [0x00144] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:346
+        \n  at Pokemon.BreakTree () [0x00002] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:274
+        \n  at MaturityBonus+BreakTree.ApplyBonus (.Pokemon _Pokemon) [0x00002] in
+        /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/MaturityBonus.cs:36
+        \n  at Pokemon.ApplyMaturityBonus (System.Collections.Generic.List`1 MBonus,
+        Int32 maturity) [0x0001d] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:239
+        \n  at Pokemon..ctor () [0x002b0] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:194
+        \n  at PokemonDataTests.HasRate () [0x00001] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Tests/Editor/PokemonDataTests.cs:73
+        \n  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke
+        (object,object[],System.Exception&)\n  at System.Reflection.MonoMethod.Invoke
+        (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder,
+        System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d0]
+        in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Reflection/MonoMethod.cs:222 "
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -821,11 +924,34 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][PokemonDataTests.HasXP]'
       name: HasXP
       fullName: PokemonDataTests.HasXP
-      resultStatus: 1
-      duration: 0.008809
-      messages: 
-      output: 
-      stacktrace: 
+      resultStatus: 2
+      duration: 0.013987
+      messages: 'System.NullReferenceException : Object reference not set to an instance
+        of an object'
+      output: '1505
+
+        Gained Ability Slot :0
+
+        this breaks due to having 5 trees?
+
+'
+      stacktrace: "  at GameManager.TreeSwap (Int32 TreeToChange, Int32 TreeDataIndex)
+        [0x00012] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:144
+        \n  at GameManager.Refresh () [0x00022] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:84
+        \n  at Pokemon.SwitchTrees () [0x0000c] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:258
+        \n  at Pokemon.UnlockTrees () [0x00144] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:346
+        \n  at Pokemon.BreakTree () [0x00002] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:274
+        \n  at MaturityBonus+BreakTree.ApplyBonus (.Pokemon _Pokemon) [0x00002] in
+        /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/MaturityBonus.cs:36
+        \n  at Pokemon.ApplyMaturityBonus (System.Collections.Generic.List`1 MBonus,
+        Int32 maturity) [0x0001d] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:239
+        \n  at Pokemon..ctor () [0x002b0] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:194
+        \n  at PokemonDataTests.HasXP () [0x00001] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Tests/Editor/PokemonDataTests.cs:59
+        \n  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke
+        (object,object[],System.Exception&)\n  at System.Reflection.MonoMethod.Invoke
+        (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder,
+        System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d0]
+        in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Reflection/MonoMethod.cs:222 "
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -833,11 +959,34 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][PokemonDataTests.MaturityChangesBasedOnRate]'
       name: MaturityChangesBasedOnRate
       fullName: PokemonDataTests.MaturityChangesBasedOnRate
-      resultStatus: 1
-      duration: 0.009159
-      messages: 
-      output: 
-      stacktrace: 
+      resultStatus: 2
+      duration: 0.013817
+      messages: 'System.NullReferenceException : Object reference not set to an instance
+        of an object'
+      output: '613
+
+        Gained Ability Slot :0
+
+        this breaks due to having 5 trees?
+
+'
+      stacktrace: "  at GameManager.TreeSwap (Int32 TreeToChange, Int32 TreeDataIndex)
+        [0x00012] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:144
+        \n  at GameManager.Refresh () [0x00022] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:84
+        \n  at Pokemon.SwitchTrees () [0x0000c] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:258
+        \n  at Pokemon.UnlockTrees () [0x00144] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:346
+        \n  at Pokemon.BreakTree () [0x00002] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:274
+        \n  at MaturityBonus+BreakTree.ApplyBonus (.Pokemon _Pokemon) [0x00002] in
+        /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/MaturityBonus.cs:36
+        \n  at Pokemon.ApplyMaturityBonus (System.Collections.Generic.List`1 MBonus,
+        Int32 maturity) [0x0001d] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:239
+        \n  at Pokemon..ctor () [0x002b0] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:194
+        \n  at PokemonDataTests.MaturityChangesBasedOnRate () [0x00001] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Tests/Editor/PokemonDataTests.cs:116
+        \n  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke
+        (object,object[],System.Exception&)\n  at System.Reflection.MonoMethod.Invoke
+        (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder,
+        System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d0]
+        in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Reflection/MonoMethod.cs:222 "
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -845,11 +994,140 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][PokemonDataTests.MaturityContinuesToChangeBasedOnRate]'
       name: MaturityContinuesToChangeBasedOnRate
       fullName: PokemonDataTests.MaturityContinuesToChangeBasedOnRate
-      resultStatus: 1
-      duration: 0.008391
-      messages: 
-      output: 
-      stacktrace: 
+      resultStatus: 2
+      duration: 0.015647
+      messages: 'System.NullReferenceException : Object reference not set to an instance
+        of an object'
+      output: '1995
+
+        Gained Ability Slot :0
+
+        this breaks due to having 5 trees?
+
+'
+      stacktrace: "  at GameManager.TreeSwap (Int32 TreeToChange, Int32 TreeDataIndex)
+        [0x00012] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:144
+        \n  at GameManager.Refresh () [0x00022] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:84
+        \n  at Pokemon.SwitchTrees () [0x0000c] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:258
+        \n  at Pokemon.UnlockTrees () [0x00144] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:346
+        \n  at Pokemon.BreakTree () [0x00002] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:274
+        \n  at MaturityBonus+BreakTree.ApplyBonus (.Pokemon _Pokemon) [0x00002] in
+        /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/MaturityBonus.cs:36
+        \n  at Pokemon.ApplyMaturityBonus (System.Collections.Generic.List`1 MBonus,
+        Int32 maturity) [0x0001d] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:239
+        \n  at Pokemon..ctor () [0x002b0] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:194
+        \n  at PokemonDataTests.MaturityContinuesToChangeBasedOnRate () [0x00001]
+        in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Tests/Editor/PokemonDataTests.cs:130
+        \n  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke
+        (object,object[],System.Exception&)\n  at System.Reflection.MonoMethod.Invoke
+        (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder,
+        System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d0]
+        in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Reflection/MonoMethod.cs:222 "
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Assembly-CSharp-Editor][PokemonDataTests.PokemonCalculatesEndurance]'
+      name: PokemonCalculatesEndurance
+      fullName: PokemonDataTests.PokemonCalculatesEndurance
+      resultStatus: 2
+      duration: 0.014502
+      messages: 'System.NullReferenceException : Object reference not set to an instance
+        of an object'
+      output: '1934
+
+        Gained Ability Slot :0
+
+        this breaks due to having 5 trees?
+
+'
+      stacktrace: "  at GameManager.TreeSwap (Int32 TreeToChange, Int32 TreeDataIndex)
+        [0x00012] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:144
+        \n  at GameManager.Refresh () [0x00022] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:84
+        \n  at Pokemon.SwitchTrees () [0x0000c] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:258
+        \n  at Pokemon.UnlockTrees () [0x00144] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:346
+        \n  at Pokemon.BreakTree () [0x00002] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:274
+        \n  at MaturityBonus+BreakTree.ApplyBonus (.Pokemon _Pokemon) [0x00002] in
+        /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/MaturityBonus.cs:36
+        \n  at Pokemon.ApplyMaturityBonus (System.Collections.Generic.List`1 MBonus,
+        Int32 maturity) [0x0001d] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:239
+        \n  at Pokemon..ctor (.Breed breed) [0x002aa] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:154
+        \n  at PokemonDataTests.PokemonCalculatesEndurance () [0x00013] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Tests/Editor/PokemonDataTests.cs:158
+        \n  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke
+        (object,object[],System.Exception&)\n  at System.Reflection.MonoMethod.Invoke
+        (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder,
+        System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d0]
+        in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Reflection/MonoMethod.cs:222 "
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Assembly-CSharp-Editor][PokemonDataTests.PokemonCalculatesHP]'
+      name: PokemonCalculatesHP
+      fullName: PokemonDataTests.PokemonCalculatesHP
+      resultStatus: 2
+      duration: 0.013126
+      messages: 'System.NullReferenceException : Object reference not set to an instance
+        of an object'
+      output: '437
+
+        Gained Ability Slot :0
+
+        this breaks due to having 5 trees?
+
+'
+      stacktrace: "  at GameManager.TreeSwap (Int32 TreeToChange, Int32 TreeDataIndex)
+        [0x00012] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:144
+        \n  at GameManager.Refresh () [0x00022] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:84
+        \n  at Pokemon.SwitchTrees () [0x0000c] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:258
+        \n  at Pokemon.UnlockTrees () [0x00144] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:346
+        \n  at Pokemon.BreakTree () [0x00002] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:274
+        \n  at MaturityBonus+BreakTree.ApplyBonus (.Pokemon _Pokemon) [0x00002] in
+        /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/MaturityBonus.cs:36
+        \n  at Pokemon.ApplyMaturityBonus (System.Collections.Generic.List`1 MBonus,
+        Int32 maturity) [0x0001d] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:239
+        \n  at Pokemon..ctor (.Breed breed) [0x002aa] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:154
+        \n  at PokemonDataTests.PokemonCalculatesHP () [0x00013] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Tests/Editor/PokemonDataTests.cs:183
+        \n  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke
+        (object,object[],System.Exception&)\n  at System.Reflection.MonoMethod.Invoke
+        (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder,
+        System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d0]
+        in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Reflection/MonoMethod.cs:222 "
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Assembly-CSharp-Editor][PokemonDataTests.PokemonCalculatesStrain]'
+      name: PokemonCalculatesStrain
+      fullName: PokemonDataTests.PokemonCalculatesStrain
+      resultStatus: 2
+      duration: 0.012211
+      messages: 'System.NullReferenceException : Object reference not set to an instance
+        of an object'
+      output: '923
+
+        Gained Ability Slot :0
+
+        this breaks due to having 5 trees?
+
+'
+      stacktrace: "  at GameManager.TreeSwap (Int32 TreeToChange, Int32 TreeDataIndex)
+        [0x00012] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:144
+        \n  at GameManager.Refresh () [0x00022] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:84
+        \n  at Pokemon.SwitchTrees () [0x0000c] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:258
+        \n  at Pokemon.UnlockTrees () [0x00144] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:346
+        \n  at Pokemon.BreakTree () [0x00002] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:274
+        \n  at MaturityBonus+BreakTree.ApplyBonus (.Pokemon _Pokemon) [0x00002] in
+        /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/MaturityBonus.cs:36
+        \n  at Pokemon.ApplyMaturityBonus (System.Collections.Generic.List`1 MBonus,
+        Int32 maturity) [0x0001d] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:239
+        \n  at Pokemon..ctor (.Breed breed) [0x002aa] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:154
+        \n  at PokemonDataTests.PokemonCalculatesStrain () [0x00013] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Tests/Editor/PokemonDataTests.cs:192
+        \n  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke
+        (object,object[],System.Exception&)\n  at System.Reflection.MonoMethod.Invoke
+        (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder,
+        System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d0]
+        in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Reflection/MonoMethod.cs:222 "
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -857,11 +1135,107 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][PokemonDataTests.PokemonCanLevelUp]'
       name: PokemonCanLevelUp
       fullName: PokemonDataTests.PokemonCanLevelUp
-      resultStatus: 1
-      duration: 0.013963
-      messages: 
-      output: 
-      stacktrace: 
+      resultStatus: 2
+      duration: 0.015003
+      messages: 'System.NullReferenceException : Object reference not set to an instance
+        of an object'
+      output: '1064
+
+        Gained Ability Slot :0
+
+        this breaks due to having 5 trees?
+
+'
+      stacktrace: "  at GameManager.TreeSwap (Int32 TreeToChange, Int32 TreeDataIndex)
+        [0x00012] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:144
+        \n  at GameManager.Refresh () [0x00022] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:84
+        \n  at Pokemon.SwitchTrees () [0x0000c] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:258
+        \n  at Pokemon.UnlockTrees () [0x00144] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:346
+        \n  at Pokemon.BreakTree () [0x00002] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:274
+        \n  at MaturityBonus+BreakTree.ApplyBonus (.Pokemon _Pokemon) [0x00002] in
+        /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/MaturityBonus.cs:36
+        \n  at Pokemon.ApplyMaturityBonus (System.Collections.Generic.List`1 MBonus,
+        Int32 maturity) [0x0001d] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:239
+        \n  at Pokemon..ctor () [0x002b0] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:194
+        \n  at PokemonBuilder.Build () [0x00020] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Tests/Editor/Builders/PokemonBuilder.cs:20
+        \n  at TestDataBuilder`1[Pokemon].op_Implicit (.TestDataBuilder`1 builder)
+        [0x00002] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Tests/Editor/Builders/TestDataBuilder.cs:9
+        \n  at PokemonDataTests.PokemonCanLevelUp () [0x00012] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Tests/Editor/PokemonDataTests.cs:80
+        \n  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke
+        (object,object[],System.Exception&)\n  at System.Reflection.MonoMethod.Invoke
+        (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder,
+        System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d0]
+        in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Reflection/MonoMethod.cs:222 "
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Assembly-CSharp-Editor][PokemonDataTests.PokemonHasAttack]'
+      name: PokemonHasAttack
+      fullName: PokemonDataTests.PokemonHasAttack
+      resultStatus: 2
+      duration: 0.014319
+      messages: 'System.NullReferenceException : Object reference not set to an instance
+        of an object'
+      output: '3634
+
+        Gained Ability Slot :0
+
+        this breaks due to having 5 trees?
+
+'
+      stacktrace: "  at GameManager.TreeSwap (Int32 TreeToChange, Int32 TreeDataIndex)
+        [0x00012] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:144
+        \n  at GameManager.Refresh () [0x00022] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:84
+        \n  at Pokemon.SwitchTrees () [0x0000c] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:258
+        \n  at Pokemon.UnlockTrees () [0x00144] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:346
+        \n  at Pokemon.BreakTree () [0x00002] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:274
+        \n  at MaturityBonus+BreakTree.ApplyBonus (.Pokemon _Pokemon) [0x00002] in
+        /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/MaturityBonus.cs:36
+        \n  at Pokemon.ApplyMaturityBonus (System.Collections.Generic.List`1 MBonus,
+        Int32 maturity) [0x0001d] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:239
+        \n  at Pokemon..ctor () [0x002b0] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:194
+        \n  at PokemonDataTests.PokemonHasAttack () [0x00001] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Tests/Editor/PokemonDataTests.cs:200
+        \n  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke
+        (object,object[],System.Exception&)\n  at System.Reflection.MonoMethod.Invoke
+        (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder,
+        System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d0]
+        in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Reflection/MonoMethod.cs:222 "
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Assembly-CSharp-Editor][PokemonDataTests.PokemonHasDefense]'
+      name: PokemonHasDefense
+      fullName: PokemonDataTests.PokemonHasDefense
+      resultStatus: 2
+      duration: 0.013458
+      messages: 'System.NullReferenceException : Object reference not set to an instance
+        of an object'
+      output: '1895
+
+        Gained Ability Slot :0
+
+        this breaks due to having 5 trees?
+
+'
+      stacktrace: "  at GameManager.TreeSwap (Int32 TreeToChange, Int32 TreeDataIndex)
+        [0x00012] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:144
+        \n  at GameManager.Refresh () [0x00022] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:84
+        \n  at Pokemon.SwitchTrees () [0x0000c] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:258
+        \n  at Pokemon.UnlockTrees () [0x00144] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:346
+        \n  at Pokemon.BreakTree () [0x00002] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:274
+        \n  at MaturityBonus+BreakTree.ApplyBonus (.Pokemon _Pokemon) [0x00002] in
+        /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/MaturityBonus.cs:36
+        \n  at Pokemon.ApplyMaturityBonus (System.Collections.Generic.List`1 MBonus,
+        Int32 maturity) [0x0001d] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:239
+        \n  at Pokemon..ctor () [0x002b0] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:194
+        \n  at PokemonDataTests.PokemonHasDefense () [0x00001] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Tests/Editor/PokemonDataTests.cs:207
+        \n  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke
+        (object,object[],System.Exception&)\n  at System.Reflection.MonoMethod.Invoke
+        (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder,
+        System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d0]
+        in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Reflection/MonoMethod.cs:222 "
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -869,13 +1243,34 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][PokemonDataTests.PokemonHasElementType1]'
       name: PokemonHasElementType1
       fullName: PokemonDataTests.PokemonHasElementType1
-      resultStatus: 1
-      duration: 0.016108
-      messages: 
-      output: 'Nothing
+      resultStatus: 2
+      duration: 0.013228
+      messages: 'System.NullReferenceException : Object reference not set to an instance
+        of an object'
+      output: '3641
+
+        Gained Ability Slot :0
+
+        this breaks due to having 5 trees?
 
 '
-      stacktrace: 
+      stacktrace: "  at GameManager.TreeSwap (Int32 TreeToChange, Int32 TreeDataIndex)
+        [0x00012] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:144
+        \n  at GameManager.Refresh () [0x00022] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:84
+        \n  at Pokemon.SwitchTrees () [0x0000c] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:258
+        \n  at Pokemon.UnlockTrees () [0x00144] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:346
+        \n  at Pokemon.BreakTree () [0x00002] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:274
+        \n  at MaturityBonus+BreakTree.ApplyBonus (.Pokemon _Pokemon) [0x00002] in
+        /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/MaturityBonus.cs:36
+        \n  at Pokemon.ApplyMaturityBonus (System.Collections.Generic.List`1 MBonus,
+        Int32 maturity) [0x0001d] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:239
+        \n  at Pokemon..ctor () [0x002b0] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:194
+        \n  at PokemonDataTests.PokemonHasElementType1 () [0x00001] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Tests/Editor/PokemonDataTests.cs:29
+        \n  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke
+        (object,object[],System.Exception&)\n  at System.Reflection.MonoMethod.Invoke
+        (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder,
+        System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d0]
+        in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Reflection/MonoMethod.cs:222 "
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -883,13 +1278,142 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][PokemonDataTests.PokemonHasElementType2]'
       name: PokemonHasElementType2
       fullName: PokemonDataTests.PokemonHasElementType2
-      resultStatus: 1
-      duration: 0.010339
-      messages: 
-      output: 'Nothing
+      resultStatus: 2
+      duration: 0.015211
+      messages: 'System.NullReferenceException : Object reference not set to an instance
+        of an object'
+      output: '1374
+
+        Gained Ability Slot :0
+
+        this breaks due to having 5 trees?
 
 '
-      stacktrace: 
+      stacktrace: "  at GameManager.TreeSwap (Int32 TreeToChange, Int32 TreeDataIndex)
+        [0x00012] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:144
+        \n  at GameManager.Refresh () [0x00022] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:84
+        \n  at Pokemon.SwitchTrees () [0x0000c] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:258
+        \n  at Pokemon.UnlockTrees () [0x00144] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:346
+        \n  at Pokemon.BreakTree () [0x00002] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:274
+        \n  at MaturityBonus+BreakTree.ApplyBonus (.Pokemon _Pokemon) [0x00002] in
+        /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/MaturityBonus.cs:36
+        \n  at Pokemon.ApplyMaturityBonus (System.Collections.Generic.List`1 MBonus,
+        Int32 maturity) [0x0001d] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:239
+        \n  at Pokemon..ctor () [0x002b0] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:194
+        \n  at PokemonDataTests.PokemonHasElementType2 () [0x00001] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Tests/Editor/PokemonDataTests.cs:36
+        \n  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke
+        (object,object[],System.Exception&)\n  at System.Reflection.MonoMethod.Invoke
+        (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder,
+        System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d0]
+        in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Reflection/MonoMethod.cs:222 "
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Assembly-CSharp-Editor][PokemonDataTests.PokemonHasEndurance]'
+      name: PokemonHasEndurance
+      fullName: PokemonDataTests.PokemonHasEndurance
+      resultStatus: 2
+      duration: 0.014198
+      messages: 'System.NullReferenceException : Object reference not set to an instance
+        of an object'
+      output: '1468
+
+        Gained Ability Slot :0
+
+        this breaks due to having 5 trees?
+
+'
+      stacktrace: "  at GameManager.TreeSwap (Int32 TreeToChange, Int32 TreeDataIndex)
+        [0x00012] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:144
+        \n  at GameManager.Refresh () [0x00022] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:84
+        \n  at Pokemon.SwitchTrees () [0x0000c] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:258
+        \n  at Pokemon.UnlockTrees () [0x00144] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:346
+        \n  at Pokemon.BreakTree () [0x00002] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:274
+        \n  at MaturityBonus+BreakTree.ApplyBonus (.Pokemon _Pokemon) [0x00002] in
+        /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/MaturityBonus.cs:36
+        \n  at Pokemon.ApplyMaturityBonus (System.Collections.Generic.List`1 MBonus,
+        Int32 maturity) [0x0001d] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:239
+        \n  at Pokemon..ctor (.Breed breed) [0x002aa] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:154
+        \n  at PokemonDataTests.PokemonHasEndurance () [0x00013] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Tests/Editor/PokemonDataTests.cs:148
+        \n  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke
+        (object,object[],System.Exception&)\n  at System.Reflection.MonoMethod.Invoke
+        (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder,
+        System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d0]
+        in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Reflection/MonoMethod.cs:222 "
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Assembly-CSharp-Editor][PokemonDataTests.PokemonHasHeldItem]'
+      name: PokemonHasHeldItem
+      fullName: PokemonDataTests.PokemonHasHeldItem
+      resultStatus: 2
+      duration: 0.015718
+      messages: 'System.NullReferenceException : Object reference not set to an instance
+        of an object'
+      output: '3174
+
+        Gained Ability Slot :0
+
+        this breaks due to having 5 trees?
+
+'
+      stacktrace: "  at GameManager.TreeSwap (Int32 TreeToChange, Int32 TreeDataIndex)
+        [0x00012] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:144
+        \n  at GameManager.Refresh () [0x00022] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:84
+        \n  at Pokemon.SwitchTrees () [0x0000c] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:258
+        \n  at Pokemon.UnlockTrees () [0x00144] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:346
+        \n  at Pokemon.BreakTree () [0x00002] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:274
+        \n  at MaturityBonus+BreakTree.ApplyBonus (.Pokemon _Pokemon) [0x00002] in
+        /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/MaturityBonus.cs:36
+        \n  at Pokemon.ApplyMaturityBonus (System.Collections.Generic.List`1 MBonus,
+        Int32 maturity) [0x0001d] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:239
+        \n  at Pokemon..ctor (.Breed breed) [0x002aa] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:154
+        \n  at PokemonBuilder.Build () [0x00013] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Tests/Editor/Builders/PokemonBuilder.cs:16
+        \n  at TestDataBuilder`1[Pokemon].op_Implicit (.TestDataBuilder`1 builder)
+        [0x00002] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Tests/Editor/Builders/TestDataBuilder.cs:9
+        \n  at PokemonDataTests.PokemonHasHeldItem () [0x00018] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Tests/Editor/PokemonDataTests.cs:235
+        \n  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke
+        (object,object[],System.Exception&)\n  at System.Reflection.MonoMethod.Invoke
+        (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder,
+        System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d0]
+        in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Reflection/MonoMethod.cs:222 "
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Assembly-CSharp-Editor][PokemonDataTests.PokemonHasHP]'
+      name: PokemonHasHP
+      fullName: PokemonDataTests.PokemonHasHP
+      resultStatus: 2
+      duration: 0.012851
+      messages: 'System.NullReferenceException : Object reference not set to an instance
+        of an object'
+      output: '2759
+
+        Gained Ability Slot :0
+
+        this breaks due to having 5 trees?
+
+'
+      stacktrace: "  at GameManager.TreeSwap (Int32 TreeToChange, Int32 TreeDataIndex)
+        [0x00012] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:144
+        \n  at GameManager.Refresh () [0x00022] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:84
+        \n  at Pokemon.SwitchTrees () [0x0000c] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:258
+        \n  at Pokemon.UnlockTrees () [0x00144] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:346
+        \n  at Pokemon.BreakTree () [0x00002] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:274
+        \n  at MaturityBonus+BreakTree.ApplyBonus (.Pokemon _Pokemon) [0x00002] in
+        /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/MaturityBonus.cs:36
+        \n  at Pokemon.ApplyMaturityBonus (System.Collections.Generic.List`1 MBonus,
+        Int32 maturity) [0x0001d] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:239
+        \n  at Pokemon..ctor (.Breed breed) [0x002aa] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:154
+        \n  at PokemonDataTests.PokemonHasHP () [0x00013] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Tests/Editor/PokemonDataTests.cs:167
+        \n  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke
+        (object,object[],System.Exception&)\n  at System.Reflection.MonoMethod.Invoke
+        (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder,
+        System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d0]
+        in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Reflection/MonoMethod.cs:222 "
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -897,11 +1421,174 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][PokemonDataTests.PokemonHasLevel]'
       name: PokemonHasLevel
       fullName: PokemonDataTests.PokemonHasLevel
-      resultStatus: 1
-      duration: 0.016675
-      messages: 
-      output: 
-      stacktrace: 
+      resultStatus: 2
+      duration: 0.013027
+      messages: 'System.NullReferenceException : Object reference not set to an instance
+        of an object'
+      output: '346
+
+        Gained Ability Slot :0
+
+        this breaks due to having 5 trees?
+
+'
+      stacktrace: "  at GameManager.TreeSwap (Int32 TreeToChange, Int32 TreeDataIndex)
+        [0x00012] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:144
+        \n  at GameManager.Refresh () [0x00022] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:84
+        \n  at Pokemon.SwitchTrees () [0x0000c] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:258
+        \n  at Pokemon.UnlockTrees () [0x00144] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:346
+        \n  at Pokemon.BreakTree () [0x00002] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:274
+        \n  at MaturityBonus+BreakTree.ApplyBonus (.Pokemon _Pokemon) [0x00002] in
+        /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/MaturityBonus.cs:36
+        \n  at Pokemon.ApplyMaturityBonus (System.Collections.Generic.List`1 MBonus,
+        Int32 maturity) [0x0001d] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:239
+        \n  at Pokemon..ctor () [0x002b0] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:194
+        \n  at PokemonDataTests.PokemonHasLevel () [0x00001] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Tests/Editor/PokemonDataTests.cs:22
+        \n  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke
+        (object,object[],System.Exception&)\n  at System.Reflection.MonoMethod.Invoke
+        (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder,
+        System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d0]
+        in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Reflection/MonoMethod.cs:222 "
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Assembly-CSharp-Editor][PokemonDataTests.PokemonHasSpecialAttack]'
+      name: PokemonHasSpecialAttack
+      fullName: PokemonDataTests.PokemonHasSpecialAttack
+      resultStatus: 2
+      duration: 0.013723
+      messages: 'System.NullReferenceException : Object reference not set to an instance
+        of an object'
+      output: '3705
+
+        Gained Ability Slot :0
+
+        this breaks due to having 5 trees?
+
+'
+      stacktrace: "  at GameManager.TreeSwap (Int32 TreeToChange, Int32 TreeDataIndex)
+        [0x00012] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:144
+        \n  at GameManager.Refresh () [0x00022] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:84
+        \n  at Pokemon.SwitchTrees () [0x0000c] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:258
+        \n  at Pokemon.UnlockTrees () [0x00144] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:346
+        \n  at Pokemon.BreakTree () [0x00002] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:274
+        \n  at MaturityBonus+BreakTree.ApplyBonus (.Pokemon _Pokemon) [0x00002] in
+        /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/MaturityBonus.cs:36
+        \n  at Pokemon.ApplyMaturityBonus (System.Collections.Generic.List`1 MBonus,
+        Int32 maturity) [0x0001d] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:239
+        \n  at Pokemon..ctor () [0x002b0] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:194
+        \n  at PokemonDataTests.PokemonHasSpecialAttack () [0x00001] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Tests/Editor/PokemonDataTests.cs:214
+        \n  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke
+        (object,object[],System.Exception&)\n  at System.Reflection.MonoMethod.Invoke
+        (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder,
+        System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d0]
+        in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Reflection/MonoMethod.cs:222 "
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Assembly-CSharp-Editor][PokemonDataTests.PokemonHasSpecialDefense]'
+      name: PokemonHasSpecialDefense
+      fullName: PokemonDataTests.PokemonHasSpecialDefense
+      resultStatus: 2
+      duration: 0.014032
+      messages: 'System.NullReferenceException : Object reference not set to an instance
+        of an object'
+      output: '2054
+
+        Gained Ability Slot :0
+
+        this breaks due to having 5 trees?
+
+'
+      stacktrace: "  at GameManager.TreeSwap (Int32 TreeToChange, Int32 TreeDataIndex)
+        [0x00012] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:144
+        \n  at GameManager.Refresh () [0x00022] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:84
+        \n  at Pokemon.SwitchTrees () [0x0000c] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:258
+        \n  at Pokemon.UnlockTrees () [0x00144] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:346
+        \n  at Pokemon.BreakTree () [0x00002] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:274
+        \n  at MaturityBonus+BreakTree.ApplyBonus (.Pokemon _Pokemon) [0x00002] in
+        /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/MaturityBonus.cs:36
+        \n  at Pokemon.ApplyMaturityBonus (System.Collections.Generic.List`1 MBonus,
+        Int32 maturity) [0x0001d] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:239
+        \n  at Pokemon..ctor () [0x002b0] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:194
+        \n  at PokemonDataTests.PokemonHasSpecialDefense () [0x00001] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Tests/Editor/PokemonDataTests.cs:221
+        \n  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke
+        (object,object[],System.Exception&)\n  at System.Reflection.MonoMethod.Invoke
+        (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder,
+        System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d0]
+        in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Reflection/MonoMethod.cs:222 "
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Assembly-CSharp-Editor][PokemonDataTests.PokemonHasSpeed]'
+      name: PokemonHasSpeed
+      fullName: PokemonDataTests.PokemonHasSpeed
+      resultStatus: 2
+      duration: 0.012196
+      messages: 'System.NullReferenceException : Object reference not set to an instance
+        of an object'
+      output: '3727
+
+        Gained Ability Slot :0
+
+        this breaks due to having 5 trees?
+
+'
+      stacktrace: "  at GameManager.TreeSwap (Int32 TreeToChange, Int32 TreeDataIndex)
+        [0x00012] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:144
+        \n  at GameManager.Refresh () [0x00022] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:84
+        \n  at Pokemon.SwitchTrees () [0x0000c] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:258
+        \n  at Pokemon.UnlockTrees () [0x00144] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:346
+        \n  at Pokemon.BreakTree () [0x00002] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:274
+        \n  at MaturityBonus+BreakTree.ApplyBonus (.Pokemon _Pokemon) [0x00002] in
+        /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/MaturityBonus.cs:36
+        \n  at Pokemon.ApplyMaturityBonus (System.Collections.Generic.List`1 MBonus,
+        Int32 maturity) [0x0001d] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:239
+        \n  at Pokemon..ctor () [0x002b0] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:194
+        \n  at PokemonDataTests.PokemonHasSpeed () [0x00001] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Tests/Editor/PokemonDataTests.cs:228
+        \n  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke
+        (object,object[],System.Exception&)\n  at System.Reflection.MonoMethod.Invoke
+        (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder,
+        System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d0]
+        in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Reflection/MonoMethod.cs:222 "
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Assembly-CSharp-Editor][PokemonDataTests.PokemonHasStrain]'
+      name: PokemonHasStrain
+      fullName: PokemonDataTests.PokemonHasStrain
+      resultStatus: 2
+      duration: 0.012986
+      messages: 'System.NullReferenceException : Object reference not set to an instance
+        of an object'
+      output: '626
+
+        Gained Ability Slot :0
+
+        this breaks due to having 5 trees?
+
+'
+      stacktrace: "  at GameManager.TreeSwap (Int32 TreeToChange, Int32 TreeDataIndex)
+        [0x00012] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:144
+        \n  at GameManager.Refresh () [0x00022] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:84
+        \n  at Pokemon.SwitchTrees () [0x0000c] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:258
+        \n  at Pokemon.UnlockTrees () [0x00144] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:346
+        \n  at Pokemon.BreakTree () [0x00002] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:274
+        \n  at MaturityBonus+BreakTree.ApplyBonus (.Pokemon _Pokemon) [0x00002] in
+        /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/MaturityBonus.cs:36
+        \n  at Pokemon.ApplyMaturityBonus (System.Collections.Generic.List`1 MBonus,
+        Int32 maturity) [0x0001d] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:239
+        \n  at Pokemon..ctor (.Breed breed) [0x002aa] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:154
+        \n  at PokemonDataTests.PokemonHasStrain () [0x00013] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Tests/Editor/PokemonDataTests.cs:175
+        \n  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke
+        (object,object[],System.Exception&)\n  at System.Reflection.MonoMethod.Invoke
+        (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder,
+        System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d0]
+        in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Reflection/MonoMethod.cs:222 "
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -909,13 +1596,37 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][PokemonDataTests.PokemonShowsType1OfBreed]'
       name: PokemonShowsType1OfBreed
       fullName: PokemonDataTests.PokemonShowsType1OfBreed
-      resultStatus: 1
-      duration: 0.02108
-      messages: 
-      output: 'Fire
+      resultStatus: 2
+      duration: 0.015002
+      messages: 'System.NullReferenceException : Object reference not set to an instance
+        of an object'
+      output: '3218
+
+        Gained Ability Slot :0
+
+        this breaks due to having 5 trees?
 
 '
-      stacktrace: 
+      stacktrace: "  at GameManager.TreeSwap (Int32 TreeToChange, Int32 TreeDataIndex)
+        [0x00012] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:144
+        \n  at GameManager.Refresh () [0x00022] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:84
+        \n  at Pokemon.SwitchTrees () [0x0000c] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:258
+        \n  at Pokemon.UnlockTrees () [0x00144] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:346
+        \n  at Pokemon.BreakTree () [0x00002] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:274
+        \n  at MaturityBonus+BreakTree.ApplyBonus (.Pokemon _Pokemon) [0x00002] in
+        /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/MaturityBonus.cs:36
+        \n  at Pokemon.ApplyMaturityBonus (System.Collections.Generic.List`1 MBonus,
+        Int32 maturity) [0x0001d] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:239
+        \n  at Pokemon..ctor (.Breed breed) [0x002aa] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:154
+        \n  at PokemonBuilder.Build () [0x00013] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Tests/Editor/Builders/PokemonBuilder.cs:16
+        \n  at TestDataBuilder`1[Pokemon].op_Implicit (.TestDataBuilder`1 builder)
+        [0x00002] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Tests/Editor/Builders/TestDataBuilder.cs:9
+        \n  at PokemonDataTests.PokemonShowsType1OfBreed () [0x00014] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Tests/Editor/PokemonDataTests.cs:44
+        \n  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke
+        (object,object[],System.Exception&)\n  at System.Reflection.MonoMethod.Invoke
+        (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder,
+        System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d0]
+        in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Reflection/MonoMethod.cs:222 "
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -923,13 +1634,34 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][PokemonDataTests.PokemonShowsType2OfBreed]'
       name: PokemonShowsType2OfBreed
       fullName: PokemonDataTests.PokemonShowsType2OfBreed
-      resultStatus: 1
-      duration: 0.017666
-      messages: 
-      output: 'Fire
+      resultStatus: 2
+      duration: 0.013459
+      messages: 'System.NullReferenceException : Object reference not set to an instance
+        of an object'
+      output: '1180
+
+        Gained Ability Slot :0
+
+        this breaks due to having 5 trees?
 
 '
-      stacktrace: 
+      stacktrace: "  at GameManager.TreeSwap (Int32 TreeToChange, Int32 TreeDataIndex)
+        [0x00012] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:144
+        \n  at GameManager.Refresh () [0x00022] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:84
+        \n  at Pokemon.SwitchTrees () [0x0000c] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:258
+        \n  at Pokemon.UnlockTrees () [0x00144] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:346
+        \n  at Pokemon.BreakTree () [0x00002] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:274
+        \n  at MaturityBonus+BreakTree.ApplyBonus (.Pokemon _Pokemon) [0x00002] in
+        /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/MaturityBonus.cs:36
+        \n  at Pokemon.ApplyMaturityBonus (System.Collections.Generic.List`1 MBonus,
+        Int32 maturity) [0x0001d] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:239
+        \n  at Pokemon..ctor (.Breed breed) [0x002aa] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:154
+        \n  at PokemonDataTests.PokemonShowsType2OfBreed () [0x0000a] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Tests/Editor/PokemonDataTests.cs:52
+        \n  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke
+        (object,object[],System.Exception&)\n  at System.Reflection.MonoMethod.Invoke
+        (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder,
+        System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d0]
+        in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Reflection/MonoMethod.cs:222 "
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -937,11 +1669,34 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][PokemonDataTests.Requires2XPToLevelUp]'
       name: Requires2XPToLevelUp
       fullName: PokemonDataTests.Requires2XPToLevelUp
-      resultStatus: 1
-      duration: 0.012597
-      messages: 
-      output: 
-      stacktrace: 
+      resultStatus: 2
+      duration: 0.014458
+      messages: 'System.NullReferenceException : Object reference not set to an instance
+        of an object'
+      output: '465
+
+        Gained Ability Slot :0
+
+        this breaks due to having 5 trees?
+
+'
+      stacktrace: "  at GameManager.TreeSwap (Int32 TreeToChange, Int32 TreeDataIndex)
+        [0x00012] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:144
+        \n  at GameManager.Refresh () [0x00022] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:84
+        \n  at Pokemon.SwitchTrees () [0x0000c] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:258
+        \n  at Pokemon.UnlockTrees () [0x00144] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:346
+        \n  at Pokemon.BreakTree () [0x00002] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:274
+        \n  at MaturityBonus+BreakTree.ApplyBonus (.Pokemon _Pokemon) [0x00002] in
+        /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/MaturityBonus.cs:36
+        \n  at Pokemon.ApplyMaturityBonus (System.Collections.Generic.List`1 MBonus,
+        Int32 maturity) [0x0001d] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:239
+        \n  at Pokemon..ctor () [0x002b0] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:194
+        \n  at PokemonDataTests.Requires2XPToLevelUp () [0x00001] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Tests/Editor/PokemonDataTests.cs:88
+        \n  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke
+        (object,object[],System.Exception&)\n  at System.Reflection.MonoMethod.Invoke
+        (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder,
+        System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d0]
+        in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Reflection/MonoMethod.cs:222 "
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -949,11 +1704,35 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][PokemonDataTests.WhenLevelIncreasesMaturityChanges]'
       name: WhenLevelIncreasesMaturityChanges
       fullName: PokemonDataTests.WhenLevelIncreasesMaturityChanges
-      resultStatus: 1
-      duration: 0.006483
-      messages: 
-      output: 
-      stacktrace: 
+      resultStatus: 2
+      duration: 0.010849
+      messages: 'System.NullReferenceException : Object reference not set to an instance
+        of an object'
+      output: '3084
+
+        Gained Ability Slot :0
+
+        this breaks due to having 5 trees?
+
+'
+      stacktrace: "  at GameManager.TreeSwap (Int32 TreeToChange, Int32 TreeDataIndex)
+        [0x00012] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:144
+        \n  at GameManager.Refresh () [0x00022] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:84
+        \n  at Pokemon.SwitchTrees () [0x0000c] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:258
+        \n  at Pokemon.UnlockTrees () [0x00144] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:346
+        \n  at Pokemon.BreakTree () [0x00002] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:274
+        \n  at MaturityBonus+BreakTree.ApplyBonus (.Pokemon _Pokemon) [0x00002] in
+        /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/MaturityBonus.cs:36
+        \n  at Pokemon.ApplyMaturityBonus (System.Collections.Generic.List`1 MBonus,
+        Int32 maturity) [0x0001d] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:239
+        \n  at Pokemon..ctor () [0x002b0] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:194
+        \n  at PokemonDataTests.WhenLevelIncreasesMaturityChanges () [0x00001] in
+        /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Tests/Editor/PokemonDataTests.cs:106
+        \n  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke
+        (object,object[],System.Exception&)\n  at System.Reflection.MonoMethod.Invoke
+        (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder,
+        System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d0]
+        in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Reflection/MonoMethod.cs:222 "
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -961,22 +1740,77 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][PokemonDataTests.XPReducedBy2OnLevelUp]'
       name: XPReducedBy2OnLevelUp
       fullName: PokemonDataTests.XPReducedBy2OnLevelUp
-      resultStatus: 1
-      duration: 0.018632
-      messages: 
-      output: 
-      stacktrace: 
+      resultStatus: 2
+      duration: 0.010374
+      messages: 'System.NullReferenceException : Object reference not set to an instance
+        of an object'
+      output: '2971
+
+        Gained Ability Slot :0
+
+        this breaks due to having 5 trees?
+
+'
+      stacktrace: "  at GameManager.TreeSwap (Int32 TreeToChange, Int32 TreeDataIndex)
+        [0x00012] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:144
+        \n  at GameManager.Refresh () [0x00022] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:84
+        \n  at Pokemon.SwitchTrees () [0x0000c] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:258
+        \n  at Pokemon.UnlockTrees () [0x00144] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:346
+        \n  at Pokemon.BreakTree () [0x00002] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:274
+        \n  at MaturityBonus+BreakTree.ApplyBonus (.Pokemon _Pokemon) [0x00002] in
+        /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/MaturityBonus.cs:36
+        \n  at Pokemon.ApplyMaturityBonus (System.Collections.Generic.List`1 MBonus,
+        Int32 maturity) [0x0001d] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:239
+        \n  at Pokemon..ctor () [0x002b0] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:194
+        \n  at PokemonDataTests.XPReducedBy2OnLevelUp () [0x00001] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Tests/Editor/PokemonDataTests.cs:96
+        \n  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke
+        (object,object[],System.Exception&)\n  at System.Reflection.MonoMethod.Invoke
+        (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder,
+        System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d0]
+        in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Reflection/MonoMethod.cs:222 "
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-    m_ResultText: DontReturnSTABBonusMaturityBonusAtLevel6 (0.009s)
-    m_ResultStacktrace: 
+    m_ResultText: "CanCreatePokemon (0.016s)\n---\nSystem.NullReferenceException :
+      Object reference not set to an instance of an object\n---\nat GameManager.TreeSwap
+      (Int32 TreeToChange, Int32 TreeDataIndex) [0x00012] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:144
+      \n  at GameManager.Refresh () [0x00022] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:84
+      \n  at Pokemon.SwitchTrees () [0x0000c] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:258
+      \n  at Pokemon.UnlockTrees () [0x00144] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:346
+      \n  at Pokemon.BreakTree () [0x00002] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:274
+      \n  at MaturityBonus+BreakTree.ApplyBonus (.Pokemon _Pokemon) [0x00002] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/MaturityBonus.cs:36
+      \n  at Pokemon.ApplyMaturityBonus (System.Collections.Generic.List`1 MBonus,
+      Int32 maturity) [0x0001d] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:239
+      \n  at Pokemon..ctor () [0x002b0] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:194
+      \n  at PokemonDataTests.CanCreatePokemon () [0x00001] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Tests/Editor/PokemonDataTests.cs:15
+      \n  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke
+      (object,object[],System.Exception&)\n  at System.Reflection.MonoMethod.Invoke
+      (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder,
+      System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d0]
+      in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Reflection/MonoMethod.cs:222\n---\n1642\nGained
+      Ability Slot :0\nthis breaks due to having 5 trees?"
+    m_ResultStacktrace: "  at GameManager.TreeSwap (Int32 TreeToChange, Int32 TreeDataIndex)
+      [0x00012] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:144
+      \n  at GameManager.Refresh () [0x00022] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/GameManager.cs:84
+      \n  at Pokemon.SwitchTrees () [0x0000c] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:258
+      \n  at Pokemon.UnlockTrees () [0x00144] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:346
+      \n  at Pokemon.BreakTree () [0x00002] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:274
+      \n  at MaturityBonus+BreakTree.ApplyBonus (.Pokemon _Pokemon) [0x00002] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/MaturityBonus.cs:36
+      \n  at Pokemon.ApplyMaturityBonus (System.Collections.Generic.List`1 MBonus,
+      Int32 maturity) [0x0001d] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:239
+      \n  at Pokemon..ctor () [0x002b0] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Pokemon/Pokemon.cs:194
+      \n  at PokemonDataTests.CanCreatePokemon () [0x00001] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/Tests/Editor/PokemonDataTests.cs:15
+      \n  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke
+      (object,object[],System.Exception&)\n  at System.Reflection.MonoMethod.Invoke
+      (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder,
+      System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d0]
+      in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Reflection/MonoMethod.cs:222 "
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: c1394077
-      m_LastClickedID: 2000697793
-      m_ExpandedIDs: deb4eefb23b23410ffffff7f
+      m_SelectedIDs: 71a003c5
+      m_LastClickedID: -989618063
+      m_ExpandedIDs: cc64f6f9deb4eefb23b23410ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1023,7 +1857,7 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 395
+    x: 425
     y: 469
     width: 576
     height: 250
@@ -1100,16 +1934,16 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: -25
+    x: 5
     y: 93
     width: 360
     height: 355
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 80700800
-    m_LastClickedID: 553088
-    m_ExpandedIDs: ac79f2ff087cf2fff886f2ff048ef2ffa2a8f2ffbcacf2ffc2b4f2ff66bff2ff84cff2ff90e6f2ff56f3f2ff2200f3fffc0af3ffc020f3ffc03af3ff9a4df3ffb269f3ff36a6f3ff4eaff3fff8bdf3ff90c3f3ff86cdf3ffd0dbf3ff2202f4ffe218f4ffbc1ef4ffa428f4ff862ef4ffe637f4ff7841f4ffda5bf4ffe460f4ffb675f4ff4e7df4ff4284f4ffd68cf4ff8295f4ffc49bf4fff8a1f4ff1ec3f4ffc6c3f4ff56c8f4fffccdf4fff6d2f4ffb4d9f4ffc4e4f4ff8aeaf4ff1ef1f4ffaafef4ff7efff4ff986cf5ff806df5ffe67df5ffcc7ef5ffe286f5ff6287f5ff7a8df5ff1a95f5ffc495f5ffd49ff5ff7aa0f5ff40a8f5fff8aff5ff50b5f5ff68bbf5fff6c0f5ffacc4f5ff7ccbf5ffdacef5ff46daf5ff9addf5ffc0e3f5ff02e7f5fff2f2f5ff62f6f5ff1c00f6ff6806f6ffa40cf6ffe612f6ffac1ff6fff827f6ff3c2cf6ff203bf6ffa23bf6ff883ff6fff05ff6ffb260f6ff5067f6ff106bf6ff6e72f6ff0a7af6ff1286f6fff296f6ff9697f6ffa89bf6ffe0a5f6ffa6a6f6ff8af9ffff1cfaffff2cfbfffff4ffffff0000000018290000d22900009e2c0000cc2c0000902e0000602f00006e2f000012300000a2310000d83100002a320000ce320000c63300004a34000094340000e4340000723500007e350000c6350000521a0300f01d030012360300b0390300b6b6030054ba03007cd203001ad603007a130500181705005a210500f82405001a3d0500b84005002a480500fa4a0500984e05000a560500da580500785c050022940500c0970500f202060090060600dc670800f8670800126a08000c6b0800e26c0800786f08009c6f080080700800
+    scrollPos: {x: 0, y: 62}
+    m_SelectedIDs: d89afcff
+    m_LastClickedID: 0
+    m_ExpandedIDs: c6a8fcff5aaafcff98fbfffff4ffffff00000000842a0000202b0000662b00009c2f00006c320000263500000a36000000090400d00b04003a0e04008a0e04006e0f0400
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1154,7 +1988,7 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 339
+    x: 369
     y: 93
     width: 319
     height: 355
@@ -1181,7 +2015,7 @@ MonoBehaviour:
   m_DepthBufferBits: 32
   m_Pos:
     serializedVersion: 2
-    x: 662
+    x: 692
     y: 93
     width: 309
     height: 355
@@ -1192,9 +2026,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 5.7225804, y: 0.24409302, z: 89.93924}
+    m_Target: {x: 4.2410407, y: -0.37088645, z: 89.89661}
     speed: 2
-    m_Value: {x: 5.7225804, y: 0.24409302, z: 89.93924}
+    m_Value: {x: 4.2410407, y: -0.37088645, z: 89.89661}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -1222,9 +2056,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 8.359719
+    m_Target: 12.618343
     speed: 2
-    m_Value: 8.359719
+    m_Value: 12.618343
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1258,7 +2092,7 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: -25
+    x: 5
     y: 469
     width: 416
     height: 250
@@ -1275,19 +2109,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scripts/Tests/Editor
+    - Assets/Scripts/Pokemon
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/Tests/Editor
+  - Assets/Scripts/Pokemon
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 103}
-    m_SelectedIDs: e4020300
-    m_LastClickedID: 197348
-    m_ExpandedIDs: 00000000d02700000e28000058280000de02030000ca9a3bffffff7f
+    m_SelectedIDs: 00280000
+    m_LastClickedID: 10240
+    m_ExpandedIDs: 00000000d62700001a280000402800006c28000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1315,7 +2149,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 3e2c0000
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d02700000e28000058280000
+    m_ExpandedIDs: 00000000d62700001a280000402800006c280000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1392,7 +2226,7 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 975
+    x: 1005
     y: 93
     width: 275
     height: 626

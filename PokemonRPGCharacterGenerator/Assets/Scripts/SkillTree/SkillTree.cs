@@ -84,7 +84,6 @@ public class SkillTree : MonoBehaviour
 		}
 
 		TreeDisplay.TreeColorUpdate (_State, Name, _TreeData.Tier, RemainingBonuses);
-
 	}
 
 	public BonusAtIndex GetCurrentSelectedBonus ()
@@ -153,9 +152,11 @@ public class SkillTree : MonoBehaviour
 
 	public void OnManualSelectClick ()
 	{
-		OnSelected ();
-		GameManager.instance.CurrentPokemon.MaturityCheck ();
-
+		if (GameManager.instance._SelectionState == SelectionState.Select)
+		{
+			OnSelected ();
+			GameManager.instance.CurrentPokemon.LevelUp ();
+		}
 	}
 		
 	public void ResetBonuses ()
@@ -165,16 +166,9 @@ public class SkillTree : MonoBehaviour
 			RemainingBonuses.Add ((BonusAtIndex)i);
 		}
 		IsInit = true;
-//		RemainingBonuses.Shuffle ();
 	}
-	public void Start ()
-	{
-		GameManager.instance.CurrentPokemon.UnlockTrees ();
-//		GameManager.instance._MaturityManager.SwitchTrees ();
 
-	}
-		
-	public void Awake()
+	public void Awake ()
 	{
 		TreeDisplay = GetComponent<SkillTreeDisplay> ();
 		ResetBonuses ();

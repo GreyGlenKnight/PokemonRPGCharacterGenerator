@@ -12,29 +12,29 @@ public class PokemonDataTests
 	[Test]
 	public void CanCreatePokemon ()
 	{
-		Pokemon TestMon = new Pokemon ();
+		Pokemon TestMon = A.Pokemon ().W_XP(4).W(new Pokemon.Breed(ElementTypes.Fire, ElementTypes.Nothing));
 		UnityEngine.Debug.Assert (TestMon != null);
 	}
 
 	[Test]
 	public void PokemonHasLevel ()
 	{
-		Pokemon TestMon = new Pokemon ();
+		Pokemon TestMon = A.Pokemon ().W_XP(4).W(new Pokemon.Breed(ElementTypes.Fire, ElementTypes.Nothing));
 		UnityEngine.Debug.Assert (TestMon.Level == 0);
 	}
 
 	[Test]
 	public void PokemonHasElementType1 ()
 	{
-		Pokemon TestMon = new Pokemon ();
-		UnityEngine.Debug.Assert (TestMon.Type1 == ElementTypes.Nothing);
+		Pokemon TestMon = A.Pokemon ().W_XP(4).W(new Pokemon.Breed(ElementTypes.Fire, ElementTypes.Nothing));
+		UnityEngine.Debug.Assert (TestMon.Type1 == ElementTypes.Fire);
 	}
 
 	[Test]
 	public void PokemonHasElementType2 ()
 	{
-		Pokemon TestMon = new Pokemon ();
-		UnityEngine.Debug.Assert (TestMon.Type2 == ElementTypes.Nothing);
+		Pokemon TestMon = A.Pokemon ().W_XP(4).W(new Pokemon.Breed(ElementTypes.Fire, ElementTypes.Flying));
+		UnityEngine.Debug.Assert (TestMon.Type2 == ElementTypes.Flying);
 	}
 
 	[Test]
@@ -78,28 +78,30 @@ public class PokemonDataTests
 	public void PokemonCanLevelUp ()
 	{
 		Pokemon TestMon = A.Pokemon().W_XP(2).W_Rate(5);
+		TestMon.Level = 0;
+		TestMon.Maturity = 0;
+//		TestMon.ApplyMaturityBonus (MaturityStatic.GetMaturityBonuses (TestMon.Maturity), TestMon.Maturity);
 
 		TestMon.LevelUp ();
 		UnityEngine.Debug.Assert (TestMon.Level == 1);
 	}
 
-	[Test]
-	public void Requires2XPToLevelUp ()
-	{
-		Pokemon TestMon = new Pokemon ();
-		TestMon.LevelUp ();
-		UnityEngine.Debug.Assert (TestMon.Level == 0);
-	}
+//	[Test]
+//	public void Requires2XPToLevelUp ()
+//	{
+//		Pokemon TestMon = new Pokemon ();
+//		TestMon.XP = 0;
+//		UnityEngine.Debug.Assert(XPManager.SpendXP () == false);
+//	}
 
-	[Test]
-	public void XPReducedBy2OnLevelUp ()
-	{
-		Pokemon TestMon = new Pokemon ();
-		TestMon.Rate = 3;
-		TestMon.XP = 2;
-		TestMon.LevelUp ();
-		UnityEngine.Debug.Assert (TestMon.XP == 0);
-	}
+//	[Test]
+//	public void XPReducedBy2OnLevelUp ()
+//	{
+//		Pokemon TestMon = A.Pokemon().W_XP(2).W_Rate(5);
+//		TestMon.Level = 0;
+//		TestMon.XP = 2;
+//		UnityEngine.Debug.Assert (TestMon.XP = 0);
+//	}
 
 	[Test]
 	public void WhenLevelIncreasesMaturityChanges ()
@@ -115,13 +117,11 @@ public class PokemonDataTests
 	public void MaturityChangesBasedOnRate ()
 	{
 		Pokemon TestMon = new Pokemon ();
-		TestMon.Rate = 3;
-		TestMon.XP = 4;
-		for (int i = 0; i < 2; i++) 
-		{
-			TestMon.LevelUp ();
-		}
-		UnityEngine.Debug.Assert (TestMon.Maturity == 1);
+		TestMon.Maturity = 0;
+		TestMon.Rate = 4;
+		TestMon.Level = 4;
+		TestMon.MaturityIncrease ();
+		UnityEngine.Debug.Assert (TestMon.Maturity == 2);
 	}
 
 
@@ -129,13 +129,11 @@ public class PokemonDataTests
 	public void MaturityContinuesToChangeBasedOnRate ()
 	{
 		Pokemon TestMon = new Pokemon ();
-		TestMon.Rate = 3;
-		TestMon.XP = 6;
-		for (int i = 0; i < 3; i++) 
-		{
-			TestMon.LevelUp ();
-		}
-		UnityEngine.Debug.Assert (TestMon.Maturity == 2);
+		TestMon.Maturity = 0;
+		TestMon.Rate = 4;
+		TestMon.Level = 8;
+		TestMon.MaturityIncrease ();
+		UnityEngine.Debug.Assert (TestMon.Maturity == 4);
 	}
 
 

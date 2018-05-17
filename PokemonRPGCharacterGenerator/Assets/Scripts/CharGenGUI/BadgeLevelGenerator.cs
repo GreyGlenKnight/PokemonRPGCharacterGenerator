@@ -48,8 +48,6 @@ public class BadgeLevelGenerator : MonoBehaviour
 public int BadgeLevel;
 public static bool AutoSelectOn;
 	public BadgeLevelDisplay _BadgeLevelDisplay;
-	public NewTreeManager _NewTreeManager;
-	public MaturityManager _MaturityManager;
 	public SkillTrees _SkillTrees;
 
 
@@ -69,7 +67,10 @@ public void OnBadgeLevelSelect ()
 		
 		if (CurrentBadgeLevelString == BadgeLevelStrings.SingleLevel) 
 		{
-			XPManager.XP = 1;
+			if(XPManager.XP < 2)
+			{
+				GameManager.instance.CurrentPokemon.XP = 2;
+			}
 			RollCycle ();
 			_BadgeLevelDisplay.UpdateText ();
 
@@ -80,31 +81,36 @@ public void OnBadgeLevelSelect ()
 		}
 		else 
 		{
-			XPManager.XP = (BadgeLevel * 5 + 1) - GameManager.instance.CurrentPokemon.Level;
+//			XPManager.XP = (BadgeLevel * 10 + 2) - GameManager.instance.CurrentPokemon.Level;
 			while (GameManager.instance.CurrentPokemon.Level < (BadgeLevel * 5 + 1))
 			{
-				RollCycle ();
+				if (XPManager.XP < 2) {
+					GameManager.instance.CurrentPokemon.XP = 2;
+					RollCycle ();
+				} 
+				else 
+				{
+					RollCycle ();
+				}
 			}
-
 			_BadgeLevelDisplay.BadgeLevelString = CurrentBadgeLevelString.GetBadgeString();
 			_BadgeLevelDisplay.UpdateText ();
-//			_BadgeLevelDisplay.UpdateDisplay (
-//				GameManager.instance.CurrentPokemon.Level,			
-//				_BadgeLevelDisplay.CurrentLevelString);
 		}
 		_BadgeLevelDisplay.UpdateDisplay (
 			GameManager.instance.CurrentPokemon.Level,			
 			_BadgeLevelDisplay.CurrentLevelString);
+//		Debug.Log (GameManager.instance.CurrentPokemon.Maturity);
 	}
 
 
 
 	public void RollCycle ()
 	{
-		_NewTreeManager.CallTreeRoll();
+//		Debug.Log (GameManager.instance._NewTreeManager.TreesToRoll.Count);
+		GameManager.instance._NewTreeManager.CallTreeRoll ();
 		_SkillTrees.OnAutoSelectClick ();
-		GameManager.instance.CurrentPokemon.LevelUp();
-		GameManager.instance.CurrentPokemon.Evolve();
-        GameManager.instance.CurrentPokemon.MaturityCheck();
+		GameManager.instance.CurrentPokemon.LevelUp ();
+//		GameManager.instance.CurrentPokemon.Evolve();
+//        GameManager.instance.CurrentPokemon.MaturityCheck();
 	}
 }
