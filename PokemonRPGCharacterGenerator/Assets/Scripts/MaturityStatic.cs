@@ -104,6 +104,7 @@ public static class MaturityStatic
 		}
 		if (BreakTreeRank0Bonuses.Contains(Maturity) == true)
 		{
+//			Debug.Log (Array.IndexOf (BreakTreeRank0Bonuses,Maturity));
 			ToReturn.Add(new MaturityBonus.BreakTree(
 				(Array.IndexOf (BreakTreeRank0Bonuses,Maturity)+1),0));
 		}
@@ -124,6 +125,7 @@ public static class MaturityStatic
 		}
         if (ActiveTreeSlot.Contains(Maturity) == true)
         {
+//			Debug.Log (Maturity);
 			ToReturn.Add(new MaturityBonus.ActiveSkill (
 				(Array.IndexOf (ActiveTreeSlot,Maturity)+1)));
         }

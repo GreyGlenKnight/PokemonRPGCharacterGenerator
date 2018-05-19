@@ -238,11 +238,11 @@ public class PokemonSheetDisplay : MonoBehaviour
 
 	public void SetVitals (Pokemon ToSet)
 	{
-		MaxHP.text = "/"+ToSet.MaxHP.ToString();
+		MaxHP.text = "/"+ToSet.MaxHP.ToString()+" ";
 		CurrentHP.text = (ToSet.MaxHP - ToSet.CurrentDamage).ToString();
-		MaxStrain.text = "/"+ToSet.MaxStrain.ToString();
+		MaxStrain.text = "/"+ToSet.MaxStrain.ToString()+" ";
 		CurrentStrain.text = (ToSet.MaxStrain - ToSet.CurrentStrainLost).ToString();
-		Fatigue.text = "TODO";
+		Fatigue.text = " --   ";
 	}
 
 	public void SetPortrait (Pokemon ToSet)
