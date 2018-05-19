@@ -159,8 +159,6 @@ public class Pokemon
 		_BonusesRemaining.Add (new SkillTreeBonusesAcquired ());
 		_BonusesRemaining.Add (new SkillTreeBonusesAcquired ());
 		_BonusesRemaining.Add (new SkillTreeBonusesAcquired ());
-		ApplyMaturityBonus (MaturityStatic.GetMaturityBonuses (0), 0);
-		UnlockTrees ();
 //		_PokemonSheetDisplay.ShowNewPokemon (this, _Breed);
 	}
 		
@@ -200,9 +198,6 @@ public class Pokemon
 		_BonusesRemaining.Add (new SkillTreeBonusesAcquired ());
 		_BonusesRemaining.Add (new SkillTreeBonusesAcquired ());
 		_BonusesRemaining.Add (new SkillTreeBonusesAcquired ());
-		ApplyMaturityBonus (MaturityStatic.GetMaturityBonuses (0), 0);
-		UnlockTrees ();
-
 		//_PokemonSheetDisplay.ShowNewPokemon (GameManager.instance.CurrentPokemon, GameManager.instance.CurrentPokemon._Breed);
 	}
 
@@ -311,65 +306,39 @@ public class Pokemon
 		//Need Skills
 		Debug.Log ("Enhancer Slot :"+Maturity);
 	}
-		
 
 	public void UnlockTrees ()
 	{
 //		Debug.Log (GameManager.instance._NewTreeManager.TreesToRoll.Count);
-		for (int i = 0; i < MaturityStatic.BreakTreeRank0Bonuses.Length; i++) 
-		{
-			if (Maturity >= MaturityStatic.BreakTreeRank0Bonuses [i]) 
-			{
-			GameManager.instance._NewTreeManager.TreesToRoll [i].ChangeState (SkillTreeState.Inactive);
-				if (Maturity >= MaturityStatic.ActiveTreeSlot[i])
-				{
-				GameManager.instance._NewTreeManager.TreesToRoll [i].ChangeState(SkillTreeState.Active);
-				}
-			}
-		}
-
 		for (int i = 0; i < MaturityStatic.BreakTreeRank1Bonuses.Length; i++) 
 		{
 			if (Maturity >= MaturityStatic.BreakTreeRank1Bonuses [i]) 
 			{
-			GameManager.instance._NewTreeManager.TreesToRoll [i].ChangeState (SkillTreeState.Inactive);
-				if (Maturity >= MaturityStatic.ActiveTreeSlot[i])
-				{
-					GameManager.instance._NewTreeManager.TreesToRoll [i].ChangeState(SkillTreeState.Active);
-				}
+				GameManager.instance._NewTreeManager.TreesToRoll [i].ChangeState (SkillTreeState.Inactive);
+//					GameManager.instance._NewTreeManager.TreesToRoll [i].TreeDisplay.TreeColorUpdate ();
 			}
 		}
 
-		for (int i = 0; i < MaturityStatic.BreakTreeRank2Bonuses.Length; i++) 
-		{
-			if (Maturity >= MaturityStatic.BreakTreeRank2Bonuses [i]) 
-			{
-			GameManager.instance._NewTreeManager.TreesToRoll [i].ChangeState (SkillTreeState.Inactive);
-				if (Maturity >= MaturityStatic.ActiveTreeSlot[i])
-				{
-				GameManager.instance._NewTreeManager.TreesToRoll [i].ChangeState(SkillTreeState.Active);
-				}			
+		for (int i = 0; i < MaturityStatic.BreakTreeRank2Bonuses.Length; i++) {
+			if (Maturity >= MaturityStatic.BreakTreeRank2Bonuses [i]) {
+				GameManager.instance._NewTreeManager.TreesToRoll [i].ChangeState (SkillTreeState.Inactive);
+//					GameManager.instance._NewTreeManager.TreesToRoll [i].TreeDisplay.TreeColorUpdate ();
 			}
 		}
 
-		for (int i = 0; i < MaturityStatic.BreakTreeRank3Bonuses.Length; i++) 
-		{
-			if (Maturity >= MaturityStatic.BreakTreeRank3Bonuses [i]) 
-			{
-			GameManager.instance._NewTreeManager.TreesToRoll [i].ChangeState (SkillTreeState.Inactive);
-				if (Maturity >= MaturityStatic.ActiveTreeSlot[i])
-				{
-				GameManager.instance._NewTreeManager.TreesToRoll [i].ChangeState(SkillTreeState.Active);
-				}			
+		for (int i = 0; i < MaturityStatic.BreakTreeRank3Bonuses.Length; i++) {
+			if (Maturity >= MaturityStatic.BreakTreeRank3Bonuses [i]) {
+				GameManager.instance._NewTreeManager.TreesToRoll [i].ChangeState (SkillTreeState.Inactive);
+//					GameManager.instance._NewTreeManager.TreesToRoll [i].TreeDisplay.TreeColorUpdate ();
 			}
 		}
-//		for (int i = 0; i < MaturityStatic.ActiveTreeSlot.Length; i++)
-//		{
-//			if (Maturity >= MaturityStatic.ActiveTreeSlot[i])
-//			{
-//				GameManager.instance._NewTreeManager.TreesToRoll [i].ChangeState(SkillTreeState.Active);
-//			}
-//		}	
+		for (int i = 0; i < MaturityStatic.ActiveTreeSlot.Length; i++)
+		{
+			if (Maturity >= MaturityStatic.ActiveTreeSlot[i])
+			{
+				GameManager.instance._NewTreeManager.TreesToRoll [i].ChangeState(SkillTreeState.Active);
+			}
+		}	
 	}
 
 

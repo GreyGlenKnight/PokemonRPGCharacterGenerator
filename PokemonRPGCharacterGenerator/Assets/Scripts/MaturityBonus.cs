@@ -31,8 +31,8 @@ public abstract class MaturityBonus
 		public BreakTree (int Maturity, int breakLevel)
         {
         	BreakLevel = breakLevel;
+			Description = this.ToString()+BreakLevel+Maturity;
 			LevelGained = Maturity;
-			Description = this.ToString()+BreakLevel+LevelGained;
         }
         public override void ApplyBonus(Pokemon _Pokemon)
         {

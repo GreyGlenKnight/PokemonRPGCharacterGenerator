@@ -46,6 +46,9 @@ public class GameManager : MonoBehaviour
 	public SelectionState _SelectionState = SelectionState.Roll;
 	public Pokemon CurrentPokemon;
 	public TreeRowState _TreeRowState;
+//	public Pokemon.Breed CharmanderBreed;
+//	public MaturityStatic _MaturityStatic;
+//	public List <SkillTree> SkillTrees = new List <SkillTree> (12);
 	public BadgeLevelGenerator _BadgeLevelGenerator;
 	public PokemonSheetDisplay _PokemonSheetDisplay;
 
@@ -86,19 +89,19 @@ public class GameManager : MonoBehaviour
 		CurrentPokemon.CurrentStrainLost = 0;
 		_TreeRowState = TreeRowState.Adult;
 		ChangeVisibleTrees ();
-//		CurrentPokemon.ApplyMaturityBonus (MaturityStatic.GetMaturityBonuses (CurrentPokemon.Maturity), CurrentPokemon.Maturity);
-//		CurrentPokemon.UnlockTrees ();
-//		Refresh ();
-		_PokemonSheetDisplay.ShowNewPokemon (CurrentPokemon, CharmanderBreed);
-//		_PokemonSheetDisplay.SetTypes (CurrentPokemon, CharmanderBreed);
-//		_PokemonSheetDisplay.SetNames (CurrentPokemon, CharmanderBreed);
-//		_PokemonSheetDisplay.SetXP (CurrentPokemon);
-//		_PokemonSheetDisplay.SetItem (CurrentPokemon);
-//		_PokemonSheetDisplay.SetRate (CurrentPokemon);
-//		_PokemonSheetDisplay.SetVitals (CurrentPokemon);
-//		_PokemonSheetDisplay.SetStatBlock (CurrentPokemon, CharmanderBreed);
-//		_PokemonSheetDisplay.SetPortrait  (CurrentPokemon);
-//		_PokemonSheetDisplay.SetAbilities (CurrentPokemon);
+		CurrentPokemon.ApplyMaturityBonus (MaturityStatic.GetMaturityBonuses (CurrentPokemon.Maturity), CurrentPokemon.Maturity);
+		CurrentPokemon.UnlockTrees ();
+		Refresh ();
+		_PokemonSheetDisplay.SetTypes (CurrentPokemon, CharmanderBreed);
+		_PokemonSheetDisplay.SetNames (CurrentPokemon, CharmanderBreed);
+		_PokemonSheetDisplay.SetXP (CurrentPokemon);
+		_PokemonSheetDisplay.SetItem (CurrentPokemon);
+		_PokemonSheetDisplay.SetRate (CurrentPokemon);
+		_PokemonSheetDisplay.SetVitals (CurrentPokemon);
+		_PokemonSheetDisplay.SetStatBlock (CurrentPokemon, CharmanderBreed);
+		_PokemonSheetDisplay.SetPortrait  (CurrentPokemon);
+
+	_PokemonSheetDisplay.SetAbilities (CurrentPokemon);
 		//SetMoves()
 		//SetSkillRanks ()
 	}

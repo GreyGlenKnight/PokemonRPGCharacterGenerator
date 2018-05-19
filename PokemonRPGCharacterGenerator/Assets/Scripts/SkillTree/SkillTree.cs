@@ -19,7 +19,7 @@ public class SkillTree : MonoBehaviour
 //	public int BonusIndex;
 	public bool IsTreeFull = false;
 	public bool IsInit = false;
-	private SkillTreeState _State = SkillTreeState.Locked;
+	private SkillTreeState _State;
 	public string Name;
 	public SkillTreeData _TreeData;
 
@@ -172,7 +172,6 @@ public class SkillTree : MonoBehaviour
 	{
 		TreeDisplay = GetComponent<SkillTreeDisplay> ();
 		ResetBonuses ();
-//		ChangeState (SkillTreeState.Locked);
-//		Debug.Log ("Awake skilltree");
+		ChangeState (SkillTreeState.Locked);
 	}
 }
