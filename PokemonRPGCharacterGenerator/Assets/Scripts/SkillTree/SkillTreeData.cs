@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum SkillTreeState
+{
+	Active, Inactive, Locked
+}
 
 public enum SkillTreeTier
 {
@@ -19,9 +23,25 @@ public class SkillTreeData
 		Tier = _lTier;
 	}
 
+//	public List <BonusAtIndex> _BonusesRemaining = new List <BonusAtIndex> ();
+	public SkillTreeBonusesAcquired _BonusesAcquired = new SkillTreeBonusesAcquired ();
+	private SkillTreeState _State = SkillTreeState.Locked;
 	string _name;
 	public string Name {private set {_name = value;} get {return _name;}}
+
 	SkillTreeTier _Tier;
+
 	public SkillTreeTier Tier {private set {_Tier = value;} get {return _Tier;}}
+
+	public SkillTreeState CurrentState 
+	{		
+		get {return (SkillTreeState) _State;}
+	}
+
+	public void ChangeState (SkillTreeState NewState)
+	{
+		_State = NewState;
+
+	}
 
 }

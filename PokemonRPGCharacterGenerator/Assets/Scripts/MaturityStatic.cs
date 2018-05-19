@@ -99,35 +99,40 @@ public static class MaturityStatic
 		} 
 		if (TradeSkillBonuses.Contains (Maturity) == true) 
 		{
+			SkillTreeTier _Tier = SkillTreeTier.Tier1;
+			if (Maturity > 17) {_Tier = SkillTreeTier.Tier2;}
+			if (Maturity > 29) {_Tier = SkillTreeTier.Tier3;}
+
             ToReturn.Add (new MaturityBonus.TradeSkill (
-				(Array.IndexOf (TradeSkillBonuses,Maturity)+1)));
+				(Array.IndexOf (TradeSkillBonuses,Maturity)+1), _Tier));
 		}
 		if (BreakTreeRank0Bonuses.Contains(Maturity) == true)
 		{
 //			Debug.Log (Array.IndexOf (BreakTreeRank0Bonuses,Maturity));
 			ToReturn.Add(new MaturityBonus.BreakTree(
-				(Array.IndexOf (BreakTreeRank0Bonuses,Maturity)+1),0));
+				(Array.IndexOf (BreakTreeRank0Bonuses,Maturity)+1),SkillTreeTier.Tier0));
 		}
 		if (BreakTreeRank1Bonuses.Contains(Maturity) == true)
         {
             ToReturn.Add(new MaturityBonus.BreakTree(
-				(Array.IndexOf (BreakTreeRank1Bonuses,Maturity)+1),1));
+				(Array.IndexOf (BreakTreeRank1Bonuses,Maturity)+1),SkillTreeTier.Tier1));
         }
         if (BreakTreeRank2Bonuses.Contains(Maturity) == true)
         {
             ToReturn.Add(new MaturityBonus.BreakTree(
-				(Array.IndexOf (BreakTreeRank2Bonuses,Maturity)+1),2));
+				(Array.IndexOf (BreakTreeRank2Bonuses,Maturity)+1),SkillTreeTier.Tier2));
         }
         if (BreakTreeRank3Bonuses.Contains(Maturity) == true)
         {
 			ToReturn.Add(new MaturityBonus.BreakTree(
-				(Array.IndexOf (BreakTreeRank3Bonuses,Maturity)+1),3));
+				(Array.IndexOf (BreakTreeRank3Bonuses,Maturity)+1),SkillTreeTier.Tier3));
 		}
         if (ActiveTreeSlot.Contains(Maturity) == true)
         {
 //			Debug.Log (Maturity);
+			int TreeSlot = Array.IndexOf (ActiveTreeSlot,Maturity);
 			ToReturn.Add(new MaturityBonus.ActiveSkill (
-				(Array.IndexOf (ActiveTreeSlot,Maturity)+1)));
+				(TreeSlot+1), TreeSlot));
         }
         if (SpecialTrainingBonuses.Contains(Maturity) == true)
         {

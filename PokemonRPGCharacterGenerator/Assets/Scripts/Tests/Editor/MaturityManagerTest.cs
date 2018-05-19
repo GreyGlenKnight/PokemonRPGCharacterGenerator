@@ -287,7 +287,7 @@ public class MaturityManagerTest
         {
             MaturityBonus.BreakTree breakTree = x as MaturityBonus.BreakTree;
 
-            return breakTree.BreakLevel == 2;
+			return breakTree._Tier == SkillTreeTier.Tier2;
         };
         Debug.Assert(maturityBonus.Find(predicate) != null);
     }
@@ -303,7 +303,7 @@ public class MaturityManagerTest
             if (breakTree == null)
                 return false;
 
-            return breakTree.BreakLevel == 1;
+			return breakTree._Tier == SkillTreeTier.Tier1;
         };
         Debug.Assert(maturityBonus.Find(predicate) != null);
     }

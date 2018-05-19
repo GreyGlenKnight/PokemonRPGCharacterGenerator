@@ -18,29 +18,14 @@ public class SkillTreeDisplay : MonoBehaviour
 	public static Color LockTreeColor = Color.clear;
 
 
-
-
 	public void TreeColorUpdate ( 
 		SkillTreeState state,
-		string name,
-		SkillTreeTier tier, 
-		List <BonusAtIndex> bonuses)
+		SkillTreeTier tier)
 	{
 		TreeBG.color = LockTreeColor;
-		TreeNameText.text = name;
-
-		for (int i = 0; i < 12; i++)
-		{
-			CheckSelectedBonus (i);
-			if (bonuses.Contains ((BonusAtIndex)i))
-			{
-				options [i].isOn = false;
-			}
-		}
 
 		if (state != SkillTreeState.Locked)
 		{
-			
 
 			if (tier == SkillTreeTier.Tier0) 
 			{TreeBG.color = Tier0Color;}
@@ -52,6 +37,39 @@ public class SkillTreeDisplay : MonoBehaviour
 			{TreeBG.color = Tier2Color;}
 
 			if (tier == SkillTreeTier.Tier3) 
+			{TreeBG.color = Tier3Color;}
+		}
+	}
+
+
+	public void TreeColorUpdate (SkillTreeData ToDisplay)
+	{
+		TreeBG.color = LockTreeColor;
+		TreeNameText.text = ToDisplay.Name;
+
+		for (int i = 0; i < 12; i++)
+		{
+			CheckSelectedBonus (i);
+			if (ToDisplay._BonusesAcquired.BonusesRemaining.Contains ((BonusAtIndex) i))
+			{
+//				Debug.Log (i);
+				options [i].isOn = false;
+			}
+		}
+
+		if (ToDisplay.CurrentState != SkillTreeState.Locked)
+		{
+
+			if (ToDisplay.Tier == SkillTreeTier.Tier0) 
+			{TreeBG.color = Tier0Color;}
+
+			if (ToDisplay.Tier == SkillTreeTier.Tier1) 
+			{TreeBG.color = Tier1Color;}
+
+			if (ToDisplay.Tier == SkillTreeTier.Tier2) 
+			{TreeBG.color = Tier2Color;}
+
+			if (ToDisplay.Tier == SkillTreeTier.Tier3) 
 			{TreeBG.color = Tier3Color;}
 		}
 	}

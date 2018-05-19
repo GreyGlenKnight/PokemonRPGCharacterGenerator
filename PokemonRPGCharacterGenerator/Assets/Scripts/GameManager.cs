@@ -84,11 +84,11 @@ public class GameManager : MonoBehaviour
 		CurrentPokemon.NumberOfSpeedBonuses = 0;
 		CurrentPokemon.CurrentDamage = 0;
 		CurrentPokemon.CurrentStrainLost = 0;
-		_TreeRowState = TreeRowState.Adult;
-		ChangeVisibleTrees ();
+		_TreeRowState = TreeRowState.Baby;
+//		ChangeVisibleTrees ();
 //		CurrentPokemon.ApplyMaturityBonus (MaturityStatic.GetMaturityBonuses (CurrentPokemon.Maturity), CurrentPokemon.Maturity);
 //		CurrentPokemon.UnlockTrees ();
-//		Refresh ();
+		Refresh ();
 		_PokemonSheetDisplay.ShowNewPokemon (CurrentPokemon, CharmanderBreed);
 //		_PokemonSheetDisplay.SetTypes (CurrentPokemon, CharmanderBreed);
 //		_PokemonSheetDisplay.SetNames (CurrentPokemon, CharmanderBreed);
@@ -169,12 +169,11 @@ public class GameManager : MonoBehaviour
 
 	public void TreeSwap (int TreeToChange, int TreeDataIndex)
 	{
-//		Debug.Log (TreeToChange+" "+TreeDataIndex);
+//		Debug.Log (CurrentPokemon._SkillTreeData [TreeDataIndex].Name);
 			_NewTreeManager.TreesToRoll [TreeToChange].ChangeDisplayData (	
 			TreeDataIndex,
-			CurrentPokemon._SkillTreeData [TreeDataIndex], 
-			CurrentPokemon._BonusesRemaining [TreeDataIndex].BonusesRemaining);
-
+			CurrentPokemon._SkillTreeData [TreeDataIndex]);
+//				Debug.Log (TreeToChange+" "+TreeDataIndex);
 	}
 
 }

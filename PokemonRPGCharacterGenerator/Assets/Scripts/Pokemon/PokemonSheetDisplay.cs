@@ -247,7 +247,7 @@ public class PokemonSheetDisplay : MonoBehaviour
 
 	public void SetPortrait (Pokemon ToSet)
 	{
-		Debug.Log ("Set Portrait");
+//		Debug.Log ("Set Portrait");
 		if (ToSet.IsShiny == true) 
 		{
 			Debug.Log ("Shiny Portrait");

@@ -27,32 +27,32 @@ public abstract class MaturityBonus
 
     public class BreakTree : MaturityBonus
     {
-        public int BreakLevel;
-		public BreakTree (int Maturity, int breakLevel)
+		public SkillTreeTier _Tier;
+		public BreakTree (int Maturity, SkillTreeTier _Tier)
         {
-        	BreakLevel = breakLevel;
 			LevelGained = Maturity;
-			Description = this.ToString()+BreakLevel+LevelGained;
+			Description = this.ToString()+_Tier.ToString()+LevelGained;
         }
         public override void ApplyBonus(Pokemon _Pokemon)
         {
 //			Debug.Log (LevelGained+Description);
-			_Pokemon.GainBreakTree ();
+			_Pokemon.GainBreakTree (_Tier);
 			_Pokemon.MaturityBonuses.Add (this);
         }
     }
 
     public class TradeSkill : MaturityBonus
     {
-
-		public TradeSkill (int Maturity)
+		public SkillTreeTier _Tier;
+		public TradeSkill (int Maturity, SkillTreeTier Tier)
         {
 			Description = this.ToString()+Maturity;
 			LevelGained = Maturity;
+			_Tier = Tier;
         }
         public override void ApplyBonus(Pokemon _Pokemon)
         {
-			_Pokemon.SwitchTrees();
+			_Pokemon.SwitchTrees(_Tier);
 			_Pokemon.MaturityBonuses.Add (this);
         }
     }
@@ -105,16 +105,17 @@ public abstract class MaturityBonus
 
     public class ActiveSkill : MaturityBonus
     {
-
-		public ActiveSkill(int Maturity)
+		int _TreeSlot;
+		public ActiveSkill(int Maturity, int TreeSlot)
         {
 			Description = this.ToString() +Maturity;
 			LevelGained = Maturity;
+			_TreeSlot = TreeSlot;
         }
 
         public override void ApplyBonus(Pokemon _Pokemon)
         {
-			_Pokemon.GainActiveTreeBonus ();
+			_Pokemon.GainActiveTreeBonus (_TreeSlot);
 			_Pokemon.MaturityBonuses.Add (this);
         }
     }

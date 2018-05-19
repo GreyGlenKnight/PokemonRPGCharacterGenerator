@@ -5,25 +5,17 @@ using UnityEngine.UI;
 using System;
 using System.Linq;
 
-public enum SkillTreeState
-{
-	Active, Inactive, Locked
-}
-
 public class SkillTree : MonoBehaviour 
 {
 	public int CurrentTreeIndex = 0;
 	public const int BONUSES_ON_TREE = 12;
 	public SkillTreeDisplay TreeDisplay;
 	private List<BonusAtIndex> RemainingBonuses = new List<BonusAtIndex> ();
-//	public int BonusIndex;
 	public bool IsTreeFull = false;
 	public bool IsInit = false;
-	private SkillTreeState _State = SkillTreeState.Locked;
 	public string Name;
 	public SkillTreeData _TreeData;
 
-	//SkillTreeState should really be private?
 
 	public List <BonusAtIndex> GetRemainingBonuses ()
 	{
@@ -32,63 +24,61 @@ public class SkillTree : MonoBehaviour
 
 	public void ChangeDisplayData (
 		int TreeIndexToDisplay,
-        SkillTreeData NewTreeData, 
-		List <BonusAtIndex> TempRemainingBonuses)
+		SkillTreeData NewTreeData)
+//		,List <BonusAtIndex> TempRemainingBonuses)
 	{
+//		Debug.Log (NewTreeData.Name);
 		CurrentTreeIndex = TreeIndexToDisplay;
 //		Debug.Log ("2 Parameters");
-		string TempString = "2 Param";
-		for (int i = 0; i < TempRemainingBonuses.Count; i++) 
-		{
-			TempString += ","+ TempRemainingBonuses [i];
-		}
+//		string TempString = "2 Param";
+//		for (int i = 0; i < NewTreeData._BonusesAcquired.BonusesRemaining.Count; i++) 
+//		{
+//			TempString += ","+ NewTreeData._BonusesAcquired.BonusesRemaining [i];
+//		}
 //		Debug.Log (TempString);
-		RemainingBonuses = TempRemainingBonuses;
+//		RemainingBonuses = NewTreeData._BonusesAcquired.BonusesRemaining;
 		_TreeData = NewTreeData;
 		Name = NewTreeData.Name;
-		TreeDisplay.TreeColorUpdate (_State, Name, _TreeData.Tier, 
-			TempRemainingBonuses);
-		
+		TreeDisplay.TreeColorUpdate (_TreeData);
 	}
 
-	public void ChangeDisplayData (
-		int TreeIndexToDisplay,
-		SkillTreeData NewTreeData 
-		) 
-	{
-		CurrentTreeIndex = TreeIndexToDisplay;
-		Debug.Log ("1 Parameter");
-		string TempString = "1 Param";
-		for (int i = 0; i < RemainingBonuses.Count; i++) 
-		{
-			TempString += ","+ RemainingBonuses [i];
-		}
-//		Debug.Log (TempString);
-		if (IsInit == false) 
-		{
-			ResetBonuses ();
-		}
-		_TreeData = NewTreeData;
-		Name = NewTreeData.Name;
-		TreeDisplay.TreeColorUpdate (_State, Name, _TreeData.Tier, 
-			RemainingBonuses);
-	}
+//	public void ChangeDisplayData (
+//		int TreeIndexToDisplay,
+//		SkillTreeData NewTreeData) 
+//	{
+//		CurrentTreeIndex = TreeIndexToDisplay;
+//		Debug.Log ("1 Parameter");
+//		string TempString = "1 Param";
+//		for (int i = 0; i < RemainingBonuses.Count; i++) 
+//		{
+//			TempString += ","+ RemainingBonuses [i];
+//		}
+////		Debug.Log (TempString);
+//		if (IsInit == false) 
+//		{
+//			ResetBonuses ();
+//		}
+//		_TreeData = NewTreeData;
+//		Name = NewTreeData.Name;
+//		TreeDisplay.TreeColorUpdate (_TreeData.CurrentState, Name, _TreeData.Tier, 
+//			RemainingBonuses);
+//	}
 
-	public void ChangeState (SkillTreeState NewState)
-	{
-		_State = NewState;
-
-		if (_TreeData == null) 
-		{
-			return;
-		}
-
-		TreeDisplay.TreeColorUpdate (_State, Name, _TreeData.Tier, RemainingBonuses);
-	}
+//	public void ChangeState (SkillTreeState NewState)
+//	{
+//		_TreeData.ChangeState (NewState);
+//
+//		if (_TreeData == null) 
+//		{
+//			return;
+//		}
+//
+//		TreeDisplay.TreeColorUpdate (_TreeData.CurrentState, Name, _TreeData.Tier, RemainingBonuses);
+//	}
 
 	public BonusAtIndex GetCurrentSelectedBonus ()
 	{
-		if (_State != SkillTreeState.Active) 
+		if (_TreeData.CurrentState != SkillTreeState.Active) 
 		{
 			return BonusAtIndex.None;
 		}
@@ -100,7 +90,7 @@ public class SkillTree : MonoBehaviour
 		return (BonusAtIndex) RemainingBonuses [0];
 	}
 
-	public void RollOnTree()
+	public void RollOnTree ()
 
 	{
 		RollTheList ();
@@ -108,7 +98,7 @@ public class SkillTree : MonoBehaviour
 
 	public void RollTheList ()
 	{
-		if (_State != SkillTreeState.Active)
+		if (_TreeData.CurrentState != SkillTreeState.Active)
 		{
 //			Debug.Log ("Tree inactive!");
 			TreeDisplay.DisplayBonusString ("N/A");
@@ -116,7 +106,7 @@ public class SkillTree : MonoBehaviour
 		}
 		if (RemainingBonuses.Count > 0) 
 		{
-			RemainingBonuses = GameManager.instance.CurrentPokemon._BonusesRemaining [CurrentTreeIndex].BonusesRemaining; 
+			RemainingBonuses = GameManager.instance.CurrentPokemon._SkillTreeData [CurrentTreeIndex]._BonusesAcquired.BonusesRemaining; 
 			RemainingBonuses.Shuffle ();
 			TreeDisplay.DisplayBonusString (((int) RemainingBonuses [0] +1).ToString());
 		} 
@@ -133,7 +123,7 @@ public class SkillTree : MonoBehaviour
 			return;
 		}
 
-		if (_State != SkillTreeState.Active) 
+		if (_TreeData.CurrentState != SkillTreeState.Active) 
 		{
 			Debug.Log ("Selected Tree Inactive!");
 			return;
@@ -170,6 +160,7 @@ public class SkillTree : MonoBehaviour
 
 	public void Awake ()
 	{
+//		Debug.Log ("");
 		TreeDisplay = GetComponent<SkillTreeDisplay> ();
 		ResetBonuses ();
 //		ChangeState (SkillTreeState.Locked);
