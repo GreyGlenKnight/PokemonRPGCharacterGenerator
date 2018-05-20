@@ -62,10 +62,19 @@ public class Pokemon
 	public String HeldItem = "";
 	public List <MaturityBonus> MaturityBonuses = new List <MaturityBonus> ();
 	public List<SkillTreeData> _SkillTreeData = new List<SkillTreeData>();
+
+	public List<SkillTreeData> _SkillTreeDataTier1 = new List<SkillTreeData>();
+	public List<SkillTreeData> _SkillTreeDataTier2 = new List<SkillTreeData>();
+	public List<SkillTreeData> _SkillTreeDataTier3 = new List<SkillTreeData>();
+
 //	public List <SkillTreeBonusesAcquired> _BonusesRemaining = new List <SkillTreeBonusesAcquired>();
 
 	public int TotalBaseStats = 20;
 //	{get {return (MyStat)  }}
+
+	public event EventHandler BreakTree;
+
+	public event EventHandler ActivateTree;
 
 	public EnduranceStat Endurance 
 	{		
@@ -134,33 +143,38 @@ public class Pokemon
 			IsShiny = true;
 			Debug.Log ("Holy Shit, a Shiny!");
 		}
-		_SkillTreeData.Add(new SkillTreeData("Imp", SkillTreeTier.Tier0));
-		_SkillTreeData.Add(new SkillTreeData("Drake", SkillTreeTier.Tier1));
-		_SkillTreeData.Add(new SkillTreeData("Fire Body 1", SkillTreeTier.Tier1));
-		_SkillTreeData.Add(new SkillTreeData("Claw 1", SkillTreeTier.Tier1));
-		_SkillTreeData.Add(new SkillTreeData("Claw 2", SkillTreeTier.Tier2));
-		_SkillTreeData.Add(new SkillTreeData("Beast", SkillTreeTier.Tier1));
-		_SkillTreeData.Add(new SkillTreeData("Fire Body 2", SkillTreeTier.Tier2));
-		_SkillTreeData.Add(new SkillTreeData("Pyromancer 1", SkillTreeTier.Tier1));
-		_SkillTreeData.Add(new SkillTreeData("Pureblood 2", SkillTreeTier.Tier2));
-		_SkillTreeData.Add(new SkillTreeData("Pureblood 3", SkillTreeTier.Tier3));
-		_SkillTreeData.Add(new SkillTreeData("Fire Body 3", SkillTreeTier.Tier3));
-		_SkillTreeData.Add(new SkillTreeData("Acrobatics 1", SkillTreeTier.Tier1));
+//		_SkillTreeData.Add(new SkillTreeData("Imp", SkillTreeTier.Tier0));
+//		_SkillTreeData.Add(new SkillTreeData("Drake", SkillTreeTier.Tier1));
+//		_SkillTreeData.Add(new SkillTreeData("Fire Body 1", SkillTreeTier.Tier1));
+//		_SkillTreeData.Add(new SkillTreeData("Claw 1", SkillTreeTier.Tier1));
+//		_SkillTreeData.Add(new SkillTreeData("Pyromancer 1", SkillTreeTier.Tier1));
+//		_SkillTreeData.Add(new SkillTreeData("Beast", SkillTreeTier.Tier1));
+//		_SkillTreeData.Add(new SkillTreeData("Claw 2", SkillTreeTier.Tier2));
+//		_SkillTreeData.Add(new SkillTreeData("Fire Body 2", SkillTreeTier.Tier2));
+//		_SkillTreeData.Add(new SkillTreeData("Pureblood 2", SkillTreeTier.Tier2));
+//		_SkillTreeData.Add(new SkillTreeData("Acrobatics 1", SkillTreeTier.Tier1));
+//		_SkillTreeData.Add(new SkillTreeData("Pureblood 3", SkillTreeTier.Tier3));
+//		_SkillTreeData.Add(new SkillTreeData("Fire Body 3", SkillTreeTier.Tier3));
 
-//		_BonusesRemaining.Add (new SkillTreeBonusesAcquired ());
-//		_BonusesRemaining.Add (new SkillTreeBonusesAcquired ());
-//		_BonusesRemaining.Add (new SkillTreeBonusesAcquired ());
-//		_BonusesRemaining.Add (new SkillTreeBonusesAcquired ());
-//		_BonusesRemaining.Add (new SkillTreeBonusesAcquired ());
-//		_BonusesRemaining.Add (new SkillTreeBonusesAcquired ());
-//		_BonusesRemaining.Add (new SkillTreeBonusesAcquired ());
-//		_BonusesRemaining.Add (new SkillTreeBonusesAcquired ());
-//		_BonusesRemaining.Add (new SkillTreeBonusesAcquired ());
-//		_BonusesRemaining.Add (new SkillTreeBonusesAcquired ());
-//		_BonusesRemaining.Add (new SkillTreeBonusesAcquired ());
-//		_BonusesRemaining.Add (new SkillTreeBonusesAcquired ());
+//		_SkillTreeDataTier1.Add (new SkillTreeData("Imp", SkillTreeTier.Tier0));
+		_SkillTreeDataTier1.Add (new SkillTreeData("Drake", SkillTreeTier.Tier1));
+		_SkillTreeDataTier1.Add (new SkillTreeData("Fire Body 1", SkillTreeTier.Tier1));
+		_SkillTreeDataTier1.Add (new SkillTreeData("Claw 1", SkillTreeTier.Tier1));
+		_SkillTreeDataTier1.Add (new SkillTreeData("Beast", SkillTreeTier.Tier1));
+		_SkillTreeDataTier1.Add (new SkillTreeData("Pyromancer 1", SkillTreeTier.Tier1));
+
+		_SkillTreeDataTier2.Add (new SkillTreeData("Claw 2", SkillTreeTier.Tier2));
+		_SkillTreeDataTier2.Add (new SkillTreeData("Fire Body 2", SkillTreeTier.Tier2));
+		_SkillTreeDataTier2.Add (new SkillTreeData("Pureblood 2", SkillTreeTier.Tier2));
+
+		_SkillTreeDataTier3.Add (new SkillTreeData("Pureblood 3", SkillTreeTier.Tier3));
+		_SkillTreeDataTier3.Add (new SkillTreeData("Fire Body 3", SkillTreeTier.Tier3));
+		_SkillTreeDataTier3.Add (new SkillTreeData("Acrobatics 1", SkillTreeTier.Tier1));
+
+//		_SkillTreeData.Add (new SkillTreeData("Imp", SkillTreeTier.Tier0));
+
 		ApplyMaturityBonus (MaturityStatic.GetMaturityBonuses (0), 0);
-		UnlockTrees (SkillTreeTier.Tier0);
+//		UnlockTrees (SkillTreeTier.Tier0);
 //		_PokemonSheetDisplay.ShowNewPokemon (this, _Breed);
 	}
 		
@@ -175,33 +189,38 @@ public class Pokemon
 			Debug.Log ("Holy Shit, a Shiny!");
 		}
 		_Breed = new Breed (ElementTypes.Nothing, ElementTypes.Nothing);
-		_SkillTreeData.Add(new SkillTreeData("Imp", SkillTreeTier.Tier0));
-		_SkillTreeData.Add(new SkillTreeData("Drake", SkillTreeTier.Tier1));
-		_SkillTreeData.Add(new SkillTreeData("Fire Body 1", SkillTreeTier.Tier1));
-		_SkillTreeData.Add(new SkillTreeData("Claw 1", SkillTreeTier.Tier1));
-		_SkillTreeData.Add(new SkillTreeData("Claw 2", SkillTreeTier.Tier2));
-		_SkillTreeData.Add(new SkillTreeData("Beast", SkillTreeTier.Tier1));
-		_SkillTreeData.Add(new SkillTreeData("Fire Body 2", SkillTreeTier.Tier2));
-		_SkillTreeData.Add(new SkillTreeData("Pyromancer 1", SkillTreeTier.Tier1));
-		_SkillTreeData.Add(new SkillTreeData("Pureblood 2", SkillTreeTier.Tier2));
-		_SkillTreeData.Add(new SkillTreeData("Pureblood 3", SkillTreeTier.Tier3));
-		_SkillTreeData.Add(new SkillTreeData("Fire Body 3", SkillTreeTier.Tier3));
-		_SkillTreeData.Add(new SkillTreeData("Acrobatics 1", SkillTreeTier.Tier1));
+//		_SkillTreeData.Add(new SkillTreeData("Imp", SkillTreeTier.Tier0));
+//		_SkillTreeData.Add(new SkillTreeData("Drake", SkillTreeTier.Tier1));
+//		_SkillTreeData.Add(new SkillTreeData("Fire Body 1", SkillTreeTier.Tier1));
+//		_SkillTreeData.Add(new SkillTreeData("Claw 1", SkillTreeTier.Tier1));
+//		_SkillTreeData.Add(new SkillTreeData("Acrobatics 1", SkillTreeTier.Tier1));
+//		_SkillTreeData.Add(new SkillTreeData("Pyromancer 1", SkillTreeTier.Tier1));
+//		_SkillTreeData.Add(new SkillTreeData("Beast", SkillTreeTier.Tier1));
+//		_SkillTreeData.Add(new SkillTreeData("Claw 2", SkillTreeTier.Tier2));
+//		_SkillTreeData.Add(new SkillTreeData("Fire Body 2", SkillTreeTier.Tier2));
+//		_SkillTreeData.Add(new SkillTreeData("Pureblood 2", SkillTreeTier.Tier2));
+//		_SkillTreeData.Add(new SkillTreeData("Pureblood 3", SkillTreeTier.Tier3));
+//		_SkillTreeData.Add(new SkillTreeData("Fire Body 3", SkillTreeTier.Tier3));
 
-//		_BonusesRemaining.Add (new SkillTreeBonusesAcquired ());
-//		_BonusesRemaining.Add (new SkillTreeBonusesAcquired ());
-//		_BonusesRemaining.Add (new SkillTreeBonusesAcquired ());
-//		_BonusesRemaining.Add (new SkillTreeBonusesAcquired ());
-//		_BonusesRemaining.Add (new SkillTreeBonusesAcquired ());
-//		_BonusesRemaining.Add (new SkillTreeBonusesAcquired ());
-//		_BonusesRemaining.Add (new SkillTreeBonusesAcquired ());
-//		_BonusesRemaining.Add (new SkillTreeBonusesAcquired ());
-//		_BonusesRemaining.Add (new SkillTreeBonusesAcquired ());
-//		_BonusesRemaining.Add (new SkillTreeBonusesAcquired ());
-//		_BonusesRemaining.Add (new SkillTreeBonusesAcquired ());
-//		_BonusesRemaining.Add (new SkillTreeBonusesAcquired ());
+//		_SkillTreeDataTier1.Add (new SkillTreeData("Imp", SkillTreeTier.Tier0));
+		_SkillTreeDataTier1.Add (new SkillTreeData("Drake", SkillTreeTier.Tier1));
+		_SkillTreeDataTier1.Add (new SkillTreeData("Fire Body 1", SkillTreeTier.Tier1));
+		_SkillTreeDataTier1.Add (new SkillTreeData("Claw 1", SkillTreeTier.Tier1));
+		_SkillTreeDataTier1.Add (new SkillTreeData("Beast", SkillTreeTier.Tier1));
+		_SkillTreeDataTier1.Add (new SkillTreeData("Pyromancer 1", SkillTreeTier.Tier1));
+
+		_SkillTreeDataTier2.Add (new SkillTreeData("Claw 2", SkillTreeTier.Tier2));
+		_SkillTreeDataTier2.Add (new SkillTreeData("Fire Body 2", SkillTreeTier.Tier2));
+		_SkillTreeDataTier2.Add (new SkillTreeData("Pureblood 2", SkillTreeTier.Tier2));
+
+		_SkillTreeDataTier3.Add (new SkillTreeData("Pureblood 3", SkillTreeTier.Tier3));
+		_SkillTreeDataTier3.Add (new SkillTreeData("Fire Body 3", SkillTreeTier.Tier3));
+		_SkillTreeDataTier3.Add (new SkillTreeData("Acrobatics 1", SkillTreeTier.Tier1));
+
+//		_SkillTreeData.Add (new SkillTreeData("Imp", SkillTreeTier.Tier0));
+
 		ApplyMaturityBonus (MaturityStatic.GetMaturityBonuses (0), 0);
-		UnlockTrees (SkillTreeTier.Tier0);
+//		UnlockTrees (SkillTreeTier.Tier0);
 
 		//_PokemonSheetDisplay.ShowNewPokemon (GameManager.instance.CurrentPokemon, GameManager.instance.CurrentPokemon._Breed);
 	}
@@ -210,6 +229,44 @@ public class Pokemon
 //	{
 //		
 //	}
+
+	private SkillTreeData AutoChooseTree (SkillTreeTier _Tier)
+	{
+		SkillTreeData Temp;
+
+		switch (_Tier)
+		{	
+		case SkillTreeTier.Tier0:
+			_SkillTreeDataTier1.Shuffle ();
+			Temp = _SkillTreeDataTier1 [0];
+			_SkillTreeDataTier1.RemoveAt (0);
+			return Temp;
+		case SkillTreeTier.Tier1:
+			_SkillTreeDataTier1.Shuffle ();
+			Temp = _SkillTreeDataTier1 [0];
+			_SkillTreeDataTier1.RemoveAt (0);
+			return Temp;
+//			break;
+		case SkillTreeTier.Tier2:
+			_SkillTreeDataTier2.Shuffle ();
+			Temp = _SkillTreeDataTier2 [0];
+			_SkillTreeDataTier2.RemoveAt (0);
+			return Temp;
+//			break;
+		case SkillTreeTier.Tier3:
+			_SkillTreeDataTier3.Shuffle ();
+			Temp = _SkillTreeDataTier3 [0];
+			_SkillTreeDataTier3.RemoveAt (0);
+			return Temp;
+//			break;
+		default:
+			Debug.Log ("This pokemon has gone Super Saiyan" + _Tier);
+			return null;
+//			break;
+		}
+	}
+
+
 
 	public void MaturityIncrease ()
 	{
@@ -247,15 +304,13 @@ public class Pokemon
 
 	public void SwitchTrees (SkillTreeTier Tier)
 	{
-		Debug.Log (Tier.ToString());
-		SkillTreeData TempData2 = _SkillTreeData [4];
+//		Debug.Log (Tier.ToString());
+		_SkillTreeData [0].ChangeState (SkillTreeState.Inactive);
+		_SkillTreeData [3].ChangeState (SkillTreeState.Active);
+		SkillTreeData TempData2 = _SkillTreeData [3];
 		SkillTreeData TempData = _SkillTreeData [0];
-//		SkillTreeBonusesAcquired TempBonuses = _SkillTreeData [0]._BonusesRemaining;
-//		SkillTreeBonusesAcquired TempBonuses2 = _SkillTreeData [4]._BonusesRemaining;
 		_SkillTreeData [0] = TempData2;
-		_SkillTreeData [4] = TempData;
-//		_SkillTreeData [0]._BonusesRemaining = TempBonuses2;
-//		_SkillTreeData [4]._BonusesRemaining = TempBonuses;
+		_SkillTreeData [3] = TempData;
 		GameManager.instance.Refresh();
 	}
 
@@ -273,8 +328,8 @@ public class Pokemon
 
 	public void GainBreakTree (SkillTreeTier _Tier)
 	{
-		UnlockTrees (_Tier);	
-		Debug.Log("Gained Break Tree :"+Maturity);
+		UnlockTrees (_Tier);
+		Debug.Log ("Gained Break Tree :" + Maturity);
 	}
 
 	public void GainActiveTreeBonus (int TreeSlot)
@@ -315,47 +370,75 @@ public class Pokemon
 		
 	public void UnlockTrees (SkillTreeTier _Tier)
 	{
-		if (Maturity >= 0) {
-			_SkillTreeData [0].ChangeState (SkillTreeState.Active);
-		}
+		SkillTreeData TreeToAdd = AutoChooseTree (_Tier);
+		_SkillTreeData.Add (TreeToAdd);
 
-		for (int i = 0; i < MaturityStatic.BreakTreeRank1Bonuses.Length; i++) {
-			if (Maturity >= MaturityStatic.BreakTreeRank1Bonuses [i]) {
-				for (int j = 0; j < _SkillTreeData.Count; j++) {
-					if (_SkillTreeData [j].Tier == _Tier && _SkillTreeData [j].CurrentState == SkillTreeState.Locked) {
-						_SkillTreeData [j].ChangeState (SkillTreeState.Inactive);
-						return;
-					}
-				}
-			}
-		}
-
-		for (int i = 0; i < MaturityStatic.BreakTreeRank2Bonuses.Length; i++) {
-			if (Maturity >= MaturityStatic.BreakTreeRank2Bonuses [i]) {
-				for (int j = 0; j < _SkillTreeData.Count; j++) {
-					if (_SkillTreeData [j].Tier == _Tier && _SkillTreeData [j].CurrentState == SkillTreeState.Locked) {
-						_SkillTreeData [j].ChangeState (SkillTreeState.Inactive);
-						return;
-					}
-				}
-			}
-		}
-
-		for (int i = 0; i < MaturityStatic.BreakTreeRank3Bonuses.Length; i++) {
-			if (Maturity >= MaturityStatic.BreakTreeRank3Bonuses [i]) {
-				for (int j = 0; j < _SkillTreeData.Count; j++) {
-					if (_SkillTreeData [j].Tier == _Tier && _SkillTreeData [j].CurrentState == SkillTreeState.Locked) {
-						_SkillTreeData [j].ChangeState (SkillTreeState.Inactive);
-						return;
-					}
-				}
-			}
-		}
-
-		if (Maturity != 0) 
+		for (int i = 0; i < _SkillTreeData.Count; i++) 
 		{
-			GameManager.instance.Refresh ();
+			if (_SkillTreeData [i].CurrentState == SkillTreeState.Locked) 
+			{
+				_SkillTreeData [i].ChangeState (SkillTreeState.Inactive);
+
+				if (BreakTree != null) 
+				{
+					BreakTree (this, new EventArgs ());
+					Debug.Log (i);
+				}						
+				return;
+			}
 		}
+
+//		for (int i = 0; i < MaturityStatic.BreakTreeRank1Bonuses.Length; i++) {
+//			if (Maturity >= MaturityStatic.BreakTreeRank1Bonuses [i]) {
+//				for (int j = 0; j < _SkillTreeData.Count; j++) {
+//					if (_SkillTreeData [j].Tier == _Tier && _SkillTreeData [j].CurrentState == SkillTreeState.Locked) {
+//						_SkillTreeData [j].ChangeState (SkillTreeState.Inactive);
+////						Debug.Log ("Before If statement is called");
+//						if (BreakTree != null) 
+//						{
+////							Debug.Log ("Before Event is called");
+//							BreakTree (this, new EventArgs ());
+//						}						
+//						return;
+//					}
+//				}
+//			}
+//		}
+//
+//		for (int i = 0; i < MaturityStatic.BreakTreeRank2Bonuses.Length; i++) {
+//			if (Maturity >= MaturityStatic.BreakTreeRank2Bonuses [i]) {
+//				for (int j = 0; j < _SkillTreeData.Count; j++) {
+//					if (_SkillTreeData [j].Tier == _Tier && _SkillTreeData [j].CurrentState == SkillTreeState.Locked) {
+//						_SkillTreeData [j].ChangeState (SkillTreeState.Inactive);
+//						if (BreakTree != null) 
+//						{
+//							BreakTree (this, new EventArgs ());
+//						}						
+//						return;
+//					}
+//				}
+//			}
+//		}
+//
+//		for (int i = 0; i < MaturityStatic.BreakTreeRank3Bonuses.Length; i++) {
+//			if (Maturity >= MaturityStatic.BreakTreeRank3Bonuses [i]) {
+//				for (int j = 0; j < _SkillTreeData.Count; j++) {
+//					if (_SkillTreeData [j].Tier == _Tier && _SkillTreeData [j].CurrentState == SkillTreeState.Locked) {
+//						_SkillTreeData [j].ChangeState (SkillTreeState.Inactive);
+//						if (BreakTree != null) 
+//						{
+//							BreakTree (this, new EventArgs ());
+//						}
+//						return;
+//					}
+//				}
+//			}
+//		}
+
+//		if (Maturity != 0) 
+//		{
+//			GameManager.instance.Refresh ();
+//		}
 //			for (in		t i = 0; i < (_SkillTrees.ActiveRolls.Length); i++)
 //		{
 //			_SkillTrees.ActiveRolls [i].TreeDisplay.TreeColorUpdate (_SkillTrees.ActiveRolls [i]._TreeData);
@@ -364,9 +447,12 @@ public class Pokemon
 
 		public void ActivateTrees (int TreeSlot)
 		{
-			_SkillTreeData [TreeSlot].ChangeState (SkillTreeState.Active);
+		_SkillTreeData [TreeSlot].ChangeState (SkillTreeState.Active);
+		if (ActivateTree != null)
+		{
+			ActivateTree (this, new EventArgs());
 		}
-
+	}
 
 	public class Breed 
 	{

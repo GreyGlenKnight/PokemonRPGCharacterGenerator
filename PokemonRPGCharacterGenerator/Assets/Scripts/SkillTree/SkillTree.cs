@@ -38,7 +38,10 @@ public class SkillTree : MonoBehaviour
 //		Debug.Log (TempString);
 //		RemainingBonuses = NewTreeData._BonusesAcquired.BonusesRemaining;
 		_TreeData = NewTreeData;
-		Name = NewTreeData.Name;
+		if (NewTreeData != null) 
+		{
+			Name = NewTreeData.Name;
+		}
 		TreeDisplay.TreeColorUpdate (_TreeData);
 	}
 
@@ -78,6 +81,10 @@ public class SkillTree : MonoBehaviour
 
 	public BonusAtIndex GetCurrentSelectedBonus ()
 	{
+		if (_TreeData == null) 
+		{
+			return BonusAtIndex.None;
+		}
 		if (_TreeData.CurrentState != SkillTreeState.Active) 
 		{
 			return BonusAtIndex.None;
@@ -98,26 +105,39 @@ public class SkillTree : MonoBehaviour
 
 	public void RollTheList ()
 	{
+		if (_TreeData == null) 
+		{
+			return;
+		}
 		if (_TreeData.CurrentState != SkillTreeState.Active)
 		{
 //			Debug.Log ("Tree inactive!");
 			TreeDisplay.DisplayBonusString ("N/A");
 			return;
 		}
+
+		RemainingBonuses = GameManager.instance.CurrentPokemon._SkillTreeData [CurrentTreeIndex]._BonusesAcquired.BonusesRemaining; 
+
 		if (RemainingBonuses.Count > 0) 
 		{
-			RemainingBonuses = GameManager.instance.CurrentPokemon._SkillTreeData [CurrentTreeIndex]._BonusesAcquired.BonusesRemaining; 
 			RemainingBonuses.Shuffle ();
+			Debug.Log (CurrentTreeIndex);
 			TreeDisplay.DisplayBonusString (((int) RemainingBonuses [0] +1).ToString());
 		} 
 		else 
 		{
+			
 			TreeDisplay.DisplayBonusString ("~");
 		}
 	}
 
 	public void OnSelected ()
 	{
+		if (_TreeData == null) 
+		{
+			Debug.Log ("Selected Tree Null!");
+			return;
+		}
 		if (GameManager.instance._SelectionState == SelectionState.Roll) 
 		{
 			return;

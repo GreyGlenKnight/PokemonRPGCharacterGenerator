@@ -80,22 +80,22 @@ public static class MaturityStatic
 		if (BonusLevels.Contains (Maturity) == true) 
 		{
 			ToReturn.Add (new MaturityBonus.BonusLevel (
-				(Array.IndexOf (BonusLevels,Maturity)+1)));
+				(Array.IndexOf (BonusLevels,Maturity))));
 		}
 		if (STABBonuses.Contains (Maturity) == true) 
 		{
             ToReturn.Add (new MaturityBonus.STABBonus (
-				(Array.IndexOf (STABBonuses,Maturity)+1)));
+				(Array.IndexOf (STABBonuses,Maturity))));
 		}
 		if (NatureBonuses.Contains (Maturity) == true) 
 		{
             ToReturn.Add (new MaturityBonus.NatureBonus (
-				(Array.IndexOf (NatureBonuses,Maturity)+1)));
+				(Array.IndexOf (NatureBonuses,Maturity))));
 		} 
 		if (AbilitySlotBonuses.Contains (Maturity) == true) 
 		{
             ToReturn.Add (new MaturityBonus.AbilitySlot (
-				(Array.IndexOf (AbilitySlotBonuses,Maturity)+1)));
+				(Array.IndexOf (AbilitySlotBonuses,Maturity))));
 		} 
 		if (TradeSkillBonuses.Contains (Maturity) == true) 
 		{
@@ -104,45 +104,45 @@ public static class MaturityStatic
 			if (Maturity > 29) {_Tier = SkillTreeTier.Tier3;}
 
             ToReturn.Add (new MaturityBonus.TradeSkill (
-				(Array.IndexOf (TradeSkillBonuses,Maturity)+1), _Tier));
+				(Array.IndexOf (TradeSkillBonuses,Maturity)), _Tier));
 		}
 		if (BreakTreeRank0Bonuses.Contains(Maturity) == true)
 		{
 //			Debug.Log (Array.IndexOf (BreakTreeRank0Bonuses,Maturity));
 			ToReturn.Add(new MaturityBonus.BreakTree(
-				(Array.IndexOf (BreakTreeRank0Bonuses,Maturity)+1),SkillTreeTier.Tier0));
+				(Array.IndexOf (BreakTreeRank0Bonuses,Maturity)),SkillTreeTier.Tier0));
 		}
 		if (BreakTreeRank1Bonuses.Contains(Maturity) == true)
         {
             ToReturn.Add(new MaturityBonus.BreakTree(
-				(Array.IndexOf (BreakTreeRank1Bonuses,Maturity)+1),SkillTreeTier.Tier1));
+				(Array.IndexOf (BreakTreeRank1Bonuses,Maturity)),SkillTreeTier.Tier1));
         }
         if (BreakTreeRank2Bonuses.Contains(Maturity) == true)
         {
             ToReturn.Add(new MaturityBonus.BreakTree(
-				(Array.IndexOf (BreakTreeRank2Bonuses,Maturity)+1),SkillTreeTier.Tier2));
+				(Array.IndexOf (BreakTreeRank2Bonuses,Maturity)),SkillTreeTier.Tier2));
         }
         if (BreakTreeRank3Bonuses.Contains(Maturity) == true)
         {
 			ToReturn.Add(new MaturityBonus.BreakTree(
-				(Array.IndexOf (BreakTreeRank3Bonuses,Maturity)+1),SkillTreeTier.Tier3));
+				(Array.IndexOf (BreakTreeRank3Bonuses,Maturity)),SkillTreeTier.Tier3));
 		}
         if (ActiveTreeSlot.Contains(Maturity) == true)
         {
 //			Debug.Log (Maturity);
 			int TreeSlot = Array.IndexOf (ActiveTreeSlot,Maturity);
 			ToReturn.Add(new MaturityBonus.ActiveSkill (
-				(TreeSlot+1), TreeSlot));
+				(TreeSlot), TreeSlot));
         }
         if (SpecialTrainingBonuses.Contains(Maturity) == true)
         {
 			ToReturn.Add(new MaturityBonus.SpecialTraining (
-				(Array.IndexOf (SpecialTrainingBonuses,Maturity)+1)));
+				(Array.IndexOf (SpecialTrainingBonuses,Maturity))));
         }
         if (EnhancerSlotBonuses.Contains(Maturity) == true)
         {
 			ToReturn.Add(new MaturityBonus.EnhancerSlot (
-				(Array.IndexOf (EnhancerSlotBonuses,Maturity)+1)));
+				(Array.IndexOf (EnhancerSlotBonuses,Maturity))));
         }
 
         return ToReturn;

@@ -295,6 +295,4 @@ public class PokemonSheetDisplay : MonoBehaviour
 		//We want to set a bunch of functions, using current pokemon as input parameter
 		//Probably ShowNewPokemon will have all the necessary subroutines
 	}
-
-
 }

@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
 	public NewTreeManager _NewTreeManager;
 	public SelectionState _SelectionState = SelectionState.Roll;
 	public Pokemon CurrentPokemon;
-	public TreeRowState _TreeRowState;
+	public TreeRowState TreeRowState;
 	public BadgeLevelGenerator _BadgeLevelGenerator;
 	public PokemonSheetDisplay _PokemonSheetDisplay;
 
@@ -84,96 +84,86 @@ public class GameManager : MonoBehaviour
 		CurrentPokemon.NumberOfSpeedBonuses = 0;
 		CurrentPokemon.CurrentDamage = 0;
 		CurrentPokemon.CurrentStrainLost = 0;
-		_TreeRowState = TreeRowState.Baby;
 //		ChangeVisibleTrees ();
 //		CurrentPokemon.ApplyMaturityBonus (MaturityStatic.GetMaturityBonuses (CurrentPokemon.Maturity), CurrentPokemon.Maturity);
 //		CurrentPokemon.UnlockTrees ();
+		_NewTreeManager.ChangeDisplayPokemon (CurrentPokemon);
 		Refresh ();
 		_PokemonSheetDisplay.ShowNewPokemon (CurrentPokemon, CharmanderBreed);
-//		_PokemonSheetDisplay.SetTypes (CurrentPokemon, CharmanderBreed);
-//		_PokemonSheetDisplay.SetNames (CurrentPokemon, CharmanderBreed);
-//		_PokemonSheetDisplay.SetXP (CurrentPokemon);
-//		_PokemonSheetDisplay.SetItem (CurrentPokemon);
-//		_PokemonSheetDisplay.SetRate (CurrentPokemon);
-//		_PokemonSheetDisplay.SetVitals (CurrentPokemon);
-//		_PokemonSheetDisplay.SetStatBlock (CurrentPokemon, CharmanderBreed);
-//		_PokemonSheetDisplay.SetPortrait  (CurrentPokemon);
-//		_PokemonSheetDisplay.SetAbilities (CurrentPokemon);
-		//SetMoves()
-		//SetSkillRanks ()
 	}
 
 	public void Refresh ()
 	{
 //		Debug.Log(_TreeRowState);
-
-		switch (_TreeRowState)
-		{
-		case TreeRowState.Baby:
-			TreeSwap (0,0);
-			TreeSwap (1,1);
-			TreeSwap (2,2);
-			TreeSwap (3,3);
-			break;
-		case TreeRowState.Mid:
-			TreeSwap (0,4);
-			TreeSwap (1,5);
-			TreeSwap (2,6);
-			TreeSwap (3,7);
-			break;
-		case TreeRowState.Adult:
-			TreeSwap (0,8);
-			TreeSwap (1,9);
-			TreeSwap (2,10);
-			TreeSwap (3,11);
-			break;
-		default:
-			Debug.Log("There is a new View add logic here. view name is " + _TreeRowState);
-			break;
-		}
+		_NewTreeManager.Refresh ();
+//		switch (_TreeRowState)
+//		{
+//		case TreeRowState.Baby:
+//			TreeSwap (0,0);
+//			TreeSwap (1,1);
+//			TreeSwap (2,2);
+//			TreeSwap (3,3);
+//			break;
+//		case TreeRowState.Mid:
+//			TreeSwap (0,4);
+//			TreeSwap (1,5);
+//			TreeSwap (2,6);
+//			TreeSwap (3,7);
+//			break;
+//		case TreeRowState.Adult:
+//			TreeSwap (0,8);
+//			TreeSwap (1,9);
+//			TreeSwap (2,10);
+//			TreeSwap (3,11);
+//			break;
+//		default:
+//			Debug.Log("There is a new View add logic here. view name is " + _TreeRowState);
+//			break;
+//		}
 	}
 
 	public void ChangeVisibleTrees ()
 	{
 //		Refresh ();
-
-		switch (_TreeRowState)
-		{
-		case TreeRowState.Baby:
-
-			_TreeRowState = TreeRowState.Mid;
-			Refresh ();
-
-			break;
-
-		case TreeRowState.Mid:
-
-			_TreeRowState = TreeRowState.Adult;
-			Refresh ();
-
-			break;
-
-		case TreeRowState.Adult:
-
-			_TreeRowState = TreeRowState.Baby;
-			Refresh ();
-
-			break;
-
-		default:
-			Debug.Log("There is a new View add logic here. view name is " + _TreeRowState);
-			break;
-		}
+		_NewTreeManager.ChangeVisibleTrees ();
+//		switch (_TreeRowState)
+//		{
+//		case TreeRowState.Baby:
+//
+//			_TreeRowState = TreeRowState.Mid;
+//			Refresh ();
+//
+//			break;
+//
+//		case TreeRowState.Mid:
+//
+//			_TreeRowState = TreeRowState.Adult;
+//			Refresh ();
+//
+//			break;
+//
+//		case TreeRowState.Adult:
+//
+//			_TreeRowState = TreeRowState.Baby;
+//			Refresh ();
+//
+//			break;
+//
+//		default:
+//			Debug.Log("There is a new View add logic here. view name is " + _TreeRowState);
+//			break;
+//		}
 
 	}
 
 	public void TreeSwap (int TreeToChange, int TreeDataIndex)
 	{
 //		Debug.Log (CurrentPokemon._SkillTreeData [TreeDataIndex].Name);
-			_NewTreeManager.TreesToRoll [TreeToChange].ChangeDisplayData (	
-			TreeDataIndex,
-			CurrentPokemon._SkillTreeData [TreeDataIndex]);
+//			_NewTreeManager.TreesToRoll [TreeToChange].ChangeDisplayData (	
+//			TreeDataIndex,
+//			CurrentPokemon._SkillTreeData [TreeDataIndex]);
 //				Debug.Log (TreeToChange+" "+TreeDataIndex);
+		_NewTreeManager.TreeSwap (TreeToChange, TreeDataIndex);
 	}
 
 }
