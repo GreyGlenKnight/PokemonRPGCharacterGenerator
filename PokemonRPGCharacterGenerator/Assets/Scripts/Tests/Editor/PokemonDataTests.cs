@@ -5,6 +5,8 @@ using UnityEngine.UI;
 using System;
 using System.Linq;
 using NUnit.Framework;
+using NSubstitute;
+
 
 public class PokemonDataTests
 
@@ -249,10 +251,33 @@ public class PokemonDataTests
 	public void BreedBuildsDualtype ()
 	{
 		Pokemon.Breed TestBreed = A.Breed ().W_Types(ElementTypes.Fire, ElementTypes.Flying);
-		Debug.Log (TestBreed.Type1);
-		Debug.Log (TestBreed.Type2);
+//		Debug.Log (TestBreed.Type1);
+//		Debug.Log (TestBreed.Type2);
 //		Debug.Log (TestBreed.BaseAttack);
 		UnityEngine.Debug.Assert (TestBreed.Type1 == ElementTypes.Fire);
 		UnityEngine.Debug.Assert (TestBreed.Type2 == ElementTypes.Flying);
 	}
+
+
+
+[Test]
+public void BreedBuildsDualtype_NSubstitute ()
+{
+	Pokemon.Breed TestBreed = Substitute.For <Pokemon.Breed>();
+		TestBreed.Type1.Returns (ElementTypes.Fire);
+		TestBreed.Type2.Returns (ElementTypes.Flying);
+//	Debug.Log (TestBreed.Type1);
+//	Debug.Log (TestBreed.Type2);
+	UnityEngine.Debug.Assert (TestBreed.Type1 == ElementTypes.Fire);
+	UnityEngine.Debug.Assert (TestBreed.Type2 == ElementTypes.Flying);
+}
+
+
+
+
+
+
+
+
+
 }

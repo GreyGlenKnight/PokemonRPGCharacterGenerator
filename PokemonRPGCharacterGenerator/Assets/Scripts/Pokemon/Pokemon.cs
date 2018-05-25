@@ -58,14 +58,20 @@ public class Pokemon
 	public SpecialDefenseStat NumberOfSpecialDefenseBonuses = new SpecialDefenseStat (0);
 	public SpeedStat NumberOfSpeedBonuses = new SpeedStat (0);
 
+
+
 //	public PokemonSheetDisplay _PokemonSheetDisplay;
 	public String HeldItem = "";
-	public List <MaturityBonus> MaturityBonuses = new List <MaturityBonus> ();
-	public List<SkillTreeData> _SkillTreeData = new List<SkillTreeData>();
 
-	public List<SkillTreeData> _SkillTreeDataTier1 = new List<SkillTreeData>();
-	public List<SkillTreeData> _SkillTreeDataTier2 = new List<SkillTreeData>();
-	public List<SkillTreeData> _SkillTreeDataTier3 = new List<SkillTreeData>();
+	public List <Technique> _TechniquesKnown = new List <Technique> ();
+	public List <Technique> _TechniquesActive = new List <Technique> ();
+
+	public List <MaturityBonus> MaturityBonuses = new List <MaturityBonus> ();
+	public List <SkillTreeData> _SkillTreeData = new List<SkillTreeData>();
+
+	public List <SkillTreeData> _SkillTreeDataTier1 = new List<SkillTreeData>();
+	public List <SkillTreeData> _SkillTreeDataTier2 = new List<SkillTreeData>();
+	public List <SkillTreeData> _SkillTreeDataTier3 = new List<SkillTreeData>();
 
 //	public List <SkillTreeBonusesAcquired> _BonusesRemaining = new List <SkillTreeBonusesAcquired>();
 
@@ -75,6 +81,8 @@ public class Pokemon
 	public event EventHandler BreakTree;
 
 	public event EventHandler ActivateTree;
+
+	public event EventHandler TradeSkill;
 
 	public EnduranceStat Endurance 
 	{		
@@ -156,7 +164,7 @@ public class Pokemon
 //		_SkillTreeData.Add(new SkillTreeData("Pureblood 3", SkillTreeTier.Tier3));
 //		_SkillTreeData.Add(new SkillTreeData("Fire Body 3", SkillTreeTier.Tier3));
 
-//		_SkillTreeDataTier1.Add (new SkillTreeData("Imp", SkillTreeTier.Tier0));
+		_SkillTreeDataTier1.Add (new SkillTreeData("Imp", SkillTreeTier.Tier0));
 		_SkillTreeDataTier1.Add (new SkillTreeData("Drake", SkillTreeTier.Tier1));
 		_SkillTreeDataTier1.Add (new SkillTreeData("Fire Body 1", SkillTreeTier.Tier1));
 		_SkillTreeDataTier1.Add (new SkillTreeData("Claw 1", SkillTreeTier.Tier1));
@@ -202,7 +210,7 @@ public class Pokemon
 //		_SkillTreeData.Add(new SkillTreeData("Pureblood 3", SkillTreeTier.Tier3));
 //		_SkillTreeData.Add(new SkillTreeData("Fire Body 3", SkillTreeTier.Tier3));
 
-//		_SkillTreeDataTier1.Add (new SkillTreeData("Imp", SkillTreeTier.Tier0));
+		_SkillTreeDataTier1.Add (new SkillTreeData("Imp", SkillTreeTier.Tier0));
 		_SkillTreeDataTier1.Add (new SkillTreeData("Drake", SkillTreeTier.Tier1));
 		_SkillTreeDataTier1.Add (new SkillTreeData("Fire Body 1", SkillTreeTier.Tier1));
 		_SkillTreeDataTier1.Add (new SkillTreeData("Claw 1", SkillTreeTier.Tier1));
@@ -240,17 +248,20 @@ public class Pokemon
 			_SkillTreeDataTier1.Shuffle ();
 			Temp = _SkillTreeDataTier1 [0];
 			_SkillTreeDataTier1.RemoveAt (0);
+			Debug.Log (_Tier);
 			return Temp;
 		case SkillTreeTier.Tier1:
 			_SkillTreeDataTier1.Shuffle ();
 			Temp = _SkillTreeDataTier1 [0];
 			_SkillTreeDataTier1.RemoveAt (0);
+			Debug.Log (_Tier);
 			return Temp;
 //			break;
 		case SkillTreeTier.Tier2:
 			_SkillTreeDataTier2.Shuffle ();
 			Temp = _SkillTreeDataTier2 [0];
 			_SkillTreeDataTier2.RemoveAt (0);
+			Debug.Log (_Tier);
 			return Temp;
 //			break;
 		case SkillTreeTier.Tier3:
@@ -302,7 +313,7 @@ public class Pokemon
 	        }
 	}
 
-	public void SwitchTrees (SkillTreeTier Tier)
+	public void SwapTrees (SkillTreeTier Tier)
 	{
 //		Debug.Log (Tier.ToString());
 		_SkillTreeData [0].ChangeState (SkillTreeState.Inactive);
@@ -311,7 +322,12 @@ public class Pokemon
 		SkillTreeData TempData = _SkillTreeData [0];
 		_SkillTreeData [0] = TempData2;
 		_SkillTreeData [3] = TempData;
-		GameManager.instance.Refresh();
+		if (TradeSkill != null) 
+		{
+			TradeSkill (this, new EventArgs ());
+//			Debug.Log ("");
+		}			
+//		GameManager.instance.Refresh();
 	}
 
 	public void GainBonusLevel ()
@@ -456,8 +472,8 @@ public class Pokemon
 
 	public class Breed 
 	{
-		public ElementTypes Type1 = ElementTypes.Nothing;
-		public ElementTypes Type2 = ElementTypes.Nothing;
+		public virtual ElementTypes Type1 {get{return _Type1;}set {_Type1 = value; }}
+		public virtual ElementTypes Type2 {get{return _Type2;}set {_Type2 = value; }}
 		public string BreedName; // May be unnecessary
 		public EnduranceStat BaseEndurance = new EnduranceStat (0);
 		public AttackStat BaseAttack = new AttackStat (0);
@@ -466,15 +482,20 @@ public class Pokemon
 		public SpecialDefenseStat BaseSpecialDefense = new SpecialDefenseStat (0);
 		public SpeedStat BaseSpeed = new SpeedStat (0);
 
+		private ElementTypes _Type1 = ElementTypes.Nothing;
+		private ElementTypes _Type2 = ElementTypes.Nothing;
+
+
 		public Breed ()
 		{
 		}
+			
 
 		public Breed (ElementTypes type1, ElementTypes type2)
 	
 		{
-			Type1 = type1;
-			Type2 = type2;
+			_Type1 = type1;
+			_Type2 = type2;
 		}
 	}
 }

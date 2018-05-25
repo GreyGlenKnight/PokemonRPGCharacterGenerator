@@ -25,6 +25,11 @@ public class NewTreeManager : MonoBehaviour
 		Refresh ();
 	}
 
+	public void OnTradeSkill (object Caller, EventArgs E)
+	{
+		Refresh ();
+		Debug.Log ("Trade Skill ");
+	}
 
 	public void OnCallTreeRoll ()
 	{
@@ -46,6 +51,7 @@ public class NewTreeManager : MonoBehaviour
 		_CurrentPokemon = ToDisplay;
 		ToDisplay.BreakTree += OnBreakTree;
 		ToDisplay.ActivateTree += OnActivateTree;
+		ToDisplay.TradeSkill += OnTradeSkill;
 	}
 
 	public void Refresh ()
@@ -124,9 +130,9 @@ public class NewTreeManager : MonoBehaviour
 			TreesToRoll [TreeToChange].ChangeDisplayData (TreeDataIndex, null);
 			return;
 		}
-		Debug.Log (TreeToChange+TreeDataIndex);
-		Debug.Log (TreesToRoll.Count);
-		Debug.Log (_CurrentPokemon._SkillTreeData.Count);
+//		Debug.Log (TreeToChange+TreeDataIndex);
+//		Debug.Log (TreesToRoll.Count);
+//		Debug.Log (_CurrentPokemon._SkillTreeData.Count);
 
 			TreesToRoll [TreeToChange].ChangeDisplayData (
 				TreeDataIndex,

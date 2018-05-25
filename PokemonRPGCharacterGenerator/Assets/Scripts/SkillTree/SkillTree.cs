@@ -121,7 +121,7 @@ public class SkillTree : MonoBehaviour
 		if (RemainingBonuses.Count > 0) 
 		{
 			RemainingBonuses.Shuffle ();
-			Debug.Log (CurrentTreeIndex);
+//			Debug.Log (CurrentTreeIndex);
 			TreeDisplay.DisplayBonusString (((int) RemainingBonuses [0] +1).ToString());
 		} 
 		else 

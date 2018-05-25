@@ -1,6 +1,9 @@
-﻿using System.Collections;
+﻿using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using UnityEngine.UI;
+using System;
+using System.Linq;
 
 public static class TypeColors 
 {
@@ -43,6 +46,14 @@ public static class TypeColors
     public static string Dark = "Dark";
     public static string Steel = "Steel";
     public static string Fairy = "Fairy";
+
+//	public static Image AttackSprite;
+//	public static Image DefenseSprite;
+//	public static Image SpecialAttackSprite;
+//	public static Image SpecialDefenseSprite;
+//	public static Image SpeedSprite;
+//	public static Image EnduranceSprite;
+
 
 	public static string [] TypeStringList = new string []
 	{

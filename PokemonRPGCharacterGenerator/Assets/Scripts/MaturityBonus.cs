@@ -31,11 +31,14 @@ public abstract class MaturityBonus
 		public BreakTree (int Maturity, SkillTreeTier _Tier)
         {
 			LevelGained = Maturity;
+			this._Tier = _Tier;
 			Description = this.ToString()+_Tier.ToString()+LevelGained;
         }
         public override void ApplyBonus(Pokemon _Pokemon)
         {
 //			Debug.Log (LevelGained+Description);
+			Debug.Log (_Tier.ToString());
+
 			_Pokemon.GainBreakTree (_Tier);
 			_Pokemon.MaturityBonuses.Add (this);
         }
@@ -52,7 +55,7 @@ public abstract class MaturityBonus
         }
         public override void ApplyBonus(Pokemon _Pokemon)
         {
-			_Pokemon.SwitchTrees(_Tier);
+			_Pokemon.SwapTrees(_Tier);
 			_Pokemon.MaturityBonuses.Add (this);
         }
     }

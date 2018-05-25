@@ -44,7 +44,20 @@ public class PokemonSheetDisplay : MonoBehaviour
 	public Text BaseSpeed;
 	public Text CurrentSpeed;
 
+	public List <TechniqueDisplay> TechsList = new List <TechniqueDisplay> ();
+
 	public List <ElementTypes> ElementSkillsList = new List <ElementTypes> ();
+
+//	public TechniqueDisplay Technique1;
+//	public string DisplayRange;
+//	public string Name;
+//	public string Description;
+//	public List <ElementTypes> Types = new List <ElementTypes> ();
+//	public int BaseDamage;
+//	public int BaseStrain;
+//	public int BaseAccuracy;
+//	public List <MyStat> StatsUsed = new List <MyStat> ();
+
 
 	//Skills as an array of a type, sort and display 4, rest on hover panel
 
