@@ -101,6 +101,24 @@ public static class TypeColors
 		FairyColor
 	};
 
+	public static Color GetColorForType (ElementTypes _Type)
+
+	{
+		return 	TypeColorList [(int) _Type];
+	}
+
+	public static string GetStringForType (ElementTypes Type)
+
+	{
+		return TypeStringList [(int) Type]; 
+	}
+
+//	public static Image GetImageForType (ElementTypes Type)
+//
+//	{
+//		return TypeImageList [(int) Type]; 
+//	}
+
     public static Color RGBColor(float r, float g, float b)
     {
         if (r > 255)

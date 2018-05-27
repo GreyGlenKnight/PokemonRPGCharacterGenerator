@@ -45,6 +45,7 @@ public class PokemonSheetDisplay : MonoBehaviour
 	public Text CurrentSpeed;
 
 	public List <TechniqueDisplay> TechsList = new List <TechniqueDisplay> ();
+	public bool IsTechsListShowing = true;
 
 	public List <ElementTypes> ElementSkillsList = new List <ElementTypes> ();
 
@@ -209,15 +210,19 @@ public class PokemonSheetDisplay : MonoBehaviour
 	{
 		ElementType1.text = BreedToSet.Type1.ToString();
 
-		int Type1Index = (int) BreedToSet.Type1;
-		int Type2Index = (int) BreedToSet.Type2;
+//		int Type1Index = (int) BreedToSet.Type1;
+//		int Type2Index = (int) BreedToSet.Type2;
+		Background1.color = TypeColors.GetColorForType (BreedToSet.Type1);
+		ElementType1.color = TypeColors.GetColorForType (BreedToSet.Type1);
 
-		Background1.color = TypeColors.TypeColorList.ElementAt (Type1Index);
-		ElementType1.color = TypeColors.TypeColorList.ElementAt (Type1Index);
-		if (Type2Index == 0) 
+//		Background1.color = TypeColors.TypeColorList.ElementAt (Type1Index);
+//		ElementType1.color = TypeColors.TypeColorList.ElementAt (Type1Index);
+		if ((int)BreedToSet.Type2 == 0) 
 		{
-			Background2.color = TypeColors.TypeColorList.ElementAt (Type1Index);
-			ElementType2.color = TypeColors.TypeColorList.ElementAt (Type2Index);
+			Background2.color = TypeColors.GetColorForType (BreedToSet.Type1);
+			ElementType2.color = TypeColors.GetColorForType (BreedToSet.Type2);
+//			Background2.color = TypeColors.TypeColorList.ElementAt (Type1Index);
+//			ElementType2.color = TypeColors.TypeColorList.ElementAt (Type2Index);
 			ElementType2.text = "";
 			ElementType1.alignment = TextAnchor.MiddleCenter;
 //			Debug.Log (ElementType2.alignment.ToString());
@@ -225,8 +230,10 @@ public class PokemonSheetDisplay : MonoBehaviour
 		else 
 		{
 			ElementType1.alignment = TextAnchor.MiddleLeft;
-			Background2.color = TypeColors.TypeColorList.ElementAt (Type2Index);
-			ElementType2.color = TypeColors.TypeColorList.ElementAt (Type2Index);
+			Background2.color = TypeColors.GetColorForType (BreedToSet.Type2);
+			ElementType2.color = TypeColors.GetColorForType (BreedToSet.Type2);
+//			Background2.color = TypeColors.TypeColorList.ElementAt (Type2Index);
+//			ElementType2.color = TypeColors.TypeColorList.ElementAt (Type2Index);
 		}
 		//Debug.Log (Type1Index+ElementType1.ToString()+BreedToSet.ToString());
 		//BGPanels and typecolors
@@ -303,9 +310,50 @@ public class PokemonSheetDisplay : MonoBehaviour
 		SetSkillRanks ();
 	}
 
-	public void Awake ()
+	public void HideTechsView ()
 	{
-		//We want to set a bunch of functions, using current pokemon as input parameter
-		//Probably ShowNewPokemon will have all the necessary subroutines
+		switch (IsTechsListShowing)
+		{	
+		case true:
+			for (int i = 0; i < TechsList.Count; i++) 
+			{
+				TechsList [i].gameObject.SetActive (false);
+			}
+			IsTechsListShowing = false;
+			return;
+
+		case false:
+			for (int i = 0; i < TechsList.Count; i++) 
+			{
+				TechsList [i].gameObject.SetActive (true);
+			}
+			IsTechsListShowing = true;
+			return;
+
+		default:
+			Debug.Log ("HideTechsView has a new case?");
+			return;
+		}
 	}
+
+//		if (IsTechsListShowing == true) 
+//		{
+//			for (int i = 0; i < TechsList.Count; i++) 
+//			{
+//				TechsList [i].gameObject.SetActive (false);
+//			}
+//			IsTechsListShowing = false;
+//		}
+//
+//		if (IsTechsListShowing = false) 
+//		{
+//			for (int i = 0; i < TechsList.Count; i++) 
+//			{
+//				TechsList [i].gameObject.SetActive (true);
+//			}
+//			IsTechsListShowing = true;
+//		}
+//	}
+
+
 }

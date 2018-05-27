@@ -53,8 +53,9 @@ public class TechniqueDisplay : MonoBehaviour
 		} 
 		else 
 		{
-			int Temp = (int) CurrentTechnique.Types [0];
-			Color TempColor = TypeColors.TypeColorList [Temp];
+			Color TempColor = TypeColors.GetColorForType (CurrentTechnique.Types [0]);
+//			int Temp = (int) CurrentTechnique.Types [0];
+//			Color TempColor = TypeColors.TypeColorList [Temp];
 			TempColor.a = 0.8f;
 			_BackGround.color = TempColor;
 
@@ -99,6 +100,11 @@ public class TechniqueDisplay : MonoBehaviour
 		}
 	}
 
+
+	public void ExpandMoveView ()
+	{
+		this.gameObject.SetActive (true);
+	}
 
 //	public void ScaleToFitPanel (List <Image> ToDisplay)
 //	{
