@@ -16,6 +16,8 @@ public class PokemonSheetDisplay : MonoBehaviour
 	public Text ElementType2;
 	public Image Background1;	
 	public Image Background2;
+	public Sprite ElementTypeSymbol1;
+	public Sprite ElementTypeSymbol2;
 //	public GameObject PanelType1;
 //	public GameObject PanelType2;
 
@@ -206,35 +208,29 @@ public class PokemonSheetDisplay : MonoBehaviour
 
 	}
 
-	public void SetTypes (Pokemon ToSet, Pokemon.Breed BreedToSet)
+	public void SetTypes (Pokemon.Breed BreedToSet)
 	{
-		ElementType1.text = BreedToSet.Type1.ToString();
-
-//		int Type1Index = (int) BreedToSet.Type1;
-//		int Type2Index = (int) BreedToSet.Type2;
+		ElementType1.text = TypeColors.GetStringForType(BreedToSet.Type1);
 		Background1.color = TypeColors.GetColorForType (BreedToSet.Type1);
 		ElementType1.color = TypeColors.GetColorForType (BreedToSet.Type1);
-
-//		Background1.color = TypeColors.TypeColorList.ElementAt (Type1Index);
-//		ElementType1.color = TypeColors.TypeColorList.ElementAt (Type1Index);
+	
 		if ((int)BreedToSet.Type2 == 0) 
 		{
 			Background2.color = TypeColors.GetColorForType (BreedToSet.Type1);
 			ElementType2.color = TypeColors.GetColorForType (BreedToSet.Type2);
-//			Background2.color = TypeColors.TypeColorList.ElementAt (Type1Index);
-//			ElementType2.color = TypeColors.TypeColorList.ElementAt (Type2Index);
 			ElementType2.text = "";
 			ElementType1.alignment = TextAnchor.MiddleCenter;
-//			Debug.Log (ElementType2.alignment.ToString());
+			ElementTypeSymbol2 = null;
 		} 
 		else 
 		{
+			ElementType2.text = TypeColors.GetStringForType (BreedToSet.Type2);
 			ElementType1.alignment = TextAnchor.MiddleLeft;
 			Background2.color = TypeColors.GetColorForType (BreedToSet.Type2);
 			ElementType2.color = TypeColors.GetColorForType (BreedToSet.Type2);
-//			Background2.color = TypeColors.TypeColorList.ElementAt (Type2Index);
-//			ElementType2.color = TypeColors.TypeColorList.ElementAt (Type2Index);
+			ElementTypeSymbol2 = TypeColors.GetSpriteForType (BreedToSet.Type2);
 		}
+		ElementTypeSymbol1 = TypeColors.GetSpriteForType (BreedToSet.Type2);
 		//Debug.Log (Type1Index+ElementType1.ToString()+BreedToSet.ToString());
 		//BGPanels and typecolors
 		//This to replace the buttons
@@ -305,7 +301,7 @@ public class PokemonSheetDisplay : MonoBehaviour
 		SetItem (ToSet);
 		SetAbilities (ToSet);
 		SetStatBlock (ToSet, BreedToSet);
-		SetTypes (ToSet, BreedToSet);
+		SetTypes (BreedToSet);
 		SetMoves ();
 		SetSkillRanks ();
 	}

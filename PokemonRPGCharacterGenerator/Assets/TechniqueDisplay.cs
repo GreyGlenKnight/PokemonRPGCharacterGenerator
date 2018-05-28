@@ -10,9 +10,12 @@ public class TechniqueDisplay : MonoBehaviour
 	public Technique CurrentTechnique;
 
 	public Image _BackGround;
+	public Image _StatImage;
+	public Image _TypeImage;
 
-	public List <Image> _ElementType = new List <Image> ();
-	public List <Image> _StatsToUse = new List <Image> ();
+
+	public List <Sprite> _ElementType = new List <Sprite> ();
+	public List <Sprite> _StatsToUse = new List <Sprite> ();
 
 	public Text _Header;
 	public Text _Description;
@@ -21,12 +24,6 @@ public class TechniqueDisplay : MonoBehaviour
 	public Text _BaseStrain;
 	public Text _Range;
 
-	public static Image AttackSprite;
-	public static Image DefenseSprite;
-	public static Image SpecialAttackSprite;
-	public static Image SpecialDefenseSprite;
-	public static Image SpeedSprite;
-	public static Image EnduranceSprite;
 
 	public void ChangeTechniqueDisplay (Technique ToDisplay)
 	{
@@ -46,6 +43,9 @@ public class TechniqueDisplay : MonoBehaviour
 		_Range.text = CurrentTechnique.DisplayRange;
 //		_StatsToUse.Add ();	
 		GetStatImages (CurrentTechnique.StatsUsed);
+		GetElementTypeImages (CurrentTechnique.Types);
+		_StatImage.sprite = _StatsToUse [0];
+		_TypeImage.sprite = _ElementType [0];
 
 		if (ToDisplay.Types.Count == 0) 
 		{
@@ -72,34 +72,19 @@ public class TechniqueDisplay : MonoBehaviour
 
 		for (int i = 0; i < ToReturn.Count; i++) 
 		{
-			if (ToReturn [i].GetType().Equals (typeof (AttackStat)))
-			{
-				_StatsToUse.Add (AttackSprite);
-			}
-			if (ToReturn [i].GetType().Equals (typeof (DefenseStat)))
-			{
-				_StatsToUse.Add (DefenseSprite);
-			}
-			if (ToReturn [i].GetType().Equals (typeof (SpecialAttackStat)))
-			{
-				_StatsToUse.Add (SpecialAttackSprite);
-			}
-			if (ToReturn [i].GetType ().Equals (typeof (SpecialDefenseStat)))
-			{
-				_StatsToUse.Add (SpecialDefenseSprite);
-			}
-			if (ToReturn [i].GetType ().Equals (typeof (SpeedStat))) 
-			{
-				_StatsToUse.Add (SpeedSprite);
-			}
-			if (ToReturn [i].GetType ().Equals (typeof ( EnduranceStat)))
-			{
-				_StatsToUse.Add (EnduranceSprite);
-			}
-
+			_StatsToUse.Add (TypeColors.GetSpriteForStat(ToReturn [i]));
 		}
 	}
 
+	public void GetElementTypeImages (List <ElementTypes> ToReturn) 
+	{
+		if (ToReturn == null) {return;}
+
+		for (int i = 0; i < ToReturn.Count; i++) 
+		{
+			_StatsToUse.Add (TypeColors.GetSpriteForType(ToReturn [i]));
+		}
+	}
 
 	public void ExpandMoveView ()
 	{

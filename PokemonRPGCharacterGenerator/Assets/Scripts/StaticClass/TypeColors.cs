@@ -47,6 +47,35 @@ public static class TypeColors
     public static string Steel = "Steel";
     public static string Fairy = "Fairy";
 
+	public static Sprite AttackSprite;
+	public static Sprite DefenseSprite;
+	public static Sprite SpecialAttackSprite;
+	public static Sprite SpecialDefenseSprite;
+	public static Sprite SpeedSprite;
+	public static Sprite EnduranceSprite;
+
+	public static Sprite NothingSprite;
+	public static Sprite NormalSprite;
+	public static Sprite FireSprite;
+	public static Sprite WaterSprite;
+	public static Sprite ElectricSprite;
+	public static Sprite GrassSprite;
+	public static Sprite IceSprite;
+	public static Sprite FightingSprite;
+	public static Sprite PoisonSprite;
+	public static Sprite GroundSprite;
+	public static Sprite FlyingSprite;
+	public static Sprite PsychicSprite;
+	public static Sprite BugSprite;
+	public static Sprite RockSprite;
+	public static Sprite GhostSprite;
+	public static Sprite DragonSprite;
+	public static Sprite DarkSprite;
+	public static Sprite SteelSprite;
+	public static Sprite FairySprite;
+
+
+
 //	public static Image AttackSprite;
 //	public static Image DefenseSprite;
 //	public static Image SpecialAttackSprite;
@@ -101,23 +130,77 @@ public static class TypeColors
 		FairyColor
 	};
 
+	public static Sprite [] ElementTypesSymbols = new Sprite[]
+	{
+		NothingSprite,
+		NormalSprite,
+		FireSprite,
+		WaterSprite,
+		ElectricSprite,
+		GrassSprite,
+		IceSprite,
+		FightingSprite,
+		PoisonSprite,
+		GroundSprite,
+		FlyingSprite,
+		PsychicSprite,
+		BugSprite,
+		RockSprite,
+		GhostSprite,
+		DragonSprite,
+		DarkSprite,
+		SteelSprite,
+		FairySprite
+	};
+
+	public static Sprite [] StatSymbols = new Sprite []
+	{
+	AttackSprite,
+	DefenseSprite,
+	SpecialAttackSprite,
+	SpecialDefenseSprite,
+	SpeedSprite,
+	EnduranceSprite
+	};
+
 	public static Color GetColorForType (ElementTypes _Type)
 
 	{
 		return 	TypeColorList [(int) _Type];
 	}
 
-	public static string GetStringForType (ElementTypes Type)
+	public static string GetStringForType (ElementTypes _Type)
 
 	{
-		return TypeStringList [(int) Type]; 
+		return TypeStringList [(int) _Type]; 
 	}
 
-//	public static Image GetImageForType (ElementTypes Type)
-//
-//	{
-//		return TypeImageList [(int) Type]; 
-//	}
+	public static Sprite GetSpriteForType (ElementTypes _Type)
+	{
+		return ElementTypesSymbols [(int) _Type]; 
+	}
+		
+	public static Sprite GetSpriteForStat (MyStat _Stat)
+	{
+		switch (_Stat.ToString()) 
+		{	
+		case "EnduranceStat":
+			return EnduranceSprite;
+		case "AttackStat":
+			return AttackSprite;
+		case "DefenseStat":
+			return DefenseSprite;
+		case "SpecialAttackStat":
+			return SpecialAttackSprite;
+		case "SpecialDefenseStat":
+			return SpecialDefenseSprite;
+		case "SpeedStat":
+			return SpeedSprite;
+		default:
+			Debug.Log ("Unrecognized Stat");
+			return null;
+		}
+	}
 
     public static Color RGBColor(float r, float g, float b)
     {

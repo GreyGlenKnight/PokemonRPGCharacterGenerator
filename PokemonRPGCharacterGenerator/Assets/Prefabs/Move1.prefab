@@ -655,6 +655,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _BackGround: {fileID: 114389191332092264}
+  _StatImage: {fileID: 114704943576083090}
+  _TypeImage: {fileID: 114626380713378422}
   _ElementType: []
   _StatsToUse: []
   _Header: {fileID: 114052958912876160}
