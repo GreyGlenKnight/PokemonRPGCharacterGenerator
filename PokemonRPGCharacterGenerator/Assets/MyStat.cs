@@ -67,6 +67,11 @@ public class EnduranceStat: MyStat
 		return RawValue;	
 	}
 
+	public override string ToString ()
+	{
+		return "Endurance";
+	}
+
 	public EnduranceStat (int RawValue) : base (RawValue)
 	{
 
@@ -84,6 +89,11 @@ public class AttackStat: MyStat
 	protected override MyStat Create (int RawValue)
 	{
 		return new AttackStat (RawValue);
+	}
+
+	public override string ToString ()
+	{
+		return "Attack";
 	}
 
 	public AttackStat (int RawValue) : base (RawValue)
@@ -105,6 +115,11 @@ public class DefenseStat: MyStat
 		return new DefenseStat (RawValue);
 	}
 
+	public override string ToString ()
+	{
+		return "Defense";
+	}
+
 	public DefenseStat (int RawValue) : base (RawValue)
 	{
 
@@ -122,6 +137,11 @@ public class SpecialAttackStat: MyStat
 	protected override MyStat Create (int RawValue)
 	{
 		return new SpecialAttackStat (RawValue);
+	}
+
+	public override string ToString ()
+	{
+		return "Special Attack";
 	}
 
 	public SpecialAttackStat (int RawValue) : base (RawValue)
@@ -142,6 +162,23 @@ public class SpecialDefenseStat: MyStat
 		return new SpecialDefenseStat (RawValue);
 	}
 
+//	public override int GetHashCode ()
+//	{
+//		return 5;
+//	}
+
+//	public override bool Equals (object Other)
+//	{
+//		SpecialDefenseStat Temp = Other as SpecialDefenseStat;
+//		if (Temp == null) 
+//		{return false;}
+//		return true;
+//	}
+
+	public override string ToString ()
+	{
+		return "Special Defense";
+	}
 
 	public SpecialDefenseStat (int RawValue) : base (RawValue)
 	{
@@ -159,6 +196,11 @@ public class SpeedStat: MyStat
 	protected override MyStat Create (int RawValue)
 	{
 		return new SpeedStat (RawValue);
+	}
+
+	public override string ToString ()
+	{
+		return "Speed";
 	}
 
 	public SpeedStat (int RawValue) : base (RawValue)

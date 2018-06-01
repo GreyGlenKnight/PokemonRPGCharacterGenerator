@@ -27,33 +27,36 @@ public class TechniqueDisplay : MonoBehaviour
 
 	public void ChangeTechniqueDisplay (Technique ToDisplay)
 	{
-		
 		CurrentTechnique = ToDisplay;
-		_Header.text = CurrentTechnique.Name;
-		_Description.text = CurrentTechnique.Description;
 
-		if (CurrentTechnique.BaseDamage != null) {
-			_BaseDamage.text = CurrentTechnique.BaseDamage.ToString ();} 
-		else {_BaseDamage.text = "";}
+		if (ToDisplay == null) 
+		{
+			_BaseDamage.text = "";
+			_BaseAccuracy.text = "";
+			_Range.text = "";
+			_BaseStrain.text = "";
+			return;
+		}
 
-		if (CurrentTechnique.BaseAccuracy != null) {
-			_BaseAccuracy.text = CurrentTechnique.BaseAccuracy.ToString ();} 
-		else {_BaseAccuracy.text = "";}
+	_Header.text = CurrentTechnique.Name;
+	_Description.text = CurrentTechnique.Description;
+	_BaseDamage.text = CurrentTechnique.BaseDamage.ToString ();
+	_BaseAccuracy.text = CurrentTechnique.BaseAccuracy.ToString ();
+	_BaseStrain.text = CurrentTechnique.BaseStrain.ToString();
+	_Range.text = CurrentTechnique.DisplayRange;
 
-		_BaseStrain.text = CurrentTechnique.BaseStrain.ToString();
-		_Range.text = CurrentTechnique.DisplayRange;
 
-		GetStatImages (CurrentTechnique.StatsUsed);
-		GetElementTypeImages (CurrentTechnique.Types);
-
-		_StatImage.sprite = _StatsToUse [0];
-		_TypeImage.sprite = _ElementType [0];
+//		_StatsToUse = GetStatImages (CurrentTechnique.StatsUsed);
+//		_ElementType = GetElementTypeImages (CurrentTechnique.Types);
+//
+//		_StatImage.sprite = _StatsToUse [0];
+//		_TypeImage.sprite = _ElementType [0];
 		//These only display first item, it should be list 
-		//there should be a sprite packing method
-		_ElementType.Clear ();
-		_StatsToUse.Clear ();
-		//These lists should be dumped into the statimage and typeimage and cleared.
-		//clearing them prevents 50 sprites from being added when moves are swapped.
+//		//there should be a sprite packing method
+//		_ElementType.Clear ();
+//		_StatsToUse.Clear ();
+//		//These lists should be dumped into the statimage and typeimage and cleared.
+//		//clearing them prevents 50 sprites from being added when moves are swapped.
 
 		if (ToDisplay.Types.Count == 0) 
 		{
@@ -73,24 +76,30 @@ public class TechniqueDisplay : MonoBehaviour
 		}
 	}
 
-	public void GetStatImages (List <MyStat> ToReturn) 
+//	public void GetStatImages (List <MyStat> ToReturn) 
+//	{
+//		if (ToReturn == null) {return;}
+//			
+//		for (int i = 0; i < ToReturn.Count; i++) 
+//		{
+//			_StatsToUse.Add (TypeColors.GetSpriteForStat(ToReturn [i]));
+//		}
+//	}
+
+	public List <Sprite> GetStatImages (List <MyStat> _Images) 
 	{
-		if (ToReturn == null) {return;}
-			
-		for (int i = 0; i < ToReturn.Count; i++) 
-		{
-			_StatsToUse.Add (TypeColors.GetSpriteForStat(ToReturn [i]));
-		}
+		List <Sprite> ToReturn = new List <Sprite> ();
+		if (_Images == null) {return null;}
+		_Images.Apply ((x)=>{ToReturn.Add (TypeColors.GetSpriteForStat(x));});
+		return ToReturn;
 	}
 
-	public void GetElementTypeImages (List <ElementTypes> ToReturn) 
+	public List <Sprite> GetElementTypeImages (List <ElementTypes> _Types) 
 	{
-		if (ToReturn == null) {return;}
-
-		for (int i = 0; i < ToReturn.Count; i++) 
-		{
-			_StatsToUse.Add (TypeColors.GetSpriteForType(ToReturn [i]));
-		}
+		List <Sprite> ToReturn = new List <Sprite> ();
+		if (_Types == null) {return null;}
+		_Types.Apply ((x)=>{ToReturn.Add (TypeColors.GetSpriteForType(x));});
+		return ToReturn;
 	}
 
 	public void ExpandMoveView ()

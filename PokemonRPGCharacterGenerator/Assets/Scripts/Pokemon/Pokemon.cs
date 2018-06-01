@@ -66,6 +66,7 @@ public class Pokemon
 	public List <Technique> _TechniquesKnown = new List <Technique> ();
 	public List <Technique> _TechniquesActive = new List <Technique> ();
 
+	public List <IHistoryItem> BonusHistory = new List <IHistoryItem> ();
 	public List <LevelUpBonus> LevelUpBonuses = new List <LevelUpBonus> ();
 	public List <MaturityBonus> MaturityBonuses = new List <MaturityBonus> ();
 	public List <SkillTreeData> _SkillTreeData = new List<SkillTreeData>();
@@ -152,18 +153,6 @@ public class Pokemon
 			IsShiny = true;
 			Debug.Log ("Holy Shit, a Shiny!");
 		}
-//		_SkillTreeData.Add(new SkillTreeData("Imp", SkillTreeTier.Tier0));
-//		_SkillTreeData.Add(new SkillTreeData("Drake", SkillTreeTier.Tier1));
-//		_SkillTreeData.Add(new SkillTreeData("Fire Body 1", SkillTreeTier.Tier1));
-//		_SkillTreeData.Add(new SkillTreeData("Claw 1", SkillTreeTier.Tier1));
-//		_SkillTreeData.Add(new SkillTreeData("Pyromancer 1", SkillTreeTier.Tier1));
-//		_SkillTreeData.Add(new SkillTreeData("Beast", SkillTreeTier.Tier1));
-//		_SkillTreeData.Add(new SkillTreeData("Claw 2", SkillTreeTier.Tier2));
-//		_SkillTreeData.Add(new SkillTreeData("Fire Body 2", SkillTreeTier.Tier2));
-//		_SkillTreeData.Add(new SkillTreeData("Pureblood 2", SkillTreeTier.Tier2));
-//		_SkillTreeData.Add(new SkillTreeData("Acrobatics 1", SkillTreeTier.Tier1));
-//		_SkillTreeData.Add(new SkillTreeData("Pureblood 3", SkillTreeTier.Tier3));
-//		_SkillTreeData.Add(new SkillTreeData("Fire Body 3", SkillTreeTier.Tier3));
 
 		_SkillTreeDataTier1.Add (new SkillTreeData("Imp", SkillTreeTier.Tier0));
 		_SkillTreeDataTier1.Add (new SkillTreeData("Drake", SkillTreeTier.Tier1));
@@ -180,11 +169,7 @@ public class Pokemon
 		_SkillTreeDataTier3.Add (new SkillTreeData("Fire Body 3", SkillTreeTier.Tier3));
 		_SkillTreeDataTier3.Add (new SkillTreeData("Acrobatics 1", SkillTreeTier.Tier1));
 
-//		_SkillTreeData.Add (new SkillTreeData("Imp", SkillTreeTier.Tier0));
-
 		ApplyMaturityBonus (MaturityStatic.GetMaturityBonuses (0), 0);
-//		UnlockTrees (SkillTreeTier.Tier0);
-//		_PokemonSheetDisplay.ShowNewPokemon (this, _Breed);
 	}
 		
 	public Pokemon ()
@@ -198,18 +183,6 @@ public class Pokemon
 			Debug.Log ("Holy Shit, a Shiny!");
 		}
 		_Breed = new Breed (ElementTypes.Nothing, ElementTypes.Nothing);
-//		_SkillTreeData.Add(new SkillTreeData("Imp", SkillTreeTier.Tier0));
-//		_SkillTreeData.Add(new SkillTreeData("Drake", SkillTreeTier.Tier1));
-//		_SkillTreeData.Add(new SkillTreeData("Fire Body 1", SkillTreeTier.Tier1));
-//		_SkillTreeData.Add(new SkillTreeData("Claw 1", SkillTreeTier.Tier1));
-//		_SkillTreeData.Add(new SkillTreeData("Acrobatics 1", SkillTreeTier.Tier1));
-//		_SkillTreeData.Add(new SkillTreeData("Pyromancer 1", SkillTreeTier.Tier1));
-//		_SkillTreeData.Add(new SkillTreeData("Beast", SkillTreeTier.Tier1));
-//		_SkillTreeData.Add(new SkillTreeData("Claw 2", SkillTreeTier.Tier2));
-//		_SkillTreeData.Add(new SkillTreeData("Fire Body 2", SkillTreeTier.Tier2));
-//		_SkillTreeData.Add(new SkillTreeData("Pureblood 2", SkillTreeTier.Tier2));
-//		_SkillTreeData.Add(new SkillTreeData("Pureblood 3", SkillTreeTier.Tier3));
-//		_SkillTreeData.Add(new SkillTreeData("Fire Body 3", SkillTreeTier.Tier3));
 
 		_SkillTreeDataTier1.Add (new SkillTreeData("Imp", SkillTreeTier.Tier0));
 		_SkillTreeDataTier1.Add (new SkillTreeData("Drake", SkillTreeTier.Tier1));
@@ -226,18 +199,14 @@ public class Pokemon
 		_SkillTreeDataTier3.Add (new SkillTreeData("Fire Body 3", SkillTreeTier.Tier3));
 		_SkillTreeDataTier3.Add (new SkillTreeData("Acrobatics 1", SkillTreeTier.Tier1));
 
-//		_SkillTreeData.Add (new SkillTreeData("Imp", SkillTreeTier.Tier0));
 
 		ApplyMaturityBonus (MaturityStatic.GetMaturityBonuses (0), 0);
-//		UnlockTrees (SkillTreeTier.Tier0);
+		}
 
-		//_PokemonSheetDisplay.ShowNewPokemon (GameManager.instance.CurrentPokemon, GameManager.instance.CurrentPokemon._Breed);
+	public void AssignNameFields ()
+	{
 	}
 
-//	public void AssignNameFields ()
-//	{
-//		
-//	}
 
 	private SkillTreeData AutoChooseTree (SkillTreeTier _Tier)
 	{
@@ -257,24 +226,20 @@ public class Pokemon
 			_SkillTreeDataTier1.RemoveAt (0);
 			Debug.Log (_Tier);
 			return Temp;
-//			break;
 		case SkillTreeTier.Tier2:
 			_SkillTreeDataTier2.Shuffle ();
 			Temp = _SkillTreeDataTier2 [0];
 			_SkillTreeDataTier2.RemoveAt (0);
 			Debug.Log (_Tier);
 			return Temp;
-//			break;
 		case SkillTreeTier.Tier3:
 			_SkillTreeDataTier3.Shuffle ();
 			Temp = _SkillTreeDataTier3 [0];
 			_SkillTreeDataTier3.RemoveAt (0);
 			return Temp;
-//			break;
 		default:
 			Debug.Log ("This pokemon has gone Super Saiyan" + _Tier);
 			return null;
-//			break;
 		}
 	}
 
@@ -298,7 +263,6 @@ public class Pokemon
 		{
 		Debug.Log ("MaturityBonus already gained at that level"+Maturity);
 		}
-//		Debug.Log ("Bonuses :" + MaturityBonuses.Count + "Maturity :" + Maturity);
 	}
 
 	public void ApplyLevelBonus (LevelUpBonus _Bonus)
@@ -308,6 +272,8 @@ public class Pokemon
 			return;
 		}
 		_Bonus.ApplyLevelBonus(this);
+		BonusHistory.Add (_Bonus);
+
 	}
 
 	public void ApplyMaturityBonus (List<MaturityBonus> MBonus, int maturity)
@@ -319,6 +285,8 @@ public class Pokemon
 	        for (int i = 0; i < MBonus.Count; i++)
 	        {
 	            MBonus[i].ApplyMaturityBonus(this);
+			BonusHistory.Add (MBonus[i]);
+
 	        }
 	}
 

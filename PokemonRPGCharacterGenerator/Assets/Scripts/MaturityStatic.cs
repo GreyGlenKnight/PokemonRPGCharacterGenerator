@@ -85,12 +85,12 @@ public static class MaturityStatic
 		if (STABBonuses.Contains (Maturity) == true) 
 		{
             ToReturn.Add (new MaturityBonus.STABBonus (
-				(Array.IndexOf (STABBonuses,Maturity))));
+				(Array.IndexOf (STABBonuses,Maturity)), ElementTypes.Fire));
 		}
 		if (NatureBonuses.Contains (Maturity) == true) 
 		{
             ToReturn.Add (new MaturityBonus.NatureBonus (
-				(Array.IndexOf (NatureBonuses,Maturity))));
+				(Array.IndexOf (NatureBonuses,Maturity)), new AttackStat(1)));
 		} 
 		if (AbilitySlotBonuses.Contains (Maturity) == true) 
 		{

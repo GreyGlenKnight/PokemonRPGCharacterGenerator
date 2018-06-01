@@ -6,18 +6,31 @@ public class SceneChanger : MonoBehaviour
 {
     public PokeSheetSceneManager _PokeSheetSceneManager;
     public PokeSheetTreeManager _PokeSheetTreeManager;
+	public PokeSheetHistoryManager _PokeSheetHistoryManager;
 
     public void SwitchToTree()
     {
-        _PokeSheetSceneManager.gameObject.SetActive(false);
-        _PokeSheetTreeManager.gameObject.SetActive(true);
+		_PokeSheetTreeManager.gameObject.SetActive(true);
+		_PokeSheetSceneManager.gameObject.SetActive(false);
+		_PokeSheetHistoryManager.gameObject.SetActive (false);
+
     }
 
     public void SwitchToSheet()
     {
         _PokeSheetTreeManager.gameObject.SetActive(false);
         _PokeSheetSceneManager.gameObject.SetActive(true);
+		_PokeSheetHistoryManager.gameObject.SetActive (false);
+
 
     }
+
+	public void SwitchToHistory()
+	{
+		_PokeSheetTreeManager.gameObject.SetActive(false);
+		_PokeSheetSceneManager.gameObject.SetActive(false);
+		_PokeSheetHistoryManager.gameObject.SetActive (true);
+		_PokeSheetHistoryManager.ChangeDisplay (GameManager.instance.CurrentPokemon);
+	}
 
 }

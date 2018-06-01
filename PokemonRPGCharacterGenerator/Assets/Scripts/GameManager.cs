@@ -23,11 +23,28 @@ public static class ListExtensions
 			list[n] = value;  
 		}  
 	}
+		
+	public static List<T> MakeCopy<T>(this List<T> thisList)
+	{
+		List<T> returnList = new List<T>();
 
-//	public static void ApplyMethodToList ()
-//	{
-//		
-//	}
+		for (int i = 0; i < thisList.Count; i++)
+		{
+			returnList.Add(thisList[i]);
+		}
+		return returnList;
+	}
+
+	public static void Apply<T> (this List<T> thisList,Action<T> action)
+	{
+		List<T> tempList = thisList.MakeCopy<T>();
+
+		for (int i = 0; i < tempList.Count; i++)
+		{
+			action(tempList[i]);
+		}
+	}
+
 }
 
 public enum SelectionState
@@ -53,7 +70,7 @@ public class GameManager : MonoBehaviour
 	public TreeRowState TreeRowState;
 	public BadgeLevelGenerator _BadgeLevelGenerator;
 	public PokemonSheetDisplay _PokemonSheetDisplay;
-
+	public PokeSheetHistoryManager _PokeSheetHistoryManager;
 
 
 	void Awake()
@@ -89,9 +106,7 @@ public class GameManager : MonoBehaviour
 		CurrentPokemon.NumberOfSpeedBonuses = 0;
 		CurrentPokemon.CurrentDamage = 0;
 		CurrentPokemon.CurrentStrainLost = 0;
-//		ChangeVisibleTrees ();
-//		CurrentPokemon.ApplyMaturityBonus (MaturityStatic.GetMaturityBonuses (CurrentPokemon.Maturity), CurrentPokemon.Maturity);
-//		CurrentPokemon.UnlockTrees ();
+
 		_NewTreeManager.ChangeDisplayPokemon (CurrentPokemon);
 		Refresh ();
 		_PokemonSheetDisplay.ShowNewPokemon (CurrentPokemon, CharmanderBreed);
@@ -159,79 +174,21 @@ public class GameManager : MonoBehaviour
 		{
 			_PokemonSheetDisplay.TechsList [i].ChangeTechniqueDisplay (CurrentPokemon._TechniquesActive [i]);
 		}
+		_PokeSheetHistoryManager.ChangeDisplay (CurrentPokemon);
 	}
 
 	public void Refresh ()
 	{
-//		Debug.Log(_TreeRowState);
 		_NewTreeManager.Refresh ();
-//		switch (_TreeRowState)
-//		{
-//		case TreeRowState.Baby:
-//			TreeSwap (0,0);
-//			TreeSwap (1,1);
-//			TreeSwap (2,2);
-//			TreeSwap (3,3);
-//			break;
-//		case TreeRowState.Mid:
-//			TreeSwap (0,4);
-//			TreeSwap (1,5);
-//			TreeSwap (2,6);
-//			TreeSwap (3,7);
-//			break;
-//		case TreeRowState.Adult:
-//			TreeSwap (0,8);
-//			TreeSwap (1,9);
-//			TreeSwap (2,10);
-//			TreeSwap (3,11);
-//			break;
-//		default:
-//			Debug.Log("There is a new View add logic here. view name is " + _TreeRowState);
-//			break;
-//		}
 	}
 
 	public void ChangeVisibleTrees ()
 	{
-//		Refresh ();
 		_NewTreeManager.ChangeVisibleTrees ();
-//		switch (_TreeRowState)
-//		{
-//		case TreeRowState.Baby:
-//
-//			_TreeRowState = TreeRowState.Mid;
-//			Refresh ();
-//
-//			break;
-//
-//		case TreeRowState.Mid:
-//
-//			_TreeRowState = TreeRowState.Adult;
-//			Refresh ();
-//
-//			break;
-//
-//		case TreeRowState.Adult:
-//
-//			_TreeRowState = TreeRowState.Baby;
-//			Refresh ();
-//
-//			break;
-//
-//		default:
-//			Debug.Log("There is a new View add logic here. view name is " + _TreeRowState);
-//			break;
-//		}
-
 	}
 
 	public void TreeSwap (int TreeToChange, int TreeDataIndex)
 	{
-//		Debug.Log (CurrentPokemon._SkillTreeData [TreeDataIndex].Name);
-//			_NewTreeManager.TreesToRoll [TreeToChange].ChangeDisplayData (	
-//			TreeDataIndex,
-//			CurrentPokemon._SkillTreeData [TreeDataIndex]);
-//				Debug.Log (TreeToChange+" "+TreeDataIndex);
 		_NewTreeManager.TreeSwap (TreeToChange, TreeDataIndex);
 	}
 

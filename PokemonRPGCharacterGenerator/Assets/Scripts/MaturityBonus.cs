@@ -1,26 +1,80 @@
-﻿using System.Collections;
+﻿using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using UnityEngine.UI;
+using System;
+using System.Linq;
 
-public abstract class MaturityBonus
+public abstract class MaturityBonus : IHistoryItem
 {
+	#region IHistoryItem implementation
+
+	public int LevelGained {
+		get {return _Level;}
+	}
+
+	public int MaturityLevel {
+		get {return _MaturityLevel;}
+	}
+
+	public string Name {
+		get {return _Name;}
+	}
+
+	public string Description {
+		get {return _Description;}
+	}
+
+	public BonusType Type {
+		get {return BonusType.MaturityBonus;}
+	}
+
+	public Sprite GetRepresentedSprite {
+		get {throw new NotImplementedException ();}
+	}
+
+	#endregion
+
+	public string GetTierString (SkillTreeTier _Tier)
+	{
+		switch (_Tier) 
+		{	
+		case SkillTreeTier.Tier0:
+			return "Tier 0";
+		case SkillTreeTier.Tier1:
+			return "Tier 1";
+		case SkillTreeTier.Tier2:
+			return "Tier 2";
+		case SkillTreeTier.Tier3:
+			return "Tier 3";
+		default:
+			Debug.Log ("What Tier?");
+			return "";
+		}
+	}
+
     public abstract void ApplyMaturityBonus (Pokemon _Pokemon);
 
-    public string Description;
-	public int LevelGained;
-//	public int BonusCounter;
+	private string _Description;
+	private string _Name = "Maturity Bonus";
+	private int _MaturityLevel;
+	private int _Level;
 
     public class AbilitySlot : MaturityBonus
     {
+
 		public AbilitySlot (int Maturity)
         {
-			Description = this.ToString()+Maturity;
-			LevelGained = Maturity;
-//			Debug.Log (BonusCounter);
+			_Description = "Ability Slot: Ability Name";
+//			_Name = "Maturity Bonus";
         }
+			
         public override void ApplyMaturityBonus(Pokemon _Pokemon)
         {
+			_MaturityLevel = _Pokemon.Maturity;
+
             _Pokemon.GainAbilitySlot();
+			_Level = _Pokemon.Level;
 			_Pokemon.MaturityBonuses.Add (this);
         }
     }
@@ -30,16 +84,19 @@ public abstract class MaturityBonus
 		public SkillTreeTier _Tier;
 		public BreakTree (int Maturity, SkillTreeTier _Tier)
         {
-			LevelGained = Maturity;
 			this._Tier = _Tier;
-			Description = this.ToString()+_Tier.ToString()+LevelGained;
+			_Description = "Break Tree: "+GetTierString(_Tier)+" Tree Name";
+//			_Name = "Maturity Bonus";
+
         }
         public override void ApplyMaturityBonus(Pokemon _Pokemon)
         {
-//			Debug.Log (LevelGained+Description);
-			Debug.Log (_Tier.ToString());
+//			Debug.Log (_Tier.ToString());
+			_MaturityLevel = _Pokemon.Maturity;
 
 			_Pokemon.GainBreakTree (_Tier);
+			_Level = _Pokemon.Level;
+
 			_Pokemon.MaturityBonuses.Add (this);
         }
     }
@@ -49,42 +106,55 @@ public abstract class MaturityBonus
 		public SkillTreeTier _Tier;
 		public TradeSkill (int Maturity, SkillTreeTier Tier)
         {
-			Description = this.ToString()+Maturity;
-			LevelGained = Maturity;
+			_Description = "Trade Skill: "+" Tree Name 1 For Tree Name 2";
 			_Tier = Tier;
+//			_Name = "";
+
         }
         public override void ApplyMaturityBonus(Pokemon _Pokemon)
         {
+			_MaturityLevel = _Pokemon.Maturity;
+
 			_Pokemon.SwapTrees(_Tier);
+			_Level = _Pokemon.Level;
+
 			_Pokemon.MaturityBonuses.Add (this);
         }
     }
 
     public class STABBonus : MaturityBonus
     {
-		public STABBonus (int Maturity)
+		public STABBonus (int Maturity, ElementTypes _Type)
         {
-			Description = this.ToString()+Maturity;
-			LevelGained = Maturity;
+			_Description = "Type Bonus: +1 "+TypeColors.GetStringForType(_Type);
+//			_Type = ElementTypes.Fire;
         }
         public override void ApplyMaturityBonus(Pokemon _Pokemon)
         {
+			_MaturityLevel = _Pokemon.Maturity;
+
             _Pokemon.GainSTABBonus();
+			_Level = _Pokemon.Level;
+
 			_Pokemon.MaturityBonuses.Add (this);
         }
     }
 
     public class NatureBonus : MaturityBonus
     {
-		public NatureBonus(int Maturity)
+		public NatureBonus(int Maturity, MyStat Stat)
         {
-			Description = this.ToString() +Maturity;
-			LevelGained = Maturity;
+			_Description = "Nature Bonus: "+Stat.ToString();
+//			_Name = "";
         }
 
         public override void ApplyMaturityBonus(Pokemon _Pokemon)
         {
+			_MaturityLevel = _Pokemon.Maturity;
+
             _Pokemon.GainNatureBonus();
+			_Level = _Pokemon.Level;
+
 			_Pokemon.MaturityBonuses.Add (this);
         }
     }
@@ -94,13 +164,18 @@ public abstract class MaturityBonus
 
 		public BonusLevel (int Maturity)
         {
-			Description = this.ToString() +Maturity;
-			LevelGained = Maturity;
+			_Description = "Bonus Level ";
+//			_Name = "";
+
         }
 
         public override void ApplyMaturityBonus(Pokemon _Pokemon)
         {
+			_MaturityLevel = _Pokemon.Maturity;
+
 			_Pokemon.GainBonusLevel ();
+			_Level = _Pokemon.Level;
+
 			_Pokemon.MaturityBonuses.Add (this);
 //			Description = Description+(Pokemon.Maturity);
         }
@@ -111,14 +186,20 @@ public abstract class MaturityBonus
 		int _TreeSlot;
 		public ActiveSkill(int Maturity, int TreeSlot)
         {
-			Description = this.ToString() +Maturity;
-			LevelGained = Maturity;
 			_TreeSlot = TreeSlot;
+
+			_Description = "Active Skill Slot: "+(_TreeSlot+1).ToString();
+//			_Name = "";
+
         }
 
         public override void ApplyMaturityBonus(Pokemon _Pokemon)
         {
+			_MaturityLevel = _Pokemon.Maturity;
+
 			_Pokemon.GainActiveTreeBonus (_TreeSlot);
+			_Level = _Pokemon.Level;
+
 			_Pokemon.MaturityBonuses.Add (this);
         }
     }
@@ -127,13 +208,18 @@ public abstract class MaturityBonus
     {
 		public EnhancerSlot(int Maturity)
         {
-			Description = this.ToString() +Maturity;
-			LevelGained = Maturity;
+			_Description = this.ToString() +Maturity;
+//			_Name = "";
+
         }
 
         public override void ApplyMaturityBonus(Pokemon _Pokemon)
         {
+			_MaturityLevel = _Pokemon.Maturity;
+
 			_Pokemon.GainEnhancerSlotBonus ();
+			_Level = _Pokemon.Level;
+
 			_Pokemon.MaturityBonuses.Add (this);
         }
     }
@@ -142,13 +228,18 @@ public abstract class MaturityBonus
     {
 		public SpecialTraining(int Maturity)
         {
-			Description = this.ToString() +Maturity;
-			LevelGained = Maturity;
+			_Description = this.ToString() +Maturity;
+//			_Name = "";
+
         }
 
         public override void ApplyMaturityBonus(Pokemon _Pokemon)
         {
+			_MaturityLevel = _Pokemon.Maturity;
+
 			_Pokemon.GainSpecialTrainingBonus ();
+			_Level = _Pokemon.Level;
+
 			_Pokemon.MaturityBonuses.Add (this);
         }
     }
