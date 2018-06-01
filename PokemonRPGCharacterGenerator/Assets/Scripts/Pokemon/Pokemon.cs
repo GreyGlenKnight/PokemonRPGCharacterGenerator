@@ -66,6 +66,7 @@ public class Pokemon
 	public List <Technique> _TechniquesKnown = new List <Technique> ();
 	public List <Technique> _TechniquesActive = new List <Technique> ();
 
+	public List <LevelUpBonus> LevelUpBonuses = new List <LevelUpBonus> ();
 	public List <MaturityBonus> MaturityBonuses = new List <MaturityBonus> ();
 	public List <SkillTreeData> _SkillTreeData = new List<SkillTreeData>();
 
@@ -300,6 +301,14 @@ public class Pokemon
 //		Debug.Log ("Bonuses :" + MaturityBonuses.Count + "Maturity :" + Maturity);
 	}
 
+	public void ApplyLevelBonus (LevelUpBonus _Bonus)
+	{
+		if (_Bonus == null)
+		{
+			return;
+		}
+		_Bonus.ApplyLevelBonus(this);
+	}
 
 	public void ApplyMaturityBonus (List<MaturityBonus> MBonus, int maturity)
 		{
@@ -309,7 +318,7 @@ public class Pokemon
 	        }
 	        for (int i = 0; i < MBonus.Count; i++)
 	        {
-	            MBonus[i].ApplyBonus(this);
+	            MBonus[i].ApplyMaturityBonus(this);
 	        }
 	}
 
@@ -329,6 +338,38 @@ public class Pokemon
 		}			
 //		GameManager.instance.Refresh();
 	}
+
+	public void GainTechnique ()
+	{
+		Debug.Log ("Gain Technique: TODO");
+	}
+
+	public void GainTechniqueModifier ()
+	{
+		Debug.Log ("Gain Technique: TODO");
+	}
+
+	public void GainAbility ()
+	{
+		Debug.Log ("Gain Ability: TODO");
+	}
+
+	public void GainStatUp ()
+	{
+		Debug.Log ("Stat Up: TODO");
+	}
+
+	public void GainElementTypesSkillUp ()
+	{
+		Debug.Log ("Skill Up: TODO");
+	}
+
+	public void GainMaturityPlusBonus ()
+	{
+		Debug.Log ("Maturity Up: TODO");
+	}
+	
+	
 
 	public void GainBonusLevel ()
 	{
@@ -403,62 +444,6 @@ public class Pokemon
 				return;
 			}
 		}
-
-//		for (int i = 0; i < MaturityStatic.BreakTreeRank1Bonuses.Length; i++) {
-//			if (Maturity >= MaturityStatic.BreakTreeRank1Bonuses [i]) {
-//				for (int j = 0; j < _SkillTreeData.Count; j++) {
-//					if (_SkillTreeData [j].Tier == _Tier && _SkillTreeData [j].CurrentState == SkillTreeState.Locked) {
-//						_SkillTreeData [j].ChangeState (SkillTreeState.Inactive);
-////						Debug.Log ("Before If statement is called");
-//						if (BreakTree != null) 
-//						{
-////							Debug.Log ("Before Event is called");
-//							BreakTree (this, new EventArgs ());
-//						}						
-//						return;
-//					}
-//				}
-//			}
-//		}
-//
-//		for (int i = 0; i < MaturityStatic.BreakTreeRank2Bonuses.Length; i++) {
-//			if (Maturity >= MaturityStatic.BreakTreeRank2Bonuses [i]) {
-//				for (int j = 0; j < _SkillTreeData.Count; j++) {
-//					if (_SkillTreeData [j].Tier == _Tier && _SkillTreeData [j].CurrentState == SkillTreeState.Locked) {
-//						_SkillTreeData [j].ChangeState (SkillTreeState.Inactive);
-//						if (BreakTree != null) 
-//						{
-//							BreakTree (this, new EventArgs ());
-//						}						
-//						return;
-//					}
-//				}
-//			}
-//		}
-//
-//		for (int i = 0; i < MaturityStatic.BreakTreeRank3Bonuses.Length; i++) {
-//			if (Maturity >= MaturityStatic.BreakTreeRank3Bonuses [i]) {
-//				for (int j = 0; j < _SkillTreeData.Count; j++) {
-//					if (_SkillTreeData [j].Tier == _Tier && _SkillTreeData [j].CurrentState == SkillTreeState.Locked) {
-//						_SkillTreeData [j].ChangeState (SkillTreeState.Inactive);
-//						if (BreakTree != null) 
-//						{
-//							BreakTree (this, new EventArgs ());
-//						}
-//						return;
-//					}
-//				}
-//			}
-//		}
-
-//		if (Maturity != 0) 
-//		{
-//			GameManager.instance.Refresh ();
-//		}
-//			for (in		t i = 0; i < (_SkillTrees.ActiveRolls.Length); i++)
-//		{
-//			_SkillTrees.ActiveRolls [i].TreeDisplay.TreeColorUpdate (_SkillTrees.ActiveRolls [i]._TreeData);
-//		}
 	}
 
 		public void ActivateTrees (int TreeSlot)

@@ -23,6 +23,11 @@ public static class ListExtensions
 			list[n] = value;  
 		}  
 	}
+
+//	public static void ApplyMethodToList ()
+//	{
+//		
+//	}
 }
 
 public enum SelectionState

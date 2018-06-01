@@ -51,23 +51,6 @@ public class PokemonSheetDisplay : MonoBehaviour
 
 	public List <ElementTypes> ElementSkillsList = new List <ElementTypes> ();
 
-//	public TechniqueDisplay Technique1;
-//	public string DisplayRange;
-//	public string Name;
-//	public string Description;
-//	public List <ElementTypes> Types = new List <ElementTypes> ();
-//	public int BaseDamage;
-//	public int BaseStrain;
-//	public int BaseAccuracy;
-//	public List <MyStat> StatsUsed = new List <MyStat> ();
-
-
-	//Skills as an array of a type, sort and display 4, rest on hover panel
-
-	//Pokemon Moves as an array of a type
-	//5 Active Moves?
-	//Should know the bonuses from pokemon
-
 	public Text XP;
 	public Text Level;
 	public Text _HeldItem;
@@ -291,8 +274,6 @@ public class PokemonSheetDisplay : MonoBehaviour
 
 	public void ShowNewPokemon (Pokemon ToSet, Pokemon.Breed BreedToSet)
 	{
-		//May perform same function as awake, but takes input Pokemon so we 
-		//Want that to be created first.
 		SetRate (ToSet);
 		SetNames (ToSet, BreedToSet);
 		SetPortrait (ToSet);
@@ -331,25 +312,4 @@ public class PokemonSheetDisplay : MonoBehaviour
 			return;
 		}
 	}
-
-//		if (IsTechsListShowing == true) 
-//		{
-//			for (int i = 0; i < TechsList.Count; i++) 
-//			{
-//				TechsList [i].gameObject.SetActive (false);
-//			}
-//			IsTechsListShowing = false;
-//		}
-//
-//		if (IsTechsListShowing = false) 
-//		{
-//			for (int i = 0; i < TechsList.Count; i++) 
-//			{
-//				TechsList [i].gameObject.SetActive (true);
-//			}
-//			IsTechsListShowing = true;
-//		}
-//	}
-
-
 }

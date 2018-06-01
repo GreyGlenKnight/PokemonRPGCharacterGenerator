@@ -29,8 +29,6 @@ public enum AttackRange
 
 	public Technique ()
 		{
-
-
 		}
 	}
 

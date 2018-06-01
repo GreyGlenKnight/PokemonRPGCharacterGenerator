@@ -27,6 +27,7 @@ public class TechniqueDisplay : MonoBehaviour
 
 	public void ChangeTechniqueDisplay (Technique ToDisplay)
 	{
+		
 		CurrentTechnique = ToDisplay;
 		_Header.text = CurrentTechnique.Name;
 		_Description.text = CurrentTechnique.Description;
@@ -41,21 +42,27 @@ public class TechniqueDisplay : MonoBehaviour
 
 		_BaseStrain.text = CurrentTechnique.BaseStrain.ToString();
 		_Range.text = CurrentTechnique.DisplayRange;
-//		_StatsToUse.Add ();	
+
 		GetStatImages (CurrentTechnique.StatsUsed);
 		GetElementTypeImages (CurrentTechnique.Types);
+
 		_StatImage.sprite = _StatsToUse [0];
 		_TypeImage.sprite = _ElementType [0];
+		//These only display first item, it should be list 
+		//there should be a sprite packing method
+		_ElementType.Clear ();
+		_StatsToUse.Clear ();
+		//These lists should be dumped into the statimage and typeimage and cleared.
+		//clearing them prevents 50 sprites from being added when moves are swapped.
 
 		if (ToDisplay.Types.Count == 0) 
 		{
 			_BackGround.color = TypeColors.NothingColor;
+			//We can currently support typeless moves?
 		} 
 		else 
 		{
 			Color TempColor = TypeColors.GetColorForType (CurrentTechnique.Types [0]);
-//			int Temp = (int) CurrentTechnique.Types [0];
-//			Color TempColor = TypeColors.TypeColorList [Temp];
 			TempColor.a = 0.8f;
 			_BackGround.color = TempColor;
 
@@ -69,7 +76,7 @@ public class TechniqueDisplay : MonoBehaviour
 	public void GetStatImages (List <MyStat> ToReturn) 
 	{
 		if (ToReturn == null) {return;}
-
+			
 		for (int i = 0; i < ToReturn.Count; i++) 
 		{
 			_StatsToUse.Add (TypeColors.GetSpriteForStat(ToReturn [i]));
