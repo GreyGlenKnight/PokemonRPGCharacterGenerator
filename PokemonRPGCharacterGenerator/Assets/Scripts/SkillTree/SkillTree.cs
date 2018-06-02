@@ -14,6 +14,7 @@ public class SkillTree : MonoBehaviour
 	public bool IsTreeFull = false;
 	public bool IsInit = false;
 	public string Name;
+
 	public SkillTreeData _TreeData;
 
 
@@ -25,19 +26,10 @@ public class SkillTree : MonoBehaviour
 	public void ChangeDisplayData (
 		int TreeIndexToDisplay,
 		SkillTreeData NewTreeData)
-//		,List <BonusAtIndex> TempRemainingBonuses)
 	{
-//		Debug.Log (NewTreeData.Name);
 		CurrentTreeIndex = TreeIndexToDisplay;
-//		Debug.Log ("2 Parameters");
-//		string TempString = "2 Param";
-//		for (int i = 0; i < NewTreeData._BonusesAcquired.BonusesRemaining.Count; i++) 
-//		{
-//			TempString += ","+ NewTreeData._BonusesAcquired.BonusesRemaining [i];
-//		}
-//		Debug.Log (TempString);
-//		RemainingBonuses = NewTreeData._BonusesAcquired.BonusesRemaining;
 		_TreeData = NewTreeData;
+
 		if (NewTreeData != null) 
 		{
 			Name = NewTreeData.Name;
@@ -45,39 +37,6 @@ public class SkillTree : MonoBehaviour
 		TreeDisplay.TreeColorUpdate (_TreeData);
 	}
 
-//	public void ChangeDisplayData (
-//		int TreeIndexToDisplay,
-//		SkillTreeData NewTreeData) 
-//	{
-//		CurrentTreeIndex = TreeIndexToDisplay;
-//		Debug.Log ("1 Parameter");
-//		string TempString = "1 Param";
-//		for (int i = 0; i < RemainingBonuses.Count; i++) 
-//		{
-//			TempString += ","+ RemainingBonuses [i];
-//		}
-////		Debug.Log (TempString);
-//		if (IsInit == false) 
-//		{
-//			ResetBonuses ();
-//		}
-//		_TreeData = NewTreeData;
-//		Name = NewTreeData.Name;
-//		TreeDisplay.TreeColorUpdate (_TreeData.CurrentState, Name, _TreeData.Tier, 
-//			RemainingBonuses);
-//	}
-
-//	public void ChangeState (SkillTreeState NewState)
-//	{
-//		_TreeData.ChangeState (NewState);
-//
-//		if (_TreeData == null) 
-//		{
-//			return;
-//		}
-//
-//		TreeDisplay.TreeColorUpdate (_TreeData.CurrentState, Name, _TreeData.Tier, RemainingBonuses);
-//	}
 
 	public BonusAtIndex GetCurrentSelectedBonus ()
 	{
@@ -153,10 +112,13 @@ public class SkillTree : MonoBehaviour
 		{
 			return;
 		}
-//		GameManager.instance.CurrentPokemon._BonusesRemaining [CurrentTreeIndex].BonusesRemaining.RemoveAt (0);
 
+//		GameManager.instance.CurrentPokemon.ApplyLevelBonus
 		TreeDisplay.CheckSelectedBonus ((int) RemainingBonuses [0]);
-		RemainingBonuses.RemoveAt (0);
+			GameManager.instance.CurrentPokemon.LevelUp (_TreeData, RemainingBonuses [0]);
+			RemainingBonuses.RemoveAt (0);
+		
+
 		GameManager.instance._SelectionState = SelectionState.Roll;
 	}
 
@@ -165,7 +127,7 @@ public class SkillTree : MonoBehaviour
 		if (GameManager.instance._SelectionState == SelectionState.Select)
 		{
 			OnSelected ();
-			GameManager.instance.CurrentPokemon.LevelUp ();
+//			GameManager.instance.CurrentPokemon.LevelUp ();
 		}
 	}
 		

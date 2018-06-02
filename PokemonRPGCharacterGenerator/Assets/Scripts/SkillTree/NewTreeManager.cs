@@ -17,7 +17,7 @@ public class NewTreeManager : MonoBehaviour
 	{
 //		Pokemon ToDisplay = (Pokemon) Caller;
 		Refresh ();
-		Debug.Log ("It got called");
+//		Debug.Log ("It got called");
  	}
 
 	public void OnActivateTree (object Caller, EventArgs E)

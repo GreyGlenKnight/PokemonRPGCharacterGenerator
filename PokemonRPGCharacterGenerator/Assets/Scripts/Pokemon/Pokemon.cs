@@ -28,6 +28,36 @@ public enum ElementTypes
 	Fairy
 }
 
+public enum PokeBallTypes
+{
+	None,
+	Poke,
+	Great,
+	Ultra,
+	Master,
+	Safari,
+	Net,
+	Lure,
+	Level,
+	Dive,
+	Moon,
+	Nest,
+	Dusk,
+	Heal,
+	Quick,
+	Repeat,
+	Timer,
+	Luxury,
+	Premier,
+	Fast,
+	Friend,
+	Cherish,
+	Love,
+	Park,
+	Sport,
+	Heavy
+}
+
 public enum Gender
 {
 	Genderless,
@@ -40,6 +70,7 @@ public class Pokemon
 {
 	public string NickName;
 	public string TrainerName;
+	public PokeBallTypes BallType;
 	public int Level = 0;
 	public int Maturity; //This represents the relevant total maturity
 	public int Rate; //Rate int is essentially doubled
@@ -250,30 +281,33 @@ public class Pokemon
 		Maturity = ((Level * 2) / Rate);
 	}
 
-	public void LevelUp ()
+	public void LevelUp (SkillTreeData _Tree, BonusAtIndex _Bonus)
 	{
 		int TempMaturity = Maturity;
 		Level++;
+		ApplyLevelBonus (_Tree, _Bonus);
 		MaturityIncrease ();
+
 		if (TempMaturity != Maturity) 
 		{				
 			ApplyMaturityBonus (MaturityStatic.GetMaturityBonuses (Maturity), Maturity);
 		} 
 		else 
 		{
-		Debug.Log ("MaturityBonus already gained at that level"+Maturity);
+//		Debug.Log ("MaturityBonus already gained at that level"+Maturity);
 		}
 	}
 
-	public void ApplyLevelBonus (LevelUpBonus _Bonus)
+	public void ApplyLevelBonus (SkillTreeData _Tree, 
+		BonusAtIndex _Bonus)
 	{
-		if (_Bonus == null)
-		{
-			return;
-		}
-		_Bonus.ApplyLevelBonus(this);
-		BonusHistory.Add (_Bonus);
+		LevelUpBonus TempBonus =  LevelUpBonus.GetTreeBonus (_Tree, _Bonus);
 
+		TempBonus.ApplyLevelBonus (this);
+		if (_Bonus != BonusAtIndex.TreeUp && _Bonus != BonusAtIndex.CrossTree)
+		{
+		BonusHistory.Add (TempBonus);
+		}
 	}
 
 	public void ApplyMaturityBonus (List<MaturityBonus> MBonus, int maturity)
@@ -288,6 +322,14 @@ public class Pokemon
 			BonusHistory.Add (MBonus[i]);
 
 	        }
+	}
+
+	public void CrossTreeBonus ()
+	{
+	}
+
+	public void TreeUpBonus ()
+	{
 	}
 
 	public void SwapTrees (SkillTreeTier Tier)
