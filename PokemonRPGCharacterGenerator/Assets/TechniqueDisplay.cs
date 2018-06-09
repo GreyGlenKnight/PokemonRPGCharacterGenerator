@@ -47,13 +47,13 @@ public class TechniqueDisplay : MonoBehaviour
 
 
 //		_StatsToUse = GetStatImages (CurrentTechnique.StatsUsed);
-//		_ElementType = GetElementTypeImages (CurrentTechnique.Types);
+		_ElementType = GetElementTypeImages (CurrentTechnique.Types);
 //
 //		_StatImage.sprite = _StatsToUse [0];
-//		_TypeImage.sprite = _ElementType [0];
+		_TypeImage.sprite = _ElementType [0];
 		//These only display first item, it should be list 
 //		//there should be a sprite packing method
-//		_ElementType.Clear ();
+		_ElementType.Clear ();
 //		_StatsToUse.Clear ();
 //		//These lists should be dumped into the statimage and typeimage and cleared.
 //		//clearing them prevents 50 sprites from being added when moves are swapped.

@@ -130,7 +130,7 @@ public static class TypeColors
 		FairyColor
 	};
 
-	public static Sprite [] ElementTypesSymbols = new Sprite[]
+	public static Sprite [] ElementTypesSymbols = new Sprite []
 	{
 		NothingSprite,
 		NormalSprite,
@@ -177,7 +177,14 @@ public static class TypeColors
 
 	public static Sprite GetSpriteForType (ElementTypes _Type)
 	{
-		return ElementTypesSymbols [(int) _Type]; 
+		Texture2D _Tex = Resources.Load <Texture2D> ("TypeImages/Fire copy");
+//		if (_Tex == null)
+//		{Debug.Log ("IT's called");}
+		Sprite _Sprite = Sprite.Create (_Tex, new Rect (0,0, _Tex.width, _Tex.height),
+			new Vector2 (0.5f, 0.5f));
+
+//		return ElementTypesSymbols [(int) _Type]; 
+		return _Sprite;
 	}
 		
 	public static Sprite GetSpriteForStat (MyStat _Stat)
