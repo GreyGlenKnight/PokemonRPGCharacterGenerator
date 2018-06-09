@@ -126,6 +126,7 @@ public abstract class MaturityBonus : IHistoryItem
     {
 		public STABBonus (int Maturity, ElementTypes _Type)
         {
+			_Description = "Type Bonus: +1 "+TypeColors.GetStringForType(_Type);
 //			_Type = ElementTypes.Fire;
         }
         public override void ApplyMaturityBonus(Pokemon _Pokemon)
@@ -134,12 +135,7 @@ public abstract class MaturityBonus : IHistoryItem
 
             _Pokemon.GainSTABBonus();
 			_Level = _Pokemon.Level;
-			_Description = "Type Bonus: +1 "+TypeColors.GetStringForType(_Pokemon.Type1);
 
-			if (_Pokemon.Type2 != ElementTypes.Nothing) 
-			{
-				_Description = "Type Bonus: +1 " + TypeColors.GetStringForType (_Pokemon.Type1)+", "+ TypeColors.GetStringForType (_Pokemon.Type2);
-			}
 			_Pokemon.MaturityBonuses.Add (this);
         }
     }
@@ -168,7 +164,7 @@ public abstract class MaturityBonus : IHistoryItem
 
 		public BonusLevel (int Maturity)
         {
-			_Description = "Bonus Level: ";
+			_Description = "Bonus Level ";
 //			_Name = "";
 
         }
@@ -212,7 +208,7 @@ public abstract class MaturityBonus : IHistoryItem
     {
 		public EnhancerSlot(int Maturity)
         {
-			_Description = "Enhancer Slot: ";
+			_Description = this.ToString() +Maturity;
 //			_Name = "";
 
         }
@@ -232,7 +228,7 @@ public abstract class MaturityBonus : IHistoryItem
     {
 		public SpecialTraining(int Maturity)
         {
-			_Description = "Special Training Slot: ";
+			_Description = this.ToString() +Maturity;
 //			_Name = "";
 
         }

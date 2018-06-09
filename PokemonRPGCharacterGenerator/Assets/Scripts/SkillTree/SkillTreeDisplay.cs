@@ -97,7 +97,7 @@ public class SkillTreeDisplay : MonoBehaviour
 
 			if (ToDisplay.Tier == SkillTreeTier.Tier1) 
 			{
-//				Debug.Log ("Color Set");
+				Debug.Log ("Color Set");
 				Color ToSet = Tier1Color;
 				ToSet.a = 0.5f;
 				TreeBG.color = ToSet;

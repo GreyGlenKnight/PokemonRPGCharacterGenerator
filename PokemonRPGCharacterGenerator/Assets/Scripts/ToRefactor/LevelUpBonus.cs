@@ -36,41 +36,6 @@ public abstract class LevelUpBonus : IHistoryItem
 
 	#endregion
 
-	public static LevelUpBonus GetTreeBonus (SkillTreeData _Tree, 
-		BonusAtIndex _Bonus)
-	{
-		switch (_Bonus) 
-		{
-		case BonusAtIndex.Skill1:
-			return new TechniqueGain (_Tree, _Tree.Tech1);
-		case BonusAtIndex.Skill2:
-			return new TechniqueGain (_Tree, _Tree.Tech2);
-		case BonusAtIndex.Skill3:
-			return new TechniqueGain (_Tree, _Tree.Tech3);
-		case BonusAtIndex.Skill4:
-			return new TechniqueGain (_Tree, _Tree.Tech4);
-		case BonusAtIndex.MoveMod:
-			return new TechniqueModifierGain (_Tree);	
-		case BonusAtIndex.Ability:
-			return new AbilityGain (_Tree);
-		case BonusAtIndex.StatUp:
-			return new StatGain (_Tree, _Tree.FavoredStat);
-		case BonusAtIndex.SkillUp:
-			return new ElementTypesSkillGain (_Tree, _Tree.FavoredType1, _Tree.FavoredType2);
-		case BonusAtIndex.Endurance:
-			return new StatGain (_Tree, new EnduranceStat(1));
-		case BonusAtIndex.Maturity:
-			return new MaturityBonusGain (_Tree);
-		case BonusAtIndex.CrossTree:
-			return new CrossTree (_Tree);
-		case BonusAtIndex.TreeUp:
-			return new TreeUp (_Tree);
-		default:
-			Debug.Log ("Shouldn't be Generating bonus for that index");
-			return null;
-		}
-	}
-
 	public abstract void ApplyLevelBonus (Pokemon _Pokemon);
 
 	private string _Description;
@@ -78,20 +43,14 @@ public abstract class LevelUpBonus : IHistoryItem
 	private int _Level;
 	private int _MaturityLevel;
 
-
 	public class TechniqueGain : LevelUpBonus
 	{
 		public TechniqueGain (SkillTreeData _Tree,
 			Technique _TechniqueToAdd)
 		{
 //			_Name = "Learned: "+_TechniqueToAdd.Name;
-			if (_TechniqueToAdd != null)
-			{
 			_Description = "Gained Technique "+_TechniqueToAdd.Name+" On "+_Tree.Name;
-			}
-			else {_Description = "Gained Technique On: "+_Tree.Name;}
 		}
-
 		public override void ApplyLevelBonus(Pokemon _Pokemon)
 		{
 			_Level = _Pokemon.Level;
@@ -146,8 +105,6 @@ public abstract class LevelUpBonus : IHistoryItem
 		{
 //			string StatName = _Stat.ToString();
 //			_Name = "Gained Stat Up: "+_Stat.ToString();
-			if (_Stat == null)
-			{_Stat = new AttackStat (1);}
 			_Description = "Gained Stat Bonus To "+_Stat.ToString()+" On "+_Tree.Name;
 		}
 		public override void ApplyLevelBonus(Pokemon _Pokemon)
@@ -163,22 +120,10 @@ public abstract class LevelUpBonus : IHistoryItem
 	public class ElementTypesSkillGain : LevelUpBonus
 	{
 		public ElementTypesSkillGain (SkillTreeData _Tree,
-			ElementTypes _Type1,
-			ElementTypes _Type2)
+			ElementTypes _Type)
 		{
 //			string SkillName = _Type.ToString();
-			if (_Type1 != ElementTypes.Nothing)
-			{
-			_Description = "Gained Skill Bonus To "+ _Type1.ToString()+" On "+_Tree.Name;
-			}
-			else
-			{
-				_Description =	"Gained Skill Bonus To Fire On "+_Tree.Name;
-			}
-			if (_Type2 != ElementTypes.Nothing)
-			{			
-				_Description = "Gained Skill Bonus To "+ _Type1.ToString()+" And "+ _Type2.ToString()+" On "+_Tree.Name;
-			}
+			_Description = "Gained Skill Bonus To "+ _Type.ToString()+" On "+_Tree.Name;
 		}
 		public override void ApplyLevelBonus(Pokemon _Pokemon)
 		{
@@ -206,30 +151,6 @@ public abstract class LevelUpBonus : IHistoryItem
 		}
 	}
 
-	public class CrossTree : LevelUpBonus
-	{
-		public CrossTree (SkillTreeData _Tree)
-		{
-//			_Description = "This shouldn't be here";
-		}
-		public override void ApplyLevelBonus(Pokemon _Pokemon)
-		{
-			_Pokemon.CrossTreeBonus ();
-		}
-	}
-
-	public class TreeUp : LevelUpBonus
-	{
-		public TreeUp (SkillTreeData _Tree)
-		{
-//			_Description = "This shouldn't be here";
-
-		}
-		public override void ApplyLevelBonus(Pokemon _Pokemon)
-		{
-			_Pokemon.TreeUpBonus ();
-		}
-	}
 
 }
 

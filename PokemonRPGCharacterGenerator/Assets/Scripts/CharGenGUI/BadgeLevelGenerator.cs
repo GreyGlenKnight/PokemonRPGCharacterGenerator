@@ -106,7 +106,11 @@ public void OnBadgeLevelSelect ()
 
 	public void RollCycle ()
 	{
+//		Debug.Log (GameManager.instance._NewTreeManager.TreesToRoll.Count);
 		GameManager.instance._NewTreeManager.OnCallTreeRoll ();
 		_SkillTrees.OnAutoSelectClick ();
+		GameManager.instance.CurrentPokemon.LevelUp ();
+//		GameManager.instance.CurrentPokemon.Evolve();
+//        GameManager.instance.CurrentPokemon.MaturityCheck();
 	}
 }

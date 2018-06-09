@@ -27,15 +27,6 @@ public class SkillTreeData
 	public SkillTreeBonusesAcquired _BonusesAcquired = new SkillTreeBonusesAcquired ();
 	private SkillTreeState _State = SkillTreeState.Locked;
 	string _name;
-	public Technique Tech1;
-	public Technique Tech2;
-	public Technique Tech3;
-	public Technique Tech4;
-	public MyStat FavoredStat;
-	public ElementTypes FavoredType1;
-	public ElementTypes FavoredType2;
-
-
 	public string Name {private set {_name = value;} get {return _name;}}
 
 	SkillTreeTier _Tier;

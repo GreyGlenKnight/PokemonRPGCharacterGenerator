@@ -99,7 +99,7 @@ public static class MaturityStatic
 		} 
 		if (TradeSkillBonuses.Contains (Maturity) == true) 
 		{
-//			Debug.Log ("in MaturityStatic");
+			Debug.Log ("in MaturityStatic");
 			SkillTreeTier _Tier = SkillTreeTier.Tier1;
 			if (Maturity > 17) {_Tier = SkillTreeTier.Tier2;}
 			if (Maturity > 29) {_Tier = SkillTreeTier.Tier3;}
