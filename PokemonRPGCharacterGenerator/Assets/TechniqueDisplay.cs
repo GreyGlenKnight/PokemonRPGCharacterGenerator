@@ -13,10 +13,13 @@ public class TechniqueDisplay : MonoBehaviour
 	public Image _StatImage;
 	public Image _TypeImage;
 
+	public Image _TechSymbol;
+	//This will be the artwork for the move
 
 	public List <Sprite> _ElementType = new List <Sprite> ();
 	public List <Sprite> _StatsToUse = new List <Sprite> ();
 
+	public Text _TreeName;
 	public Text _Header;
 	public Text _Description;
 	public Text _BaseDamage;
@@ -31,6 +34,7 @@ public class TechniqueDisplay : MonoBehaviour
 
 		if (ToDisplay == null) 
 		{
+			_TreeName.text = "";
 			_BaseDamage.text = "";
 			_BaseAccuracy.text = "";
 			_Range.text = "";
@@ -44,6 +48,8 @@ public class TechniqueDisplay : MonoBehaviour
 	_BaseAccuracy.text = CurrentTechnique.BaseAccuracy.ToString ();
 	_BaseStrain.text = CurrentTechnique.BaseStrain.ToString();
 	_Range.text = CurrentTechnique.DisplayRange;
+//	_TreeName.text = "";
+		//The main sheet will not have any need for the tree name.
 
 
 //		_StatsToUse = GetStatImages (CurrentTechnique.StatsUsed);
@@ -76,6 +82,35 @@ public class TechniqueDisplay : MonoBehaviour
 		}
 	}
 
+	public void ChangeTechniqueDisplay (Technique ToDisplay, SkillTreeData _TreeData)
+	{
+		CurrentTechnique = ToDisplay;
+
+		if (ToDisplay == null) 
+		{
+			_BaseDamage.text = "";
+			_BaseAccuracy.text = "";
+			_Range.text = "";
+			_BaseStrain.text = "";
+			_TreeName.text = "";
+			return;
+		}
+
+		_Header.text = CurrentTechnique.Name;
+		_Description.text = CurrentTechnique.Description;
+		_BaseDamage.text = CurrentTechnique.BaseDamage.ToString ();
+		_BaseAccuracy.text = CurrentTechnique.BaseAccuracy.ToString ();
+		_BaseStrain.text = CurrentTechnique.BaseStrain.ToString();
+		_Range.text = CurrentTechnique.DisplayRange;
+		_TreeName.text = _TreeData.Name;
+		//This version will give us the tree's title and tier.
+		_ElementType = GetElementTypeImages (CurrentTechnique.Types);
+		_TypeImage.sprite = _ElementType [0];
+		_ElementType.Clear ();
+
+		_BackGround.color = TypeColors.GetColorForTier (_TreeData.Tier);
+	}
+
 //	public void GetStatImages (List <MyStat> ToReturn) 
 //	{
 //		if (ToReturn == null) {return;}
@@ -101,6 +136,11 @@ public class TechniqueDisplay : MonoBehaviour
 		_Types.Apply ((x)=>{ToReturn.Add (TypeColors.GetSpriteForType(x));});
 		return ToReturn;
 	}
+
+//	public SkillTreeTier GetTreeTierForMove (SkillTreeData _TreeData)
+//	{
+//		return 
+//	}
 
 	public void ExpandMoveView ()
 	{

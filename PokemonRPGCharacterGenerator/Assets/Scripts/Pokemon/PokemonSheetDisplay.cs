@@ -203,7 +203,6 @@ public class PokemonSheetDisplay : MonoBehaviour
 //			ElementType2.color = TypeColors.GetColorForType (BreedToSet.Type2);
 //			ElementType2.text = "";
 //			ElementType1.alignment = TextAnchor.MiddleCenter;
-	
 			ElementTypeSymbol2.gameObject.SetActive (false);
 		} 
 		else 

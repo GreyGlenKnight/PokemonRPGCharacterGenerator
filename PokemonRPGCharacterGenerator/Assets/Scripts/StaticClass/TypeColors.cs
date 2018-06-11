@@ -175,9 +175,36 @@ public static class TypeColors
 		return TypeStringList [(int) _Type]; 
 	}
 
+	public static Color GetColorForTier (SkillTreeTier _Tier)
+	{
+//	if (_Tier == SkillTreeTier.Tier0) 
+//	{_BackGround.color = Color.gray;}
+//	if (_Tier == SkillTreeTier.Tier1) 
+//	{_BackGround.color = Color.cyan;}
+//	if (_Tier == SkillTreeTier.Tier2) 
+//	{_BackGround.color = Color.green;}
+//	if (_Tier == SkillTreeTier.Tier3) 
+//	{_BackGround.color = Color.yellow;}
+
+		switch (_Tier) 
+		{	
+		case SkillTreeTier.Tier0:
+			return Color.gray;
+		case SkillTreeTier.Tier1:
+			return Color.cyan;
+		case SkillTreeTier.Tier2:
+			return Color.green;
+		case SkillTreeTier.Tier3:
+			return Color.yellow;
+		default:
+			Debug.Log ("Unrecognized Tier");
+			return Color.clear;
+		}
+	}
+
 	public static Sprite GetSpriteForType (ElementTypes _Type)
 	{
-		Texture2D _Tex = Resources.Load <Texture2D> ("TypeImages/Fire copy");
+		Texture2D _Tex = Resources.Load <Texture2D> ("TypeImages/Fire");
 //		if (_Tex == null)
 //		{Debug.Log ("IT's called");}
 		Sprite _Sprite = Sprite.Create (_Tex, new Rect (0,0, _Tex.width, _Tex.height),

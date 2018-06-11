@@ -5,9 +5,35 @@ using UnityEngine.UI;
 using System;
 using System.Linq;
 
+public interface IOption
+{
+	string TreeName { get;}
+	string OptionName { get;}
+	string OptionDescription { get;}
+	BonusAtIndex TypeOfBonus { get;}
+	Sprite GetSymbolSprite { get;}
+}
+
+//public abstract class LevelUpBonus : IOption
+//{
+//	#region IOption implementation
+//
+//	string TreeName { 
+//		get { return ;}
+//	string OptionName {
+//			get { return ;}
+//	string OptionDescription {
+//				get { return ;}
+//	BonusAtIndex TypeOfBonus {
+//					get { return ;}
+//	Sprite GetSymbolSprite {
+//						get {throw new NotImplementedException ();}
+//	#endregion
+//}
 
 public abstract class LevelUpBonus : IHistoryItem
 {
+	
 	#region IHistoryItem implementation
 
 	public int LevelGained {
@@ -35,6 +61,8 @@ public abstract class LevelUpBonus : IHistoryItem
 	}
 
 	#endregion
+
+
 
 	public abstract void ApplyLevelBonus (Pokemon _Pokemon);
 
@@ -151,6 +179,44 @@ public abstract class LevelUpBonus : IHistoryItem
 		}
 	}
 
-
+//	public abstract class LevelUpBonus : IOption
+//	{
+//		#region IOption implementation
+//		public string TreeName {
+//			get {
+//				throw new NotImplementedException ();
+//			}
+//		}
+//		public string OptionName {
+//			get {
+//				throw new NotImplementedException ();
+//			}
+//		}
+//		public string OptionDescription {
+//			get {
+//				throw new NotImplementedException ();
+//			}
+//		}
+//		public BonusAtIndex TypeOfBonus {
+//			get {
+//				throw new NotImplementedException ();
+//			}
+//		}
+//		public Sprite GetSymbolSprite {
+//			get {
+//				throw new NotImplementedException ();
+//			}
+//		}
+//		#endregion
+//
+//		public abstract void ApplyLevelBonus (Pokemon _Pokemon);
+//
+//		private string _Description;
+//		private string _Name = "Level Up: ";
+//		private int _Level;
+//		private int _MaturityLevel;
+//
+//		
+//	}
 }
 
