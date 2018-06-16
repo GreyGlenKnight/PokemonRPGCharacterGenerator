@@ -12,6 +12,7 @@ public class BonusDisplay : MonoBehaviour
 //	public Text NumberOfSameTypeBonuses; //For example, STAB #4 or Ability #3
 	public Text Description;
 	public Text LevelGained;
+	public Text Tutorial;
 	public List <Sprite> StatsToUse = new List <Sprite> ();
 	public List <Sprite> TypesToUse = new List <Sprite> ();
 
@@ -30,9 +31,10 @@ public class BonusDisplay : MonoBehaviour
 
 	public void ChangeDisplay (IHistoryItem _Item)
 	{
-		Name.text = _Item.Name;
+		Name.text = _Item.Title;
 		Description.text = _Item.Description+" "+" Maturity: "+_Item.MaturityLevel.ToString();
 		LevelGained.text = "Gained At Level: "+_Item.LevelGained.ToString();
+		Tutorial.text = _Item.TutorialDescription;
 		//Stats and type return sprites;
 	}
 

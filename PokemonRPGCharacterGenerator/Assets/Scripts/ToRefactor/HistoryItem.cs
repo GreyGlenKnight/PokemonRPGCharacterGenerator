@@ -23,10 +23,13 @@ public enum BonusType
 
 public interface IHistoryItem
 {
+	
 	int LevelGained { get;}
 	int MaturityLevel { get;}
+	string Title { get;}
 	string Name { get;}
 	string Description { get;}
+	string TutorialDescription { get;}
 	BonusType Type { get;}
 	Sprite GetRepresentedSprite { get;}
 }

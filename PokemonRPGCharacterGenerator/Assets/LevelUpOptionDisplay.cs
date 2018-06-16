@@ -13,7 +13,7 @@ public class LevelUpOptionDisplay : MonoBehaviour
 
 	public void DisplayLevelUpOption (LevelUpBonus _Bonus)
 	{
-		_Header.text = _Bonus.Name;
+		_Header.text = _Bonus.Title;
 		_Description.text = _Bonus.Description;
 	}
 

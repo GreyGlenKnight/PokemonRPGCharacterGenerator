@@ -10,29 +10,42 @@ public interface IOption
 	string TreeName { get;}
 	string OptionName { get;}
 	string OptionDescription { get;}
+	string OptionTutorial { get;}
 	BonusAtIndex TypeOfBonus { get;}
 	Sprite GetSymbolSprite { get;}
 }
 
-//public abstract class LevelUpBonus : IOption
-//{
-//	#region IOption implementation
-//
-//	string TreeName { 
-//		get { return ;}
-//	string OptionName {
-//			get { return ;}
-//	string OptionDescription {
-//				get { return ;}
-//	BonusAtIndex TypeOfBonus {
-//					get { return ;}
-//	Sprite GetSymbolSprite {
-//						get {throw new NotImplementedException ();}
-//	#endregion
-//}
-
-public abstract class LevelUpBonus : IHistoryItem
+public abstract class LevelUpBonus : IHistoryItem, IOption
 {
+	#region IOption implementation
+
+	public string TreeName {
+		get {return _TreeName;}
+	}
+
+	public string OptionName {
+		get {return _Title;}
+	}
+
+	public string OptionDescription {
+		get {return _OptionDescription;}
+	}
+
+	public string OptionTutorial {
+		get {return _TutorialDescription;}
+	}
+
+	public BonusAtIndex TypeOfBonus {
+		get {return _TypeOfBonus;}
+	}
+
+	public Sprite GetSymbolSprite {
+		get {
+			throw new NotImplementedException ();
+		}
+	}
+
+	#endregion
 	
 	#region IHistoryItem implementation
 
@@ -44,12 +57,20 @@ public abstract class LevelUpBonus : IHistoryItem
 		get {return _MaturityLevel;}
 	}
 
+	public string Title {
+		get {return _Title;}
+	}
+
 	public string Name {
-		get {return _Name;}
+		get {return _BonusName;}
 	}
 
 	public string Description {
-		get {return _Description;}
+		get {return _HistoryDescription;}
+	}
+		
+	public string TutorialDescription {
+		get {return _TutorialDescription;}
 	}
 
 	public BonusType Type {
@@ -63,13 +84,17 @@ public abstract class LevelUpBonus : IHistoryItem
 	#endregion
 
 
-
 	public abstract void ApplyLevelBonus (Pokemon _Pokemon);
 
-	private string _Description;
-	private string _Name = "Level Up: ";
+	private string _HistoryDescription;
+	private string _OptionDescription;
+	private string _TutorialDescription;
+	private string _BonusName;
+	private BonusAtIndex _TypeOfBonus;
+	private string _Title = "Level Up: ";
 	private int _Level;
 	private int _MaturityLevel;
+	private string _TreeName;
 
 	public class TechniqueGain : LevelUpBonus
 	{
@@ -77,7 +102,14 @@ public abstract class LevelUpBonus : IHistoryItem
 			Technique _TechniqueToAdd)
 		{
 //			_Name = "Learned: "+_TechniqueToAdd.Name;
-			_Description = "Gained Technique "+_TechniqueToAdd.Name+" On "+_Tree.Name;
+			_BonusName = _TechniqueToAdd.Name+": ";
+			int Temp = _Tree.TechniquesOnTree.IndexOf (_TechniqueToAdd);
+			_TypeOfBonus = (BonusAtIndex) Temp;
+			Debug.Log ("The above is a hack, fix.");
+			_OptionDescription = _TechniqueToAdd.Description+"";
+			_TutorialDescription = "A Pokemon May Prepare Up to 5 Active Moves For Battle.";
+			_TreeName = _Tree.Name;
+			_HistoryDescription = "Gained Technique "+_TechniqueToAdd.Name+" On "+_TreeName;
 		}
 		public override void ApplyLevelBonus(Pokemon _Pokemon)
 		{
@@ -94,8 +126,14 @@ public abstract class LevelUpBonus : IHistoryItem
 		{
 			Debug.Log ("Need structure for move mods");
 //			_Name = "Learned: "+"";
+			_TreeName = _Tree.Name;
+			_BonusName = "Move Modifier: ";
+			_TypeOfBonus = BonusAtIndex.MoveMod;
+			_OptionDescription = "Move Modifier Description Here.";
+			_TutorialDescription = "Move Modifiers Can Be Applied to Certain Moves to Augment Their Effects.";
+
 			string ModName = "";
-			_Description = "Gained Technique Modifier "+ModName+" On "+_Tree.Name;
+			_HistoryDescription = "Gained Technique Modifier "+ModName+" On "+_TreeName;
 		}
 		public override void ApplyLevelBonus(Pokemon _Pokemon)
 		{
@@ -113,8 +151,14 @@ public abstract class LevelUpBonus : IHistoryItem
 		{
 			Debug.Log ("Need structure for move mods");
 //			_Name = "Learned: "+"";
+			_TreeName = _Tree.Name;
+			_BonusName = "Ability: ";
+			_TypeOfBonus = BonusAtIndex.Ability;
+			_OptionDescription = "Ability Description Here.";
+			_TutorialDescription = "Abilities Are Passive Bonuses or Special Actions Available to a Pokemon.";
+
 			string AbilityName = "";
-			_Description = "Gained Ability "+AbilityName+" On "+_Tree.Name;
+			_HistoryDescription = "Gained Ability "+AbilityName+" On "+_TreeName;
 		}
 		public override void ApplyLevelBonus(Pokemon _Pokemon)
 		{
@@ -132,8 +176,14 @@ public abstract class LevelUpBonus : IHistoryItem
 			MyStat _Stat)
 		{
 //			string StatName = _Stat.ToString();
+			_TreeName = _Tree.Name;
+			_BonusName = "Stat Up: ";
+			_TypeOfBonus = BonusAtIndex.StatUp;
+			_OptionDescription = _Stat.ToString();
+			_TutorialDescription = "Gain a Bonus of +.5 to a Stat, Excluding Endurance. Roll 2d6, Default to the Tree's Favored Stat on a 6, and Choose from the Results.";
+
 //			_Name = "Gained Stat Up: "+_Stat.ToString();
-			_Description = "Gained Stat Bonus To "+_Stat.ToString()+" On "+_Tree.Name;
+			_HistoryDescription = "Gained Stat Bonus To "+_Stat.ToString()+" On "+_TreeName;
 		}
 		public override void ApplyLevelBonus(Pokemon _Pokemon)
 		{	
@@ -148,10 +198,17 @@ public abstract class LevelUpBonus : IHistoryItem
 	public class ElementTypesSkillGain : LevelUpBonus
 	{
 		public ElementTypesSkillGain (SkillTreeData _Tree,
-			ElementTypes _Type)
+			List <ElementTypes> _Types)
 		{
 //			string SkillName = _Type.ToString();
-			_Description = "Gained Skill Bonus To "+ _Type.ToString()+" On "+_Tree.Name;
+			_TreeName = _Tree.Name;
+			_BonusName = "Skill Up: ";
+			_TypeOfBonus = BonusAtIndex.SkillUp;
+			Debug.Log ("I made the quick change to a list of types rather than one, needs fixing");
+			_OptionDescription = _Types.ToString();
+			_TutorialDescription = "Pokemon Gains Incremental Ranks in the Indicated Elemental Skills. Increases Accuracy and Effectiveness for Moves of that Type.";
+
+			_HistoryDescription = "Gained Skill Bonus To "+ _Types.ToString()+" On "+_TreeName;
 		}
 		public override void ApplyLevelBonus(Pokemon _Pokemon)
 		{
@@ -165,58 +222,24 @@ public abstract class LevelUpBonus : IHistoryItem
 
 	public class MaturityBonusGain : LevelUpBonus
 	{
+
 		public MaturityBonusGain (SkillTreeData _Tree)
 		{
-			_Description = "Gained Maturity Bonus On "+_Tree.Name;
+			_TreeName = _Tree.Name;
+			_BonusName = "Maturity Up: ";
+			_TypeOfBonus = BonusAtIndex.Maturity;
+			_OptionDescription = "Gain Maturity +1";
+			_TutorialDescription = "Pokemon Gains a Maturity Rank. Hastens Evolution and Grants Access to Advanced Trees.";
+			_HistoryDescription = "Gained Maturity Bonus On "+_TreeName;
 		}
 		public override void ApplyLevelBonus(Pokemon _Pokemon)
 		{
 			_Level = _Pokemon.Level;
 			_MaturityLevel = _Pokemon.Maturity;
-
+	
 			_Pokemon.GainMaturityPlusBonus ();
 			_Pokemon.LevelUpBonuses.Add (this);
 		}
 	}
-
-//	public abstract class LevelUpBonus : IOption
-//	{
-//		#region IOption implementation
-//		public string TreeName {
-//			get {
-//				throw new NotImplementedException ();
-//			}
-//		}
-//		public string OptionName {
-//			get {
-//				throw new NotImplementedException ();
-//			}
-//		}
-//		public string OptionDescription {
-//			get {
-//				throw new NotImplementedException ();
-//			}
-//		}
-//		public BonusAtIndex TypeOfBonus {
-//			get {
-//				throw new NotImplementedException ();
-//			}
-//		}
-//		public Sprite GetSymbolSprite {
-//			get {
-//				throw new NotImplementedException ();
-//			}
-//		}
-//		#endregion
-//
-//		public abstract void ApplyLevelBonus (Pokemon _Pokemon);
-//
-//		private string _Description;
-//		private string _Name = "Level Up: ";
-//		private int _Level;
-//		private int _MaturityLevel;
-//
-//		
-//	}
 }
 
