@@ -30,7 +30,7 @@ public class SceneChanger : MonoBehaviour
 		_PokeSheetTreeManager.gameObject.SetActive(false);
 		_PokeSheetSceneManager.gameObject.SetActive(false);
 		_PokeSheetHistoryManager.gameObject.SetActive (true);
-		_PokeSheetHistoryManager.ChangeDisplay (GameManager.instance.CurrentPokemon);
+		_PokeSheetHistoryManager.ChangeDisplay (GameManager.instance.CurrentPokemon.BonusHistory);
 	}
 
 }

@@ -22,6 +22,11 @@ public class SkillTree : MonoBehaviour
 		return RemainingBonuses;
 	}
 
+	public static explicit operator SkillTreeData (SkillTree _Tree)
+	{
+		return _Tree._TreeData;
+	}
+
 	public void ChangeDisplayData (
 		int TreeIndexToDisplay,
 		SkillTreeData NewTreeData)
@@ -101,7 +106,9 @@ public class SkillTree : MonoBehaviour
 
 	{
 		RollTheList ();
+
 	}
+
 
 	public void RollTheList ()
 	{
@@ -126,7 +133,6 @@ public class SkillTree : MonoBehaviour
 		} 
 		else 
 		{
-			
 			TreeDisplay.DisplayBonusString ("~");
 		}
 	}
@@ -154,11 +160,41 @@ public class SkillTree : MonoBehaviour
 			return;
 		}
 //		GameManager.instance.CurrentPokemon._BonusesRemaining [CurrentTreeIndex].BonusesRemaining.RemoveAt (0);
-
+		GameManager.instance.CurrentPokemon.ApplyLevelBonus (_TreeData.GetBonusForIndex (RemainingBonuses [0]));
 		TreeDisplay.CheckSelectedBonus ((int) RemainingBonuses [0]);
 		RemainingBonuses.RemoveAt (0);
 		GameManager.instance._SelectionState = SelectionState.Roll;
 	}
+
+//	public void OnSelected (MyStat _Stat)
+//	{
+//		if (_TreeData == null) 
+//		{
+//			Debug.Log ("Selected Tree Null!");
+//			return;
+//		}
+//		if (GameManager.instance._SelectionState == SelectionState.Roll) 
+//		{
+//			return;
+//		}
+//
+//		if (_TreeData.CurrentState != SkillTreeState.Active) 
+//		{
+//			Debug.Log ("Selected Tree Inactive!");
+//			return;
+//		}
+//
+//		if (RemainingBonuses.Count == 0) 
+//		{
+//			return;
+//		}
+//		GameManager.instance.CurrentPokemon.LevelUp ();
+//		GameManager.instance.CurrentPokemon.ApplyLevelBonus (_TreeData,
+//			_Stat);
+//		TreeDisplay.CheckSelectedBonus ((int) RemainingBonuses [0]);
+//		RemainingBonuses.RemoveAt (0);
+//		GameManager.instance._SelectionState = SelectionState.Roll;
+//	}
 
 	public void OnManualSelectClick ()
 	{

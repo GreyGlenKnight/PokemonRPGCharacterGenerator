@@ -9,6 +9,7 @@ public interface IOption
 {
 	string TreeName { get;}
 	string OptionName { get;}
+	string BonusName { get;}
 	string OptionDescription { get;}
 	string OptionTutorial { get;}
 	BonusAtIndex TypeOfBonus { get;}
@@ -25,6 +26,10 @@ public abstract class LevelUpBonus : IHistoryItem, IOption
 
 	public string OptionName {
 		get {return _Title;}
+	}
+
+	public string BonusName {
+		get {return _BonusName;}
 	}
 
 	public string OptionDescription {
@@ -232,7 +237,7 @@ public abstract class LevelUpBonus : IHistoryItem, IOption
 			_TutorialDescription = "Pokemon Gains a Maturity Rank. Hastens Evolution and Grants Access to Advanced Trees.";
 			_HistoryDescription = "Gained Maturity Bonus On "+_TreeName;
 		}
-		public override void ApplyLevelBonus(Pokemon _Pokemon)
+		public override void ApplyLevelBonus (Pokemon _Pokemon)
 		{
 			_Level = _Pokemon.Level;
 			_MaturityLevel = _Pokemon.Maturity;

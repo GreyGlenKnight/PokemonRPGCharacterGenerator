@@ -124,14 +124,14 @@ GameObject:
   - component: {fileID: 224659401142677260}
   - component: {fileID: 222578556957186834}
   - component: {fileID: 114840881250091678}
-  - component: {fileID: 114310213682837840}
+  - component: {fileID: 114514983347516856}
   m_Layer: 0
   m_Name: StatUpChoice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1489311462859980
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,30 +486,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114310213682837840
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1276247265758982}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11166ec3aed6d47b99398f593dd2b49b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _BackGround: {fileID: 114840881250091678}
-  _StatImage: {fileID: 114355855401888506}
-  _TypeImage: {fileID: 0}
-  _TechSymbol: {fileID: 0}
-  _ElementType: []
-  _StatsToUse: []
-  _TreeName: {fileID: 114718720405290882}
-  _Header: {fileID: 0}
-  _Description: {fileID: 114095645752411750}
-  _BaseDamage: {fileID: 0}
-  _BaseAccuracy: {fileID: 0}
-  _BaseStrain: {fileID: 0}
-  _Range: {fileID: 0}
 --- !u!114 &114345508526693122
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -597,6 +573,25 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114514983347516856
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1276247265758982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db08bf9e73bc14d3f84b9dac4d726ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _BackGround: {fileID: 114840881250091678}
+  _StatImage1: {fileID: 114355855401888506}
+  _StatImage2: {fileID: 114190453596308536}
+  _TreeName: {fileID: 114718720405290882}
+  _Stat1Header: {fileID: 114985904785897086}
+  _Stat2Header: {fileID: 114098232905696978}
+  _Stat1Description: {fileID: 114345508526693122}
+  _Stat2Description: {fileID: 114095645752411750}
 --- !u!114 &114718720405290882
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -642,7 +637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.746856, g: 0.71323526, b: 1, a: 0.878}
+  m_Color: {r: 0.746856, g: 0.71323526, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -915,8 +910,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1276247265758982}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 89.87242}
-  m_LocalScale: {x: 0.01389, y: 0.01389, z: 0.01389}
+  m_LocalPosition: {x: 0, y: 0, z: -9.185668}
+  m_LocalScale: {x: 1.0000798, y: 1.0000798, z: 1.0000798}
   m_Children:
   - {fileID: 224165838178072820}
   - {fileID: 224064654137295152}
@@ -930,10 +925,10 @@ RectTransform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -3.506958, y: 1.7277832}
-  m_SizeDelta: {x: 495, y: 331.2}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 373.75, y: -165.6}
+  m_SizeDelta: {x: 242.5, y: 331.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224710671390938084
 RectTransform:

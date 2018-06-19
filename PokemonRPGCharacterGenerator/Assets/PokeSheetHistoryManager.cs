@@ -15,11 +15,11 @@ public class PokeSheetHistoryManager: MonoBehaviour
 	{
 	}
 		
-	public void ChangeDisplay (Pokemon _Pokemon)
+	public void ChangeDisplay (List <IHistoryItem> _History)
 	{
-		for (int i = 0; i < _Pokemon.BonusHistory.Count; i++) 
+		for (int i = 0; i < _History.Count; i++) 
 		{
-			_BonusHistory [i].ChangeDisplay (_Pokemon.BonusHistory [i]);
+			_BonusHistory [i].ChangeDisplay (_History [i]);
 		}
 	}
 

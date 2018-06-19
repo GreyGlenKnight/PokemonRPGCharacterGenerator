@@ -32,7 +32,7 @@ public class BonusDisplay : MonoBehaviour
 	public void ChangeDisplay (IHistoryItem _Item)
 	{
 		Name.text = _Item.Title;
-		Description.text = _Item.Description+" "+" Maturity: "+_Item.MaturityLevel.ToString();
+		Description.text = _Item.Name+" "+_Item.Description+" "+" Maturity: "+_Item.MaturityLevel.ToString();
 		LevelGained.text = "Gained At Level: "+_Item.LevelGained.ToString();
 		Tutorial.text = _Item.TutorialDescription;
 		//Stats and type return sprites;

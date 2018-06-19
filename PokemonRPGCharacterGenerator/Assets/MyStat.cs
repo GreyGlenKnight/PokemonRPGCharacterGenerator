@@ -23,12 +23,66 @@ public abstract class MyStat
 	{
 		RawValue = _RawValue;
 	}
+
+	public static MyStat RollForStat (int _Roll)
+	{
+		switch (_Roll) 
+		{
+		case 0:
+			return new AttackStat (1);
+//			break;
+		case 1:
+			return new DefenseStat (1);
+//			break;
+		case 2:
+			return new SpecialAttackStat (1);
+//			break;
+		case 3:
+			return new SpecialDefenseStat (1);
+//			break;
+		case 4:
+			return new SpeedStat (1);		
+//			break;
+		default:
+			return null;
+//			break;
+		}
+	}
 		
 
 	public static implicit operator int (MyStat ThisStat)
 	{
 		return ThisStat.RawValue;
 	}
+
+	public static List <MyStat> RollStatChoices (MyStat _FavoredStat)
+	{
+		List <MyStat> ToReturn = new List <MyStat> ();
+		int _Roll1 = UnityEngine.Random.Range (0, 6);
+		Debug.Log (_Roll1);
+		MyStat StatToAdd = RollForStat (_Roll1);
+
+		if (StatToAdd == null) 
+		{
+			StatToAdd = _FavoredStat;
+		}
+
+		ToReturn.Add (StatToAdd);
+
+		int _Roll2 = UnityEngine.Random.Range (0, 6);
+		Debug.Log (_Roll2);
+		MyStat StatToAdd2 = RollForStat (_Roll2);
+
+		if (StatToAdd2 == null) 
+		{
+			StatToAdd2 = _FavoredStat;
+		}
+
+		ToReturn.Add (StatToAdd2);
+		return ToReturn;
+	}
+
+
 
 	public MyStat AddValues (MyStat Other)
 	{

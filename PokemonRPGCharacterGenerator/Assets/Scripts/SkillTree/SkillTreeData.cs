@@ -114,4 +114,39 @@ public class SkillTreeData
 
 	}
 
+	public LevelUpBonus GetBonusForIndex (BonusAtIndex _Index)
+	{
+		switch (_Index) 
+		{
+		case BonusAtIndex.Skill1:
+			return new LevelUpBonus.TechniqueGain (this, 
+				_TechniquesOnTree [(int) _Index]);
+		case BonusAtIndex.Skill2:	
+			return new LevelUpBonus.TechniqueGain (this, 
+			_TechniquesOnTree [(int) _Index]);
+		case BonusAtIndex.Skill3:
+			return new LevelUpBonus.TechniqueGain (this, 
+				_TechniquesOnTree [(int) _Index]);			
+		case BonusAtIndex.Skill4:
+			return new LevelUpBonus.TechniqueGain (this, 
+				_TechniquesOnTree [(int) _Index]);			
+		case BonusAtIndex.MoveMod:
+			return new LevelUpBonus.TechniqueModifierGain (this);
+		case BonusAtIndex.Ability:
+			return new LevelUpBonus.AbilityGain (this);
+		case BonusAtIndex.StatUp:
+			return new LevelUpBonus.StatGain (this, 
+				_FavoredStatOnTree);
+		case BonusAtIndex.SkillUp:
+			return new LevelUpBonus.ElementTypesSkillGain (this, 
+				_ElementTypesOnTree);
+		case BonusAtIndex.Endurance:
+			return new LevelUpBonus.StatGain (this, new EnduranceStat (1));
+		case BonusAtIndex.Maturity:
+			return new LevelUpBonus.MaturityBonusGain (this);
+		default:
+			return null;
+		}
+	}
+
 }

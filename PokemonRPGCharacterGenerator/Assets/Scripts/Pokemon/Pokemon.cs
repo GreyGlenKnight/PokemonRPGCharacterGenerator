@@ -142,9 +142,26 @@ public class Pokemon
 		}
 	}
 
+	public Pokemon ()
+	{
+		_Breed = new Breed (ElementTypes.Nothing, ElementTypes.Nothing);
+		InitPokemon ();
+	}
+
 	public Pokemon (Pokemon.Breed breed)
 	{
 		_Breed = breed;
+		InitPokemon ();
+	}
+		
+	public Pokemon (Pokemon _Pokemon)
+	{
+		_Breed = new Breed (ElementTypes.Nothing, ElementTypes.Nothing);
+		InitPokemon ();
+	}
+
+	private void InitPokemon ()
+	{
 		ShinyRNG = UnityEngine.Random.Range (0, 4096);
 		Debug.Log (ShinyRNG);
 
@@ -171,37 +188,8 @@ public class Pokemon
 
 		ApplyMaturityBonus (MaturityStatic.GetMaturityBonuses (0), 0);
 	}
-		
-	public Pokemon ()
-		{
-		ShinyRNG = UnityEngine.Random.Range (0, 4096);
-		Debug.Log (ShinyRNG);
 
-		if (ShinyRNG == 0) 
-		{
-			IsShiny = true;
-			Debug.Log ("Holy Shit, a Shiny!");
-		}
-		_Breed = new Breed (ElementTypes.Nothing, ElementTypes.Nothing);
-
-		_SkillTreeDataTier1.Add (new SkillTreeData("Imp", SkillTreeTier.Tier0));
-		_SkillTreeDataTier1.Add (new SkillTreeData("Drake", SkillTreeTier.Tier1));
-		_SkillTreeDataTier1.Add (new SkillTreeData("Fire Body 1", SkillTreeTier.Tier1));
-		_SkillTreeDataTier1.Add (new SkillTreeData("Claw 1", SkillTreeTier.Tier1));
-		_SkillTreeDataTier1.Add (new SkillTreeData("Beast", SkillTreeTier.Tier1));
-		_SkillTreeDataTier1.Add (new SkillTreeData("Pyromancer 1", SkillTreeTier.Tier1));
-
-		_SkillTreeDataTier2.Add (new SkillTreeData("Claw 2", SkillTreeTier.Tier2));
-		_SkillTreeDataTier2.Add (new SkillTreeData("Fire Body 2", SkillTreeTier.Tier2));
-		_SkillTreeDataTier2.Add (new SkillTreeData("Pureblood 2", SkillTreeTier.Tier2));
-
-		_SkillTreeDataTier3.Add (new SkillTreeData("Pureblood 3", SkillTreeTier.Tier3));
-		_SkillTreeDataTier3.Add (new SkillTreeData("Fire Body 3", SkillTreeTier.Tier3));
-		_SkillTreeDataTier3.Add (new SkillTreeData("Acrobatics 1", SkillTreeTier.Tier1));
-
-
-		ApplyMaturityBonus (MaturityStatic.GetMaturityBonuses (0), 0);
-		}
+//	private 
 
 	public void AssignNameFields ()
 	{
@@ -251,7 +239,25 @@ public class Pokemon
 	}
 
 	public void LevelUp ()
+	//Should take input of LevelUpBonus
 	{
+		int TempMaturity = Maturity;
+		Level++;
+		MaturityIncrease ();
+		if (TempMaturity != Maturity) 
+		{				
+			ApplyMaturityBonus (MaturityStatic.GetMaturityBonuses (Maturity), Maturity);
+		} 
+		else 
+		{
+			Debug.Log ("MaturityBonus already gained at that level"+Maturity);
+		}
+	}
+
+	public void LevelUp (LevelUpBonus _LevelUpBonus)
+	//Should take input of LevelUpBonus
+	{
+		ApplyLevelBonus (_LevelUpBonus);
 		int TempMaturity = Maturity;
 		Level++;
 		MaturityIncrease ();
@@ -273,7 +279,7 @@ public class Pokemon
 		}
 		_Bonus.ApplyLevelBonus(this);
 		BonusHistory.Add (_Bonus);
-
+//		Debug.Log (_Bonus.ToString());
 	}
 
 	public void ApplyMaturityBonus (List<MaturityBonus> MBonus, int maturity)

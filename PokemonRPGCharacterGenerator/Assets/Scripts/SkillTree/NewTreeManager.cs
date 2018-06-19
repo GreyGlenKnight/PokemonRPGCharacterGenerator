@@ -31,6 +31,8 @@ public class NewTreeManager : MonoBehaviour
 		Debug.Log ("Trade Skill ");
 	}
 
+	public Pokemon CopyCurrentPokemon {get {return new Pokemon (_CurrentPokemon);}}
+
 	public void OnCallTreeRoll ()
 	{
 //		Debug.Log (TreesToRoll.Count);
@@ -42,9 +44,14 @@ public class NewTreeManager : MonoBehaviour
 		for (int i = 0; i < TreesToRoll.Count; i++) 
 		{
 			TreesToRoll[i].RollOnTree ();
+			Bonuses.Add ((int) TreesToRoll [i].GetCurrentSelectedBonus ());
+
+//			_LevelUpChooser = new LevelUpChooser ((SkillTreeData)TreesToRoll, Bonuses, CopyCurrentPokemon);
+//			Send temporary pokemon with bonuses applied
+//			_LevelUpChooser._InterruptDialog.OptionDisplays [i].DisplayLevelUpOption (TreesToRoll [i]._TreeData, TreesToRoll [i].GetCurrentSelectedBonus ());
 		}
 	}
-
+		
 	public void ChangeDisplayPokemon (Pokemon ToDisplay)
 	{
 		_TreeRowState = TreeRowState.Baby;
@@ -86,29 +93,24 @@ public class NewTreeManager : MonoBehaviour
 
 	public void ChangeVisibleTrees ()
 	{
-		//		Refresh ();
-
 		switch (_TreeRowState)
 		{
 		case TreeRowState.Baby:
 
 			_TreeRowState = TreeRowState.Mid;
 			Refresh ();
-
 			break;
 
 		case TreeRowState.Mid:
 
 			_TreeRowState = TreeRowState.Adult;
 			Refresh ();
-
 			break;
 
 		case TreeRowState.Adult:
 
 			_TreeRowState = TreeRowState.Baby;
 			Refresh ();
-
 			break;
 
 		default:

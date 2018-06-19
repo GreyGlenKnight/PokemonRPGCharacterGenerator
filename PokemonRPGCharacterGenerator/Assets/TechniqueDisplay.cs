@@ -111,6 +111,45 @@ public class TechniqueDisplay : MonoBehaviour
 		_BackGround.color = TypeColors.GetColorForTier (_TreeData.Tier);
 	}
 
+	public void ChangeTechniqueDisplay (IOption _Option, Technique ToDisplay)
+	{
+		CurrentTechnique = ToDisplay;
+
+		if (ToDisplay == null) 
+		{
+			_TreeName.text = "";
+			_BaseDamage.text = "";
+			_BaseAccuracy.text = "";
+			_Range.text = "";
+			_BaseStrain.text = "";
+			return;
+		}
+
+		_Header.text = CurrentTechnique.Name;
+		_Description.text = CurrentTechnique.Description;
+		_BaseDamage.text = CurrentTechnique.BaseDamage.ToString ();
+		_BaseAccuracy.text = CurrentTechnique.BaseAccuracy.ToString ();
+		_BaseStrain.text = CurrentTechnique.BaseStrain.ToString();
+		_Range.text = CurrentTechnique.DisplayRange;
+		_TreeName.text = _Option.TreeName;
+
+		//		_StatsToUse = GetStatImages (CurrentTechnique.StatsUsed);
+		_ElementType = GetElementTypeImages (CurrentTechnique.Types);
+		//
+		//		_StatImage.sprite = _StatsToUse [0];
+		_TypeImage.sprite = _ElementType [0];
+		//These only display first item, it should be list 
+		//		//there should be a sprite packing method
+		_ElementType.Clear ();
+		//		_StatsToUse.Clear ();
+		//		//These lists should be dumped into the statimage and typeimage and cleared.
+		//		//clearing them prevents 50 sprites from being added when moves are swapped.
+
+		_BackGround.color = TypeColors.GetColorForTier (ToDisplay.Tier);
+
+	}
+
+
 //	public void GetStatImages (List <MyStat> ToReturn) 
 //	{
 //		if (ToReturn == null) {return;}
@@ -132,8 +171,8 @@ public class TechniqueDisplay : MonoBehaviour
 	public List <Sprite> GetElementTypeImages (List <ElementTypes> _Types) 
 	{
 		List <Sprite> ToReturn = new List <Sprite> ();
-		if (_Types == null) {return null;}
-		_Types.Apply ((x)=>{ToReturn.Add (TypeColors.GetSpriteForType(x));});
+//	if (_Types == ElementTypes.Nothing) {return null;}
+		_Types.Apply ((x)=> {ToReturn.Add (TypeColors.GetSpriteForType(x));});
 		return ToReturn;
 	}
 

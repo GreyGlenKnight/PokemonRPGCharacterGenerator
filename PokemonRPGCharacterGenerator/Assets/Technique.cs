@@ -25,6 +25,8 @@ public enum AttackRange
 	public int BaseStrain;
 	public int BaseAccuracy;
 	public List <MyStat> StatsUsed = new List <MyStat> ();
+	public SkillTreeTier Tier;
+
 //		public list of effects
 
 	public Technique ()
