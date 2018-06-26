@@ -10,21 +10,22 @@ public enum BonusAtIndex
 	Skill1, Skill2, Skill3, Skill4, MoveMod, Ability, StatUp, SkillUp, Endurance, Maturity, CrossTree, TreeUp, None
 }
 
-public class SkillTreeBonusesAcquired 
+public enum BonusState
+{
+	Acquired,
+	Remaining
+}
+
+public class SkillTreeBonuses 
 
 {
-	public List <BonusAtIndex> BonusesRemaining = new List <BonusAtIndex> ();
+	public List <BonusAtIndex> Bonuses = new List <BonusAtIndex> ();
 
-	public SkillTreeBonusesAcquired ()
+	public SkillTreeBonuses ()
 	{
-		for (int i = 0; i < 12; i++)
-		{
-			BonusesRemaining.Add ((BonusAtIndex) i);
-//			Debug.Log (i);
-		}
-
+//		for (int i = 0; i < 12; i++)
+//		{
+//			BonusesRemaining.Add ((BonusAtIndex) i);
+//		}
 	}
-
-
-
 }

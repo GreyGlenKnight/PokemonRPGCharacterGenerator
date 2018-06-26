@@ -38,4 +38,4 @@ public interface IHistoryItem
 //Have a unique sprite for bonus type, such as a badge symbol for
 //winning a gym battle.
 
-//Double battle victories should store the pokemon it fought with
+//Double battle victories should store the pokemon's nickname and trainer it fought with

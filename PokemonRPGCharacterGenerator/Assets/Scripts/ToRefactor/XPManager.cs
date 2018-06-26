@@ -7,13 +7,10 @@ using System.Linq;
 
 public class XPManager : MonoBehaviour 
 {
-
-	// Use this for initialization
 	public static int XP
 	{		
 		get {return GameManager.instance.CurrentPokemon.XP;}
 	}
-
 
 	public Text XPText;
 	public string CurrentXP;
@@ -27,6 +24,7 @@ public class XPManager : MonoBehaviour
 			GameManager.instance.CurrentPokemon.XP++;
 			}
 		}
+
 		public static bool SpendXP ()
 		{
 
@@ -43,8 +41,7 @@ public class XPManager : MonoBehaviour
 			}
 			return false;
 		}
-
-
+		
 	void Update () 
 
 	{

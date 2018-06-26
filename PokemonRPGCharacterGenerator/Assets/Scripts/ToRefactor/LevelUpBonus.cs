@@ -14,6 +14,9 @@ public interface IOption
 	string OptionTutorial { get;}
 	BonusAtIndex TypeOfBonus { get;}
 	Sprite GetSymbolSprite { get;}
+
+
+
 }
 
 public abstract class LevelUpBonus : IHistoryItem, IOption
@@ -227,7 +230,6 @@ public abstract class LevelUpBonus : IHistoryItem, IOption
 
 	public class MaturityBonusGain : LevelUpBonus
 	{
-
 		public MaturityBonusGain (SkillTreeData _Tree)
 		{
 			_TreeName = _Tree.Name;
@@ -246,5 +248,49 @@ public abstract class LevelUpBonus : IHistoryItem, IOption
 			_Pokemon.LevelUpBonuses.Add (this);
 		}
 	}
+
+	public class CrossTree : LevelUpBonus
+	{
+		public CrossTree (SkillTreeData _Tree)
+		{
+			//			_Name = "Learned: "+_TechniqueToAdd.Name;
+			_BonusName = "CrossTree"+": ";
+			_TypeOfBonus = BonusAtIndex.CrossTree;
+			_OptionDescription = "";
+			_TutorialDescription = "If the Linked Cross Tree is Unlocked, Roll On It Instead For This Level.";
+			_TreeName = _Tree.Name;
+			_HistoryDescription = "";
+		}
+		public override void ApplyLevelBonus(Pokemon _Pokemon)
+		{
+			_Level = _Pokemon.Level;
+			_MaturityLevel = _Pokemon.Maturity;
+//			_Pokemon.GainTechnique();
+//			_Pokemon.LevelUpBonuses.Add (this);
+		}
+	}
+
+
+	public class TreeUp : LevelUpBonus
+	{
+		public TreeUp (SkillTreeData _Tree)
+		{
+			//			_Name = "Learned: "+_TechniqueToAdd.Name;
+			_BonusName = "TreeUp"+": ";
+			_TypeOfBonus = BonusAtIndex.TreeUp;
+			_OptionDescription = "";
+			_TutorialDescription = "If the Next Tier of This Tree is Unlocked, Roll On It Instead For This Level.";
+			_TreeName = _Tree.Name;
+			_HistoryDescription = "";
+		}
+		public override void ApplyLevelBonus(Pokemon _Pokemon)
+		{
+			_Level = _Pokemon.Level;
+			_MaturityLevel = _Pokemon.Maturity;
+//			_Pokemon.GainTechnique();
+//			_Pokemon.LevelUpBonuses.Add (this);
+		}
+	}
+
 }
 

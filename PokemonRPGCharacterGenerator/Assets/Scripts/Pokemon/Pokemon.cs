@@ -50,7 +50,7 @@ public class Pokemon
 	public bool IsShiny;
 	public Gender _Gender;
 	private Breed _Breed;
-	public SkillTrees _SkillTrees;
+//	public SkillTreesView _SkillTrees;
 	public EnduranceStat NumberOfEnduranceBonuses = new EnduranceStat (0);
 	public AttackStat NumberOfAttackBonuses = new AttackStat (0);
 	public DefenseStat NumberOfDefenseBonuses = new DefenseStat (0);
@@ -206,19 +206,19 @@ public class Pokemon
 			_SkillTreeDataTier1.Shuffle ();
 			Temp = _SkillTreeDataTier1 [0];
 			_SkillTreeDataTier1.RemoveAt (0);
-			Debug.Log (_Tier);
+//			Debug.Log (_Tier);
 			return Temp;
 		case SkillTreeTier.Tier1:
 			_SkillTreeDataTier1.Shuffle ();
 			Temp = _SkillTreeDataTier1 [0];
 			_SkillTreeDataTier1.RemoveAt (0);
-			Debug.Log (_Tier);
+//			Debug.Log (_Tier);
 			return Temp;
 		case SkillTreeTier.Tier2:
 			_SkillTreeDataTier2.Shuffle ();
 			Temp = _SkillTreeDataTier2 [0];
 			_SkillTreeDataTier2.RemoveAt (0);
-			Debug.Log (_Tier);
+//			Debug.Log (_Tier);
 			return Temp;
 		case SkillTreeTier.Tier3:
 			_SkillTreeDataTier3.Shuffle ();
@@ -413,7 +413,7 @@ public class Pokemon
 				if (BreakTree != null) 
 				{
 					BreakTree (this, new EventArgs ());
-					Debug.Log (i);
+//					Debug.Log (i);
 				}						
 				return;
 			}

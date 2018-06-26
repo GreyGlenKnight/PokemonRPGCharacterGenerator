@@ -8,7 +8,8 @@ using System.Linq;
 
 public class PokeSheetHistoryManager: MonoBehaviour
 {
-	
+
+
 	public List <BonusDisplay> _BonusHistory = new List <BonusDisplay>();
 
 	public PokeSheetHistoryManager ()

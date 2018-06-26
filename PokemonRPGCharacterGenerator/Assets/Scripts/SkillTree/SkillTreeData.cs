@@ -1,6 +1,9 @@
-﻿using System.Collections;
+﻿using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using UnityEngine.UI;
+using System;
+using System.Linq;
 
 public enum SkillTreeState
 {
@@ -13,11 +16,9 @@ public enum SkillTreeTier
 }
 
 public class SkillTreeData 
-
 {
 
 	public SkillTreeData (string lname, SkillTreeTier _lTier)
-
 	{
 		Name = lname;
 		Tier = _lTier;
@@ -67,22 +68,36 @@ public class SkillTreeData
 		_TechniquesOnTree.Add (Metal_Claw);
 		_TechniquesOnTree.Add (Sand_Attack);
 
-
 		_ElementTypesOnTree.Add (ElementTypes.Fire);
+		ResetBonuses ();
 	}
 
-//	public List <BonusAtIndex> _BonusesRemaining = new List <BonusAtIndex> ();
-	public SkillTreeBonusesAcquired _BonusesAcquired = new SkillTreeBonusesAcquired ();
+	public const int BONUSES_ON_TREE = 12;
+//	private List<BonusAtIndex> RemainingBonuses = new List<BonusAtIndex> ();
+	public bool IsTreeFull = false;
+	public bool IsInit = false;
+
+	public SkillTreeBonuses _BonusesAcquired = new SkillTreeBonuses ();
+	public SkillTreeBonuses _BonusesRemaining = new SkillTreeBonuses ();
+
 	private List <ElementTypes> _ElementTypesOnTree = new List <ElementTypes>();
 	private MyStat _FavoredStatOnTree = new AttackStat (1);
 	private SkillTreeState _State = SkillTreeState.Locked;
 	private List <Technique> _TechniquesOnTree = new List <Technique> ();
+	//private SkillTreeData _CrossTree;
+	//private SkillTreeData _NextTree;
+//	public bool IsTreeFull = false;
+	string _Name;
 
 
-	string _name;
-	public string Name {private set {_name = value;} get {return _name;}}
+//	public void OnSelectOption (object Caller, EventArgs E)
+//	{
+//		Refresh ();
+//	public event EventHandler OnSelected;
 
+//	}
 
+	public string Name {private set {_Name = value;} get {return _Name;}}
 
 	SkillTreeTier _Tier;
 
@@ -108,11 +123,105 @@ public class SkillTreeData
 		get {return _FavoredStatOnTree;}
 	}
 
+	public List <BonusAtIndex> GetRemainingBonuses ()
+	{
+		return _BonusesRemaining.Bonuses;
+	}
+
+//	public void OnManualSelectClick (object Caller, EventArgs E)
+//	{
+//		OnManualSelectClick ();
+//	}
+
+	public SkillTreeData GetTreeIfActive ()
+	{
+		if (this.CurrentState == SkillTreeState.Active) 
+		{return this;} 
+		else 
+		{return null;}
+	}
+
+	//private SkillTreeData _CrossTree
+	//
+	//private SkillTreeData _NextTree;
+	//
+
+
 	public void ChangeState (SkillTreeState NewState)
 	{
 		_State = NewState;
-
 	}
+
+	public BonusAtIndex GetCurrentSelectedBonus ()
+	{
+//		if (CurrentState != SkillTreeState.Active) 
+//		{
+//			return BonusAtIndex.None;
+//		}
+
+		if (_BonusesRemaining.Bonuses.Count == 0) 
+		{
+			return BonusAtIndex.None;
+		}
+		return _BonusesRemaining.Bonuses [0];
+	}
+
+
+	public void RollTheList ()
+	{
+		if (CurrentState != SkillTreeState.Active)
+		{
+			return;
+		}
+			
+		if (_BonusesRemaining.Bonuses.Count > 0) 
+		{
+			_BonusesRemaining.Bonuses.Shuffle ();
+		} 
+	}
+
+	public void OnSelected ()
+	{
+		if (GameManager.instance._SelectionState == SelectionState.Roll) 
+		{
+			return;
+		}
+//		if (CurrentState != SkillTreeState.Active) 
+//		{
+//			Debug.Log ("Selected Tree Inactive!");
+//			return;
+//		}
+		if (_BonusesRemaining.Bonuses.Count == 0) 
+		{
+			return;
+		}
+		_BonusesAcquired.Bonuses.Add (_BonusesRemaining.Bonuses [0]);
+		GameManager.instance.CurrentPokemon.ApplyLevelBonus (GetBonusForIndex (_BonusesRemaining.Bonuses [0]));
+		GameManager.instance._SelectionState = SelectionState.Roll;
+		_BonusesRemaining.Bonuses.RemoveAt (0);
+	}
+
+	public void OnManualSelectClick ()
+	{
+//		this += OnManualSelectClick;
+
+		if (GameManager.instance._SelectionState == SelectionState.Select)
+		{
+			OnSelected ();
+			GameManager.instance.CurrentPokemon.LevelUp ();
+		}
+	}
+
+	public void ResetBonuses ()
+	{ 
+		for (int i = 0; i < BONUSES_ON_TREE; i++) 
+		{
+			_BonusesRemaining.Bonuses.Add ((BonusAtIndex)i);
+			_BonusesAcquired.Bonuses.Clear ();
+		}
+		IsInit = true;
+	}
+
 
 	public LevelUpBonus GetBonusForIndex (BonusAtIndex _Index)
 	{
@@ -123,7 +232,7 @@ public class SkillTreeData
 				_TechniquesOnTree [(int) _Index]);
 		case BonusAtIndex.Skill2:	
 			return new LevelUpBonus.TechniqueGain (this, 
-			_TechniquesOnTree [(int) _Index]);
+				_TechniquesOnTree [(int) _Index]);
 		case BonusAtIndex.Skill3:
 			return new LevelUpBonus.TechniqueGain (this, 
 				_TechniquesOnTree [(int) _Index]);			
@@ -144,9 +253,12 @@ public class SkillTreeData
 			return new LevelUpBonus.StatGain (this, new EnduranceStat (1));
 		case BonusAtIndex.Maturity:
 			return new LevelUpBonus.MaturityBonusGain (this);
+		case BonusAtIndex.CrossTree:
+			return new LevelUpBonus.CrossTree (this);
+		case BonusAtIndex.TreeUp:
+			return new LevelUpBonus.TreeUp (this);
 		default:
 			return null;
 		}
 	}
-
 }

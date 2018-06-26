@@ -364,17 +364,17 @@ public class MaturityManagerTest
         Debug.Assert(maturityBonus[0].Description != maturityBonus[1].Description);
     }
 
-    [Test]
-    public void Maturity_Bonuses_Track_Their_Index()
-    {
-        //TODO add to Maturity Bonus tests
-        List<MaturityBonus> maturityBonus = new List<MaturityBonus> ();
-        maturityBonus.AddRange(MaturityStatic.GetMaturityBonuses(2));
-        maturityBonus.AddRange(MaturityStatic.GetMaturityBonuses(5));
-		Debug.Log (maturityBonus [0].Description);
-		Debug.Log (maturityBonus [1].Description);
-        Debug.Assert(maturityBonus[0].Description != maturityBonus[1].Description);
-    }
+//    [Test]
+//    public void Maturity_Bonuses_Track_Their_Index()
+//    {
+//        //TODO add to Maturity Bonus tests
+//        List<MaturityBonus> maturityBonus = new List<MaturityBonus> ();
+//        maturityBonus.AddRange(MaturityStatic.GetMaturityBonuses(2));
+//        maturityBonus.AddRange(MaturityStatic.GetMaturityBonuses(5));
+//		Debug.Log (maturityBonus [0].Description);
+//		Debug.Log (maturityBonus [1].Description);
+//        Debug.Assert(maturityBonus[0].Description != maturityBonus[1].Description);
+//    }
 
 //	[Test]
 //	public void MaturityBonusAreFormatted ()

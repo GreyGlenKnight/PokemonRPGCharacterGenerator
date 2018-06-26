@@ -8,7 +8,7 @@ using System.Linq;
 public class InterruptDialog : MonoBehaviour 
 {
 	
-	public List <LevelUpOptionDisplay> OptionDisplays = new List <LevelUpOptionDisplay> ();
+	public List <OptionChooserDisplay> OptionDisplays = new List <OptionChooserDisplay> ();
 //	public List <GameObject> LevelUpDisplayObjects = new List <GameObject> ();
 
 	//Use Events, hook Display up to class to drive data, probably non monobehavior
@@ -22,18 +22,53 @@ public class InterruptDialog : MonoBehaviour
 
 	public void DisplayOptionsList (List <IOption> _Bonuses, List <SkillTreeData> _Trees)
 	{
-
-		for (int i = 0; i < OptionDisplays.Count; i++)
+		if (_Bonuses.Count == 0 || _Trees.Count == 0) 
 		{
+			Debug.Log ("Bonuses or trees are 0");
+		}
+
+		if (_Bonuses.Count != _Trees.Count) 
+		{
+			throw new InvalidBonusesException (_Bonuses.Count, _Trees.Count);
+		}
+
+		for (int i = 0; i < _Bonuses.Count; i++)
+		{
+			Debug.Log ("Line 28");
+
 			OptionDisplays [i].DisplayLevelUpOption (_Bonuses [i], _Trees [i]);
 
+			if (_Trees [i] == null) 
+			{
+				Debug.Log ("Null Tree");
+				OptionDisplays [i].gameObject.SetActive (false);
+				return;
+			}
 
 			if (_Bonuses [i] == null) 
 			{
+				Debug.Log ("Null Bonus");
 				OptionDisplays [i].gameObject.SetActive (false);
+				return;
 			}
 		}
 	}
+}
 
+public class InvalidBonusesException : Exception
+{
 
+	public string BonusesLength;
+	public string TreesLength;
+
+	public InvalidBonusesException (): base ("Greg Was Right, Bonuses > Trees, you suck.")
+	{
+		
+	}
+
+	public InvalidBonusesException (int Bonuses, int Trees): base ("Greg Was Right, Bonuses > Trees, you suck.")
+	{
+		BonusesLength = Bonuses.ToString();
+		TreesLength = Trees.ToString();
+	}
 }

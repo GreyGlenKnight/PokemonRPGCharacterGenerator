@@ -36,6 +36,6 @@ public class StatUpChoice : MonoBehaviour {
 		_Stat2Description.text = _Stat.ToString()+" +.5";
 	}
 
-
+	//
 
 }

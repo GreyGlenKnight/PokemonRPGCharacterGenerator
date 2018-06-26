@@ -26,7 +26,7 @@ public static class BadgeLevelExtensions
 		switch (ThisEnum) 
 		{
 		case BadgeLevelStrings.SingleLevel: return "Single Level";
-		case BadgeLevelStrings.BabyLevels: return "Baby Levels";
+		case BadgeLevelStrings.BabyLevels:  return "Baby Levels";
 		case BadgeLevelStrings.BadgeLevel1: return "Badge Level 1";
 		case BadgeLevelStrings.BadgeLevel2: return "Badge Level 2";
 		case BadgeLevelStrings.BadgeLevel3: return "Badge Level 3";
@@ -45,11 +45,10 @@ public static class BadgeLevelExtensions
 
 public class BadgeLevelGenerator : MonoBehaviour 
 {
-public int BadgeLevel;
-public static bool AutoSelectOn;
+	public int BadgeLevel;
+	public static bool AutoSelectOn;
 	public BadgeLevelDisplay _BadgeLevelDisplay;
-	public SkillTrees _SkillTrees;
-
+	public SkillTreesView _SkillTrees;
 
 
 public void OnBadgeLevelSelect ()
@@ -64,7 +63,6 @@ public void OnBadgeLevelSelect ()
 
 	public void GenerateMon (BadgeLevelStrings CurrentBadgeLevelString)
 	{
-		
 		if (CurrentBadgeLevelString == BadgeLevelStrings.SingleLevel) 
 		{
 			if(XPManager.XP < 2)
@@ -73,15 +71,9 @@ public void OnBadgeLevelSelect ()
 			}
 			RollCycle ();
 			_BadgeLevelDisplay.UpdateText ();
-
-//			_BadgeLevelDisplay.UpdateDisplay (GameManager.instance.CurrentPokemon.Level, 
-//				_BadgeLevelDisplay.CurrentLevelString);
-//			_BadgeLevelDisplay.CurrentLevelString = GameManager.instance.CurrentPokemon.Level.ToString ();
-//			_BadgeLevelDisplay.CurrentLevelText.text = _BadgeLevelDisplay.CurrentLevelString;
 		}
 		else 
 		{
-//			XPManager.XP = (BadgeLevel * 10 + 2) - GameManager.instance.CurrentPokemon.Level;
 			while (GameManager.instance.CurrentPokemon.Level < (BadgeLevel * 5 + 1))
 			{
 				if (XPManager.XP < 2) {
@@ -97,20 +89,16 @@ public void OnBadgeLevelSelect ()
 			_BadgeLevelDisplay.UpdateText ();
 		}
 		_BadgeLevelDisplay.UpdateDisplay (
-			GameManager.instance.CurrentPokemon.Level,			
-			_BadgeLevelDisplay.CurrentLevelString);
-//		Debug.Log (GameManager.instance.CurrentPokemon.Maturity);
+		GameManager.instance.CurrentPokemon.Level,			
+		_BadgeLevelDisplay.CurrentLevelString);
 	}
 
 
 
 	public void RollCycle ()
 	{
-//		Debug.Log (GameManager.instance._NewTreeManager.TreesToRoll.Count);
 		GameManager.instance._NewTreeManager.OnCallTreeRoll ();
-		_SkillTrees.OnAutoSelectClick ();
+		GameManager.instance._NewTreeManager.OnAutoSelectClick ();
 		GameManager.instance.CurrentPokemon.LevelUp ();
-//		GameManager.instance.CurrentPokemon.Evolve();
-//        GameManager.instance.CurrentPokemon.MaturityCheck();
 	}
 }

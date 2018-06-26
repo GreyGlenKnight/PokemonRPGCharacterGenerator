@@ -15,7 +15,7 @@ public enum AttackRange
 }
 
 	public class Technique
-	{
+{
 	public AttackRange Range;
 	public string DisplayRange;
 	public string Name;
@@ -30,8 +30,8 @@ public enum AttackRange
 //		public list of effects
 
 	public Technique ()
-		{
-		}
+	{
 	}
+}
 
 
