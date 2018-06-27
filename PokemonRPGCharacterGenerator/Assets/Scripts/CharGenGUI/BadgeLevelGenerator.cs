@@ -39,7 +39,6 @@ public static class BadgeLevelExtensions
 			Debug.Log ("Error");
 			return "Undefined String";		
 		}
-
 	}
 }
 
@@ -51,33 +50,35 @@ public class BadgeLevelGenerator : MonoBehaviour
 	public SkillTreesView _SkillTrees;
 
 
-public void OnBadgeLevelSelect ()
-{
-	BadgeLevel = _BadgeLevelDisplay.BLDropDown.value;
-}
+	public void OnBadgeLevelSelect ()
+	{
+		BadgeLevel = _BadgeLevelDisplay.BLDropDown.value;
+	}
 
 	public void OnGenerateMonClick ()
 	{
-		GenerateMon ((BadgeLevelStrings)BadgeLevel);
+		GenerateMon ((BadgeLevelStrings)BadgeLevel, GameManager.instance.CurrentPokemon);
 	}
 
-	public void GenerateMon (BadgeLevelStrings CurrentBadgeLevelString)
+	public void GenerateMon (BadgeLevelStrings _CurrentBadgeLevelString, Pokemon _CurrentPokemon)
 	{
-		if (CurrentBadgeLevelString == BadgeLevelStrings.SingleLevel) 
+		if (_CurrentBadgeLevelString == BadgeLevelStrings.SingleLevel) 
 		{
-			if(XPManager.XP < 2)
+			if(_CurrentPokemon.XP < 2)
 			{
-				GameManager.instance.CurrentPokemon.XP = 2;
+				_CurrentPokemon.XP = 2;
 			}
 			RollCycle ();
 			_BadgeLevelDisplay.UpdateText ();
+			_BadgeLevelDisplay.UpdateDisplay (_CurrentPokemon);
 		}
 		else 
 		{
-			while (GameManager.instance.CurrentPokemon.Level < (BadgeLevel * 5 + 1))
+			while (_CurrentPokemon.Level < (BadgeLevel * 5 + 1))
 			{
-				if (XPManager.XP < 2) {
-					GameManager.instance.CurrentPokemon.XP = 2;
+				if(_CurrentPokemon.XP < 2)
+				{
+					_CurrentPokemon.XP = 2;
 					RollCycle ();
 				} 
 				else 
@@ -85,12 +86,10 @@ public void OnBadgeLevelSelect ()
 					RollCycle ();
 				}
 			}
-			_BadgeLevelDisplay.BadgeLevelString = CurrentBadgeLevelString.GetBadgeString();
-			_BadgeLevelDisplay.UpdateText ();
+			_BadgeLevelDisplay.BadgeLevelString = _CurrentBadgeLevelString.GetBadgeString();
 		}
-		_BadgeLevelDisplay.UpdateDisplay (
-		GameManager.instance.CurrentPokemon.Level,			
-		_BadgeLevelDisplay.CurrentLevelString);
+		_BadgeLevelDisplay.UpdateText ();
+		_BadgeLevelDisplay.UpdateDisplay (_CurrentPokemon);
 	}
 
 

@@ -76,6 +76,12 @@ public class NewTreeManager : MonoBehaviour
 		Refresh ();	
 	}
 
+	public void OnAddXPClick ()
+	{
+		_CurrentPokemon.AddXP ();
+		GameManager.instance._BadgeLevelGenerator._BadgeLevelDisplay.UpdateDisplay (_CurrentPokemon);
+	}
+
 //	public Pokemon CopyCurrentPokemon {get {return new Pokemon (_CurrentPokemon);}}
 		
 	public void ChangeDisplayPokemon (Pokemon ToDisplay)
@@ -89,6 +95,8 @@ public class NewTreeManager : MonoBehaviour
 
 	public void Refresh ()
 	{
+		GameManager.instance._BadgeLevelGenerator._BadgeLevelDisplay.UpdateDisplay (_CurrentPokemon);
+
 		switch (_TreeRowState)
 		{
 		case TreeRowState.Baby:
@@ -159,16 +167,15 @@ public class NewTreeManager : MonoBehaviour
 
 	public void OnCallTreeRoll ()
 	{
-		Debug.Log ("OnCallTreeRoll");
-
-		Bonuses.Clear ();
-		TreesToRoll.Clear ();
-
-		if (XPManager.SpendXP () == false) 
+		if (_CurrentPokemon.SpendXP () == false) 
 		{
 			Debug.Log ("NewTreeManager XP Spend Fail");
 			return;
 		}
+
+		Bonuses.Clear ();
+		TreesToRoll.Clear ();
+
 		for (int i = 0; i < _CurrentPokemon._SkillTreeData.Count; i++) 
 		{
 			SkillTreeData Temp = _CurrentPokemon._SkillTreeData [i].GetTreeIfActive ();
@@ -189,9 +196,11 @@ public class NewTreeManager : MonoBehaviour
 //				TreesToRoll [i]);
 			TempOptions.Add (TreesToRoll [i].GetBonusForIndex ((BonusAtIndex)Bonuses [i]));
 		}
-		try {Debug.Log ("In try block");
-			_InterruptDialog.DisplayOptionsList
-			(TempOptions, TreesToRoll);}
+		try {
+			Debug.Log ("In try block");
+			_InterruptDialog.DisplayOptionsList (TempOptions, 
+				TreesToRoll);
+		}
 		catch (InvalidBonusesException e)
 		{
 			Debug.Log (e.BonusesLength +", "+ e.TreesLength);

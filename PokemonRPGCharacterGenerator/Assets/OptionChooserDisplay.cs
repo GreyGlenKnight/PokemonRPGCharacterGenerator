@@ -22,7 +22,7 @@ public class OptionChooserDisplay : MonoBehaviour
 //	public Image _Symbol;
 //	public Image _BackGround;
 	public TechniqueDisplay _TechniqueVertical;
-	public StatUpChoice _StatUpChoice;
+//	public StatUpChoice _StatUpChoice;
 	public SkillTreeData _SkillTree;
 	public OptionPanel _OptionPanel;
 	public CurrentChoiceType _CurrentChoiceType;
@@ -58,6 +58,8 @@ public class OptionChooserDisplay : MonoBehaviour
 
 		_CurrentChoiceType = CurrentChoiceType.SkillTree;
 		_SkillTree = _Tree;
+		_OptionPanel._BackGround.color = TypeColors.GetColorForTier (_Tree.Tier);
+
 
 		if (((int)_Bonus.TypeOfBonus) < 4) {
 			DisplayLevelUpOption (_Bonus, 
@@ -65,22 +67,21 @@ public class OptionChooserDisplay : MonoBehaviour
 			_TechniqueVertical._BackGround.color = TypeColors.GetColorForTier (_Tree.Tier);
 			return;
 		}
-
-		if (_Bonus.TypeOfBonus == BonusAtIndex.StatUp) {
-			Debug.Log ("OptionChooserDisplay 6");
-			DisplayLevelUpOption (_Bonus, 
-				MyStat.RollStatChoices (_Tree.FavoredStatOnTree) [0]);
-			_StatUpChoice._BackGround.color = TypeColors.GetColorForTier (_Tree.Tier);
-			return;
-		}
+//
+//		if (_Bonus.TypeOfBonus == BonusAtIndex.StatUp) {
+//			Debug.Log ("OptionChooserDisplay 6");
+//			DisplayLevelUpOption (_Bonus, 
+//				MyStat.RollStatChoices (_Tree.FavoredStatOnTree) [0]);
+//			_StatUpChoice._BackGround.color = TypeColors.GetColorForTier (_Tree.Tier);
+//			return;
+//		}
 
 		//		_OptionPanel._Symbol;
-		_OptionPanel._BackGround.color = TypeColors.GetColorForTier (_Tree.Tier);
 		_OptionPanel._Header.text = _Bonus.BonusName;
 		_OptionPanel._Description.text = _Bonus.OptionDescription;
 		_OptionPanel.gameObject.SetActive (true);
 		_TechniqueVertical.gameObject.SetActive (false);
-		_StatUpChoice.gameObject.SetActive (false);
+//		_StatUpChoice.gameObject.SetActive (false);
 	}
 
 	public void DisplayLevelUpOption (IOption _Bonus, Technique _Technique)
@@ -89,18 +90,18 @@ public class OptionChooserDisplay : MonoBehaviour
 //		this.gameObject.SetActive (false);
 		_TechniqueVertical.gameObject.SetActive (true);
 		_OptionPanel.gameObject.SetActive (false);
-		_StatUpChoice.gameObject.SetActive (false);
+//		_StatUpChoice.gameObject.SetActive (false);
 		_TechniqueVertical.ChangeTechniqueDisplay (_Bonus, _Technique);
 	}
 		
-	public void DisplayLevelUpOption (IOption _Bonus, MyStat _Stat)
-	{
-		_CurrentChoiceType = CurrentChoiceType.Stat;
-		_TechniqueVertical.gameObject.SetActive (false);
-		_OptionPanel.gameObject.SetActive (false);
-		_StatUpChoice.gameObject.SetActive (true);
-		_StatUpChoice.DisplayStatUpChoice (_Bonus, _Stat);
-	}
+//	public void DisplayLevelUpOption (IOption _Bonus, MyStat _Stat)
+//	{
+//		_CurrentChoiceType = CurrentChoiceType.Stat;
+//		_TechniqueVertical.gameObject.SetActive (false);
+//		_OptionPanel.gameObject.SetActive (false);
+//		_StatUpChoice.gameObject.SetActive (true);
+//		_StatUpChoice.DisplayStatUpChoice (_Bonus, _Stat);
+//	}
 
 	//Could use MaturityBonus as input parameter if Maturity Up would yield a bonus.
 }

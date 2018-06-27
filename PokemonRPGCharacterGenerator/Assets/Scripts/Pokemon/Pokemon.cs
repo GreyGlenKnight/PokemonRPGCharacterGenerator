@@ -231,7 +231,30 @@ public class Pokemon
 		}
 	}
 
+	public void AddXP()
+	{
+		if (XP < 100) 
+		{
+			XP++;
+			XP++;
+		}
+	}
 
+	public bool SpendXP ()
+	{
+		if (XP < 2) 
+		{
+			return false;
+		}
+		if (GameManager.instance._SelectionState == SelectionState.Roll) 
+		{
+			XP--;
+			XP--;
+			GameManager.instance._SelectionState = SelectionState.Select;
+			return true;
+		}
+		return false;
+	}
 
 	public void MaturityIncrease ()
 	{

@@ -13,14 +13,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 29
-    y: 44
+    x: 67
+    y: 53
     width: 1275
-    height: 696
+    height: 717
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -42,7 +42,7 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1275
-    height: 696
+    height: 717
   m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
@@ -81,7 +81,7 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 676
+    y: 697
     width: 1275
     height: 20
   m_MinSize: {x: 0, y: 0}
@@ -105,11 +105,11 @@ MonoBehaviour:
     x: 0
     y: 30
     width: 1275
-    height: 646
-  m_MinSize: {x: 787, y: 492}
+    height: 667
+  m_MinSize: {x: 783, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 57
+  controlID: 9906
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -128,12 +128,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 998
-    height: 646
-  m_MinSize: {x: 510, y: 492}
+    width: 869
+    height: 667
+  m_MinSize: {x: 506, y: 492}
   m_MaxSize: {x: 14006, y: 14042}
   vertical: 1
-  controlID: 58
+  controlID: 9907
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -153,12 +153,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 998
-    height: 317
-  m_MinSize: {x: 510, y: 221}
-  m_MaxSize: {x: 12010, y: 4021}
+    width: 869
+    height: 328
+  m_MinSize: {x: 506, y: 221}
+  m_MaxSize: {x: 12006, y: 4021}
   vertical: 0
-  controlID: 24
+  controlID: 9838
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -175,8 +175,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 249
-    height: 317
+    width: 223
+    height: 328
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 16}
@@ -199,12 +199,12 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 249
+    x: 223
     y: 0
-    width: 187
-    height: 317
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+    width: 199
+    height: 328
+  m_MinSize: {x: 104, y: 121}
+  m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -224,12 +224,12 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 436
+    x: 422
     y: 0
-    width: 562
-    height: 317
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+    width: 447
+    height: 328
+  m_MinSize: {x: 204, y: 221}
+  m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -252,13 +252,13 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 317
-    width: 998
-    height: 329
+    y: 328
+    width: 869
+    height: 339
   m_MinSize: {x: 336, y: 271}
   m_MaxSize: {x: 14006, y: 10021}
   vertical: 0
-  controlID: 59
+  controlID: 9908
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -275,8 +275,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 476
-    height: 329
+    width: 415
+    height: 339
   m_MinSize: {x: 232, y: 271}
   m_MaxSize: {x: 10002, y: 10021}
   m_ActualView: {fileID: 20}
@@ -298,10 +298,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 476
+    x: 415
     y: 0
-    width: 522
-    height: 329
+    width: 454
+    height: 339
   m_MinSize: {x: 104, y: 121}
   m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 15}
@@ -323,12 +323,12 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 998
+    x: 869
     y: 0
-    width: 277
-    height: 646
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+    width: 406
+    height: 667
+  m_MinSize: {x: 277, y: 71}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 21}
@@ -356,10 +356,10 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 507
-    y: 410
-    width: 518
-    height: 308
+    x: 2
+    y: 19
+    width: 450
+    height: 318
   m_PersistentViewDataDictionary: {fileID: 0}
   m_MaximizeOnPlay: 0
   m_Gizmos: 0
@@ -378,8 +378,8 @@ MonoBehaviour:
     m_VAllowExceedBaseRangeMin: 1
     m_VAllowExceedBaseRangeMax: 1
     m_ScaleWithWindow: 0
-    m_HSlider: 0
-    m_VSlider: 0
+    m_HSlider: 1
+    m_VSlider: 1
     m_IgnoreScrollWheelUntilClicked: 0
     m_EnableMouseInput: 1
     m_EnableSliderZoom: 0
@@ -389,25 +389,25 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 17
-      width: 518
-      height: 291
-    m_Scale: {x: 0.8083333, y: 0.80833334}
-    m_Translation: {x: 259, y: 145.5}
+      width: 450
+      height: 301
+    m_Scale: {x: 5.0000005, y: 4.9999995}
+    m_Translation: {x: 797.43176, y: -167.7968}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -320.41238
-      y: -180
-      width: 640.82477
-      height: 360
+      x: -159.48634
+      y: 33.559364
+      width: 89.99999
+      height: 60.200005
     m_MinimalGUI: 1
-  m_defaultScale: 0.80833334
+  m_defaultScale: 0.703125
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
-  m_LastWindowPixelSize: {x: 1036, y: 616}
+  m_LastWindowPixelSize: {x: 900, y: 636}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 00000000000100000100
@@ -433,16 +433,16 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 29
-    y: 93
-    width: 247
-    height: 296
+    x: 0
+    y: 19
+    width: 221
+    height: 307
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 9686f2ff
-    m_LastClickedID: 0
-    m_ExpandedIDs: fe8dfbff0a8efbff0c8efbffecb4fcfff2b4fcfff8b4fcff74efffffbef0ffff36f3ffff98fbfffff4ffffff00000000f4290000de2a0000522b0000942b0000982c0000322d0000fa2d0000262e0000b22e00005c2f0000d62f0000103100007c310000a0320000b8320000c2320000e83200000c330000663300008e330000
+    scrollPos: {x: 0, y: 158.0011}
+    m_SelectedIDs: 0230ffff
+    m_LastClickedID: -53246
+    m_ExpandedIDs: b0deecff10acf1fff2b1f1ffccacf2ff1ab5f2ff44d1f2ff80d6f2ff041ffffff821ffff1430ffff1e31ffff8a49ffff9efbfffff4ffffff00000000c42900002e2c00008c2c0000242d0000a42d0000c82e00002e2f00009afb000004fe000062fe0000fafe0000760001009e000100f000010004010100
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -487,11 +487,11 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 5
-    y: 112
-    width: 360
-    height: 355
+    y: 93
+    width: 247
+    height: 296
   m_PersistentViewDataDictionary: {fileID: 0}
-  m_TestTypeToolbarIndex: 1
+  m_TestTypeToolbarIndex: 0
   m_PlayModeTestListGUI:
     m_Window: {fileID: 17}
     newResultList:
@@ -556,9 +556,9 @@ MonoBehaviour:
     - id: '[/Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll][suite]'
       name: Assembly-CSharp-Editor.dll
       fullName: /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
-      resultStatus: 1
-      duration: 1.525364
-      messages: 
+      resultStatus: 2
+      duration: 0.504689
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -568,9 +568,9 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][MaturityManagerTest][suite]'
       name: MaturityManagerTest
       fullName: MaturityManagerTest
-      resultStatus: 1
-      duration: 0.620329
-      messages: 
+      resultStatus: 2
+      duration: 0.488676
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -581,7 +581,7 @@ MonoBehaviour:
       name: Break_Level_Is_1_For_BreakTree_At_Level_4
       fullName: MaturityManagerTest.Break_Level_Is_1_For_BreakTree_At_Level_4
       resultStatus: 1
-      duration: 0.013185
+      duration: 0.015858
       messages: 
       output: 
       stacktrace: 
@@ -593,7 +593,7 @@ MonoBehaviour:
       name: Break_Level_Is_2_For_BreakTree_At_Level_15
       fullName: MaturityManagerTest.Break_Level_Is_2_For_BreakTree_At_Level_15
       resultStatus: 1
-      duration: 0.010869
+      duration: 0.010094
       messages: 
       output: 'Tier 2, MaturityStatic
 
@@ -607,7 +607,7 @@ MonoBehaviour:
       name: CanGetMaturityBonusForMaturity
       fullName: MaturityManagerTest.CanGetMaturityBonusForMaturity
       resultStatus: 1
-      duration: 0.012199
+      duration: 0.009111
       messages: 
       output: 
       stacktrace: 
@@ -619,7 +619,7 @@ MonoBehaviour:
       name: CanReturnDifferentBonusTypes
       fullName: MaturityManagerTest.CanReturnDifferentBonusTypes
       resultStatus: 1
-      duration: 0.012814
+      duration: 0.009739
       messages: 
       output: 
       stacktrace: 
@@ -631,7 +631,7 @@ MonoBehaviour:
       name: Does_Not_Return_Special_Training_At_33
       fullName: MaturityManagerTest.Does_Not_Return_Special_Training_At_33
       resultStatus: 1
-      duration: 0.010462
+      duration: 0.010294
       messages: 
       output: 
       stacktrace: 
@@ -643,7 +643,7 @@ MonoBehaviour:
       name: Does_Not_Returns_Enhancer_Skill_At_Level_16
       fullName: MaturityManagerTest.Does_Not_Returns_Enhancer_Skill_At_Level_16
       resultStatus: 1
-      duration: 0.010964
+      duration: 0.009517
       messages: 
       output: 'in MaturityStatic
 
@@ -657,7 +657,7 @@ MonoBehaviour:
       name: Dont_Return_Break_Tree_At_Level_2
       fullName: MaturityManagerTest.Dont_Return_Break_Tree_At_Level_2
       resultStatus: 1
-      duration: 0.013176
+      duration: 0.008919
       messages: 
       output: 
       stacktrace: 
@@ -669,7 +669,7 @@ MonoBehaviour:
       name: DontReturnAbilitySlotBonusAtMaturity1
       fullName: MaturityManagerTest.DontReturnAbilitySlotBonusAtMaturity1
       resultStatus: 1
-      duration: 0.011714
+      duration: 0.008851
       messages: 
       output: 
       stacktrace: 
@@ -681,7 +681,7 @@ MonoBehaviour:
       name: DontReturnNatureBonusMaturityBonusAtLevel0
       fullName: MaturityManagerTest.DontReturnNatureBonusMaturityBonusAtLevel0
       resultStatus: 1
-      duration: 0.013454
+      duration: 0.008812
       messages: 
       output: 
       stacktrace: 
@@ -693,7 +693,7 @@ MonoBehaviour:
       name: DontReturnSTABBonusMaturityBonusAtLevel6
       fullName: MaturityManagerTest.DontReturnSTABBonusMaturityBonusAtLevel6
       resultStatus: 1
-      duration: 0.014158
+      duration: 0.009328
       messages: 
       output: 
       stacktrace: 
@@ -705,7 +705,7 @@ MonoBehaviour:
       name: DontReturnTradeSkillMaturityBonusAtMaturity1
       fullName: MaturityManagerTest.DontReturnTradeSkillMaturityBonusAtMaturity1
       resultStatus: 1
-      duration: 0.013289
+      duration: 0.010344
       messages: 
       output: 
       stacktrace: 
@@ -717,7 +717,7 @@ MonoBehaviour:
       name: Gain_A_Total_Of_4_Enhancers
       fullName: MaturityManagerTest.Gain_A_Total_Of_4_Enhancers
       resultStatus: 1
-      duration: 0.022865
+      duration: 0.019478
       messages: 
       output: 'in MaturityStatic
 
@@ -747,7 +747,7 @@ MonoBehaviour:
       name: Maturity_Bonus_Contains_Description
       fullName: MaturityManagerTest.Maturity_Bonus_Contains_Description
       resultStatus: 1
-      duration: 0.009589
+      duration: 0.008613
       messages: 
       output: 
       stacktrace: 
@@ -759,25 +759,9 @@ MonoBehaviour:
       name: Maturity_Bonus_Have_Different_Descriptions
       fullName: MaturityManagerTest.Maturity_Bonus_Have_Different_Descriptions
       resultStatus: 1
-      duration: 0.015658
+      duration: 0.010653
       messages: 
-      output: 'MaturityBonus+AbilitySlot0MaturityBonus+BreakTreeTier00
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-    - id: '[Assembly-CSharp-Editor][MaturityManagerTest.Maturity_Bonuses_Track_Their_Index]'
-      name: Maturity_Bonuses_Track_Their_Index
-      fullName: MaturityManagerTest.Maturity_Bonuses_Track_Their_Index
-      resultStatus: 1
-      duration: 0.014199
-      messages: 
-      output: 'MaturityBonus+BonusLevel0
-
-        MaturityBonus+BonusLevel1
+      output: 'Ability NameTier 0 Tree Name
 
 '
       stacktrace: 
@@ -789,7 +773,7 @@ MonoBehaviour:
       name: NoBonusesGainedAfter41
       fullName: MaturityManagerTest.NoBonusesGainedAfter41
       resultStatus: 1
-      duration: 0.012984
+      duration: 0.009208
       messages: 
       output: 
       stacktrace: 
@@ -801,7 +785,7 @@ MonoBehaviour:
       name: Return_Active_Tree_At_Level_0
       fullName: MaturityManagerTest.Return_Active_Tree_At_Level_0
       resultStatus: 1
-      duration: 0.015057
+      duration: 0.00819
       messages: 
       output: 
       stacktrace: 
@@ -813,7 +797,7 @@ MonoBehaviour:
       name: Return_Special_Training_At_Level_6
       fullName: MaturityManagerTest.Return_Special_Training_At_Level_6
       resultStatus: 1
-      duration: 0.009392
+      duration: 0.01059
       messages: 
       output: 
       stacktrace: 
@@ -825,7 +809,7 @@ MonoBehaviour:
       name: ReturnAbilitySlotBonusAtMaturity0
       fullName: MaturityManagerTest.ReturnAbilitySlotBonusAtMaturity0
       resultStatus: 1
-      duration: 0.009709
+      duration: 0.008915
       messages: 
       output: 
       stacktrace: 
@@ -837,7 +821,7 @@ MonoBehaviour:
       name: ReturnBonusForEveryMaturityRank
       fullName: MaturityManagerTest.ReturnBonusForEveryMaturityRank
       resultStatus: 1
-      duration: 0.022086
+      duration: 0.017943
       messages: 
       output: 'in MaturityStatic
 
@@ -867,7 +851,7 @@ MonoBehaviour:
       name: ReturnBonusLevelMaturityBonusAtLevel2
       fullName: MaturityManagerTest.ReturnBonusLevelMaturityBonusAtLevel2
       resultStatus: 1
-      duration: 0.009594
+      duration: 0.009637
       messages: 
       output: 
       stacktrace: 
@@ -879,7 +863,7 @@ MonoBehaviour:
       name: ReturnBonusLevelMaturityBonusAtLevel5
       fullName: MaturityManagerTest.ReturnBonusLevelMaturityBonusAtLevel5
       resultStatus: 1
-      duration: 0.009193
+      duration: 0.011223
       messages: 
       output: 
       stacktrace: 
@@ -891,7 +875,7 @@ MonoBehaviour:
       name: Returns_A_Total_Of_55_Bonuses
       fullName: MaturityManagerTest.Returns_A_Total_Of_55_Bonuses
       resultStatus: 1
-      duration: 0.022695
+      duration: 0.015924
       messages: 
       output: 'in MaturityStatic
 
@@ -921,7 +905,7 @@ MonoBehaviour:
       name: Returns_Break_Skill_At_Level_15
       fullName: MaturityManagerTest.Returns_Break_Skill_At_Level_15
       resultStatus: 1
-      duration: 0.015698
+      duration: 0.01104
       messages: 
       output: 'Tier 2, MaturityStatic
 
@@ -935,7 +919,7 @@ MonoBehaviour:
       name: Returns_Break_Tree_On_Level_0
       fullName: MaturityManagerTest.Returns_Break_Tree_On_Level_0
       resultStatus: 1
-      duration: 0.009651
+      duration: 0.008981
       messages: 
       output: 
       stacktrace: 
@@ -947,7 +931,7 @@ MonoBehaviour:
       name: ReturnSTABBonusMaturityBonusAtLevel4
       fullName: MaturityManagerTest.ReturnSTABBonusMaturityBonusAtLevel4
       resultStatus: 1
-      duration: 0.011677
+      duration: 0.009566
       messages: 
       output: 
       stacktrace: 
@@ -959,7 +943,7 @@ MonoBehaviour:
       name: ReturnTypeAtLevel4IsNotBonusLevel
       fullName: MaturityManagerTest.ReturnTypeAtLevel4IsNotBonusLevel
       resultStatus: 1
-      duration: 0.011138
+      duration: 0.008696
       messages: 
       output: 
       stacktrace: 
@@ -971,7 +955,7 @@ MonoBehaviour:
       name: PokemonDataTests
       fullName: PokemonDataTests
       resultStatus: 1
-      duration: 0.872387
+      duration: 0.928483
       messages: 
       output: 
       stacktrace: 
@@ -983,13 +967,9 @@ MonoBehaviour:
       name: BreedBuildsDualtype
       fullName: PokemonDataTests.BreedBuildsDualtype
       resultStatus: 1
-      duration: 0.01443
+      duration: 0.011534
       messages: 
-      output: 'Fire
-
-        Flying
-
-'
+      output: 
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -998,8 +978,8 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][PokemonDataTests.BreedBuildsDualtype_NSubstitute]'
       name: BreedBuildsDualtype_NSubstitute
       fullName: PokemonDataTests.BreedBuildsDualtype_NSubstitute
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.252268
       messages: 
       output: 
       stacktrace: 
@@ -1011,7 +991,7 @@ MonoBehaviour:
       name: BreedBuildsMonotype
       fullName: PokemonDataTests.BreedBuildsMonotype
       resultStatus: 1
-      duration: 0.015476
+      duration: 0.010338
       messages: 
       output: 
       stacktrace: 
@@ -1023,15 +1003,11 @@ MonoBehaviour:
       name: CanCreatePokemon
       fullName: PokemonDataTests.CanCreatePokemon
       resultStatus: 1
-      duration: 0.033945
+      duration: 0.024647
       messages: 
-      output: '701
+      output: '1968
 
         Gained Ability Slot :0
-
-        Tier0
-
-        Tier0
 
         Gained Break Tree :0
 
@@ -1047,15 +1023,11 @@ MonoBehaviour:
       name: HasMaturity
       fullName: PokemonDataTests.HasMaturity
       resultStatus: 1
-      duration: 0.015195
+      duration: 0.015525
       messages: 
-      output: '411
+      output: '2209
 
         Gained Ability Slot :0
-
-        Tier0
-
-        Tier0
 
         Gained Break Tree :0
 
@@ -1071,15 +1043,11 @@ MonoBehaviour:
       name: HasRate
       fullName: PokemonDataTests.HasRate
       resultStatus: 1
-      duration: 0.019771
+      duration: 0.013881
       messages: 
-      output: '103
+      output: '2601
 
         Gained Ability Slot :0
-
-        Tier0
-
-        Tier0
 
         Gained Break Tree :0
 
@@ -1095,15 +1063,11 @@ MonoBehaviour:
       name: HasXP
       fullName: PokemonDataTests.HasXP
       resultStatus: 1
-      duration: 0.015461
+      duration: 0.012671
       messages: 
-      output: '1777
+      output: '3064
 
         Gained Ability Slot :0
-
-        Tier0
-
-        Tier0
 
         Gained Break Tree :0
 
@@ -1119,15 +1083,11 @@ MonoBehaviour:
       name: MaturityChangesBasedOnRate
       fullName: PokemonDataTests.MaturityChangesBasedOnRate
       resultStatus: 1
-      duration: 0.023018
+      duration: 0.026146
       messages: 
-      output: '3910
+      output: '1376
 
         Gained Ability Slot :0
-
-        Tier0
-
-        Tier0
 
         Gained Break Tree :0
 
@@ -1143,15 +1103,11 @@ MonoBehaviour:
       name: MaturityContinuesToChangeBasedOnRate
       fullName: PokemonDataTests.MaturityContinuesToChangeBasedOnRate
       resultStatus: 1
-      duration: 0.015625
+      duration: 0.013162
       messages: 
-      output: '3807
+      output: '2430
 
         Gained Ability Slot :0
-
-        Tier0
-
-        Tier0
 
         Gained Break Tree :0
 
@@ -1167,15 +1123,11 @@ MonoBehaviour:
       name: PokemonCalculatesEndurance
       fullName: PokemonDataTests.PokemonCalculatesEndurance
       resultStatus: 1
-      duration: 0.019994
+      duration: 0.017938
       messages: 
-      output: '64
+      output: '3460
 
         Gained Ability Slot :0
-
-        Tier0
-
-        Tier0
 
         Gained Break Tree :0
 
@@ -1191,15 +1143,11 @@ MonoBehaviour:
       name: PokemonCalculatesHP
       fullName: PokemonDataTests.PokemonCalculatesHP
       resultStatus: 1
-      duration: 0.035112
+      duration: 0.014505
       messages: 
-      output: '2510
+      output: '2072
 
         Gained Ability Slot :0
-
-        Tier0
-
-        Tier0
 
         Gained Break Tree :0
 
@@ -1215,15 +1163,11 @@ MonoBehaviour:
       name: PokemonCalculatesStrain
       fullName: PokemonDataTests.PokemonCalculatesStrain
       resultStatus: 1
-      duration: 0.029246
+      duration: 0.017036
       messages: 
-      output: '1652
+      output: '2795
 
         Gained Ability Slot :0
-
-        Tier0
-
-        Tier0
 
         Gained Break Tree :0
 
@@ -1239,15 +1183,11 @@ MonoBehaviour:
       name: PokemonCanLevelUp
       fullName: PokemonDataTests.PokemonCanLevelUp
       resultStatus: 1
-      duration: 0.053257
+      duration: 0.015517
       messages: 
-      output: '1471
+      output: '3214
 
         Gained Ability Slot :0
-
-        Tier0
-
-        Tier0
 
         Gained Break Tree :0
 
@@ -1265,15 +1205,11 @@ MonoBehaviour:
       name: PokemonHasAttack
       fullName: PokemonDataTests.PokemonHasAttack
       resultStatus: 1
-      duration: 0.016303
+      duration: 0.01769
       messages: 
-      output: '731
+      output: '326
 
         Gained Ability Slot :0
-
-        Tier0
-
-        Tier0
 
         Gained Break Tree :0
 
@@ -1289,15 +1225,11 @@ MonoBehaviour:
       name: PokemonHasDefense
       fullName: PokemonDataTests.PokemonHasDefense
       resultStatus: 1
-      duration: 0.023319
+      duration: 0.013027
       messages: 
-      output: '2261
+      output: '2849
 
         Gained Ability Slot :0
-
-        Tier0
-
-        Tier0
 
         Gained Break Tree :0
 
@@ -1313,15 +1245,11 @@ MonoBehaviour:
       name: PokemonHasElementType1
       fullName: PokemonDataTests.PokemonHasElementType1
       resultStatus: 1
-      duration: 0.017117
+      duration: 0.024941
       messages: 
-      output: '24
+      output: '2434
 
         Gained Ability Slot :0
-
-        Tier0
-
-        Tier0
 
         Gained Break Tree :0
 
@@ -1337,15 +1265,11 @@ MonoBehaviour:
       name: PokemonHasElementType2
       fullName: PokemonDataTests.PokemonHasElementType2
       resultStatus: 1
-      duration: 0.020421
+      duration: 0.013912
       messages: 
-      output: '2724
+      output: '1977
 
         Gained Ability Slot :0
-
-        Tier0
-
-        Tier0
 
         Gained Break Tree :0
 
@@ -1361,15 +1285,11 @@ MonoBehaviour:
       name: PokemonHasEndurance
       fullName: PokemonDataTests.PokemonHasEndurance
       resultStatus: 1
-      duration: 0.021691
+      duration: 0.021901
       messages: 
-      output: '2437
+      output: '1312
 
         Gained Ability Slot :0
-
-        Tier0
-
-        Tier0
 
         Gained Break Tree :0
 
@@ -1385,15 +1305,11 @@ MonoBehaviour:
       name: PokemonHasHeldItem
       fullName: PokemonDataTests.PokemonHasHeldItem
       resultStatus: 1
-      duration: 0.018445
+      duration: 0.013331
       messages: 
-      output: '2274
+      output: '289
 
         Gained Ability Slot :0
-
-        Tier0
-
-        Tier0
 
         Gained Break Tree :0
 
@@ -1409,15 +1325,11 @@ MonoBehaviour:
       name: PokemonHasHP
       fullName: PokemonDataTests.PokemonHasHP
       resultStatus: 1
-      duration: 0.026425
+      duration: 0.019459
       messages: 
-      output: '475
+      output: '156
 
         Gained Ability Slot :0
-
-        Tier0
-
-        Tier0
 
         Gained Break Tree :0
 
@@ -1433,15 +1345,11 @@ MonoBehaviour:
       name: PokemonHasLevel
       fullName: PokemonDataTests.PokemonHasLevel
       resultStatus: 1
-      duration: 0.017085
+      duration: 0.014413
       messages: 
-      output: '3649
+      output: '2333
 
         Gained Ability Slot :0
-
-        Tier0
-
-        Tier0
 
         Gained Break Tree :0
 
@@ -1457,15 +1365,11 @@ MonoBehaviour:
       name: PokemonHasSpecialAttack
       fullName: PokemonDataTests.PokemonHasSpecialAttack
       resultStatus: 1
-      duration: 0.02015
+      duration: 0.013873
       messages: 
-      output: '1453
+      output: '579
 
         Gained Ability Slot :0
-
-        Tier0
-
-        Tier0
 
         Gained Break Tree :0
 
@@ -1481,15 +1385,11 @@ MonoBehaviour:
       name: PokemonHasSpecialDefense
       fullName: PokemonDataTests.PokemonHasSpecialDefense
       resultStatus: 1
-      duration: 0.016608
+      duration: 0.017057
       messages: 
-      output: '3787
+      output: '3201
 
         Gained Ability Slot :0
-
-        Tier0
-
-        Tier0
 
         Gained Break Tree :0
 
@@ -1505,15 +1405,11 @@ MonoBehaviour:
       name: PokemonHasSpeed
       fullName: PokemonDataTests.PokemonHasSpeed
       resultStatus: 1
-      duration: 0.01645
+      duration: 0.013402
       messages: 
-      output: '1578
+      output: '925
 
         Gained Ability Slot :0
-
-        Tier0
-
-        Tier0
 
         Gained Break Tree :0
 
@@ -1529,15 +1425,11 @@ MonoBehaviour:
       name: PokemonHasStrain
       fullName: PokemonDataTests.PokemonHasStrain
       resultStatus: 1
-      duration: 0.019262
+      duration: 0.011358
       messages: 
-      output: '2827
+      output: '1346
 
         Gained Ability Slot :0
-
-        Tier0
-
-        Tier0
 
         Gained Break Tree :0
 
@@ -1553,15 +1445,11 @@ MonoBehaviour:
       name: PokemonShowsType1OfBreed
       fullName: PokemonDataTests.PokemonShowsType1OfBreed
       resultStatus: 1
-      duration: 0.015982
+      duration: 0.017219
       messages: 
-      output: '875
+      output: '2235
 
         Gained Ability Slot :0
-
-        Tier0
-
-        Tier0
 
         Gained Break Tree :0
 
@@ -1577,15 +1465,11 @@ MonoBehaviour:
       name: PokemonShowsType2OfBreed
       fullName: PokemonDataTests.PokemonShowsType2OfBreed
       resultStatus: 1
-      duration: 0.024921
+      duration: 0.011743
       messages: 
-      output: '2769
+      output: '1419
 
         Gained Ability Slot :0
-
-        Tier0
-
-        Tier0
 
         Gained Break Tree :0
 
@@ -1601,15 +1485,11 @@ MonoBehaviour:
       name: WhenLevelIncreasesMaturityChanges
       fullName: PokemonDataTests.WhenLevelIncreasesMaturityChanges
       resultStatus: 1
-      duration: 0.016616
+      duration: 0.024313
       messages: 
-      output: '2464
+      output: '1825
 
         Gained Ability Slot :0
-
-        Tier0
-
-        Tier0
 
         Gained Break Tree :0
 
@@ -1623,17 +1503,45 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-    m_ResultText: 'Break_Level_Is_2_For_BreakTree_At_Level_15 (0.011s)
+    m_ResultText: 'Maturity_Bonuses_Track_Their_Index (0.012s)
 
       ---
 
-      Tier 2, MaturityStatic'
-    m_ResultStacktrace: 
+      Unhandled log message: ''[Assert] Assertion failed''. Use UnityEngine.TestTools.LogAssert.Expect
+
+      ---
+
+      MaturityManagerTest:Maturity_Bonuses_Track_Their_Index() (at Assets/Scripts/Tests/Editor/MaturityManagerTest.cs:376)
+
+      System.Reflection.MethodBase:Invoke(Object, Object[])
+
+      NUnit.Framework.Internal.<>c__DisplayClass9_0:<InvokeMethod>b__0()
+
+      UnityEditor.EditorApplication:Internal_CallUpdateFunctions()
+
+      ---
+
+      Level Up!
+
+      Level Up!
+
+      Assertion failed'
+    m_ResultStacktrace: 'MaturityManagerTest:Maturity_Bonuses_Track_Their_Index()
+      (at Assets/Scripts/Tests/Editor/MaturityManagerTest.cs:376)
+
+      System.Reflection.MethodBase:Invoke(Object, Object[])
+
+      NUnit.Framework.Internal.<>c__DisplayClass9_0:<InvokeMethod>b__0()
+
+      UnityEditor.EditorApplication:Internal_CallUpdateFunctions()
+
+
+'
     m_TestListState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 2c13d099
-      m_LastClickedID: -1714416852
-      m_ExpandedIDs: deb4eefbffffff7f
+      scrollPos: {x: 0, y: 143.99939}
+      m_SelectedIDs: bf2581a4
+      m_LastClickedID: -1535040065
+      m_ExpandedIDs: ac58bd86deb4eefb23b23410ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1680,10 +1588,10 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 280
-    y: 93
-    width: 183
-    height: 296
+    x: 225
+    y: 19
+    width: 195
+    height: 307
   m_PersistentViewDataDictionary: {fileID: 0}
 --- !u!114 &19
 MonoBehaviour:
@@ -1707,20 +1615,20 @@ MonoBehaviour:
   m_DepthBufferBits: 32
   m_Pos:
     serializedVersion: 2
-    x: 467
-    y: 93
-    width: 558
-    height: 296
+    x: 491
+    y: 102
+    width: 443
+    height: 307
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 19192.246678948402
+  lastFramingTime: 328759.2485048771
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.9576471, y: 0.12423669, z: 89.62744}
+    m_Target: {x: 2.9859986, y: 0.55987954, z: 90.71651}
     speed: 2
-    m_Value: {x: -0.9576471, y: 0.12423669, z: 89.62744}
+    m_Value: {x: 2.9859986, y: 0.55987954, z: 90.71651}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -1748,9 +1656,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 10.390056
+    m_Target: 10.2456875
     speed: 2
-    m_Value: 10.390056
+    m_Value: 10.2456875
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1784,10 +1692,10 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 29
-    y: 410
-    width: 474
-    height: 308
+    x: 0
+    y: 19
+    width: 413
+    height: 318
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -1801,19 +1709,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets
+    - Assets/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 71}
-    m_SelectedIDs: 04280000
-    m_LastClickedID: 10244
-    m_ExpandedIDs: 00000000042800006c280000782800009e280000f228000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 3a280000
+    m_LastClickedID: 10298
+    m_ExpandedIDs: 00000000f42700005c280000682800008e280000e228000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1841,7 +1749,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 3e2c0000
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000042800006c280000782800009e280000f2280000
+    m_ExpandedIDs: 00000000f42700005c280000682800008e280000e228000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1893,7 +1801,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 200.5}
+    m_ScrollPosition: {x: 0, y: 102.5}
     m_GridSize: 64
   m_DirectoriesAreaWidth: 149
 --- !u!114 &21
@@ -1918,10 +1826,10 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 1029
-    y: 93
-    width: 275
-    height: 625
+    x: 871
+    y: 19
+    width: 404
+    height: 646
   m_PersistentViewDataDictionary: {fileID: 0}
   m_ScrollPosition: {x: 0, y: 0}
   m_InspectorMode: 0

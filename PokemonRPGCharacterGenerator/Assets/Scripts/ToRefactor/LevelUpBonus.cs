@@ -213,7 +213,11 @@ public abstract class LevelUpBonus : IHistoryItem, IOption
 			_BonusName = "Skill Up: ";
 			_TypeOfBonus = BonusAtIndex.SkillUp;
 			Debug.Log ("I made the quick change to a list of types rather than one, needs fixing");
-			_OptionDescription = _Types.ToString();
+			_OptionDescription = _Types [0].ToString();
+			if (_Types.Count > 1)
+			{
+				_OptionDescription = _Types [0].ToString ()+", "+_Types [1].ToString ();
+			}
 			_TutorialDescription = "Pokemon Gains Incremental Ranks in the Indicated Elemental Skills. Increases Accuracy and Effectiveness for Moves of that Type.";
 
 			_HistoryDescription = "Gained Skill Bonus To "+ _Types.ToString()+" On "+_TreeName;
