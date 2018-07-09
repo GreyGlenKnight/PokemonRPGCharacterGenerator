@@ -98,6 +98,6 @@ public class BadgeLevelGenerator : MonoBehaviour
 	{
 		GameManager.instance._NewTreeManager.OnCallTreeRoll ();
 		GameManager.instance._NewTreeManager.OnAutoSelectClick ();
-		GameManager.instance.CurrentPokemon.LevelUp ();
+//		GameManager.instance.CurrentPokemon.LevelUp ();
 	}
 }

@@ -50,7 +50,7 @@ public class OptionChooserDisplay : MonoBehaviour
 		}
 	}
 
-	public void DisplayLevelUpOption (IOption _Bonus, SkillTreeData _Tree)
+	public void DisplayLevelUpOption (ILevelUpOption _Bonus, SkillTreeData _Tree)
 	{
 		if (_Tree == null || _Bonus == null) {
 			return;
@@ -84,7 +84,7 @@ public class OptionChooserDisplay : MonoBehaviour
 //		_StatUpChoice.gameObject.SetActive (false);
 	}
 
-	public void DisplayLevelUpOption (IOption _Bonus, Technique _Technique)
+	public void DisplayLevelUpOption (ILevelUpOption _Bonus, Technique _Technique)
 	{
 		_CurrentChoiceType = CurrentChoiceType.Technique;
 //		this.gameObject.SetActive (false);

@@ -84,7 +84,6 @@ public abstract class MaturityBonus : IHistoryItem
         public override void ApplyMaturityBonus(Pokemon _Pokemon)
         {
 			_MaturityLevel = _Pokemon.Maturity;
-
             _Pokemon.GainAbilitySlot();
 			_Level = _Pokemon.Level;
 			_Pokemon.MaturityBonuses.Add (this);
@@ -98,20 +97,16 @@ public abstract class MaturityBonus : IHistoryItem
         {
 			this._Tier = _Tier;
 			_BonusName = "Break Tree:";
-
 			_Description = GetTierString(_Tier)+" Tree Name";
 			_TutorialDescription = "A Break Tree Allows a Pokemon to Gain Level Up Bonuses on a Particular Tree, However it Does Not Mark the Tree as Active. Rolling An 11 or 12 on an Active Tree May Allow Access to a Specific Unlocked Tree.";
 //			_Name = "Maturity Bonus";
-
         }
         public override void ApplyMaturityBonus(Pokemon _Pokemon)
         {
 //			Debug.Log (_Tier.ToString());
 			_MaturityLevel = _Pokemon.Maturity;
-
 			_Pokemon.GainBreakTree (_Tier);
 			_Level = _Pokemon.Level;
-
 			_Pokemon.MaturityBonuses.Add (this);
         }
     }
@@ -126,15 +121,12 @@ public abstract class MaturityBonus : IHistoryItem
 			_Tier = Tier;
 			_TutorialDescription = "Trade Skills Allow the Trainer to Choose Another Available Tree of the Indicated Tier or a Lesser Tier to Become Active. This Option May be Deferred for Several Levels, if Desired.";
 //			_Name = "";
-
         }
         public override void ApplyMaturityBonus(Pokemon _Pokemon)
         {
 			_MaturityLevel = _Pokemon.Maturity;
-
 			_Pokemon.SwapTrees(_Tier);
 			_Level = _Pokemon.Level;
-
 			_Pokemon.MaturityBonuses.Add (this);
         }
     }
@@ -151,10 +143,8 @@ public abstract class MaturityBonus : IHistoryItem
         public override void ApplyMaturityBonus(Pokemon _Pokemon)
         {
 			_MaturityLevel = _Pokemon.Maturity;
-
             _Pokemon.GainSTABBonus();
 			_Level = _Pokemon.Level;
-
 			_Pokemon.MaturityBonuses.Add (this);
         }
     }
@@ -164,7 +154,6 @@ public abstract class MaturityBonus : IHistoryItem
 		public NatureBonus(int Maturity, MyStat Stat)
         {
 			_BonusName = "Nature Bonus:";
-
 			_Description = Stat.ToString();
 			_TutorialDescription = "This Pokemon Gains a +.5 Bonus to One of Its Stats. Each Stat Has an Equal Chance, and Need Not Match Prior Nature Bonuses.";
 //			_Name = "";
@@ -173,10 +162,8 @@ public abstract class MaturityBonus : IHistoryItem
         public override void ApplyMaturityBonus(Pokemon _Pokemon)
         {
 			_MaturityLevel = _Pokemon.Maturity;
-
             _Pokemon.GainNatureBonus();
 			_Level = _Pokemon.Level;
-
 			_Pokemon.MaturityBonuses.Add (this);
         }
     }
@@ -190,16 +177,13 @@ public abstract class MaturityBonus : IHistoryItem
 			_Description = "Level Up!";
 			_TutorialDescription = "The Pokemon Gains the Required Experience For Another Level. This Level May Be Applied Immediately, If Desired.";
 //			_Name = "";
-
         }
 
         public override void ApplyMaturityBonus(Pokemon _Pokemon)
         {
 			_MaturityLevel = _Pokemon.Maturity;
-
 			_Pokemon.GainBonusLevel ();
 			_Level = _Pokemon.Level;
-
 			_Pokemon.MaturityBonuses.Add (this);
 //			Description = Description+(Pokemon.Maturity);
         }
@@ -208,23 +192,20 @@ public abstract class MaturityBonus : IHistoryItem
     public class ActiveSkill : MaturityBonus
     {
 		int _TreeSlot;
-		public ActiveSkill(int Maturity, int TreeSlot)
+		public ActiveSkill (int Maturity, int TreeSlot)
         {
 			_BonusName = "Active Skill Slot:";
 			_TreeSlot = TreeSlot;
 			_TutorialDescription = "At Each Level Up, Each of Up to 4 Active Trees are Rolled, and Their Bonuses May be Chosen By the Trainer.";
 			_Description = "Tree "+(_TreeSlot+1).ToString();
 //			_Name = "";
-
         }
 
         public override void ApplyMaturityBonus(Pokemon _Pokemon)
         {
 			_MaturityLevel = _Pokemon.Maturity;
-
 			_Pokemon.GainActiveTreeBonus (_TreeSlot);
 			_Level = _Pokemon.Level;
-
 			_Pokemon.MaturityBonuses.Add (this);
         }
     }
@@ -249,27 +230,21 @@ public abstract class MaturityBonus : IHistoryItem
 
     public class SpecialTraining : MaturityBonus
     {
-		public SpecialTraining(int Maturity)
+		public SpecialTraining (int Maturity)
         {
 			_BonusName = "Special Training:";
-
 			_Description = "Allows This Pokemon to Undergo Special Training. Gained at Maturity: "+Maturity;
 			_Description = "Allows One Enhancer Item Use. Gained at Maturity: "+Maturity;
-
 			_TutorialDescription = "Special Training May Include the Use of TMs or Move Tutors Outside of Battle, as Well as Potentially Unique Bonuses. Each Slot Allows One Use, and May Not Be Reassigned.";
 //			_Name = "";
-
         }
 
         public override void ApplyMaturityBonus(Pokemon _Pokemon)
         {
 			_MaturityLevel = _Pokemon.Maturity;
-
 			_Pokemon.GainSpecialTrainingBonus ();
 			_Level = _Pokemon.Level;
-
 			_Pokemon.MaturityBonuses.Add (this);
         }
     }
-
 }

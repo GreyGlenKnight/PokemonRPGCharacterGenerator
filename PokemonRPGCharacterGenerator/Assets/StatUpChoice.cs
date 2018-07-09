@@ -22,7 +22,7 @@ public class StatUpChoice : MonoBehaviour {
 //	public Button _Button1;
 //	public Button _Button2;
 
-	public void DisplayStatUpChoice (IOption _IOption, 
+	public void DisplayStatUpChoice (ILevelUpOption _IOption, 
 		MyStat _Stat)
 	{
 //		_Button1.

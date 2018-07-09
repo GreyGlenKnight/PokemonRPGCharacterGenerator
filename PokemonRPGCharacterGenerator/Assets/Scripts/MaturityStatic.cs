@@ -131,9 +131,9 @@ public static class MaturityStatic
 		}
         if (ActiveTreeSlot.Contains(Maturity) == true)
         {
-//			Debug.Log (Maturity);
 			int TreeSlot = Array.IndexOf (ActiveTreeSlot,Maturity);
-			ToReturn.Add(new MaturityBonus.ActiveSkill (
+			Debug.Log ("TreeSlot:"+TreeSlot);
+			ToReturn.Add (new MaturityBonus.ActiveSkill (
 				(TreeSlot), TreeSlot));
         }
         if (SpecialTrainingBonuses.Contains(Maturity) == true)

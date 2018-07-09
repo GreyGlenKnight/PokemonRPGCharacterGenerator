@@ -76,7 +76,6 @@ public class GameManager : MonoBehaviour
 	void Awake()
 
 	{
-		
 		if (instance == null)
 		{instance = this;}
 			
@@ -115,7 +114,7 @@ public class GameManager : MonoBehaviour
 		Fire_Blast.BaseAccuracy = -1;
 		Fire_Blast.BaseDamage = 11;
 		Fire_Blast.BaseStrain = 4;
-		Fire_Blast.Description = "A fiery runic symbol strikes the foe, inflicting heavy damage and burn.";
+		Fire_Blast.Description = "A fiery runic symbol strikes the foe, inflicting heavy damage and potential burn.";
 		Fire_Blast.DisplayRange = "Ranged";
 		Fire_Blast.Name = "Fire Blast";
 		Fire_Blast.StatsUsed.Add (new SpecialAttackStat(0));

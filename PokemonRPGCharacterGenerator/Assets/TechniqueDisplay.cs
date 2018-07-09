@@ -111,7 +111,7 @@ public class TechniqueDisplay : MonoBehaviour
 		_BackGround.color = TypeColors.GetColorForTier (_TreeData.Tier);
 	}
 
-	public void ChangeTechniqueDisplay (IOption _Option, Technique ToDisplay)
+	public void ChangeTechniqueDisplay (ILevelUpOption _Option, Technique ToDisplay)
 	{
 		CurrentTechnique = ToDisplay;
 

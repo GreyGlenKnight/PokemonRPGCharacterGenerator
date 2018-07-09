@@ -89,7 +89,6 @@ public abstract class MyStat
 		if (this.GetType ().Equals (Other.GetType ())) 
 		{
 //			Debug.Log (RawValue+":"+Other.RawValue);
-
 			return this.Create (RawValue + Other.RawValue);
 		} 
 
@@ -97,9 +96,8 @@ public abstract class MyStat
 		{
 			Debug.Log ("Trying To Add Incompatible Stats");
 
-			return new TempStat (0);
+			return null;		
 		}	
-
 	}
 
 	protected abstract MyStat Create (int RawValue);
@@ -115,7 +113,7 @@ public class EnduranceStat: MyStat
 		return new EnduranceStat (RawValue);
 	}
 
-	protected override int GetRoundedValue()
+	protected override int GetRoundedValue ()
 
 	{
 		return RawValue;	

@@ -20,7 +20,7 @@ public class InterruptDialog : MonoBehaviour
 	//Don't use New or Instantiate if possible outside of constructors.
 	//Set active or inactive depending on bonus type.
 
-	public void DisplayOptionsList (List <IOption> _Bonuses, List <SkillTreeData> _Trees)
+	public void DisplayOptionsList (List <ILevelUpOption> _Bonuses, List <SkillTreeData> _Trees)
 	{
 		if (_Bonuses.Count == 0 || _Trees.Count == 0) 
 		{

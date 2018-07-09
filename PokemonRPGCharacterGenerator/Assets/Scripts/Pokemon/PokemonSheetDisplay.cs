@@ -271,6 +271,13 @@ public class PokemonSheetDisplay : MonoBehaviour
 		{Rate.text = (TempString+".0");}
 	}
 
+	public void OnLevelUp (object o, LevelUpEventArgs e)
+	{
+		e._Pokemon.OnChooseLevelUpBonus -= OnLevelUp;
+		ShowNewPokemon (e._Pokemon, 
+			e._Pokemon.ThisBreed);
+//		Debug.Log ("OnLevelUp");
+	}
 
 	public void ShowNewPokemon (Pokemon ToSet, Pokemon.Breed BreedToSet)
 	{
@@ -285,6 +292,8 @@ public class PokemonSheetDisplay : MonoBehaviour
 		SetTypes (BreedToSet);
 		SetMoves ();
 		SetSkillRanks ();
+		ToSet.OnChooseLevelUpBonus += OnLevelUp;
+//		Debug.Log ("ShowNewPokemon");
 	}
 
 	public void HideTechsView ()

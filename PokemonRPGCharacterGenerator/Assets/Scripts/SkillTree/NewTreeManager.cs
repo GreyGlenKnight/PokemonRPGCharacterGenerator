@@ -41,7 +41,6 @@ public class NewTreeManager : MonoBehaviour
 	public void OnSelectOption (object Caller, EventArgs E)
 	{
 		Refresh ();
-	
 	}
 		
 	public void OnSelectTree1 ()
@@ -88,9 +87,9 @@ public class NewTreeManager : MonoBehaviour
 	{
 		_TreeRowState = TreeRowState.Baby;
 		_CurrentPokemon = ToDisplay;
-		ToDisplay.BreakTree += OnBreakTree;
-		ToDisplay.ActivateTree += OnActivateTree;
-		ToDisplay.TradeSkill += OnTradeSkill;
+		ToDisplay.OnBreakTree += OnBreakTree;
+		ToDisplay.OnActivateTree += OnActivateTree;
+		ToDisplay.OnTradeSkill += OnTradeSkill;
 	}
 
 	public void Refresh ()
@@ -185,18 +184,20 @@ public class NewTreeManager : MonoBehaviour
 			}
 		}
 			
-		List <IOption> TempOptions = new List <IOption> ();
+		List <ILevelUpOption> TempOptions = new List <ILevelUpOption> ();
 
 		for (int i = 0; i < TreesToRoll.Count; i++) 
 		{
-			TreesToRoll[i].RollTheList ();
-			Bonuses.Add ((int) TreesToRoll [i].GetCurrentSelectedBonus ());
-//			_InterruptDialog.OptionDisplays [i].DisplayLevelUpOption 
-//			(TreesToRoll[i].GetBonusForIndex ((BonusAtIndex) Bonuses [i]),
-//				TreesToRoll [i]);
-			TempOptions.Add (TreesToRoll [i].GetBonusForIndex ((BonusAtIndex)Bonuses [i]));
+			if (TreesToRoll [i]._BonusesRemaining.Bonuses.Count > 0 |
+					TreesToRoll [i].GetCurrentSelectedBonus () != BonusAtIndex.None) 
+			{
+				TreesToRoll[i].RollTheList ();
+				Bonuses.Add ((int)TreesToRoll [i].GetCurrentSelectedBonus ());
+				TempOptions.Add (TreesToRoll [i].GetBonusForIndex ((BonusAtIndex)Bonuses [i]));
+			}
 		}
-		try {
+		try 
+		{
 			Debug.Log ("In try block");
 			_InterruptDialog.DisplayOptionsList (TempOptions, 
 				TreesToRoll);

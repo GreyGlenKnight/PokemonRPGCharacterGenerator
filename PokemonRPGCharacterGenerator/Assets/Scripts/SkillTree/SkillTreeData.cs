@@ -17,7 +17,6 @@ public enum SkillTreeTier
 
 public class SkillTreeData 
 {
-
 	public SkillTreeData (string lname, SkillTreeTier _lTier)
 	{
 		Name = lname;
@@ -67,8 +66,10 @@ public class SkillTreeData
 		_TechniquesOnTree.Add (Dragon_Claw);
 		_TechniquesOnTree.Add (Metal_Claw);
 		_TechniquesOnTree.Add (Sand_Attack);
+		_TechniqueModifier = new TechniqueModifier();
+		_Ability = new Ability ();
 
-		_ElementTypesOnTree.Add (ElementTypes.Fire);
+		_ElementTypesSkillOnTree.Add (new ElementTypesSkill (ElementTypes.Fire));
 		ResetBonuses ();
 	}
 
@@ -80,7 +81,9 @@ public class SkillTreeData
 	public SkillTreeBonuses _BonusesAcquired = new SkillTreeBonuses ();
 	public SkillTreeBonuses _BonusesRemaining = new SkillTreeBonuses ();
 
-	private List <ElementTypes> _ElementTypesOnTree = new List <ElementTypes>();
+	private TechniqueModifier _TechniqueModifier;
+	private Ability _Ability;
+	private List <ElementTypesSkill> _ElementTypesSkillOnTree = new List <ElementTypesSkill>();
 	private MyStat _FavoredStatOnTree = new AttackStat (1);
 	private SkillTreeState _State = SkillTreeState.Locked;
 	private List <Technique> _TechniquesOnTree = new List <Technique> ();
@@ -113,9 +116,15 @@ public class SkillTreeData
 		get {return _TechniquesOnTree;}
 	}
 
-	public List <ElementTypes> ElementTypesOnTree 
+	public TechniqueModifier TechniqueModifierOnTree
+	{get {return _TechniqueModifier;}}
+
+	public Ability AbilityOnTree
+	{get {return _Ability;}}
+
+	public List <ElementTypesSkill> ElementTypeSkillsOnTree 
 	{		
-		get {return _ElementTypesOnTree;}
+		get {return _ElementTypesSkillOnTree;}
 	}
 
 	public MyStat FavoredStatOnTree 
@@ -154,10 +163,10 @@ public class SkillTreeData
 
 	public BonusAtIndex GetCurrentSelectedBonus ()
 	{
-//		if (CurrentState != SkillTreeState.Active) 
-//		{
-//			return BonusAtIndex.None;
-//		}
+		if (CurrentState != SkillTreeState.Active) 
+		{
+			return BonusAtIndex.None;
+		}
 
 		if (_BonusesRemaining.Bonuses.Count == 0) 
 		{
@@ -196,7 +205,8 @@ public class SkillTreeData
 			return;
 		}
 		_BonusesAcquired.Bonuses.Add (_BonusesRemaining.Bonuses [0]);
-		GameManager.instance.CurrentPokemon.ApplyLevelBonus (GetBonusForIndex (_BonusesRemaining.Bonuses [0]));
+		GameManager.instance.CurrentPokemon.LevelUp (GetBonusForIndex (_BonusesRemaining.Bonuses [0]));
+//		GameManager.instance.CurrentPokemon.ApplyLevelBonus (GetBonusForIndex (_BonusesRemaining.Bonuses [0]));
 		GameManager.instance._SelectionState = SelectionState.Roll;
 		_BonusesRemaining.Bonuses.RemoveAt (0);
 	}
@@ -208,7 +218,7 @@ public class SkillTreeData
 		if (GameManager.instance._SelectionState == SelectionState.Select)
 		{
 			OnSelected ();
-			GameManager.instance.CurrentPokemon.LevelUp ();
+//			GameManager.instance.CurrentPokemon.LevelUp ();
 		}
 	}
 
@@ -248,7 +258,7 @@ public class SkillTreeData
 				_FavoredStatOnTree);
 		case BonusAtIndex.SkillUp:
 			return new LevelUpBonus.ElementTypesSkillGain (this, 
-				_ElementTypesOnTree);
+				_ElementTypesSkillOnTree);
 		case BonusAtIndex.Endurance:
 			return new LevelUpBonus.StatGain (this, new EnduranceStat (1));
 		case BonusAtIndex.Maturity:
