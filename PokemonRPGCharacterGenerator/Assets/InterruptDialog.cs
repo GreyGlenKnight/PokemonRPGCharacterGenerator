@@ -20,39 +20,65 @@ public class InterruptDialog : MonoBehaviour
 	//Don't use New or Instantiate if possible outside of constructors.
 	//Set active or inactive depending on bonus type.
 
-	public void DisplayOptionsList (List <ILevelUpOption> _Bonuses, List <SkillTreeData> _Trees)
+	public void DisplayOptionsList (List <ILevelUpOption> _Bonuses)
 	{
-		if (_Bonuses.Count == 0 || _Trees.Count == 0) 
+		if (_Bonuses == null) 
 		{
-			Debug.Log ("Bonuses or trees are 0");
+			Debug.Log ("_Bonuses null, probably XP fail");
+			return;
 		}
 
-		if (_Bonuses.Count != _Trees.Count) 
+		if (_Bonuses.Count == 0) 
 		{
-			throw new InvalidBonusesException (_Bonuses.Count, _Trees.Count);
+			Debug.Log ("Bonuses are 0");
 		}
 
 		for (int i = 0; i < _Bonuses.Count; i++)
 		{
 			Debug.Log ("Line 28");
-
-			OptionDisplays [i].DisplayLevelUpOption (_Bonuses [i], _Trees [i]);
-
-			if (_Trees [i] == null) 
-			{
-				Debug.Log ("Null Tree");
-				OptionDisplays [i].gameObject.SetActive (false);
-				return;
-			}
-
 			if (_Bonuses [i] == null) 
 			{
 				Debug.Log ("Null Bonus");
 				OptionDisplays [i].gameObject.SetActive (false);
 				return;
 			}
+			OptionDisplays [i].DisplayLevelUpOption (_Bonuses [i]);
 		}
 	}
+
+//	public void DisplayOptionsList (List <ILevelUpOption> _Bonuses, List <SkillTreeData> _Trees)
+//	{
+//		if (_Bonuses.Count == 0 || _Trees.Count == 0) 
+//		{
+//			Debug.Log ("Bonuses or trees are 0");
+//		}
+//
+//		if (_Bonuses.Count != _Trees.Count) 
+//		{
+//			throw new InvalidBonusesException (_Bonuses.Count, _Trees.Count);
+//		}
+//
+//		for (int i = 0; i < _Bonuses.Count; i++)
+//		{
+//			Debug.Log ("Line 28");
+//
+//			OptionDisplays [i].DisplayLevelUpOption (_Bonuses [i], _Trees [i]);
+//
+//			if (_Trees [i] == null) 
+//			{
+//				Debug.Log ("Null Tree");
+//				OptionDisplays [i].gameObject.SetActive (false);
+//				return;
+//			}
+//
+//			if (_Bonuses [i] == null) 
+//			{
+//				Debug.Log ("Null Bonus");
+//				OptionDisplays [i].gameObject.SetActive (false);
+//				return;
+//			}
+//		}
+//	}
 }
 
 public class InvalidBonusesException : Exception

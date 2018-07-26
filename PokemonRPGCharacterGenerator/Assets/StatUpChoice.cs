@@ -26,7 +26,7 @@ public class StatUpChoice : MonoBehaviour {
 		MyStat _Stat)
 	{
 //		_Button1.
-		_TreeName.text = _IOption.TreeName;
+		_TreeName.text = _IOption.Tree.Name;
 		_StatImage1.sprite = TypeColors.GetSpriteForStat (_Stat);
 		_Stat1Header.text = _Stat.ToString();
 		_Stat1Description.text = _Stat.ToString()+" +.5";

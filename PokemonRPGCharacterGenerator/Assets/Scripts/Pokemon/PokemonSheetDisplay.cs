@@ -54,108 +54,72 @@ public class PokemonSheetDisplay : MonoBehaviour
 	public Text XP;
 	public Text Level;
 	public Text _HeldItem;
-//	public Text BaseMaturity; //This will be incremented by leveling
-	public Text CurrentMaturity; //This will be incremented by leveling and bonuses
-//	public Text MaturityBonus; //This will only be incremented by bonus
+	public Text CurrentMaturity;
 	public Image Portrait;
 	public Text Rate;
-//	public Text RateRemainder;
 
 
 
 	public void SetStatBlock (Pokemon ToSet, Pokemon.Breed BreedToSet)
 	{
-		//could probably make add'tl functions to build this
 		string EnduranceBonuses = ToSet.NumberOfEnduranceBonuses.RawValue.ToString ();
 		BaseEndurance.text = BreedToSet.BaseEndurance.RawValue.ToString () + "   + " + EnduranceBonuses + " ";
 		CurrentEndurance.text = ToSet.Endurance.RawValue.ToString ();
 
+		BaseAttack.text = SetStatString (ToSet.NumberOfAttackBonuses, 
+			BreedToSet.BaseAttack);
+		CurrentAttack.text = ToSet.Attack.RoundedValue.ToString ();
 
-		string AttackBonuses = (ToSet.NumberOfAttackBonuses.RoundedValue).ToString ();
-		if (ToSet.NumberOfAttackBonuses.RawValue % 2 == 1) 
+		BaseDefense.text = SetStatString (ToSet.NumberOfDefenseBonuses, 
+			BreedToSet.BaseDefense);
+		CurrentDefense.text = ToSet.Defense.RoundedValue.ToString ();
+
+		BaseSpecialAttack.text = SetStatString (ToSet.NumberOfSpecialAttackBonuses, 
+			BreedToSet.BaseSpecialAttack);
+		CurrentSpecialAttack.text = ToSet.SpecialAttack.RoundedValue.ToString ();
+
+		BaseSpecialDefense.text = SetStatString (ToSet.NumberOfSpecialDefenseBonuses, 
+			BreedToSet.BaseSpecialDefense);
+		CurrentSpecialDefense.text = ToSet.SpecialDefense.RoundedValue.ToString ();
+
+		BaseSpeed.text = SetStatString (ToSet.NumberOfSpeedBonuses, 
+			BreedToSet.BaseSpeed);
+		CurrentSpeed.text = ToSet.Speed.RoundedValue.ToString ();
+	}
+
+	public string SetStatString (MyStat _Stat, MyStat _Stat2)
+	{
+		string _StatBonuses = (_Stat.RoundedValue).ToString ();
+		if (_Stat.RawValue % 2 == 1) 
 		{
-			string TempString = AttackBonuses+".5";
-			AttackBonuses = TempString;
+			string TempString = _StatBonuses+".5";
+			_StatBonuses = TempString;
 		}
-		if (BreedToSet.BaseAttack.RawValue % 2 == 0) 
+		if (_Stat2.RawValue % 2 == 0) 
 		{
-			BaseAttack.text = BreedToSet.BaseAttack.RoundedValue.ToString () + "   + " + AttackBonuses + " ";
+			return _Stat2.RoundedValue.ToString () + "   + " + _StatBonuses + " ";
 		}
 		else
 		{
-			BaseAttack.text = BreedToSet.BaseAttack.RoundedValue.ToString () + ".5 + " + AttackBonuses + " ";
+			return _Stat2.RoundedValue.ToString () + ".5 + " + _StatBonuses + " ";
 		}
-		CurrentAttack.text = ToSet.Attack.RoundedValue.ToString ();
-
-
-		string DefenseBonuses = (ToSet.NumberOfDefenseBonuses.RoundedValue).ToString ();
-		if (ToSet.NumberOfDefenseBonuses.RawValue % 2 == 1) 
-		{
-			string TempString = DefenseBonuses+".5";
-			DefenseBonuses = TempString;
-		}
-		if (BreedToSet.BaseDefense.RawValue % 2 == 0) 
-		{
-			BaseDefense.text = BreedToSet.BaseDefense.RoundedValue.ToString () + "   + " + DefenseBonuses + " "; 
-		} 
-		else 
-		{
-			BaseDefense.text = BreedToSet.BaseDefense.RoundedValue.ToString () + ".5 + " + DefenseBonuses + " "; 
-		}
-		CurrentDefense.text = ToSet.Defense.RoundedValue.ToString ();
-
-
-		string SpecialAttackBonuses = (ToSet.NumberOfSpecialAttackBonuses.RoundedValue).ToString ();
-		if (ToSet.NumberOfSpecialDefenseBonuses.RawValue % 2 == 1) 
-		{
-			string TempString = SpecialAttackBonuses+".5";
-			SpecialAttackBonuses = TempString;
-		}
-		if (BreedToSet.BaseSpecialAttack.RawValue % 2 == 0) 
-		{
-			BaseSpecialAttack.text = BreedToSet.BaseSpecialAttack.RoundedValue.ToString () + "   + " + SpecialAttackBonuses + " ";
-		} 
-		else 
-		{
-			BaseSpecialAttack.text = BreedToSet.BaseSpecialAttack.RoundedValue.ToString () + ".5 + " + SpecialAttackBonuses + " ";
-		}
-		CurrentSpecialAttack.text = ToSet.SpecialAttack.RoundedValue.ToString ();
-
-
-		string SpecialDefenseBonuses = (ToSet.NumberOfSpecialDefenseBonuses.RoundedValue).ToString ();
-		if (ToSet.NumberOfSpecialDefenseBonuses.RawValue % 2 == 1) 
-		{
-			string TempString = SpecialDefenseBonuses+".5";
-			SpecialDefenseBonuses = TempString;
-		}
-		if (BreedToSet.BaseSpecialDefense.RawValue % 2 == 0) 
-		{
-			BaseSpecialDefense.text = BreedToSet.BaseSpecialDefense.RoundedValue.ToString () + "   + " + SpecialDefenseBonuses + " ";
-		}
-		else 
-		{
-			BaseSpecialDefense.text = BreedToSet.BaseSpecialDefense.RoundedValue.ToString () + ".5 + " + SpecialDefenseBonuses + " ";
-		}
-		CurrentSpecialDefense.text = ToSet.SpecialDefense.RoundedValue.ToString ();
-
-
-		string SpeedBonuses = (ToSet.NumberOfSpeedBonuses.RoundedValue).ToString ();
-		if (ToSet.NumberOfSpeedBonuses.RawValue % 2 == 1) 
-		{
-			string TempString = SpeedBonuses+".5";
-			SpeedBonuses = TempString;
-		}
-		if (BreedToSet.BaseSpeed.RawValue % 2 == 0) 
-		{
-			BaseSpeed.text = BreedToSet.BaseSpeed.RoundedValue.ToString () + "   + " + SpeedBonuses + " ";
-		} 
-		else 
-		{
-			BaseSpeed.text = BreedToSet.BaseSpeed.RoundedValue.ToString () + ".5 + " + SpeedBonuses + " ";
-		}
-		CurrentSpeed.text = ToSet.Speed.RoundedValue.ToString ();
-
+		//	This function replaces this:
+		//		string AttackBonuses = (ToSet.NumberOfAttackBonuses.RoundedValue).ToString ();
+		//		if (ToSet.NumberOfAttackBonuses.RawValue % 2 == 1) 
+		//		{
+		//			string TempString = AttackBonuses+".5";
+		//			AttackBonuses = TempString;
+		//		}
+		//		if (BreedToSet.BaseAttack.RawValue % 2 == 0) 
+		//		{
+		//			BaseAttack.text = BreedToSet.BaseAttack.RoundedValue.ToString () + "   + " + AttackBonuses + " ";
+		//		}
+		//		else
+		//		{
+		//			BaseAttack.text = BreedToSet.BaseAttack.RoundedValue.ToString () + ".5 + " + AttackBonuses + " ";
+		//		}
 	}
+
 
 	public void SetSkillRanks ()
 	{
@@ -173,7 +137,6 @@ public class PokemonSheetDisplay : MonoBehaviour
 		Ability1Description.text = "Evade(2): Gain Dragon typing (Can have Dragon type x2) until next turn";
 		Ability2Description.text = "Melee Fighter,+1 accuracy for melee attacks";
 		Ability3Description.text = "Status attacks have +1 accuracy";
-		//Pokemon.ActiveAbilities.descriptions/titles
 	}
 
 	public void SetNickNameField ()
@@ -188,35 +151,23 @@ public class PokemonSheetDisplay : MonoBehaviour
 		string InputName = TrainerInput.text.ToString ();
 		GameManager.instance.CurrentPokemon.TrainerName = InputName;
 		Debug.Log (GameManager.instance.CurrentPokemon.TrainerName);
-
 	}
 
 	public void SetTypes (Pokemon.Breed BreedToSet)
 	{
-//		ElementType1.text = TypeColors.GetStringForType(BreedToSet.Type1);
 		Background1.color = TypeColors.GetColorForType (BreedToSet.Type1);
-//		ElementType1.color = TypeColors.GetColorForType (BreedToSet.Type1);
 	
 		if ((int)BreedToSet.Type2 == 0) 
 		{
 			Background2.color = TypeColors.GetColorForType (BreedToSet.Type1);
-//			ElementType2.color = TypeColors.GetColorForType (BreedToSet.Type2);
-//			ElementType2.text = "";
-//			ElementType1.alignment = TextAnchor.MiddleCenter;
 			ElementTypeSymbol2.gameObject.SetActive (false);
 		} 
 		else 
 		{
-//			ElementType2.text = TypeColors.GetStringForType (BreedToSet.Type2);
-//			ElementType1.alignment = TextAnchor.MiddleLeft;
 			Background2.color = TypeColors.GetColorForType (BreedToSet.Type2);
-//			ElementType2.color = TypeColors.GetColorForType (BreedToSet.Type2);
 			ElementTypeSymbol2.sprite = TypeColors.GetSpriteForType (BreedToSet.Type2);
 		}
 		ElementTypeSymbol1.sprite = TypeColors.GetSpriteForType (BreedToSet.Type1);
-//		Debug.Log (Type1Index+ElementType1.ToString()+BreedToSet.ToString());
-		//BGPanels and typecolors
-		//This to replace the buttons
 	}
 
 	public void SetItem (Pokemon ToSet)
@@ -246,7 +197,6 @@ public class PokemonSheetDisplay : MonoBehaviour
 
 	public void SetPortrait (Pokemon ToSet)
 	{
-//		Debug.Log ("Set Portrait");
 		if (ToSet.IsShiny == true) 
 		{
 			Debug.Log ("Shiny Portrait");
@@ -264,7 +214,7 @@ public class PokemonSheetDisplay : MonoBehaviour
 	{
 		int TempRate = (ToSet.Rate / 2);
 		string TempString = TempRate.ToString ();
-		Rate.text = TempRate.ToString();
+//		Rate.text = TempRate.ToString();
 		if (ToSet.Rate % 2 == 1)
 		{Rate.text = (TempString+".5");}
 		else 
@@ -276,7 +226,6 @@ public class PokemonSheetDisplay : MonoBehaviour
 		e._Pokemon.OnChooseLevelUpBonus -= OnLevelUp;
 		ShowNewPokemon (e._Pokemon, 
 			e._Pokemon.ThisBreed);
-//		Debug.Log ("OnLevelUp");
 	}
 
 	public void ShowNewPokemon (Pokemon ToSet, Pokemon.Breed BreedToSet)
@@ -293,7 +242,6 @@ public class PokemonSheetDisplay : MonoBehaviour
 		SetMoves ();
 		SetSkillRanks ();
 		ToSet.OnChooseLevelUpBonus += OnLevelUp;
-//		Debug.Log ("ShowNewPokemon");
 	}
 
 	public void HideTechsView ()

@@ -110,64 +110,19 @@ public class GameManager : MonoBehaviour
 		Refresh ();
 		_PokemonSheetDisplay.ShowNewPokemon (CurrentPokemon, CharmanderBreed);
 
-		Technique Fire_Blast = new Technique ();
-		Fire_Blast.BaseAccuracy = -1;
-		Fire_Blast.BaseDamage = 11;
-		Fire_Blast.BaseStrain = 4;
-		Fire_Blast.Description = "A fiery runic symbol strikes the foe, inflicting heavy damage and potential burn.";
-		Fire_Blast.DisplayRange = "Ranged";
-		Fire_Blast.Name = "Fire Blast";
-		Fire_Blast.StatsUsed.Add (new SpecialAttackStat(0));
-		Fire_Blast.Types.Add (ElementTypes.Fire);
 
-		Technique Dragon_Claw = new Technique ();
-		Dragon_Claw.BaseAccuracy = 1;
-		Dragon_Claw.BaseDamage = 8;
-		Dragon_Claw.BaseStrain = 3;
-		Dragon_Claw.Description = "The foe is ravaged by a mighty swipe of the pokemon’s claws.";
-		Dragon_Claw.DisplayRange = "Melee";
-		Dragon_Claw.Name = "Dragon Claw";
-		Dragon_Claw.StatsUsed.Add (new AttackStat(0));
-		Dragon_Claw.Types.Add (ElementTypes.Dragon);
 
-		Technique Metal_Claw = new Technique ();
-		Metal_Claw.BaseAccuracy = 0;
-		Metal_Claw.BaseDamage = 5;
-		Metal_Claw.BaseStrain = 2;
-		Metal_Claw.Description = "The pokemon gouges the opponent with a set of merciless claws. May raise Attack.";
-		Metal_Claw.DisplayRange = "Melee";
-		Metal_Claw.Name = "Metal Claw";
-		Metal_Claw.StatsUsed.Add (new AttackStat(0));
-		Metal_Claw.Types.Add (ElementTypes.Steel);
+		CurrentPokemon._TechniquesKnown.Add (Technique.Fire_Blast ());
+		CurrentPokemon._TechniquesKnown.Add (Technique.Dragon_Claw ());
+		CurrentPokemon._TechniquesKnown.Add (Technique.Metal_Claw ());
+		CurrentPokemon._TechniquesKnown.Add (Technique.Sand_Attack ());
+		CurrentPokemon._TechniquesKnown.Add (Technique.Fire_Blast ());
 
-		Technique Sand_Attack = new Technique ();
-		Sand_Attack.BaseAccuracy = 1;
-		Sand_Attack.BaseStrain = 3;
-		Sand_Attack.Description = "Norris always teaches his pokemon to be prepared for snakes.";
-		Sand_Attack.DisplayRange = "Ranged";
-		Sand_Attack.Name = "Sand Attack";
-		Sand_Attack.StatsUsed.Add (new DefenseStat(0));
-		Sand_Attack.StatsUsed.Add (new SpeedStat(0));
-		Sand_Attack.Types.Add (ElementTypes.Ground);
-
-		Technique Hone_Claws = new Technique ();
-		Hone_Claws.BaseStrain = 3;
-		Hone_Claws.Description = "Obviously works well with all the claw moves.";
-		Hone_Claws.DisplayRange = "Self";
-		Hone_Claws.Name = "Hone Claws";
-		Hone_Claws.Types.Add (ElementTypes.Dark);
-
-		CurrentPokemon._TechniquesKnown.Add (Fire_Blast);
-		CurrentPokemon._TechniquesKnown.Add (Dragon_Claw);
-		CurrentPokemon._TechniquesKnown.Add (Metal_Claw);
-		CurrentPokemon._TechniquesKnown.Add (Sand_Attack);
-		CurrentPokemon._TechniquesKnown.Add (Hone_Claws);
-
-		CurrentPokemon._TechniquesActive.Add (Fire_Blast);
-		CurrentPokemon._TechniquesActive.Add (Dragon_Claw);
-		CurrentPokemon._TechniquesActive.Add (Metal_Claw);
-		CurrentPokemon._TechniquesActive.Add (Sand_Attack);
-		CurrentPokemon._TechniquesActive.Add (Hone_Claws);
+		CurrentPokemon._TechniquesActive.Add (Technique.Fire_Blast ());
+		CurrentPokemon._TechniquesActive.Add (Technique.Dragon_Claw ());
+		CurrentPokemon._TechniquesActive.Add (Technique.Metal_Claw ());
+		CurrentPokemon._TechniquesActive.Add (Technique.Sand_Attack ());
+		CurrentPokemon._TechniquesActive.Add (Technique.Fire_Blast ());
 
 		for (int i = 0; i < CurrentPokemon._TechniquesKnown.Count; i++) 
 		{

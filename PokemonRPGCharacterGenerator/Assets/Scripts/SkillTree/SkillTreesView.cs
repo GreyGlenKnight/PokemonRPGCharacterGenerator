@@ -9,7 +9,7 @@ public class SkillTreesView : MonoBehaviour
 //	public BonusAtIndex [] TreeRolls = new BonusAtIndex [NUMBER_OF_TREES];
 //	public SkillTree [] ActiveRolls = new SkillTree[NUMBER_OF_TREES];
 	public SkillTreePaneDisplay [] ActiveRolls = new SkillTreePaneDisplay[NUMBER_OF_TREES]; 
-	public SkillTreeData [] ActiveTreeData = new SkillTreeData [NUMBER_OF_TREES];
+	public SkillTree [] ActiveTreeData = new SkillTree [NUMBER_OF_TREES];
 //	public bool TreeFull;
 //	public List <int> TempRoll = new List <int> ();
 

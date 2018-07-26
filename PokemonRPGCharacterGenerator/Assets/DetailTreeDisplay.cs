@@ -24,22 +24,22 @@ public class DetailTreeDisplay : MonoBehaviour
 //		
 //	}
 
-	public void DisplayNewTree (SkillTreeData _Data)
+	public void DisplayNewTree (SkillTree _Tree)
 	{
-		MainBG.color = TypeColors.GetColorForTier(_Data.Tier);
-		TreeName.text = _Data.Name;
+		MainBG.color = TypeColors.GetColorForTier(_Tree.Tier);
+		TreeName.text = _Tree.Name;
 
 
 		for (int i = 0; i < 4; i++) 
 		{
-			TechniquesOnTree.Add (_Data.TechniquesOnTree [i]);
+			TechniquesOnTree.Add (_Tree._TechniquesOnTree [i]);
 			TechniqueDisplays [i].ChangeTechniqueDisplay (TechniquesOnTree [i]);
 		}
 	}
 
 	void Awake ()
 	{
-		SkillTreeData Temp = new SkillTreeData ("Fire Body 3" , SkillTreeTier.Tier3);
+		SkillTree Temp = new SkillTree ("Fire Body 3" , SkillTreeTier.Tier3);
 		DisplayNewTree (Temp);
 
 //		for (int i = 0; i < TechniqueDisplays.Count; i++)

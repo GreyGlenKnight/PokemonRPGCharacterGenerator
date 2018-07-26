@@ -82,7 +82,7 @@ public class TechniqueDisplay : MonoBehaviour
 		}
 	}
 
-	public void ChangeTechniqueDisplay (Technique ToDisplay, SkillTreeData _TreeData)
+	public void ChangeTechniqueDisplay (Technique ToDisplay, SkillTree _Tree)
 	{
 		CurrentTechnique = ToDisplay;
 
@@ -102,13 +102,13 @@ public class TechniqueDisplay : MonoBehaviour
 		_BaseAccuracy.text = CurrentTechnique.BaseAccuracy.ToString ();
 		_BaseStrain.text = CurrentTechnique.BaseStrain.ToString();
 		_Range.text = CurrentTechnique.DisplayRange;
-		_TreeName.text = _TreeData.Name;
+		_TreeName.text = _Tree.Name;
 		//This version will give us the tree's title and tier.
 		_ElementType = GetElementTypeImages (CurrentTechnique.Types);
 		_TypeImage.sprite = _ElementType [0];
 		_ElementType.Clear ();
 
-		_BackGround.color = TypeColors.GetColorForTier (_TreeData.Tier);
+		_BackGround.color = TypeColors.GetColorForTier (_Tree.Tier);
 	}
 
 	public void ChangeTechniqueDisplay (ILevelUpOption _Option, Technique ToDisplay)
@@ -131,7 +131,7 @@ public class TechniqueDisplay : MonoBehaviour
 		_BaseAccuracy.text = CurrentTechnique.BaseAccuracy.ToString ();
 		_BaseStrain.text = CurrentTechnique.BaseStrain.ToString();
 		_Range.text = CurrentTechnique.DisplayRange;
-		_TreeName.text = _Option.TreeName;
+		_TreeName.text = _Option.Tree.Name;
 
 		//		_StatsToUse = GetStatImages (CurrentTechnique.StatsUsed);
 		_ElementType = GetElementTypeImages (CurrentTechnique.Types);

@@ -7,55 +7,52 @@ using System.Linq;
 
 public class SkillTreePaneDisplay : MonoBehaviour 
 {
-	public Toggle[] Options = new Toggle[12];
-	public Text[] OptionText = new Text[12];
+	public SkillTreeLineDisplay [] Items = new SkillTreeLineDisplay [12];
 	public Image TreeBG;
 	public Text TreeNameText;
-	public SkillTreeData _TreeToDisplay;
+	public SkillTree TreeToDisplay;
+
 	public static Color Tier0Color = Color.gray;
 	public static Color Tier1Color = Color.cyan;
 	public static Color Tier2Color = Color.green;
 	public static Color Tier3Color = Color.yellow;
 	public static Color LockTreeColor = Color.clear;
-	
 
-	public void ChangeDisplayData (SkillTreeData NewTreeData)
+
+	public void ChangeDisplayData (SkillTree NewTree)
 	{
-		_TreeToDisplay = NewTreeData;
-		DisplayTree (_TreeToDisplay);
-	}
-
-	public void DisplayTree (SkillTreeData ToDisplay)
-	{
-		TreeBG.color = LockTreeColor;
-
-		if (ToDisplay == null)
+		if (NewTree == null)
 		{
-			TreeNameText.text = "";
-			for (int i = 0; i < Options.Length; i++)
-			{
-				OptionText [i].text = "";
-				OptionText [i].color = Color.black;
-
-			Options [i].isOn = false;
-//			OptionText [i].color = Color.black;
-			}
+			TreeBG.color = LockTreeColor;
+			SetDisplayToDefault ();
 			return;
 		}
 
-		TreeNameText.text = ToDisplay.Name;
+		TreeToDisplay = NewTree;
+		DisplayTree ();
+	}
 
-		for (int i = 0; i < Options.Length; i++)
+	public void DisplayTree ()
+	{
+		if (TreeToDisplay == null)
 		{
-			OptionText [i].text = _TreeToDisplay.GetBonusForIndex ((BonusAtIndex)i).BonusName;
-			OptionText [i].color = Color.black;
-			Options [i].isOn = false;
-
-			if (ToDisplay._BonusesAcquired.Bonuses.Contains ((BonusAtIndex) i))
-			{
-				CheckSelectedBonus (i);
-			}
+			TreeBG.color = LockTreeColor;
+			SetDisplayToDefault ();
+			return;
 		}
+
+		TreeNameText.text = TreeToDisplay.Name;
+		SetTreeColor (TreeToDisplay);
+
+		for (int i = 0; i < Items.Length; i++)
+		{
+			Items [i].ChangeDisplayData (TreeToDisplay.Bonuses [i]);
+		}
+	}
+
+	public void SetTreeColor (SkillTree ToDisplay)
+	{
+		TreeBG.color = LockTreeColor;
 
 		if (ToDisplay.CurrentState == SkillTreeState.Active)
 		{
@@ -70,17 +67,13 @@ public class SkillTreePaneDisplay : MonoBehaviour
 		}
 	}
 
-	public void CheckSelectedBonus (int BonusIndex)
+	public void SetDisplayToDefault ()
 	{
-		Options [BonusIndex].isOn = true;
-		Color ToSet = Color.black;
-		ToSet.a = 0.5f;
-		OptionText [BonusIndex].color = ToSet;
+		TreeNameText.text = "";
+		for (int i = 0; i < Items.Length; i++)
+		{
+			Items [i].SetLineToDefault ();
+		}
 	}
 
-	public void CheckSelectedBonus (BonusAtIndex BonusIndex)
-	{
-		CheckSelectedBonus ((int) BonusIndex);
-	}
-		
 }

@@ -75,6 +75,9 @@ public class LevelUpEventArgs : PokemonEventArgs
 public class Pokemon
 
 {
+
+	//Skills + HM abilities
+	//Affection
 	public string NickName;
 	public string TrainerName;
 	public int Level = 0;
@@ -105,12 +108,16 @@ public class Pokemon
 	public List <IHistoryItem> BonusHistory = new List <IHistoryItem> ();
 	public List <LevelUpBonus> LevelUpBonuses = new List <LevelUpBonus> ();
 	public List <MaturityBonus> MaturityBonuses = new List <MaturityBonus> ();
-	public List <SkillTreeData> _SkillTreeData = new List <SkillTreeData>();
+	public List <SkillTree> _SkillTrees = new List <SkillTree>();
+
 	public List <ElementTypesSkill> _ElementTypesSkill = new List <ElementTypesSkill> ();
 
-	public List <SkillTreeData> _SkillTreeDataTier1 = new List<SkillTreeData>();
-	public List <SkillTreeData> _SkillTreeDataTier2 = new List<SkillTreeData>();
-	public List <SkillTreeData> _SkillTreeDataTier3 = new List<SkillTreeData>();
+
+
+//	public List <SkillTree> _Tier1SkillTrees 
+//
+//	public List <SkillTree> _Tier2SkillTrees 
+//	public List <SkillTree> _Tier3SkillTrees 
 
 //	public List <SkillTreeBonusesAcquired> _BonusesRemaining = new List <SkillTreeBonusesAcquired>();
 
@@ -198,6 +205,20 @@ public class Pokemon
 		}
 	}
 
+	public List <SkillTree> GetSkillTreesForTier (SkillTreeTier _Tier)
+	{
+		List <SkillTree> Temp = new List <SkillTree> ();
+
+		for (int i = 0; i < _SkillTrees.Count; i++) 
+		{
+			if (_SkillTrees [i].Tier == _Tier) 
+			{
+				Temp.Add (_SkillTrees [i]);
+			}
+		}
+		return Temp;
+	}
+
 	public Pokemon ()
 	{
 		_Breed = new Breed (ElementTypes.Nothing, ElementTypes.Nothing);
@@ -227,20 +248,20 @@ public class Pokemon
 			Debug.Log ("Holy Shit, a Shiny!");
 		}
 
-		_SkillTreeDataTier1.Add (new SkillTreeData("Imp", SkillTreeTier.Tier0));
-		_SkillTreeDataTier1.Add (new SkillTreeData("Drake", SkillTreeTier.Tier1));
-		_SkillTreeDataTier1.Add (new SkillTreeData("Fire Body 1", SkillTreeTier.Tier1));
-		_SkillTreeDataTier1.Add (new SkillTreeData("Claw 1", SkillTreeTier.Tier1));
-		_SkillTreeDataTier1.Add (new SkillTreeData("Beast", SkillTreeTier.Tier1));
-		_SkillTreeDataTier1.Add (new SkillTreeData("Pyromancer 1", SkillTreeTier.Tier1));
+		_SkillTrees.Add (new SkillTree("Imp", SkillTreeTier.Tier0));
+		_SkillTrees.Add (new SkillTree("Drake", SkillTreeTier.Tier1));
+		_SkillTrees.Add (new SkillTree("Fire Body 1", SkillTreeTier.Tier1));
+		_SkillTrees.Add (new SkillTree("Claw 1", SkillTreeTier.Tier1));
+		_SkillTrees.Add (new SkillTree("Beast", SkillTreeTier.Tier1));
+		_SkillTrees.Add (new SkillTree("Pyromancer 1", SkillTreeTier.Tier1));
 
-		_SkillTreeDataTier2.Add (new SkillTreeData("Claw 2", SkillTreeTier.Tier2));
-		_SkillTreeDataTier2.Add (new SkillTreeData("Fire Body 2", SkillTreeTier.Tier2));
-		_SkillTreeDataTier2.Add (new SkillTreeData("Pureblood 2", SkillTreeTier.Tier2));
+		_SkillTrees.Add (new SkillTree("Claw 2", SkillTreeTier.Tier2));
+		_SkillTrees.Add (new SkillTree("Fire Body 2", SkillTreeTier.Tier2));
+		_SkillTrees.Add (new SkillTree("Pureblood 2", SkillTreeTier.Tier2));
 
-		_SkillTreeDataTier3.Add (new SkillTreeData("Pureblood 3", SkillTreeTier.Tier3));
-		_SkillTreeDataTier3.Add (new SkillTreeData("Fire Body 3", SkillTreeTier.Tier3));
-		_SkillTreeDataTier3.Add (new SkillTreeData("Acrobatics 1", SkillTreeTier.Tier1));
+		_SkillTrees.Add (new SkillTree("Pureblood 3", SkillTreeTier.Tier3));
+		_SkillTrees.Add (new SkillTree("Fire Body 3", SkillTreeTier.Tier3));
+		_SkillTrees.Add (new SkillTree("Acrobatics 1", SkillTreeTier.Tier1));
 
 		ApplyMaturityBonus (MaturityStatic.GetMaturityBonuses (0), 0);
 	}
@@ -252,35 +273,29 @@ public class Pokemon
 	}
 
 
-	private SkillTreeData AutoChooseTree (SkillTreeTier _Tier)
+	private SkillTree AutoChooseTree (SkillTreeTier _Tier)
 	{
-		SkillTreeData Temp;
+		List <SkillTree> Temp = new List <SkillTree> ();
+		SkillTree ToReturn;
 
 		switch (_Tier)
 		{	
-		case SkillTreeTier.Tier0:
-			_SkillTreeDataTier1.Shuffle ();
-			Temp = _SkillTreeDataTier1 [0];
-			_SkillTreeDataTier1.RemoveAt (0);
-//			Debug.Log (_Tier);
-			return Temp;
-		case SkillTreeTier.Tier1:
-			_SkillTreeDataTier1.Shuffle ();
-			Temp = _SkillTreeDataTier1 [0];
-			_SkillTreeDataTier1.RemoveAt (0);
-//			Debug.Log (_Tier);
-			return Temp;
+		case SkillTreeTier.Tier0 | SkillTreeTier.Tier1:
+			Temp.Concat (GetSkillTreesForTier (SkillTreeTier.Tier0));
+			Temp.Concat (GetSkillTreesForTier (SkillTreeTier.Tier1));
+			Temp.Shuffle ();
+			ToReturn = Temp [0];
+			return ToReturn;
 		case SkillTreeTier.Tier2:
-			_SkillTreeDataTier2.Shuffle ();
-			Temp = _SkillTreeDataTier2 [0];
-			_SkillTreeDataTier2.RemoveAt (0);
-//			Debug.Log (_Tier);
-			return Temp;
+			Temp.Concat (GetSkillTreesForTier (SkillTreeTier.Tier2));
+			Temp.Shuffle ();
+			ToReturn = Temp [0];
+			return ToReturn;
 		case SkillTreeTier.Tier3:
-			_SkillTreeDataTier3.Shuffle ();
-			Temp = _SkillTreeDataTier3 [0];
-			_SkillTreeDataTier3.RemoveAt (0);
-			return Temp;
+			Temp.Concat (GetSkillTreesForTier (SkillTreeTier.Tier3));
+			Temp.Shuffle ();
+			ToReturn = Temp [0];
+			return ToReturn;
 		default:
 			Debug.Log ("This pokemon has gone Super Saiyan" + _Tier);
 			return null;
@@ -300,25 +315,17 @@ public class Pokemon
 		}
 	}
 
-	public bool SpendXP ()
+	public void SpendXP ()
 	{
-		if (XP < 2) 
+		XP--;
+		XP--;
+		if (OnSpendXP != null) 
 		{
-			return false;
-		}
-		if (GameManager.instance._SelectionState == SelectionState.Roll) 
-		{
-			XP--;
-			XP--;
-			GameManager.instance._SelectionState = SelectionState.Select;
-			if (OnSpendXP != null) 
-			{
-				OnSpendXP (this, new PokemonEventArgs (this));
-			}	
-			return true;
-		}
-		return false;
+			OnSpendXP (this, 
+				new PokemonEventArgs (this));
+		}	
 	}
+
 
 	public void MaturityIncrease ()
 	{
@@ -385,12 +392,12 @@ public class Pokemon
 	public void SwapTrees (SkillTreeTier Tier)
 	{
 //		Debug.Log (Tier.ToString());
-		_SkillTreeData [0].ChangeState (SkillTreeState.Inactive);
-		_SkillTreeData [3].ChangeState (SkillTreeState.Active);
-		SkillTreeData TempData2 = _SkillTreeData [3];
-		SkillTreeData TempData = _SkillTreeData [0];
-		_SkillTreeData [0] = TempData2;
-		_SkillTreeData [3] = TempData;
+		_SkillTrees [0].ChangeTreeState (SkillTreeState.Inactive);
+		_SkillTrees [3].ChangeTreeState (SkillTreeState.Active);
+		SkillTree TempData2 = _SkillTrees [3];
+		SkillTree TempData = _SkillTrees [0];
+		_SkillTrees [0] = TempData2;
+		_SkillTrees [3] = TempData;
 		if (OnTradeSkill != null) 
 		{
 			OnTradeSkill (this, new PokemonEventArgs (this));
@@ -453,7 +460,6 @@ public class Pokemon
 		{
 			NumberOfSpeedBonuses.RawValue++;
 		}
-
 		if (OnGainStatUp != null) 
 		{
 			OnGainStatUp (this, new PokemonEventArgs (this));
@@ -566,14 +572,14 @@ public class Pokemon
 		
 	public void UnlockTrees (SkillTreeTier _Tier)
 	{
-		SkillTreeData TreeToAdd = AutoChooseTree (_Tier);
-		_SkillTreeData.Add (TreeToAdd);
+//		SkillTree TreeToAdd = AutoChooseTree (_Tier);
+//		_SkillTrees.Add (TreeToAdd);
 
-		for (int i = 0; i < _SkillTreeData.Count; i++) 
+		for (int i = 0; i < _SkillTrees.Count; i++) 
 		{
-			if (_SkillTreeData [i].CurrentState == SkillTreeState.Locked) 
+			if (_SkillTrees [i].CurrentState == SkillTreeState.Locked) 
 			{
-				_SkillTreeData [i].ChangeState (SkillTreeState.Inactive);
+				_SkillTrees [i].ChangeTreeState (SkillTreeState.Inactive);
 
 				if (OnBreakTree != null) 
 				{
@@ -587,11 +593,54 @@ public class Pokemon
 
 		public void ActivateTrees (int TreeSlot)
 		{
-		_SkillTreeData [TreeSlot].ChangeState (SkillTreeState.Active);
+		_SkillTrees [TreeSlot].ChangeTreeState (SkillTreeState.Active);
 		if (OnActivateTree != null)
 		{
 			OnActivateTree (this, new PokemonEventArgs(this));
 		}
+	}
+
+	public List <ILevelUpOption> RollOnTrees ()
+	{
+		if (XP < 2) 
+		{
+			Debug.Log ("XP Spend Fail");
+			return null;
+		}
+
+		if (GameManager.instance._SelectionState == SelectionState.Select) 
+		{
+			Debug.Log ("Selection State is Select");
+			return null;
+		}
+
+		SpendXP ();
+		GameManager.instance._SelectionState = SelectionState.Select;
+
+		List <SkillTree> TreesToRoll = new List <SkillTree> ();
+
+		for (int i = 0; i < _SkillTrees.Count; i++) 
+		{
+			SkillTree Temp = _SkillTrees [i].GetTreeIfActive ();
+			if (Temp != null) 
+			{
+				TreesToRoll.Add (_SkillTrees [i].GetTreeIfActive ());
+			}
+		}
+
+		List <ILevelUpOption> TempOptions = new List <ILevelUpOption> ();
+
+		for (int i = 0; i < TreesToRoll.Count; i++) 
+		{
+			if (TreesToRoll [i].GetRemainingBonuses ().Count > 0) 
+			{
+				TempOptions.Add (TreesToRoll [i].GetRandomAvailableBonus ());
+			}
+		}
+		Debug.Log (TempOptions.Count());
+//		Debug.Log (TempOptions [0].ToString());
+
+		return TempOptions;
 	}
 
 	public class Breed 

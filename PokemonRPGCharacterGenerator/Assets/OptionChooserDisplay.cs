@@ -23,7 +23,7 @@ public class OptionChooserDisplay : MonoBehaviour
 //	public Image _BackGround;
 	public TechniqueDisplay _TechniqueVertical;
 //	public StatUpChoice _StatUpChoice;
-	public SkillTreeData _SkillTree;
+	public SkillTree _SkillTree;
 	public OptionPanel _OptionPanel;
 	public CurrentChoiceType _CurrentChoiceType;
 
@@ -50,7 +50,31 @@ public class OptionChooserDisplay : MonoBehaviour
 		}
 	}
 
-	public void DisplayLevelUpOption (ILevelUpOption _Bonus, SkillTreeData _Tree)
+	public void DisplayLevelUpOption (ILevelUpOption _Bonus)
+	{
+		if (_Bonus == null) 
+		{
+			return;
+		}
+
+		_CurrentChoiceType = CurrentChoiceType.SkillTree;
+		_SkillTree = _Bonus.Tree;
+		_OptionPanel._BackGround.color = TypeColors.GetColorForTier (_Bonus.Tree.Tier);
+
+
+		if ((_Bonus.TypeOfBonus) == BonusAtIndex.Technique) {
+			DisplayLevelUpOption (_Bonus, 
+				_Bonus.Tree._TechniquesOnTree [((int)_Bonus.TypeOfBonus)]);
+			_TechniqueVertical._BackGround.color = TypeColors.GetColorForTier (_Bonus.Tree.Tier);
+			return;
+		}
+		_OptionPanel._Header.text = _Bonus.BonusName;
+		_OptionPanel._Description.text = _Bonus.OptionDescription;
+		_OptionPanel.gameObject.SetActive (true);
+		_TechniqueVertical.gameObject.SetActive (false);
+	}
+
+	public void DisplayLevelUpOption (ILevelUpOption _Bonus, SkillTree _Tree)
 	{
 		if (_Tree == null || _Bonus == null) {
 			return;
@@ -63,7 +87,7 @@ public class OptionChooserDisplay : MonoBehaviour
 
 		if (((int)_Bonus.TypeOfBonus) < 4) {
 			DisplayLevelUpOption (_Bonus, 
-				_Tree.TechniquesOnTree [((int)_Bonus.TypeOfBonus)]);
+				_Tree._TechniquesOnTree [((int)_Bonus.TypeOfBonus)]);
 			_TechniqueVertical._BackGround.color = TypeColors.GetColorForTier (_Tree.Tier);
 			return;
 		}

@@ -7,7 +7,7 @@ using System.Linq;
 
 public interface ILevelUpOption
 {
-	string TreeName { get;}
+	SkillTree Tree { get;}	
 	string OptionName { get;}
 	string BonusName { get;}
 	string OptionDescription { get;}
@@ -20,8 +20,14 @@ public abstract class LevelUpBonus : IHistoryItem, ILevelUpOption
 {
 	#region IOption implementation
 
+	private SkillTree tree;
+
+	public SkillTree Tree {
+		get { return tree;}
+	}
+
 	public string TreeName {
-		get {return _TreeName;}
+		get {return tree.Name;}
 	}
 
 	public string OptionName {
@@ -88,31 +94,47 @@ public abstract class LevelUpBonus : IHistoryItem, ILevelUpOption
 
 	#endregion
 
+	public enum BonusState
+	{
+		Remaining,
+		Acquired
+	}
+
+	public void SetBonusStateAcquired ()
+	{
+		State = BonusState.Acquired;
+	}
+
 
 	public abstract void ApplyLevelBonus (Pokemon _Pokemon);
 
+	public BonusState State = BonusState.Remaining;
 	private string _HistoryDescription;
 	private string _OptionDescription;
 	private string _TutorialDescription;
 	private string _BonusName;
+
 	private BonusAtIndex _TypeOfBonus;
 	private string _Title = "Level Up: ";
 	private int _Level;
 	private int _MaturityLevel;
 	private string _TreeName;
 
+
+
 	public class TechniqueGain : LevelUpBonus
 	{
 		private Technique _Technique;
 
-		public TechniqueGain (SkillTreeData _Tree,
+		public TechniqueGain (SkillTree _Tree,
 			Technique _TechniqueToAdd)
 		{
+			tree = _Tree;
 			_Technique = _TechniqueToAdd;
 //			_Name = "Learned: "+_TechniqueToAdd.Name;
 			_BonusName = _TechniqueToAdd.Name+": ";
-			int Temp = _Tree.TechniquesOnTree.IndexOf (_TechniqueToAdd);
-			_TypeOfBonus = (BonusAtIndex) Temp;
+//			int Temp = _Tree.TechniquesOnTree.IndexOf (_TechniqueToAdd);
+			_TypeOfBonus = BonusAtIndex.Technique;
 //			Debug.Log ("The above is a hack, fix.");
 			_OptionDescription = _TechniqueToAdd.Description+"";
 			_TutorialDescription = "A Pokemon May Prepare Up to 5 Active Moves For Battle.";
@@ -121,6 +143,7 @@ public abstract class LevelUpBonus : IHistoryItem, ILevelUpOption
 		}
 		public override void ApplyLevelBonus(Pokemon _Pokemon)
 		{
+			SetBonusStateAcquired ();
 			_Level = _Pokemon.Level;
 			_MaturityLevel = _Pokemon.Maturity;
 			_Pokemon.GainTechnique(_Technique);
@@ -132,9 +155,10 @@ public abstract class LevelUpBonus : IHistoryItem, ILevelUpOption
 	{
 		private TechniqueModifier _TechniqueModifier;
 		
-		public TechniqueModifierGain (SkillTreeData _Tree)
+		public TechniqueModifierGain (SkillTree _Tree)
 		{
-			_TechniqueModifier = _Tree.TechniqueModifierOnTree;
+			tree = _Tree;
+//			_TechniqueModifier = _Tree.TechniqueModifierOnTree;
 			//			_Name = "Learned: "+"";
 			_TreeName = _Tree.Name;
 			_BonusName = "Move Modifier: ";
@@ -147,9 +171,9 @@ public abstract class LevelUpBonus : IHistoryItem, ILevelUpOption
 		}
 		public override void ApplyLevelBonus(Pokemon _Pokemon)
 		{
+			SetBonusStateAcquired ();
 			_Level = _Pokemon.Level;
 			_MaturityLevel = _Pokemon.Maturity;
-
 			_Pokemon.GainTechniqueModifier (_TechniqueModifier);
 			_Pokemon.LevelUpBonuses.Add (this);
 		}
@@ -159,9 +183,10 @@ public abstract class LevelUpBonus : IHistoryItem, ILevelUpOption
 	{
 		private Ability _Ability;
 
-		public AbilityGain (SkillTreeData _Tree)
+		public AbilityGain (SkillTree _Tree)
 		{
-			_Ability = _Tree.AbilityOnTree;
+			tree = _Tree;
+//			_Ability = _Tree.AbilityOnTree;
 			//			_Name = "Learned: "+"";
 			_TreeName = _Tree.Name;
 			_BonusName = "Ability: ";
@@ -174,6 +199,7 @@ public abstract class LevelUpBonus : IHistoryItem, ILevelUpOption
 		}
 		public override void ApplyLevelBonus(Pokemon _Pokemon)
 		{
+			SetBonusStateAcquired ();
 			_Level = _Pokemon.Level;
 			_MaturityLevel = _Pokemon.Maturity;
 
@@ -184,12 +210,12 @@ public abstract class LevelUpBonus : IHistoryItem, ILevelUpOption
 
 	public class StatGain : LevelUpBonus
 	{
-
 		private MyStat _Stat;
 
-		public StatGain (SkillTreeData _Tree, 
+		public StatGain (SkillTree _Tree, 
 			MyStat _StatToAdd)
 		{
+			tree = _Tree;
 			_Stat = _StatToAdd;
 //			string StatName = _Stat.ToString();
 			_TreeName = _Tree.Name;
@@ -203,6 +229,7 @@ public abstract class LevelUpBonus : IHistoryItem, ILevelUpOption
 		}
 		public override void ApplyLevelBonus(Pokemon _Pokemon)
 		{	
+			SetBonusStateAcquired ();
 			_Level = _Pokemon.Level;
 			_MaturityLevel = _Pokemon.Maturity;
 
@@ -215,9 +242,10 @@ public abstract class LevelUpBonus : IHistoryItem, ILevelUpOption
 	{
 		private List <ElementTypesSkill> _ElementTypesSkills = new List <ElementTypesSkill> ();
 
-		public ElementTypesSkillGain (SkillTreeData _Tree,
+		public ElementTypesSkillGain (SkillTree _Tree,
 			List <ElementTypesSkill> _Types)
 		{
+			tree = _Tree;
 			_ElementTypesSkills = _Types;
 //			string SkillName = _Type.ToString();
 			_TreeName = _Tree.Name;
@@ -234,6 +262,7 @@ public abstract class LevelUpBonus : IHistoryItem, ILevelUpOption
 		}
 		public override void ApplyLevelBonus(Pokemon _Pokemon)
 		{
+			SetBonusStateAcquired ();
 			_Level = _Pokemon.Level;
 			_MaturityLevel = _Pokemon.Maturity;
 			_Pokemon.GainElementTypesSkillUp (_ElementTypesSkills);
@@ -243,8 +272,10 @@ public abstract class LevelUpBonus : IHistoryItem, ILevelUpOption
 
 	public class MaturityBonusGain : LevelUpBonus
 	{
-		public MaturityBonusGain (SkillTreeData _Tree)
+
+		public MaturityBonusGain (SkillTree _Tree)
 		{
+			tree = _Tree;
 			_TreeName = _Tree.Name;
 			_BonusName = "Maturity Up: ";
 			_TypeOfBonus = BonusAtIndex.Maturity;
@@ -254,6 +285,7 @@ public abstract class LevelUpBonus : IHistoryItem, ILevelUpOption
 		}
 		public override void ApplyLevelBonus (Pokemon _Pokemon)
 		{
+			SetBonusStateAcquired ();
 			_Level = _Pokemon.Level;
 			_MaturityLevel = _Pokemon.Maturity;
 	
@@ -264,9 +296,10 @@ public abstract class LevelUpBonus : IHistoryItem, ILevelUpOption
 
 	public class CrossTree : LevelUpBonus
 	{
-		public CrossTree (SkillTreeData _Tree)
+		public CrossTree (SkillTree _Tree)
 		{
-			//			_Name = "Learned: "+_TechniqueToAdd.Name;
+			tree = _Tree;
+			//_Name = "Learned: "+_TechniqueToAdd.Name;
 			_BonusName = "CrossTree"+": ";
 			_TypeOfBonus = BonusAtIndex.CrossTree;
 			_OptionDescription = "";
@@ -284,9 +317,10 @@ public abstract class LevelUpBonus : IHistoryItem, ILevelUpOption
 
 	public class TreeUp : LevelUpBonus
 	{
-		public TreeUp (SkillTreeData _Tree)
+		public TreeUp (SkillTree _Tree)
 		{
-			//			_Name = "Learned: "+_TechniqueToAdd.Name;
+			tree = _Tree;
+			//_Name = "Learned: "+_TechniqueToAdd.Name;
 			_BonusName = "TreeUp"+": ";
 			_TypeOfBonus = BonusAtIndex.TreeUp;
 			_OptionDescription = "";
@@ -300,6 +334,5 @@ public abstract class LevelUpBonus : IHistoryItem, ILevelUpOption
 			_MaturityLevel = _Pokemon.Maturity;
 		}
 	}
-
 }
 

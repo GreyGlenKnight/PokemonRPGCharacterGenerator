@@ -7,14 +7,12 @@ using System.Linq;
 
 public class NewTreeManager : MonoBehaviour 
 {
-//	public bool IsTreeFull = false;
 	public const int NUMBER_OF_TREES = 4;
-	public BonusAtIndex [] TreeRolls = new BonusAtIndex [NUMBER_OF_TREES];
+	public LevelUpBonus [] TreeRolls = new LevelUpBonus [NUMBER_OF_TREES];
 	public const int BONUSES_ON_TREE = 12;
 
-	public List <SkillTreeData> TreesToRoll = new List <SkillTreeData> ();
+	public List <SkillTree> TreesToRoll = new List <SkillTree> ();
 	public List <SkillTreePaneDisplay> TreeDisplays = new List <SkillTreePaneDisplay> ();
-	public List <int> Bonuses = new List <int> ();
 	public List <int> TempRoll = new List <int> ();
 
 	private Pokemon _CurrentPokemon;
@@ -42,37 +40,36 @@ public class NewTreeManager : MonoBehaviour
 	{
 		Refresh ();
 	}
+
+	public void SceneUpdate ()
+	{
+		_InterruptDialog.gameObject.SetActive (false);
+		_TreeScene.gameObject.SetActive (true);
+		Refresh ();	
+	}
 		
 	public void OnSelectTree1 ()
 	{
 		TreesToRoll [0].OnManualSelectClick ();
-		_InterruptDialog.gameObject.SetActive (false);
-		_TreeScene.gameObject.SetActive (true);
-		Refresh ();	
+		SceneUpdate ();
 	}
 
 	public void OnSelectTree2 ()
 	{
 		TreesToRoll [1].OnManualSelectClick ();
-		_InterruptDialog.gameObject.SetActive (false);
-		_TreeScene.gameObject.SetActive (true);
-		Refresh ();	
+		SceneUpdate ();
 	}
 
 	public void OnSelectTree3 ()
 	{
 		TreesToRoll [2].OnManualSelectClick ();
-		_InterruptDialog.gameObject.SetActive (false);
-		_TreeScene.gameObject.SetActive (true);
-		Refresh ();	
+		SceneUpdate ();
 	}
 
 	public void OnSelectTree4 ()
 	{
 		TreesToRoll [3].OnManualSelectClick ();
-		_InterruptDialog.gameObject.SetActive (false);
-		_TreeScene.gameObject.SetActive (true);
-		Refresh ();	
+		SceneUpdate ();
 	}
 
 	public void OnAddXPClick ()
@@ -152,61 +149,24 @@ public class NewTreeManager : MonoBehaviour
 			return;
 		}
 
-		if (_CurrentPokemon._SkillTreeData.Count <= TreeDataIndex) 
+		if (_CurrentPokemon._SkillTrees.Count <= TreeDataIndex) 
 		{
-			//Not really sure what this does?
-			//I guess it returns a safe null display state?
 			TreeDisplays [TreeToChange].ChangeDisplayData (null);
 			return;
 		}
 
-		TreeDisplays [TreeToChange].ChangeDisplayData (_CurrentPokemon._SkillTreeData [TreeDataIndex]);
+		TreeDisplays [TreeToChange].ChangeDisplayData (_CurrentPokemon._SkillTrees [TreeDataIndex]);
 	}
 
 
 	public void OnCallTreeRoll ()
 	{
-		if (_CurrentPokemon.SpendXP () == false) 
-		{
-			Debug.Log ("NewTreeManager XP Spend Fail");
-			return;
-		}
-
-		Bonuses.Clear ();
-		TreesToRoll.Clear ();
-
-		for (int i = 0; i < _CurrentPokemon._SkillTreeData.Count; i++) 
-		{
-			SkillTreeData Temp = _CurrentPokemon._SkillTreeData [i].GetTreeIfActive ();
-			if (Temp != null) 
-			{
-				TreesToRoll.Add (Temp);
-			}
-		}
-			
-		List <ILevelUpOption> TempOptions = new List <ILevelUpOption> ();
-
-		for (int i = 0; i < TreesToRoll.Count; i++) 
-		{
-			if (TreesToRoll [i]._BonusesRemaining.Bonuses.Count > 0 |
-					TreesToRoll [i].GetCurrentSelectedBonus () != BonusAtIndex.None) 
-			{
-				TreesToRoll[i].RollTheList ();
-				Bonuses.Add ((int)TreesToRoll [i].GetCurrentSelectedBonus ());
-				TempOptions.Add (TreesToRoll [i].GetBonusForIndex ((BonusAtIndex)Bonuses [i]));
-			}
-		}
-		try 
-		{
-			Debug.Log ("In try block");
-			_InterruptDialog.DisplayOptionsList (TempOptions, 
-				TreesToRoll);
-		}
-		catch (InvalidBonusesException e)
-		{
-			Debug.Log (e.BonusesLength +", "+ e.TreesLength);
-		}
-
+		List <ILevelUpOption> Temp = _CurrentPokemon.RollOnTrees();
+	
+		if (Temp == null)
+			{return;}
+//		TreesToRoll = Temp;
+		_InterruptDialog.DisplayOptionsList (Temp);
 	}
 
 
@@ -215,15 +175,12 @@ public class NewTreeManager : MonoBehaviour
 	{
 		for (int i = 0; i < TreesToRoll.Count; i++) 
 		{
-			TreeRolls [i] = TreesToRoll [i].GetCurrentSelectedBonus ();
+			TreeRolls [i] = TreesToRoll [i].GetRandomAvailableBonus ();
 		}
 
 		CheckForBonusType (BonusAtIndex.StatUp);
 		CheckForBonusType (BonusAtIndex.MoveMod);
-		CheckForBonusType (BonusAtIndex.Skill1);
-		CheckForBonusType (BonusAtIndex.Skill2);
-		CheckForBonusType (BonusAtIndex.Skill3);
-		CheckForBonusType (BonusAtIndex.Skill4);
+		CheckForBonusType (BonusAtIndex.Technique);
 		CheckForBonusType (BonusAtIndex.SkillUp);
 		CheckForBonusType (BonusAtIndex.Ability);
 		CheckForBonusType (BonusAtIndex.Endurance);
@@ -247,7 +204,7 @@ public class NewTreeManager : MonoBehaviour
 	{
 		for (int i = 0; i < TreesToRoll.Count; i++) 
 		{
-			if (TreeRolls [i] == _Bonus) 
+			if (TreeRolls [i].TypeOfBonus == _Bonus) 
 			{
 				TempRoll.Add (i);
 			}
