@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using System;
 using System.Linq;
 
-public abstract class MyStat 
+public abstract class PokemonStat 
 
 {
 	public int RawValue;
@@ -19,12 +19,12 @@ public abstract class MyStat
 		get {return (RawValue / 2);}
 	}
 
-	public MyStat (int _RawValue)
+	public PokemonStat (int _RawValue)
 	{
 		RawValue = _RawValue;
 	}
 
-	public static MyStat RollForStat (int _Roll)
+	public static PokemonStat RollForStat (int _Roll)
 	{
 		switch (_Roll) 
 		{
@@ -50,17 +50,17 @@ public abstract class MyStat
 	}
 		
 
-	public static implicit operator int (MyStat ThisStat)
+	public static implicit operator int (PokemonStat ThisStat)
 	{
 		return ThisStat.RawValue;
 	}
 
-	public static List <MyStat> RollStatChoices (MyStat _FavoredStat)
+	public static List <PokemonStat> RollStatChoices (PokemonStat _FavoredStat)
 	{
-		List <MyStat> ToReturn = new List <MyStat> ();
+		List <PokemonStat> ToReturn = new List <PokemonStat> ();
 		int _Roll1 = UnityEngine.Random.Range (0, 6);
 		Debug.Log (_Roll1);
-		MyStat StatToAdd = RollForStat (_Roll1);
+		PokemonStat StatToAdd = RollForStat (_Roll1);
 
 		if (StatToAdd == null) 
 		{
@@ -71,7 +71,7 @@ public abstract class MyStat
 
 		int _Roll2 = UnityEngine.Random.Range (0, 6);
 		Debug.Log (_Roll2);
-		MyStat StatToAdd2 = RollForStat (_Roll2);
+		PokemonStat StatToAdd2 = RollForStat (_Roll2);
 
 		if (StatToAdd2 == null) 
 		{
@@ -82,33 +82,48 @@ public abstract class MyStat
 		return ToReturn;
 	}
 
+	public void SetRawValue (int NewValue)
+	{
+		RawValue = NewValue;
+	}
 
-
-	public MyStat AddValues (MyStat Other)
+	public PokemonStat AddValues (PokemonStat Other)
 	{
 		if (this.GetType ().Equals (Other.GetType ())) 
 		{
-//			Debug.Log (RawValue+":"+Other.RawValue);
 			return this.Create (RawValue + Other.RawValue);
 		} 
 
 		else 
 		{
 			Debug.Log ("Trying To Add Incompatible Stats");
-
 			return null;		
 		}	
 	}
 
-	protected abstract MyStat Create (int RawValue);
+
+//	public static T AddValues <T> (PokemonStat Other)
+//	{
+//		if (this.GetType ().Equals (Other.GetType ())) 
+//		{
+//			return this.Create (RawValue + Other.RawValue);
+//		} 
+//
+//		else 
+//		{
+//			Debug.Log ("Trying To Add Incompatible Stats");
+//			return null;		
+//		}	
+//	}
+
+	protected abstract PokemonStat Create (int RawValue);
 
 
 }
 
-public class EnduranceStat: MyStat
+public class EnduranceStat: PokemonStat
 {
-	protected override MyStat Create (int RawValue)
-
+	protected override PokemonStat Create (int RawValue)
 	{
 		return new EnduranceStat (RawValue);
 	}
@@ -133,12 +148,17 @@ public class EnduranceStat: MyStat
 	{
 		return new EnduranceStat (NewValue);
 	}
+
+	public EnduranceStat AddValues (EnduranceStat Other)
+	{
+		return (EnduranceStat)this.Create (RawValue + Other.RawValue);
+	}
 }
 
-public class AttackStat: MyStat
+public class AttackStat: PokemonStat
 {
 
-	protected override MyStat Create (int RawValue)
+	protected override PokemonStat Create (int RawValue)
 	{
 		return new AttackStat (RawValue);
 	}
@@ -157,12 +177,17 @@ public class AttackStat: MyStat
 	{
 		return new AttackStat (NewValue);
 	}
+
+	public AttackStat AddValues (AttackStat Other)
+	{
+		return (AttackStat)this.Create (RawValue + Other.RawValue);
+	}
 }
 
-public class DefenseStat: MyStat
+public class DefenseStat: PokemonStat
 {
 
-	protected override MyStat Create (int RawValue)
+	protected override PokemonStat Create (int RawValue)
 	{
 		return new DefenseStat (RawValue);
 	}
@@ -181,12 +206,17 @@ public class DefenseStat: MyStat
 	{
 		return new DefenseStat (NewValue);
 	}
+
+	public DefenseStat AddValues (DefenseStat Other)
+	{
+		return (DefenseStat)this.Create (RawValue + Other.RawValue);
+	}
 }
 
-public class SpecialAttackStat: MyStat
+public class SpecialAttackStat: PokemonStat
 {
 
-	protected override MyStat Create (int RawValue)
+	protected override PokemonStat Create (int RawValue)
 	{
 		return new SpecialAttackStat (RawValue);
 	}
@@ -205,11 +235,16 @@ public class SpecialAttackStat: MyStat
 	{
 		return new SpecialAttackStat (NewValue);
 	}
+
+	public SpecialAttackStat AddValues (SpecialAttackStat Other)
+	{
+		return (SpecialAttackStat)this.Create (RawValue + Other.RawValue);
+	}
 }
 
-public class SpecialDefenseStat: MyStat
+public class SpecialDefenseStat: PokemonStat
 {
-	protected override MyStat Create (int RawValue)
+	protected override PokemonStat Create (int RawValue)
 	{
 		return new SpecialDefenseStat (RawValue);
 	}
@@ -241,11 +276,16 @@ public class SpecialDefenseStat: MyStat
 	{
 		return new SpecialDefenseStat (NewValue);
 	}
+
+	public SpecialDefenseStat AddValues (SpecialDefenseStat Other)
+	{
+		return (SpecialDefenseStat) this.Create (RawValue + Other.RawValue);
+	}
 }
 
-public class SpeedStat: MyStat
+public class SpeedStat: PokemonStat
 {
-	protected override MyStat Create (int RawValue)
+	protected override PokemonStat Create (int RawValue)
 	{
 		return new SpeedStat (RawValue);
 	}
@@ -264,11 +304,16 @@ public class SpeedStat: MyStat
 	{
 		return new SpeedStat (NewValue);
 	}
+
+	public SpeedStat AddValues (SpeedStat Other)
+	{
+		return (SpeedStat) this.Create (RawValue + Other.RawValue);
+	}
 }
 
-public class TempStat: MyStat
+public class TempStat: PokemonStat
 {
-	protected override MyStat Create (int RawValue)
+	protected override PokemonStat Create (int RawValue)
 	{
 		return new TempStat (RawValue);
 	}

@@ -90,12 +90,13 @@ public class Pokemon
 	public bool IsShiny;
 	public Gender _Gender;
 	private Breed _Breed;
-	public EnduranceStat NumberOfEnduranceBonuses = new EnduranceStat (0);
-	public AttackStat NumberOfAttackBonuses = new AttackStat (0);
-	public DefenseStat NumberOfDefenseBonuses = new DefenseStat (0);
-	public SpecialAttackStat NumberOfSpecialAttackBonuses = new SpecialAttackStat (0);
-	public SpecialDefenseStat NumberOfSpecialDefenseBonuses = new SpecialDefenseStat (0);
-	public SpeedStat NumberOfSpeedBonuses = new SpeedStat (0);
+	public PokemonStatBlock _StatBlock;
+//	public EnduranceStat NumberOfEnduranceBonuses = new EnduranceStat (0);
+//	public AttackStat NumberOfAttackBonuses = new AttackStat (0);
+//	public DefenseStat NumberOfDefenseBonuses = new DefenseStat (0);
+//	public SpecialAttackStat NumberOfSpecialAttackBonuses = new SpecialAttackStat (0);
+//	public SpecialDefenseStat NumberOfSpecialDefenseBonuses = new SpecialDefenseStat (0);
+//	public SpeedStat NumberOfSpeedBonuses = new SpeedStat (0);
 
 
 	public String HeldItem = "";
@@ -149,46 +150,6 @@ public class Pokemon
 	{		
 		get {return _Breed;}
 	}
-
-	public EnduranceStat Endurance 
-	{		
-		get {return (EnduranceStat) NumberOfEnduranceBonuses.AddValues (_Breed.BaseEndurance);}
-	}
-
-	public AttackStat Attack 
-	{		
-		get {return (AttackStat) NumberOfAttackBonuses.AddValues (_Breed.BaseAttack);}
-	}
-
-	public DefenseStat Defense 
-	{		
-		get {return (DefenseStat) NumberOfDefenseBonuses.AddValues (_Breed.BaseDefense);}
-	}
-		
-	public SpecialAttackStat SpecialAttack 
-	{		
-		get {return (SpecialAttackStat) NumberOfSpecialAttackBonuses.AddValues (_Breed.BaseSpecialAttack);}
-	}
-
-	public SpecialDefenseStat SpecialDefense 
-	{		
-		get {return (SpecialDefenseStat) NumberOfSpecialDefenseBonuses.AddValues (_Breed.BaseSpecialDefense);}
-	}
-
-	public SpeedStat Speed 
-	{		
-		get {return (SpeedStat) NumberOfSpeedBonuses.AddValues (_Breed.BaseSpeed);}
-	}
-
-	public int MaxHP 
-	{		
-		get {return ((Endurance.RawValue + Defense.RoundedValue) * 2);}
-	}
-
-	public int MaxStrain 
-	{		
-		get {return ((Endurance.RawValue + SpecialDefense.RoundedValue) * 2);}
-	}
 		
 	public ElementTypes Type1
 	{
@@ -197,6 +158,7 @@ public class Pokemon
 			return _Breed.Type1;
 		}
 	}
+
 	public ElementTypes Type2
 	{
 		get 
@@ -262,6 +224,8 @@ public class Pokemon
 		_SkillTrees.Add (new SkillTree("Pureblood 3", SkillTreeTier.Tier3));
 		_SkillTrees.Add (new SkillTree("Fire Body 3", SkillTreeTier.Tier3));
 		_SkillTrees.Add (new SkillTree("Acrobatics 1", SkillTreeTier.Tier1));
+
+		_StatBlock = new PokemonStatBlock (this);
 
 		ApplyMaturityBonus (MaturityStatic.GetMaturityBonuses (0), 0);
 	}
@@ -438,28 +402,10 @@ public class Pokemon
 		}	
 	}
 
-	public void GainStatUp (MyStat _Stat)
+	public void GainStatUp (PokemonStat _Stat)
 	{
-		if (_Stat is AttackStat) 
-		{
-			NumberOfAttackBonuses.RawValue++;
-		}
-		if (_Stat is DefenseStat) 
-		{
-			NumberOfDefenseBonuses.RawValue++;
-		}
-		if (_Stat is SpecialAttackStat) 
-		{
-			NumberOfSpecialAttackBonuses.RawValue++;
-		}
-		if (_Stat is SpecialDefenseStat) 
-		{
-			NumberOfSpecialDefenseBonuses.RawValue++;
-		}
-		if (_Stat is SpeedStat) 
-		{
-			NumberOfSpeedBonuses.RawValue++;
-		}
+		_StatBlock.GainStatUp (_Stat);
+
 		if (OnGainStatUp != null) 
 		{
 			OnGainStatUp (this, new PokemonEventArgs (this));
@@ -497,9 +443,10 @@ public class Pokemon
 		Debug.Log("Gained Bonus Level :"+Maturity);
 	}
 
-	public void GainEnduranceBonus (MyStat _Stat)
+	public void GainEnduranceBonus (PokemonStat _Stat)
 	{
-		NumberOfEnduranceBonuses.RawValue++;
+		_StatBlock.GainStatUp (_Stat);
+
 		if (OnGainEnduranceBonus != null) 
 		{
 			OnGainEnduranceBonus (this, new PokemonEventArgs (this));
@@ -584,7 +531,6 @@ public class Pokemon
 				if (OnBreakTree != null) 
 				{
 					OnBreakTree (this, new PokemonEventArgs (this));
-//					Debug.Log (i);
 				}						
 				return;
 			}
@@ -638,7 +584,6 @@ public class Pokemon
 			}
 		}
 		Debug.Log (TempOptions.Count());
-//		Debug.Log (TempOptions [0].ToString());
 
 		return TempOptions;
 	}
@@ -648,12 +593,13 @@ public class Pokemon
 		public virtual ElementTypes Type1 {get{return _Type1;}set {_Type1 = value; }}
 		public virtual ElementTypes Type2 {get{return _Type2;}set {_Type2 = value; }}
 		public string BreedName; // May be unnecessary
-		public EnduranceStat BaseEndurance = new EnduranceStat (0);
-		public AttackStat BaseAttack = new AttackStat (0);
-		public DefenseStat BaseDefense = new DefenseStat (0);
-		public SpecialAttackStat BaseSpecialAttack = new SpecialAttackStat (0);
-		public SpecialDefenseStat BaseSpecialDefense = new SpecialDefenseStat (0);
-		public SpeedStat BaseSpeed = new SpeedStat (0);
+//		public EnduranceStat BaseEndurance = new EnduranceStat (0);
+//		public AttackStat BaseAttack = new AttackStat (0);
+//		public DefenseStat BaseDefense = new DefenseStat (0);
+//		public SpecialAttackStat BaseSpecialAttack = new SpecialAttackStat (0);
+//		public SpecialDefenseStat BaseSpecialDefense = new SpecialDefenseStat (0);
+//		public SpeedStat BaseSpeed = new SpeedStat (0);
+		public BreedStatBlock BreedStatBlock = new BreedStatBlock ();
 
 		private ElementTypes _Type1 = ElementTypes.Nothing;
 		private ElementTypes _Type2 = ElementTypes.Nothing;

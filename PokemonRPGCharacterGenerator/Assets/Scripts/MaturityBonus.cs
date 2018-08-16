@@ -151,7 +151,7 @@ public abstract class MaturityBonus : IHistoryItem
 
     public class NatureBonus : MaturityBonus
     {
-		public NatureBonus(int Maturity, MyStat Stat)
+		public NatureBonus(int Maturity, PokemonStat Stat)
         {
 			_BonusName = "Nature Bonus:";
 			_Description = Stat.ToString();

@@ -45,7 +45,6 @@ public class SkillTreeLineDisplay : MonoBehaviour
 		SetTextColor ();
 		DisplayTextString ();
 		ToggleIfAcquired ();
-
 	}
 
 	public void DisplayTextString ()

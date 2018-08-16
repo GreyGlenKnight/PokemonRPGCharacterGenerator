@@ -85,24 +85,25 @@ public class GameManager : MonoBehaviour
 
 		Pokemon.Breed CharmanderBreed = new Pokemon.Breed (ElementTypes.Fire, ElementTypes.Nothing);
 		CharmanderBreed.BreedName = "Charmander";
-		CharmanderBreed.BaseEndurance.RawValue = 4;
-		CharmanderBreed.BaseAttack.RawValue = 5;
-		CharmanderBreed.BaseDefense.RawValue = 4;
-		CharmanderBreed.BaseSpecialAttack.RawValue = 5;
-		CharmanderBreed.BaseSpecialDefense.RawValue = 4;
-		CharmanderBreed.BaseSpeed.RawValue = 6;
+		CharmanderBreed.BreedStatBlock.Endurance.RawValue = 4;
+		CharmanderBreed.BreedStatBlock.Attack.RawValue = 5;
+		CharmanderBreed.BreedStatBlock.Defense.RawValue = 4;
+		CharmanderBreed.BreedStatBlock.SpecialAttack.RawValue = 5;
+		CharmanderBreed.BreedStatBlock.SpecialDefense.RawValue = 4;
+		CharmanderBreed.BreedStatBlock.Speed.RawValue = 6;
 
 
 		CurrentPokemon = new Pokemon (CharmanderBreed);
 		CurrentPokemon.Maturity = 0;
 		CurrentPokemon.Level = 0;
 		CurrentPokemon.Rate = 5;
-		CurrentPokemon.NumberOfEnduranceBonuses = 3;
-		CurrentPokemon.NumberOfAttackBonuses = 1;
-		CurrentPokemon.NumberOfDefenseBonuses = 1;
-		CurrentPokemon.NumberOfSpecialAttackBonuses = 0;
-		CurrentPokemon.NumberOfSpecialDefenseBonuses = 2;
-		CurrentPokemon.NumberOfSpeedBonuses = 0;
+		CurrentPokemon._StatBlock.EnduranceBonuses.SetRawValue (3);
+		CurrentPokemon._StatBlock.AttackBonuses.SetRawValue (1);
+		CurrentPokemon._StatBlock.DefenseBonuses.SetRawValue (1);
+		CurrentPokemon._StatBlock.SpecialAttackBonuses.SetRawValue (0);
+		CurrentPokemon._StatBlock.SpecialDefenseBonuses.SetRawValue (2);
+		CurrentPokemon._StatBlock.SpeedBonuses.SetRawValue (0);
+
 		CurrentPokemon.CurrentDamage = 0;
 		CurrentPokemon.CurrentStrainLost = 0;
 

@@ -210,10 +210,10 @@ public abstract class LevelUpBonus : IHistoryItem, ILevelUpOption
 
 	public class StatGain : LevelUpBonus
 	{
-		private MyStat _Stat;
+		private PokemonStat _Stat;
 
 		public StatGain (SkillTree _Tree, 
-			MyStat _StatToAdd)
+			PokemonStat _StatToAdd)
 		{
 			tree = _Tree;
 			_Stat = _StatToAdd;
@@ -221,7 +221,7 @@ public abstract class LevelUpBonus : IHistoryItem, ILevelUpOption
 			_TreeName = _Tree.Name;
 			_BonusName = "Stat Up: ";
 			_TypeOfBonus = BonusAtIndex.StatUp;
-			_OptionDescription = _Stat.ToString();
+			_OptionDescription = _Stat.ToString ();
 			_TutorialDescription = "Gain a Bonus of +.5 to a Stat, Excluding Endurance. Roll 2d6, Default to the Tree's Favored Stat on a 6, and Choose from the Results.";
 
 //			_Name = "Gained Stat Up: "+_Stat.ToString();

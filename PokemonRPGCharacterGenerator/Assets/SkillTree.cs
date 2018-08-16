@@ -51,7 +51,7 @@ public class SkillTree
 	public TechniqueModifier _TechniqueModifier;
 	public Ability _Ability;
 	public List <ElementTypesSkill> _ElementTypesSkillOnTree = new List <ElementTypesSkill>();
-	public MyStat _FavoredStatOnTree = new AttackStat (1);
+	public PokemonStat _FavoredStatOnTree = new AttackStat (1);
 //	private SkillTreeState _State = SkillTreeState.Locked;
 	public List <Technique> _TechniquesOnTree = Technique.ExampleTechniquesOnTree ();
 

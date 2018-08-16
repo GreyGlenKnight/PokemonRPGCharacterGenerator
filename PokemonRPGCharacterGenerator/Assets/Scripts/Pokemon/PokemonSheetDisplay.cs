@@ -8,7 +8,7 @@ using System.Linq;
 public class PokemonSheetDisplay : MonoBehaviour 
 {
 	public Text BreedName; // breedname will not be stored in breed, rather its title
-	public Text PokemonName; //nickname
+	public Text PokemonName; // nickname
 	public InputField NickNameInput;
 	public InputField TrainerInput;
 	public Text TrainerName; 
@@ -62,32 +62,32 @@ public class PokemonSheetDisplay : MonoBehaviour
 
 	public void SetStatBlock (Pokemon ToSet, Pokemon.Breed BreedToSet)
 	{
-		string EnduranceBonuses = ToSet.NumberOfEnduranceBonuses.RawValue.ToString ();
-		BaseEndurance.text = BreedToSet.BaseEndurance.RawValue.ToString () + "   + " + EnduranceBonuses + " ";
-		CurrentEndurance.text = ToSet.Endurance.RawValue.ToString ();
+		string EnduranceBonuses = ToSet._StatBlock.EnduranceBonuses.RawValue.ToString ();
+		BaseEndurance.text = BreedToSet.BreedStatBlock.Endurance.RawValue.ToString () + "   + " + EnduranceBonuses + " ";
+		CurrentEndurance.text = ToSet._StatBlock.Endurance.RawValue.ToString ();
 
-		BaseAttack.text = SetStatString (ToSet.NumberOfAttackBonuses, 
-			BreedToSet.BaseAttack);
-		CurrentAttack.text = ToSet.Attack.RoundedValue.ToString ();
+		BaseAttack.text = SetStatString (ToSet._StatBlock.AttackBonuses, 
+			BreedToSet.BreedStatBlock.Attack);
+		CurrentAttack.text = ToSet._StatBlock.Attack.RoundedValue.ToString ();
 
-		BaseDefense.text = SetStatString (ToSet.NumberOfDefenseBonuses, 
-			BreedToSet.BaseDefense);
-		CurrentDefense.text = ToSet.Defense.RoundedValue.ToString ();
+		BaseDefense.text = SetStatString (ToSet._StatBlock.DefenseBonuses, 
+			BreedToSet.BreedStatBlock.Defense);
+		CurrentDefense.text = ToSet._StatBlock.Defense.RoundedValue.ToString ();
 
-		BaseSpecialAttack.text = SetStatString (ToSet.NumberOfSpecialAttackBonuses, 
-			BreedToSet.BaseSpecialAttack);
-		CurrentSpecialAttack.text = ToSet.SpecialAttack.RoundedValue.ToString ();
+		BaseSpecialAttack.text = SetStatString (ToSet._StatBlock.SpecialAttackBonuses, 
+			BreedToSet.BreedStatBlock.SpecialAttack);
+		CurrentSpecialAttack.text = ToSet._StatBlock.SpecialAttack.RoundedValue.ToString ();
 
-		BaseSpecialDefense.text = SetStatString (ToSet.NumberOfSpecialDefenseBonuses, 
-			BreedToSet.BaseSpecialDefense);
-		CurrentSpecialDefense.text = ToSet.SpecialDefense.RoundedValue.ToString ();
+		BaseSpecialDefense.text = SetStatString (ToSet._StatBlock.SpecialDefenseBonuses, 
+			BreedToSet.BreedStatBlock.SpecialDefense);
+		CurrentSpecialDefense.text = ToSet._StatBlock.SpecialDefense.RoundedValue.ToString ();
 
-		BaseSpeed.text = SetStatString (ToSet.NumberOfSpeedBonuses, 
-			BreedToSet.BaseSpeed);
-		CurrentSpeed.text = ToSet.Speed.RoundedValue.ToString ();
+		BaseSpeed.text = SetStatString (ToSet._StatBlock.SpeedBonuses, 
+			BreedToSet.BreedStatBlock.Speed);
+		CurrentSpeed.text = ToSet._StatBlock.Speed.RoundedValue.ToString ();
 	}
 
-	public string SetStatString (MyStat _Stat, MyStat _Stat2)
+	public string SetStatString (PokemonStat _Stat, PokemonStat _Stat2)
 	{
 		string _StatBonuses = (_Stat.RoundedValue).ToString ();
 		if (_Stat.RawValue % 2 == 1) 
@@ -188,10 +188,10 @@ public class PokemonSheetDisplay : MonoBehaviour
 
 	public void SetVitals (Pokemon ToSet)
 	{
-		MaxHP.text = "/"+ToSet.MaxHP.ToString()+" ";
-		CurrentHP.text = (ToSet.MaxHP - ToSet.CurrentDamage).ToString();
-		MaxStrain.text = "/"+ToSet.MaxStrain.ToString()+" ";
-		CurrentStrain.text = (ToSet.MaxStrain - ToSet.CurrentStrainLost).ToString();
+		MaxHP.text = "/"+ToSet._StatBlock.MaxHP.ToString()+" ";
+		CurrentHP.text = (ToSet._StatBlock.MaxHP - ToSet.CurrentDamage).ToString();
+		MaxStrain.text = "/"+ToSet._StatBlock.MaxStrain.ToString()+" ";
+		CurrentStrain.text = (ToSet._StatBlock.MaxStrain - ToSet.CurrentStrainLost).ToString();
 		Fatigue.text = " --   ";
 	}
 

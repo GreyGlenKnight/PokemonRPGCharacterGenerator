@@ -24,7 +24,7 @@ public enum AttackRange
 	public int BaseDamage;
 	public int BaseStrain;
 	public int BaseAccuracy;
-	public List <MyStat> StatsUsed = new List <MyStat> ();
+	public List <PokemonStat> StatsUsed = new List <PokemonStat> ();
 	public SkillTreeTier Tier;
 
 //		public list of effects
