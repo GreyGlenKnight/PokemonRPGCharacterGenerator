@@ -35,7 +35,7 @@ public class InterruptDialog : MonoBehaviour
 
 		for (int i = 0; i < _Bonuses.Count; i++)
 		{
-			Debug.Log ("Line 28");
+//			Debug.Log ("Line 28");
 			if (_Bonuses [i] == null) 
 			{
 				Debug.Log ("Null Bonus");

@@ -24,18 +24,18 @@ public static class ListExtensions
 		}  
 	}
 		
-	public static List<T> MakeCopy<T>(this List<T> thisList)
+	public static List <T> MakeCopy <T> (this List<T> thisList)
 	{
-		List<T> returnList = new List<T>();
+		List <T> returnList = new List <T> ();
 
 		for (int i = 0; i < thisList.Count; i++)
 		{
-			returnList.Add(thisList[i]);
+			returnList.Add (thisList [i]);
 		}
 		return returnList;
 	}
 
-	public static void Apply<T> (this List<T> thisList,Action<T> action)
+	public static void Apply <T> (this List<T> thisList,Action<T> action)
 	{
 		List<T> tempList = thisList.MakeCopy<T>();
 
@@ -49,8 +49,8 @@ public static class ListExtensions
 
 public enum SelectionState
 {
-	Roll,
-	Select
+	Select,
+	Roll
 }
 
 public enum TreeRowState
@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour
 {
 	public static GameManager instance = null;
 	public NewTreeManager _NewTreeManager;
-	public SelectionState _SelectionState = SelectionState.Roll;
+	public SelectionState _SelectionState;
 	public Pokemon CurrentPokemon;
 	public TreeRowState TreeRowState;
 	public BadgeLevelGenerator _BadgeLevelGenerator;
@@ -83,6 +83,7 @@ public class GameManager : MonoBehaviour
 		{Destroy (gameObject);}
 		DontDestroyOnLoad(gameObject);
 
+		_SelectionState = SelectionState.Roll;
 		Pokemon.Breed CharmanderBreed = new Pokemon.Breed (ElementTypes.Fire, ElementTypes.Nothing);
 		CharmanderBreed.BreedName = "Charmander";
 		CharmanderBreed.BreedStatBlock.Endurance.RawValue = 4;
@@ -108,7 +109,6 @@ public class GameManager : MonoBehaviour
 		CurrentPokemon.CurrentStrainLost = 0;
 
 		_NewTreeManager.ChangeDisplayPokemon (CurrentPokemon);
-		Refresh ();
 		_PokemonSheetDisplay.ShowNewPokemon (CurrentPokemon, CharmanderBreed);
 
 

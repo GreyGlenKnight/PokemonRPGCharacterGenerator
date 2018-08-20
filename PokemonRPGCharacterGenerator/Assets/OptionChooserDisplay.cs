@@ -29,26 +29,26 @@ public class OptionChooserDisplay : MonoBehaviour
 
 //This class is driven by InterruptDialogue, has minimal logic
 
-	public void OnClick ()
-	{
-		//Change scene, call event.
-		Debug.Log (_SkillTree.Name);
-		switch (_CurrentChoiceType) 
-		{
-		case CurrentChoiceType.SkillTree:
-			_SkillTree.OnManualSelectClick ();
-//			GameManager.instance.SceneChanger.SwitchToTree();
-			break;
-		case CurrentChoiceType.Stat:	
-			_SkillTree.OnManualSelectClick ();
-			break;
-		case CurrentChoiceType.Technique:
-			_SkillTree.OnManualSelectClick ();
-			break;
-		default:
-			throw new NotImplementedException ();
-		}
-	}
+//	public void OnClick ()
+//	{
+//		//Change scene, call event.
+//		Debug.Log (_SkillTree.Name);
+//		switch (_CurrentChoiceType) 
+//		{
+//		case CurrentChoiceType.SkillTree:
+//			_SkillTree.OnManualSelectClick ();
+////			GameManager.instance.SceneChanger.SwitchToTree();
+//			break;
+//		case CurrentChoiceType.Stat:	
+//			_SkillTree.OnManualSelectClick ();
+//			break;
+//		case CurrentChoiceType.Technique:
+//			_SkillTree.OnManualSelectClick ();
+//			break;
+//		default:
+//			throw new NotImplementedException ();
+//		}
+//	}
 
 	public void DisplayLevelUpOption (ILevelUpOption _Bonus)
 	{

@@ -91,15 +91,7 @@ public class Pokemon
 	public Gender _Gender;
 	private Breed _Breed;
 	public PokemonStatBlock _StatBlock;
-//	public EnduranceStat NumberOfEnduranceBonuses = new EnduranceStat (0);
-//	public AttackStat NumberOfAttackBonuses = new AttackStat (0);
-//	public DefenseStat NumberOfDefenseBonuses = new DefenseStat (0);
-//	public SpecialAttackStat NumberOfSpecialAttackBonuses = new SpecialAttackStat (0);
-//	public SpecialDefenseStat NumberOfSpecialDefenseBonuses = new SpecialDefenseStat (0);
-//	public SpeedStat NumberOfSpeedBonuses = new SpeedStat (0);
-
-
-	public String HeldItem = "";
+	public SkillTreeBlock _SkillTreeBlock;
 
 	public List <Technique> _TechniquesKnown = new List <Technique> ();
 	public List <Technique> _TechniquesActive = new List <Technique> ();
@@ -112,18 +104,9 @@ public class Pokemon
 	public List <SkillTree> _SkillTrees = new List <SkillTree>();
 
 	public List <ElementTypesSkill> _ElementTypesSkill = new List <ElementTypesSkill> ();
-
-
-
-//	public List <SkillTree> _Tier1SkillTrees 
-//
-//	public List <SkillTree> _Tier2SkillTrees 
-//	public List <SkillTree> _Tier3SkillTrees 
-
-//	public List <SkillTreeBonusesAcquired> _BonusesRemaining = new List <SkillTreeBonusesAcquired>();
+	public String HeldItem = "";
 
 	public int TotalBaseStats = 20;
-//	{get {return (MyStat)  }}
 
 	public event EventHandler <LevelUpEventArgs> OnChooseLevelUpBonus;
 	public event EventHandler <PokemonEventArgs> OnBreakTree;
@@ -153,32 +136,12 @@ public class Pokemon
 		
 	public ElementTypes Type1
 	{
-		get 
-		{
-			return _Breed.Type1;
-		}
+		get {return _Breed.Type1;}
 	}
 
 	public ElementTypes Type2
 	{
-		get 
-		{
-			return _Breed.Type2;
-		}
-	}
-
-	public List <SkillTree> GetSkillTreesForTier (SkillTreeTier _Tier)
-	{
-		List <SkillTree> Temp = new List <SkillTree> ();
-
-		for (int i = 0; i < _SkillTrees.Count; i++) 
-		{
-			if (_SkillTrees [i].Tier == _Tier) 
-			{
-				Temp.Add (_SkillTrees [i]);
-			}
-		}
-		return Temp;
+		get {return _Breed.Type2;}
 	}
 
 	public Pokemon ()
@@ -209,61 +172,14 @@ public class Pokemon
 			IsShiny = true;
 			Debug.Log ("Holy Shit, a Shiny!");
 		}
-
-		_SkillTrees.Add (new SkillTree("Imp", SkillTreeTier.Tier0));
-		_SkillTrees.Add (new SkillTree("Drake", SkillTreeTier.Tier1));
-		_SkillTrees.Add (new SkillTree("Fire Body 1", SkillTreeTier.Tier1));
-		_SkillTrees.Add (new SkillTree("Claw 1", SkillTreeTier.Tier1));
-		_SkillTrees.Add (new SkillTree("Beast", SkillTreeTier.Tier1));
-		_SkillTrees.Add (new SkillTree("Pyromancer 1", SkillTreeTier.Tier1));
-
-		_SkillTrees.Add (new SkillTree("Claw 2", SkillTreeTier.Tier2));
-		_SkillTrees.Add (new SkillTree("Fire Body 2", SkillTreeTier.Tier2));
-		_SkillTrees.Add (new SkillTree("Pureblood 2", SkillTreeTier.Tier2));
-
-		_SkillTrees.Add (new SkillTree("Pureblood 3", SkillTreeTier.Tier3));
-		_SkillTrees.Add (new SkillTree("Fire Body 3", SkillTreeTier.Tier3));
-		_SkillTrees.Add (new SkillTree("Acrobatics 1", SkillTreeTier.Tier1));
-
+		_SkillTreeBlock = new SkillTreeBlock (this);
 		_StatBlock = new PokemonStatBlock (this);
 
 		ApplyMaturityBonus (MaturityStatic.GetMaturityBonuses (0), 0);
 	}
-
-//	private 
-
+		
 	public void AssignNameFields ()
 	{
-	}
-
-
-	private SkillTree AutoChooseTree (SkillTreeTier _Tier)
-	{
-		List <SkillTree> Temp = new List <SkillTree> ();
-		SkillTree ToReturn;
-
-		switch (_Tier)
-		{	
-		case SkillTreeTier.Tier0 | SkillTreeTier.Tier1:
-			Temp.Concat (GetSkillTreesForTier (SkillTreeTier.Tier0));
-			Temp.Concat (GetSkillTreesForTier (SkillTreeTier.Tier1));
-			Temp.Shuffle ();
-			ToReturn = Temp [0];
-			return ToReturn;
-		case SkillTreeTier.Tier2:
-			Temp.Concat (GetSkillTreesForTier (SkillTreeTier.Tier2));
-			Temp.Shuffle ();
-			ToReturn = Temp [0];
-			return ToReturn;
-		case SkillTreeTier.Tier3:
-			Temp.Concat (GetSkillTreesForTier (SkillTreeTier.Tier3));
-			Temp.Shuffle ();
-			ToReturn = Temp [0];
-			return ToReturn;
-		default:
-			Debug.Log ("This pokemon has gone Super Saiyan" + _Tier);
-			return null;
-		}
 	}
 
 	public void AddXP()
@@ -290,7 +206,6 @@ public class Pokemon
 		}	
 	}
 
-
 	public void MaturityIncrease ()
 	{
 		Maturity = ((Level * 2) / Rate);
@@ -312,7 +227,8 @@ public class Pokemon
 		Level++;
 		if (OnIncreaseLevel != null) 
 		{
-			OnIncreaseLevel (this, new PokemonEventArgs (this));
+			OnIncreaseLevel (this, 
+				new PokemonEventArgs (this));
 		}	
 	}
 
@@ -355,19 +271,13 @@ public class Pokemon
 
 	public void SwapTrees (SkillTreeTier Tier)
 	{
-//		Debug.Log (Tier.ToString());
-		_SkillTrees [0].ChangeTreeState (SkillTreeState.Inactive);
-		_SkillTrees [3].ChangeTreeState (SkillTreeState.Active);
-		SkillTree TempData2 = _SkillTrees [3];
-		SkillTree TempData = _SkillTrees [0];
-		_SkillTrees [0] = TempData2;
-		_SkillTrees [3] = TempData;
+		_SkillTreeBlock.SwapTrees (Tier);
+
 		if (OnTradeSkill != null) 
 		{
-			OnTradeSkill (this, new PokemonEventArgs (this));
-//			Debug.Log ("");
+			OnTradeSkill (this, 
+				new PokemonEventArgs (this));
 		}			
-//		GameManager.instance.Refresh();
 	}
 
 	public void GainTechnique (Technique _Technique)
@@ -378,7 +288,8 @@ public class Pokemon
 
 		if (OnGainTechnique != null) 
 		{
-			OnGainTechnique (this, new PokemonEventArgs (this));
+			OnGainTechnique (this, 
+				new PokemonEventArgs (this));
 		}
 	}
 
@@ -388,7 +299,8 @@ public class Pokemon
 
 		if (OnGainTechniqueModifier != null) 
 		{
-			OnGainTechniqueModifier (this, new PokemonEventArgs (this));
+			OnGainTechniqueModifier (this, 
+				new PokemonEventArgs (this));
 		}
 	}
 
@@ -398,7 +310,8 @@ public class Pokemon
 
 		if (OnGainAbility != null) 
 		{
-			OnGainAbility (this, new PokemonEventArgs (this));
+			OnGainAbility (this, 
+				new PokemonEventArgs (this));
 		}	
 	}
 
@@ -408,7 +321,8 @@ public class Pokemon
 
 		if (OnGainStatUp != null) 
 		{
-			OnGainStatUp (this, new PokemonEventArgs (this));
+			OnGainStatUp (this, 
+				new PokemonEventArgs (this));
 		}	
 	}
 
@@ -421,7 +335,8 @@ public class Pokemon
 
 		if (OnGainElementTypesSkillUp != null) 
 		{
-			OnGainElementTypesSkillUp (this, new PokemonEventArgs (this));
+			OnGainElementTypesSkillUp (this, 
+				new PokemonEventArgs (this));
 		}	
 	}
 
@@ -432,7 +347,8 @@ public class Pokemon
 
 		if (OnGainMaturityPlusBonus != null) 
 		{
-			OnGainMaturityPlusBonus (this, new PokemonEventArgs (this));
+			OnGainMaturityPlusBonus (this, 
+				new PokemonEventArgs (this));
 		}	
 	}
 
@@ -449,156 +365,115 @@ public class Pokemon
 
 		if (OnGainEnduranceBonus != null) 
 		{
-			OnGainEnduranceBonus (this, new PokemonEventArgs (this));
+			OnGainEnduranceBonus (this, 
+				new PokemonEventArgs (this));
 		}	
 	}
 
 	public void GainBreakTree (SkillTreeTier _Tier)
 	{
 		UnlockTrees (_Tier);
-		//UnlockTrees will throw event
-		Debug.Log ("Gained Break Tree :" + Maturity);
+
+		if (OnBreakTree != null) 
+		{
+			OnBreakTree (this, 
+				new PokemonEventArgs (this));
+		}
 	}
 
 	public void GainActiveTreeBonus (int TreeSlot)
 	{
 		ActivateTrees (TreeSlot);
-		//ActivateTrees will throw event
-		Debug.Log ("Gained Active Tree :"+Maturity);
+
+		if (OnActivateTree != null)
+		{
+			OnActivateTree (this, 
+				new PokemonEventArgs (this));
+		}
 	}
 
 	public void GainNatureBonus ()
 	{
-		//Need a selection dialog
 		Debug.Log ("Gained Nature :"+Maturity);
 		if (OnGainNatureBonus != null) 
 		{
-			OnGainNatureBonus (this, new PokemonEventArgs (this));
+			OnGainNatureBonus (this, 
+				new PokemonEventArgs (this));
 		}	
 	}
 
 	public void GainAbilitySlot ()
 	{
-		//Need poke sheet display
 		Debug.Log ("Gained Ability Slot :"+Maturity);
 		if (OnGainAbilitySlot != null) 
 		{
-			OnGainAbilitySlot (this, new PokemonEventArgs (this));
+			OnGainAbilitySlot (this, 
+				new PokemonEventArgs (this));
 		}	
 	}
 
 	public void GainSTABBonus ()
 	{
-		//Need Skills
 		Debug.Log ("Gained STAB :"+Maturity);
 		if (OnGainSTABBonus != null) 
 		{
-			OnGainSTABBonus (this, new PokemonEventArgs (this));
+			OnGainSTABBonus (this, 
+				new PokemonEventArgs (this));
 		}	
 	}
 
 	public void GainSpecialTrainingBonus ()
 	{
-		//Need Skills
 		Debug.Log ("Gained Special Training :"+Maturity);
 		if (OnGainSpecialTrainingBonus != null) 
 		{
-			OnGainSpecialTrainingBonus (this, new PokemonEventArgs (this));
+			OnGainSpecialTrainingBonus (this, 
+				new PokemonEventArgs (this));
 		}	
 	}
 
 	public void GainEnhancerSlotBonus ()
 	{
-		//Need Skills
 		Debug.Log ("Enhancer Slot :"+Maturity);
 		if (OnGainEnhancerSlotBonus != null) 
 		{
-			OnGainEnhancerSlotBonus (this, new PokemonEventArgs (this));
+			OnGainEnhancerSlotBonus (this, 
+				new PokemonEventArgs (this));
 		}	
 	}
 		
 	public void UnlockTrees (SkillTreeTier _Tier)
 	{
-//		SkillTree TreeToAdd = AutoChooseTree (_Tier);
-//		_SkillTrees.Add (TreeToAdd);
+		_SkillTreeBlock.UnlockTrees (_Tier);
 
-		for (int i = 0; i < _SkillTrees.Count; i++) 
+		if (OnBreakTree != null) 
 		{
-			if (_SkillTrees [i].CurrentState == SkillTreeState.Locked) 
-			{
-				_SkillTrees [i].ChangeTreeState (SkillTreeState.Inactive);
-
-				if (OnBreakTree != null) 
-				{
-					OnBreakTree (this, new PokemonEventArgs (this));
-				}						
-				return;
-			}
-		}
+			OnBreakTree (this, 
+				new PokemonEventArgs (this));
+		}						
+		return;
 	}
 
-		public void ActivateTrees (int TreeSlot)
-		{
-		_SkillTrees [TreeSlot].ChangeTreeState (SkillTreeState.Active);
+
+	public void ActivateTrees (int TreeSlot)
+	{
+		_SkillTreeBlock.ActivateTrees (TreeSlot);
+
 		if (OnActivateTree != null)
 		{
-			OnActivateTree (this, new PokemonEventArgs(this));
+			OnActivateTree (this, 
+				new PokemonEventArgs(this));
 		}
 	}
 
-	public List <ILevelUpOption> RollOnTrees ()
-	{
-		if (XP < 2) 
-		{
-			Debug.Log ("XP Spend Fail");
-			return null;
-		}
 
-		if (GameManager.instance._SelectionState == SelectionState.Select) 
-		{
-			Debug.Log ("Selection State is Select");
-			return null;
-		}
-
-		SpendXP ();
-		GameManager.instance._SelectionState = SelectionState.Select;
-
-		List <SkillTree> TreesToRoll = new List <SkillTree> ();
-
-		for (int i = 0; i < _SkillTrees.Count; i++) 
-		{
-			SkillTree Temp = _SkillTrees [i].GetTreeIfActive ();
-			if (Temp != null) 
-			{
-				TreesToRoll.Add (_SkillTrees [i].GetTreeIfActive ());
-			}
-		}
-
-		List <ILevelUpOption> TempOptions = new List <ILevelUpOption> ();
-
-		for (int i = 0; i < TreesToRoll.Count; i++) 
-		{
-			if (TreesToRoll [i].GetRemainingBonuses ().Count > 0) 
-			{
-				TempOptions.Add (TreesToRoll [i].GetRandomAvailableBonus ());
-			}
-		}
-		Debug.Log (TempOptions.Count());
-
-		return TempOptions;
-	}
 
 	public class Breed 
 	{
-		public virtual ElementTypes Type1 {get{return _Type1;}set {_Type1 = value; }}
-		public virtual ElementTypes Type2 {get{return _Type2;}set {_Type2 = value; }}
+		public virtual ElementTypes Type1 {get {return _Type1;} set {_Type1 = value; }}
+		public virtual ElementTypes Type2 {get {return _Type2;} set {_Type2 = value; }}
 		public string BreedName; // May be unnecessary
-//		public EnduranceStat BaseEndurance = new EnduranceStat (0);
-//		public AttackStat BaseAttack = new AttackStat (0);
-//		public DefenseStat BaseDefense = new DefenseStat (0);
-//		public SpecialAttackStat BaseSpecialAttack = new SpecialAttackStat (0);
-//		public SpecialDefenseStat BaseSpecialDefense = new SpecialDefenseStat (0);
-//		public SpeedStat BaseSpeed = new SpeedStat (0);
+
 		public BreedStatBlock BreedStatBlock = new BreedStatBlock ();
 
 		private ElementTypes _Type1 = ElementTypes.Nothing;

@@ -117,22 +117,23 @@ public class SkillTree
 		return Temp [0];
 	}
 
-	public void OnSelected ()
+	public void OnSelected (LevelUpBonus _Bonus)
 	{
 		if (Bonuses.Count == 0) 
 		{
 			return;
 		}
-		GameManager.instance.CurrentPokemon.LevelUp (GetRandomAvailableBonus ());
+		GameManager.instance._SelectionState = SelectionState.Roll;
+		GameManager.instance.CurrentPokemon.LevelUp (_Bonus);
 	}
 
-	public void OnManualSelectClick ()
+	public void OnManualSelectClick (LevelUpBonus _Bonus)
 	{
 		//		this += OnManualSelectClick;
 
 		if (GameManager.instance._SelectionState == SelectionState.Select)
 		{
-			OnSelected ();
+			OnSelected (_Bonus);
 		}
 	}
 }

@@ -8,7 +8,7 @@ using System.Linq;
 public class NewTreeManager : MonoBehaviour 
 {
 	public const int NUMBER_OF_TREES = 4;
-	public LevelUpBonus [] TreeRolls = new LevelUpBonus [NUMBER_OF_TREES];
+	public List <ILevelUpOption> TreeRolls = new List <ILevelUpOption> ();
 	public const int BONUSES_ON_TREE = 12;
 
 	public List <SkillTree> TreesToRoll = new List <SkillTree> ();
@@ -50,27 +50,29 @@ public class NewTreeManager : MonoBehaviour
 		
 	public void OnSelectTree1 ()
 	{
-		TreesToRoll [0].OnManualSelectClick ();
+		TreesToRoll [0].OnManualSelectClick ((LevelUpBonus) TreeRolls [0]);
 		SceneUpdate ();
 	}
 
 	public void OnSelectTree2 ()
 	{
-		TreesToRoll [1].OnManualSelectClick ();
+		TreesToRoll [1].OnManualSelectClick ((LevelUpBonus) TreeRolls [1]);
 		SceneUpdate ();
 	}
 
 	public void OnSelectTree3 ()
 	{
-		TreesToRoll [2].OnManualSelectClick ();
+		TreesToRoll [2].OnManualSelectClick ((LevelUpBonus) TreeRolls [2]);
 		SceneUpdate ();
 	}
 
 	public void OnSelectTree4 ()
 	{
-		TreesToRoll [3].OnManualSelectClick ();
+		TreesToRoll [3].OnManualSelectClick ((LevelUpBonus) TreeRolls [3]);
 		SceneUpdate ();
 	}
+
+
 
 	public void OnAddXPClick ()
 	{
@@ -84,9 +86,11 @@ public class NewTreeManager : MonoBehaviour
 	{
 		_TreeRowState = TreeRowState.Baby;
 		_CurrentPokemon = ToDisplay;
+		TreesToRoll = ToDisplay._SkillTreeBlock._SkillTrees;
 		ToDisplay.OnBreakTree += OnBreakTree;
 		ToDisplay.OnActivateTree += OnActivateTree;
 		ToDisplay.OnTradeSkill += OnTradeSkill;
+		Refresh ();
 	}
 
 	public void Refresh ()
@@ -149,34 +153,31 @@ public class NewTreeManager : MonoBehaviour
 			return;
 		}
 
-		if (_CurrentPokemon._SkillTrees.Count <= TreeDataIndex) 
+		if (_CurrentPokemon._SkillTreeBlock._SkillTrees.Count <= TreeDataIndex) 
 		{
 			TreeDisplays [TreeToChange].ChangeDisplayData (null);
 			return;
 		}
 
-		TreeDisplays [TreeToChange].ChangeDisplayData (_CurrentPokemon._SkillTrees [TreeDataIndex]);
+		TreeDisplays [TreeToChange].ChangeDisplayData (_CurrentPokemon._SkillTreeBlock._SkillTrees [TreeDataIndex]);
 	}
 
 
 	public void OnCallTreeRoll ()
 	{
-		List <ILevelUpOption> Temp = _CurrentPokemon.RollOnTrees();
-	
-		if (Temp == null)
+		TreeRolls = _CurrentPokemon._SkillTreeBlock.RollOnTrees ();
+//		Debug.Log (Temp [0].ToString());
+		if (TreeRolls == null)
 			{return;}
 //		TreesToRoll = Temp;
-		_InterruptDialog.DisplayOptionsList (Temp);
+		_InterruptDialog.DisplayOptionsList (TreeRolls);
 	}
 
 
 	public void OnAutoSelectClick ()
 
 	{
-		for (int i = 0; i < TreesToRoll.Count; i++) 
-		{
-			TreeRolls [i] = TreesToRoll [i].GetRandomAvailableBonus ();
-		}
+		TreeRolls = _CurrentPokemon._SkillTreeBlock.RollOnTrees ();
 
 		CheckForBonusType (BonusAtIndex.StatUp);
 		CheckForBonusType (BonusAtIndex.MoveMod);
@@ -194,7 +195,8 @@ public class NewTreeManager : MonoBehaviour
 		if (TempRoll.Count > 0) 
 		{
 			TempRoll.Shuffle ();
-			TreesToRoll [TempRoll [0]].OnSelected ();
+			int RollToUse = TempRoll [0];
+			TreesToRoll [RollToUse].OnSelected ((LevelUpBonus)TreeRolls [RollToUse]);
 			TempRoll.Clear ();
 			{return;}
 		}
@@ -202,7 +204,7 @@ public class NewTreeManager : MonoBehaviour
 
 	public void CheckForBonusType (BonusAtIndex _Bonus)
 	{
-		for (int i = 0; i < TreesToRoll.Count; i++) 
+		for (int i = 0; i < TreeRolls.Count; i++) 
 		{
 			if (TreeRolls [i].TypeOfBonus == _Bonus) 
 			{

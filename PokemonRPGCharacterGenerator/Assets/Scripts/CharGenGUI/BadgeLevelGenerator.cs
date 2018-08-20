@@ -96,7 +96,7 @@ public class BadgeLevelGenerator : MonoBehaviour
 
 	public void RollCycle ()
 	{
-		GameManager.instance._NewTreeManager.OnCallTreeRoll ();
+//		GameManager.instance._NewTreeManager.OnCallTreeRoll ();
 		GameManager.instance._NewTreeManager.OnAutoSelectClick ();
 //		GameManager.instance.CurrentPokemon.LevelUp ();
 	}
