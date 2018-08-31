@@ -175,7 +175,6 @@ public class NewTreeManager : MonoBehaviour
 
 
 	public void OnAutoSelectClick ()
-
 	{
 		TreeRolls = _CurrentPokemon._SkillTreeBlock.RollOnTrees ();
 

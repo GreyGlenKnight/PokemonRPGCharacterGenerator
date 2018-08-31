@@ -23,7 +23,7 @@ public class StatUpChoice : MonoBehaviour {
 //	public Button _Button2;
 
 	public void DisplayStatUpChoice (ILevelUpOption _IOption, 
-		NewStat _Stat)
+		IStat _Stat)
 	{
 //		_Button1.
 		_TreeName.text = _IOption.Tree.Name;

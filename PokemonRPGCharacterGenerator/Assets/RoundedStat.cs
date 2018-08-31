@@ -5,8 +5,9 @@ using UnityEngine.UI;
 using System;
 using System.Linq;
 
-public class RoundedStat: NewStat
+public class RoundedStat : IStat
 {
+	
 	private int _RawValue;
 	private string _StatName;
 
@@ -34,7 +35,7 @@ public class RoundedStat: NewStat
 		if (Stat1.StatName == Stat2.StatName)
 		{
 			RoundedStat ToReturn = new RoundedStat (Stat1.StatName);
-			ToReturn.SetRawValue (Stat1.RawValue + Stat2.RawValue);
+			ToReturn.SetValue (Stat1.RawValue + Stat2.RawValue);
 			return ToReturn;
 		}
 		else 

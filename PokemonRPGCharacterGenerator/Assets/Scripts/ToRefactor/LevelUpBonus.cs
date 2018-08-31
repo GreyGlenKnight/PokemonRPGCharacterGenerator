@@ -158,7 +158,7 @@ public abstract class LevelUpBonus : IHistoryItem, ILevelUpOption
 		public TechniqueModifierGain (SkillTree _Tree)
 		{
 			tree = _Tree;
-//			_TechniqueModifier = _Tree.TechniqueModifierOnTree;
+			_TechniqueModifier = new TechniqueModifier ();
 			//			_Name = "Learned: "+"";
 			_TreeName = _Tree.Name;
 			_BonusName = "Move Modifier: ";
@@ -186,7 +186,7 @@ public abstract class LevelUpBonus : IHistoryItem, ILevelUpOption
 		public AbilityGain (SkillTree _Tree)
 		{
 			tree = _Tree;
-//			_Ability = _Tree.AbilityOnTree;
+			_Ability = new Ability ();
 			//			_Name = "Learned: "+"";
 			_TreeName = _Tree.Name;
 			_BonusName = "Ability: ";
@@ -307,7 +307,7 @@ public abstract class LevelUpBonus : IHistoryItem, ILevelUpOption
 			_TreeName = _Tree.Name;
 			_HistoryDescription = "";
 		}
-		public override void ApplyLevelBonus(Pokemon _Pokemon)
+		public override void ApplyLevelBonus (Pokemon _Pokemon)
 		{
 			_Level = _Pokemon.Level;
 			_MaturityLevel = _Pokemon.Maturity;

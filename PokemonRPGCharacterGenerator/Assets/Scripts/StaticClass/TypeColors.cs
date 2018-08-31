@@ -214,7 +214,7 @@ public static class TypeColors
 		return _Sprite;
 	}
 		
-	public static Sprite GetSpriteForStat (NewStat _Stat)
+	public static Sprite GetSpriteForStat (IStat _Stat)
 	{
 		switch (_Stat.ToString()) 
 		{	

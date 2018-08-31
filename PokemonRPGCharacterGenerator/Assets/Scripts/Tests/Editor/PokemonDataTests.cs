@@ -149,7 +149,7 @@ public class PokemonDataTests
 		Pokemon TestMon = new Pokemon (TestBreed);
 //		Debug.Log (TestMon.Endurance.RawValue);
 
-		UnityEngine.Debug.Assert (TestMon._StatBlock.Endurance.RawValue > 0);
+		UnityEngine.Debug.Assert (TestMon._StatBlock.Endurance.ThisRawValue > 0);
 	}
 
 //	[Test]
@@ -199,35 +199,35 @@ public class PokemonDataTests
 	public void PokemonHasAttack ()
 	{
 		Pokemon TestMon = new Pokemon ();
-		UnityEngine.Debug.Assert (TestMon._StatBlock.Attack == 0);
+        UnityEngine.Debug.Assert (TestMon._StatBlock.Attack.ThisRawValue == 0);
 	}
 
 	[Test]
 	public void PokemonHasDefense ()
 	{
 		Pokemon TestMon = new Pokemon ();
-		UnityEngine.Debug.Assert (TestMon._StatBlock.Defense == 0);
+		UnityEngine.Debug.Assert (TestMon._StatBlock.Defense.ThisRawValue == 0);
 	}
 
 	[Test]
 	public void PokemonHasSpecialAttack ()
 	{
 		Pokemon TestMon = new Pokemon ();
-		UnityEngine.Debug.Assert (TestMon._StatBlock.SpecialAttack == 0);
+		UnityEngine.Debug.Assert (TestMon._StatBlock.SpecialAttack.ThisRawValue == 0);
 	}
 
 	[Test]
 	public void PokemonHasSpecialDefense ()
 	{
 		Pokemon TestMon = new Pokemon ();
-		UnityEngine.Debug.Assert (TestMon._StatBlock.SpecialDefense == 0);
+		UnityEngine.Debug.Assert (TestMon._StatBlock.SpecialDefense.ThisRawValue == 0);
 	}
 
 	[Test]
 	public void PokemonHasSpeed ()
 	{
 		Pokemon TestMon = new Pokemon ();
-		UnityEngine.Debug.Assert (TestMon._StatBlock.Speed == 0);
+		UnityEngine.Debug.Assert (TestMon._StatBlock.Speed.ThisRawValue == 0);
 	}
 
 	[Test]

@@ -77,7 +77,6 @@ public class Pokemon
 {
 
 	//Skills + HM abilities
-	//Affection
 	public string NickName;
 	public string TrainerName;
 	public int Level = 0;
@@ -101,7 +100,7 @@ public class Pokemon
 	public List <IHistoryItem> BonusHistory = new List <IHistoryItem> ();
 	public List <LevelUpBonus> LevelUpBonuses = new List <LevelUpBonus> ();
 	public List <MaturityBonus> MaturityBonuses = new List <MaturityBonus> ();
-	public List <SkillTree> _SkillTrees = new List <SkillTree>();
+//	public List <SkillTree> _SkillTrees = new List <SkillTree>();
 
 	public List <ElementTypesSkill> _ElementTypesSkill = new List <ElementTypesSkill> ();
 	public String HeldItem = "";

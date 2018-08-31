@@ -57,8 +57,8 @@ public class SkillTree
 
 	public List <LevelUpBonus> Bonuses = new List <LevelUpBonus> ();
 	private SkillTreeState _State = SkillTreeState.Locked;
-	//private SkillTree _CrossTree;
-	//private SkillTree _NextTree;
+	public SkillTree _CrossTree;
+	public SkillTree _TreeUp;
 	string _Name;
 
 
@@ -100,6 +100,14 @@ public class SkillTree
 	public SkillTree GetTreeIfActive ()
 	{
 		if (this.CurrentState == SkillTreeState.Active) 
+		{return this;} 
+		else 
+		{return null;}
+	}
+
+	public SkillTree GetTreeIfNotLocked ()
+	{
+		if (this.CurrentState != SkillTreeState.Locked) 
 		{return this;} 
 		else 
 		{return null;}

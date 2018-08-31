@@ -24,12 +24,12 @@ public class BreedBuilder: TestDataBuilder<Pokemon.Breed>
 		ToReturn = new Pokemon.Breed ();
 //		}
 
-		ToReturn.BreedStatBlock.Endurance.RawValue = EnduranceToUse;
-		ToReturn.BreedStatBlock.Attack.RawValue = AttackToUse;
-		ToReturn.BreedStatBlock.Defense.RawValue = DefenseToUse;
-		ToReturn.BreedStatBlock.SpecialAttack.RawValue = SpecialAttackToUse;
-		ToReturn.BreedStatBlock.SpecialDefense.RawValue = SpecialDefenseToUse;
-		ToReturn.BreedStatBlock.Speed.RawValue = SpeedToUse;
+		ToReturn.BreedStatBlock.Endurance.ThisRawValue = EnduranceToUse;
+		ToReturn.BreedStatBlock.Attack.ThisRawValue = AttackToUse;
+		ToReturn.BreedStatBlock.Defense.ThisRawValue = DefenseToUse;
+		ToReturn.BreedStatBlock.SpecialAttack.ThisRawValue = SpecialAttackToUse;
+		ToReturn.BreedStatBlock.SpecialDefense.ThisRawValue = SpecialDefenseToUse;
+		ToReturn.BreedStatBlock.Speed.ThisRawValue = SpeedToUse;
 		ToReturn.Type1 = Type1ToUse;
 		ToReturn.Type2 = Type2ToUse;
 

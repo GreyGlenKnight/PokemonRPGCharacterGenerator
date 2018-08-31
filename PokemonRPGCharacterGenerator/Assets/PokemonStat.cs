@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using System;
 using System.Linq;
 
-public abstract class PokemonStat 
+public abstract class PokemonStat
 
 {
 	public int RawValue;
@@ -19,12 +19,17 @@ public abstract class PokemonStat
 		get {return (RawValue / 2);}
 	}
 
+//	public abstract T AddValues ()
+//	{
+//		
+//	}
+
 	public PokemonStat (int _RawValue)
 	{
 		RawValue = _RawValue;
 	}
 
-	public static PokemonStat RollForStat (int _Roll)
+	public PokemonStat RollForStat (int _Roll)
 	{
 		switch (_Roll) 
 		{
@@ -55,36 +60,23 @@ public abstract class PokemonStat
 		return ThisStat.RawValue;
 	}
 
-	public static List <PokemonStat> RollStatChoices (PokemonStat _FavoredStat)
-	{
-		List <PokemonStat> ToReturn = new List <PokemonStat> ();
-		int _Roll1 = UnityEngine.Random.Range (0, 6);
-		Debug.Log (_Roll1);
-		PokemonStat StatToAdd = RollForStat (_Roll1);
-
-		if (StatToAdd == null) 
-		{
-			StatToAdd = _FavoredStat;
-		}
-
-		ToReturn.Add (StatToAdd);
-
-		int _Roll2 = UnityEngine.Random.Range (0, 6);
-		Debug.Log (_Roll2);
-		PokemonStat StatToAdd2 = RollForStat (_Roll2);
-
-		if (StatToAdd2 == null) 
-		{
-			StatToAdd2 = _FavoredStat;
-		}
-
-		ToReturn.Add (StatToAdd2);
-		return ToReturn;
-	}
-
 	public void SetRawValue (int NewValue)
 	{
 		RawValue = NewValue;
+	}
+
+	public T AddValues <T> (T Other) where T : PokemonStat
+	{
+		if (this.GetType ().Equals (Other.GetType ())) 
+		{
+			return (T) this.Create (RawValue + Other.RawValue);
+		} 
+
+		else 
+		{
+			Debug.Log ("Trying To Add Incompatible Stats");
+			return null;		
+		}	
 	}
 
 	public PokemonStat AddValues (PokemonStat Other)
@@ -101,27 +93,10 @@ public abstract class PokemonStat
 		}	
 	}
 
-
-//	public static T AddValues <T> (PokemonStat Other)
-//	{
-//		if (this.GetType ().Equals (Other.GetType ())) 
-//		{
-//			return this.Create (RawValue + Other.RawValue);
-//		} 
-//
-//		else 
-//		{
-//			Debug.Log ("Trying To Add Incompatible Stats");
-//			return null;		
-//		}	
-//	}
-
 	protected abstract PokemonStat Create (int RawValue);
-
-
 }
 
-public class EnduranceStat: PokemonStat
+public class EnduranceStat: PokemonStatGeneric <EnduranceStat>
 {
 	protected override PokemonStat Create (int RawValue)
 	{
@@ -129,7 +104,6 @@ public class EnduranceStat: PokemonStat
 	}
 
 	protected override int GetRoundedValue ()
-
 	{
 		return RawValue;	
 	}
@@ -155,7 +129,7 @@ public class EnduranceStat: PokemonStat
 	}
 }
 
-public class AttackStat: PokemonStat
+public class AttackStat: PokemonStatGeneric <AttackStat>
 {
 
 	protected override PokemonStat Create (int RawValue)
@@ -184,7 +158,7 @@ public class AttackStat: PokemonStat
 	}
 }
 
-public class DefenseStat: PokemonStat
+public class DefenseStat: PokemonStatGeneric <DefenseStat>
 {
 
 	protected override PokemonStat Create (int RawValue)
@@ -213,7 +187,7 @@ public class DefenseStat: PokemonStat
 	}
 }
 
-public class SpecialAttackStat: PokemonStat
+public class SpecialAttackStat: PokemonStatGeneric <SpecialAttackStat>
 {
 
 	protected override PokemonStat Create (int RawValue)
@@ -242,7 +216,7 @@ public class SpecialAttackStat: PokemonStat
 	}
 }
 
-public class SpecialDefenseStat: PokemonStat
+public class SpecialDefenseStat: PokemonStatGeneric <SpecialDefenseStat>
 {
 	protected override PokemonStat Create (int RawValue)
 	{
@@ -283,7 +257,7 @@ public class SpecialDefenseStat: PokemonStat
 	}
 }
 
-public class SpeedStat: PokemonStat
+public class SpeedStat: PokemonStatGeneric <SpeedStat>
 {
 	protected override PokemonStat Create (int RawValue)
 	{
@@ -311,15 +285,17 @@ public class SpeedStat: PokemonStat
 	}
 }
 
-public class TempStat: PokemonStat
-{
-	protected override PokemonStat Create (int RawValue)
-	{
-		return new TempStat (RawValue);
-	}
-	public TempStat (int RawValue) : base (RawValue)
-	{
-
-	}
-}
+//public class TempStat: PokemonStatGeneric <TempStat>
+//{
+//
+//	protected override PokemonStat Create (int RawValue)
+//	{
+//		return new TempStat (RawValue);
+//	}
+//	public TempStat (int RawValue) : base (RawValue)
+//	{
+//
+//	}
+//		
+//}
 	

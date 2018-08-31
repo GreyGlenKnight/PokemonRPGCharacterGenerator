@@ -160,7 +160,7 @@ public class TechniqueDisplay : MonoBehaviour
 //		}
 //	}
 
-	public List <Sprite> GetStatImages (List <NewStat> _Images) 
+	public List <Sprite> GetStatImages (List <IStat> _Images) 
 	{
 		List <Sprite> ToReturn = new List <Sprite> ();
 		if (_Images == null) {return null;}
