@@ -24,17 +24,25 @@ public interface IStat
 }
 
 
-public abstract class PokemonStatGeneric <T> : PokemonStat where T : PokemonStat
+public abstract class PokemonStatGeneric <T> : PokemonStat 
+    where T : PokemonStat
 {
 
-	public PokemonStatGeneric (T Stat1, 
-		T Stat2) : base (Stat1.ThisRawValue + Stat2.ThisRawValue)
+	public PokemonStatGeneric (T Stat1 , T Stat2) : 
+        base (Stat1.RawValue + Stat2.RawValue)
 	{
 	}
 
-	public PokemonStatGeneric (T Stat) : base (Stat.ThisRawValue)
+	public PokemonStatGeneric (T Stat) : 
+        base (Stat.RawValue)
 	{
 	}
+
+    public PokemonStatGeneric(int stat) :
+        base(stat)
+    {
+
+    }
 		
 }
 

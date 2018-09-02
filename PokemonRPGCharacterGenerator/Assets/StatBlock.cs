@@ -97,8 +97,9 @@ public class PokemonStatBlock : GenericStatBlock
 	private EnduranceStat _Endurance = new EnduranceStat (0);
 
 	public AttackStat Attack
-	{get 
-        {return _Attack.AddValues (_Pokemon.ThisBreed.BreedStatBlock.Attack);}}
+	{
+        get {return _Attack.AddValues (_Pokemon.ThisBreed.BreedStatBlock.Attack);}
+    }
 
 	public DefenseStat Defense
 	{get {return _Defense.AddValues (_Pokemon.ThisBreed.BreedStatBlock.Defense);}}
@@ -150,22 +151,22 @@ public class PokemonStatBlock : GenericStatBlock
 	public void GainStatUp (PokemonStat _Stat)
 	{
 		if (_Stat is AttackStat) {
-			_Attack.SetRawValue (_Attack.ThisRawValue + _Stat.ThisRawValue);
+			_Attack.SetRawValue (_Attack.RawValue + _Stat.RawValue);
 		}
 		if (_Stat is DefenseStat) {
-			_Defense.SetRawValue (_Defense.ThisRawValue + _Stat.ThisRawValue);
+			_Defense.SetRawValue (_Defense.RawValue + _Stat.RawValue);
 		}
 		if (_Stat is SpecialAttackStat) {
-			_SpecialAttack.SetRawValue (_SpecialAttack.ThisRawValue + _Stat.ThisRawValue);
+			_SpecialAttack.SetRawValue (_SpecialAttack.RawValue + _Stat.RawValue);
 		}
 		if (_Stat is SpecialDefenseStat) {
-			_SpecialDefense.SetRawValue (_SpecialDefense.ThisRawValue + _Stat.ThisRawValue);
+			_SpecialDefense.SetRawValue (_SpecialDefense.RawValue + _Stat.RawValue);
 		}
 		if (_Stat is SpeedStat) {
-			_Speed.SetRawValue (_Speed.ThisRawValue + _Stat.ThisRawValue);
+			_Speed.SetRawValue (_Speed.RawValue + _Stat.RawValue);
 		}
 		if (_Stat is EnduranceStat) {
-			_Endurance.SetRawValue (_Endurance.ThisRawValue + _Stat.ThisRawValue);
+			_Endurance.SetRawValue (_Endurance.RawValue + _Stat.RawValue);
 		}
 	}
 

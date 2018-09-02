@@ -118,14 +118,14 @@ public class EnduranceStat: PokemonStatGeneric <EnduranceStat>
 
 	}
 
-	public static implicit operator EnduranceStat (int NewValue)
-	{
-		return new EnduranceStat (NewValue);
-	}
+    public static implicit operator EnduranceStat(int NewValue)
+    {
+        return new EnduranceStat(NewValue);
+    }
 
-	public EnduranceStat AddValues (EnduranceStat Other)
+    public EnduranceStat AddValues (EnduranceStat Other)
 	{
-		return (EnduranceStat)this.Create (RawValue + Other.RawValue);
+		return (EnduranceStat) this.Create (RawValue + Other.RawValue);
 	}
 }
 
@@ -147,12 +147,12 @@ public class AttackStat: PokemonStatGeneric <AttackStat>
 		
 	}
 
-	public static implicit operator AttackStat (int NewValue)
-	{
-		return new AttackStat (NewValue);
-	}
+    public static implicit operator AttackStat(int NewValue)
+    {
+        return new AttackStat(NewValue);
+    }
 
-	public AttackStat AddValues (AttackStat Other)
+    public AttackStat AddValues (AttackStat Other)
 	{
 		return (AttackStat)this.Create (RawValue + Other.RawValue);
 	}
@@ -176,10 +176,10 @@ public class DefenseStat: PokemonStatGeneric <DefenseStat>
 
 	}
 
-	public static implicit operator DefenseStat (int NewValue)
-	{
-		return new DefenseStat (NewValue);
-	}
+	//public static implicit operator DefenseStat (int NewValue)
+	//{
+	//	return new DefenseStat (NewValue);
+	//}
 
 	public DefenseStat AddValues (DefenseStat Other)
 	{
@@ -205,12 +205,12 @@ public class SpecialAttackStat: PokemonStatGeneric <SpecialAttackStat>
 
 	}
 
-	public static implicit operator SpecialAttackStat (int NewValue)
-	{
-		return new SpecialAttackStat (NewValue);
-	}
+    public static implicit operator SpecialAttackStat(int NewValue)
+    {
+        return new SpecialAttackStat(NewValue);
+    }
 
-	public SpecialAttackStat AddValues (SpecialAttackStat Other)
+    public SpecialAttackStat AddValues (SpecialAttackStat Other)
 	{
 		return (SpecialAttackStat)this.Create (RawValue + Other.RawValue);
 	}
@@ -246,12 +246,12 @@ public class SpecialDefenseStat: PokemonStatGeneric <SpecialDefenseStat>
 
 	}
 
-	public static implicit operator SpecialDefenseStat (int NewValue)
-	{
-		return new SpecialDefenseStat (NewValue);
-	}
+    public static implicit operator SpecialDefenseStat(int NewValue)
+    {
+        return new SpecialDefenseStat(NewValue);
+    }
 
-	public SpecialDefenseStat AddValues (SpecialDefenseStat Other)
+    public SpecialDefenseStat AddValues (SpecialDefenseStat Other)
 	{
 		return (SpecialDefenseStat) this.Create (RawValue + Other.RawValue);
 	}
@@ -274,12 +274,12 @@ public class SpeedStat: PokemonStatGeneric <SpeedStat>
 
 	}
 
-	public static implicit operator SpeedStat (int NewValue)
-	{
-		return new SpeedStat (NewValue);
-	}
+    public static implicit operator SpeedStat(int NewValue)
+    {
+        return new SpeedStat(NewValue);
+    }
 
-	public SpeedStat AddValues (SpeedStat Other)
+    public SpeedStat AddValues (SpeedStat Other)
 	{
 		return (SpeedStat) this.Create (RawValue + Other.RawValue);
 	}

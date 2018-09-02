@@ -86,12 +86,12 @@ public class GameManager : MonoBehaviour
 		_SelectionState = SelectionState.Roll;
 		Pokemon.Breed CharmanderBreed = new Pokemon.Breed (ElementTypes.Fire, ElementTypes.Nothing);
 		CharmanderBreed.BreedName = "Charmander";
-		CharmanderBreed.BreedStatBlock.Endurance.ThisRawValue = 4;
-		CharmanderBreed.BreedStatBlock.Attack.ThisRawValue = 5;
-		CharmanderBreed.BreedStatBlock.Defense.ThisRawValue = 4;
-		CharmanderBreed.BreedStatBlock.SpecialAttack.ThisRawValue = 5;
-		CharmanderBreed.BreedStatBlock.SpecialDefense.ThisRawValue = 4;
-		CharmanderBreed.BreedStatBlock.Speed.ThisRawValue = 6;
+		CharmanderBreed.BreedStatBlock.Endurance.RawValue = 4;
+		CharmanderBreed.BreedStatBlock.Attack.RawValue = 5;
+		CharmanderBreed.BreedStatBlock.Defense.RawValue = 4;
+		CharmanderBreed.BreedStatBlock.SpecialAttack.RawValue = 5;
+		CharmanderBreed.BreedStatBlock.SpecialDefense.RawValue = 4;
+		CharmanderBreed.BreedStatBlock.Speed.RawValue = 6;
 
 
 		CurrentPokemon = new Pokemon (CharmanderBreed);

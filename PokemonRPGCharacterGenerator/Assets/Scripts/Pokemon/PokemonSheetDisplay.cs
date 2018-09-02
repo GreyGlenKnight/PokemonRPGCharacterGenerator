@@ -62,9 +62,9 @@ public class PokemonSheetDisplay : MonoBehaviour
 
 	public void SetStatBlock (Pokemon ToSet, Pokemon.Breed BreedToSet)
 	{
-		string EnduranceBonuses = ToSet._StatBlock.EnduranceBonuses.ThisRawValue.ToString ();
-		BaseEndurance.text = BreedToSet.BreedStatBlock.Endurance.ThisRawValue.ToString () + "   + " + EnduranceBonuses + " ";
-		CurrentEndurance.text = ToSet._StatBlock.Endurance.ThisRawValue.ToString ();
+		string EnduranceBonuses = ToSet._StatBlock.EnduranceBonuses.RawValue.ToString ();
+		BaseEndurance.text = BreedToSet.BreedStatBlock.Endurance.RawValue.ToString () + "   + " + EnduranceBonuses + " ";
+		CurrentEndurance.text = ToSet._StatBlock.Endurance.RawValue.ToString ();
 
 		BaseAttack.text = SetStatString (ToSet._StatBlock.AttackBonuses, 
 			BreedToSet.BreedStatBlock.Attack);
@@ -90,12 +90,12 @@ public class PokemonSheetDisplay : MonoBehaviour
 	public string SetStatString (PokemonStat _Stat, PokemonStat _Stat2)
 	{
 		string _StatBonuses = (_Stat.RoundedValue).ToString ();
-		if (_Stat.ThisRawValue % 2 == 1) 
+		if (_Stat.RawValue % 2 == 1) 
 		{
 			string TempString = _StatBonuses+".5";
 			_StatBonuses = TempString;
 		}
-		if (_Stat2.ThisRawValue % 2 == 0) 
+		if (_Stat2.RawValue % 2 == 0) 
 		{
 			return _Stat2.RoundedValue.ToString () + "   + " + _StatBonuses + " ";
 		}
