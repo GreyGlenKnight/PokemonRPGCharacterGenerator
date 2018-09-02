@@ -8,6 +8,9 @@ Desktop.ini
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
 
+#externalDlls
+*.dll
+
 # Windows Installer files
 *.cab
 *.msi
@@ -16,6 +19,55 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# =============== #
+# Unity generated #
+# =============== #
+[Tt]emp/
+[Oo]bj/
+[Bb]uild
+/[Bb]uilds/
+/[Ll]ibrary/
+[Ll]ibrary/
+[Bb]uilds/
+sysinfo.txt
+*.stackdump
+/Assets/AssetStoreTools*
+*.apk
+*.unitypackage
+*EditorProfile.data
+*EditorProfile.data.meta
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+[Ee]xported[Oo]bj/
+.vs/
+/*.userprefs
+/*.csproj
+/*.pidb
+*.pidb.meta
+/*.suo
+/*.sln*
+/*.user
+/*.unityproj
+/*.booproj
+.consulo/
+/*.tmp
+/*.svd
+ 
+# ============ #
+# OS generated #
+# ============ #
+.DS_Store*
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+[Tt]humbs.db
+[Dd]esktop.ini
+Corridor/Library/ShaderCache/
+Corridor/Library/metadata/
 
 # =========================
 # Operating System Files
@@ -45,39 +97,3 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
-
-# =============== #
-# Unity generated #
-# =============== #
-[Tt]emp/
-[Oo]bj/
-[Bb]uild
-[Bb]uilds
-[Ll]ibrary/
-sysinfo.txt
- 
-# ===================================== #
-# Visual Studio / MonoDevelop generated #
-# ===================================== #
-*.userprefs
-*.csproj
-*.pidb
-*.suo
-*.sln
-*.user
-*.unityproj
-*.booproj
-*.tmp
-*.pidb.meta
-
-# ===================================== #
-# Ignored Assets #
-# ===================================== #
-# Standard*Assets/ == not ignored this time because of the limited standard asset usage
-SkyBox*Volume*2/
-LightmapSnapshot.asset
-LightmapSnapshot.asset.meta
-Surforge
-Fantasy Skybox FREE/
-GE Common Assets/
-GUI Animator/
