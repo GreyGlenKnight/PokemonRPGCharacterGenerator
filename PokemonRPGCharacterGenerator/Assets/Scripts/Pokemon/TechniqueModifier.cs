@@ -5,7 +5,8 @@ using UnityEngine.UI;
 using System;
 using System.Linq;
 
-public class TechniqueModifier
+public class TechniqueModifier 
+//Ichoosable
 {
 }
 

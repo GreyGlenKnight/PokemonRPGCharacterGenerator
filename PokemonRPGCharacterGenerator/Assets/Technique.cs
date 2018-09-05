@@ -14,12 +14,19 @@ public enum AttackRange
 	Sniper
 }
 
-	public class Technique
+public class Technique : IChoosable
 {
-	public AttackRange Range;
+    #region IChoosable implementation
+
+    public string Name { get { return TechniqueName; } }
+    public string Description { get { return TechniqueDescription; } }
+
+    #endregion
+
+    public AttackRange Range;
 	public string DisplayRange;
-	public string Name;
-	public string Description;
+	public string TechniqueName;
+	public string TechniqueDescription;
 	public List <ElementTypes> Types = new List <ElementTypes> ();
 	public int BaseDamage;
 	public int BaseStrain;
@@ -39,9 +46,9 @@ public enum AttackRange
 		Temp.BaseAccuracy = -1;
 		Temp.BaseDamage = 11;
 		Temp.BaseStrain = 4;
-		Temp.Description = "A fiery runic symbol strikes the foe, inflicting heavy damage and burn.";
+		Temp.TechniqueDescription = "A fiery runic symbol strikes the foe, inflicting heavy damage and burn.";
 		Temp.DisplayRange = "Ranged";
-		Temp.Name = "Fire Blast";
+		Temp.TechniqueName = "Fire Blast";
 		Temp.StatsUsed.Add (new SpecialAttackStat (0));
 		Temp.Types.Add (ElementTypes.Fire);
 		return Temp;
@@ -53,9 +60,9 @@ public enum AttackRange
 		Dragon_Claw.BaseAccuracy = 1;
 		Dragon_Claw.BaseDamage = 8;
 		Dragon_Claw.BaseStrain = 3;
-		Dragon_Claw.Description = "The foe is ravaged by a mighty swipe of the pokemon’s claws.";
+		Dragon_Claw.TechniqueDescription = "The foe is ravaged by a mighty swipe of the pokemon’s claws.";
 		Dragon_Claw.DisplayRange = "Melee";
-		Dragon_Claw.Name = "Dragon Claw";
+		Dragon_Claw.TechniqueName = "Dragon Claw";
 		Dragon_Claw.StatsUsed.Add (new AttackStat (0));
 		Dragon_Claw.Types.Add (ElementTypes.Dragon);
 		return Dragon_Claw;
@@ -67,9 +74,9 @@ public enum AttackRange
 		Metal_Claw.BaseAccuracy = 0;
 		Metal_Claw.BaseDamage = 5;
 		Metal_Claw.BaseStrain = 2;
-		Metal_Claw.Description = "The pokemon gouges the opponent with a set of merciless claws. May raise Attack.";
+		Metal_Claw.TechniqueDescription = "The pokemon gouges the opponent with a set of merciless claws. May raise Attack.";
 		Metal_Claw.DisplayRange = "Melee";
-		Metal_Claw.Name = "Metal Claw";
+		Metal_Claw.TechniqueName = "Metal Claw";
 		Metal_Claw.StatsUsed.Add (new AttackStat (0));
 		Metal_Claw.Types.Add (ElementTypes.Steel);
 		return Metal_Claw;
@@ -80,9 +87,9 @@ public enum AttackRange
 		Technique Sand_Attack = new Technique ();
 		Sand_Attack.BaseAccuracy = 1;
 		Sand_Attack.BaseStrain = 3;
-		Sand_Attack.Description = "Norris always teaches his pokemon to be prepared for snakes.";
+		Sand_Attack.TechniqueDescription = "Norris always teaches his pokemon to be prepared for snakes.";
 		Sand_Attack.DisplayRange = "Ranged";
-		Sand_Attack.Name = "Sand Attack";
+		Sand_Attack.TechniqueName = "Sand Attack";
 		Sand_Attack.StatsUsed.Add (new DefenseStat (0));
 		Sand_Attack.StatsUsed.Add (new SpeedStat (0));
 		Sand_Attack.Types.Add (ElementTypes.Ground);

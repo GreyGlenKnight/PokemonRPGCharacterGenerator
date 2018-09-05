@@ -21,14 +21,13 @@ public enum BonusType
 	//Breeding,
 }
 
-public interface IHistoryItem
+public interface IHistoryItem : IChoosable
 {
-	
-	int LevelGained { get;}
+    int LevelGained { get;}
 	int MaturityLevel { get;}
 	string Title { get;}
-	string Name { get;}
-	string Description { get;}
+    //string ItemName { get;}
+    //string ItemDescription { get; }
 	string TutorialDescription { get;}
 	BonusType Type { get;}
 	Sprite GetRepresentedSprite { get;}

@@ -72,12 +72,19 @@ public class LevelUpEventArgs : PokemonEventArgs
 
 
 
-public class Pokemon
+public class Pokemon : IChoosable
 
 {
 
-	//Skills + HM abilities
-	public string NickName;
+    #region IChoosable implementation
+
+    public string Name { get { return NickName; } }
+    public string Description { get { return ThisBreed.BreedName + " Lv. " + Level.ToString(); } }
+
+    #endregion
+
+    //Skills + HM abilities
+    public string NickName;
 	public string TrainerName;
 	public int Level = 0;
 	public int Maturity; //This represents the relevant total maturity

@@ -5,6 +5,14 @@ using UnityEngine.UI;
 using System;
 using System.Linq;
 
+
+public interface IChoosable
+{
+    string Name { get; }
+    string Description { get; }
+    //EventHandler
+}
+
 public enum SkillTreeState
 {
 	Active, Inactive, Locked
@@ -26,11 +34,18 @@ public enum BonusState
 	Acquired
 }
 
-public class SkillTree 
-{		
-	public SkillTree (string lname, SkillTreeTier _lTier)
+public class SkillTree : IChoosable
+{
+    #region IChoosable implementation
+
+    public string Name { get { return TreeName; } }
+    public string Description { get { return "Skill Tree"; } }
+
+    #endregion
+
+    public SkillTree (string lname, SkillTreeTier _lTier)
 	{
-		Name = lname;
+		TreeName = lname;
 		Tier = _lTier;
 		_FavoredStatOnTree = new AttackStat (1);
 		_ElementTypesSkillOnTree.Add (new ElementTypesSkill (ElementTypes.Fire));
@@ -68,7 +83,7 @@ public class SkillTree
 	//	public event EventHandler OnSelected;
 	//	}
 
-	public string Name {private set {_Name = value;} get {return _Name;}}
+    public string TreeName {private set {_Name = value;} get {return _Name;}}
 
 	SkillTreeTier _Tier;
 

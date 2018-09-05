@@ -46,39 +46,31 @@ public class InterruptDialog : MonoBehaviour
 		}
 	}
 
-//	public void DisplayOptionsList (List <ILevelUpOption> _Bonuses, List <SkillTreeData> _Trees)
-//	{
-//		if (_Bonuses.Count == 0 || _Trees.Count == 0) 
-//		{
-//			Debug.Log ("Bonuses or trees are 0");
-//		}
-//
-//		if (_Bonuses.Count != _Trees.Count) 
-//		{
-//			throw new InvalidBonusesException (_Bonuses.Count, _Trees.Count);
-//		}
-//
-//		for (int i = 0; i < _Bonuses.Count; i++)
-//		{
-//			Debug.Log ("Line 28");
-//
-//			OptionDisplays [i].DisplayLevelUpOption (_Bonuses [i], _Trees [i]);
-//
-//			if (_Trees [i] == null) 
-//			{
-//				Debug.Log ("Null Tree");
-//				OptionDisplays [i].gameObject.SetActive (false);
-//				return;
-//			}
-//
-//			if (_Bonuses [i] == null) 
-//			{
-//				Debug.Log ("Null Bonus");
-//				OptionDisplays [i].gameObject.SetActive (false);
-//				return;
-//			}
-//		}
-//	}
+    public void DisplayOptionsList (List <IChoosable> _Choices)
+    {
+        if (_Choices == null)
+        {
+            Debug.Log("_Choices Null");
+            return;
+        }
+
+        if (_Choices.Count == 0)
+        {
+            Debug.Log("Choices are 0");
+        }
+
+        for (int i = 0; i < _Choices.Count; i++)
+        {
+            //          Debug.Log ("Line 28");
+            if (_Choices [i] == null)
+            {
+                Debug.Log("Null Choice");
+                OptionDisplays[i].gameObject.SetActive(false);
+                return;
+            }
+            OptionDisplays[i].DisplayLevelUpOption(_Choices[i]);
+        }
+    }
 }
 
 public class InvalidBonusesException : Exception

@@ -7,9 +7,14 @@ using System.Linq;
 
 public abstract class MaturityBonus : IHistoryItem
 {
-	#region IHistoryItem implementation
 
-	public int LevelGained {
+    #region IHistoryItem implementation
+
+    public string Name { get { return _BonusName; } }
+
+    public string Description { get { return _Description; } }
+
+    public int LevelGained {
 		get {return _Level;}
 	}
 
@@ -21,13 +26,13 @@ public abstract class MaturityBonus : IHistoryItem
 		get {return _Title;}
 	}
 
-	public string Name {
-		get {return _BonusName;}
-	}
+	//public string ItemName {
+	//	get {return _BonusName;}
+	//}
 
-	public string Description {
-		get {return _Description;}
-	}
+	//public string ItemDescription {
+	//	get {return _Description;}
+	//}
 
 	public string TutorialDescription {
 		get {return _TutorialDescription;}

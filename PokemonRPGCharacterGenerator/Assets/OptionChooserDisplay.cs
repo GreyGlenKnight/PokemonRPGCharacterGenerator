@@ -9,7 +9,8 @@ public enum CurrentChoiceType
 {
 	SkillTree,
 	Technique,
-	Stat
+	Stat,
+    Other
 //	Pokemon
 //	Item,
 //
@@ -91,41 +92,31 @@ public class OptionChooserDisplay : MonoBehaviour
 			_TechniqueVertical._BackGround.color = TypeColors.GetColorForTier (_Tree.Tier);
 			return;
 		}
-//
-//		if (_Bonus.TypeOfBonus == BonusAtIndex.StatUp) {
-//			Debug.Log ("OptionChooserDisplay 6");
-//			DisplayLevelUpOption (_Bonus, 
-//				MyStat.RollStatChoices (_Tree.FavoredStatOnTree) [0]);
-//			_StatUpChoice._BackGround.color = TypeColors.GetColorForTier (_Tree.Tier);
-//			return;
-//		}
 
-		//		_OptionPanel._Symbol;
 		_OptionPanel._Header.text = _Bonus.BonusName;
 		_OptionPanel._Description.text = _Bonus.OptionDescription;
 		_OptionPanel.gameObject.SetActive (true);
 		_TechniqueVertical.gameObject.SetActive (false);
-//		_StatUpChoice.gameObject.SetActive (false);
 	}
 
 	public void DisplayLevelUpOption (ILevelUpOption _Bonus, Technique _Technique)
 	{
 		_CurrentChoiceType = CurrentChoiceType.Technique;
-//		this.gameObject.SetActive (false);
 		_TechniqueVertical.gameObject.SetActive (true);
 		_OptionPanel.gameObject.SetActive (false);
-//		_StatUpChoice.gameObject.SetActive (false);
 		_TechniqueVertical.ChangeTechniqueDisplay (_Bonus, _Technique);
 	}
-		
-//	public void DisplayLevelUpOption (IOption _Bonus, MyStat _Stat)
-//	{
-//		_CurrentChoiceType = CurrentChoiceType.Stat;
-//		_TechniqueVertical.gameObject.SetActive (false);
-//		_OptionPanel.gameObject.SetActive (false);
-//		_StatUpChoice.gameObject.SetActive (true);
-//		_StatUpChoice.DisplayStatUpChoice (_Bonus, _Stat);
-//	}
 
-	//Could use MaturityBonus as input parameter if Maturity Up would yield a bonus.
+    public void DisplayLevelUpOption (IChoosable _Choice)
+    {
+        if (_Choice == null)
+        {
+            return;
+        }
+
+        _CurrentChoiceType = CurrentChoiceType.Other;
+        _OptionPanel.DisplayOption (_Choice);
+        _OptionPanel.gameObject.SetActive(true);
+        _TechniqueVertical.gameObject.SetActive(false);
+    }
 }

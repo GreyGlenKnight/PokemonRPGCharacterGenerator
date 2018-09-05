@@ -6,6 +6,7 @@ using System;
 using System.Linq;
 
 public class Ability
+//ICHOOSABLE
 {
 }
 

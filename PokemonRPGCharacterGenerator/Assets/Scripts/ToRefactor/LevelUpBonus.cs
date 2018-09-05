@@ -5,10 +5,10 @@ using UnityEngine.UI;
 using System;
 using System.Linq;
 
-public interface ILevelUpOption
+public interface ILevelUpOption : IChoosable
 {
-	SkillTree Tree { get;}	
-	string OptionName { get;}
+    SkillTree Tree { get;}
+    string OptionName { get;}
 	string BonusName { get;}
 	string OptionDescription { get;}
 	string OptionTutorial { get;}
@@ -18,11 +18,14 @@ public interface ILevelUpOption
 
 public abstract class LevelUpBonus : IHistoryItem, ILevelUpOption
 {
-	#region IOption implementation
 
-	private SkillTree tree;
+    #region IOption implementation
 
-	public SkillTree Tree {
+    private SkillTree tree;
+    public string Name { get { return _BonusName; } }
+    public string Description { get { return OptionDescription; } }
+
+    public SkillTree Tree {
 		get { return tree;}
 	}
 
@@ -72,11 +75,11 @@ public abstract class LevelUpBonus : IHistoryItem, ILevelUpOption
 		get {return _Title;}
 	}
 
-	public string Name {
+	public string ItemName {
 		get {return _BonusName;}
 	}
 
-	public string Description {
+	public string ItemDescription {
 		get {return _HistoryDescription;}
 	}
 		

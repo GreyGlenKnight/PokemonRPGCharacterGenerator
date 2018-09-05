@@ -139,12 +139,12 @@ public class PokemonStatBlock : GenericStatBlock
 
 	public int MaxHP
 	{		
-		get {return ((Endurance + Defense) * 2);}
+        get {return ((Endurance.RoundedValue + Defense.RoundedValue) * 2);}
 	}
 
 	public int MaxStrain 
 	{		
-		get {return ((Endurance + SpecialDefense) * 2);}
+        get {return ((Endurance.RoundedValue + SpecialDefense.RoundedValue) * 2);}
 	}
 		
 

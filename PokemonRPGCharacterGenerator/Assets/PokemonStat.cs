@@ -55,10 +55,10 @@ public abstract class PokemonStat
 	}
 		
 
-	public static implicit operator int (PokemonStat ThisStat)
-	{
-		return ThisStat.RawValue;
-	}
+	//public static implicit operator int (PokemonStat ThisStat)
+	//{
+	//	return ThisStat.RawValue;
+	//}
 
 	public void SetRawValue (int NewValue)
 	{
@@ -118,10 +118,10 @@ public class EnduranceStat: PokemonStatGeneric <EnduranceStat>
 
 	}
 
-    public static implicit operator EnduranceStat(int NewValue)
-    {
-        return new EnduranceStat(NewValue);
-    }
+    //public static implicit operator EnduranceStat(int NewValue)
+    //{
+    //    return new EnduranceStat(NewValue);
+    //}
 
     public EnduranceStat AddValues (EnduranceStat Other)
 	{
@@ -147,10 +147,10 @@ public class AttackStat: PokemonStatGeneric <AttackStat>
 		
 	}
 
-    public static implicit operator AttackStat(int NewValue)
-    {
-        return new AttackStat(NewValue);
-    }
+    //public static implicit operator AttackStat(int NewValue)
+    //{
+    //    return new AttackStat(NewValue);
+    //}
 
     public AttackStat AddValues (AttackStat Other)
 	{
@@ -205,10 +205,10 @@ public class SpecialAttackStat: PokemonStatGeneric <SpecialAttackStat>
 
 	}
 
-    public static implicit operator SpecialAttackStat(int NewValue)
-    {
-        return new SpecialAttackStat(NewValue);
-    }
+    //public static implicit operator SpecialAttackStat(int NewValue)
+    //{
+    //    return new SpecialAttackStat(NewValue);
+    //}
 
     public SpecialAttackStat AddValues (SpecialAttackStat Other)
 	{
@@ -246,10 +246,10 @@ public class SpecialDefenseStat: PokemonStatGeneric <SpecialDefenseStat>
 
 	}
 
-    public static implicit operator SpecialDefenseStat(int NewValue)
-    {
-        return new SpecialDefenseStat(NewValue);
-    }
+    //public static implicit operator SpecialDefenseStat(int NewValue)
+    //{
+    //    return new SpecialDefenseStat(NewValue);
+    //}
 
     public SpecialDefenseStat AddValues (SpecialDefenseStat Other)
 	{
@@ -274,10 +274,10 @@ public class SpeedStat: PokemonStatGeneric <SpeedStat>
 
 	}
 
-    public static implicit operator SpeedStat(int NewValue)
-    {
-        return new SpeedStat(NewValue);
-    }
+    //public static implicit operator SpeedStat(int NewValue)
+    //{
+    //    return new SpeedStat(NewValue);
+    //}
 
     public SpeedStat AddValues (SpeedStat Other)
 	{
