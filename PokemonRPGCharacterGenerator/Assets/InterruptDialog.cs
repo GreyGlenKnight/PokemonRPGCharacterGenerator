@@ -7,28 +7,28 @@ using System.Linq;
 
 public class InterruptDialog : MonoBehaviour 
 {
-	
+
+
 	public List <OptionChooserDisplay> OptionDisplays = new List <OptionChooserDisplay> ();
-//	public List <GameObject> LevelUpDisplayObjects = new List <GameObject> ();
 
-	//Use Events, hook Display up to class to drive data, probably non monobehavior
-	//NewTreeManager.
-	//use the hooks via InterruptDialogue.
-	//When Data changes, use event to call changes
-	//Pass in Ioption, Tree.
-	//use them as input parameters to drive a function
-	//Don't use New or Instantiate if possible outside of constructors.
-	//Set active or inactive depending on bonus type.
+    //OnChoiceMade += HideInterrupt ();
 
-	public void DisplayOptionsList (List <ILevelUpOption> _Bonuses)
+    public void HideInterrupt (object Caller, EventArgs E)
+    {
+        gameObject.SetActive(false);
+    }
+
+    public void DisplayOptionsList (List <ILevelUpOption> _Bonuses)
 	{
-		if (_Bonuses == null) 
+        Debug.Log("IOptions");
+
+        if (_Bonuses == null) 
 		{
 			Debug.Log ("_Bonuses null, probably XP fail");
 			return;
 		}
 
-		if (_Bonuses.Count == 0) 
+        if (_Bonuses.Count == 0) 
 		{
 			Debug.Log ("Bonuses are 0");
 		}
@@ -36,6 +36,7 @@ public class InterruptDialog : MonoBehaviour
 		for (int i = 0; i < _Bonuses.Count; i++)
 		{
 //			Debug.Log ("Line 28");
+
 			if (_Bonuses [i] == null) 
 			{
 				Debug.Log ("Null Bonus");
@@ -43,34 +44,38 @@ public class InterruptDialog : MonoBehaviour
 				return;
 			}
 			OptionDisplays [i].DisplayLevelUpOption (_Bonuses [i]);
+            OptionDisplays[i]._OptionPanel.OnChoiceMade += HideInterrupt;
 		}
 	}
 
-    public void DisplayOptionsList (List <IChoosable> _Choices)
-    {
-        if (_Choices == null)
-        {
-            Debug.Log("_Choices Null");
-            return;
-        }
 
-        if (_Choices.Count == 0)
-        {
-            Debug.Log("Choices are 0");
-        }
 
-        for (int i = 0; i < _Choices.Count; i++)
-        {
-            //          Debug.Log ("Line 28");
-            if (_Choices [i] == null)
-            {
-                Debug.Log("Null Choice");
-                OptionDisplays[i].gameObject.SetActive(false);
-                return;
-            }
-            OptionDisplays[i].DisplayLevelUpOption(_Choices[i]);
-        }
-    }
+    //public void DisplayOptionsList (List <IChoosable> _Choices)
+    //{
+    //    Debug.Log("IChoosable");
+    //    if (_Choices == null)
+    //    {
+    //        Debug.Log("_Choices Null");
+    //        return;
+    //    }
+
+    //    if (_Choices.Count == 0)
+    //    {
+    //        Debug.Log("Choices are 0");
+    //    }
+
+    //    for (int i = 0; i < _Choices.Count; i++)
+    //    {
+    //        //          Debug.Log ("Line 28");
+    //        if (_Choices [i] == null)
+    //        {
+    //            Debug.Log("Null Choice");
+    //            OptionDisplays[i].gameObject.SetActive(false);
+    //            return;
+    //        }
+    //        OptionDisplays [i].DisplayLevelUpOption(_Choices [i]);
+    //    }
+    //}
 }
 
 public class InvalidBonusesException : Exception

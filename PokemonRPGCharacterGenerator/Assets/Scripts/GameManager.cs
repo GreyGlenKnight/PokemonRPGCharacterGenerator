@@ -129,7 +129,7 @@ public class GameManager : MonoBehaviour
 		{
 			_PokemonSheetDisplay.TechsList [i].ChangeTechniqueDisplay (CurrentPokemon._TechniquesActive [i]);
 		}
-		_PokeSheetHistoryManager.ChangeDisplay (CurrentPokemon.BonusHistory);
+		_PokeSheetHistoryManager.ChangeDisplay (CurrentPokemon._HistoryBlock.BonusHistory);
 	}
 
 	public void Refresh ()

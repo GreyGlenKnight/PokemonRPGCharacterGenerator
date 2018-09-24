@@ -166,11 +166,10 @@ public class NewTreeManager : MonoBehaviour
 	public void OnCallTreeRoll ()
 	{
 		TreeRolls = _CurrentPokemon._SkillTreeBlock.RollOnTrees ();
-//		Debug.Log (Temp [0].ToString());
 		if (TreeRolls == null)
 			{return;}
-//		TreesToRoll = Temp;
-		_InterruptDialog.DisplayOptionsList (TreeRolls);
+
+        _InterruptDialog.DisplayOptionsList (TreeRolls);
 	}
 
 

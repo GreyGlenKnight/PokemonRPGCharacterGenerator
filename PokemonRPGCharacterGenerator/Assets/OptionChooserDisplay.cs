@@ -38,7 +38,7 @@ public class OptionChooserDisplay : MonoBehaviour
 //		{
 //		case CurrentChoiceType.SkillTree:
 //			_SkillTree.OnManualSelectClick ();
-////			GameManager.instance.SceneChanger.SwitchToTree();
+////			GameManager.instance.SceneChanger.SwitchToTree ();
 //			break;
 //		case CurrentChoiceType.Stat:	
 //			_SkillTree.OnManualSelectClick ();
@@ -51,61 +51,61 @@ public class OptionChooserDisplay : MonoBehaviour
 //		}
 //	}
 
-	public void DisplayLevelUpOption (ILevelUpOption _Bonus)
-	{
-		if (_Bonus == null) 
-		{
-			return;
-		}
+	//public void DisplayLevelUpOption (ILevelUpOption _Bonus)
+	//{
+	//	if (_Bonus == null) 
+	//	{
+	//		return;
+	//	}
 
-		_CurrentChoiceType = CurrentChoiceType.SkillTree;
-		_SkillTree = _Bonus.Tree;
-		_OptionPanel._BackGround.color = TypeColors.GetColorForTier (_Bonus.Tree.Tier);
-
-
-		if ((_Bonus.TypeOfBonus) == BonusAtIndex.Technique) {
-			DisplayLevelUpOption (_Bonus, 
-				_Bonus.Tree._TechniquesOnTree [((int)_Bonus.TypeOfBonus)]);
-			_TechniqueVertical._BackGround.color = TypeColors.GetColorForTier (_Bonus.Tree.Tier);
-			return;
-		}
-		_OptionPanel._Header.text = _Bonus.BonusName;
-		_OptionPanel._Description.text = _Bonus.OptionDescription;
-		_OptionPanel.gameObject.SetActive (true);
-		_TechniqueVertical.gameObject.SetActive (false);
-	}
-
-	public void DisplayLevelUpOption (ILevelUpOption _Bonus, SkillTree _Tree)
-	{
-		if (_Tree == null || _Bonus == null) {
-			return;
-		}
-
-		_CurrentChoiceType = CurrentChoiceType.SkillTree;
-		_SkillTree = _Tree;
-		_OptionPanel._BackGround.color = TypeColors.GetColorForTier (_Tree.Tier);
+	//	_CurrentChoiceType = CurrentChoiceType.SkillTree;
+	//	_SkillTree = _Bonus.Tree;
+	//	_OptionPanel._BackGround.color = TypeColors.GetColorForTier (_Bonus.Tree.Tier);
 
 
-		if (((int)_Bonus.TypeOfBonus) < 4) {
-			DisplayLevelUpOption (_Bonus, 
-				_Tree._TechniquesOnTree [((int)_Bonus.TypeOfBonus)]);
-			_TechniqueVertical._BackGround.color = TypeColors.GetColorForTier (_Tree.Tier);
-			return;
-		}
+	//	if ((_Bonus.TypeOfBonus) == BonusAtIndex.Technique) {
+	//		DisplayLevelUpOption (_Bonus, 
+	//			_Bonus.Tree._TechniquesOnTree [((int)_Bonus.TypeOfBonus)]);
+	//		_TechniqueVertical._BackGround.color = TypeColors.GetColorForTier (_Bonus.Tree.Tier);
+	//		return;
+	//	}
+	//	_OptionPanel._Header.text = _Bonus.BonusName;
+	//	_OptionPanel._Description.text = _Bonus.OptionDescription;
+	//	_OptionPanel.gameObject.SetActive (true);
+	//	_TechniqueVertical.gameObject.SetActive (false);
+	//}
 
-		_OptionPanel._Header.text = _Bonus.BonusName;
-		_OptionPanel._Description.text = _Bonus.OptionDescription;
-		_OptionPanel.gameObject.SetActive (true);
-		_TechniqueVertical.gameObject.SetActive (false);
-	}
+	//public void DisplayLevelUpOption (ILevelUpOption _Bonus, SkillTree _Tree)
+	//{
+	//	if (_Tree == null || _Bonus == null) {
+	//		return;
+	//	}
 
-	public void DisplayLevelUpOption (ILevelUpOption _Bonus, Technique _Technique)
-	{
-		_CurrentChoiceType = CurrentChoiceType.Technique;
-		_TechniqueVertical.gameObject.SetActive (true);
-		_OptionPanel.gameObject.SetActive (false);
-		_TechniqueVertical.ChangeTechniqueDisplay (_Bonus, _Technique);
-	}
+	//	_CurrentChoiceType = CurrentChoiceType.SkillTree;
+	//	_SkillTree = _Tree;
+	//	_OptionPanel._BackGround.color = TypeColors.GetColorForTier (_Tree.Tier);
+
+
+	//	if (((int)_Bonus.TypeOfBonus) < 4) {
+	//		DisplayLevelUpOption (_Bonus, 
+	//			_Tree._TechniquesOnTree [((int)_Bonus.TypeOfBonus)]);
+	//		_TechniqueVertical._BackGround.color = TypeColors.GetColorForTier (_Tree.Tier);
+	//		return;
+	//	}
+
+	//	_OptionPanel._Header.text = _Bonus.BonusName;
+	//	_OptionPanel._Description.text = _Bonus.OptionDescription;
+	//	_OptionPanel.gameObject.SetActive (true);
+	//	_TechniqueVertical.gameObject.SetActive (false);
+	//}
+
+	//public void DisplayLevelUpOption (ILevelUpOption _Bonus, Technique _Technique)
+	//{
+	//	_CurrentChoiceType = CurrentChoiceType.Technique;
+	//	_TechniqueVertical.gameObject.SetActive (true);
+	//	_OptionPanel.gameObject.SetActive (false);
+	//	_TechniqueVertical.ChangeTechniqueDisplay (_Bonus, _Technique);
+	//}
 
     public void DisplayLevelUpOption (IChoosable _Choice)
     {
@@ -116,7 +116,7 @@ public class OptionChooserDisplay : MonoBehaviour
 
         _CurrentChoiceType = CurrentChoiceType.Other;
         _OptionPanel.DisplayOption (_Choice);
-        _OptionPanel.gameObject.SetActive(true);
-        _TechniqueVertical.gameObject.SetActive(false);
+        _OptionPanel.gameObject.SetActive (true);
+        _TechniqueVertical.gameObject.SetActive (false);
     }
 }

@@ -80,39 +80,40 @@ public class Pokemon : IChoosable
 
     public string Name { get { return NickName; } }
     public string Description { get { return ThisBreed.BreedName + " Lv. " + Level.ToString(); } }
+    public void Choose () { return; }
 
     #endregion
 
     //Skills + HM abilities
     public string NickName;
 	public string TrainerName;
+
 	public int Level = 0;
 	public int Maturity; //This represents the relevant total maturity
 	public int Rate; //Rate int is essentially doubled
 	public int XP;
-	public int CurrentDamage;
+    public int TotalBaseStats = 20;
+
+    public int CurrentDamage;
 	public int CurrentStrainLost;
+
 	public int ShinyRNG;
 	public bool IsShiny;
 	public Gender _Gender;
 	private Breed _Breed;
+
 	public PokemonStatBlock _StatBlock;
 	public SkillTreeBlock _SkillTreeBlock;
+    public HistoryBlock _HistoryBlock;
+    //public XPBlock _XPBlock;
 
 	public List <Technique> _TechniquesKnown = new List <Technique> ();
 	public List <Technique> _TechniquesActive = new List <Technique> ();
 	public List <TechniqueModifier> _TechniqueModifiersKnown = new List <TechniqueModifier> ();
 	public List <Ability> _AbilitiesKnown = new List <Ability> ();
+    public List<ElementTypesSkill> _ElementTypesSkill = new List<ElementTypesSkill>();
+    public String HeldItem = "";
 
-	public List <IHistoryItem> BonusHistory = new List <IHistoryItem> ();
-	public List <LevelUpBonus> LevelUpBonuses = new List <LevelUpBonus> ();
-	public List <MaturityBonus> MaturityBonuses = new List <MaturityBonus> ();
-//	public List <SkillTree> _SkillTrees = new List <SkillTree>();
-
-	public List <ElementTypesSkill> _ElementTypesSkill = new List <ElementTypesSkill> ();
-	public String HeldItem = "";
-
-	public int TotalBaseStats = 20;
 
 	public event EventHandler <LevelUpEventArgs> OnChooseLevelUpBonus;
 	public event EventHandler <PokemonEventArgs> OnBreakTree;
@@ -178,6 +179,7 @@ public class Pokemon : IChoosable
 			IsShiny = true;
 			Debug.Log ("Holy Shit, a Shiny!");
 		}
+        _HistoryBlock = new HistoryBlock (this);
 		_SkillTreeBlock = new SkillTreeBlock (this);
 		_StatBlock = new PokemonStatBlock (this);
 
@@ -257,8 +259,8 @@ public class Pokemon : IChoosable
 		{
 			return;
 		}
-		_Bonus.ApplyLevelBonus(this);
-		BonusHistory.Add (_Bonus);
+		_Bonus.ApplyLevelBonus ();
+		_HistoryBlock.BonusHistory.Add (_Bonus);
 	}
 
 	public void ApplyMaturityBonus (List<MaturityBonus> MBonus, int maturity)
@@ -271,7 +273,7 @@ public class Pokemon : IChoosable
 	     for (int i = 0; i < MBonus.Count; i++)
 	     {
 			MBonus[i].ApplyMaturityBonus(this);
-			BonusHistory.Add (MBonus[i]);
+            _HistoryBlock.BonusHistory.Add (MBonus[i]);
 	     }
 	}
 

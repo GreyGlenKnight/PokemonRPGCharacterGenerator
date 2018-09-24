@@ -20,6 +20,7 @@ public class Technique : IChoosable
 
     public string Name { get { return TechniqueName; } }
     public string Description { get { return TechniqueDescription; } }
+    public void Choose() { return; }
 
     #endregion
 

@@ -46,6 +46,8 @@ public abstract class MaturityBonus : IHistoryItem
 		get {throw new NotImplementedException ();}
 	}
 
+    public void Choose () { return; }
+
 	#endregion
 
 	public string GetTierString (SkillTreeTier _Tier)
@@ -91,7 +93,7 @@ public abstract class MaturityBonus : IHistoryItem
 			_MaturityLevel = _Pokemon.Maturity;
             _Pokemon.GainAbilitySlot();
 			_Level = _Pokemon.Level;
-			_Pokemon.MaturityBonuses.Add (this);
+			_Pokemon._HistoryBlock.MaturityBonuses.Add (this);
         }
     }
 
@@ -112,7 +114,7 @@ public abstract class MaturityBonus : IHistoryItem
 			_MaturityLevel = _Pokemon.Maturity;
 			_Pokemon.GainBreakTree (_Tier);
 			_Level = _Pokemon.Level;
-			_Pokemon.MaturityBonuses.Add (this);
+			_Pokemon._HistoryBlock.MaturityBonuses.Add (this);
         }
     }
 
@@ -132,7 +134,7 @@ public abstract class MaturityBonus : IHistoryItem
 			_MaturityLevel = _Pokemon.Maturity;
 			_Pokemon.SwapTrees(_Tier);
 			_Level = _Pokemon.Level;
-			_Pokemon.MaturityBonuses.Add (this);
+			_Pokemon._HistoryBlock.MaturityBonuses.Add (this);
         }
     }
 
@@ -150,7 +152,7 @@ public abstract class MaturityBonus : IHistoryItem
 			_MaturityLevel = _Pokemon.Maturity;
             _Pokemon.GainSTABBonus();
 			_Level = _Pokemon.Level;
-			_Pokemon.MaturityBonuses.Add (this);
+			_Pokemon._HistoryBlock.MaturityBonuses.Add (this);
         }
     }
 
@@ -169,7 +171,7 @@ public abstract class MaturityBonus : IHistoryItem
 			_MaturityLevel = _Pokemon.Maturity;
             _Pokemon.GainNatureBonus();
 			_Level = _Pokemon.Level;
-			_Pokemon.MaturityBonuses.Add (this);
+			_Pokemon._HistoryBlock.MaturityBonuses.Add (this);
         }
     }
 
@@ -189,7 +191,7 @@ public abstract class MaturityBonus : IHistoryItem
 			_MaturityLevel = _Pokemon.Maturity;
 			_Pokemon.GainBonusLevel ();
 			_Level = _Pokemon.Level;
-			_Pokemon.MaturityBonuses.Add (this);
+			_Pokemon._HistoryBlock.MaturityBonuses.Add (this);
 //			Description = Description+(Pokemon.Maturity);
         }
     }
@@ -211,7 +213,7 @@ public abstract class MaturityBonus : IHistoryItem
 			_MaturityLevel = _Pokemon.Maturity;
 			_Pokemon.GainActiveTreeBonus (_TreeSlot);
 			_Level = _Pokemon.Level;
-			_Pokemon.MaturityBonuses.Add (this);
+			_Pokemon._HistoryBlock.MaturityBonuses.Add (this);
         }
     }
 
@@ -229,7 +231,7 @@ public abstract class MaturityBonus : IHistoryItem
 			_MaturityLevel = _Pokemon.Maturity;
 			_Pokemon.GainEnhancerSlotBonus ();
 			_Level = _Pokemon.Level;
-			_Pokemon.MaturityBonuses.Add (this);
+			_Pokemon._HistoryBlock.MaturityBonuses.Add (this);
         }
     }
 
@@ -249,7 +251,7 @@ public abstract class MaturityBonus : IHistoryItem
 			_MaturityLevel = _Pokemon.Maturity;
 			_Pokemon.GainSpecialTrainingBonus ();
 			_Level = _Pokemon.Level;
-			_Pokemon.MaturityBonuses.Add (this);
+			_Pokemon._HistoryBlock.MaturityBonuses.Add (this);
         }
     }
 }

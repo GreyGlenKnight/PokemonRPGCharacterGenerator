@@ -71,6 +71,9 @@ private SkillTree AutoChooseTree (SkillTreeTier _Tier)
 		_SkillTrees.Add (new SkillTree("Pureblood 3", SkillTreeTier.Tier3));
 		_SkillTrees.Add (new SkillTree("Fire Body 3", SkillTreeTier.Tier3));
 		_SkillTrees.Add (new SkillTree("Acrobatics 1", SkillTreeTier.Tier1));
+
+        for (int i = 0; i < _SkillTrees.Count; i++)
+        {_SkillTrees [i].SetSkillTreeBlock (this); }
 	}
 
 public void SwapTrees (SkillTreeTier Tier)
@@ -116,7 +119,7 @@ public void SwapTrees (SkillTreeTier Tier)
 		_SkillTrees [TreeSlot].ChangeTreeState (SkillTreeState.Active);
 	}
 
-	public List <ILevelUpOption> RollOnTrees ()
+    public List <ILevelUpOption> RollOnTrees ()
 	{
 		if (_Pokemon.XP < 2) 
 		{
@@ -141,7 +144,7 @@ public void SwapTrees (SkillTreeTier Tier)
 			}
 		}
 
-		List <ILevelUpOption> TempOptions = new List <ILevelUpOption> ();
+        List <ILevelUpOption> TempOptions = new List <ILevelUpOption> ();
 
 		for (int i = 0; i < TreesToRoll.Count; i++) 
 		{

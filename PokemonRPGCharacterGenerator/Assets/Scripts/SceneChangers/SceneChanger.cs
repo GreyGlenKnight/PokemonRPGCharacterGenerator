@@ -21,7 +21,7 @@ public class SceneChanger : MonoBehaviour
 
 	public void SwitchToInterrupt()
 	{
-		_PokeSheetTreeManager.gameObject.SetActive(false);
+		_PokeSheetTreeManager.gameObject.SetActive(true);
 		_PokeSheetSceneManager.gameObject.SetActive(false);
 		_PokeSheetHistoryManager.gameObject.SetActive (false);
 		_InterruptDialog.gameObject.SetActive (true);
@@ -45,7 +45,7 @@ public class SceneChanger : MonoBehaviour
 		_PokeSheetHistoryManager.gameObject.SetActive (true);
 		_InterruptDialog.gameObject.SetActive (false);
 
-		_PokeSheetHistoryManager.ChangeDisplay (GameManager.instance.CurrentPokemon.BonusHistory);
+        _PokeSheetHistoryManager.ChangeDisplay (GameManager.instance.CurrentPokemon._HistoryBlock.BonusHistory);
 	}
 
 }

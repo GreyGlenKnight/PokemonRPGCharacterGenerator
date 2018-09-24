@@ -14,11 +14,12 @@ public interface ILevelUpOption : IChoosable
 	string OptionTutorial { get;}
 	BonusAtIndex TypeOfBonus { get;}
 	Sprite GetSymbolSprite { get;}
+    Pokemon ThisPokemon { get; }
+    LevelUpBonus BonusToApply { get; }
 }
 
 public abstract class LevelUpBonus : IHistoryItem, ILevelUpOption
 {
-
     #region IOption implementation
 
     private SkillTree tree;
@@ -59,6 +60,17 @@ public abstract class LevelUpBonus : IHistoryItem, ILevelUpOption
 		}
 	}
 
+    public Pokemon ThisPokemon {
+        get { return Tree.ThisPokemon; } 
+    }
+
+    public LevelUpBonus BonusToApply { get { return this; } }
+
+    public void Choose () 
+    {
+        ThisPokemon.ApplyLevelBonus (BonusToApply);
+    }
+
 	#endregion
 	
 	#region IHistoryItem implementation
@@ -95,9 +107,9 @@ public abstract class LevelUpBonus : IHistoryItem, ILevelUpOption
 		get {throw new NotImplementedException ();}
 	}
 
-	#endregion
+    #endregion
 
-	public enum BonusState
+    public enum BonusState
 	{
 		Remaining,
 		Acquired
@@ -109,9 +121,10 @@ public abstract class LevelUpBonus : IHistoryItem, ILevelUpOption
 	}
 
 
-	public abstract void ApplyLevelBonus (Pokemon _Pokemon);
+	public abstract void ApplyLevelBonus ();
 
 	public BonusState State = BonusState.Remaining;
+    public Pokemon _Pokemon;
 	private string _HistoryDescription;
 	private string _OptionDescription;
 	private string _TutorialDescription;
@@ -144,13 +157,13 @@ public abstract class LevelUpBonus : IHistoryItem, ILevelUpOption
 			_TreeName = _Tree.Name;
 			_HistoryDescription = "Gained Technique "+_TechniqueToAdd.Name+" On "+_TreeName;
 		}
-		public override void ApplyLevelBonus(Pokemon _Pokemon)
+		public override void ApplyLevelBonus ()
 		{
 			SetBonusStateAcquired ();
-			_Level = _Pokemon.Level;
-			_MaturityLevel = _Pokemon.Maturity;
-			_Pokemon.GainTechnique(_Technique);
-			_Pokemon.LevelUpBonuses.Add (this);
+			_Level = ThisPokemon.Level;
+			_MaturityLevel = ThisPokemon.Maturity;
+            ThisPokemon.GainTechnique(_Technique);
+            ThisPokemon._HistoryBlock.LevelUpBonuses.Add (this);
 		}
 	}
 
@@ -172,13 +185,13 @@ public abstract class LevelUpBonus : IHistoryItem, ILevelUpOption
 			string ModName = "";
 			_HistoryDescription = "Gained Technique Modifier "+ModName+" On "+_TreeName;
 		}
-		public override void ApplyLevelBonus(Pokemon _Pokemon)
+		public override void ApplyLevelBonus()
 		{
 			SetBonusStateAcquired ();
-			_Level = _Pokemon.Level;
-			_MaturityLevel = _Pokemon.Maturity;
-			_Pokemon.GainTechniqueModifier (_TechniqueModifier);
-			_Pokemon.LevelUpBonuses.Add (this);
+			_Level = ThisPokemon.Level;
+			_MaturityLevel = ThisPokemon.Maturity;
+            ThisPokemon.GainTechniqueModifier (_TechniqueModifier);
+            ThisPokemon._HistoryBlock.LevelUpBonuses.Add (this);
 		}
 	}
 
@@ -200,14 +213,14 @@ public abstract class LevelUpBonus : IHistoryItem, ILevelUpOption
 			string AbilityName = "";
 			_HistoryDescription = "Gained Ability "+AbilityName+" On "+_TreeName;
 		}
-		public override void ApplyLevelBonus(Pokemon _Pokemon)
+		public override void ApplyLevelBonus()
 		{
 			SetBonusStateAcquired ();
-			_Level = _Pokemon.Level;
-			_MaturityLevel = _Pokemon.Maturity;
+			_Level = ThisPokemon.Level;
+			_MaturityLevel = ThisPokemon.Maturity;
 
-			_Pokemon.GainAbility (_Ability);
-			_Pokemon.LevelUpBonuses.Add (this);
+            ThisPokemon.GainAbility (_Ability);
+            ThisPokemon._HistoryBlock.LevelUpBonuses.Add (this);
 		}
 	}
 
@@ -230,14 +243,14 @@ public abstract class LevelUpBonus : IHistoryItem, ILevelUpOption
 //			_Name = "Gained Stat Up: "+_Stat.ToString();
 			_HistoryDescription = "Gained Stat Bonus To "+_Stat.ToString()+" On "+_TreeName;
 		}
-		public override void ApplyLevelBonus(Pokemon _Pokemon)
+		public override void ApplyLevelBonus()
 		{	
 			SetBonusStateAcquired ();
-			_Level = _Pokemon.Level;
-			_MaturityLevel = _Pokemon.Maturity;
+			_Level = ThisPokemon.Level;
+			_MaturityLevel = ThisPokemon.Maturity;
 
-			_Pokemon.GainStatUp (_Stat);
-			_Pokemon.LevelUpBonuses.Add (this);
+            ThisPokemon.GainStatUp (_Stat);
+            ThisPokemon._HistoryBlock.LevelUpBonuses.Add (this);
 		}
 	}
 
@@ -263,13 +276,13 @@ public abstract class LevelUpBonus : IHistoryItem, ILevelUpOption
 
 			_HistoryDescription = "Gained Skill Bonus To "+ _Types.ToString()+" On "+_TreeName;
 		}
-		public override void ApplyLevelBonus(Pokemon _Pokemon)
+		public override void ApplyLevelBonus()
 		{
 			SetBonusStateAcquired ();
-			_Level = _Pokemon.Level;
-			_MaturityLevel = _Pokemon.Maturity;
-			_Pokemon.GainElementTypesSkillUp (_ElementTypesSkills);
-			_Pokemon.LevelUpBonuses.Add (this);
+            _Level = ThisPokemon.Level;
+			_MaturityLevel = ThisPokemon.Maturity;
+            ThisPokemon.GainElementTypesSkillUp (_ElementTypesSkills);
+            ThisPokemon._HistoryBlock.LevelUpBonuses.Add (this);
 		}
 	}
 
@@ -286,14 +299,14 @@ public abstract class LevelUpBonus : IHistoryItem, ILevelUpOption
 			_TutorialDescription = "Pokemon Gains a Maturity Rank. Hastens Evolution and Grants Access to Advanced Trees.";
 			_HistoryDescription = "Gained Maturity Bonus On "+_TreeName;
 		}
-		public override void ApplyLevelBonus (Pokemon _Pokemon)
+		public override void ApplyLevelBonus ()
 		{
 			SetBonusStateAcquired ();
-			_Level = _Pokemon.Level;
-			_MaturityLevel = _Pokemon.Maturity;
-	
-			_Pokemon.GainMaturityPlusBonus ();
-			_Pokemon.LevelUpBonuses.Add (this);
+			_Level = ThisPokemon.Level;
+			_MaturityLevel = ThisPokemon.Maturity;
+
+            ThisPokemon.GainMaturityPlusBonus ();
+            ThisPokemon._HistoryBlock.LevelUpBonuses.Add (this);
 		}
 	}
 
@@ -310,10 +323,10 @@ public abstract class LevelUpBonus : IHistoryItem, ILevelUpOption
 			_TreeName = _Tree.Name;
 			_HistoryDescription = "";
 		}
-		public override void ApplyLevelBonus (Pokemon _Pokemon)
+		public override void ApplyLevelBonus ()
 		{
-			_Level = _Pokemon.Level;
-			_MaturityLevel = _Pokemon.Maturity;
+			_Level = ThisPokemon.Level;
+			_MaturityLevel = ThisPokemon.Maturity;
 		}
 	}
 
@@ -331,10 +344,10 @@ public abstract class LevelUpBonus : IHistoryItem, ILevelUpOption
 			_TreeName = _Tree.Name;
 			_HistoryDescription = "";
 		}
-		public override void ApplyLevelBonus(Pokemon _Pokemon)
+		public override void ApplyLevelBonus ()
 		{
-			_Level = _Pokemon.Level;
-			_MaturityLevel = _Pokemon.Maturity;
+			_Level = ThisPokemon.Level;
+			_MaturityLevel = ThisPokemon.Maturity;
 		}
 	}
 }
