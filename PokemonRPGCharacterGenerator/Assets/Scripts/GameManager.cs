@@ -53,21 +53,14 @@ public enum SelectionState
 	Roll
 }
 
-public enum TreeRowState
-{
-	Baby,
-	Mid,
-	Adult
-}
 
 public class GameManager : MonoBehaviour 
 
 {
 	public static GameManager instance = null;
-	public NewTreeManager _NewTreeManager;
+	public SkillTreeBlockController _SkillTreeBlockController;
 	public SelectionState _SelectionState;
 	public Pokemon CurrentPokemon;
-	public TreeRowState TreeRowState;
 	public BadgeLevelGenerator _BadgeLevelGenerator;
 	public PokemonSheetDisplay _PokemonSheetDisplay;
 	public PokeSheetHistoryManager _PokeSheetHistoryManager;
@@ -108,7 +101,7 @@ public class GameManager : MonoBehaviour
 		CurrentPokemon.CurrentDamage = 0;
 		CurrentPokemon.CurrentStrainLost = 0;
 
-		_NewTreeManager.ChangeDisplayPokemon (CurrentPokemon);
+		_SkillTreeBlockController.ChangeDisplayPokemon (CurrentPokemon);
 		_PokemonSheetDisplay.ShowNewPokemon (CurrentPokemon, CharmanderBreed);
 
 
@@ -134,17 +127,17 @@ public class GameManager : MonoBehaviour
 
 	public void Refresh ()
 	{
-		_NewTreeManager.Refresh ();
+		_SkillTreeBlockController.Refresh ();
 	}
 
 	public void ChangeVisibleTrees ()
 	{
-		_NewTreeManager.ChangeVisibleTrees ();
+		_SkillTreeBlockController.ChangeVisibleTrees ();
 	}
 
-	public void TreeSwap (int TreeToChange, int TreeDataIndex)
-	{
-		_NewTreeManager.TreeSwap (TreeToChange, TreeDataIndex);
-	}
+	//public void TreeSwap (int TreeToChange, int TreeDataIndex)
+	//{
+	//	_NewTreeManager.TreeSwap (TreeToChange, TreeDataIndex);
+	//}
 
 }

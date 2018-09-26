@@ -240,20 +240,20 @@ public class Pokemon : IChoosable
 		}	
 	}
 
-	public void LevelUp (LevelUpBonus _LevelUpBonus)
+    public void LevelUp (ILevelUpOption _LevelUpOption)
 	{
 		if (OnChooseLevelUpBonus != null) 
 		{
 			LevelUpEventArgs args = new LevelUpEventArgs (this, 
-				_LevelUpBonus);
+				_LevelUpOption);
 			OnChooseLevelUpBonus (this, args); 
 		}
 
-		ApplyLevelBonus (_LevelUpBonus);
+		ApplyLevelBonus (_LevelUpOption);
 		MaturityBonusCheck ();
 	}
 
-	public void ApplyLevelBonus (LevelUpBonus _Bonus)
+    public void ApplyLevelBonus (ILevelUpOption _Bonus)
 	{
 		if (_Bonus == null)
 		{

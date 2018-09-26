@@ -8,7 +8,7 @@ using System.Linq;
 public class HistoryBlock
 {
     public List<IHistoryItem> BonusHistory = new List<IHistoryItem>();
-    public List<LevelUpBonus> LevelUpBonuses = new List<LevelUpBonus>();
+    public List<ILevelUpOption> LevelUpBonuses = new List<ILevelUpOption>();
     public List<MaturityBonus> MaturityBonuses = new List<MaturityBonus>();
     public Pokemon ThisPokemon;
 

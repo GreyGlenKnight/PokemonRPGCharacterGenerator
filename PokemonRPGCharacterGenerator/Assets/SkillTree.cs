@@ -154,7 +154,7 @@ public class SkillTree : IChoosable
         return Temp [0];
     }
 
-    public void OnSelected (LevelUpBonus _Bonus)
+    public void OnSelected (ILevelUpOption _Bonus)
     {
         if (Bonuses.Count == 0) 
         {
@@ -164,7 +164,7 @@ public class SkillTree : IChoosable
         GameManager.instance.CurrentPokemon.LevelUp (_Bonus);
     }
 
-    public void OnManualSelectClick (LevelUpBonus _Bonus)
+    public void OnManualSelectClick (ILevelUpOption _Bonus)
     {
         //        this += OnManualSelectClick;
 

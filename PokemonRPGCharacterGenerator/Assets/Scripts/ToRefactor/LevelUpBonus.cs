@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using System;
 using System.Linq;
 
-public interface ILevelUpOption : IChoosable
+public interface ILevelUpOption : IChoosable, IHistoryItem
 {
     SkillTree Tree { get;}
     string OptionName { get;}
@@ -16,9 +16,10 @@ public interface ILevelUpOption : IChoosable
 	Sprite GetSymbolSprite { get;}
     Pokemon ThisPokemon { get; }
     LevelUpBonus BonusToApply { get; }
+    void ApplyLevelBonus();
 }
 
-public abstract class LevelUpBonus : IHistoryItem, ILevelUpOption
+public abstract class LevelUpBonus : ILevelUpOption
 {
     #region IOption implementation
 
@@ -121,7 +122,8 @@ public abstract class LevelUpBonus : IHistoryItem, ILevelUpOption
 	}
 
 
-	public abstract void ApplyLevelBonus ();
+    public abstract void ApplyLevelBonus();
+
 
 	public BonusState State = BonusState.Remaining;
     public Pokemon _Pokemon;

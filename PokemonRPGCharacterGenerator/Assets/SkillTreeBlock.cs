@@ -25,7 +25,17 @@ public List <SkillTree> GetSkillTreesForTier (SkillTreeTier _Tier)
 	return Temp;
 }
 
-private SkillTree AutoChooseTree (SkillTreeTier _Tier)
+    public List <SkillTree> SortSkillTreeList ()
+    {
+        List<SkillTree> Temp = new List<SkillTree> ();
+        Temp.AddRange(GetSkillTreesForTier(SkillTreeTier.Tier0));
+        Temp.AddRange(GetSkillTreesForTier(SkillTreeTier.Tier1));
+        Temp.AddRange(GetSkillTreesForTier(SkillTreeTier.Tier2));
+        Temp.AddRange(GetSkillTreesForTier(SkillTreeTier.Tier3));
+        return Temp;
+    }
+
+    private SkillTree AutoChooseTree (SkillTreeTier _Tier)
 {
 	List <SkillTree> Temp = new List <SkillTree> ();
 	SkillTree ToReturn;

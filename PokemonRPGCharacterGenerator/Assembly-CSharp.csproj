@@ -108,10 +108,10 @@
     <Compile Include="Assets\Scripts\SceneChangers\MenuScene.cs" />
     <Compile Include="Assets\Scripts\SceneChangers\MenuSceneChanger.cs" />
     <Compile Include="Assets\Scripts\SceneChangers\SceneChanger.cs" />
-    <Compile Include="Assets\Scripts\SkillTree\NewTreeManager.cs" />
+    <Compile Include="Assets\Scripts\SkillTree\SkillTreeBlockController.cs" />
     <Compile Include="Assets\Scripts\SkillTree\SkillTreeBonuses.cs" />
     <Compile Include="Assets\Scripts\SkillTree\SkillTreeData.cs" />
-    <Compile Include="Assets\Scripts\SkillTree\SkillTreePaneDisplay.cs" />
+    <Compile Include="Assets\Scripts\SkillTree\SkillTreeDisplay.cs" />
     <Compile Include="Assets\Scripts\SkillTree\SkillTreesView.cs" />
     <Compile Include="Assets\Scripts\StaticClass\TypeColors.cs" />
     <Compile Include="Assets\Scripts\TagClasses\PokeSheetTreeManager.cs" />
@@ -121,6 +121,8 @@
     <Compile Include="Assets\Scripts\ToRefactor\XPManager.cs" />
     <Compile Include="Assets\SkillTree.cs" />
     <Compile Include="Assets\SkillTreeBlock.cs" />
+    <Compile Include="Assets\SkillTreeBlockDisplay.cs" />
+    <Compile Include="Assets\SkillTreeController.cs" />
     <Compile Include="Assets\SkillTreeLineDisplay.cs" />
     <Compile Include="Assets\StandardStat.cs" />
     <Compile Include="Assets\StatBlock.cs" />

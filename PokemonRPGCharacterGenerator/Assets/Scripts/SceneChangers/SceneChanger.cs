@@ -16,7 +16,6 @@ public class SceneChanger : MonoBehaviour
 		_PokeSheetSceneManager.gameObject.SetActive(false);
 		_PokeSheetHistoryManager.gameObject.SetActive (false);
 		_InterruptDialog.gameObject.SetActive (false);
-
     }
 
 	public void SwitchToInterrupt()
@@ -34,8 +33,6 @@ public class SceneChanger : MonoBehaviour
         _PokeSheetSceneManager.gameObject.SetActive(true);
 		_PokeSheetHistoryManager.gameObject.SetActive (false);
 		_InterruptDialog.gameObject.SetActive (false);
-
-
     }
 
 	public void SwitchToHistory()
