@@ -5,10 +5,10 @@ using UnityEngine.UI;
 using System;
 using System.Linq;
 
-public enum TreeRowView 
-{
-	Baby, Mid, Last
-}
+//public enum TreeRowView 
+//{
+//	Baby, Mid, Last
+//}
 
 
 public class MenuSceneChanger : MonoBehaviour 

@@ -64,10 +64,9 @@ public class GameManager : MonoBehaviour
 	public BadgeLevelGenerator _BadgeLevelGenerator;
 	public PokemonSheetDisplay _PokemonSheetDisplay;
 	public PokeSheetHistoryManager _PokeSheetHistoryManager;
+    public SceneChanger sceneChanger;
 
-
-	void Awake()
-
+    void Awake()
 	{
 		if (instance == null)
 		{instance = this;}
@@ -101,8 +100,7 @@ public class GameManager : MonoBehaviour
 		CurrentPokemon.CurrentDamage = 0;
 		CurrentPokemon.CurrentStrainLost = 0;
 
-		_SkillTreeBlockController.ChangeDisplayPokemon (CurrentPokemon);
-		_PokemonSheetDisplay.ShowNewPokemon (CurrentPokemon, CharmanderBreed);
+
 
 
 
@@ -118,12 +116,18 @@ public class GameManager : MonoBehaviour
 		CurrentPokemon._TechniquesActive.Add (Technique.Sand_Attack ());
 		CurrentPokemon._TechniquesActive.Add (Technique.Fire_Blast ());
 
-		for (int i = 0; i < CurrentPokemon._TechniquesKnown.Count; i++) 
-		{
-			_PokemonSheetDisplay.TechsList [i].ChangeTechniqueDisplay (CurrentPokemon._TechniquesActive [i]);
-		}
-		_PokeSheetHistoryManager.ChangeDisplay (CurrentPokemon._HistoryBlock.BonusHistory);
-	}
+
+		
+        sceneChanger.SwitchToTree();
+        // TODO add to scene changer
+        //_SkillTreeBlockController.ChangeDisplayPokemon(CurrentPokemon);
+        //_PokemonSheetDisplay.ShowNewPokemon(CurrentPokemon, CharmanderBreed);
+        //for (int i = 0; i < CurrentPokemon._TechniquesKnown.Count; i++)
+        //{
+        //    _PokemonSheetDisplay.TechsList[i].ChangeTechniqueDisplay(CurrentPokemon._TechniquesActive[i]);
+        //}
+        //_PokeSheetHistoryManager.ChangeDisplay(CurrentPokemon._HistoryBlock.BonusHistory);
+    }
 
 	public void Refresh ()
 	{

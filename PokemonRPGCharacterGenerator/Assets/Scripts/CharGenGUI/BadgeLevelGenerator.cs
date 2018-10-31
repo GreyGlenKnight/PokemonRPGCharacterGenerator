@@ -49,8 +49,12 @@ public class BadgeLevelGenerator : MonoBehaviour
 	public BadgeLevelDisplay _BadgeLevelDisplay;
 	public SkillTreesView _SkillTrees;
 
+    public void OnBadgeLevelSelect(int value)
+    {
+        BadgeLevel = value;
+    }
 
-	public void OnBadgeLevelSelect ()
+    public void OnBadgeLevelSelect ()
 	{
 		BadgeLevel = _BadgeLevelDisplay.BLDropDown.value;
 	}

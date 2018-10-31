@@ -6,24 +6,23 @@ using System;
 using System.Linq;
 
 public class SkillTreeBlock
-
 {
-public List <SkillTree> _SkillTrees = new List <SkillTree>();
-public Pokemon _Pokemon;
+    public List <SkillTree> _SkillTrees = new List <SkillTree>();
+    public Pokemon _Pokemon;
 
-public List <SkillTree> GetSkillTreesForTier (SkillTreeTier _Tier)
-{
-	List <SkillTree> Temp = new List <SkillTree> ();
+    public List<SkillTree> GetSkillTreesForTier(SkillTreeTier _Tier)
+    {
+        List<SkillTree> Temp = new List<SkillTree>();
 
-	for (int i = 0; i < _SkillTrees.Count; i++) 
-	{
-		if (_SkillTrees [i].Tier == _Tier) 
-		{
-			Temp.Add (_SkillTrees [i]);
-		}
-	}
-	return Temp;
-}
+        for (int i = 0; i < _SkillTrees.Count; i++)
+        {
+            if (_SkillTrees[i].Tier == _Tier)
+            {
+                Temp.Add(_SkillTrees[i]);
+            }
+        }
+        return Temp;
+    }
 
     public List <SkillTree> SortSkillTreeList ()
     {
@@ -35,34 +34,34 @@ public List <SkillTree> GetSkillTreesForTier (SkillTreeTier _Tier)
         return Temp;
     }
 
-    private SkillTree AutoChooseTree (SkillTreeTier _Tier)
-{
-	List <SkillTree> Temp = new List <SkillTree> ();
-	SkillTree ToReturn;
+    private SkillTree AutoChooseTree(SkillTreeTier _Tier)
+    {
+        List<SkillTree> Temp = new List<SkillTree>();
+        SkillTree ToReturn;
 
-	switch (_Tier)
-	{	
-	case SkillTreeTier.Tier0 | SkillTreeTier.Tier1:
-		Temp.Concat (GetSkillTreesForTier (SkillTreeTier.Tier0));
-		Temp.Concat (GetSkillTreesForTier (SkillTreeTier.Tier1));
-		Temp.Shuffle ();
-		ToReturn = Temp [0];
-		return ToReturn;
-	case SkillTreeTier.Tier2:
-		Temp.Concat (GetSkillTreesForTier (SkillTreeTier.Tier2));
-		Temp.Shuffle ();
-		ToReturn = Temp [0];
-		return ToReturn;
-	case SkillTreeTier.Tier3:
-		Temp.Concat (GetSkillTreesForTier (SkillTreeTier.Tier3));
-		Temp.Shuffle ();
-		ToReturn = Temp [0];
-		return ToReturn;
-	default:
-		Debug.Log ("This pokemon has gone Super Saiyan" + _Tier);
-		return null;
-	}
-}
+        switch (_Tier)
+        {
+            case SkillTreeTier.Tier0 | SkillTreeTier.Tier1:
+                Temp.Concat(GetSkillTreesForTier(SkillTreeTier.Tier0));
+                Temp.Concat(GetSkillTreesForTier(SkillTreeTier.Tier1));
+                Temp.Shuffle();
+                ToReturn = Temp[0];
+                return ToReturn;
+            case SkillTreeTier.Tier2:
+                Temp.Concat(GetSkillTreesForTier(SkillTreeTier.Tier2));
+                Temp.Shuffle();
+                ToReturn = Temp[0];
+                return ToReturn;
+            case SkillTreeTier.Tier3:
+                Temp.Concat(GetSkillTreesForTier(SkillTreeTier.Tier3));
+                Temp.Shuffle();
+                ToReturn = Temp[0];
+                return ToReturn;
+            default:
+                Debug.Log("This pokemon has gone Super Saiyan" + _Tier);
+                return null;
+        }
+    }
 
 	public SkillTreeBlock (Pokemon PokemonToUse)
 	{
@@ -86,15 +85,15 @@ public List <SkillTree> GetSkillTreesForTier (SkillTreeTier _Tier)
         {_SkillTrees [i].SetSkillTreeBlock (this); }
 	}
 
-public void SwapTrees (SkillTreeTier Tier)
-{
-	_SkillTrees [0].ChangeTreeState (SkillTreeState.Inactive);
-	_SkillTrees [3].ChangeTreeState (SkillTreeState.Active);
-	SkillTree TempData2 = _SkillTrees [3];
-	SkillTree TempData = _SkillTrees [0];
-	_SkillTrees [0] = TempData2;
-	_SkillTrees [3] = TempData;
-}
+    public void SwapTrees (SkillTreeTier Tier)
+    {
+	    _SkillTrees [0].ChangeTreeState (SkillTreeState.Inactive);
+	    _SkillTrees [3].ChangeTreeState (SkillTreeState.Active);
+	    SkillTree TempData2 = _SkillTrees [3];
+	    SkillTree TempData = _SkillTrees [0];
+	    _SkillTrees [0] = TempData2;
+	    _SkillTrees [3] = TempData;
+    }
 
 	public void GainBreakTree (SkillTreeTier _Tier)
 	{
@@ -107,7 +106,6 @@ public void SwapTrees (SkillTreeTier Tier)
 		ActivateTrees (TreeSlot);
 		Debug.Log ("Gained Active Tree :"+ _Pokemon.Maturity);
 	}
-
 
 	public void UnlockTrees (SkillTreeTier _Tier)
 	{

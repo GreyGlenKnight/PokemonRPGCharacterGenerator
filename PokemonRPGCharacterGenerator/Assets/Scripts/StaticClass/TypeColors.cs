@@ -155,37 +155,26 @@ public static class TypeColors
 
 	public static Sprite [] StatSymbols = new Sprite []
 	{
-	AttackSprite,
-	DefenseSprite,
-	SpecialAttackSprite,
-	SpecialDefenseSprite,
-	SpeedSprite,
-	EnduranceSprite
+	    AttackSprite,
+	    DefenseSprite,
+	    SpecialAttackSprite,
+	    SpecialDefenseSprite,
+	    SpeedSprite,
+	    EnduranceSprite
 	};
 
 	public static Color GetColorForType (ElementTypes _Type)
-
 	{
 		return 	TypeColorList [(int) _Type];
 	}
 
 	public static string GetStringForType (ElementTypes _Type)
-
 	{
 		return TypeStringList [(int) _Type]; 
 	}
 
 	public static Color GetColorForTier (SkillTreeTier _Tier)
 	{
-//	if (_Tier == SkillTreeTier.Tier0) 
-//	{_BackGround.color = Color.gray;}
-//	if (_Tier == SkillTreeTier.Tier1) 
-//	{_BackGround.color = Color.cyan;}
-//	if (_Tier == SkillTreeTier.Tier2) 
-//	{_BackGround.color = Color.green;}
-//	if (_Tier == SkillTreeTier.Tier3) 
-//	{_BackGround.color = Color.yellow;}
-
 		switch (_Tier) 
 		{	
 		case SkillTreeTier.Tier0:
