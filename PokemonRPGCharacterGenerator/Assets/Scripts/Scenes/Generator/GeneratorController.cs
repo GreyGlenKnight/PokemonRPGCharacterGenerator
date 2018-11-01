@@ -6,7 +6,7 @@ using System;
 public class GeneratorController
 {
     GeneratorDisplay Display;
-    SkillTreeBlockController Treeblock;
+    public SkillTreeBlockController Treeblock;
     Pokemon CurrentPokemon;
 
     public GeneratorController(
@@ -64,6 +64,8 @@ public class GeneratorController
         pokemon.OnActivateTree += OnPokemonUpdate;
         pokemon.OnTradeSkill += OnPokemonUpdate;
         pokemon.OnAddXP += OnPokemonUpdate;
+        pokemon.OnChooseLevelUpBonus += OnPokemonUpdate;
+        
         Display.SetXPAction(() =>
         {
             pokemon.AddXP();
@@ -82,7 +84,11 @@ public class GeneratorController
     public void AddGenerator(BadgeLevelGenerator generator)
     {
         Display.SetDropdownAction(generator.OnBadgeLevelSelect);
-        Display.SetGenerateAction(generator.OnGenerateMonClick);
+        Display.SetGenerateAction(()=> 
+        {
+            generator.OnGenerateMonClick();
+            Refresh(CurrentPokemon);
+        } );
     }
 
 

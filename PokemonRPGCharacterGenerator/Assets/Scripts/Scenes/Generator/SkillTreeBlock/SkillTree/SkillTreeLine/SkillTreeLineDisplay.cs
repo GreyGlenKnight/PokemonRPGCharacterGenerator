@@ -19,7 +19,7 @@ public class SkillTreeLineDisplay : MonoBehaviour
         BonusText.text = "";
         BonusText.color = Color.black;
         BonusToggle.isOn = false;
-        BonusBG.color = LockTreeColor;
+        //BonusBG.color = LockTreeColor;
     }
 
     public void SetToggle(bool setTo)
@@ -27,10 +27,12 @@ public class SkillTreeLineDisplay : MonoBehaviour
         if(setTo == true)
         {
             BonusText.color = ToInactive(BonusText.color);
+            BonusToggle.isOn = true;
         }
         else
         {
             BonusText.color = ToActive(BonusText.color);
+            BonusToggle.isOn = false;
         }
     }
 

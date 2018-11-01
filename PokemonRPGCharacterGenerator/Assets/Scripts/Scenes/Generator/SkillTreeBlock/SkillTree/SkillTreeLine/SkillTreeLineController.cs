@@ -26,6 +26,7 @@ public class SkillTreeLineController
 
         if (Data.State == LevelUpBonus.BonusState.Acquired)
         {
+            Debug.Log("is Active");
             Display.SetToggle(true);
         } else
         {

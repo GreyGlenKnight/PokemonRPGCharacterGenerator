@@ -10,7 +10,6 @@ public class GeneratorDisplay : MonoBehaviour
     [SerializeField] private SkillTreeBlockDisplay TreeBlockPrefab;
     private SkillTreeBlockDisplay TreeBlockInstance;
 
-    // 
     //public LevelInfoDisplay XPPrefab;
     [SerializeField] private LevelInfoDisplay XPInstance;
 

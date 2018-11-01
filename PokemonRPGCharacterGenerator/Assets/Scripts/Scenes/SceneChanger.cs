@@ -1,12 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
+[Serializable]
 public class SceneChanger : MonoBehaviour
 {
-    //public PokeSheetSceneManager _PokeSheetSceneManager;
-    //public PokeSheetTreeManager _PokeSheetTreeManager;
-
     public PokemonSheetDisplay _PokemonSheet;
 	public PokeSheetHistoryManager _PokeSheetHistoryManager;
 	public InterruptDialog _InterruptDialog;
@@ -14,7 +13,7 @@ public class SceneChanger : MonoBehaviour
 
     [SerializeField] private GeneratorDisplay GeneratorGUIPrefab;
     private GeneratorDisplay GeneratorDisplay;
-    private GeneratorController GeneratorController;
+    public GeneratorController GeneratorController;
     
     private void ClosePokemonGenerationGUI()
     {
@@ -27,7 +26,6 @@ public class SceneChanger : MonoBehaviour
 
     private void OpenPokemonGenerationGUI()
     {
-        Debug.Log("Trying to create Pokemon generation scene");
         if (GeneratorGUIPrefab == null)
             throw new System.Exception(
                 "GeneratorGUIPrefab is null, " +
