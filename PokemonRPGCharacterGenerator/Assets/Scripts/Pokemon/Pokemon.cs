@@ -476,11 +476,11 @@ public class Pokemon : IChoosable
 
 
 
-	public class Breed 
+    public class Breed
 	{
 		public virtual ElementTypes Type1 {get {return _Type1;} set {_Type1 = value; }}
 		public virtual ElementTypes Type2 {get {return _Type2;} set {_Type2 = value; }}
-		public string BreedName; // May be unnecessary
+		public string BreedName; 
 
 		public BreedStatBlock BreedStatBlock = new BreedStatBlock ();
 

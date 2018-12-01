@@ -53,7 +53,9 @@ public class GeneratorController
     public void Refresh(Pokemon toRefresh)
     {
         Treeblock.Refresh();
-        Display.UpdateXPDisplay(toRefresh.XP,toRefresh.Level,toRefresh.Level);
+        Display.UpdateXPDisplay(toRefresh.XP, 
+                                toRefresh.Level,
+                                toRefresh.Level);
     }
 
     public void SetPokemon(Pokemon pokemon)

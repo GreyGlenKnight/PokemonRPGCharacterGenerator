@@ -1,45 +1,23 @@
-﻿<Properties RefactoringSettings.EnableRefactorings="True" StartupConfiguration="{12C713B3-27D3-91DA-05F4-93A974B2680E}|">
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/PokeSheetHistoryManager.cs">
+﻿<Properties StartupConfiguration="{12C713B3-27D3-91DA-05F4-93A974B2680E}|" RefactoringSettings.EnableRefactorings="True">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Pokemon/Pokemon.cs">
     <Files>
-      <File FileName="Assets/Scripts/Pokemon/Pokemon.cs" Line="102" Column="24" />
-      <File FileName="Assets/Scripts/GameManager.cs" Line="61" Column="19" />
-      <File FileName="Assets/OptionChooserDisplay.cs" Line="19" Column="28" />
-      <File FileName="Assets/InterruptDialog.cs" Line="19" Column="1" />
-      <File FileName="Assets/SkillTree.cs" Line="164" Column="49" />
-      <File FileName="Assets/Scripts/Pokemon/PokemonSheetDisplay.cs" Line="8" Column="14" />
-      <File FileName="Assets/Technique.cs" Line="60" Column="13" />
-      <File FileName="Assets/Scripts/Pokemon/HistoryBlock.cs" Line="11" Column="41" />
-      <File FileName="Assets/Scripts/SceneChangers/SceneChanger.cs" Line="8" Column="20" />
-      <File FileName="Assets/Scripts/CharGenGUI/BadgeLevelGenerator.cs" Line="50" Column="9" />
-      <File FileName="Assets/Scripts/SkillTree/SkillTreeBlockController.cs" Line="26" Column="5" />
-      <File FileName="Assets/Scripts/CharGenGUI/BadgeLevelDisplay.cs" Line="7" Column="14" />
-      <File FileName="Assets/Scripts/TagClasses/PokeSheetTreeManager.cs" Line="7" Column="2" />
-      <File FileName="Assets/Scripts/SkillTree/SkillTreesView.cs" Line="5" Column="21" />
-      <File FileName="Assets/SkillTreeController.cs" Line="21" Column="58" />
-      <File FileName="Assets/Scripts/SkillTree/SkillTreeDisplay.cs" Line="15" Column="2" NotebookId="1" />
-      <File FileName="Assets/StatBlock.cs" Line="147" Column="75" NotebookId="1" />
-      <File FileName="Assets/PokemonStat.cs" Line="276" Column="1" NotebookId="1" />
-      <File FileName="Assets/IStat.cs" Line="27" Column="32" NotebookId="1" />
-      <File FileName="Assets/RoundedStat.cs" Line="38" Column="16" NotebookId="1" />
-      <File FileName="Assets/Scripts/MaturityBonus.cs" Line="254" Column="27" NotebookId="1" />
-      <File FileName="Assets/Scripts/ToRefactor/HistoryItem.cs" Line="24" Column="43" NotebookId="1" />
-      <File FileName="Assets/Scripts/ToRefactor/LevelUpBonus.cs" Line="126" Column="1" NotebookId="1" />
-      <File FileName="Assets/Scripts/CharSheetGUI/BonusDisplay.cs" Line="35" Column="1" NotebookId="1" />
-      <File FileName="Assets/OptionPanel.cs" Line="14" Column="35" NotebookId="1" />
-      <File FileName="Assets/SkillTreeBlockDisplay.cs" Line="12" Column="1" NotebookId="1" />
-      <File FileName="Assets/SkillTreeBlock.cs" Line="35" Column="21" NotebookId="1" />
-      <File FileName="Assets/SkillTreeLineDisplay.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="Assets/PokeSheetHistoryManager.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="Assets/Scripts/Pokemon/Pokemon.cs" Line="105" Column="21" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Scenes/SceneChanger.cs" Line="44" Column="55" />
+      <File FileName="Assets/Scripts/Scenes/Generator/GeneratorDisplay.cs" Line="14" Column="36" />
+      <File FileName="Assets/Scripts/Scenes/Generator/GeneratorController.cs" Line="38" Column="20" />
+      <File FileName="Assets/Scripts/FileReader.cs" Line="27" Column="6" />
+      <File FileName="Assets/Scripts/BreedReader/Editor/BreedReaderTest.cs" Line="60" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint enabled="false" file="/Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/StatBlock.cs" relfile="Assets/StatBlock.cs" line="211" column="1" />
       <Breakpoint enabled="false" file="/Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/ToRefactor/LevelUpBonus.cs" relfile="Assets/Scripts/ToRefactor/LevelUpBonus.cs" line="162" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
 </Properties>

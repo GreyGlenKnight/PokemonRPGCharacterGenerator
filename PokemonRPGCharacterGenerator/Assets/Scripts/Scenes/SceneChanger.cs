@@ -76,7 +76,6 @@ public class SceneChanger : MonoBehaviour
 	public void SwitchToHistory()
 	{
         ClosePokemonGenerationGUI();
-
         _PokemonSheet.gameObject.SetActive(false);
 		_PokeSheetHistoryManager.gameObject.SetActive (true);
 		_InterruptDialog.gameObject.SetActive (false);

@@ -219,6 +219,23 @@ public class BreedStatBlock : GenericStatBlock
         _endurance = new EnduranceStat(0);
 
     }
+
+    public BreedStatBlock (
+        int endurance,
+        int attack,
+        int defense, 
+        int specialAttack,
+        int specialDefense,
+        int speed
+                         )
+    {
+        _endurance = new EnduranceStat (endurance);
+        _attack = new AttackStat (attack);
+        _defense = new DefenseStat (defense);
+        _specialattack = new SpecialAttackStat (specialAttack);
+        _specialdefense = new SpecialDefenseStat (specialDefense);
+        _speed = new SpeedStat (speed);
+    }
 }
 
 

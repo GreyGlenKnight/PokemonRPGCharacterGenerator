@@ -164,7 +164,7 @@ public class PokemonDataTests
 	[Test]
 	public void PokemonHasHP ()
 	{		
-		Pokemon.Breed TestBreed = A.Breed ().W_Endurance(1);
+        Pokemon.Breed TestBreed = A.Breed ().W_Endurance(1).W_Defense(3);
 		Pokemon TestMon = new Pokemon (TestBreed);
 		UnityEngine.Debug.Assert (TestMon._StatBlock.MaxHP >= 2);
 	}
@@ -172,7 +172,7 @@ public class PokemonDataTests
 	[Test]
 	public void PokemonHasStrain ()
 	{
-		Pokemon.Breed TestBreed = A.Breed ().W_Endurance(1);
+        Pokemon.Breed TestBreed = A.Breed ().W_Endurance(1).W_SpecialDefense(3);
 		Pokemon TestMon = new Pokemon (TestBreed);
 		UnityEngine.Debug.Assert (TestMon._StatBlock.MaxStrain >= 2);
 	}
