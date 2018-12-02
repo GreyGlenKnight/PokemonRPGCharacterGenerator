@@ -74,7 +74,8 @@ public class BreedReaderTest
             Pokemon.Breed Ivysaur = BreedReader.GetItemByID(i);
             BreedSortedLinkedListNode NodeToAdd = new BreedSortedLinkedListNode(Ivysaur,
                                                                                 Ivysaur.BreedStatBlock.Attack.RawValue);
-            list.AddNode(NodeToAdd);
+            list.AddNode(NodeToAdd,
+            NodeToAdd.Value);
         }
         Debug.Log(list.Head.Value + list.LastNode.Value);
 

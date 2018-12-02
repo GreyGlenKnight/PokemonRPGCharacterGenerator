@@ -1,13 +1,18 @@
 ﻿<Properties StartupConfiguration="{12C713B3-27D3-91DA-05F4-93A974B2680E}|" RefactoringSettings.EnableRefactorings="True">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BreedReader/Editor/BreedReaderTest.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/LinkedListNode.cs">
     <Files>
       <File FileName="Assets/Scripts/Pokemon/Pokemon.cs" Line="105" Column="21" />
       <File FileName="Assets/Scripts/GameManager.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Scenes/SceneChanger.cs" Line="44" Column="55" />
       <File FileName="Assets/Scripts/Scenes/Generator/GeneratorDisplay.cs" Line="14" Column="36" />
       <File FileName="Assets/Scripts/Scenes/Generator/GeneratorController.cs" Line="38" Column="20" />
-      <File FileName="Assets/Scripts/FileReader.cs" Line="143" Column="1" />
-      <File FileName="Assets/Scripts/BreedReader/Editor/BreedReaderTest.cs" Line="73" Column="10" />
+      <File FileName="Assets/Scripts/FileReader.cs" Line="31" Column="1" />
+      <File FileName="Assets/Scripts/BreedLinkedList.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/BreedLinkedListNode.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/BreedSortedLinkedListNode.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/BreedSortedLinkedList.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="Assets/Scripts/BreedReader/Editor/BreedReaderTest.cs" Line="80" Column="9" NotebookId="1" />
+      <File FileName="Assets/Scripts/LinkedListNode.cs" Line="5" Column="30" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
@@ -17,6 +22,7 @@
     <BreakpointStore>
       <Breakpoint enabled="false" file="/Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/StatBlock.cs" relfile="Assets/StatBlock.cs" line="211" column="1" />
       <Breakpoint enabled="false" file="/Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/ToRefactor/LevelUpBonus.cs" relfile="Assets/Scripts/ToRefactor/LevelUpBonus.cs" line="162" column="1" />
+      <Breakpoint file="/Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/BreedReader/Editor/BreedReaderTest.cs" relfile="Assets/Scripts/BreedReader/Editor/BreedReaderTest.cs" line="77" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />

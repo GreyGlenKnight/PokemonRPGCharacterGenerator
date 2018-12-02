@@ -13,14 +13,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 49
-    y: 77
+    x: 1449
+    y: 319
     width: 1275
     height: 708
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 521}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -106,10 +106,10 @@ MonoBehaviour:
     y: 30
     width: 1275
     height: 658
-  m_MinSize: {x: 677, y: 471}
-  m_MaxSize: {x: 18002, y: 14042}
+  m_MinSize: {x: 687, y: 492}
+  m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 90
+  controlID: 164
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -130,10 +130,10 @@ MonoBehaviour:
     y: 0
     width: 869
     height: 658
-  m_MinSize: {x: 402, y: 471}
-  m_MaxSize: {x: 14002, y: 14042}
+  m_MinSize: {x: 410, y: 492}
+  m_MaxSize: {x: 14006, y: 14042}
   vertical: 1
-  controlID: 91
+  controlID: 165
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -155,10 +155,10 @@ MonoBehaviour:
     y: 0
     width: 869
     height: 349
-  m_MinSize: {x: 402, y: 200}
-  m_MaxSize: {x: 12002, y: 4021}
+  m_MinSize: {x: 410, y: 221}
+  m_MaxSize: {x: 12010, y: 4021}
   vertical: 0
-  controlID: 92
+  controlID: 28
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -177,8 +177,8 @@ MonoBehaviour:
     y: 0
     width: 255
     height: 349
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 102, y: 121}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 16}
@@ -228,8 +228,8 @@ MonoBehaviour:
     y: 0
     width: 422
     height: 349
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 204, y: 221}
+  m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -255,10 +255,10 @@ MonoBehaviour:
     y: 349
     width: 869
     height: 309
-  m_MinSize: {x: 332, y: 271}
-  m_MaxSize: {x: 14002, y: 10021}
+  m_MinSize: {x: 336, y: 271}
+  m_MaxSize: {x: 14006, y: 10021}
   vertical: 0
-  controlID: 172
+  controlID: 166
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -302,8 +302,8 @@ MonoBehaviour:
     y: 0
     width: 454
     height: 309
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 104, y: 121}
+  m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -327,8 +327,8 @@ MonoBehaviour:
     y: 0
     width: 406
     height: 658
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 71}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 21}
@@ -354,8 +354,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 466
-    y: 475
+    x: 1866
+    y: 717
     width: 450
     height: 288
   m_PersistentViewDataDictionary: {fileID: 0}
@@ -440,9 +440,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 2}
-    m_SelectedIDs: 
+    m_SelectedIDs: 942f0000
     m_LastClickedID: 0
-    m_ExpandedIDs: 6cadfbff1caefbffa8affbff66b0fbff3cb4fbff04b5fbff34b6fbffeeb6fbffa8bafbff74bbfbff98bffbff18cefbffeedefbff32f2fbffd8f2fbff8604fcff0418fcff5029fcffb83afcff1a49fcff6e59fcffd875fcffca8afcff389efcff74b2fcff2eb3fcff22c2fcffe8defcfff2f1fcff5a05fdff1a1bfdffa249fdff5862fdffc276fdffc488fdff509cfdff9aaefdff4cc2fdffc0dbfdff46edfdffea01feffdc1ffeffd239feff803afeff165bfeff9e5bfeff3c80feff7493feffe4a5feff92a6feffdabffeffd0c0feff2ad5feffe2d5feffaee9feff680bffff6e0cffffe49effffc89fffffc8b8ffff72b9ffff74c7ffff2ec8ffffd4daffff0eeaffffe4fbffff00000000146d0000ea700000f27b0000c87f000004880000a6890000d08a0000a68e0000a8a800007eac000074c600004aca00005ad5000030d9000040e4000016e80000f2100100c8140100d81f0100ae2301001e1d0200f42002001ab20200f0b50200
+    m_ExpandedIDs: 1adafffff2daffffd0e1ffff96e2ffff6ae6ffff2ce7fffffee8ffffc2e9fffff0ebffffaaecfffff2f0ffffdcf1ffff78f9ffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -485,12 +485,12 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 49
-    y: 126
+    x: 1449
+    y: 368
     width: 253
     height: 328
   m_PersistentViewDataDictionary: {fileID: 0}
-  m_TestTypeToolbarIndex: 0
+  m_TestTypeToolbarIndex: 1
   m_PlayModeTestListGUI:
     m_Window: {fileID: 17}
     newResultList:
@@ -572,7 +572,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: deb4eefb
       m_LastClickedID: -68242210
-      m_ExpandedIDs: c95fbac7deb4eefbffffff7f
+      m_ExpandedIDs: fb06408fc95fbac7deb4eefbffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -604,9 +604,9 @@ MonoBehaviour:
     - id: '[PokemonRPGCharacterGenerator][suite]'
       name: PokemonRPGCharacterGenerator
       fullName: PokemonRPGCharacterGenerator
-      resultStatus: 1
-      duration: 0.557924
-      messages: 
+      resultStatus: 2
+      duration: 573.74
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -618,9 +618,9 @@ MonoBehaviour:
     - id: '[/Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll][suite]'
       name: Assembly-CSharp-Editor.dll
       fullName: /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
-      resultStatus: 1
-      duration: 0.553622
-      messages: 
+      resultStatus: 2
+      duration: 573.7141
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -632,9 +632,9 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][BreedReaderTest][suite]'
       name: BreedReaderTest
       fullName: BreedReaderTest
-      resultStatus: 1
-      duration: 1.418093
-      messages: 
+      resultStatus: 2
+      duration: 573.7107
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -2788,6 +2788,35 @@ MonoBehaviour:
       categories:
       - Uncategorized
       parentID: '[Assembly-CSharp-Editor][BreedReaderTest][suite]'
+    - id: '[Assembly-CSharp-Editor][BreedReaderTest.First150SortedLinkedList]'
+      name: First150SortedLinkedList
+      fullName: BreedReaderTest.First150SortedLinkedList
+      resultStatus: 2
+      duration: 573.7062
+      messages: 'System.NullReferenceException : Object reference not set to an instance
+        of an object'
+      output: 'Attempting to add nodeBreedSortedLinkedListNode
+
+        Assigning the Head
+
+        Attempting to add nodeBreedSortedLinkedListNode
+
+'
+      stacktrace: "  at BreedSortedLinkedList.AddNode (.BreedSortedLinkedListNode
+        NodeToAdd, Int32 _Value) [0x000c3] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/BreedSortedLinkedList.cs:61
+        \n  at BreedReaderTest.First150SortedLinkedList () [0x0003f] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/BreedReader/Editor/BreedReaderTest.cs:77
+        \n  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke
+        (object,object[],System.Exception&)\n  at System.Reflection.MonoMethod.Invoke
+        (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder,
+        System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d0]
+        in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Reflection/MonoMethod.cs:222 "
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][BreedReaderTest][suite]'
     - id: '[Assembly-CSharp-Editor][BreedReaderTest.RejectsIndex0]'
       name: RejectsIndex0
       fullName: BreedReaderTest.RejectsIndex0
@@ -3659,12 +3688,29 @@ MonoBehaviour:
       isSuite: 0
       categories: []
       parentID: 
-    m_ResultText: PokemonDataTests (0.550s)
-    m_ResultStacktrace: 
+    m_ResultText: "First150SortedLinkedList (573.706s)\n---\nSystem.NullReferenceException
+      : Object reference not set to an instance of an object\n---\nat BreedSortedLinkedList.AddNode
+      (.BreedSortedLinkedListNode NodeToAdd, Int32 _Value) [0x000c3] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/BreedSortedLinkedList.cs:61
+      \n  at BreedReaderTest.First150SortedLinkedList () [0x0003f] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/BreedReader/Editor/BreedReaderTest.cs:77
+      \n  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke
+      (object,object[],System.Exception&)\n  at System.Reflection.MonoMethod.Invoke
+      (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder,
+      System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d0]
+      in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Reflection/MonoMethod.cs:222\n---\nAttempting
+      to add nodeBreedSortedLinkedListNode\nAssigning the Head\nAttempting to add
+      nodeBreedSortedLinkedListNode"
+    m_ResultStacktrace: "  at BreedSortedLinkedList.AddNode (.BreedSortedLinkedListNode
+      NodeToAdd, Int32 _Value) [0x000c3] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/BreedSortedLinkedList.cs:61
+      \n  at BreedReaderTest.First150SortedLinkedList () [0x0003f] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/BreedReader/Editor/BreedReaderTest.cs:77
+      \n  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke
+      (object,object[],System.Exception&)\n  at System.Reflection.MonoMethod.Invoke
+      (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder,
+      System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d0]
+      in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Reflection/MonoMethod.cs:222 "
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: cc64f6f9
-      m_LastClickedID: -101292852
+      m_SelectedIDs: 83929364
+      m_LastClickedID: 1687392899
       m_ExpandedIDs: 27e2fdc1deb4eefb23b23410ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -3711,8 +3757,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 257
-    y: 19
+    x: 1706
+    y: 368
     width: 188
     height: 328
   m_PersistentViewDataDictionary: {fileID: 0}
@@ -3736,8 +3782,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 498
-    y: 126
+    x: 1898
+    y: 368
     width: 418
     height: 328
   m_PersistentViewDataDictionary: {fileID: 0}
@@ -3815,8 +3861,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 19
+    x: 1449
+    y: 717
     width: 413
     height: 288
   m_PersistentViewDataDictionary: {fileID: 0}
@@ -3832,20 +3878,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/BreedReader/Editor
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/BreedReader/Editor
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 168}
-    m_SelectedIDs: 700b0000
-    m_LastClickedID: 2928
-    m_ExpandedIDs: 00000000f00900009a0a0000d80a00003a0b0000460b0000200c0000280c0000be0c0000ee0c0000220d0000900d000000ca9a3b
+    m_SelectedIDs: 462c0000
+    m_LastClickedID: 11334
+    m_ExpandedIDs: 00000000fc2a0000a62b0000e42b0000462c0000522c00002c2d0000342d0000ca2d0000fa2d00002e2e00009c2e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -3873,7 +3919,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 3e2c0000
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000f00900009a0a0000d80a00003a0b0000460b0000200c0000280c0000be0c0000ee0c0000
+    m_ExpandedIDs: 00000000fc2a0000a62b0000e42b0000462c0000522c00002c2d0000342d0000ca2d0000fa2d00002e2e00009c2e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -3917,7 +3963,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 12}
+      m_ClientGUIView: {fileID: 0}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -3925,7 +3971,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 210.5}
     m_GridSize: 64
   m_DirectoriesAreaWidth: 149
 --- !u!114 &21
