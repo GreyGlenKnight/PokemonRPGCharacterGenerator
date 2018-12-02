@@ -53,7 +53,7 @@ public class BreedReaderTest
             Pokemon.Breed Ivysaur = BreedReader.GetItemByID (i);
             BreedLinkedListNode NodeToAdd = new BreedLinkedListNode (Ivysaur);
             list.AddNode (NodeToAdd);
-            Debug.Log (Ivysaur.BreedName);
+            Debug.Log (NodeToAdd.ThisData.BreedName);
         }
 
         Debug.Assert (list.Head.ThisData != null);
@@ -61,5 +61,22 @@ public class BreedReaderTest
 
         Debug.Assert (list.LastNode.ThisData.BreedName == "Mewtwo");
         Debug.Assert (list.Head.Child.Child.Child.ThisData.BreedName == "Charmander");
+    }
+
+    [Test]
+    public void First150SortedLinkedList()
+    {
+        PokemonFileReader BreedReader = new PokemonFileReader();
+        BreedSortedLinkedList list = new BreedSortedLinkedList();
+
+        for (int i = 1; i < 151; i++)
+        {
+            Pokemon.Breed Ivysaur = BreedReader.GetItemByID(i);
+            BreedSortedLinkedListNode NodeToAdd = new BreedSortedLinkedListNode(Ivysaur,
+                                                                                Ivysaur.BreedStatBlock.Attack.RawValue);
+            list.AddNode(NodeToAdd);
+        }
+        Debug.Log(list.Head.Value + list.LastNode.Value);
+
     }
 }
