@@ -13,8 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 1449
-    y: 319
+    x: 4
+    y: 45
     width: 1275
     height: 708
   m_ShowMode: 4
@@ -106,10 +106,10 @@ MonoBehaviour:
     y: 30
     width: 1275
     height: 658
-  m_MinSize: {x: 687, y: 492}
+  m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 164
+  controlID: 206
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -128,12 +128,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 869
+    width: 998
     height: 658
-  m_MinSize: {x: 410, y: 492}
+  m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 14006, y: 14042}
   vertical: 1
-  controlID: 165
+  controlID: 207
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -153,12 +153,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 869
-    height: 349
-  m_MinSize: {x: 410, y: 221}
-  m_MaxSize: {x: 12010, y: 4021}
+    width: 998
+    height: 378
+  m_MinSize: {x: 406, y: 221}
+  m_MaxSize: {x: 12006, y: 4021}
   vertical: 0
-  controlID: 28
+  controlID: 208
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -175,8 +175,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 255
-    height: 349
+    width: 375
+    height: 378
   m_MinSize: {x: 102, y: 121}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 17}
@@ -199,10 +199,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 255
+    x: 375
     y: 0
-    width: 192
-    height: 349
+    width: 189
+    height: 378
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
@@ -224,10 +224,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 447
+    x: 564
     y: 0
-    width: 422
-    height: 349
+    width: 434
+    height: 378
   m_MinSize: {x: 204, y: 221}
   m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 19}
@@ -252,13 +252,13 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 349
-    width: 869
-    height: 309
+    y: 378
+    width: 998
+    height: 280
   m_MinSize: {x: 336, y: 271}
   m_MaxSize: {x: 14006, y: 10021}
   vertical: 0
-  controlID: 166
+  controlID: 185
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -275,8 +275,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 415
-    height: 309
+    width: 476
+    height: 280
   m_MinSize: {x: 232, y: 271}
   m_MaxSize: {x: 10002, y: 10021}
   m_ActualView: {fileID: 20}
@@ -298,10 +298,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 415
+    x: 476
     y: 0
-    width: 454
-    height: 309
+    width: 522
+    height: 280
   m_MinSize: {x: 104, y: 121}
   m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 15}
@@ -323,9 +323,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 869
+    x: 998
     y: 0
-    width: 406
+    width: 277
     height: 658
   m_MinSize: {x: 277, y: 71}
   m_MaxSize: {x: 4002, y: 4021}
@@ -354,10 +354,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1866
-    y: 717
-    width: 450
-    height: 288
+    x: 482
+    y: 472
+    width: 518
+    height: 259
   m_PersistentViewDataDictionary: {fileID: 0}
   m_MaximizeOnPlay: 0
   m_Gizmos: 0
@@ -390,25 +390,25 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 17
-      width: 450
-      height: 271
-    m_Scale: {x: 0.703125, y: 0.703125}
-    m_Translation: {x: 225, y: 135.5}
+      width: 518
+      height: 242
+    m_Scale: {x: 0.6722222, y: 0.6722222}
+    m_Translation: {x: 259, y: 120.99999}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -320
-      y: -192.7111
-      width: 640
-      height: 385.4222
+      x: -385.28928
+      y: -180
+      width: 770.57855
+      height: 360
     m_MinimalGUI: 1
-  m_defaultScale: 0.703125
+  m_defaultScale: 0.6722222
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
-  m_LastWindowPixelSize: {x: 900, y: 576}
+  m_LastWindowPixelSize: {x: 1036, y: 518}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 00000000000100000100
@@ -440,9 +440,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 2}
-    m_SelectedIDs: 942f0000
+    m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 1adafffff2daffffd0e1ffff96e2ffff6ae6ffff2ce7fffffee8ffffc2e9fffff0ebffffaaecfffff2f0ffffdcf1ffff78f9ffff00000000
+    m_ExpandedIDs: 76d9ffff30daffff6edfffff26e0fffff6e0ffffaae1ffffa2efffff5cf0ffffd8fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -485,10 +485,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1449
-    y: 368
-    width: 253
-    height: 328
+    x: 4
+    y: 94
+    width: 373
+    height: 357
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TestTypeToolbarIndex: 1
   m_PlayModeTestListGUI:
@@ -604,9 +604,9 @@ MonoBehaviour:
     - id: '[PokemonRPGCharacterGenerator][suite]'
       name: PokemonRPGCharacterGenerator
       fullName: PokemonRPGCharacterGenerator
-      resultStatus: 2
-      duration: 573.74
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.061322
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -618,9 +618,9 @@ MonoBehaviour:
     - id: '[/Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll][suite]'
       name: Assembly-CSharp-Editor.dll
       fullName: /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
-      resultStatus: 2
-      duration: 573.7141
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.031151
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -628,13 +628,13 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentID: 
+      parentID: '[PokemonRPGCharacterGenerator][suite]'
     - id: '[Assembly-CSharp-Editor][BreedReaderTest][suite]'
       name: BreedReaderTest
       fullName: BreedReaderTest
-      resultStatus: 2
-      duration: 573.7107
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 1.129681
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -647,7 +647,7 @@ MonoBehaviour:
       name: CanReadFile
       fullName: BreedReaderTest.CanReadFile
       resultStatus: 1
-      duration: 0.00905
+      duration: 0.019285
       messages: 
       output: 
       stacktrace: 
@@ -662,7 +662,7 @@ MonoBehaviour:
       name: First150
       fullName: BreedReaderTest.First150
       resultStatus: 1
-      duration: 0.922706
+      duration: 0.927225
       messages: 
       output: 'Bulbasaur
 
@@ -1873,911 +1873,1864 @@ MonoBehaviour:
       categories:
       - Uncategorized
       parentID: '[Assembly-CSharp-Editor][BreedReaderTest][suite]'
-    - id: '[Assembly-CSharp-Editor][BreedReaderTest.First150LinkedList]'
-      name: First150LinkedList
-      fullName: BreedReaderTest.First150LinkedList
+    - id: '[Assembly-CSharp-Editor][BreedReaderTest.First150BinarySearchTree]'
+      name: First150BinarySearchTree
+      fullName: BreedReaderTest.First150BinarySearchTree
       resultStatus: 1
-      duration: 1.393966
+      duration: 1.122308
       messages: 
-      output: 'Attempting to add nodeBreedLinkedListNode
+      output: '4Bulbasaur
 
-        Assigning the Head
+        X Higher than Y54
 
-        Bulbasaur
+        Ivysaur5
 
-        Attempting to add nodeBreedLinkedListNode
+        X Higher than Y75
 
-        Attempting to Find Empty Node
+        Venusaur7
+
+        X Equals Y55
+
+        Charmander5
+
+        X Lower than Y67
+
+        Charmeleon6
+
+        X Equals Y77
+
+        Charizard7
+
+        X Equals Y44
+
+        Squirtle4
+
+        X Equals Y66
+
+        Wartortle6
+
+        X Equals Y77
+
+        Blastoise7
+
+        X Lower than Y34
+
+        Caterpie3
+
+        X Lower than Y23
+
+        Metapod2
+
+        X Equals Y44
+
+        Butterfree4
+
+        X Equals Y33
+
+        Weedle3
+
+        X Equals Y22
+
+        Kakuna2
+
+        X Equals Y77
+
+        Beedrill7
+
+        X Equals Y44
+
+        Pidgey4
+
+        X Equals Y55
+
+        Pidgeotto5
+
+        X Equals Y77
+
+        Pidgeot7
+
+        X Equals Y55
+
+        Rattata5
+
+        X Equals Y77
+
+        Raticate7
+
+        X Equals Y55
+
+        Spearow5
+
+        X Higher than Y87
+
+        Fearow8
+
+        X Equals Y55
+
+        Ekans5
+
+        X Equals Y77
+
+        Arbok7
+
+        X Equals Y55
+
+        Pikachu5
+
+        X Equals Y88
+
+        Raichu8
+
+        X Equals Y66
+
+        Sandshrew6
+
+        X Equals Y88
+
+        Sandslash8
+
+        X Equals Y44
+
+        Nidoran (?)4
+
+        X Equals Y55
+
+        Nidorina5
+
+        X Equals Y88
+
+        Nidoqueen8
+
+        X Equals Y55
+
+        Nidoran (?)5
+
+        X Equals Y66
+
+        Nidorino6
+
+        X Higher than Y98
+
+        Nidoking9
+
+        X Equals Y44
+
+        Clefairy4
+
+        X Equals Y66
+
+        Clefable6
+
+        X Equals Y44
+
+        Vulpix4
+
+        X Equals Y77
+
+        Ninetales7
+
+        X Equals Y44
+
+        Jigglypuff4
+
+        X Equals Y66
+
+        Wigglytuff6
+
+        X Equals Y44
+
+        Zubat4
+
+        X Equals Y77
+
+        Golbat7
+
+        X Equals Y44
+
+        Oddish4
+
+        X Equals Y66
+
+        Gloom6
+
+        X Equals Y77
+
+        Vileplume7
+
+        X Equals Y66
+
+        Paras6
+
+        X Equals Y88
+
+        Parasect8
+
+        X Equals Y55
+
+        Venonat5
+
+        X Equals Y66
+
+        Venomoth6
+
+        X Equals Y55
+
+        Diglett5
+
+        X Equals Y77
+
+        Dugtrio7
+
+        X Equals Y44
+
+        Meowth4
+
+        X Equals Y66
+
+        Persian6
+
+        X Equals Y55
+
+        Psyduck5
+
+        X Equals Y77
+
+        Golduck7
+
+        X Equals Y77
+
+        Mankey7
+
+        X Equals Y99
+
+        Primeape9
+
+        X Equals Y66
+
+        Growlithe6
+
+        X Equals Y99
+
+        Arcanine9
+
+        X Equals Y44
+
+        Poliwag4
+
+        X Equals Y66
+
+        Poliwhirl6
+
+        X Equals Y88
+
+        Poliwrath8
+
+        X Equals Y22
+
+        Abra2
+
+        X Equals Y33
+
+        Kadabra3
+
+        X Equals Y44
+
+        Alakazam4
+
+        X Equals Y77
+
+        Machop7
+
+        X Equals Y88
+
+        Machoke8
+
+        X Higher than Y119
+
+        Machamp11
+
+        X Equals Y66
+
+        Bellsprout6
+
+        X Equals Y88
+
+        Weepinbell8
+
+        X Equals Y99
+
+        Victreebel9
+
+        X Equals Y44
+
+        Tentacool4
+
+        X Equals Y66
+
+        Tentacruel6
+
+        X Equals Y77
+
+        Geodude7
+
+        X Equals Y88
+
+        Graveler8
+
+        X Lower than Y1011
+
+        Golem10
+
+        X Equals Y77
+
+        Ponyta7
+
+        X Equals Y88
+
+        Rapidash8
+
+        X Equals Y66
+
+        Slowpoke6
+
+        X Equals Y66
+
+        Slowbro6
+
+        X Equals Y33
+
+        Magnemite3
+
+        X Equals Y55
+
+        Magneton5
+
+        X Equals Y66
+
+        Farfetch''d6
+
+        X Equals Y77
+
+        Doduo7
+
+        X Equals Y99
+
+        Dodrio9
+
+        X Equals Y44
+
+        Seel4
+
+        X Equals Y66
+
+        Dewgong6
+
+        X Equals Y77
+
+        Grimer7
+
+        X Equals Y99
+
+        Muk9
+
+        X Equals Y66
+
+        Shellder6
+
+        X Equals Y88
+
+        Cloyster8
+
+        X Equals Y33
+
+        Gastly3
+
+        X Equals Y44
+
+        Haunter4
+
+        X Equals Y66
+
+        Gengar6
+
+        X Equals Y44
+
+        Onix4
+
+        X Equals Y44
+
+        Drowzee4
+
+        X Equals Y66
+
+        Hypno6
+
+        X Equals Y99
+
+        Krabby9
+
+        X Equals Y1111
+
+        Kingler11
+
+        X Equals Y33
+
+        Voltorb3
+
+        X Equals Y44
+
+        Electrode4
+
+        X Equals Y44
+
+        Exeggcute4
+
+        X Equals Y88
+
+        Exeggutor8
+
+        X Equals Y44
+
+        Cubone4
+
+        X Equals Y77
+
+        Marowak7
+
+        X Equals Y1010
+
+        Hitmonlee10
+
+        X Equals Y99
+
+        Hitmonchan9
+
+        X Equals Y55
+
+        Lickitung5
+
+        X Equals Y66
+
+        Koffing6
+
+        X Equals Y88
+
+        Weezing8
+
+        X Equals Y77
+
+        Rhyhorn7
+
+        X Equals Y1111
+
+        Rhydon11
+
+        X Lower than Y12
+
+        Chansey1
+
+        X Equals Y55
+
+        Tangela5
+
+        X Equals Y88
+
+        Kangaskhan8
+
+        X Equals Y44
+
+        Horsea4
+
+        X Equals Y66
+
+        Seadra6
+
+        X Equals Y66
+
+        Goldeen6
+
+        X Equals Y88
+
+        Seaking8
+
+        X Equals Y44
+
+        Staryu4
+
+        X Equals Y66
+
+        Starmie6
+
+        X Equals Y44
+
+        Mr. Mime4
+
+        X Equals Y99
+
+        Scyther9
+
+        X Equals Y44
+
+        Jynx4
+
+        X Equals Y77
+
+        Electabuzz7
+
+        X Equals Y88
+
+        Magmar8
+
+        X Equals Y1010
+
+        Pinsir10
+
+        X Equals Y88
+
+        Tauros8
+
+        X Equals Y11
+
+        Magikarp1
+
+        X Equals Y1010
+
+        Gyarados10
+
+        X Equals Y77
+
+        Lapras7
+
+        X Equals Y44
+
+        Ditto4
+
+        X Equals Y55
+
+        Eevee5
+
+        X Equals Y66
+
+        Vaporeon6
+
+        X Equals Y66
+
+        Jolteon6
+
+        X Equals Y1111
+
+        Flareon11
+
+        X Equals Y55
+
+        Porygon5
+
+        X Equals Y44
+
+        Omanyte4
+
+        X Equals Y55
+
+        Omastar5
+
+        X Equals Y77
+
+        Kabuto7
+
+        X Equals Y1010
+
+        Kabutops10
+
+        X Equals Y99
+
+        Aerodactyl9
+
+        X Equals Y99
+
+        Snorlax9
+
+        X Equals Y77
+
+        Articuno7
+
+        X Equals Y88
+
+        Zapdos8
+
+        X Equals Y88
+
+        Moltres8
+
+        X Equals Y66
+
+        Dratini6
+
+        X Equals Y77
+
+        Dragonair7
+
+        X Equals Y1111
+
+        Dragonite11
+
+        X Equals Y99
+
+        Mewtwo9
+
+        X Equals Y88
+
+        Mew8
+
+        Chansey1
+
+        Magikarp1
+
+        Metapod2
+
+        Kakuna2
+
+        Abra2
+
+        Caterpie3
+
+        Weedle3
+
+        Kadabra3
+
+        Magnemite3
+
+        Gastly3
+
+        Voltorb3
+
+        Bulbasaur4
+
+        Squirtle4
+
+        Butterfree4
+
+        Pidgey4
+
+        Nidoran (?)4
+
+        Clefairy4
+
+        Vulpix4
+
+        Jigglypuff4
+
+        Zubat4
+
+        Oddish4
+
+        Meowth4
+
+        Poliwag4
+
+        Alakazam4
+
+        Tentacool4
+
+        Seel4
+
+        Haunter4
+
+        Onix4
+
+        Drowzee4
+
+        Electrode4
+
+        Exeggcute4
+
+        Cubone4
+
+        Horsea4
+
+        Staryu4
+
+        Mr. Mime4
+
+        Jynx4
+
+        Ditto4
+
+        Omanyte4
+
+        Ivysaur5
+
+        Charmander5
+
+        Pidgeotto5
+
+        Rattata5
+
+        Spearow5
+
+        Ekans5
+
+        Pikachu5
+
+        Nidorina5
+
+        Nidoran (?)5
+
+        Venonat5
+
+        Diglett5
+
+        Psyduck5
+
+        Magneton5
+
+        Lickitung5
+
+        Tangela5
+
+        Eevee5
+
+        Porygon5
+
+        Omastar5
+
+        Charmeleon6
+
+        Wartortle6
+
+        Sandshrew6
+
+        Nidorino6
+
+        Clefable6
+
+        Wigglytuff6
+
+        Gloom6
+
+        Paras6
+
+        Venomoth6
+
+        Persian6
+
+        Growlithe6
+
+        Poliwhirl6
+
+        Bellsprout6
+
+        Tentacruel6
+
+        Slowpoke6
+
+        Slowbro6
+
+        Farfetch''d6
+
+        Dewgong6
+
+        Shellder6
+
+        Gengar6
+
+        Hypno6
+
+        Koffing6
+
+        Seadra6
+
+        Goldeen6
+
+        Starmie6
+
+        Vaporeon6
+
+        Jolteon6
+
+        Dratini6
+
+        Venusaur7
+
+        Charizard7
+
+        Blastoise7
+
+        Beedrill7
+
+        Pidgeot7
+
+        Raticate7
+
+        Arbok7
+
+        Ninetales7
+
+        Golbat7
+
+        Vileplume7
+
+        Dugtrio7
+
+        Golduck7
+
+        Mankey7
+
+        Machop7
+
+        Geodude7
+
+        Ponyta7
+
+        Doduo7
+
+        Grimer7
+
+        Marowak7
+
+        Rhyhorn7
+
+        Electabuzz7
+
+        Lapras7
+
+        Kabuto7
+
+        Articuno7
+
+        Dragonair7
+
+        Fearow8
+
+        Raichu8
+
+        Sandslash8
+
+        Nidoqueen8
+
+        Parasect8
+
+        Poliwrath8
+
+        Machoke8
+
+        Weepinbell8
+
+        Graveler8
+
+        Rapidash8
+
+        Cloyster8
+
+        Exeggutor8
+
+        Weezing8
+
+        Kangaskhan8
+
+        Seaking8
+
+        Magmar8
+
+        Tauros8
+
+        Zapdos8
+
+        Moltres8
+
+        Mew8
+
+        Nidoking9
+
+        Primeape9
+
+        Arcanine9
+
+        Victreebel9
+
+        Dodrio9
+
+        Muk9
+
+        Krabby9
+
+        Hitmonchan9
+
+        Scyther9
+
+        Aerodactyl9
+
+        Snorlax9
+
+        Mewtwo9
+
+        Golem10
+
+        Hitmonlee10
+
+        Pinsir10
+
+        Gyarados10
+
+        Kabutops10
+
+        Machamp11
+
+        Kingler11
+
+        Rhydon11
+
+        Flareon11
+
+        Dragonite11
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][BreedReaderTest][suite]'
+    - id: '[Assembly-CSharp-Editor][BreedReaderTest.First150LinkedListEnumerator]'
+      name: First150LinkedListEnumerator
+      fullName: BreedReaderTest.First150LinkedListEnumerator
+      resultStatus: 1
+      duration: 0.23784
+      messages: 
+      output: 'Bulbasaur
 
         Ivysaur
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Venusaur
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Charmander
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Charmeleon
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Charizard
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Squirtle
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Wartortle
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Blastoise
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Caterpie
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Metapod
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Butterfree
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Weedle
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Kakuna
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Beedrill
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Pidgey
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Pidgeotto
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Pidgeot
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Rattata
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Raticate
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Spearow
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Fearow
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Ekans
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Arbok
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Pikachu
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Raichu
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Sandshrew
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Sandslash
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Nidoran (?)
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Nidorina
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Nidoqueen
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Nidoran (?)
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Nidorino
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Nidoking
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Clefairy
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Clefable
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Vulpix
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Ninetales
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Jigglypuff
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Wigglytuff
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Zubat
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Golbat
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Oddish
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Gloom
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Vileplume
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Paras
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Parasect
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Venonat
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Venomoth
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Diglett
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Dugtrio
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Meowth
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Persian
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Psyduck
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Golduck
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Mankey
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Primeape
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Growlithe
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Arcanine
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Poliwag
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Poliwhirl
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Poliwrath
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Abra
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Kadabra
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Alakazam
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Machop
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Machoke
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Machamp
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Bellsprout
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Weepinbell
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Victreebel
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Tentacool
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Tentacruel
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Geodude
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Graveler
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Golem
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Ponyta
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Rapidash
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Slowpoke
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Slowbro
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Magnemite
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Magneton
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Farfetch''d
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Doduo
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Dodrio
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Seel
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Dewgong
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Grimer
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Muk
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Shellder
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Cloyster
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Gastly
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Haunter
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Gengar
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Onix
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Drowzee
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Hypno
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Krabby
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Kingler
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Voltorb
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Electrode
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Exeggcute
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Exeggutor
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Cubone
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Marowak
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Hitmonlee
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Hitmonchan
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Lickitung
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Koffing
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Weezing
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Rhyhorn
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Rhydon
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Chansey
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Tangela
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Kangaskhan
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Horsea
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Seadra
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Goldeen
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Seaking
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Staryu
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Starmie
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Mr. Mime
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Scyther
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Jynx
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Electabuzz
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Magmar
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Pinsir
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Tauros
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Magikarp
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Gyarados
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Lapras
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Ditto
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Eevee
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Vaporeon
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Jolteon
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Flareon
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Porygon
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Omanyte
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Omastar
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Kabuto
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Kabutops
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Aerodactyl
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Snorlax
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Articuno
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Zapdos
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Moltres
 
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
-
         Dratini
-
-        Attempting to add nodeBreedLinkedListNode
-
-        Attempting to Find Empty Node
 
         Dragonair
 
-        Attempting to add nodeBreedLinkedListNode
+        Dragonite
 
-        Attempting to Find Empty Node
+        Mewtwo
+
+        Mew
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][BreedReaderTest][suite]'
+    - id: '[Assembly-CSharp-Editor][BreedReaderTest.First150LinkedListReturnsList]'
+      name: First150LinkedListReturnsList
+      fullName: BreedReaderTest.First150LinkedListReturnsList
+      resultStatus: 1
+      duration: 0.235182
+      messages: 
+      output: 'Bulbasaur
+
+        Ivysaur
+
+        Venusaur
+
+        Charmander
+
+        Charmeleon
+
+        Charizard
+
+        Squirtle
+
+        Wartortle
+
+        Blastoise
+
+        Caterpie
+
+        Metapod
+
+        Butterfree
+
+        Weedle
+
+        Kakuna
+
+        Beedrill
+
+        Pidgey
+
+        Pidgeotto
+
+        Pidgeot
+
+        Rattata
+
+        Raticate
+
+        Spearow
+
+        Fearow
+
+        Ekans
+
+        Arbok
+
+        Pikachu
+
+        Raichu
+
+        Sandshrew
+
+        Sandslash
+
+        Nidoran (?)
+
+        Nidorina
+
+        Nidoqueen
+
+        Nidoran (?)
+
+        Nidorino
+
+        Nidoking
+
+        Clefairy
+
+        Clefable
+
+        Vulpix
+
+        Ninetales
+
+        Jigglypuff
+
+        Wigglytuff
+
+        Zubat
+
+        Golbat
+
+        Oddish
+
+        Gloom
+
+        Vileplume
+
+        Paras
+
+        Parasect
+
+        Venonat
+
+        Venomoth
+
+        Diglett
+
+        Dugtrio
+
+        Meowth
+
+        Persian
+
+        Psyduck
+
+        Golduck
+
+        Mankey
+
+        Primeape
+
+        Growlithe
+
+        Arcanine
+
+        Poliwag
+
+        Poliwhirl
+
+        Poliwrath
+
+        Abra
+
+        Kadabra
+
+        Alakazam
+
+        Machop
+
+        Machoke
+
+        Machamp
+
+        Bellsprout
+
+        Weepinbell
+
+        Victreebel
+
+        Tentacool
+
+        Tentacruel
+
+        Geodude
+
+        Graveler
+
+        Golem
+
+        Ponyta
+
+        Rapidash
+
+        Slowpoke
+
+        Slowbro
+
+        Magnemite
+
+        Magneton
+
+        Farfetch''d
+
+        Doduo
+
+        Dodrio
+
+        Seel
+
+        Dewgong
+
+        Grimer
+
+        Muk
+
+        Shellder
+
+        Cloyster
+
+        Gastly
+
+        Haunter
+
+        Gengar
+
+        Onix
+
+        Drowzee
+
+        Hypno
+
+        Krabby
+
+        Kingler
+
+        Voltorb
+
+        Electrode
+
+        Exeggcute
+
+        Exeggutor
+
+        Cubone
+
+        Marowak
+
+        Hitmonlee
+
+        Hitmonchan
+
+        Lickitung
+
+        Koffing
+
+        Weezing
+
+        Rhyhorn
+
+        Rhydon
+
+        Chansey
+
+        Tangela
+
+        Kangaskhan
+
+        Horsea
+
+        Seadra
+
+        Goldeen
+
+        Seaking
+
+        Staryu
+
+        Starmie
+
+        Mr. Mime
+
+        Scyther
+
+        Jynx
+
+        Electabuzz
+
+        Magmar
+
+        Pinsir
+
+        Tauros
+
+        Magikarp
+
+        Gyarados
+
+        Lapras
+
+        Ditto
+
+        Eevee
+
+        Vaporeon
+
+        Jolteon
+
+        Flareon
+
+        Porygon
+
+        Omanyte
+
+        Omastar
+
+        Kabuto
+
+        Kabutops
+
+        Aerodactyl
+
+        Snorlax
+
+        Articuno
+
+        Zapdos
+
+        Moltres
+
+        Dratini
+
+        Dragonair
 
         Dragonite
 
-        Attempting to add nodeBreedLinkedListNode
+        Mewtwo
 
-        Attempting to Find Empty Node
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][BreedReaderTest][suite]'
+    - id: '[Assembly-CSharp-Editor][BreedReaderTest.First150LinkedListReturnsRecursiveList]'
+      name: First150LinkedListReturnsRecursiveList
+      fullName: BreedReaderTest.First150LinkedListReturnsRecursiveList
+      resultStatus: 1
+      duration: 0.238942
+      messages: 
+      output: 'Mew
 
         Mewtwo
+
+        Dragonite
+
+        Dragonair
+
+        Dratini
+
+        Moltres
+
+        Zapdos
+
+        Articuno
+
+        Snorlax
+
+        Aerodactyl
+
+        Kabutops
+
+        Kabuto
+
+        Omastar
+
+        Omanyte
+
+        Porygon
+
+        Flareon
+
+        Jolteon
+
+        Vaporeon
+
+        Eevee
+
+        Ditto
+
+        Lapras
+
+        Gyarados
+
+        Magikarp
+
+        Tauros
+
+        Pinsir
+
+        Magmar
+
+        Electabuzz
+
+        Jynx
+
+        Scyther
+
+        Mr. Mime
+
+        Starmie
+
+        Staryu
+
+        Seaking
+
+        Goldeen
+
+        Seadra
+
+        Horsea
+
+        Kangaskhan
+
+        Tangela
+
+        Chansey
+
+        Rhydon
+
+        Rhyhorn
+
+        Weezing
+
+        Koffing
+
+        Lickitung
+
+        Hitmonchan
+
+        Hitmonlee
+
+        Marowak
+
+        Cubone
+
+        Exeggutor
+
+        Exeggcute
+
+        Electrode
+
+        Voltorb
+
+        Kingler
+
+        Krabby
+
+        Hypno
+
+        Drowzee
+
+        Onix
+
+        Gengar
+
+        Haunter
+
+        Gastly
+
+        Cloyster
+
+        Shellder
+
+        Muk
+
+        Grimer
+
+        Dewgong
+
+        Seel
+
+        Dodrio
+
+        Doduo
+
+        Farfetch''d
+
+        Magneton
+
+        Magnemite
+
+        Slowbro
+
+        Slowpoke
+
+        Rapidash
+
+        Ponyta
+
+        Golem
+
+        Graveler
+
+        Geodude
+
+        Tentacruel
+
+        Tentacool
+
+        Victreebel
+
+        Weepinbell
+
+        Bellsprout
+
+        Machamp
+
+        Machoke
+
+        Machop
+
+        Alakazam
+
+        Kadabra
+
+        Abra
+
+        Poliwrath
+
+        Poliwhirl
+
+        Poliwag
+
+        Arcanine
+
+        Growlithe
+
+        Primeape
+
+        Mankey
+
+        Golduck
+
+        Psyduck
+
+        Persian
+
+        Meowth
+
+        Dugtrio
+
+        Diglett
+
+        Venomoth
+
+        Venonat
+
+        Parasect
+
+        Paras
+
+        Vileplume
+
+        Gloom
+
+        Oddish
+
+        Golbat
+
+        Zubat
+
+        Wigglytuff
+
+        Jigglypuff
+
+        Ninetales
+
+        Vulpix
+
+        Clefable
+
+        Clefairy
+
+        Nidoking
+
+        Nidorino
+
+        Nidoran (?)
+
+        Nidoqueen
+
+        Nidorina
+
+        Nidoran (?)
+
+        Sandslash
+
+        Sandshrew
+
+        Raichu
+
+        Pikachu
+
+        Arbok
+
+        Ekans
+
+        Fearow
+
+        Spearow
+
+        Raticate
+
+        Rattata
+
+        Pidgeot
+
+        Pidgeotto
+
+        Pidgey
+
+        Beedrill
+
+        Kakuna
+
+        Weedle
+
+        Butterfree
+
+        Metapod
+
+        Caterpie
+
+        Blastoise
+
+        Wartortle
+
+        Squirtle
+
+        Charizard
+
+        Charmeleon
+
+        Charmander
+
+        Venusaur
+
+        Ivysaur
+
+        Bulbasaur
 
 '
       stacktrace: 
@@ -2791,25 +3744,317 @@ MonoBehaviour:
     - id: '[Assembly-CSharp-Editor][BreedReaderTest.First150SortedLinkedList]'
       name: First150SortedLinkedList
       fullName: BreedReaderTest.First150SortedLinkedList
-      resultStatus: 2
-      duration: 573.7062
-      messages: 'System.NullReferenceException : Object reference not set to an instance
-        of an object'
-      output: 'Attempting to add nodeBreedSortedLinkedListNode
+      resultStatus: 1
+      duration: 0.235907
+      messages: 
+      output: 'Dragonite
 
-        Assigning the Head
+        11Dragonite
 
-        Attempting to add nodeBreedSortedLinkedListNode
+        11Flareon
+
+        11Rhydon
+
+        11Kingler
+
+        11Machamp
+
+        10Kabutops
+
+        10Gyarados
+
+        10Pinsir
+
+        10Hitmonlee
+
+        10Golem
+
+        9Mewtwo
+
+        9Snorlax
+
+        9Aerodactyl
+
+        9Scyther
+
+        9Hitmonchan
+
+        9Krabby
+
+        9Muk
+
+        9Dodrio
+
+        9Victreebel
+
+        9Arcanine
+
+        9Primeape
+
+        9Nidoking
+
+        8Mew
+
+        8Moltres
+
+        8Zapdos
+
+        8Tauros
+
+        8Magmar
+
+        8Seaking
+
+        8Kangaskhan
+
+        8Weezing
+
+        8Exeggutor
+
+        8Cloyster
+
+        8Rapidash
+
+        8Graveler
+
+        8Weepinbell
+
+        8Machoke
+
+        8Poliwrath
+
+        8Parasect
+
+        8Nidoqueen
+
+        8Sandslash
+
+        8Raichu
+
+        8Fearow
+
+        7Dragonair
+
+        7Articuno
+
+        7Kabuto
+
+        7Lapras
+
+        7Electabuzz
+
+        7Rhyhorn
+
+        7Marowak
+
+        7Grimer
+
+        7Doduo
+
+        7Ponyta
+
+        7Geodude
+
+        7Machop
+
+        7Mankey
+
+        7Golduck
+
+        7Dugtrio
+
+        7Vileplume
+
+        7Golbat
+
+        7Ninetales
+
+        7Arbok
+
+        7Raticate
+
+        7Pidgeot
+
+        7Beedrill
+
+        7Blastoise
+
+        7Charizard
+
+        7Venusaur
+
+        6Dratini
+
+        6Jolteon
+
+        6Vaporeon
+
+        6Starmie
+
+        6Goldeen
+
+        6Seadra
+
+        6Koffing
+
+        6Hypno
+
+        6Gengar
+
+        6Shellder
+
+        6Dewgong
+
+        6Farfetch''d
+
+        6Slowbro
+
+        6Slowpoke
+
+        6Tentacruel
+
+        6Bellsprout
+
+        6Poliwhirl
+
+        6Growlithe
+
+        6Persian
+
+        6Venomoth
+
+        6Paras
+
+        6Gloom
+
+        6Wigglytuff
+
+        6Clefable
+
+        6Nidorino
+
+        6Sandshrew
+
+        6Wartortle
+
+        6Charmeleon
+
+        5Omastar
+
+        5Porygon
+
+        5Eevee
+
+        5Tangela
+
+        5Lickitung
+
+        5Magneton
+
+        5Psyduck
+
+        5Diglett
+
+        5Venonat
+
+        5Nidoran (?)
+
+        5Nidorina
+
+        5Pikachu
+
+        5Ekans
+
+        5Spearow
+
+        5Rattata
+
+        5Pidgeotto
+
+        5Charmander
+
+        5Ivysaur
+
+        4Omanyte
+
+        4Ditto
+
+        4Jynx
+
+        4Mr. Mime
+
+        4Staryu
+
+        4Horsea
+
+        4Cubone
+
+        4Exeggcute
+
+        4Electrode
+
+        4Drowzee
+
+        4Onix
+
+        4Haunter
+
+        4Seel
+
+        4Tentacool
+
+        4Alakazam
+
+        4Poliwag
+
+        4Meowth
+
+        4Oddish
+
+        4Zubat
+
+        4Jigglypuff
+
+        4Vulpix
+
+        4Clefairy
+
+        4Nidoran (?)
+
+        4Pidgey
+
+        4Butterfree
+
+        4Squirtle
+
+        4Bulbasaur
+
+        3Voltorb
+
+        3Gastly
+
+        3Magnemite
+
+        3Kadabra
+
+        3Weedle
+
+        3Caterpie
+
+        2Abra
+
+        2Kakuna
+
+        2Metapod
+
+        1Magikarp
+
+        1Chansey
+
+        151
 
 '
-      stacktrace: "  at BreedSortedLinkedList.AddNode (.BreedSortedLinkedListNode
-        NodeToAdd, Int32 _Value) [0x000c3] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/BreedSortedLinkedList.cs:61
-        \n  at BreedReaderTest.First150SortedLinkedList () [0x0003f] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/BreedReader/Editor/BreedReaderTest.cs:77
-        \n  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke
-        (object,object[],System.Exception&)\n  at System.Reflection.MonoMethod.Invoke
-        (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder,
-        System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d0]
-        in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Reflection/MonoMethod.cs:222 "
+      stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -2821,7 +4066,7 @@ MonoBehaviour:
       name: RejectsIndex0
       fullName: BreedReaderTest.RejectsIndex0
       resultStatus: 1
-      duration: 0.0064
+      duration: 0.006972
       messages: 
       output: 
       stacktrace: 
@@ -2836,7 +4081,7 @@ MonoBehaviour:
       name: MaturityManagerTest
       fullName: MaturityManagerTest
       resultStatus: 1
-      duration: 0.149921
+      duration: 0.177379
       messages: 
       output: 
       stacktrace: 
@@ -2845,12 +4090,12 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentID: 
+      parentID: '[/Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll][suite]'
     - id: '[Assembly-CSharp-Editor][MaturityManagerTest.Break_Level_Is_1_For_BreakTree_At_Level_4]'
       name: Break_Level_Is_1_For_BreakTree_At_Level_4
       fullName: MaturityManagerTest.Break_Level_Is_1_For_BreakTree_At_Level_4
       resultStatus: 1
-      duration: 0.000312
+      duration: 0.015007
       messages: 
       output: 
       stacktrace: 
@@ -2858,13 +4103,14 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-      categories: []
-      parentID: 
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][MaturityManagerTest][suite]'
     - id: '[Assembly-CSharp-Editor][MaturityManagerTest.Break_Level_Is_2_For_BreakTree_At_Level_15]'
       name: Break_Level_Is_2_For_BreakTree_At_Level_15
       fullName: MaturityManagerTest.Break_Level_Is_2_For_BreakTree_At_Level_15
       resultStatus: 1
-      duration: 0.002759
+      duration: 0.004033
       messages: 
       output: 'Tier 2, MaturityStatic
 
@@ -2874,13 +4120,14 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-      categories: []
-      parentID: 
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][MaturityManagerTest][suite]'
     - id: '[Assembly-CSharp-Editor][MaturityManagerTest.CanGetMaturityBonusForMaturity]'
       name: CanGetMaturityBonusForMaturity
       fullName: MaturityManagerTest.CanGetMaturityBonusForMaturity
       resultStatus: 1
-      duration: 0.000337
+      duration: 0.001707
       messages: 
       output: 
       stacktrace: 
@@ -2888,13 +4135,14 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-      categories: []
-      parentID: 
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][MaturityManagerTest][suite]'
     - id: '[Assembly-CSharp-Editor][MaturityManagerTest.CanReturnDifferentBonusTypes]'
       name: CanReturnDifferentBonusTypes
       fullName: MaturityManagerTest.CanReturnDifferentBonusTypes
       resultStatus: 1
-      duration: 0.00029
+      duration: 0.001008
       messages: 
       output: 
       stacktrace: 
@@ -2902,13 +4150,14 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-      categories: []
-      parentID: 
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][MaturityManagerTest][suite]'
     - id: '[Assembly-CSharp-Editor][MaturityManagerTest.Does_Not_Return_Special_Training_At_33]'
       name: Does_Not_Return_Special_Training_At_33
       fullName: MaturityManagerTest.Does_Not_Return_Special_Training_At_33
       resultStatus: 1
-      duration: 0.000492
+      duration: 0.000589
       messages: 
       output: 
       stacktrace: 
@@ -2916,13 +4165,14 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-      categories: []
-      parentID: 
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][MaturityManagerTest][suite]'
     - id: '[Assembly-CSharp-Editor][MaturityManagerTest.Does_Not_Returns_Enhancer_Skill_At_Level_16]'
       name: Does_Not_Returns_Enhancer_Skill_At_Level_16
       fullName: MaturityManagerTest.Does_Not_Returns_Enhancer_Skill_At_Level_16
       resultStatus: 1
-      duration: 0.002679
+      duration: 0.002265
       messages: 
       output: 'in MaturityStatic
 
@@ -2932,13 +4182,14 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-      categories: []
-      parentID: 
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][MaturityManagerTest][suite]'
     - id: '[Assembly-CSharp-Editor][MaturityManagerTest.Dont_Return_Break_Tree_At_Level_2]'
       name: Dont_Return_Break_Tree_At_Level_2
       fullName: MaturityManagerTest.Dont_Return_Break_Tree_At_Level_2
       resultStatus: 1
-      duration: 0.000271
+      duration: 0.000531
       messages: 
       output: 
       stacktrace: 
@@ -2946,13 +4197,14 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-      categories: []
-      parentID: 
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][MaturityManagerTest][suite]'
     - id: '[Assembly-CSharp-Editor][MaturityManagerTest.DontReturnAbilitySlotBonusAtMaturity1]'
       name: DontReturnAbilitySlotBonusAtMaturity1
       fullName: MaturityManagerTest.DontReturnAbilitySlotBonusAtMaturity1
       resultStatus: 1
-      duration: 0.000222
+      duration: 0.000498
       messages: 
       output: 
       stacktrace: 
@@ -2960,13 +4212,14 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-      categories: []
-      parentID: 
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][MaturityManagerTest][suite]'
     - id: '[Assembly-CSharp-Editor][MaturityManagerTest.DontReturnNatureBonusMaturityBonusAtLevel0]'
       name: DontReturnNatureBonusMaturityBonusAtLevel0
       fullName: MaturityManagerTest.DontReturnNatureBonusMaturityBonusAtLevel0
       resultStatus: 1
-      duration: 0.000197
+      duration: 0.000639
       messages: 
       output: 
       stacktrace: 
@@ -2974,13 +4227,14 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-      categories: []
-      parentID: 
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][MaturityManagerTest][suite]'
     - id: '[Assembly-CSharp-Editor][MaturityManagerTest.DontReturnSTABBonusMaturityBonusAtLevel6]'
       name: DontReturnSTABBonusMaturityBonusAtLevel6
       fullName: MaturityManagerTest.DontReturnSTABBonusMaturityBonusAtLevel6
       resultStatus: 1
-      duration: 0.000196
+      duration: 0.000617
       messages: 
       output: 
       stacktrace: 
@@ -2988,13 +4242,14 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-      categories: []
-      parentID: 
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][MaturityManagerTest][suite]'
     - id: '[Assembly-CSharp-Editor][MaturityManagerTest.DontReturnTradeSkillMaturityBonusAtMaturity1]'
       name: DontReturnTradeSkillMaturityBonusAtMaturity1
       fullName: MaturityManagerTest.DontReturnTradeSkillMaturityBonusAtMaturity1
       resultStatus: 1
-      duration: 0.000192
+      duration: 0.00078
       messages: 
       output: 
       stacktrace: 
@@ -3002,13 +4257,14 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-      categories: []
-      parentID: 
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][MaturityManagerTest][suite]'
     - id: '[Assembly-CSharp-Editor][MaturityManagerTest.Gain_A_Total_Of_4_Enhancers]'
       name: Gain_A_Total_Of_4_Enhancers
       fullName: MaturityManagerTest.Gain_A_Total_Of_4_Enhancers
       resultStatus: 1
-      duration: 0.015952
+      duration: 0.017754
       messages: 
       output: 'in MaturityStatic
 
@@ -3034,13 +4290,14 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-      categories: []
-      parentID: 
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][MaturityManagerTest][suite]'
     - id: '[Assembly-CSharp-Editor][MaturityManagerTest.Maturity_Bonus_Contains_Description]'
       name: Maturity_Bonus_Contains_Description
       fullName: MaturityManagerTest.Maturity_Bonus_Contains_Description
       resultStatus: 1
-      duration: 0.011704
+      duration: 0.0005
       messages: 
       output: 
       stacktrace: 
@@ -3048,13 +4305,14 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-      categories: []
-      parentID: 
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][MaturityManagerTest][suite]'
     - id: '[Assembly-CSharp-Editor][MaturityManagerTest.Maturity_Bonus_Have_Different_Descriptions]'
       name: Maturity_Bonus_Have_Different_Descriptions
       fullName: MaturityManagerTest.Maturity_Bonus_Have_Different_Descriptions
       resultStatus: 1
-      duration: 0.001797
+      duration: 0.001935
       messages: 
       output: 'Ability NameTier 0 Tree Name
 
@@ -3064,13 +4322,14 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-      categories: []
-      parentID: 
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][MaturityManagerTest][suite]'
     - id: '[Assembly-CSharp-Editor][MaturityManagerTest.NoBonusesGainedAfter41]'
       name: NoBonusesGainedAfter41
       fullName: MaturityManagerTest.NoBonusesGainedAfter41
       resultStatus: 1
-      duration: 0.0002
+      duration: 0.000417
       messages: 
       output: 
       stacktrace: 
@@ -3078,13 +4337,14 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-      categories: []
-      parentID: 
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][MaturityManagerTest][suite]'
     - id: '[Assembly-CSharp-Editor][MaturityManagerTest.Return_Active_Tree_At_Level_0]'
       name: Return_Active_Tree_At_Level_0
       fullName: MaturityManagerTest.Return_Active_Tree_At_Level_0
       resultStatus: 1
-      duration: 0.000201
+      duration: 0.000534
       messages: 
       output: 
       stacktrace: 
@@ -3092,13 +4352,14 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-      categories: []
-      parentID: 
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][MaturityManagerTest][suite]'
     - id: '[Assembly-CSharp-Editor][MaturityManagerTest.Return_Special_Training_At_Level_6]'
       name: Return_Special_Training_At_Level_6
       fullName: MaturityManagerTest.Return_Special_Training_At_Level_6
       resultStatus: 1
-      duration: 0.000209
+      duration: 0.000467
       messages: 
       output: 
       stacktrace: 
@@ -3106,13 +4367,14 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-      categories: []
-      parentID: 
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][MaturityManagerTest][suite]'
     - id: '[Assembly-CSharp-Editor][MaturityManagerTest.ReturnAbilitySlotBonusAtMaturity0]'
       name: ReturnAbilitySlotBonusAtMaturity0
       fullName: MaturityManagerTest.ReturnAbilitySlotBonusAtMaturity0
       resultStatus: 1
-      duration: 0.000201
+      duration: 0.000495
       messages: 
       output: 
       stacktrace: 
@@ -3120,13 +4382,14 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-      categories: []
-      parentID: 
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][MaturityManagerTest][suite]'
     - id: '[Assembly-CSharp-Editor][MaturityManagerTest.ReturnBonusForEveryMaturityRank]'
       name: ReturnBonusForEveryMaturityRank
       fullName: MaturityManagerTest.ReturnBonusForEveryMaturityRank
       resultStatus: 1
-      duration: 0.014766
+      duration: 0.013847
       messages: 
       output: 'in MaturityStatic
 
@@ -3152,13 +4415,14 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-      categories: []
-      parentID: 
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][MaturityManagerTest][suite]'
     - id: '[Assembly-CSharp-Editor][MaturityManagerTest.ReturnBonusLevelMaturityBonusAtLevel2]'
       name: ReturnBonusLevelMaturityBonusAtLevel2
       fullName: MaturityManagerTest.ReturnBonusLevelMaturityBonusAtLevel2
       resultStatus: 1
-      duration: 0.000234
+      duration: 0.000691
       messages: 
       output: 
       stacktrace: 
@@ -3166,13 +4430,14 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-      categories: []
-      parentID: 
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][MaturityManagerTest][suite]'
     - id: '[Assembly-CSharp-Editor][MaturityManagerTest.ReturnBonusLevelMaturityBonusAtLevel5]'
       name: ReturnBonusLevelMaturityBonusAtLevel5
       fullName: MaturityManagerTest.ReturnBonusLevelMaturityBonusAtLevel5
       resultStatus: 1
-      duration: 0.000194
+      duration: 0.000503
       messages: 
       output: 
       stacktrace: 
@@ -3180,13 +4445,14 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-      categories: []
-      parentID: 
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][MaturityManagerTest][suite]'
     - id: '[Assembly-CSharp-Editor][MaturityManagerTest.Returns_A_Total_Of_55_Bonuses]'
       name: Returns_A_Total_Of_55_Bonuses
       fullName: MaturityManagerTest.Returns_A_Total_Of_55_Bonuses
       resultStatus: 1
-      duration: 0.014421
+      duration: 0.014056
       messages: 
       output: 'in MaturityStatic
 
@@ -3212,13 +4478,14 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-      categories: []
-      parentID: 
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][MaturityManagerTest][suite]'
     - id: '[Assembly-CSharp-Editor][MaturityManagerTest.Returns_Break_Skill_At_Level_15]'
       name: Returns_Break_Skill_At_Level_15
       fullName: MaturityManagerTest.Returns_Break_Skill_At_Level_15
       resultStatus: 1
-      duration: 0.001786
+      duration: 0.002062
       messages: 
       output: 'Tier 2, MaturityStatic
 
@@ -3228,13 +4495,14 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-      categories: []
-      parentID: 
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][MaturityManagerTest][suite]'
     - id: '[Assembly-CSharp-Editor][MaturityManagerTest.Returns_Break_Tree_On_Level_0]'
       name: Returns_Break_Tree_On_Level_0
       fullName: MaturityManagerTest.Returns_Break_Tree_On_Level_0
       resultStatus: 1
-      duration: 0.000205
+      duration: 0.000512
       messages: 
       output: 
       stacktrace: 
@@ -3242,13 +4510,14 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-      categories: []
-      parentID: 
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][MaturityManagerTest][suite]'
     - id: '[Assembly-CSharp-Editor][MaturityManagerTest.ReturnSTABBonusMaturityBonusAtLevel4]'
       name: ReturnSTABBonusMaturityBonusAtLevel4
       fullName: MaturityManagerTest.ReturnSTABBonusMaturityBonusAtLevel4
       resultStatus: 1
-      duration: 0.000258
+      duration: 0.000477
       messages: 
       output: 
       stacktrace: 
@@ -3256,13 +4525,14 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-      categories: []
-      parentID: 
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][MaturityManagerTest][suite]'
     - id: '[Assembly-CSharp-Editor][MaturityManagerTest.ReturnTypeAtLevel4IsNotBonusLevel]'
       name: ReturnTypeAtLevel4IsNotBonusLevel
       fullName: MaturityManagerTest.ReturnTypeAtLevel4IsNotBonusLevel
       resultStatus: 1
-      duration: 0.00022
+      duration: 0.000484
       messages: 
       output: 
       stacktrace: 
@@ -3270,13 +4540,14 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-      categories: []
-      parentID: 
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][MaturityManagerTest][suite]'
     - id: '[Assembly-CSharp-Editor][PokemonDataTests][suite]'
       name: PokemonDataTests
       fullName: PokemonDataTests
       resultStatus: 1
-      duration: 0.550242
+      duration: 0.363749
       messages: 
       output: 
       stacktrace: 
@@ -3285,12 +4556,12 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentID: 
+      parentID: '[/Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll][suite]'
     - id: '[Assembly-CSharp-Editor][PokemonDataTests.BreedBuildsDualtype]'
       name: BreedBuildsDualtype
       fullName: PokemonDataTests.BreedBuildsDualtype
       resultStatus: 1
-      duration: 0.001502
+      duration: 0.001595
       messages: 
       output: 
       stacktrace: 
@@ -3298,13 +4569,14 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-      categories: []
-      parentID: 
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][PokemonDataTests][suite]'
     - id: '[Assembly-CSharp-Editor][PokemonDataTests.BreedBuildsDualtype_NSubstitute]'
       name: BreedBuildsDualtype_NSubstitute
       fullName: PokemonDataTests.BreedBuildsDualtype_NSubstitute
       resultStatus: 1
-      duration: 0.372752
+      duration: 0.245535
       messages: 
       output: 
       stacktrace: 
@@ -3312,13 +4584,14 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-      categories: []
-      parentID: 
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][PokemonDataTests][suite]'
     - id: '[Assembly-CSharp-Editor][PokemonDataTests.BreedBuildsMonotype]'
       name: BreedBuildsMonotype
       fullName: PokemonDataTests.BreedBuildsMonotype
       resultStatus: 1
-      duration: 0.000474
+      duration: 0.000403
       messages: 
       output: 
       stacktrace: 
@@ -3326,15 +4599,16 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-      categories: []
-      parentID: 
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][PokemonDataTests][suite]'
     - id: '[Assembly-CSharp-Editor][PokemonDataTests.CanCreatePokemon]'
       name: CanCreatePokemon
       fullName: PokemonDataTests.CanCreatePokemon
       resultStatus: 1
-      duration: 0.007538
+      duration: 0.012651
       messages: 
-      output: '482
+      output: '67
 
         Gained Ability Slot :0
 
@@ -3344,15 +4618,16 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-      categories: []
-      parentID: 
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][PokemonDataTests][suite]'
     - id: '[Assembly-CSharp-Editor][PokemonDataTests.HasMaturity]'
       name: HasMaturity
       fullName: PokemonDataTests.HasMaturity
       resultStatus: 1
-      duration: 0.007134
+      duration: 0.004073
       messages: 
-      output: '47
+      output: '1918
 
         Gained Ability Slot :0
 
@@ -3362,15 +4637,16 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-      categories: []
-      parentID: 
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][PokemonDataTests][suite]'
     - id: '[Assembly-CSharp-Editor][PokemonDataTests.HasRate]'
       name: HasRate
       fullName: PokemonDataTests.HasRate
       resultStatus: 1
-      duration: 0.007285
+      duration: 0.00382
       messages: 
-      output: '419
+      output: '2865
 
         Gained Ability Slot :0
 
@@ -3380,15 +4656,16 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-      categories: []
-      parentID: 
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][PokemonDataTests][suite]'
     - id: '[Assembly-CSharp-Editor][PokemonDataTests.HasXP]'
       name: HasXP
       fullName: PokemonDataTests.HasXP
       resultStatus: 1
-      duration: 0.006711
+      duration: 0.003778
       messages: 
-      output: '3514
+      output: '1549
 
         Gained Ability Slot :0
 
@@ -3398,15 +4675,16 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-      categories: []
-      parentID: 
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][PokemonDataTests][suite]'
     - id: '[Assembly-CSharp-Editor][PokemonDataTests.MaturityChangesBasedOnRate]'
       name: MaturityChangesBasedOnRate
       fullName: PokemonDataTests.MaturityChangesBasedOnRate
       resultStatus: 1
-      duration: 0.020892
+      duration: 0.003864
       messages: 
-      output: '3656
+      output: '586
 
         Gained Ability Slot :0
 
@@ -3416,15 +4694,16 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-      categories: []
-      parentID: 
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][PokemonDataTests][suite]'
     - id: '[Assembly-CSharp-Editor][PokemonDataTests.MaturityContinuesToChangeBasedOnRate]'
       name: MaturityContinuesToChangeBasedOnRate
       fullName: PokemonDataTests.MaturityContinuesToChangeBasedOnRate
       resultStatus: 1
-      duration: 0.008652
+      duration: 0.004071
       messages: 
-      output: '567
+      output: '843
 
         Gained Ability Slot :0
 
@@ -3434,15 +4713,16 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-      categories: []
-      parentID: 
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][PokemonDataTests][suite]'
     - id: '[Assembly-CSharp-Editor][PokemonDataTests.PokemonHasAttack]'
       name: PokemonHasAttack
       fullName: PokemonDataTests.PokemonHasAttack
       resultStatus: 1
-      duration: 0.009093
+      duration: 0.004028
       messages: 
-      output: '2253
+      output: '1962
 
         Gained Ability Slot :0
 
@@ -3452,15 +4732,16 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-      categories: []
-      parentID: 
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][PokemonDataTests][suite]'
     - id: '[Assembly-CSharp-Editor][PokemonDataTests.PokemonHasDefense]'
       name: PokemonHasDefense
       fullName: PokemonDataTests.PokemonHasDefense
       resultStatus: 1
-      duration: 0.006244
+      duration: 0.011485
       messages: 
-      output: '274
+      output: '3087
 
         Gained Ability Slot :0
 
@@ -3470,15 +4751,16 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-      categories: []
-      parentID: 
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][PokemonDataTests][suite]'
     - id: '[Assembly-CSharp-Editor][PokemonDataTests.PokemonHasElementType1]'
       name: PokemonHasElementType1
       fullName: PokemonDataTests.PokemonHasElementType1
       resultStatus: 1
-      duration: 0.009453
+      duration: 0.004463
       messages: 
-      output: '1933
+      output: '2018
 
         Gained Ability Slot :0
 
@@ -3488,15 +4770,16 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-      categories: []
-      parentID: 
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][PokemonDataTests][suite]'
     - id: '[Assembly-CSharp-Editor][PokemonDataTests.PokemonHasElementType2]'
       name: PokemonHasElementType2
       fullName: PokemonDataTests.PokemonHasElementType2
       resultStatus: 1
-      duration: 0.008667
+      duration: 0.004313
       messages: 
-      output: '13
+      output: '1935
 
         Gained Ability Slot :0
 
@@ -3506,15 +4789,16 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-      categories: []
-      parentID: 
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][PokemonDataTests][suite]'
     - id: '[Assembly-CSharp-Editor][PokemonDataTests.PokemonHasEndurance]'
       name: PokemonHasEndurance
       fullName: PokemonDataTests.PokemonHasEndurance
       resultStatus: 1
-      duration: 0.006788
+      duration: 0.004083
       messages: 
-      output: '661
+      output: '4066
 
         Gained Ability Slot :0
 
@@ -3524,15 +4808,16 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-      categories: []
-      parentID: 
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][PokemonDataTests][suite]'
     - id: '[Assembly-CSharp-Editor][PokemonDataTests.PokemonHasHeldItem]'
       name: PokemonHasHeldItem
       fullName: PokemonDataTests.PokemonHasHeldItem
       resultStatus: 1
-      duration: 0.006756
+      duration: 0.004247
       messages: 
-      output: '626
+      output: '268
 
         Gained Ability Slot :0
 
@@ -3542,15 +4827,16 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-      categories: []
-      parentID: 
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][PokemonDataTests][suite]'
     - id: '[Assembly-CSharp-Editor][PokemonDataTests.PokemonHasHP]'
       name: PokemonHasHP
       fullName: PokemonDataTests.PokemonHasHP
       resultStatus: 1
-      duration: 0.007578
+      duration: 0.004092
       messages: 
-      output: '3212
+      output: '1188
 
         Gained Ability Slot :0
 
@@ -3560,15 +4846,16 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-      categories: []
-      parentID: 
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][PokemonDataTests][suite]'
     - id: '[Assembly-CSharp-Editor][PokemonDataTests.PokemonHasLevel]'
       name: PokemonHasLevel
       fullName: PokemonDataTests.PokemonHasLevel
       resultStatus: 1
-      duration: 0.006897
+      duration: 0.004184
       messages: 
-      output: '3161
+      output: '1430
 
         Gained Ability Slot :0
 
@@ -3578,15 +4865,16 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-      categories: []
-      parentID: 
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][PokemonDataTests][suite]'
     - id: '[Assembly-CSharp-Editor][PokemonDataTests.PokemonHasSpecialAttack]'
       name: PokemonHasSpecialAttack
       fullName: PokemonDataTests.PokemonHasSpecialAttack
       resultStatus: 1
-      duration: 0.006783
+      duration: 0.004251
       messages: 
-      output: '3020
+      output: '3500
 
         Gained Ability Slot :0
 
@@ -3596,15 +4884,16 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-      categories: []
-      parentID: 
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][PokemonDataTests][suite]'
     - id: '[Assembly-CSharp-Editor][PokemonDataTests.PokemonHasSpecialDefense]'
       name: PokemonHasSpecialDefense
       fullName: PokemonDataTests.PokemonHasSpecialDefense
       resultStatus: 1
-      duration: 0.009074
+      duration: 0.004
       messages: 
-      output: '1232
+      output: '978
 
         Gained Ability Slot :0
 
@@ -3614,15 +4903,16 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-      categories: []
-      parentID: 
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][PokemonDataTests][suite]'
     - id: '[Assembly-CSharp-Editor][PokemonDataTests.PokemonHasSpeed]'
       name: PokemonHasSpeed
       fullName: PokemonDataTests.PokemonHasSpeed
       resultStatus: 1
-      duration: 0.006701
+      duration: 0.003985
       messages: 
-      output: '725
+      output: '675
 
         Gained Ability Slot :0
 
@@ -3632,15 +4922,16 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-      categories: []
-      parentID: 
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][PokemonDataTests][suite]'
     - id: '[Assembly-CSharp-Editor][PokemonDataTests.PokemonHasStrain]'
       name: PokemonHasStrain
       fullName: PokemonDataTests.PokemonHasStrain
       resultStatus: 1
-      duration: 0.006288
+      duration: 0.004057
       messages: 
-      output: '2759
+      output: '1909
 
         Gained Ability Slot :0
 
@@ -3650,15 +4941,16 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-      categories: []
-      parentID: 
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][PokemonDataTests][suite]'
     - id: '[Assembly-CSharp-Editor][PokemonDataTests.PokemonShowsType1OfBreed]'
       name: PokemonShowsType1OfBreed
       fullName: PokemonDataTests.PokemonShowsType1OfBreed
       resultStatus: 1
-      duration: 0.007133
+      duration: 0.004189
       messages: 
-      output: '3910
+      output: '1997
 
         Gained Ability Slot :0
 
@@ -3668,15 +4960,16 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-      categories: []
-      parentID: 
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][PokemonDataTests][suite]'
     - id: '[Assembly-CSharp-Editor][PokemonDataTests.PokemonShowsType2OfBreed]'
       name: PokemonShowsType2OfBreed
       fullName: PokemonDataTests.PokemonShowsType2OfBreed
       resultStatus: 1
-      duration: 0.006169
+      duration: 0.003976
       messages: 
-      output: '3037
+      output: '2777
 
         Gained Ability Slot :0
 
@@ -3686,32 +4979,45 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][PokemonDataTests][suite]'
+    - id: '[Assembly-CSharp-Editor][TowersProblemTests][suite]'
+      name: TowersProblemTests
+      fullName: TowersProblemTests
+      resultStatus: 1
+      duration: 0.024561
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
       categories: []
-      parentID: 
-    m_ResultText: "First150SortedLinkedList (573.706s)\n---\nSystem.NullReferenceException
-      : Object reference not set to an instance of an object\n---\nat BreedSortedLinkedList.AddNode
-      (.BreedSortedLinkedListNode NodeToAdd, Int32 _Value) [0x000c3] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/BreedSortedLinkedList.cs:61
-      \n  at BreedReaderTest.First150SortedLinkedList () [0x0003f] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/BreedReader/Editor/BreedReaderTest.cs:77
-      \n  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke
-      (object,object[],System.Exception&)\n  at System.Reflection.MonoMethod.Invoke
-      (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder,
-      System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d0]
-      in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Reflection/MonoMethod.cs:222\n---\nAttempting
-      to add nodeBreedSortedLinkedListNode\nAssigning the Head\nAttempting to add
-      nodeBreedSortedLinkedListNode"
-    m_ResultStacktrace: "  at BreedSortedLinkedList.AddNode (.BreedSortedLinkedListNode
-      NodeToAdd, Int32 _Value) [0x000c3] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/BreedSortedLinkedList.cs:61
-      \n  at BreedReaderTest.First150SortedLinkedList () [0x0003f] in /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Assets/Scripts/BreedReader/Editor/BreedReaderTest.cs:77
-      \n  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke
-      (object,object[],System.Exception&)\n  at System.Reflection.MonoMethod.Invoke
-      (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder,
-      System.Object[] parameters, System.Globalization.CultureInfo culture) [0x000d0]
-      in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.Reflection/MonoMethod.cs:222 "
+      parentID: '[/Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll][suite]'
+    - id: '[Assembly-CSharp-Editor][TowersProblemTests.CreatesSingleStone]'
+      name: CreatesSingleStone
+      fullName: TowersProblemTests.CreatesSingleStone
+      resultStatus: 1
+      duration: 0.007855
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentID: '[Assembly-CSharp-Editor][TowersProblemTests][suite]'
+    m_ResultText: CreatesSingleStone (0.008s)
+    m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 83929364
-      m_LastClickedID: 1687392899
-      m_ExpandedIDs: 27e2fdc1deb4eefb23b23410ffffff7f
+      m_SelectedIDs: 7afa3d40
+      m_LastClickedID: 1077803642
+      m_ExpandedIDs: f4ecfee3deb4eefb23b23410ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -3757,10 +5063,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1706
-    y: 368
-    width: 188
-    height: 328
+    x: 381
+    y: 94
+    width: 185
+    height: 357
   m_PersistentViewDataDictionary: {fileID: 0}
 --- !u!114 &19
 MonoBehaviour:
@@ -3782,10 +5088,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1898
-    y: 368
-    width: 418
-    height: 328
+    x: 570
+    y: 94
+    width: 430
+    height: 357
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
   lastFramingTime: 215.87286794185638
@@ -3861,10 +5167,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1449
-    y: 717
-    width: 413
-    height: 288
+    x: 4
+    y: 472
+    width: 474
+    height: 259
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -3878,20 +5184,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Scripts/Tests/Editor
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Scripts/Tests/Editor
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/charleslannak/Documents/GitHub/PokemonRPGCharacterGenerator/PokemonRPGCharacterGenerator
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 168}
-    m_SelectedIDs: 462c0000
-    m_LastClickedID: 11334
-    m_ExpandedIDs: 00000000fc2a0000a62b0000e42b0000462c0000522c00002c2d0000342d0000ca2d0000fa2d00002e2e00009c2e000000ca9a3b
+    scrollPos: {x: 0, y: 318}
+    m_SelectedIDs: 3e0c0000
+    m_LastClickedID: 3134
+    m_ExpandedIDs: 000000000e0a0000b80a0000f60a0000580b0000640b00003e0c0000460c0000dc0c00000c0d0000400d0000ae0d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -3919,7 +5225,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 3e2c0000
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000fc2a0000a62b0000e42b0000462c0000522c00002c2d0000342d0000ca2d0000fa2d00002e2e00009c2e0000
+    m_ExpandedIDs: 000000000e0a0000b80a0000f60a0000580b0000640b00003e0c0000460c0000dc0c00000c0d0000400d0000ae0d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -3971,7 +5277,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 210.5}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
   m_DirectoriesAreaWidth: 149
 --- !u!114 &21
@@ -3994,9 +5300,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 871
-    y: 19
-    width: 404
+    x: 1004
+    y: 94
+    width: 275
     height: 637
   m_PersistentViewDataDictionary: {fileID: 0}
   m_ObjectsLockedBeforeSerialization: []

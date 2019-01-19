@@ -29,21 +29,21 @@ public class FileReader <T>
     }
 }
 
-public class PokedexLinkedList
-{
-    public BreedLinkedList Pokedex;
+//public class PokedexLinkedList
+//{
+//    public BreedLinkedList Pokedex;
 
-    public void First150()
-    {
-        PokemonFileReader BreedReader = new PokemonFileReader();
+//    public void First150()
+//    {
+//        PokemonFileReader BreedReader = new PokemonFileReader();
 
-        for (int i = 1; i < 151; i++)
-        {
-            Pokemon.Breed Bulbasaur = BreedReader.GetItemByID(i);
-            Pokedex.AddNode (new BreedLinkedListNode(Bulbasaur));
-        }
-    }
-}
+//        for (int i = 1; i < 151; i++)
+//        {
+//            Pokemon.Breed Bulbasaur = BreedReader.GetItemByID(i);
+//            Pokedex.AddNode (new BreedLinkedListNode(Bulbasaur));
+//        }
+//    }
+//}
 
 public class BreedBinarySearchNode
 {

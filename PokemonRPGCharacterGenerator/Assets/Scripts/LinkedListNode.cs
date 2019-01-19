@@ -7,14 +7,13 @@ public class LinkedListNode<T> : IEnumerable<T>
     public T ThisData { get; private set; }
     public LinkedListNode<T> Child { get; private set; }
 
-    private class LinkedListEnumerator : IEnumerator<T>
+    private class LinkedListEnumerator : IEnumerator <T>
     {
         public LinkedListNode <T> StartingNode { get; private set; }
         public LinkedListNode <T> CurrentNode { get; private set; }
         object IEnumerator.Current { get { return Current;} }
 
-
-		public LinkedListEnumerator (LinkedListNode <T> _StartingNode)
+	   public LinkedListEnumerator (LinkedListNode <T> _StartingNode)
         {
             StartingNode = _StartingNode;
         }
@@ -27,8 +26,6 @@ public class LinkedListNode<T> : IEnumerable<T>
             }
         }
 
-		
-
 		public void Dispose()
         {
         	StartingNode = null;
@@ -37,6 +34,11 @@ public class LinkedListNode<T> : IEnumerable<T>
 
         public bool MoveNext()
         {
+        		if (CurrentNode == null)
+			{
+			CurrentNode = StartingNode;
+			return true; 
+			}
 			if (CurrentNode.Child != null)
 			{ 
 			CurrentNode = CurrentNode.Child;
@@ -47,7 +49,7 @@ public class LinkedListNode<T> : IEnumerable<T>
 
         public void Reset()
         {
-            throw new System.NotImplementedException();
+        CurrentNode = null;
         }
     }
 
@@ -62,6 +64,12 @@ public class LinkedListNode<T> : IEnumerable<T>
             return ThisData;
         else return Child.FindLast();
     }
+    
+    
+   public bool HasChild(LinkedListNode <T> Node)
+    {
+        return Node.Child != null;
+    }
 
     public void AddData (T Data)
     { 
@@ -69,6 +77,7 @@ public class LinkedListNode<T> : IEnumerable<T>
         {
             Child = new LinkedListNode<T>(Data);
         }
+        else
         Child.AddData(Data);
     }
 
@@ -80,12 +89,43 @@ public class LinkedListNode<T> : IEnumerable<T>
 
     public IEnumerator<T> GetEnumerator()
     {
-        throw new System.NotImplementedException();
+		IEnumerator <T> Temp = new LinkedListEnumerator (this);
+		return Temp;
     }
 
     IEnumerator IEnumerable.GetEnumerator()
     {
-        throw new System.NotImplementedException();
-    }
-}
+		IEnumerator <T> Temp = new LinkedListEnumerator (this);
+		return Temp;    
+	}
+    
+	
+	public List <T> AddToList (List <T> _ListToAppend)
+	{
+	LinkedListNode <T> Temp = this;
+		
+	while (HasChild (Temp) == true)
+		{ 
+		_ListToAppend.Add (Temp.ThisData);
+		Temp = Temp.Child;
+		}
+	
+	return _ListToAppend;
+	}
 
+	public List <T> AddToListRecursive (List <T> _ListToAppend)
+	{
+	 	LinkedListNode <T> Temp = this;
+	 	
+		if (HasChild (Temp) == true)
+		{ 
+			_ListToAppend.Add (Temp.ThisData);
+			return Child.AddToListRecursive (_ListToAppend);
+		}
+		else
+		{ 
+			_ListToAppend.Add (Temp.ThisData);
+			return _ListToAppend;
+		}
+	}
+}
