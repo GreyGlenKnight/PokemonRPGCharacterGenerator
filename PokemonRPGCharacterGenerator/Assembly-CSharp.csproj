@@ -128,6 +128,7 @@
     <Compile Include="Assets\Scripts\Scenes\SceneChanger.cs" />
     <Compile Include="Assets\Scripts\SortedLinkedListNode.cs" />
     <Compile Include="Assets\Scripts\StaticClass\TypeColors.cs" />
+    <Compile Include="Assets\Scripts\TechniqueFileReader.cs" />
     <Compile Include="Assets\Scripts\ToRefactor\HistoryItem.cs" />
     <Compile Include="Assets\Scripts\ToRefactor\LevelUpBonus.cs" />
     <Compile Include="Assets\Scripts\ToRefactor\MaturityRank.cs" />
