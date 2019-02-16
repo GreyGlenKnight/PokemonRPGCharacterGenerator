@@ -1,15 +1,10 @@
 ﻿<Properties StartupConfiguration="{12C713B3-27D3-91DA-05F4-93A974B2680E}|" RefactoringSettings.EnableRefactorings="True">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Tests/Editor/TowersProblemTests.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PokemonGeneratorNotes.cs">
     <Files>
-      <File FileName="Assets/Scripts/Pokemon/Pokemon.cs" Line="18" Column="9" />
-      <File FileName="Assets/Scripts/GameManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/FileReader.cs" Line="171" Column="1" />
+      <File FileName="Assets/Scripts/Pokemon/Pokemon.cs" Line="21" Column="10" />
+      <File FileName="Assets/Scripts/FileReader.cs" Line="112" Column="13" />
       <File FileName="Assets/Scripts/BinarySearchNode.cs" Line="206" Column="43" />
-      <File FileName="Assets/Scripts/TowersProblem.cs" Line="34" Column="2" />
-      <File FileName="Assets/Scripts/SortedLinkedListNode.cs" Line="15" Column="1" NotebookId="1" />
-      <File FileName="Assets/Scripts/LinkedListNode.cs" Line="100" Column="3" NotebookId="1" />
-      <File FileName="Assets/Scripts/BreedReader/Editor/BreedReaderTest.cs" Line="16" Column="1" NotebookId="1" />
-      <File FileName="Assets/Scripts/Tests/Editor/TowersProblemTests.cs" Line="35" Column="19" NotebookId="1" />
+      <File FileName="Assets/Scripts/PokemonGeneratorNotes.cs" Line="40" Column="9" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

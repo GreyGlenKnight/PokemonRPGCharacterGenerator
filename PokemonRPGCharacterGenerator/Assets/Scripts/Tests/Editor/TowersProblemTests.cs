@@ -40,7 +40,7 @@ public class TowersProblemTests
 		Debug.Assert (Puzzle.TowerOne.TopStone == null);
     }
 
-[Test]
+	[Test]
     public void MoveMultipleStones ()
     {
         TowersProblem Puzzle = new TowersProblem (2);
@@ -53,4 +53,30 @@ public class TowersProblemTests
 		Debug.Assert (Puzzle.TowerTwo.Stones.Count == 1);
     }
 
+	
+	//[Test]
+  //  public void PuzzleCompleted ()
+  //  {
+  //      TowersProblem Puzzle = new TowersProblem (5);
+		//Puzzle.Solve ();
+
+		//Debug.Assert (Puzzle.TowerOne.Stones.Count == 0);
+		//Debug.Assert (Puzzle.TowerTwo.Stones.Count == 0);
+		//Debug.Assert (Puzzle.TowerThree.Stones.Count == 5);
+
+		
+    //}
+
+
+[Test]
+    public void PuzzleCompleted ()
+    {
+		TowersProblem Puzzle = new TowersProblem (5);
+		List <Move> Temp = Puzzle.Solve (5, Move.TowerID.Middle, Move.TowerID.Right);
+
+		{Debug.Log (Temp.Count);}
+
+		for (int i = 0; i < Temp.Count; i++)
+{Debug.Log (Temp[i].Instruction);}
+    }
 }

@@ -110,6 +110,7 @@
     <Compile Include="Assets\Scripts\Pokemon\Pokemon.cs" />
     <Compile Include="Assets\Scripts\Pokemon\PokemonClass.cs" />
     <Compile Include="Assets\Scripts\Pokemon\TechniqueModifier.cs" />
+    <Compile Include="Assets\Scripts\PokemonGeneratorNotes.cs" />
     <Compile Include="Assets\Scripts\Scenes\Generator\GeneratorController.cs" />
     <Compile Include="Assets\Scripts\Scenes\Generator\GeneratorDisplay.cs" />
     <Compile Include="Assets\Scripts\Scenes\Generator\LevelInfoDisplay.cs" />
