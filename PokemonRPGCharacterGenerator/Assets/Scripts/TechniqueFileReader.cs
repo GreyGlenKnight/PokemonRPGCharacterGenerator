@@ -29,9 +29,25 @@ public class TechniqueFileReader : FileReader <Technique>
         {
             return null;
         }
-        else {
-        Technique.TechniqueStringParams Temp = new Technique.TechniqueStringParams(Tokens);
-        return Temp.GetTechnique();
+        else
+        {
+            TechniqueStringParams Temp = new TechniqueStringParams(Tokens);
+            return Temp.GetTechnique();
         }
+    }
 
+    public override bool Equals(object obj)
+    {
+        return base.Equals(obj);
+    }
+
+    public override int GetHashCode()
+    {
+        return base.GetHashCode();
+    }
+
+    public override string ToString()
+    {
+        return base.ToString();
+    }
 }

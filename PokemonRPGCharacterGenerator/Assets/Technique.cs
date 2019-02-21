@@ -49,35 +49,35 @@ public class Technique : IChoosable
     public string Trigger2Mod1;
     public string Trigger2Mod2;
     public string Effect2;
-    public string Modifier2;
-    public string Modifier2;
-    public string Trigger1Func;
-    public string Trigger1Mod1;
-    public string Trigger1Mod1;
+   // public string Modifier2;
+   // public string Modifier2;
+   // public string Trigger1Func;
+   // public string Trigger1Mod1;
+   // public string Trigger1Mod1;
     public string Trigger2;
     public string Trigger2Mod;
-    public string Trigger2Mod2;
+   // public string Trigger2Mod2;
     public string Effect3;
     public string Modifier3;
-    public string Modifier2;
+   // public string Modifier2;
     public string Trigger1;
     public string Trigger1Mod;
-    public string Trigger2Mod2;
-    public string Trigger2;
-    public string Trigger2Mod2;
-    public string Trigger2Mod;
+   // public string Trigger2Mod2;
+   // public string Trigger2;
+   // public string Trigger2Mod2;
+   // public string Trigger2Mod;
 
     //public void SetTechniqueDescription(string Value) { TechniqueDescription = Value; }
     public void SetDisplayRange(string Value) { DisplayRange = Value; }
     public void SetTechniqueName(string Value) { TechniqueName = Value; }
-    public void SetBaseStrain(string Value) { BaseStrain = Value; }
-    public void SetSkillTreeTier(string Value) { SkillTreeTier = Value; }
-    public void SetStatsUsed(string Value) { StatsUsed = Value; }
+    public void SetBaseStrain(string Value) { BaseStrain = Int32.Parse(Value); }
+    public void SetSkillTreeTier(string Value) { Tier = (SkillTreeTier) Int32.Parse (Value); }
+   // public void SetStatsUsed(string Value) { StatsUsed = Int32.Parse (Value); }
 
-    public void SetBaseDamage(string Value) { BaseDamage = Value; }
-    public void SetTypes(string Value) { Types = Value; }
-    public void SetRange(string Value) { Range = Value; }
-    public void SetBaseAccuracy(string Value) { BaseAccuracy = Value; }
+    public void SetBaseDamage(string Value) { BaseDamage = Int32.Parse (Value); }
+    public void SetTypes(string Value) { Types = null; Types.Add ((ElementTypes) Int32.Parse (Value)); }
+    public void SetRange(string Value) { Range = (AttackRange) Int32.Parse (Value); }
+    public void SetBaseAccuracy(string Value) { BaseAccuracy = Int32.Parse (Value); }
     public void SetEffect1(string Value) {
         if ((Value == null) == true)
         {
@@ -132,94 +132,22 @@ public class Technique : IChoosable
             throw new Exception();
         }
         else Trigger2Mod2 = Value; }
-    public void SetEffect2(string Value) {
+    public void SetEffect2(string Value)
+    {
         if ((Value == null) == true)
-        { throw new Exception();
+        {
+            throw new Exception();
         }
         else { Modifier2 = Value; }
-    public void SetTrigger1Func(string Value) {
-            if ((Value == null) == true)
-            { throw new Exception();
-            }
-            else Trigger1Func = Value; }
-    public void SetTrigger1Mod1(string Value) {
-            if ((Value == null) == true)
-            { throw new Exception();
-            }
-            else Trigger1Mod1 = Value; }
-    public void SetTrigger1Mod1(string Value) {
-            if ((Value == null) == true)
-            { throw new Exception();
-            }
-            else Trigger1Mod1 = Value; }
-    public void SetTrigger2(string Value) {
-            if ((Value == null) == true)
-            { throw new Exception();
-            }
-            else Trigger2 = Value; }
-    public void SetTrigger2Mod(string Value) {
-            if ((Value == null) == true)
-            { throw new Exception();
-            }
-            else Trigger2Mod = Value; }
-    public void SetTrigger2Mod2(string Value) {
-            if ((Value == null) == true)
-            { throw new Exception();
-            }
-            else Trigger2Mod2 = Value; }
-    public void SetEffect3(string Value) {
-            if ((Value == null) == true)
-            { throw new Exception();
-            }
-            else Effect3 = Value; }
-    public void SetModifier3(string Value) {
-            if ((Value == null) == true)
-            { throw new Exception();
-            }
-            else Modifier3 = Value; }
-    public void SetModifier2(string Value) {
-            if ((Value == null) == true)
-            { throw new Exception();
-            }
-            else Modifier2 = Value; }
-    public void SetTrigger1(string Value) {
-            if ((Value == null) == true)
-            { throw new Exception();
-            }
-            else Trigger1 = Value; }
-    public void SetTrigger1Mod(string Value) {
-            if ((Value == null) == true)
-            { throw new Exception();
-            }
-            else Trigger1Mod = Value; }
-    public void SetTrigger2Mod2(string Value) {
-            if ((Value == null) == true)
-            { throw new Exception();
-            }
-            else Trigger2Mod2 = Value; }
-    public void SetTrigger2(string Value) {
-            if ((Value == null) == true)
-            { throw new Exception();
-            }
-            else Trigger2 = Value; }
-    public void SetTrigger2Mod2(string Value) {
-            if ((Value == null) == true)
-            { throw new Exception();
-            }
-            else Trigger2Mod2 = Value; }
-    public void SetTrigger2Mod(string Value) {
-            if ((Value == null) == true)
-            { throw new Exception();
-            }
-            else Trigger2Mod = Value; }
-
+        //
+    }
     public Technique ()
 	{
 	}
 
     public Technique (TechniqueStringParams Tokens)
     {
-            return Tokens.GetTechnique();
+            Tokens.GetTechnique();
     }
 
     public static Technique Fire_Blast ()
@@ -303,41 +231,41 @@ public class Technique : IChoosable
             else
             {
                 Tokens = tokens;
-                Target.SetTechniqueName(Tokens[0])
-                Target.SetBaseStrain(Tokens[1])
-                Target.SetSkillTreeTier(Tokens[2])
-                Target.SetStatsUsed(Tokens[3])
-                Target.SetBaseDamage(Tokens[4])
-                Target.SetTypes(Tokens[5])
-                Target.SetRange(Tokens[6])
-                Target.SetBaseAccuracy(Tokens[7])
-                Target.SetEffect1(Tokens[8];
-                Target.SetModifier1(Tokens[9];
-                Target.SetModifier2(Tokens[10];
-                Target.SetTrigger1Func(Tokens[11];
-                Target.SetTrigger1Mod1(Tokens[12];
-                Target.SetTrigger1Mod2(Tokens[13];
-                Target.SetTrigger2Func(Tokens[14];
-                Target.SetTrigger2Mod1(Tokens[15];
-                Target.SetTrigger2Mod2(Tokens[16];
-                Target.SetEffect2(Tokens[17];
-                Target.SetModifier2(Tokens[18];
-                Target.SetModifier2(Tokens[19];
-                Target.SetTrigger1Func(Tokens[20];
-                Target.SetTrigger1Mod1(Tokens[21];
-                Target.SetTrigger1Mod1(Tokens[22];
-                Target.SetTrigger2(Tokens[23];
-                Target.SetTrigger2Mod(Tokens[24];
-                Target.SetTrigger2Mod2(Tokens[25];
-                Target.SetEffect3(Tokens[26];
-                Target.SetModifier3(Tokens[27];
-                Target.SetModifier2(Tokens[28];
-                Target.SetTrigger1(Tokens[29];
-                Target.SetTrigger1Mod(Tokens[30];
-                Target.SetTrigger2Mod2(Tokens[31];
-                Target.SetTrigger2(Tokens[32];
-                Target.SetTrigger2Mod2(Tokens[33];
-                Target.SetTrigger2Mod(Tokens[34];
+            Target.SetTechniqueName(Tokens[0]);
+            Target.SetBaseStrain(Tokens[1]);
+            Target.SetSkillTreeTier(Tokens[2]);
+           // Target.SetStatsUsed(Tokens[3]);
+            Target.SetBaseDamage(Tokens[4]);
+            Target.SetTypes(Tokens[5]);
+            Target.SetRange(Tokens[6]);
+            Target.SetBaseAccuracy(Tokens[7]);
+                Target.SetEffect1(Tokens[8]);
+                Target.SetModifier1(Tokens[9]);
+                Target.SetModifier2(Tokens[10]);
+                Target.SetTrigger1Func(Tokens[11]);
+                Target.SetTrigger1Mod1(Tokens[12]);
+                Target.SetTrigger1Mod2(Tokens[13]);
+                Target.SetTrigger2Func(Tokens[14]);
+                Target.SetTrigger2Mod1(Tokens[15]);
+                Target.SetTrigger2Mod2(Tokens[16]);
+                Target.SetEffect2(Tokens[17]);
+                Target.SetModifier2(Tokens[18]);
+                Target.SetModifier2(Tokens[19]);
+                Target.SetTrigger1Func(Tokens[20]);
+                Target.SetTrigger1Mod1(Tokens[21]);
+                Target.SetTrigger1Mod1(Tokens[22]);
+               // Target.SetTrigger2(Tokens[23]);
+               // Target.SetTrigger2Mod(Tokens[24]);
+                Target.SetTrigger2Mod2(Tokens[25]);
+               // Target.SetEffect3(Tokens[26]);
+               // Target.SetModifier3(Tokens[27]);
+                Target.SetModifier2(Tokens[28]);
+               // Target.SetTrigger1(Tokens[29]);
+               // Target.SetTrigger1Mod(Tokens[30]);
+                Target.SetTrigger2Mod2(Tokens[31]);
+               // Target.SetTrigger2(Tokens[32]);
+                Target.SetTrigger2Mod2(Tokens[33]);
+               // Target.SetTrigger2Mod(Tokens[34]);
             }
         }
 
@@ -345,6 +273,5 @@ public class Technique : IChoosable
         { return Target; }
 
     }
-}
 
 
