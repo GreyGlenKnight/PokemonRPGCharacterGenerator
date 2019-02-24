@@ -99,3 +99,7 @@ Temporary Items
 .apdisk
 PokemonRPGCharacterGenerator/Library/shadercompiler-UnityShaderCompiler.exe0.log
 PokemonRPGCharacterGenerator/.vs/PokemonRPGCharacterGenerator/v15/Server/sqlite3/storage.ide
+PokemonRPGCharacterGenerator/Assets/Scripts/Tests/Editor/NSubstitute 2.dll.meta
+PokemonRPGCharacterGenerator/Assets/Scripts/Tests/Editor/NSubstitute.dll.meta
+PokemonRPGCharacterGenerator/Assets/Scripts/Tests/Editor/NSubstitute 1.dll.meta
+*.meta
