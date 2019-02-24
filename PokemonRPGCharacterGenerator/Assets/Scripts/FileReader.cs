@@ -168,7 +168,7 @@ public class PokemonFileReader : FileReader <Pokemon.Breed>
         }
         
         string _BreedName = Tokens[0];
-        int NationalPokedexNumber = int.Parse(Tokens[1]);
+       // int NationalPokedexNumber = int.Parse(Tokens[1]);
         ElementTypes ElementType1 = (ElementTypes) int.Parse(Tokens[3]);
         ElementTypes ElementType2 = (ElementTypes) int.Parse(Tokens[4]);
         int Endurance = int.Parse(Tokens[5]);
