@@ -1,0 +1,608 @@
+Move Name,Strain cost,Rank,Type,Base Damage,Element,Range,Accuracy,Effect1,Modifier1,Modifier2,Trigger1Func,Trigger1Mod1,Trigger1Mod2,Trigger2Func,Trigger2Mod1,Trigger2Mod2,Effect 2,Modifier2,Modifier2,Trigger1Func,Trigger1Mod1,Trigger1Mod1,Trigger2,Trigger2Mod,Trigger2Mod2,Effect 3,Modifier3,Modifier2,Trigger1,Trigger1Mod,Trigger2Mod2,Trigger2,Trigger2Mod2,Trigger2Mod
+Ember,1,1,2,4,Fire,Ranged,1,InflictCondition,Burn,2,MoveResult,Advantage,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fire Fang,3,2,1,6,Fire,Melee,0,InflictCondition,Burn,2,MoveResult,Advantage,3,0,0,0,Flinch,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fire Spin,3,2,2,3,Fire,Ranged,-1,InflictCondition,Immobilized,1,MoveResult,OnUse,0,0,0,0,Simple,0,0,0,0,0,0,0,0,Escape,0,0,0,0,0,0,0,0
+Flame Charge,2,2,1,5,Fire,Charge,1,BoostAttribute,Speed,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Flame Wheel,1,2,1,6,Fire,Melee,1,InflictCondition,Burn,2,MoveResult,Advantage,3,0,0,0,WeakenAttribute,Attack,1,MoveResult,Advantage,3,0,0,0,0,0,0,0,0,0,0,0,0
+Will-o-wisp,3,2,4,0,Fire,Ranged,-1,InflictCondition,Burn,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Sunny Day,5,2,0,0,Fire,Environmental,0,ChangeWeather,Sunny,0,0,0,0,0,0,0,AddEnviroCondition,HarshHeat,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Blaze Kick,4,3,1,8,Fire,Melee,0,InflictCondition,Burn,2,MoveResult,Advantage,3,0,0,0,Vicious,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fiery Dance,4,3,2,8,Fire,Ranged,1,BoostAttribute,Special,1,MoveResult,Advantage,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fire Punch,3,3,1,7,Fire,Melee,1,InflictCondition,Burn,2,MoveResult,Advantage,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Flame burst,3,3,2,6,Fire,Ranged,1,AOE,SingleSquare,Concentrated,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Flamethrower,3,3,2,9,Fire,Ranged,1,InflictCondition,Burn,2,MoveResult,Advantage,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Heat Crush,4,3,1,14,Fire,Melee,1,DamageX+,BaseEndurance,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Incinerate,3,3,2,6,Fire,Melee,1,AOE,TwoByTwo,FullControl,0,0,0,0,0,0,Destroy,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Mystical Fire,4,3,2,6,Fire,Ranged,0,WeakenAttribute,Special,1,MoveResult,Advantage,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Blast Burn,5,4,2,15,Fire,Ranged,0,Slow,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Eruption,5,4,2,10,Fire,Ranged,1,Damage+,5,0,TargetStatsLessThan,Wounds,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fire blast,5,4,2,11,Fire,Ranged,-1,InflictCondition,Burn,2,MoveResult,Advantage,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Flare Blitz,3,4,1,12,Fire,Charge,1,Defrost,0,0,0,0,0,0,0,0,InflictCondition,Burn,2,MoveResult,Advantage,3,0,0,0,Recoil,4,0,0,0,0,0,0,0
+Heat Wave,4,4,2,9,Fire,Ranged,0,AOE,TwoByTwo,FullControl,0,0,0,0,0,0,InflictCondition,Burn,2,MoveResult,Advantage,2,0,0,0,0,0,0,0,0,0,0,0,0
+Inferno,5,4,2,10,Fire,Ranged,-2,InflictCondition,Burn,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Lava plume,3,4,2,8,Fire,Ranged,1,AOE,TwoByTwo,Wild,0,0,0,0,0,0,InflictCondition,Burn,2,MoveResult,Advantage,3,0,0,0,0,0,0,0,0,0,0,0,0
+Overheat,5,4,2,13,Fire,Ranged,0,ExaustAttribute,Special,2,MoveResult,OnUse,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Searing Shot,5,5,2,10,Fire,Ranged,1,Legendary,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fire Pledge,4,5,2,8,Fire,Ranged,0,Legendary,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Blue Flare,5,5,2,13,Fire,Ranged,-1,Legendary,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fusion Flare,5,5,2,10,Fire,Ranged,1,Legendary,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Magma Storm,5,5,2,10,Fire,Ranged,-2,Legendary,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Sacred Fire,5,5,1,10,Fire,Melee,0,Legendary,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+V-Create,5,5,1,18,Fire,Melee,0,Legendary,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Tackle,1,1,1,5,Normal,Melee,1,Simple,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Leek Slap,0,2,1,5,Normal,Melee,1,Weapon,0,0,0,0,0,0,0,0,Flinch,1,0,MoveResult,Advantage,2,0,0,0,MultiHit,2,0,MoveResult,Advantage,3,0,0,0
+Pound,0,2,1,4,Normal,Melee,1,Flinch,1,0,MoveResult,Advantage,1,0,0,0,Simple,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Scratch,0,2,1,4,Normal,Melee,1,Pierce,0,0,MoveResult,Advantage,2,0,0,0,Escape,0,0,MoveResult,Advantage,2,0,0,0,0,0,0,0,0,0,0,0,0
+Wrap,2,2,1,0,Normal,Melee,0,Strain,2,0,0,0,0,0,0,0,InflictCondition,Immobilized,1,0,0,0,0,0,0,Simple,0,0,0,0,0,0,0,0
+Leer,1,2,4,0,Normal,Ranged,1,AOE,TwoByTwo,FullControl,0,0,0,0,0,0,WeakenAttribute,Defense,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Stomp,2,2,1,6,Normal,Melee,1,Flinch,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Howl,0,2,0,0,Normal,Self,0,BoostAttribute,Attack,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Tail Whip,1,2,4,0,Normal,Melee,1,WeakenAttribute,Defense,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Focus Energy,1,2,0,0,Normal,Self,0,AddBuff,ViciousBuff,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Horn attack,1,2,1,6,Normal,Melee,1,Pierce,0,0,MoveResult,Advantage,2,0,0,0,Escape,0,0,MoveResult,Advantage,2,0,0,0,0,0,0,0,0,0,0,0,0
+Oder Sleuth,0,2,0,0,Normal,Self,0,AddBuff,RemoveGhostImmunity,0,0,0,0,0,0,0,AddBuff,IgnoreEvasion,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Supersonic,2,2,4,0,Normal,Ranged,-3,AOE,TwoByTwo,FullControl,0,0,0,0,0,0,InflictCondition,Confusion,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Constrict,0,2,1,1,Normal,Melee,1,Strain,2,0,0,0,0,0,0,0,InflictCondition,Immobilized,1,0,0,0,0,0,0,Flinch,1,0,0,0,0,0,0,0
+Roar,2,2,4,0,Normal,Ranged,0,Flinch,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+After You,3,2,0,0,Normal,Ally,0,Command,0,0,0,0,0,0,0,0,AddBuff,Feint,0,Duration,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Assist,2,2,0,0,Normal,Ally,0,Reaction,0,0,0,0,0,0,0,0,AddBuff,Feint,0,Duration,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Attract,3,2,4,0,Normal,Ranged,0,InflictCondition,Infatuation,3,TargetState,Gender,Opposite,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Barrage,2,2,1,1,Normal,Ranged,-1,MultiHit,5,0,0,0,0,0,0,0,Flinch,1,0,MoveResult,Advantage,1,0,0,0,0,0,0,0,0,0,0,0,0
+Baton Pass,0,2,0,0,Normal,Self,0,Swap,PrimarySecondary,0,0,0,0,0,0,0,SwitchPosition,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Bestow,3,2,0,0,Normal,Ally,0,GainItem,HeldItem,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Bide,4,2,1,0,Normal,Melee,1,DamageX+,Wounds,200,0,0,0,0,0,0,Delay,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Block,5,2,3,0,Normal,Melee,0,Reaction,0,0,0,0,0,0,0,0,InflictCondition,Immobilized,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Camouflage,2,2,0,0,Normal,Self,0,Conversion,TerrainElement,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Captivate,2,2,4,0,Normal,Ranged,1,WeakenAttribute,Special,1,TargetState,Gender,Opposite,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Comet Punch,3,2,1,2,Normal,Melee,-1,MultiHit,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Confide,2,2,4,0,Normal,Ranged,0,WeakenAttribute,SpDef,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Conversion,1,2,0,0,Normal,Self,0,Conversion,SameAsMoveKnown,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Conversion 2,1,2,0,0,Normal,Self,0,Conversion,ResistLastMoveUsed,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Copycat,2,2,0,0,Normal,Self,0,Mirror,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Defense curl,0,2,0,0,Normal,Self,0,BoostAttribute,Defense,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Disable,2,2,4,0,Normal,Ranged,1,Disable,LastUsed,0,0,0,0,0,0,0,Quick,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Double hit,4,2,1,3,Normal,Melee,1,MultiHit,2,0,0,0,0,0,0,0,Flinch,1,0,MoveResult,Advantage,1,0,0,0,0,0,0,0,0,0,0,0,0
+Double Slap,4,2,1,1,Normal,Melee,-2,MultiHit,5,0,0,0,0,0,0,0,Flurry,0,0,0,0,0,0,0,0,Flinch,1,0,MoveResult,Advantage,1,0,0,0
+Double team,3,2,0,0,Normal,Self,0,BoostAttribute,Evasion,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Encore,5,2,4,0,Normal,Ranged,1,Disable,AllbutLastUsed,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Endure,4,2,0,0,Normal,Self,0,Reaction,0,0,0,0,0,0,0,0,AddBuff,Sturdy,0,Duration,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Entertainment,3,2,4,0,Normal,Ranged,1,AddNerf,LoseAbilities,0,0,0,0,0,0,0,GainAbility,RandomKnown,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fake out,4,2,1,4,Normal,Melee,1,Reaction,0,0,0,0,0,0,0,0,Flinch,3,0,UserStatsLessThan,Turn,1,0,0,0,0,0,0,0,0,0,0,0,0
+False swipes,0,2,1,4,Normal,Melee,1,Strain,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Feint,4,2,1,3,Normal,Melee,1,Reaction,0,0,0,0,0,0,0,0,AddNerf,Distraction,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Flash,2,2,3,0,Normal,Ranged,1,WeakenAttribute,Accuracy,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Follow me,2,2,4,0,Normal,Ranged,0,AddBuff,Taunt,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Foresight,0,2,0,0,Normal,Self,0,AddBuff,RemoveGhostImmunity,0,0,0,0,0,0,0,AddBuff,IgnoreEvasion,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fury Attack,2,2,1,1,Normal,Melee,-2,MultiHit,5,0,0,0,0,0,0,0,Flurry,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fury swipes,3,2,1,0,Normal,Melee,-1,MultiHit,5,0,0,0,0,0,0,0,Pierce,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Glare,1,2,4,0,Normal,Ranged,1,InflictCondition,Paralysis,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Growl,1,2,4,0,Normal,Ranged,1,AOE,TwoByTwo,FullControl,0,0,0,0,0,0,WeakenAttribute,Attack,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Growth,2,2,0,0,Normal,Self,0,WeakenAttribute,Attack,1,0,0,0,0,0,0,BoostAttribute,Defense,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Harden,0,2,0,0,Normal,Self,0,BoostAttribute,Defense,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Helping hand,2,2,0,0,Normal,Ally,0,Command,0,0,0,0,0,0,0,0,AddBuff,Feint,0,Duration,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Lock-on,5,2,0,0,Normal,Self,0,AddBuff,AutoHit,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Lovely Kiss,4,2,0,0,Normal,Melee,-2,Sleep,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Lucky Chant,1,2,4,0,Normal,Environmental,0,AddBuff,CritImmune,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Mind reader,5,2,0,0,Normal,Self,0,AddBuff,AutoHit,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Cat scratch,2,2,1,4,Normal,Melee,1,MultiHit,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Noble roar,1,2,4,0,Normal,Ranged,0,AOE,TwoByTwo,FullControl,0,0,0,0,0,0,WeakenAttribute,Attack,1,0,0,0,0,0,0,WeakenAttribute,Special,1,0,0,0,0,0,0
+Minimize,4,2,0,0,Normal,Self,0,BoostAttribute,Evasion,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Play nice,2,2,0,0,Normal,Melee,0,WeakenAttribute,Attack,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Quick attack,1,2,1,4,Normal,Charge,1,Reaction,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Rapid spin,0,2,1,2,Normal,Melee,1,Escape,0,0,0,0,0,0,0,0,AddEnviroCondition,Clear,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Psych up,4,2,0,0,Normal,Self,0,CopyStatChanges,Primary,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Safeguard,2,2,3,0,Normal,Environmental,0,AddBuff,PreventStatusChanges,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Recycle,4,2,0,0,Normal,Self,0,GainItem,LastBerryUserConsumed,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Reflect type,3,2,0,0,Normal,Self,0,Conversion,SameAsTarget,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Refresh,2,2,0,0,Normal,Self,0,Cure,Volatile,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Simple beam,3,2,4,0,Normal,Ranged,1,AddNerf,LoseAbilities,0,0,0,0,0,0,0,GainAbility,Simple,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Sing,3,2,4,0,Normal,Melee,-2,AOE,TwoByTwo,FullControl,0,0,0,0,0,0,InflictCondition,Sleep,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Sketch,5,2,0,0,Normal,Self,0,Mirror,0,0,0,0,0,0,0,0,AddBuff,CopyMove,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Self-destruct,5,2,1,20,Normal,Melee,1,AOE,TwoByTwo,FullControl,0,0,0,0,0,0,Martyr,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Explosion,5,2,1,25,Normal,Melee,1,AOE,TwoByTwo,FullControl,0,0,0,0,0,0,Martyr,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Sharpen,1,2,0,0,Normal,Self,0,BoostAttribute,Accuracy,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Sonic Boom,2,2,2,2,Normal,Ranged,0,Cosmic,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Spike cannon,3,2,1,1,Normal,Ranged,1,MultiHit,5,0,0,0,0,0,0,0,Pierce,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Tickle,2,2,3,0,Normal,Melee,1,WeakenAttribute,Attack,1,0,0,0,0,0,0,WeakenAttribute,Defense,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Transform,4,2,0,0,Normal,Self,0,Transform,Target,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Smoke Screen,2,2,3,0,Normal,Melee,1,AOE,TwoByTwo,FullControl,0,0,0,0,0,0,WeakenAttribute,Accuracy,1,0,0,0,0,0,0,BoostAttribute,Evasion,1,0,0,0,0,0,0
+Swagger,3,2,4,0,Normal,Ranged,0,BoostAttribute,Attack,2,0,0,0,0,0,0,InflictCondition,Confusion,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Swallow,4,2,0,0,Normal,Self,0,Restore,1,0,0,0,0,0,0,0,LoseItem,0,0,0,0,0,0,0,0,Fatigue,1,0,0,0,0,0,0,0
+Sweet scent,2,2,4,0,Normal,Melee,1,AOE,TwoByTwo,FullControl,0,0,0,0,0,0,WeakenAttribute,Evasion,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Substitute,4,2,0,0,Normal,Self,0,AddBuff,Decoy,8,0,0,0,0,0,0,Recoil,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Spit up,4,2,1,5,Normal,Ranged,1,DamageX+,ItemDamage,100,0,0,0,0,0,0,LoseItem,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Stockpile,2,2,0,0,Normal,Self,0,GainItem,Stockpile,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Tail Slap,4,2,1,2,Normal,Melee,-1,MultiHit,5,0,0,0,0,0,0,0,Flinch,1,0,MoveResult,Advantage,1,0,0,0,0,0,0,0,0,0,0,0,0
+Vice Grip,1,2,1,4,Normal,Melee,1,Pierce,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Weather Ball,4,2,2,5,Normal,Ranged,1,AddElement,WeatherElement,0,0,0,0,0,0,0,ElementBuff,WeatherElement,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Whirlwind,2,2,3,0,Normal,Ranged,1,Knockback,2,0,0,0,0,0,0,0,Flinch,2,0,0,0,0,0,0,0,Quick,0,0,0,0,0,0,0,0
+Wish,4,2,3,0,Normal,Self,0,Delay,1,0,0,0,0,0,0,0,Restore,1,0,0,0,0,0,0,0,Fatigue,2,0,0,0,0,0,0,0
+Work up,1,2,0,0,Normal,Self,0,BoostAttribute,Attack,1,0,0,0,0,0,0,BoostAttribute,Special,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Yawn,4,2,4,0,Normal,Ranged,0,Delay,1,0,0,0,0,0,0,0,InflictCondition,Sleep,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Covet,2,2,1,6,Normal,Melee,1,Steal,Any,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Mean look,5,2,4,0,Normal,Ranged,0,InflictCondition,Immobilized,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Take Down,2,2,1,9,Normal,Melee,-1,Recoil,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Cut,1,2,1,5,Normal,Melee,0,Pierce,0,0,0,0,0,0,0,0,Escape,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Teeter Dance,2,3,4,0,Normal,Melee,0,AOE,TwoByTwo,FullControl,0,0,0,0,0,0,InflictCondition,Confusion,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Round,3,3,2,6,Normal,Ranged,0,Damage+,3,0,EnviroCondition,Echo,0,0,0,0,AddEnviroCondition,Echo,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Hidden power,3,3,2,6,Normal,Ranged,1,ChangeType,Hidden,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Secret power,2,3,1,7,Normal,Ranged,1,ChangeType,TerrainElement,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Shell smash,3,3,0,0,Normal,Self,0,BoostAttribute,Primary,2,0,0,0,0,0,0,WeakenAttribute,Defense,1,0,0,0,0,0,0,WeakenAttribute,SpDef,1,0,0,0,0,0,0
+Hyper Fang,3,3,1,8,Normal,Melee,0,Flinch,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Slash,2,3,1,7,Normal,Melee,0,Vicious,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Screech,0,3,3,0,Normal,Ranged,-1,WeakenAttribute,Defense,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Super Fang,4,3,1,0,Normal,Melee,0,DamageTargetX+,RemainingHealth,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Acupuncture,1,3,0,0,Normal,Self,0,BoostAttribute,RandomPrimary,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Belly drum,4,3,0,0,Normal,Self,0,BoostAttribute,Attack,3,0,0,0,0,0,0,Recoil,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Body slam,3,3,1,8,Normal,Melee,1,InflictCondition,Paralysis,2,MoveResult,Advantage,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Chip away,2,3,1,7,Normal,Melee,1,Cosmic,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Crush Claw,4,3,1,7,Normal,Melee,0,WeakenAttribute,Defense,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Dizzy punch,4,3,1,7,Normal,Melee,1,InflictCondition,Confusion,3,MoveResult,Advantage,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Echoed voice,3,3,2,4,Normal,Ranged,1,Damage+,4,0,EnviroCondition,Echo,0,0,0,0,AddEnviroCondition,Echo,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Endeavor,5,3,1,0,Normal,Melee,1,DamageX+,Wounds,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Extreme Speed,5,3,1,8,Normal,Charge,1,Reaction,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Facade,2,3,1,7,Normal,Melee,1,Damage+,9,0,TargetState,HasCondition,Volatile,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Flail,3,3,1,0,Normal,Melee,1,DamageX+,Wounds,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Head-butt,3,3,1,7,Normal,Melee,1,Flinch,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Heal Bell,5,3,0,0,Normal,Self,0,Cure,Volatile,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Me First,2,3,0,0,Normal,Self,0,Reaction,0,0,0,0,0,0,0,0,Mirror,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Natural Gift,3,3,1,9,Normal,Ranged,0,ChangeElement,BerryElement,0,0,0,0,0,0,0,Consume,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Mimic,4,3,0,0,Normal,Self,0,Mirror,0,0,0,0,0,0,0,0,AddBuff,CopyMove,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Mourning sun,5,3,0,0,Normal,Self,0,Restore,1,0,Weather,Sunny,0,0,0,0,Restore,1,0,0,0,0,0,0,0,Fatigue,2,0,0,0,0,0,0,0
+Mega Punch,2,3,1,8,Normal,Melee,-1,Flinch,1,0,MoveResult,Advantage,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Metronome,0,3,0,0,Normal,Self,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Milk drink,4,3,0,0,Normal,Self,0,Restore,1,0,0,0,0,0,0,0,Fatigue,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Pain split,2,3,4,0,Normal,Ranged,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Nature Power,2,3,0,0,Normal,Self,0,ChangeElement,TerrainElement,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Razor Wind,4,3,2,8,Normal,Ranged,1,AOE,TwoByTwo,FullControl,0,0,0,0,0,0,Delay,1,0,0,0,0,0,0,0,Vicious,0,0,0,0,0,0,0,0
+Present,3,3,1,3,Normal,Ranged,0,Volitile,10,0,0,0,0,0,0,0,Restore,1,0,Destiny,DoubleBlack,0,0,0,0,0,0,0,0,0,0,0,0,0
+Recover,4,3,0,0,Normal,Self,0,Restore,1,0,0,0,0,0,0,0,Fatigue,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Relic Song,4,3,2,7,Normal,Melee,1,AOE,TwoByTwo,FullControl,0,0,0,0,0,0,InflictCondition,Sleep,4,MoveResult,Advantage,3,0,0,0,0,0,0,0,0,0,0,0,0
+Rock Climb,2,3,2,9,Normal,Melee,-1,InflictCondition,Confusion,3,MoveResult,Advantage,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Soft-Boiled,4,3,0,0,Normal,Self,0,Restore,1,0,0,0,0,0,0,0,Fatigue,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Scary Face,4,3,4,0,Normal,Ranged,1,WeakenAttribute,Speed,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Slack off,4,3,0,0,Normal,Self,0,Restore,1,0,0,0,0,0,0,0,Fatigue,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Slam,2,3,1,8,Normal,Melee,-2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Strength,3,3,1,8,Normal,Melee,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Swift,2,3,2,6,Normal,Ranged,1,AOE,TwoByTwo,FullControl,0,0,0,0,0,0,Homing,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Sword dance,2,3,0,0,Normal,Self,0,BoostAttribute,Attack,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Tri attack,4,3,2,8,Normal,Ranged,1,InflictCondition,Volatile,0,MoveResult,Advantage,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Uproar,4,3,2,9,Normal,Ranged,1,AddEnviroCondition,Echo,0,MoveResult,OnUse,0,0,0,0,Simple,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Protect,5,3,0,0,Normal,Self,0,Reaction,0,0,0,0,0,0,0,0,AddBuff,Protect,0,Duration,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Last Resort,5,4,1,7,Normal,Melee,0,Damage+,7,0,UserStatsLessThan,StrainRemaining,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+BoomBurst,4,4,2,14,Normal,Ranged,1,AOE,TwoByTwo,Wild,0,0,0,0,0,0,WeakenAttribute,Speed,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Crush Grip,5,4,1,6,Normal,Melee,1,Damage+,6,0,TargetStatsLessThan,Wounds,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Double edge,3,4,1,12,Normal,Melee,1,Recoil,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Egg Bomb,4,4,1,10,Normal,Ranged,-2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Giga impact,5,4,1,15,Normal,Melee,0,Slow,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Guillotine,5,4,1,0,Normal,Melee,-5,OHKO,0,0,MoveResult,Advantage,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Head Charge,3,4,1,12,Normal,Charge,1,Recoil,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Perish Song,5,4,4,0,Normal,Melee,0,AOE,TwoByTwo,Wild,0,0,0,0,0,0,AddNerf,Curse,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Horn drill,5,4,1,0,Normal,Melee,-5,OHKO,0,0,MoveResult,Advantage,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Hyper beam,5,4,2,15,Normal,Ranged,0,Slow,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Hyper voice,4,4,2,9,Normal,Melee,1,AOE,TwoByTwo,FullControl,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Mega Kick,5,4,1,12,Normal,Melee,-2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Skull bash,4,4,1,13,Normal,Melee,1,Delay,1,0,0,0,0,0,0,0,BoostAttribute,Defense,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Thrash,4,4,1,12,Normal,Melee,1,InflictConditionSelf,Confusion,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Wring out,5,4,1,6,Normal,Melee,1,Damage+,6,0,TargetStatsLessThan,Wounds,1,0,0,0,InflictCondition,Immobilized,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Judgment,0,5,0,0,Normal,Ranged,0,Legendary,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Techno blast,5,5,2,12,Normal,Ranged,1,Legendary,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Water Gun,1,1,2,4,Water,Ranged,1,Sleep,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Bubble,1,2,2,4,Water,Ranged,1,AOE,TwoByTwo,FullControl,0,0,0,0,0,0,WeakenAttribute,Speed,1,MoveResult,Advantage,2,0,0,0,0,0,0,0,0,0,0,0,0
+Aqua Jet,2,2,1,4,Water,Charge,1,Reaction,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Rain Dance,5,2,0,0,Water,Environmental,0,ChangeWeather,Rain,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Clamp,3,2,1,3,Water,Melee,0,InflictCondition,Immobilized,0,0,0,0,0,0,0,Simple,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Dive,4,2,1,8,Water,Charge,1,Recoil,4,0,NotEnviroBoosted,Water,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Surf,3,2,2,9,Water,Ranged,1,Delay,1,0,NotEnviroBoosted,Water,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Waterfall,3,2,1,8,Water,Ranged,1,Slow,5,0,NotEnviroBoosted,Water,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Whirlpool,3,2,2,3,Water,Ranged,-1,InflictCondition,Immobilized,0,EnviroBoosted,Water,0,0,0,0,Simple,0,0,0,0,0,0,0,0,InflictCondition,Sleep,4,0,0,0,0,0,0
+Water Pulse,2,2,2,6,Water,Sniper,1,InflictCondition,Confusion,0,MoveResult,Advantage,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Octazooka,4,2,2,6,Water,Ranged,-1,WeakenAttribute,Accuracy,1,MoveResult,Advantage,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Water shuriken,2,2,1,-1,Water,Ranged,1,Reaction,0,0,0,0,0,0,0,0,MultiHit,5,0,0,0,0,0,0,0,Pierce,0,0,0,0,0,0,0,0
+Withdraw,0,2,0,0,Water,Self,0,Reaction,0,0,0,0,0,0,0,0,BoostAttribute,Defense,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Bubble beam,2,3,2,7,Water,Ranged,1,WeakenAttribute,Speed,1,MoveResult,Advantage,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Aqua tail,4,3,1,9,Water,Melee,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Aqua Ring,2,3,0,0,Water,Self,0,AddBuff,Regenerate,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Scald,3,3,2,8,Water,Ranged,1,Defrost,0,0,0,0,0,0,0,0,InflictCondition,Burn,2,MoveResult,Advantage,2,0,0,0,0,0,0,0,0,0,0,0,0
+Razor shell,4,3,1,7,Water,Melee,0,WeakenAttribute,Defense,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Hydro Pump,5,4,2,11,Water,Ranged,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Brine,4,4,2,13,Water,Ranged,1,Damage+,6,0,TargetStatsLessThan,WoundsPercent,50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Water Spout,5,4,2,15,Water,Ranged,1,AOE,TwoByTwo,FullControl,0,0,0,0,0,0,Damage+,5,0,TargetStatsLessThan,Wounds,1,0,0,0,0,0,0,0,0,0,0,0,0
+Hydro cannon,5,4,2,15,Water,Ranged,0,Slow,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Crabhammer,4,4,1,10,Water,Melee,0,Vicious,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Muddy Water,4,4,2,9,Water,Ranged,-1,AOE,TwoByTwo,FullControl,0,0,0,0,0,0,WeakenAttribute,Accuracy,1,MoveResult,Advantage,1,0,0,0,0,0,0,0,0,0,0,0,0
+Water Pledge,4,5,2,8,Water,Ranged,1,Legendary,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Origin Pulse,4,5,2,11,Water,Ranged,-1,Legendary,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Steam Eruption,5,5,2,11,Water,Ranged,0,Legendary,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Vine Whip,1,1,1,4,Grass,Ranged,1,Flinch,1,0,MoveResult,Advantage,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Leech seed,4,2,3,0,Grass,Ranged,0,InflictCondition,Leech,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Razor leaf,1,2,1,5,Grass,Ranged,0,AOE,TwoByTwo,FullControl,0,0,0,0,0,0,AddBuff,Empower,0,0,0,0,0,0,0,Vicious,0,0,0,0,0,0,0,0
+Grass whistle,3,2,4,0,Grass,Ranged,-2,Sleep,4,0,EnviroCondition,NoEcho,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Grass Knot,2,2,1,0,Grass,Melee,1,DamageTargetX+,BaseEndurance,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Stun spore,1,2,3,0,Grass,Ranged,-1,AOE,TwoByTwo,FullControl,0,0,0,0,0,0,InflictCondition,Paralysis,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Sleep powder,3,2,3,0,Grass,Ranged,-1,AOE,TwoByTwo,FullControl,0,0,0,0,0,0,InflictCondition,Sleep,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Absorb,1,2,2,2,Grass,Ranged,1,Absorb,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Bullet Seed,1,2,1,2,Grass,Ranged,1,MultiHit,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Ingrain,2,2,0,0,Grass,Self,0,Restore,1,0,0,0,0,0,0,0,AddBuff,Regenerate,2,0,0,0,0,0,0,InflictCondition,Immobilized,5,0,0,0,0,0,0
+Magical Leaf,2,3,2,6,Grass,Ranged,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Aromatherapy,5,3,0,0,Grass,Environmental,0,Cure,Volatile,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Leaf Tornado,3,3,2,6,Grass,Ranged,0,WeakenAttribute,Accuracy,1,MoveResult,Advantage,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Spore,3,3,3,0,Grass,Ranged,1,Sleep,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Cotton Spore,0,3,3,0,Grass,Ranged,0,WeakenAttribute,Speed,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Worry Seed,4,3,4,0,Grass,Ranged,1,AddNerf,LoseAbilities,0,0,0,0,0,0,0,GainAbility,SleepImmune,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Seed Bomb,3,3,1,8,Grass,Ranged,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Cotton Guard,4,3,0,0,Grass,Self,0,BoostAttribute,Defense,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Forest Curse,2,3,4,0,Grass,Ranged,0,AddBuff,GainGrassType,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Grassy Terrain,4,3,0,0,Grass,Environmental,0,ChangeTerrain,TallGrass,0,0,0,0,0,0,0,AddEnviroCondition,AllyRegen,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Mega Drain,2,3,2,4,Grass,Ranged,1,Absorb,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Needle arm,3,3,1,6,Grass,Melee,1,Flinch,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Spiky Shield,3,3,1,1,Grass,Melee,0,Reaction,0,0,0,0,0,0,0,0,Flinch,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Synthesis,5,3,0,0,Grass,Self,0,Restore,1,0,Weather,Sunny,0,0,0,0,Restore,1,0,0,0,0,0,0,0,Fatigue,2,0,0,0,0,0,0,0
+Leaf Blade,3,4,1,9,Grass,Melee,1,Vicious,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Leaf storm,5,4,2,13,Grass,Ranged,0,ExaustAttribute,Special,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Petal Dance,4,4,2,12,Grass,Ranged,1,InflictConditionSelf,Confusion,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Petal Blizzard,3,4,1,9,Grass,Ranged,1,AOE,TwoByTwo,FullControl,0,0,0,0,0,0,AddBuff,Empower,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Energy Ball,4,4,2,9,Grass,Ranged,0,WeakenAttribute,SpDef,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Frenzy Plant,5,4,2,15,Grass,Melee,0,Slow,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Giga Drain,4,4,2,7,Grass,Ranged,1,Absorb,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Horn leech,4,4,1,7,Grass,Melee,1,Absorb,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Power Whip,4,4,1,12,Grass,Ranged,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Solar Beam,4,4,2,12,Grass,Ranged,1,Delay,1,0,Weather,NotSunny,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Wood hammer,3,4,1,12,Grass,Melee,1,Recoil,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Power Whip,4,4,1,12,Grass,Ranged,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Grass Pledge,4,5,2,8,Grass,Ranged,0,Legendary,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Thundershock,1,1,2,4,Electric,Ranged,1,InflictCondition,Paralysis,2,MoveResult,Advantage,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Charge,2,2,0,0,Electric,Self,0,AddBuff,BoostElectric,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Charge beam,4,2,2,5,Electric,Ranged,0,BoostAttribute,Special,1,MoveResult,Advantage,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Electric terrain,4,2,0,0,Electric,Environmental,0,AddEnviroCondition,ElectricTerrain,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Electrify,2,2,3,0,Electric,Ranged,0,Reaction,0,0,0,0,0,0,0,0,AddNerf,MovesAreElectric,0,Duration,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Ion Deluge,2,2,0,0,Electric,Environmental,0,AddEnviroCondition,IonDeluge,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Magnetic Flux,2,2,0,0,Electric,Environmental,0,AddEnviroCondition,MagneticFlux,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Nuzzle,2,2,3,0,Electric,Melee,1,InflictCondition,Paralysis,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Spark,2,2,1,6,Electric,Melee,1,InflictCondition,Paralysis,2,MoveResult,Advantage,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Thunder wave,2,2,4,0,Electric,Ranged,1,InflictCondition,Paralysis,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Thunder fang,3,2,1,6,Electric,Melee,0,Flinch,1,0,0,0,0,0,0,0,InflictCondition,Paralysis,0,MoveResult,Advantage,3,0,0,0,0,0,0,0,0,0,0,0,0
+Eerie impulse,3,3,3,0,Electric,Ranged,1,WeakenAttribute,Special,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Electro Ball,4,3,2,6,Electric,Ranged,1,DamageX+,Speed,100,0,0,0,0,0,0,DamageTargetX+,Speed,-100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Electroweb,3,3,2,5,Electric,Melee,0,AOE,TwoByTwo,FullControl,0,0,0,0,0,0,WeakenAttribute,Speed,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Magnet rise,4,3,0,0,Electric,Self,0,AddBuff,Levitate,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Parabolic Charge,3,3,2,5,Electric,Ranged,1,AOE,TwoByTwo,FullControl,0,0,0,0,0,0,Absorb,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Shock Wave,2,3,2,6,Electric,Ranged,1,AOE,TwoByTwo,FullControl,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Thunder punch,3,3,1,7,Electric,Melee,1,InflictCondition,Paralysis,2,MoveResult,Advantage,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Volt switch,2,3,2,7,Electric,Ranged,1,Move,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Wild Charge,3,3,1,9,Electric,Charge,1,Recoil,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ThunderBolt,3,3,2,9,Electric,Ranged,1,InflictCondition,Paralysis,2,MoveResult,Advantage,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Thunder,4,4,2,11,Electric,Ranged,-2,InflictCondition,Paralysis,2,MoveResult,Advantage,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+DisCharge,3,4,2,8,Electric,Ranged,1,AOE,TwoByTwo,FullControl,0,0,0,0,0,0,InflictCondition,Paralysis,2,MoveResult,Advantage,2,0,0,0,0,0,0,0,0,0,0,0,0
+Volt Tackle,3,4,1,12,Electric,Charge,1,InflictCondition,Paralysis,2,MoveResult,Advantage,3,0,0,0,Recoil,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Zap Cannon,5,4,2,12,Electric,Ranged,-3,InflictCondition,Paralysis,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Bolt Strike,5,5,1,13,Electric,Melee,-1,Legendary,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fusion Bolt,4,5,1,10,Electric,Melee,1,Legendary,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Gust,1,1,2,4,Flying,Ranged,1,AOE,TwoByTwo,FullControl,0,0,0,0,0,0,AddEnviroCondition,Clear,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Peck,0,2,1,2,Flying,Charge,1,Pierce,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Pluck,2,2,1,6,Flying,Charge,1,Steal,Any,0,TargetState,HasItem,Berry,0,0,0,Consume,0,0,TargetState,HasItem,Berry,0,0,0,0,0,0,0,0,0,0,0,0
+Sky drop,4,2,1,6,Flying,Charge,1,Vanish,Sky,1,0,0,0,0,0,0,Vanish-Target,Sky,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Wing Attack,0,2,1,6,Flying,Charge,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Areal Ace,2,3,1,6,Flying,Charge,1,Homing,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Air Cutter,2,3,2,6,Flying,Ranged,0,AOE,TwoByTwo,FullControl,0,0,0,0,0,0,Vicious,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Air slash,3,3,2,7,Flying,Sniper,0,Flinch,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Bounce,5,3,1,8,Flying,Charge,-1,Vanish,Sky,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Chatter,2,3,2,6,Flying,Sniper,1,InflictCondition,Confusion,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Drill peck,2,3,1,8,Flying,Charge,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Feather Dance,3,3,3,0,Flying,Ranged,1,WeakenAttribute,Attack,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fly,3,3,1,9,Flying,Charge,0,Vanish,Sky,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Mirror Move,2,3,0,0,Flying,Self,0,Mirror,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Roost,4,3,0,0,Flying,Self,0,Restore,1,0,0,0,0,0,0,0,Fatigue,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Tailwind,3,3,0,0,Flying,Environmental,0,AddEnviroCondition,TailWind,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Acrobatics,3,4,1,11,Flying,Charge,1,Damage+,7,0,UserState,HasItem,None,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Aeroblast,5,4,2,10,Flying,Sniper,0,Vicious,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Brave Bird,3,4,1,12,Flying,Charge,1,Recoil,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Hurricane,4,4,2,11,Flying,Sniper,-2,InflictCondition,Confusion,3,MoveResult,Advantage,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Sky attack,5,4,1,14,Flying,Charge,0,Vanish,Sky,1,0,0,0,0,0,0,Vicious,0,0,0,0,0,0,0,0,Flinch,2,0,0,0,0,0,0,0
+Dragon Ascent,5,5,1,12,Flying,Charge,1,Legendary,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Oblivion Wing,4,5,1,8,Flying,Ranged,1,Legendary,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fury Cutter,2,1,1,2,Bug,Melee,0,MultiHit,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Bug bite,2,2,1,6,Bug,Melee,1,Steal,Berry,0,TargetState,HasItem,Berry,0,0,0,Consume,0,0,TargetState,HasItem,Berry,0,0,0,0,0,0,0,0,0,0,0,0
+Fell stinger,2,2,1,3,Bug,Melee,1,BoostAttribute,Attack,2,MoveResult,TargetKO,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Infestation,2,2,2,2,Bug,Ranged,1,InflictCondition,Immobilized,1,0,0,0,0,0,0,Simple,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Leech life,2,2,1,2,Bug,Melee,1,Absorb,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Pin missile,2,2,1,1,Bug,Ranged,0,MultiHit,0,0,0,0,0,0,0,0,Pierce,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Powder,2,2,3,0,Bug,Ranged,0,AddEnviroCondition,ExplosivePowder,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Spider silk,4,2,3,0,Bug,Ranged,0,InflictCondition,Immobilized,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Sticky web,2,2,0,0,Bug,Environmental,0,WeakenAttribute,Speed,1,UserState,HasType,NotBug,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+String shot,0,2,3,0,Bug,Ranged,0,WeakenAttribute,Speed,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Twin needle,2,2,1,2,Bug,Melee,1,MultiHit,2,0,0,0,0,0,0,0,InflictCondition,Poison,2,MoveResult,Advantage,1,0,0,0,0,0,0,0,0,0,0,0,0
+Attack Order,3,3,1,9,Bug,Melee,1,Vicious,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Bug Buzz,4,3,2,9,Bug,Ranged,1,WeakenAttribute,SpDef,1,MoveResult,Advantage,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Defend Order,4,3,0,0,Bug,Self,0,BoostAttribute,Defense,1,0,0,0,0,0,0,BoostAttribute,SpDef,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Heal Order,4,3,0,0,Bug,Self,0,Restore,1,0,0,0,0,0,0,0,Fatigue,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Quiver Dance,2,3,0,0,Bug,Self,0,BoostAttribute,Special,1,0,0,0,0,0,0,BoostAttribute,SpDef,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Rage powder,2,3,4,0,Bug,Ranged,0,InflictCondition,Confusion,3,0,0,0,0,0,0,AddBuff,Taunt,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Sigil beam,3,3,2,6,Bug,Ranged,1,InflictCondition,Confusion,3,MoveResult,Advantage,3,0,0,0,Pierce,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Silver wind,5,3,2,6,Bug,Ranged,1,BoostAttribute,Primary,1,MoveResult,Advantage,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Steamroller,2,3,1,6,Bug,Charge,1,Flinch,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Struggle bug,2,3,2,5,Bug,Ranged,1,AOE,TwoByTwo,FullControl,0,0,0,0,0,0,WeakenAttribute,Attack,1,MoveResult,Advantage,3,0,0,0,0,0,0,0,0,0,0,0,0
+Tail Glow,2,3,0,0,Bug,Self,0,BoostAttribute,Special,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+U-Turn,2,3,1,7,Bug,Melee,1,Move,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+X-Scissor,3,3,1,7,Bug,Melee,1,Pierce,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Megahorn,4,4,1,12,Bug,Melee,-1,Legendary,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Acid,1,1,2,4,Poison,Ranged,1,WeakenAttribute,SpDef,1,MoveResult,Advantage,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Acid Armor,2,2,0,0,Poison,Self,0,BoostAttribute,Defense,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Clear smog,3,2,2,5,Poison,Ranged,1,Cure,StatusChanges,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Gastro Acid,4,2,3,0,Poison,Ranged,1,AddNerf,LoseAbilities,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Poison fang,3,2,1,5,Poison,Melee,1,InflictCondition,Poison,4,MoveResult,Advantage,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Poison gas,0,2,3,0,Poison,Melee,0,AOE,TwoByTwo,FullControl,0,0,0,0,0,0,InflictCondition,Poison,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Poison powder,0,2,3,0,Poison,Ranged,-1,AOE,TwoByTwo,FullControl,0,0,0,0,0,0,InflictCondition,Poison,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Poison sting,0,2,1,1,Poison,Ranged,1,Pierce,0,0,0,0,0,0,0,0,InflictCondition,Poison,2,MoveResult,Advantage,2,0,0,0,0,0,0,0,0,0,0,0,0
+Poison Tail,1,2,1,5,Poison,Melee,1,Vicious,0,0,0,0,0,0,0,0,InflictCondition,Poison,2,MoveResult,OnCrit,0,0,0,0,0,0,0,0,0,0,0,0,0
+Sludge,2,2,2,6,Poison,Ranged,1,InflictCondition,Poison,2,MoveResult,Advantage,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Smog,2,2,2,3,Poison,Ranged,-2,InflictCondition,Poison,2,MoveResult,Advantage,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Toxic spikes,2,2,0,0,Poison,Environmental,0,AddEnviroCondition,PoisonedSpikes,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Venom drench,2,2,3,0,Poison,Ranged,0,WeakenAttribute,Attack,1,TargetState,HasCondition,Poison,0,0,0,WeakenAttribute,Special,1,TargetState,HasCondition,Poison,0,0,0,WeakenAttribute,Speed,1,TargetState,HasCondition,Poison,0,0,0
+Toxic,4,3,3,0,Poison,Ranged,0,InflictCondition,Poison,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Acid Spray,2,3,2,4,Poison,Ranged,0,WeakenAttribute,SpDef,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Coil,2,3,0,0,Poison,Self,0,BoostAttribute,Attack,1,0,0,0,0,0,0,BoostAttribute,Defense,1,0,0,0,0,0,0,BoostAttribute,Accuracy,1,0,0,0,0,0,0
+Cross poison,2,3,1,7,Poison,Melee,1,Vicious,0,0,0,0,0,0,0,0,InflictCondition,Poison,2,MoveResult,OnCrit,0,0,0,0,0,0,0,0,0,0,0,0,0
+Poison Jab,2,3,1,8,Poison,Melee,0,InflictCondition,Poison,2,MoveResult,Advantage,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Sludge wave,4,3,2,9,Poison,Ranged,1,AOE,TwoByTwo,FullControl,0,0,0,0,0,0,InflictCondition,Poison,2,MoveResult,Advantage,3,0,0,0,0,0,0,0,0,0,0,0,0
+Sludge bomb,4,3,2,9,Poison,Ranged,1,InflictCondition,Poison,2,MoveResult,Advantage,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Venoshock,4,3,2,13,Poison,Ranged,0,Damage+,7,0,TargetState,HasCondition,Poison,0,0,0,CureCondition,Poison,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Gunk Shot,5,4,1,12,Poison,Ranged,-1,Legendary,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Belch,4,4,2,12,Poison,Ranged,0,Legendary,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Mud-Slap,4,1,2,2,Ground,Ranged,1,WeakenAttribute,Accuracy,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Bone Club,2,2,1,6,Ground,Ranged,-1,Flinch,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Bone Rush,4,2,1,2,Ground,Ranged,0,MultiHit,5,0,0,0,0,0,0,0,Flinch,1,0,MoveResult,Advantage,1,0,0,0,0,0,0,0,0,0,0,0,0
+Boomerang,4,2,1,5,Ground,Ranged,-2,MultiHit,2,0,0,0,0,0,0,0,Flurry,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Mud Bomb,4,2,2,6,Ground,Ranged,-1,WeakenAttribute,Accuracy,1,MoveResult,Advantage,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Mud Shot,3,2,2,5,Ground,Ranged,0,WeakenAttribute,Speed,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Rototiller,4,2,0,0,Ground,Environmental,0,AddEnviroCondition,Muddy,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Sand Tomb,3,2,1,3,Ground,Ranged,-1,InflictCondition,Immobilized,1,0,0,0,0,0,0,Simple,0,0,0,0,0,0,0,0,InflictCondition,Sleep,1,0,0,0,0,0,0
+Sand Attack,3,2,3,0,Ground,Ranged,1,AOE,TwoByTwo,FullControl,0,0,0,0,0,0,WeakenAttribute,Accuracy,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Spikes,2,2,0,0,Ground,Environmental,0,AddEnviroCondition,Spikes,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Bulldoze,2,3,1,6,Ground,Charge,1,AOE,TwoByTwo,FullControl,0,0,0,0,0,0,WeakenAttribute,Speed,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Dig,4,3,1,8,Ground,Melee,1,Vanish,Ground,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Drill Run,4,3,1,8,Ground,Charge,0,Vicious,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Magnitude,1,3,1,2,Ground,Melee,1,AOE,TwoByTwo,Wild,0,0,0,0,0,0,Volitile,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Earth Power,4,4,2,9,Ground,Ranged,1,WeakenAttribute,SpDef,1,MoveResult,Advantage,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Earthquake,4,4,1,10,Ground,Melee,1,AOE,TwoByTwo,Wild,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fissure,5,4,1,0,Ground,Ranged,-5,OHKO,0,0,MoveResult,Advantage,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Lands Wrath,4,5,1,9,Ground,Melee,1,Legendary,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Precipice blades,4,5,1,12,Ground,Melee,-1,Legendary,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Thousand arrows,0,5,1,0,Ground,Ranged,0,Legendary,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Thousand Waves,0,5,1,0,Ground,Ranged,0,Legendary,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Rock Throw,3,1,1,5,Rock,Ranged,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Rock Blast,4,2,1,2,Rock,Ranged,0,MultiHit,5,0,0,0,0,0,0,0,Flinch,1,0,MoveResult,Advantage,1,0,0,0,0,0,0,0,0,0,0,0,0
+Rock Tomb,4,2,1,6,Rock,Ranged,-1,WeakenAttribute,Speed,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Sandstorm,2,2,0,0,Rock,Environmental,0,ChangeWeather,Sandstorm,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Smack down,3,2,1,5,Rock,Ranged,1,AddNerf,Gravity,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Stealth Rock,2,2,0,0,Rock,Environmental,0,AddEnviroCondition,StealthRock,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Ancient Power,5,3,2,6,Rock,Ranged,1,BoostAttribute,Primary,1,MoveResult,Advantage,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Power Gem,2,3,2,8,Rock,Ranged,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Rock Polish,2,3,0,0,Rock,Self,0,BoostAttribute,Speed,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Rock Slide,4,3,1,7,Rock,Ranged,0,AOE,TwoByTwo,Wild,0,0,0,0,0,0,Flinch,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Rollout,2,3,1,3,Rock,Melee,0,DamageX+,MoveRepetition,300,0,0,0,0,0,0,Simple,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Wide Guard,5,3,0,0,Rock,Self,0,Reaction,0,0,0,0,0,0,0,0,AddBuff,Protect,0,Duration,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Head Smash,5,4,1,15,Rock,Melee,-1,Recoil,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Rock Wrecker,5,4,1,15,Rock,Ranged,0,Slow,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Stone Edge,5,4,1,10,Rock,Ranged,-1,Vicious,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Diamond storm,5,5,1,10,Rock,Melee,0,Legendary,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Double Kick,1,1,1,3,Fighting,Melee,1,MultiHit,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Arm thrust,2,2,1,1,Fighting,Melee,1,MultiHit,5,0,0,0,0,0,0,0,Flinch,1,0,MoveResult,Advantage,1,0,0,0,0,0,0,0,0,0,0,0,0
+Karate Chop,2,2,1,5,Fighting,Melee,1,Vicious,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Low Kick,2,2,1,0,Fighting,Melee,1,DamageTargetX+,BaseEndurance,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Mach Punch,1,2,1,4,Fighting,Melee,1,Reaction,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Mat block,3,2,0,0,Fighting,Ally,0,Reaction,0,0,Range,Melee,0,0,0,0,AddBuff,Protect,0,Duration,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Power-up punch,2,2,1,4,Fighting,Melee,1,BoostAttribute,Attack,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Quick guard,3,2,0,0,Fighting,Self,0,Reaction,1,0,Range,Melee,0,0,0,0,AddBuff,Protect,0,Duration,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Rock smash,3,2,1,4,Fighting,Melee,1,WeakenAttribute,Defense,1,MoveResult,Advantage,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Seismic toss,2,2,1,4,Fighting,Melee,1,Empower,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Submission,2,2,1,8,Fighting,Melee,-1,Recoil,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Vital Throw,4,2,1,7,Fighting,Melee,1,Slow,2,0,0,0,0,0,0,0,Knockback,1,0,0,0,0,0,0,0,Homing,0,0,0,0,0,0,0,0
+Vacuum Wave,1,2,2,4,Fighting,Ranged,1,Reaction,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Aura sphere,2,3,2,8,Fighting,Sniper,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Rolling Kick,3,3,1,6,Fighting,Melee,-1,Flinch,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Force Palm,4,3,1,6,Fighting,Melee,1,InflictCondition,Paralysis,2,MoveResult,Advantage,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Brick break,4,3,1,7,Fighting,Melee,1,Cure,StatusChanges,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Bulk up,2,3,0,0,Fighting,Self,0,BoostAttribute,Attack,1,0,0,0,0,0,0,BoostAttribute,Defense,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Circle Throw,4,3,2,6,Fighting,Melee,0,Knockback,2,0,0,0,0,0,0,0,Flinch,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Counter,2,3,0,0,Fighting,Self,0,Reaction,0,0,0,0,0,0,0,0,DamageX+,RecentDamage,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Detect,5,3,0,0,Fighting,Self,0,Reaction,0,0,0,0,0,0,0,0,AddBuff,Protect,0,Duration,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Flying press,4,3,1,8,Fighting,Melee,0,AddElement,Flying,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Jump Kick,4,3,1,10,Fighting,Charge,0,Recoil,7,0,MoveResult,Miss,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Low sweep,2,3,1,6,Fighting,Melee,1,WeakenAttribute,Speed,1,MoveResult,Advantage,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Sky uppercut,3,3,1,8,Fighting,Melee,0,EffectiveVs,Flying,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Triple Kick,3,3,1,1,Fighting,Melee,1,Damage+,2,0,MoveResult,Advantage,2,0,0,0,Flinch,1,0,0,0,0,0,0,0,MultiHit,3,0,MoveResult,Advantage,2,0,0,0
+Wake up slap,4,3,1,14,Fighting,Melee,0,Damage+,9,0,TargetState,HasCondition,Sleep,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Close combat,5,4,1,12,Fighting,Melee,1,ExaustAttribute,Attack,1,0,0,0,0,0,0,ExaustAttribute,Defense,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Cross chop,5,4,1,10,Fighting,Melee,1,Vicious,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Drain punch,4,4,1,7,Fighting,Melee,1,Absorb,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Dynamic punch,5,4,1,10,Fighting,Melee,-2,InflictCondition,Confusion,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Final Gambit,5,4,1,0,Fighting,Melee,1,DamageX+,RemainingHealth,100,0,0,0,0,0,0,Martyr,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Focus blast,5,4,2,12,Fighting,Ranged,-1,WeakenAttribute,SpDef,1,MoveResult,Advantage,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Focus punch,2,4,1,15,Fighting,Melee,1,Delay,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Hammer arm,4,4,1,10,Fighting,Melee,0,ExaustAttribute,Speed,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+High jump kick,4,4,1,13,Fighting,Charge,0,Recoil,8,0,MoveResult,Miss,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Revenge,4,4,1,12,Fighting,Melee,1,Damage+,8,0,UserStatsGreaterThan,RecentDamage,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Reversal,3,4,1,0,Fighting,Melee,1,DamageX+,Wounds,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Storm throw,4,4,1,6,Fighting,Melee,1,AlwaysCrit,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Super power,5,4,1,12,Fighting,Melee,1,ExaustAttribute,Attack,1,0,0,0,0,0,0,ExaustAttribute,Defense,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Sacred sword,3,5,1,9,Fighting,Melee,1,Legendary,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Secret sword,4,5,2,8,Fighting,Melee,1,Legendary,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Kinesis,3,1,4,0,Psychic,Ranged,-1,WeakenAttribute,Accuracy,1,0,0,0,0,0,0,Flinch,1,0,MoveResult,Advantage,1,0,0,0,InflictCondition,Sleep,1,0,0,0,0,0,0
+Ally switch,4,2,0,0,Psychic,Self,0,Reaction,0,0,0,0,0,0,0,0,SwitchPosition,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Psywave,3,2,2,4,Psychic,Ranged,1,Empower,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Telekinesis,3,2,4,0,Psychic,Ranged,0,InflictCondition,Immobilized,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Confusion,2,2,2,5,Psychic,Ranged,1,InflictCondition,Confusion,3,MoveResult,Advantage,3,0,0,0,Flinch,1,0,MoveResult,Advantage,1,0,0,0,0,0,0,0,0,0,0,0,0
+Power Swap,4,2,4,0,Psychic,Ranged,1,Swap,Offenses,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Power Trick,4,2,0,0,Psychic,Self,0,Switch,Offenses,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Guard Swap,4,2,0,0,Psychic,Self,0,Switch,Defenses,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Power Split,4,2,4,0,Psychic,Ranged,0,Split,Offenses,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Gravity,5,2,0,0,Psychic,Environmental,0,AddEnviroCondition,Gravity,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Guard split,4,2,4,0,Psychic,Ranged,0,Split,Defenses,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Meditate,0,2,0,0,Psychic,Self,0,BoostAttribute,Attack,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Heal block,3,2,0,0,Psychic,Environmental,0,AddEnviroCondition,PreventRecover,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Heal Pulse,4,2,0,0,Psychic,Ally,0,Restore,1,0,0,0,0,0,0,0,Fatigue,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Healing wish,4,2,0,0,Psychic,Ally,0,Cure,Volatile,0,0,0,0,0,0,0,Restore,1,0,0,0,0,0,0,0,Martyr,0,0,0,0,0,0,0,0
+Heart stamp,2,2,1,6,Psychic,Melee,1,Flinch,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Heart swap,4,2,4,0,Psychic,Ranged,0,Swap,Primary,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Miracle Eye,0,2,0,0,Psychic,Self,0,AddBuff,NoDarkImmune,0,0,0,0,0,0,0,AddBuff,IgnoreEvasion,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Imprison,4,2,0,0,Psychic,Environmental,0,Disable,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Reflect,2,2,0,0,Psychic,Environmental,0,AddEnviroCondition,DefenseIncrease,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Light screen,1,2,0,0,Psychic,Environmental,0,AddEnviroCondition,SpDefIncrease,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Lunar dance,4,2,0,0,Psychic,Ally,0,Cure,Volatile,0,0,0,0,0,0,0,Restore,2,0,0,0,0,0,0,0,Martyr,0,0,0,0,0,0,0,0
+Magic Coat,3,2,4,0,Psychic,Self,0,AddBuff,StatusReflection,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Magic room,4,2,0,0,Psychic,Environmental,0,AddEnviroCondition,ItemNullifier,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Rest,4,2,0,0,Psychic,Self,0,Restore,2,0,0,0,0,0,0,0,Slow,5,0,0,0,0,0,0,0,Fatigue,2,0,0,0,0,0,0,0
+Teleport,2,2,0,0,Psychic,Self,0,Reaction,0,0,0,0,0,0,0,0,Move,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Hypnosis,2,2,4,0,Psychic,Ranged,-2,Sleep,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Cosmic Power,2,3,0,0,Psychic,Self,0,BoostAttribute,Defense,1,0,0,0,0,0,0,BoostAttribute,SpDef,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Calm mind,2,3,0,0,Psychic,Self,0,BoostAttribute,Special,1,0,0,0,0,0,0,BoostAttribute,SpDef,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Agility,1,3,0,0,Psychic,Self,0,BoostAttribute,Speed,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Psybeam,2,3,2,5,Psychic,Ranged,1,InflictCondition,Confusion,3,MoveResult,Advantage,3,0,0,0,Pierce,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Luster purge,5,3,2,7,Psychic,Ranged,1,WeakenAttribute,SpDef,1,MoveResult,Advantage,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Psyshock,4,3,2,8,Psychic,Melee,1,DealPhysicalDamage,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Mirror coat,2,3,0,0,Psychic,Self,0,Reaction,0,0,0,0,0,0,0,0,DamageX+,RecentDamage,0,Duration,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Mist Ball,5,3,2,7,Psychic,Ranged,1,WeakenAttribute,SpDef,1,MoveResult,Advantage,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Trick,4,3,4,0,Psychic,Melee,1,ItemSwap,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Dream Eater,3,3,2,10,Psychic,Ranged,1,Damage+,7,0,TargetState,HasCondition,Sleep,0,0,0,Absorb,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Extrasensory,2,3,2,8,Psychic,Ranged,1,Flinch,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Stored power,4,3,2,2,Psychic,Ranged,1,Damage+,8,0,UserState,HasCondition,Volatile,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Hyperspace Hole,5,3,2,8,Psychic,Sniper,0,Move,2,0,0,0,0,0,0,0,Penetrate,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Amnesia,2,3,0,0,Psychic,Self,0,BoostAttribute,SpDef,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Barrier,2,3,0,0,Psychic,Self,0,BoostAttribute,Defense,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Role play,4,3,4,0,Psychic,Ranged,0,GainAbility,AnyOnTarget,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Skill swap,4,3,4,0,Psychic,Ranged,0,Swap,RandomMove,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Trick room,5,3,0,0,Psychic,Environmental,0,AddEnviroCondition,TrickRoom,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Wonder Room,0,3,0,0,Psychic,Environmental,0,Swap,Defenses,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Zen headbutt,3,3,1,8,Psychic,Melee,0,Flinch,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Psycho Cut,2,3,1,7,Psychic,Melee,1,Vicious,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Psychic,4,3,2,9,Psychic,Ranged,1,WeakenAttribute,SpDef,1,MoveResult,Advantage,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Psycho shift,4,3,4,0,Psychic,Ranged,1,InflictCondition,Syncronize,0,0,0,0,0,0,0,Cure,Volatile,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Synchronize,3,4,2,12,Psychic,Ranged,1,Damage+,9,0,TargetState,HasType,SameAsUser,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Psycho Boost,5,4,2,14,Psychic,Ranged,0,ExaustAttribute,Special,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+PsyStrike,4,4,2,10,Psychic,Melee,1,DealPhysicalDamage,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Future sight,4,4,2,12,Psychic,Ranged,1,Delay,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Astonish,3,1,1,3,Ghost,Melee,1,Flinch,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Confuse ray,4,2,0,0,Ghost,Ranged,1,InflictCondition,Confusion,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Living Curse,4,2,0,0,Ghost,Self,0,BoostAttribute,Attack,1,0,0,0,0,0,0,BoostAttribute,Defense,1,0,0,0,0,0,0,ExaustAttribute,Speed,1,0,0,0,0,0,0
+Deadly curse,4,2,0,0,Ghost,Ranged,0,Recoil,6,0,0,0,0,0,0,0,AddNerf,Curse,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Lick,1,2,1,3,Ghost,Melee,1,InflictCondition,Paralysis,0,MoveResult,Advantage,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Night shade,3,2,2,4,Ghost,Ranged,0,Empower,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Shadow sneak,1,2,1,4,Ghost,Melee,1,Reaction,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Spite,4,2,2,2,Ghost,Ranged,0,Sleep,4,0,0,0,0,0,0,0,Pierce,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Grudge,5,2,0,0,Ghost,Self,0,Reaction,0,0,0,0,0,0,0,0,Strain,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Nightmare,3,3,0,0,Ghost,Ranged,1,Damage+,9,0,TargetState,HasCondition,Sleep,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Ominous Wind,5,3,2,6,Ghost,Ranged,1,BoostAttribute,Primary,1,MoveResult,Advantage,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Shadow ball,3,3,2,8,Ghost,Ranged,1,WeakenAttribute,SpDef,1,MoveResult,Advantage,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Shadow claw,3,3,1,7,Ghost,Melee,0,Vicious,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Phantom force,4,3,1,9,Ghost,Melee,1,Vanish,Either,0,0,0,0,0,0,0,Penetrate,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Destiny bond,5,3,0,0,Ghost,Self,0,Reaction,0,0,0,0,0,0,0,0,AddBuff,DestinyCurse,0,Duration,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Shadow punch,2,3,1,6,Ghost,Melee,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Hex,4,4,2,13,Ghost,Ranged,1,Damage+,5,0,TargetState,HasCondition,Volatile,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Shadow force,5,4,1,12,Ghost,Melee,1,Vanish,Either,1,0,0,0,0,0,0,Penetrate,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Trick or treat,2,5,0,0,Ghost,Ranged,0,Legendary,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Quash,3,1,3,0,Dark,Melee,1,Reaction,0,0,0,0,0,0,0,0,Flinch,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Bite,2,2,1,6,Dark,Melee,1,Flinch,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Embargo,3,2,3,0,Dark,Melee,0,AddNerf,NoItems,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Flatter,3,2,4,0,Dark,Ranged,1,InflictCondition,Confusion,3,0,0,0,0,0,0,BoostAttribute,Special,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Hone Claws,3,2,0,0,Dark,Self,0,BoostAttribute,Attack,1,0,0,0,0,0,0,BoostAttribute,Accuracy,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Memento,4,2,0,0,Dark,Self,0,Reaction,0,0,0,0,0,0,0,0,AddBuff,DestinyMomento,0,Duration,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Pursuit,2,2,1,4,Dark,Charge,1,Reaction,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Snatch,4,2,3,0,Dark,Melee,0,Reaction,0,0,0,0,0,0,0,0,Mirror,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Switcheroo,4,2,3,0,Dark,Melee,1,Reaction,0,0,0,0,0,0,0,0,ItemSwap,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Taunt,2,2,3,0,Dark,Ranged,1,AddBuff,Taunt,0,0,0,0,0,0,0,AddBuff,Goad,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Thief,2,2,1,6,Dark,Melee,1,Steal,Any,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Parting shot,2,2,3,0,Dark,Ranged,1,WeakenAttribute,Attack,1,0,0,0,0,0,0,WeakenAttribute,Special,1,0,0,0,0,0,0,SwitchPosition,0,0,0,0,0,0,0,0
+Payback,4,2,1,5,Dark,Melee,1,DamageX+,RecentDamage,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Beat up,4,3,1,3,Dark,Melee,1,Empower,0,0,0,0,0,0,0,0,MultiHit,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Snarl,3,3,2,6,Dark,Ranged,0,AOE,TwoByTwo,FullControl,0,0,0,0,0,0,WeakenAttribute,Special,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Crunch,3,3,1,8,Dark,Melee,1,WeakenAttribute,Defense,1,MoveResult,Advantage,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Dark Pulse,3,3,2,8,Dark,Sniper,1,Flinch,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fake tears,2,3,4,0,Dark,Ranged,0,WeakenAttribute,SpDef,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Feint attack,2,3,1,6,Dark,Melee,1,Homing,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fling,4,3,1,10,Dark,Ranged,1,DamageX+,ItemDamage,100,0,0,0,0,0,0,LoseItem,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Foul play,3,3,1,9,Dark,Melee,1,DamageTargetX+,Attack,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Knock off,2,3,1,6,Dark,Melee,1,Destroy,Any,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Nasty plot,2,3,0,0,Dark,Self,0,BoostAttribute,Special,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Night Daze,4,3,2,8,Dark,Ranged,0,WeakenAttribute,Accuracy,1,MoveResult,Advantage,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Night slash,3,3,1,7,Dark,Melee,0,Vicious,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Punishment,5,3,1,0,Dark,Melee,1,Damage+,9,0,TargetState,HasCondition,Volatile,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Sucker punch,5,3,1,8,Dark,Melee,1,Reaction,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Toopsy-turvy,2,3,0,0,Dark,Self,0,AddNerf,FlipStatusChanges,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Torment,3,3,3,0,Dark,Ranged,0,AddNerf,Torment,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Assurance,4,3,1,6,Dark,Melee,1,Damage+,10,0,UserStatsGreaterThan,RecentDamage,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Dark void,0,5,0,0,Dark,Ranged,0,Legendary,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Hyperspace fury,0,5,0,0,Dark,Ranged,0,Legendary,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fairy Wind,1,1,2,4,Fairy,Ranged,1,Absorb,0,0,MoveResult,Advantage,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Aromatic mist,2,2,0,0,Fairy,Ally,0,BoostAttribute,SpDef,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Baby-Doll eyes,1,2,4,0,Fairy,Ranged,1,Reaction,0,0,0,0,0,0,0,0,WeakenAttribute,Attack,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Disarming Voice,3,2,2,4,Fairy,Melee,1,AOE,TwoByTwo,FullControl,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fairy lock,4,2,4,0,Fairy,Ranged,0,AOE,TwoByTwo,FullControl,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Flower shield,4,2,0,0,Fairy,Environmental,0,0,0,0,0,0,0,0,0,0,InflictCondition,Immobilized,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Misty terrain,4,2,0,0,Fairy,Environmental,0,AddEnviroCondition,Mist,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Sweet kiss,4,2,4,0,Fairy,Melee,-2,InflictCondition,Confusion,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Charm,2,3,4,0,Fairy,Ranged,0,WeakenAttribute,Attack,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Crafty Shield,4,3,0,0,Fairy,Self,0,AddBuff,Protect,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Dazzling gleam,4,3,2,8,Fairy,Ranged,1,AOE,TwoByTwo,FullControl,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Draining Kiss,4,3,2,5,Fairy,Melee,1,Absorb,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Moon blast,3,3,2,9,Fairy,Ranged,1,WeakenAttribute,Special,1,MoveResult,Advantage,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Moonlight,5,3,0,0,Fairy,Self,0,Restore,1,0,Weather,Moonlight,0,0,0,0,Restore,1,0,0,0,0,0,0,0,Fatigue,2,0,0,0,0,0,0,0
+Play rough,4,3,1,9,Fairy,Melee,0,WeakenAttribute,Attack,1,MoveResult,Advantage,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Geomancy,0,5,0,0,Fairy,Ranged,0,Legendary,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Light of ruin,0,5,0,0,Fairy,Ranged,0,Legendary,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Hail,4,1,0,0,Ice,Environmental,0,ChangeWeather,Hail,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Aurora beam,2,2,2,6,Ice,Ranged,1,WeakenAttribute,Attack,1,MoveResult,Advantage,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Haze,1,2,0,0,Ice,Environmental,0,Cure,StatusChanges,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Ice shard,1,2,1,4,Ice,Ranged,1,Reaction,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Icicle spear,1,2,1,1,Ice,Ranged,1,MultiHit,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Icy Wind,3,2,2,5,Ice,Ranged,0,AOE,TwoByTwo,FullControl,0,0,0,0,0,0,WeakenAttribute,Speed,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Mist,1,2,0,0,Ice,Environmental,0,AddEnviroCondition,Mist,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Powder snow,2,2,2,4,Ice,Ranged,1,InflictCondition,Frost,0,MoveResult,Advantage,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Freeze-Dry,2,3,2,7,Ice,Ranged,1,EffectiveVs,Water,0,0,0,0,0,0,0,InflictCondition,Frost,1,MoveResult,Advantage,3,0,0,0,0,0,0,0,0,0,0,0,0
+Glaciate,4,3,2,6,Ice,Melee,0,AOE,TwoByTwo,FullControl,0,0,0,0,0,0,WeakenAttribute,Speed,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Ice ball,2,3,1,3,Ice,Ranged,0,DamageX+,MoveRepetition,300,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Ice Beam,4,3,2,9,Ice,Ranged,1,InflictCondition,Frost,0,MoveResult,Advantage,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Ice fang,3,3,1,5,Ice,Melee,0,Pierce,0,0,0,0,0,0,0,0,Flinch,1,0,0,0,0,0,0,0,InflictCondition,Frost,1,MoveResult,Advantage,1,0,0,0
+Ice Punch,3,3,1,7,Ice,Melee,1,Flinch,1,0,MoveResult,Advantage,1,0,0,0,InflictCondition,Frost,1,MoveResult,Advantage,3,0,0,0,0,0,0,0,0,0,0,0,0
+Icicle Crash,4,3,1,8,Ice,Charge,0,Flinch,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Avalanche,4,4,1,12,Ice,Melee,1,Damage+,10,0,UserStatsGreaterThan,RecentDamage,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Blizzard,5,4,2,11,Ice,Ranged,-2,InflictCondition,Frost,0,MoveResult,Advantage,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Frost Breath,4,4,2,6,Ice,Ranged,0,AlwaysCrit,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Sheer Cold,5,4,2,0,Ice,Ranged,-5,OHKO,0,0,MoveResult,Advantage,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Freeze Shock,5,5,1,14,Ice,Charge,0,Legendary,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Ice Burn,5,5,2,14,Ice,Melee,0,Legendary,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Heavy Slam,4,1,1,4,Steel,Melee,1,DamageX+,BaseEndurance,100,0,0,0,0,0,0,DamageTargetX+,BaseEndurance,-100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Bullet Punch,1,2,1,4,Steel,Melee,1,Reaction,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Metal Claw,1,2,1,4,Steel,Melee,0,Pierce,0,0,0,0,0,0,0,0,BoostAttribute,Attack,1,MoveResult,Advantage,3,0,0,0,0,0,0,0,0,0,0,0,0
+Mirror Shot,4,2,2,6,Steel,Ranged,-1,WeakenAttribute,Accuracy,1,MoveResult,Advantage,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Autotomize,3,3,0,0,Steel,Self,1,BoostAttribute,Speed,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Flash Cannon,4,3,2,8,Steel,Ranged,1,WeakenAttribute,SpDef,1,MoveResult,Advantage,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Gear Grind,4,3,1,5,Steel,Melee,-1,MultiHit,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Gyro ball,5,3,1,6,Steel,Ranged,1,DamageX+,Speed,-100,0,0,0,0,0,0,DamageTargetX+,Speed,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Iron Defense,3,3,0,0,Steel,Self,0,BoostAttribute,Defense,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Iron Head,3,3,1,8,Steel,Melee,1,Flinch,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Magnet bomb,2,3,1,6,Steel,Ranged,1,Homing,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Metal Burst,4,3,1,2,Steel,Ranged,1,DamageX+,RecentDamage,100,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Metal Sound,0,3,4,0,Steel,Ranged,-1,WeakenAttribute,SpDef,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Shift Gear,4,3,0,0,Steel,Self,0,BoostAttribute,Speed,2,0,0,0,0,0,0,BoostAttribute,Attack,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Steel Wing,2,3,1,7,Steel,Melee,0,BoostAttribute,Defense,1,MoveResult,Advantage,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Iron Tail,3,4,1,10,Steel,Melee,-2,WeakenAttribute,Defense,1,MoveResult,Advantage,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Meteor Mash,4,4,1,9,Steel,Melee,0,BoostAttribute,Attack,1,MoveResult,Advantage,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Doom Desire,5,5,2,14,Steel,Ranged,1,Legendary,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Kings Shield,4,5,0,0,Steel,Self,0,Legendary,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Dragon Rage,3,1,2,4,Dragon,Ranged,1,Cosmic,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Dual Chop,3,2,1,4,Dragon,Melee,-2,MultiHit,2,0,0,0,0,0,0,0,Flurry,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Twister,2,2,2,4,Dragon,Ranged,0,AOE,TwoByTwo,FullControl,0,0,0,0,0,0,Flinch,1,0,0,0,0,0,0,0,AddBuff,Empower,0,0,0,0,0,0,0
+Dragon Tail,4,2,1,6,Dragon,Charge,0,Knockback,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Dragon Breath,2,2,2,6,Dragon,Ranged,1,InflictCondition,Paralysis,2,MoveResult,Advantage,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Dragon Claw,3,3,1,8,Dragon,Melee,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Dragon Dance,2,3,0,0,Dragon,Self,0,BoostAttribute,Attack,1,0,0,0,0,0,0,BoostAttribute,Speed,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Dragon Pulse,4,3,2,8,Dragon,Sniper,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Draco Meteor,5,4,2,13,Dragon,Ranged,0,ExaustAttribute,Special,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Outrage,4,4,1,12,Dragon,Melee,1,InflictConditionSelf,Confusion,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Dragon Rush,4,4,1,10,Dragon,Charge,0,Flinch,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Roar of time,5,5,2,15,Dragon,Ranged,0,Legendary,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Special Rend,5,5,2,10,Dragon,Ranged,0,Legendary,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Water sport,2,2,0,0,Water,Environmental,0,AddEnviroCondition,Slippery,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Mud sport,2,2,0,0,Ground,Environmental,0,AddEnviroCondition,Muddy,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Snore,3,2,2,5,Normal,Ranged,1,SleepTalk,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0

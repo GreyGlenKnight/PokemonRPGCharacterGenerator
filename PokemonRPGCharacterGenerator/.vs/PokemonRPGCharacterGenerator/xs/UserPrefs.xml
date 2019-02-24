@@ -1,10 +1,12 @@
 ﻿<Properties StartupConfiguration="{12C713B3-27D3-91DA-05F4-93A974B2680E}|" RefactoringSettings.EnableRefactorings="True">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PokemonGeneratorNotes.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/TechniqueDisplay.cs">
     <Files>
-      <File FileName="Assets/Scripts/Pokemon/Pokemon.cs" Line="21" Column="10" />
-      <File FileName="Assets/Scripts/FileReader.cs" Line="112" Column="13" />
-      <File FileName="Assets/Scripts/BinarySearchNode.cs" Line="206" Column="43" />
-      <File FileName="Assets/Scripts/PokemonGeneratorNotes.cs" Line="40" Column="9" NotebookId="1" />
+      <File FileName="Assets/Technique.cs" Line="60" Column="51" />
+      <File FileName="Assets/Scripts/BreedReader/Editor/BreedReaderTest.cs" Line="6" Column="30" />
+      <File FileName="Assets/TechniqueDisplay.cs" Line="56" Column="32" />
+      <File FileName="Assets/Scripts/FileReader.cs" Line="139" Column="115" NotebookId="1" />
+      <File FileName="Assets/Scripts/TechniqueFileReader.cs" Line="22" Column="2" NotebookId="1" />
+      <File FileName="Assets/Scripts/Tests/Editor/TechniqueFileReaderTests.cs" Line="22" Column="3" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

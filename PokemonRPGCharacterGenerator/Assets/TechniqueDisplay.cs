@@ -16,7 +16,7 @@ public class TechniqueDisplay : MonoBehaviour
 	public Image _TechSymbol;
 	//This will be the artwork for the move
 
-	public List <Sprite> _ElementType = new List <Sprite> ();
+	public Sprite _ElementType;
 	public List <Sprite> _StatsToUse = new List <Sprite> ();
 
 	public Text _TreeName;
@@ -53,32 +53,27 @@ public class TechniqueDisplay : MonoBehaviour
 
 
 //		_StatsToUse = GetStatImages (CurrentTechnique.StatsUsed);
-		_ElementType = GetElementTypeImages (CurrentTechnique.Types);
+
+		_ElementType = GetElementTypeImage (CurrentTechnique.Type);
 //
 //		_StatImage.sprite = _StatsToUse [0];
-		_TypeImage.sprite = _ElementType [0];
+		_TypeImage.sprite = _ElementType;
 		//These only display first item, it should be list 
 //		//there should be a sprite packing method
-		_ElementType.Clear ();
 //		_StatsToUse.Clear ();
 //		//These lists should be dumped into the statimage and typeimage and cleared.
 //		//clearing them prevents 50 sprites from being added when moves are swapped.
 
-		if (ToDisplay.Types.Count == 0) 
+		if (ToDisplay.Type == ElementTypes.Nothing) 
 		{
 			_BackGround.color = TypeColors.NothingColor;
 			//We can currently support typeless moves?
 		} 
 		else 
 		{
-			Color TempColor = TypeColors.GetColorForType (CurrentTechnique.Types [0]);
+			Color TempColor = TypeColors.GetColorForType (CurrentTechnique.Type);
 			TempColor.a = 0.8f;
 			_BackGround.color = TempColor;
-
-			if (ToDisplay.Types.Count > 1) 
-			{
-				Debug.Log ("Add Support for multiple types");
-			}
 		}
 	}
 
@@ -104,10 +99,8 @@ public class TechniqueDisplay : MonoBehaviour
 		_Range.text = CurrentTechnique.DisplayRange;
 		_TreeName.text = _Tree.Name;
 		//This version will give us the tree's title and tier.
-		_ElementType = GetElementTypeImages (CurrentTechnique.Types);
-		_TypeImage.sprite = _ElementType [0];
-		_ElementType.Clear ();
-
+		_ElementType = GetElementTypeImage (CurrentTechnique.Type);
+		_TypeImage.sprite = _ElementType;
 		_BackGround.color = TypeColors.GetColorForTier (_Tree.Tier);
 	}
 
@@ -134,13 +127,12 @@ public class TechniqueDisplay : MonoBehaviour
 		_TreeName.text = _Option.Tree.Name;
 
 		//		_StatsToUse = GetStatImages (CurrentTechnique.StatsUsed);
-		_ElementType = GetElementTypeImages (CurrentTechnique.Types);
+		_ElementType = GetElementTypeImage (CurrentTechnique.Type);
 		//
 		//		_StatImage.sprite = _StatsToUse [0];
-		_TypeImage.sprite = _ElementType [0];
+		_TypeImage.sprite = _ElementType;
 		//These only display first item, it should be list 
 		//		//there should be a sprite packing method
-		_ElementType.Clear ();
 		//		_StatsToUse.Clear ();
 		//		//These lists should be dumped into the statimage and typeimage and cleared.
 		//		//clearing them prevents 50 sprites from being added when moves are swapped.
@@ -168,12 +160,10 @@ public class TechniqueDisplay : MonoBehaviour
 		return ToReturn;
 	}
 
-	public List <Sprite> GetElementTypeImages (List <ElementTypes> _Types) 
+	public Sprite GetElementTypeImage (ElementTypes _Type) 
 	{
-		List <Sprite> ToReturn = new List <Sprite> ();
-//	if (_Types == ElementTypes.Nothing) {return null;}
-		_Types.Apply ((x)=> {ToReturn.Add (TypeColors.GetSpriteForType(x));});
-		return ToReturn;
+		Sprite Temp = TypeColors.GetSpriteForType(_Type);
+		return Temp;
 	}
 
 //	public SkillTreeTier GetTreeTierForMove (SkillTreeData _TreeData)

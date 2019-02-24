@@ -8,8 +8,8 @@ using System.Linq;
 
 public class TechniqueFileReader : FileReader <Technique>
 {
-    public const string path = "";
-    public const string FileName = "";
+    public const string path = "Assets/TechniqueData";
+    public const string FileName = "Techniques.csv";
 
     public TechniqueFileReader () : base (path, FileName, FactoryMethod)
     {
@@ -38,7 +38,7 @@ public class TechniqueFileReader : FileReader <Technique>
 
     public override bool Equals(object obj)
     {
-        return base.Equals(obj);
+        return base.Equals (obj);
     }
 
     public override int GetHashCode()

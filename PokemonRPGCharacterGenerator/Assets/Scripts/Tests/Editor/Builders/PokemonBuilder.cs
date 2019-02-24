@@ -34,7 +34,7 @@ public class PokemonBuilder: TestDataBuilder<Pokemon>
 		return this;
 	}
 
-	public PokemonBuilder W(Pokemon.Breed Breed) 
+	public PokemonBuilder W (Pokemon.Breed Breed) 
 	{
 		BreedToUse = Breed;
 		return this;

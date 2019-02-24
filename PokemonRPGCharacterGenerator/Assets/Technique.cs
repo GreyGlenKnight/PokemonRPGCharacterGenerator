@@ -12,7 +12,9 @@ public enum AttackRange
 	Melee,
 	Charge,
 	Ranged,
-	Sniper
+	Sniper,
+	Environmental,
+	Ally
 }
 
 public class Technique : IChoosable
@@ -21,7 +23,7 @@ public class Technique : IChoosable
 
     public string Name { get { return TechniqueName; } }
     public string Description { get { return TechniqueDescription; } }
-    public void Choose() { return; }
+    public void Choose () { return; }
 
     #endregion
 
@@ -34,123 +36,22 @@ public class Technique : IChoosable
     public List<PokemonStat> StatsUsed = new List<PokemonStat>();
 
     public int BaseDamage;
-    public List<ElementTypes> Types = new List<ElementTypes>();
+    public ElementTypes Type;
     public AttackRange Range;
     public int BaseAccuracy;
     //		public list of effects
 
-    public string Effect1;
-    public string Modifier1;
-    public string Modifier2;
-    public string Trigger1Func;
-    public string Trigger1Mod1;
-    public string Trigger1Mod2;
-    public string Trigger2Func;
-    public string Trigger2Mod1;
-    public string Trigger2Mod2;
-    public string Effect2;
-   // public string Modifier2;
-   // public string Modifier2;
-   // public string Trigger1Func;
-   // public string Trigger1Mod1;
-   // public string Trigger1Mod1;
-    public string Trigger2;
-    public string Trigger2Mod;
-   // public string Trigger2Mod2;
-    public string Effect3;
-    public string Modifier3;
-   // public string Modifier2;
-    public string Trigger1;
-    public string Trigger1Mod;
-   // public string Trigger2Mod2;
-   // public string Trigger2;
-   // public string Trigger2Mod2;
-   // public string Trigger2Mod;
-
-    //public void SetTechniqueDescription(string Value) { TechniqueDescription = Value; }
-    public void SetDisplayRange(string Value) { DisplayRange = Value; }
-    public void SetTechniqueName(string Value) { TechniqueName = Value; }
-    public void SetBaseStrain(string Value) { BaseStrain = Int32.Parse(Value); }
-    public void SetSkillTreeTier(string Value) { Tier = (SkillTreeTier) Int32.Parse (Value); }
-   // public void SetStatsUsed(string Value) { StatsUsed = Int32.Parse (Value); }
-
-    public void SetBaseDamage(string Value) { BaseDamage = Int32.Parse (Value); }
-    public void SetTypes(string Value) { Types = null; Types.Add ((ElementTypes) Int32.Parse (Value)); }
-    public void SetRange(string Value) { Range = (AttackRange) Int32.Parse (Value); }
-    public void SetBaseAccuracy(string Value) { BaseAccuracy = Int32.Parse (Value); }
-    public void SetEffect1(string Value) {
-        if ((Value == null) == true)
-        {
-            throw new Exception();
-        }
-        else Effect1 = Value; }
-    public void SetModifier1(string Value) {
-        if ((Value == null) == true)
-        {
-            throw new Exception();
-        }
-        else Modifier1 = Value; }
-    public void SetModifier2(string Value) {
-        if ((Value == null) == true)
-        {
-            throw new Exception();
-        }
-        else Modifier2 = Value; }
-    public void SetTrigger1Func(string Value) {
-        if ((Value == null) == true)
-        {
-            throw new Exception();
-        }
-        else Trigger1Func = Value; }
-    public void SetTrigger1Mod1(string Value) {
-        if ((Value == null) == true)
-        {
-            throw new Exception();
-        }
-        else Trigger1Mod1 = Value; }
-    public void SetTrigger1Mod2(string Value) {
-        if ((Value == null) == true)
-        {
-            throw new Exception();
-        }
-        else Trigger1Mod2 = Value; }
-    public void SetTrigger2Func(string Value) {
-        if ((Value == null) == true)
-        {
-            throw new Exception();
-        }
-        else Trigger2Func = Value; }
-    public void SetTrigger2Mod1(string Value) {
-        if ((Value == null) == true)
-        {
-            throw new Exception();
-        }
-        else Trigger2Mod1 = Value; }
-    public void SetTrigger2Mod2(string Value) {
-        if ((Value == null) == true)
-        {
-            throw new Exception();
-        }
-        else Trigger2Mod2 = Value; }
-    public void SetEffect2(string Value)
-    {
-        if ((Value == null) == true)
-        {
-            throw new Exception();
-        }
-        else { Modifier2 = Value; }
-        //
-    }
-    public Technique ()
+	public Technique ()
 	{
+
 	}
 
     public Technique (TechniqueStringParams Tokens)
     {
-            Tokens.GetTechnique();
+        Tokens.GetTechnique();
     }
 
-    public static Technique Fire_Blast ()
+public static Technique Fire_Blast ()
 	{
 		Technique Temp = new Technique ();
 		Temp.BaseAccuracy = -1;
@@ -160,7 +61,7 @@ public class Technique : IChoosable
 		Temp.DisplayRange = "Ranged";
 		Temp.TechniqueName = "Fire Blast";
 		Temp.StatsUsed.Add (new SpecialAttackStat (0));
-		Temp.Types.Add (ElementTypes.Fire);
+		Temp.Type = ElementTypes.Fire;
 		return Temp;
 	}
 
@@ -174,7 +75,7 @@ public class Technique : IChoosable
 		Dragon_Claw.DisplayRange = "Melee";
 		Dragon_Claw.TechniqueName = "Dragon Claw";
 		Dragon_Claw.StatsUsed.Add (new AttackStat (0));
-		Dragon_Claw.Types.Add (ElementTypes.Dragon);
+		Dragon_Claw.Type = ElementTypes.Dragon;
 		return Dragon_Claw;
 	}
 
@@ -188,7 +89,7 @@ public class Technique : IChoosable
 		Metal_Claw.DisplayRange = "Melee";
 		Metal_Claw.TechniqueName = "Metal Claw";
 		Metal_Claw.StatsUsed.Add (new AttackStat (0));
-		Metal_Claw.Types.Add (ElementTypes.Steel);
+		Metal_Claw.Type = ElementTypes.Steel;
 		return Metal_Claw;
 	}
 
@@ -202,7 +103,7 @@ public class Technique : IChoosable
 		Sand_Attack.TechniqueName = "Sand Attack";
 		Sand_Attack.StatsUsed.Add (new DefenseStat (0));
 		Sand_Attack.StatsUsed.Add (new SpeedStat (0));
-		Sand_Attack.Types.Add (ElementTypes.Ground);
+		Sand_Attack.Type = ElementTypes.Ground;
 		return Sand_Attack;
 	}
 
@@ -215,7 +116,21 @@ public class Technique : IChoosable
 		_TechniquesOnTree.Add (Sand_Attack ());
 		return _TechniquesOnTree;
 	}
-}
+
+
+    //public void SetTechniqueDescription(string Value) { TechniqueDescription = Value; }
+    public void SetDisplayRange (string Value) { DisplayRange = Value; }
+    public void SetTechniqueName (string Value) { TechniqueName = Value; }
+    public void SetBaseStrain (string Value) { BaseStrain = Int32.Parse(Value); }
+    public void SetSkillTreeTier (string Value) { Tier = (SkillTreeTier) Int32.Parse (Value); }
+   // public void SetStatsUsed(string Value) { StatsUsed = Int32.Parse (Value); }
+
+    public void SetBaseDamage (string Value) { BaseDamage = Int32.Parse (Value); }
+
+    public void SetType (string Value) { Type = (ElementTypes) Enum.Parse (typeof (ElementTypes), Value); }
+    public void SetRange (string Value) { Range = (AttackRange) Enum.Parse (typeof (AttackRange), Value); DisplayRange = Value;}
+    public void SetBaseAccuracy (string Value) { BaseAccuracy = Int32.Parse (Value); }
+    }
 
     public class TechniqueStringParams
     {
@@ -224,11 +139,9 @@ public class Technique : IChoosable
 
         public TechniqueStringParams (string [] tokens)
         {
-
-
-            if (Tokens.Length != 35)
-            { throw new Exception(); }
-            else
+            //if (Tokens.Length != 35)
+            //{ throw new Exception(); }
+            //else
             {
                 Tokens = tokens;
             Target.SetTechniqueName(Tokens[0]);
@@ -236,36 +149,9 @@ public class Technique : IChoosable
             Target.SetSkillTreeTier(Tokens[2]);
            // Target.SetStatsUsed(Tokens[3]);
             Target.SetBaseDamage(Tokens[4]);
-            Target.SetTypes(Tokens[5]);
+            Target.SetType(Tokens[5]);
             Target.SetRange(Tokens[6]);
             Target.SetBaseAccuracy(Tokens[7]);
-                Target.SetEffect1(Tokens[8]);
-                Target.SetModifier1(Tokens[9]);
-                Target.SetModifier2(Tokens[10]);
-                Target.SetTrigger1Func(Tokens[11]);
-                Target.SetTrigger1Mod1(Tokens[12]);
-                Target.SetTrigger1Mod2(Tokens[13]);
-                Target.SetTrigger2Func(Tokens[14]);
-                Target.SetTrigger2Mod1(Tokens[15]);
-                Target.SetTrigger2Mod2(Tokens[16]);
-                Target.SetEffect2(Tokens[17]);
-                Target.SetModifier2(Tokens[18]);
-                Target.SetModifier2(Tokens[19]);
-                Target.SetTrigger1Func(Tokens[20]);
-                Target.SetTrigger1Mod1(Tokens[21]);
-                Target.SetTrigger1Mod1(Tokens[22]);
-               // Target.SetTrigger2(Tokens[23]);
-               // Target.SetTrigger2Mod(Tokens[24]);
-                Target.SetTrigger2Mod2(Tokens[25]);
-               // Target.SetEffect3(Tokens[26]);
-               // Target.SetModifier3(Tokens[27]);
-                Target.SetModifier2(Tokens[28]);
-               // Target.SetTrigger1(Tokens[29]);
-               // Target.SetTrigger1Mod(Tokens[30]);
-                Target.SetTrigger2Mod2(Tokens[31]);
-               // Target.SetTrigger2(Tokens[32]);
-                Target.SetTrigger2Mod2(Tokens[33]);
-               // Target.SetTrigger2Mod(Tokens[34]);
             }
         }
 
